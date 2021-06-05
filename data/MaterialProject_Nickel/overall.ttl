@@ -1,0 +1,3362 @@
+@prefix chebi: <http://purl.obolibrary.org/obo/> .
+@prefix crystal: <https://az-ihsan.github.io/ontologies/crystallography/crystallography.owl/> .
+@prefix ex: <www.example.org/mp-1014111/> .
+@prefix ex1: <www.example.org/mp-23/> .
+@prefix ex11: <www.example.org/mp-1094136/> .
+@prefix ex111: <www.example.org/mp-1246134/> .
+@prefix ex2: <www.example.org/mp-1008728/> .
+@prefix ex21: <www.example.org/mp-10257/> .
+@prefix mdo: <https://w3id.org/mdo/structure/> .
+@prefix ns1: <http://purl.obolibrary.org/obo/chebi/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns1:formula a owl:DatatypeProperty ;
+    rdfs:domain chebi:CHEBI_33250 ;
+    rdfs:range xsd:string .
+
+<https://az-ihsan.github.io/ontologies/crystallography/crystallography.owl> a owl:Ontology .
+
+crystal:GrainBoundary a owl:Class ;
+    rdfs:label "Grain Boundary"@en ;
+    rdfs:comment "Lattice irregularity at the interfaces separating two crystals having different crystallographic orientation."@en ;
+    rdfs:subClassOf crystal:CrystallineDefect .
+
+crystal:PointDefect a owl:Class ;
+    rdfs:label "Point Defect"@en ;
+    rdfs:comment "There are irregularity in the crystal where one or two atoms are removed from the atomic site, this is called vacancy. On the other hand, when an atom is introduced into a non-lattice site, this is called insterstitial."@en ;
+    rdfs:subClassOf crystal:CrystallineDefect .
+
+crystal:hasLatticeParameterAngle a owl:ObjectProperty ;
+    rdfs:label "has lattice parameter angle"@en ;
+    rdfs:comment "hasLatticeParameterAngle represents the relationship between a unit cell or a basis with lattice parameter angle."@en ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( crystal:UnitCell mdo:Basis ) ],
+        [ a owl:Class ;
+            owl:unionOf ( crystal:UnitCell mdo:Basis ) ],
+        [ a owl:Class ;
+            owl:unionOf ( crystal:UnitCell mdo:Basis ) ],
+        [ a owl:Class ;
+            owl:unionOf ( crystal:UnitCell mdo:Basis ) ],
+        [ a owl:Class ;
+            owl:unionOf ( crystal:UnitCell mdo:Basis ) ],
+        [ a owl:Class ;
+            owl:unionOf ( crystal:UnitCell mdo:Basis ) ],
+        [ a owl:Class ;
+            owl:unionOf ( crystal:UnitCell mdo:Basis ) ],
+        [ a owl:Class ;
+            owl:unionOf ( crystal:UnitCell mdo:Basis ) ],
+        [ a owl:Class ;
+            owl:unionOf ( crystal:UnitCell mdo:Basis ) ],
+        [ a owl:Class ;
+            owl:unionOf ( crystal:UnitCell mdo:Basis ) ],
+        [ a owl:Class ;
+            owl:unionOf ( crystal:UnitCell mdo:Basis ) ],
+        [ a owl:Class ;
+            owl:unionOf ( crystal:UnitCell mdo:Basis ) ] .
+
+crystal:hasLatticeParameterLength a owl:ObjectProperty ;
+    rdfs:label "has lattice parameter length"@en ;
+    rdfs:comment "hasLatticeParameterLength represents the relationship between a unit cell or a basis with lattice parameter length."@en ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( crystal:UnitCell mdo:Basis ) ],
+        [ a owl:Class ;
+            owl:unionOf ( crystal:UnitCell mdo:Basis ) ],
+        [ a owl:Class ;
+            owl:unionOf ( crystal:UnitCell mdo:Basis ) ],
+        [ a owl:Class ;
+            owl:unionOf ( crystal:UnitCell mdo:Basis ) ],
+        [ a owl:Class ;
+            owl:unionOf ( crystal:UnitCell mdo:Basis ) ],
+        [ a owl:Class ;
+            owl:unionOf ( crystal:UnitCell mdo:Basis ) ],
+        [ a owl:Class ;
+            owl:unionOf ( crystal:UnitCell mdo:Basis ) ],
+        [ a owl:Class ;
+            owl:unionOf ( crystal:UnitCell mdo:Basis ) ],
+        [ a owl:Class ;
+            owl:unionOf ( crystal:UnitCell mdo:Basis ) ],
+        [ a owl:Class ;
+            owl:unionOf ( crystal:UnitCell mdo:Basis ) ],
+        [ a owl:Class ;
+            owl:unionOf ( crystal:UnitCell mdo:Basis ) ],
+        [ a owl:Class ;
+            owl:unionOf ( crystal:UnitCell mdo:Basis ) ] .
+
+mdo:ElementRatio a owl:DatatypeProperty ;
+    rdfs:label "element ratio"@en ;
+    rdfs:comment "ElementRatio represents that a species has the ratio in a double."@en ;
+    rdfs:domain mdo:Species ;
+    rdfs:range xsd:double .
+
+mdo:hasAxisVectors a owl:ObjectProperty ;
+    rdfs:label "has axis vectors"@en ;
+    rdfs:comment "hasAxisVectors represents the relationship between a basis and a axis-vectors it has."@en ;
+    rdfs:domain mdo:Basis ;
+    rdfs:range mdo:AxisVectors .
+
+ex2:mp-1008728_crystal_strcture a crystal:CrystalStructure ;
+    crystal:hasLattice ex2:mp-1008728_lattice ;
+    mdo:hasOccupancy ex2:mp-1008728_occupancy .
+
+ex:mp-1014111_crystal_strcture a crystal:CrystalStructure ;
+    crystal:hasLattice ex:mp-1014111_lattice ;
+    mdo:hasOccupancy ex:mp-1014111_occupancy .
+
+ex21:mp-10257_crystal_strcture a crystal:CrystalStructure ;
+    crystal:hasLattice ex21:mp-10257_lattice ;
+    mdo:hasOccupancy ex21:mp-10257_occupancy .
+
+ex11:mp-1094136_crystal_strcture a crystal:CrystalStructure ;
+    crystal:hasLattice ex11:mp-1094136_lattice ;
+    mdo:hasOccupancy ex11:mp-1094136_occupancy .
+
+ex111:mp-1246134_crystal_strcture a crystal:CrystalStructure ;
+    crystal:hasLattice ex111:mp-1246134_lattice ;
+    mdo:hasOccupancy ex111:mp-1246134_occupancy .
+
+ex1:mp-23_crystal_strcture a crystal:CrystalStructure ;
+    crystal:hasLattice ex1:mp-23_lattice ;
+    mdo:hasOccupancy ex1:mp-23_occupancy .
+
+ex2:mp-1008728_atom_0 a chebi:CHEBI_33250 ;
+    ns1:formula "Ni"^^xsd:string .
+
+ex2:mp-1008728_crystal_system a crystal:Cubic .
+
+ex2:mp-1008728_frac_coord_0 a mdo:CoordinateVector ;
+    mdo:X_axisCoordinate 0e+00 ;
+    mdo:Y_axisCoordinate 0e+00 ;
+    mdo:Z_axisCoordinate 0e+00 .
+
+ex2:mp-1008728_lattice a mdo:Lattice ;
+    crystal:hasUnitCell ex2:mp-1008728_unit_cell .
+
+ex2:mp-1008728_occupancy a mdo:Occupancy ;
+    mdo:hasSite ex2:mp-1008728_site_0 ;
+    mdo:hasSpecies ex2:mp-1008728_species_0 .
+
+ex2:mp-1008728_site_0 a mdo:Site ;
+    mdo:hasFractionalCoordinates ex2:mp-1008728_frac_coord_0 .
+
+ex2:mp-1008728_species_0 a mdo:Species ;
+    mdo:hasElement ex2:mp-1008728_atom_0 .
+
+ex2:mp-1008728_unit_cell a crystal:UnitCell ;
+    crystal:hasCrystalSystem ex2:mp-1008728_crystal_system ;
+    crystal:latticeParameterAngleAlpha 1.094712e+02 ;
+    crystal:latticeParameterAngleBeta 1.094712e+02 ;
+    crystal:latticeParameterAngleGamma 1.094712e+02 ;
+    crystal:latticeParameterLengthA 2.416394e+00 ;
+    crystal:latticeParameterLengthB 2.416394e+00 ;
+    crystal:latticeParameterLengthC 2.416394e+00 .
+
+ex:mp-1014111_atom_0 a chebi:CHEBI_33250 ;
+    ns1:formula "Ni"^^xsd:string .
+
+ex:mp-1014111_atom_1 a chebi:CHEBI_33250 ;
+    ns1:formula "Ni"^^xsd:string .
+
+ex:mp-1014111_crystal_system a crystal:Triclinic .
+
+ex:mp-1014111_frac_coord_0 a mdo:CoordinateVector ;
+    mdo:X_axisCoordinate 3.33333e-01 ;
+    mdo:Y_axisCoordinate 6.66667e-01 ;
+    mdo:Z_axisCoordinate 4.25238e-01 .
+
+ex:mp-1014111_frac_coord_1 a mdo:CoordinateVector ;
+    mdo:X_axisCoordinate 6.66667e-01 ;
+    mdo:Y_axisCoordinate 3.33333e-01 ;
+    mdo:Z_axisCoordinate 5.74762e-01 .
+
+ex:mp-1014111_lattice a mdo:Lattice ;
+    crystal:hasUnitCell ex:mp-1014111_unit_cell .
+
+ex:mp-1014111_occupancy a mdo:Occupancy ;
+    mdo:hasSite ex:mp-1014111_site_0,
+        ex:mp-1014111_site_1 ;
+    mdo:hasSpecies ex:mp-1014111_species_0,
+        ex:mp-1014111_species_1 .
+
+ex:mp-1014111_site_0 a mdo:Site ;
+    mdo:hasFractionalCoordinates ex:mp-1014111_frac_coord_0 .
+
+ex:mp-1014111_site_1 a mdo:Site ;
+    mdo:hasFractionalCoordinates ex:mp-1014111_frac_coord_1 .
+
+ex:mp-1014111_species_0 a mdo:Species ;
+    mdo:hasElement ex:mp-1014111_atom_0 .
+
+ex:mp-1014111_species_1 a mdo:Species ;
+    mdo:hasElement ex:mp-1014111_atom_1 .
+
+ex:mp-1014111_unit_cell a crystal:UnitCell ;
+    crystal:hasCrystalSystem ex:mp-1014111_crystal_system ;
+    crystal:latticeParameterAngleAlpha 9e+01 ;
+    crystal:latticeParameterAngleBeta 9e+01 ;
+    crystal:latticeParameterAngleGamma 1.2e+02 ;
+    crystal:latticeParameterLengthA 2.416684e+00 ;
+    crystal:latticeParameterLengthB 2.416684e+00 ;
+    crystal:latticeParameterLengthC 1.351535e+01 .
+
+ex21:mp-10257_atom_0 a chebi:CHEBI_33250 ;
+    ns1:formula "Ni"^^xsd:string .
+
+ex21:mp-10257_atom_1 a chebi:CHEBI_33250 ;
+    ns1:formula "Ni"^^xsd:string .
+
+ex21:mp-10257_crystal_system a crystal:Hexagonal .
+
+ex21:mp-10257_frac_coord_0 a mdo:CoordinateVector ;
+    mdo:X_axisCoordinate 3.33333e-01 ;
+    mdo:Y_axisCoordinate 6.66667e-01 ;
+    mdo:Z_axisCoordinate 2.5e-01 .
+
+ex21:mp-10257_frac_coord_1 a mdo:CoordinateVector ;
+    mdo:X_axisCoordinate 6.66667e-01 ;
+    mdo:Y_axisCoordinate 3.33333e-01 ;
+    mdo:Z_axisCoordinate 7.5e-01 .
+
+ex21:mp-10257_lattice a mdo:Lattice ;
+    crystal:hasUnitCell ex21:mp-10257_unit_cell .
+
+ex21:mp-10257_occupancy a mdo:Occupancy ;
+    mdo:hasSite ex21:mp-10257_site_0,
+        ex21:mp-10257_site_1 ;
+    mdo:hasSpecies ex21:mp-10257_species_0,
+        ex21:mp-10257_species_1 .
+
+ex21:mp-10257_site_0 a mdo:Site ;
+    mdo:hasFractionalCoordinates ex21:mp-10257_frac_coord_0 .
+
+ex21:mp-10257_site_1 a mdo:Site ;
+    mdo:hasFractionalCoordinates ex21:mp-10257_frac_coord_1 .
+
+ex21:mp-10257_species_0 a mdo:Species ;
+    mdo:hasElement ex21:mp-10257_atom_0 .
+
+ex21:mp-10257_species_1 a mdo:Species ;
+    mdo:hasElement ex21:mp-10257_atom_1 .
+
+ex21:mp-10257_unit_cell a crystal:UnitCell ;
+    crystal:hasCrystalSystem ex21:mp-10257_crystal_system ;
+    crystal:latticeParameterAngleAlpha 9e+01 ;
+    crystal:latticeParameterAngleBeta 9e+01 ;
+    crystal:latticeParameterAngleGamma 1.2e+02 ;
+    crystal:latticeParameterLengthA 2.474278e+00 ;
+    crystal:latticeParameterLengthB 2.474278e+00 ;
+    crystal:latticeParameterLengthC 4.070181e+00 .
+
+ex11:mp-1094136_atom_0 a chebi:CHEBI_33250 ;
+    ns1:formula "Ni"^^xsd:string .
+
+ex11:mp-1094136_atom_1 a chebi:CHEBI_33250 ;
+    ns1:formula "Ni"^^xsd:string .
+
+ex11:mp-1094136_crystal_system a crystal:Hexagonal .
+
+ex11:mp-1094136_frac_coord_0 a mdo:CoordinateVector ;
+    mdo:X_axisCoordinate 0e+00 ;
+    mdo:Y_axisCoordinate 0e+00 ;
+    mdo:Z_axisCoordinate 4.23977e-01 .
+
+ex11:mp-1094136_frac_coord_1 a mdo:CoordinateVector ;
+    mdo:X_axisCoordinate 0e+00 ;
+    mdo:Y_axisCoordinate 0e+00 ;
+    mdo:Z_axisCoordinate 5.76023e-01 .
+
+ex11:mp-1094136_lattice a mdo:Lattice ;
+    crystal:hasUnitCell ex11:mp-1094136_unit_cell .
+
+ex11:mp-1094136_occupancy a mdo:Occupancy ;
+    mdo:hasSite ex11:mp-1094136_site_0,
+        ex11:mp-1094136_site_1 ;
+    mdo:hasSpecies ex11:mp-1094136_species_0,
+        ex11:mp-1094136_species_1 .
+
+ex11:mp-1094136_site_0 a mdo:Site ;
+    mdo:hasFractionalCoordinates ex11:mp-1094136_frac_coord_0 .
+
+ex11:mp-1094136_site_1 a mdo:Site ;
+    mdo:hasFractionalCoordinates ex11:mp-1094136_frac_coord_1 .
+
+ex11:mp-1094136_species_0 a mdo:Species ;
+    mdo:hasElement ex11:mp-1094136_atom_0 .
+
+ex11:mp-1094136_species_1 a mdo:Species ;
+    mdo:hasElement ex11:mp-1094136_atom_1 .
+
+ex11:mp-1094136_unit_cell a crystal:UnitCell ;
+    crystal:hasCrystalSystem ex11:mp-1094136_crystal_system ;
+    crystal:latticeParameterAngleAlpha 9e+01 ;
+    crystal:latticeParameterAngleBeta 9e+01 ;
+    crystal:latticeParameterAngleGamma 1.2e+02 ;
+    crystal:latticeParameterLengthA 2.38205e+00 ;
+    crystal:latticeParameterLengthB 2.38205e+00 ;
+    crystal:latticeParameterLengthC 1.491233e+01 .
+
+ex111:mp-1246134_atom_0 a chebi:CHEBI_33250 ;
+    ns1:formula "Ni"^^xsd:string .
+
+ex111:mp-1246134_crystal_system a crystal:Hexagonal .
+
+ex111:mp-1246134_frac_coord_0 a mdo:CoordinateVector ;
+    mdo:X_axisCoordinate 0e+00 ;
+    mdo:Y_axisCoordinate 0e+00 ;
+    mdo:Z_axisCoordinate 0e+00 .
+
+ex111:mp-1246134_lattice a mdo:Lattice ;
+    crystal:hasUnitCell ex111:mp-1246134_unit_cell .
+
+ex111:mp-1246134_occupancy a mdo:Occupancy ;
+    mdo:hasSite ex111:mp-1246134_site_0 ;
+    mdo:hasSpecies ex111:mp-1246134_species_0 .
+
+ex111:mp-1246134_site_0 a mdo:Site ;
+    mdo:hasFractionalCoordinates ex111:mp-1246134_frac_coord_0 .
+
+ex111:mp-1246134_species_0 a mdo:Species ;
+    mdo:hasElement ex111:mp-1246134_atom_0 .
+
+ex111:mp-1246134_unit_cell a crystal:UnitCell ;
+    crystal:hasCrystalSystem ex111:mp-1246134_crystal_system ;
+    crystal:latticeParameterAngleAlpha 1.2e+02 ;
+    crystal:latticeParameterAngleBeta 9e+01 ;
+    crystal:latticeParameterAngleGamma 9e+01 ;
+    crystal:latticeParameterLengthA 2.338222e+00 ;
+    crystal:latticeParameterLengthB 2.398096e+00 ;
+    crystal:latticeParameterLengthC 2.398096e+00 .
+
+ex1:mp-23_atom_0 a chebi:CHEBI_33250 ;
+    ns1:formula "Ni"^^xsd:string .
+
+ex1:mp-23_crystal_system a crystal:Cubic .
+
+ex1:mp-23_frac_coord_0 a mdo:CoordinateVector ;
+    mdo:X_axisCoordinate 0e+00 ;
+    mdo:Y_axisCoordinate 0e+00 ;
+    mdo:Z_axisCoordinate 0e+00 .
+
+ex1:mp-23_lattice a mdo:Lattice ;
+    crystal:hasUnitCell ex1:mp-23_unit_cell .
+
+ex1:mp-23_occupancy a mdo:Occupancy ;
+    mdo:hasSite ex1:mp-23_site_0 ;
+    mdo:hasSpecies ex1:mp-23_species_0 .
+
+ex1:mp-23_site_0 a mdo:Site ;
+    mdo:hasFractionalCoordinates ex1:mp-23_frac_coord_0 .
+
+ex1:mp-23_species_0 a mdo:Species ;
+    mdo:hasElement ex1:mp-23_atom_0 .
+
+ex1:mp-23_unit_cell a crystal:UnitCell ;
+    crystal:hasCrystalSystem ex1:mp-23_crystal_system ;
+    crystal:latticeParameterAngleAlpha 6e+01 ;
+    crystal:latticeParameterAngleBeta 6e+01 ;
+    crystal:latticeParameterAngleGamma 6e+01 ;
+    crystal:latticeParameterLengthA 2.478974e+00 ;
+    crystal:latticeParameterLengthB 2.478974e+00 ;
+    crystal:latticeParameterLengthC 2.478974e+00 .
+
+crystal:CrystallineMaterial a owl:Class ;
+    rdfs:label "Crystalline Material"@en ;
+    rdfs:comment "Crystalline materials are characterized by a periodic arrangement of the constituent atoms."@en ;
+    rdfs:subClassOf [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasCrystallineDefect ;
+                        owl:someValuesFrom crystal:CrystallineDefect ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:CrystallineDefect ;
+                        owl:onProperty crystal:hasCrystallineDefect ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasCrystalStructure ;
+                        owl:someValuesFrom crystal:CrystalStructure ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:CrystalStructure ;
+                        owl:onProperty crystal:hasCrystalStructure ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasCrystalStructure ;
+                        owl:someValuesFrom crystal:CrystalStructure ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:CrystalStructure ;
+                        owl:onProperty crystal:hasCrystalStructure ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasCrystalStructure ;
+                        owl:someValuesFrom crystal:CrystalStructure ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:CrystalStructure ;
+                        owl:onProperty crystal:hasCrystalStructure ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasCrystallineDefect ;
+                        owl:someValuesFrom crystal:CrystallineDefect ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:CrystallineDefect ;
+                        owl:onProperty crystal:hasCrystallineDefect ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasCrystalStructure ;
+                        owl:someValuesFrom crystal:CrystalStructure ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:CrystalStructure ;
+                        owl:onProperty crystal:hasCrystalStructure ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasCrystalStructure ;
+                        owl:someValuesFrom crystal:CrystalStructure ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:CrystalStructure ;
+                        owl:onProperty crystal:hasCrystalStructure ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasCrystalStructure ;
+                        owl:someValuesFrom crystal:CrystalStructure ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:CrystalStructure ;
+                        owl:onProperty crystal:hasCrystalStructure ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasCrystallineDefect ;
+                        owl:someValuesFrom crystal:CrystallineDefect ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:CrystallineDefect ;
+                        owl:onProperty crystal:hasCrystallineDefect ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasCrystallineDefect ;
+                        owl:someValuesFrom crystal:CrystallineDefect ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:CrystallineDefect ;
+                        owl:onProperty crystal:hasCrystallineDefect ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasCrystalStructure ;
+                        owl:someValuesFrom crystal:CrystalStructure ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:CrystalStructure ;
+                        owl:onProperty crystal:hasCrystalStructure ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasCrystallineDefect ;
+                        owl:someValuesFrom crystal:CrystallineDefect ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:CrystallineDefect ;
+                        owl:onProperty crystal:hasCrystallineDefect ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasCrystalStructure ;
+                        owl:someValuesFrom crystal:CrystalStructure ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:CrystalStructure ;
+                        owl:onProperty crystal:hasCrystalStructure ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasCrystallineDefect ;
+                        owl:someValuesFrom crystal:CrystallineDefect ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:CrystallineDefect ;
+                        owl:onProperty crystal:hasCrystallineDefect ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasCrystalStructure ;
+                        owl:someValuesFrom crystal:CrystalStructure ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:CrystalStructure ;
+                        owl:onProperty crystal:hasCrystalStructure ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasCrystallineDefect ;
+                        owl:someValuesFrom crystal:CrystallineDefect ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:CrystallineDefect ;
+                        owl:onProperty crystal:hasCrystallineDefect ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasCrystalStructure ;
+                        owl:someValuesFrom crystal:CrystalStructure ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:CrystalStructure ;
+                        owl:onProperty crystal:hasCrystalStructure ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasCrystallineDefect ;
+                        owl:someValuesFrom crystal:CrystallineDefect ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:CrystallineDefect ;
+                        owl:onProperty crystal:hasCrystallineDefect ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasCrystallineDefect ;
+                        owl:someValuesFrom crystal:CrystallineDefect ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:CrystallineDefect ;
+                        owl:onProperty crystal:hasCrystallineDefect ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasCrystalStructure ;
+                        owl:someValuesFrom crystal:CrystalStructure ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:CrystalStructure ;
+                        owl:onProperty crystal:hasCrystalStructure ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasCrystallineDefect ;
+                        owl:someValuesFrom crystal:CrystallineDefect ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:CrystallineDefect ;
+                        owl:onProperty crystal:hasCrystallineDefect ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasCrystallineDefect ;
+                        owl:someValuesFrom crystal:CrystallineDefect ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:CrystallineDefect ;
+                        owl:onProperty crystal:hasCrystallineDefect ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasCrystallineDefect ;
+                        owl:someValuesFrom crystal:CrystallineDefect ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:CrystallineDefect ;
+                        owl:onProperty crystal:hasCrystallineDefect ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasCrystalStructure ;
+                        owl:someValuesFrom crystal:CrystalStructure ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:CrystalStructure ;
+                        owl:onProperty crystal:hasCrystalStructure ] ) ] .
+
+crystal:Dislocation a owl:Class ;
+    rdfs:label "Dislocation"@en ;
+    rdfs:comment "A line object that is a boundary separating the regions on the slip plane which have undergone slip from those that have not."@en,
+        "Linear or one-dimensional defect around which some of the atoms are misaligned."@en,
+        "Presence of dislocation introduces local disturbance of the atomic-level geometry."@en ;
+    rdfs:subClassOf [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasBurgersVector ;
+                        owl:someValuesFrom crystal:BurgersVector ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:BurgersVector ;
+                        owl:onProperty crystal:hasBurgersVector ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasLineSense ;
+                        owl:someValuesFrom crystal:LineSense ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:LineSense ;
+                        owl:onProperty crystal:hasLineSense ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasLineSense ;
+                        owl:someValuesFrom crystal:LineSense ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:LineSense ;
+                        owl:onProperty crystal:hasLineSense ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasBurgersVector ;
+                        owl:someValuesFrom crystal:BurgersVector ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:BurgersVector ;
+                        owl:onProperty crystal:hasBurgersVector ] ) ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:movesOn ;
+            owl:someValuesFrom crystal:SlipPlane ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:movesOn ;
+            owl:someValuesFrom crystal:SlipPlane ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasBurgersVector ;
+                        owl:someValuesFrom crystal:BurgersVector ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:BurgersVector ;
+                        owl:onProperty crystal:hasBurgersVector ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasLineSense ;
+                        owl:someValuesFrom crystal:LineSense ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:LineSense ;
+                        owl:onProperty crystal:hasLineSense ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasBurgersVector ;
+                        owl:someValuesFrom crystal:BurgersVector ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:BurgersVector ;
+                        owl:onProperty crystal:hasBurgersVector ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasBurgersVector ;
+                        owl:someValuesFrom crystal:BurgersVector ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:BurgersVector ;
+                        owl:onProperty crystal:hasBurgersVector ] ) ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:movesOn ;
+            owl:someValuesFrom crystal:SlipPlane ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasLineSense ;
+                        owl:someValuesFrom crystal:LineSense ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:LineSense ;
+                        owl:onProperty crystal:hasLineSense ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasBurgersVector ;
+                        owl:someValuesFrom crystal:BurgersVector ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:BurgersVector ;
+                        owl:onProperty crystal:hasBurgersVector ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasBurgersVector ;
+                        owl:someValuesFrom crystal:BurgersVector ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:BurgersVector ;
+                        owl:onProperty crystal:hasBurgersVector ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasBurgersVector ;
+                        owl:someValuesFrom crystal:BurgersVector ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:BurgersVector ;
+                        owl:onProperty crystal:hasBurgersVector ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasBurgersVector ;
+                        owl:someValuesFrom crystal:BurgersVector ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:BurgersVector ;
+                        owl:onProperty crystal:hasBurgersVector ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasLineSense ;
+                        owl:someValuesFrom crystal:LineSense ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:LineSense ;
+                        owl:onProperty crystal:hasLineSense ] ) ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:movesOn ;
+            owl:someValuesFrom crystal:SlipPlane ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:movesOn ;
+            owl:someValuesFrom crystal:SlipPlane ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasLineSense ;
+                        owl:someValuesFrom crystal:LineSense ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:LineSense ;
+                        owl:onProperty crystal:hasLineSense ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasLineSense ;
+                        owl:someValuesFrom crystal:LineSense ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:LineSense ;
+                        owl:onProperty crystal:hasLineSense ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasBurgersVector ;
+                        owl:someValuesFrom crystal:BurgersVector ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:BurgersVector ;
+                        owl:onProperty crystal:hasBurgersVector ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasLineSense ;
+                        owl:someValuesFrom crystal:LineSense ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:LineSense ;
+                        owl:onProperty crystal:hasLineSense ] ) ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:movesOn ;
+            owl:someValuesFrom crystal:SlipPlane ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasLineSense ;
+                        owl:someValuesFrom crystal:LineSense ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:LineSense ;
+                        owl:onProperty crystal:hasLineSense ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasBurgersVector ;
+                        owl:someValuesFrom crystal:BurgersVector ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:BurgersVector ;
+                        owl:onProperty crystal:hasBurgersVector ] ) ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:movesOn ;
+            owl:someValuesFrom crystal:SlipPlane ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:movesOn ;
+            owl:someValuesFrom crystal:SlipPlane ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasLineSense ;
+                        owl:someValuesFrom crystal:LineSense ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:LineSense ;
+                        owl:onProperty crystal:hasLineSense ] ) ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:movesOn ;
+            owl:someValuesFrom crystal:SlipPlane ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:movesOn ;
+            owl:someValuesFrom crystal:SlipPlane ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasLineSense ;
+                        owl:someValuesFrom crystal:LineSense ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:LineSense ;
+                        owl:onProperty crystal:hasLineSense ] ) ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:movesOn ;
+            owl:someValuesFrom crystal:SlipPlane ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasBurgersVector ;
+                        owl:someValuesFrom crystal:BurgersVector ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:BurgersVector ;
+                        owl:onProperty crystal:hasBurgersVector ] ) ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:movesOn ;
+            owl:someValuesFrom crystal:SlipPlane ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasLineSense ;
+                        owl:someValuesFrom crystal:LineSense ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:LineSense ;
+                        owl:onProperty crystal:hasLineSense ] ) ],
+        crystal:CrystallineDefect .
+
+mdo:AxisVectors a owl:Class ;
+    rdfs:label "Axis Vectors"@en ;
+    rdfs:comment "An axis-vectors is the three vectors which represent the bases of cell."@en ;
+    rdfs:subClassOf [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onClass mdo:CoordinateVector ;
+                        owl:onProperty mdo:has_a_axisVector ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] [ a owl:Restriction ;
+                        owl:onClass mdo:CoordinateVector ;
+                        owl:onProperty mdo:has_b_axisVector ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] [ a owl:Restriction ;
+                        owl:onClass mdo:CoordinateVector ;
+                        owl:onProperty mdo:has_c_axisVector ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onClass mdo:CoordinateVector ;
+                        owl:onProperty mdo:has_a_axisVector ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] [ a owl:Restriction ;
+                        owl:onClass mdo:CoordinateVector ;
+                        owl:onProperty mdo:has_b_axisVector ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] [ a owl:Restriction ;
+                        owl:onClass mdo:CoordinateVector ;
+                        owl:onProperty mdo:has_c_axisVector ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onClass mdo:CoordinateVector ;
+                        owl:onProperty mdo:has_a_axisVector ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] [ a owl:Restriction ;
+                        owl:onClass mdo:CoordinateVector ;
+                        owl:onProperty mdo:has_b_axisVector ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] [ a owl:Restriction ;
+                        owl:onClass mdo:CoordinateVector ;
+                        owl:onProperty mdo:has_c_axisVector ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onClass mdo:CoordinateVector ;
+                        owl:onProperty mdo:has_a_axisVector ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] [ a owl:Restriction ;
+                        owl:onClass mdo:CoordinateVector ;
+                        owl:onProperty mdo:has_b_axisVector ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] [ a owl:Restriction ;
+                        owl:onClass mdo:CoordinateVector ;
+                        owl:onProperty mdo:has_c_axisVector ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onClass mdo:CoordinateVector ;
+                        owl:onProperty mdo:has_a_axisVector ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] [ a owl:Restriction ;
+                        owl:onClass mdo:CoordinateVector ;
+                        owl:onProperty mdo:has_b_axisVector ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] [ a owl:Restriction ;
+                        owl:onClass mdo:CoordinateVector ;
+                        owl:onProperty mdo:has_c_axisVector ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onClass mdo:CoordinateVector ;
+                        owl:onProperty mdo:has_a_axisVector ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] [ a owl:Restriction ;
+                        owl:onClass mdo:CoordinateVector ;
+                        owl:onProperty mdo:has_b_axisVector ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] [ a owl:Restriction ;
+                        owl:onClass mdo:CoordinateVector ;
+                        owl:onProperty mdo:has_c_axisVector ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onClass mdo:CoordinateVector ;
+                        owl:onProperty mdo:has_a_axisVector ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] [ a owl:Restriction ;
+                        owl:onClass mdo:CoordinateVector ;
+                        owl:onProperty mdo:has_b_axisVector ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] [ a owl:Restriction ;
+                        owl:onClass mdo:CoordinateVector ;
+                        owl:onProperty mdo:has_c_axisVector ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onClass mdo:CoordinateVector ;
+                        owl:onProperty mdo:has_a_axisVector ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] [ a owl:Restriction ;
+                        owl:onClass mdo:CoordinateVector ;
+                        owl:onProperty mdo:has_b_axisVector ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] [ a owl:Restriction ;
+                        owl:onClass mdo:CoordinateVector ;
+                        owl:onProperty mdo:has_c_axisVector ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onClass mdo:CoordinateVector ;
+                        owl:onProperty mdo:has_a_axisVector ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] [ a owl:Restriction ;
+                        owl:onClass mdo:CoordinateVector ;
+                        owl:onProperty mdo:has_b_axisVector ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] [ a owl:Restriction ;
+                        owl:onClass mdo:CoordinateVector ;
+                        owl:onProperty mdo:has_c_axisVector ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onClass mdo:CoordinateVector ;
+                        owl:onProperty mdo:has_a_axisVector ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] [ a owl:Restriction ;
+                        owl:onClass mdo:CoordinateVector ;
+                        owl:onProperty mdo:has_b_axisVector ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] [ a owl:Restriction ;
+                        owl:onClass mdo:CoordinateVector ;
+                        owl:onProperty mdo:has_c_axisVector ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onClass mdo:CoordinateVector ;
+                        owl:onProperty mdo:has_a_axisVector ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] [ a owl:Restriction ;
+                        owl:onClass mdo:CoordinateVector ;
+                        owl:onProperty mdo:has_b_axisVector ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] [ a owl:Restriction ;
+                        owl:onClass mdo:CoordinateVector ;
+                        owl:onProperty mdo:has_c_axisVector ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onClass mdo:CoordinateVector ;
+                        owl:onProperty mdo:has_a_axisVector ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] [ a owl:Restriction ;
+                        owl:onClass mdo:CoordinateVector ;
+                        owl:onProperty mdo:has_b_axisVector ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] [ a owl:Restriction ;
+                        owl:onClass mdo:CoordinateVector ;
+                        owl:onProperty mdo:has_c_axisVector ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ) ] .
+
+crystal:Monoclinic a owl:Class ;
+    rdfs:subClassOf crystal:CrystalSystem .
+
+crystal:Orthorombic a owl:Class ;
+    rdfs:subClassOf crystal:CrystalSystem .
+
+crystal:Rhombohedral a owl:Class ;
+    rdfs:subClassOf crystal:CrystalSystem .
+
+crystal:Tetragonal a owl:Class ;
+    rdfs:subClassOf crystal:CrystalSystem .
+
+crystal:directionMillerIndice a owl:DatatypeProperty ;
+    rdfs:label "direction miller indice"@en ;
+    rdfs:comment "directionMillerIndice represents Miller indice of lattice direction in string."@en ;
+    rdfs:domain crystal:LatticeDirection ;
+    rdfs:range xsd:string .
+
+crystal:familyDirectionMillerIndice a owl:DatatypeProperty ;
+    rdfs:label "family direction miller indice"@en ;
+    rdfs:comment "familyDirectionMillerIndice reprersent a set of miller indices of lattice direction in string."@en ;
+    rdfs:domain crystal:FamilyOfCrystalDirection ;
+    rdfs:range xsd:string .
+
+crystal:familyPlaneMillerIndice a owl:DatatypeProperty ;
+    rdfs:label "family plane miller indice"@en ;
+    rdfs:comment "familyPlaneMillerIndice represents a set of Miller indice of lattice plane in string."@en ;
+    rdfs:domain crystal:FamilyOfCrystalPlane ;
+    rdfs:range xsd:string .
+
+crystal:hasCrystalSystem a owl:ObjectProperty ;
+    rdfs:label "has crystal system"@en ;
+    rdfs:comment "hasCrystalSystem represents the relationship between unit cell and crystal system."@en ;
+    rdfs:domain crystal:UnitCell ;
+    rdfs:range crystal:CrystalSystem .
+
+crystal:hasFamilyCrystalDirection a owl:ObjectProperty ;
+    rdfs:label "has family crystal direction"@en ;
+    rdfs:comment "hasFamilyCrystalDirection represents the relationship between lattice direction and family of crystal direction."@en ;
+    rdfs:domain crystal:LatticeDirection ;
+    rdfs:range crystal:FamilyOfCrystalDirection .
+
+crystal:hasFamilyCrystalPlane a owl:ObjectProperty ;
+    rdfs:label "has family crystal plane"@en ;
+    rdfs:comment "hasFamilyCrystalPlane represents the relationship between lattice Plane and family of crystal plane."@en ;
+    rdfs:domain crystal:LatticePlane ;
+    rdfs:range crystal:FamilyOfCrystalPlane .
+
+crystal:hasLattice a owl:ObjectProperty ;
+    rdfs:label "has lattice"@en ;
+    rdfs:comment "hasLattice represents the relationship between a crystal structure and lattice."@en ;
+    rdfs:domain crystal:CrystalStructure ;
+    rdfs:range mdo:Lattice .
+
+crystal:hasLatticePlane a owl:ObjectProperty ;
+    rdfs:label "has lattice plane"@en ;
+    rdfs:comment "hasLatticePlane represents the relationship between a lattice and lattice planes."@en ;
+    rdfs:domain mdo:Lattice ;
+    rdfs:range crystal:LatticePlane .
+
+crystal:latticeParameterAngleAlpha a owl:DatatypeProperty ;
+    rdfs:label "lattice parameter angle alpha"@en ;
+    rdfs:comment "latticeParameterAngleAlpha represents lattice parameter angle alpha of lattice parameter angle in double."@en ;
+    rdfs:domain crystal:UnitCell ;
+    rdfs:range xsd:double .
+
+crystal:latticeParameterAngleBeta a owl:DatatypeProperty ;
+    rdfs:label "lattice parameter angle beta"@en ;
+    rdfs:comment "latticeParameterAngleBeta represents lattice parameter angle beta of lattice parameter angle in double."@en ;
+    rdfs:domain crystal:UnitCell ;
+    rdfs:range xsd:double .
+
+crystal:latticeParameterAngleGamma a owl:DatatypeProperty ;
+    rdfs:label "lattice parameter angle gamma"@en ;
+    rdfs:comment "latticeParameterAngleGamma represents lattice parameter angle gamma of lattice parameter angle in double."@en ;
+    rdfs:domain crystal:UnitCell ;
+    rdfs:range xsd:double .
+
+crystal:latticeParameterLengthA a owl:DatatypeProperty ;
+    rdfs:label "lattice parameter length a"@en ;
+    rdfs:comment "latticeParameterLengthA represents lattice parameter length a of lattice parameter length in double."@en ;
+    rdfs:domain crystal:UnitCell ;
+    rdfs:range xsd:double .
+
+crystal:latticeParameterLengthB a owl:DatatypeProperty ;
+    rdfs:label "lattice parameter length b"@en ;
+    rdfs:comment "latticeParameterLengthB represents lattice parameter length b of lattice parameter length in double."@en ;
+    rdfs:domain crystal:UnitCell ;
+    rdfs:range xsd:double .
+
+crystal:latticeParameterLengthC a owl:DatatypeProperty ;
+    rdfs:label "lattice parameter length c"@en ;
+    rdfs:comment "latticeParameterLengthA represents lattice parameter length c of lattice parameter length in double."@en ;
+    rdfs:domain crystal:UnitCell ;
+    rdfs:range xsd:double .
+
+crystal:movesOn a owl:ObjectProperty ;
+    rdfs:label "moves on"@en ;
+    rdfs:comment "movesOn represents the relationship between dislocation and slip plane it moves on."@en ;
+    rdfs:domain crystal:Dislocation ;
+    rdfs:range crystal:SlipPlane .
+
+crystal:planeMillerIndice a owl:DatatypeProperty ;
+    rdfs:label "plane miller indice"@en,
+        "planeMillerIndice represents Miller indice of lattice plane in string."@en ;
+    rdfs:domain crystal:LatticePlane ;
+    rdfs:range xsd:string .
+
+crystal:translationVectorConstantU a owl:DatatypeProperty ;
+    rdfs:label "translation vector constant u"@en ;
+    rdfs:comment "translationVectorConstantU represents the translation constant u of a vector basis in double."@en ;
+    rdfs:domain crystal:LatticePoint ;
+    rdfs:range xsd:double .
+
+crystal:translationVectorConstantV a owl:DatatypeProperty ;
+    rdfs:label "translation vector constant v"@en ;
+    rdfs:comment "translationVectorConstantU represents the translation constant v of a vector basis in double."@en ;
+    rdfs:domain crystal:LatticePoint ;
+    rdfs:range xsd:double .
+
+crystal:translationVectorConstantW a owl:DatatypeProperty ;
+    rdfs:label "translation vector constant w"@en ;
+    rdfs:comment "translationVectorConstantU represents the translation constant w of a vector basis in double."@en ;
+    rdfs:domain crystal:LatticePoint ;
+    rdfs:range xsd:double .
+
+mdo:X_axisCoordinate a owl:DatatypeProperty ;
+    rdfs:label "X_axis coordinate"@en ;
+    rdfs:comment "X_axisCoordinate represents that a coordinate vector has the value of a coordinate in a double in X axis."@en ;
+    rdfs:domain mdo:CoordinateVector ;
+    rdfs:range xsd:double .
+
+mdo:Y_axisCoordinate a owl:DatatypeProperty ;
+    rdfs:label "Y_axis coordinate"@en ;
+    rdfs:comment "Y_axisCoordinate represents that a coordinate vector has the value of a coordinate in a double in Y axis."@en ;
+    rdfs:domain mdo:CoordinateVector ;
+    rdfs:range xsd:double .
+
+mdo:Z_axisCoordinate a owl:DatatypeProperty ;
+    rdfs:label "Z_axis coordinate"@en ;
+    rdfs:comment "Z_axisCoordinate represents that a coordinate vector has the value of a coordinate in a double in Z axis."@en ;
+    rdfs:domain mdo:CoordinateVector ;
+    rdfs:range xsd:double .
+
+mdo:hasElement a owl:ObjectProperty ;
+    rdfs:label "has element"@en ;
+    rdfs:comment "hasElement represents the relationship between a species and atoms it has."@en ;
+    rdfs:domain mdo:Species ;
+    rdfs:range chebi:CHEBI_33250 .
+
+mdo:has_a_axisVector a owl:ObjectProperty ;
+    rdfs:label "has a_axis vector"@en ;
+    rdfs:comment "has_a_axisVector represents the relationship between an axis-vectors and a coordinate vector to define the coordiantes of the translation vector (a)."@en ;
+    rdfs:domain mdo:AxisVectors ;
+    rdfs:range mdo:CoordinateVector .
+
+mdo:has_b_axisVector a owl:ObjectProperty ;
+    rdfs:label "has b_axis vector"@en ;
+    rdfs:comment "has_b_axisVector represents the relationship between an axis-vectors and a coordinate vector to define the coordiantes of the translation vector (b)."@en ;
+    rdfs:domain mdo:AxisVectors ;
+    rdfs:range mdo:CoordinateVector .
+
+mdo:has_c_axisVector a owl:ObjectProperty ;
+    rdfs:label "has c_axis vector"@en ;
+    rdfs:comment "has_c_axisVector represents the relationship between an axis-vectors and a coordinate vector to define the coordiantes of the translation vector (c)."@en ;
+    rdfs:domain mdo:AxisVectors ;
+    rdfs:range mdo:CoordinateVector .
+
+crystal:Triclinic a owl:Class ;
+    rdfs:subClassOf crystal:CrystalSystem .
+
+crystal:Cubic a owl:Class ;
+    rdfs:subClassOf crystal:CrystalSystem .
+
+crystal:FamilyOfCrystalDirection a owl:Class ;
+    rdfs:label "Family of Crystal Direction"@en ;
+    rdfs:comment "a set of symmetrically equivalent directions in the lattice."@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onDataRange xsd:string ;
+            owl:onProperty crystal:familyDirectionMillerIndice ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:string ;
+            owl:onProperty crystal:familyDirectionMillerIndice ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:string ;
+            owl:onProperty crystal:familyDirectionMillerIndice ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:string ;
+            owl:onProperty crystal:familyDirectionMillerIndice ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:string ;
+            owl:onProperty crystal:familyDirectionMillerIndice ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:string ;
+            owl:onProperty crystal:familyDirectionMillerIndice ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:string ;
+            owl:onProperty crystal:familyDirectionMillerIndice ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:string ;
+            owl:onProperty crystal:familyDirectionMillerIndice ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:string ;
+            owl:onProperty crystal:familyDirectionMillerIndice ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:string ;
+            owl:onProperty crystal:familyDirectionMillerIndice ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:string ;
+            owl:onProperty crystal:familyDirectionMillerIndice ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:string ;
+            owl:onProperty crystal:familyDirectionMillerIndice ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] .
+
+crystal:FamilyOfCrystalPlane a owl:Class ;
+    rdfs:label "Family of Crystal Plane"@en ;
+    rdfs:comment "a set of symmetrically equivalent planes in the lattice."@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onDataRange xsd:string ;
+            owl:onProperty crystal:familyPlaneMillerIndice ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:string ;
+            owl:onProperty crystal:familyPlaneMillerIndice ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:string ;
+            owl:onProperty crystal:familyPlaneMillerIndice ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:string ;
+            owl:onProperty crystal:familyPlaneMillerIndice ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:string ;
+            owl:onProperty crystal:familyPlaneMillerIndice ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:string ;
+            owl:onProperty crystal:familyPlaneMillerIndice ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:string ;
+            owl:onProperty crystal:familyPlaneMillerIndice ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:string ;
+            owl:onProperty crystal:familyPlaneMillerIndice ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:string ;
+            owl:onProperty crystal:familyPlaneMillerIndice ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:string ;
+            owl:onProperty crystal:familyPlaneMillerIndice ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:string ;
+            owl:onProperty crystal:familyPlaneMillerIndice ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:string ;
+            owl:onProperty crystal:familyPlaneMillerIndice ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] .
+
+crystal:Hexagonal a owl:Class ;
+    rdfs:subClassOf crystal:CrystalSystem .
+
+crystal:CrystalSystem a owl:Class ;
+    rdfs:label "Crystal System"@en ;
+    rdfs:comment "A classification scheme for crystal structures on the basis of unit cell geometry." .
+
+chebi:CHEBI_33250 a owl:Class ;
+    rdfs:label "Atom"@en ;
+    rdfs:comment "A chemical entity constituting the smallest component of an element having the chemical properties of the element."@en .
+
+crystal:hasBasis a owl:ObjectProperty ;
+    rdfs:label "has basis"@en ;
+    rdfs:comment "hasBasis represents the relationship between a lattice and basis."@en ;
+    rdfs:domain mdo:Lattice ;
+    rdfs:range mdo:Basis .
+
+crystal:hasBurgersVector a owl:ObjectProperty ;
+    rdfs:label "has burgers vector"@en ;
+    rdfs:comment "hasBurrgersVector represents the relationship between a dislocation and a burgers vector."@en ;
+    rdfs:domain crystal:Dislocation ;
+    rdfs:range crystal:BurgersVector .
+
+crystal:hasCrystalStructure a owl:ObjectProperty ;
+    rdfs:label "has crystal structure"@en ;
+    rdfs:comment "hasCrystalStructure represents the relationship between crystalline material and crystal structure."@en ;
+    rdfs:domain crystal:CrystallineMaterial ;
+    rdfs:range crystal:CrystalStructure .
+
+crystal:hasCrystallineDefect a owl:ObjectProperty ;
+    rdfs:label "has crystalline defect"@en ;
+    rdfs:comment "hasCrystallineDefect represents the relationship between crystalline material and crystalline defect"@en ;
+    rdfs:domain crystal:CrystallineMaterial ;
+    rdfs:range crystal:CrystallineDefect .
+
+crystal:hasLatticeDirection a owl:ObjectProperty ;
+    rdfs:label "has lattice direction"@en ;
+    rdfs:comment "hasLatticeDirection represents the relationship between a lattice or a lattice plane and lattice directions."@en ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( crystal:LatticePlane mdo:Lattice ) ],
+        [ a owl:Class ;
+            owl:unionOf ( crystal:LatticePlane mdo:Lattice ) ],
+        [ a owl:Class ;
+            owl:unionOf ( crystal:LatticePlane mdo:Lattice ) ],
+        [ a owl:Class ;
+            owl:unionOf ( crystal:LatticePlane mdo:Lattice ) ],
+        [ a owl:Class ;
+            owl:unionOf ( crystal:LatticePlane mdo:Lattice ) ],
+        [ a owl:Class ;
+            owl:unionOf ( crystal:LatticePlane mdo:Lattice ) ],
+        [ a owl:Class ;
+            owl:unionOf ( crystal:LatticePlane mdo:Lattice ) ],
+        [ a owl:Class ;
+            owl:unionOf ( crystal:LatticePlane mdo:Lattice ) ],
+        [ a owl:Class ;
+            owl:unionOf ( crystal:LatticePlane mdo:Lattice ) ],
+        [ a owl:Class ;
+            owl:unionOf ( crystal:LatticePlane mdo:Lattice ) ],
+        [ a owl:Class ;
+            owl:unionOf ( crystal:LatticePlane mdo:Lattice ) ],
+        [ a owl:Class ;
+            owl:unionOf ( crystal:LatticePlane mdo:Lattice ) ] ;
+    rdfs:range crystal:LatticeDirection .
+
+crystal:hasLineSense a owl:ObjectProperty ;
+    rdfs:label "has line sense"@en ;
+    rdfs:comment "hasLineSense represents the relationship between a dislocation and a line sense."@en ;
+    rdfs:domain crystal:Dislocation ;
+    rdfs:range crystal:LineSense .
+
+crystal:hasSlipDirection a owl:ObjectProperty ;
+    rdfs:label "has slip direction"@en ;
+    rdfs:comment "hasSlipDirection represents the relationship  between Slip Plane or Slip system and Slip Direction they own."@en ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( crystal:SlipPlane crystal:SlipSystem ) ],
+        [ a owl:Class ;
+            owl:unionOf ( crystal:SlipPlane crystal:SlipSystem ) ],
+        [ a owl:Class ;
+            owl:unionOf ( crystal:SlipPlane crystal:SlipSystem ) ],
+        [ a owl:Class ;
+            owl:unionOf ( crystal:SlipPlane crystal:SlipSystem ) ],
+        [ a owl:Class ;
+            owl:unionOf ( crystal:SlipPlane crystal:SlipSystem ) ],
+        [ a owl:Class ;
+            owl:unionOf ( crystal:SlipPlane crystal:SlipSystem ) ],
+        [ a owl:Class ;
+            owl:unionOf ( crystal:SlipPlane crystal:SlipSystem ) ],
+        [ a owl:Class ;
+            owl:unionOf ( crystal:SlipPlane crystal:SlipSystem ) ],
+        [ a owl:Class ;
+            owl:unionOf ( crystal:SlipPlane crystal:SlipSystem ) ],
+        [ a owl:Class ;
+            owl:unionOf ( crystal:SlipPlane crystal:SlipSystem ) ],
+        [ a owl:Class ;
+            owl:unionOf ( crystal:SlipPlane crystal:SlipSystem ) ],
+        [ a owl:Class ;
+            owl:unionOf ( crystal:SlipPlane crystal:SlipSystem ) ] ;
+    rdfs:range crystal:SlipDirection .
+
+crystal:hasSlipPlane a owl:ObjectProperty ;
+    rdfs:label "has slip plane"@en ;
+    rdfs:comment "hasSlipPlane represents the relationship between crystal structure and slip plane it owns."@en ;
+    rdfs:domain crystal:CrystalStructure ;
+    rdfs:range crystal:SlipPlane .
+
+crystal:hasSlipSystem a owl:ObjectProperty ;
+    rdfs:label "has slip system"@en ;
+    rdfs:comment "hasSlipSystem represents the relationship between a crystal structure and slip system."@en ;
+    rdfs:domain crystal:CrystalStructure ;
+    rdfs:range crystal:SlipSystem .
+
+crystal:hasUnitCell a owl:ObjectProperty ;
+    rdfs:label "has unit cell"@en ;
+    rdfs:comment "hasUnitCell hasSpecies represents the relationship between a lattice and  unit cells."@en ;
+    rdfs:domain mdo:Lattice ;
+    rdfs:range crystal:UnitCell .
+
+mdo:hasCartesianCoordinates a owl:ObjectProperty ;
+    rdfs:label "has cartesian coordinates"@en ;
+    rdfs:comment "hasCartesianCoordinates represents the relationship between a site and coordinates in cartesian format it has."@en ;
+    rdfs:domain mdo:Site ;
+    rdfs:range mdo:CoordinateVector .
+
+mdo:hasFractionalCoordinates a owl:ObjectProperty ;
+    rdfs:label "has fractional coordinates"@en ;
+    rdfs:comment "hasFractionalCoordinates represents the relationship between a site and coordinates in fractional format it has."@en ;
+    rdfs:domain mdo:Site ;
+    rdfs:range mdo:CoordinateVector .
+
+mdo:hasOccupancy a owl:ObjectProperty ;
+    rdfs:label "has occupancy"@en ;
+    rdfs:comment "hasOccupancy represents the relationship between a structure and occupancies it has."@en ;
+    rdfs:domain crystal:CrystalStructure ;
+    rdfs:range mdo:Occupancy .
+
+mdo:hasSite a owl:ObjectProperty ;
+    rdfs:label "has site"@en ;
+    rdfs:comment "hasSite represents the relationship between an occupancy and sites it ties."@en ;
+    rdfs:domain mdo:Occupancy ;
+    rdfs:range mdo:Site .
+
+mdo:hasSpecies a owl:ObjectProperty ;
+    rdfs:label "has species"@en ;
+    rdfs:comment "hasSpecies represents the relationship between an occupancy and species it ties."@en ;
+    rdfs:domain mdo:Occupancy ;
+    rdfs:range mdo:Species .
+
+crystal:BurgersVector a owl:Class ;
+    rdfs:label "Burgers Vector"@en ;
+    rdfs:comment "An elementary unit (length order of lattice parameter) of lattice translation."@en,
+        "The basic notion of Burgers vector comes from the closure failure of initially perfect lattice due to the existance of dislocation. The magnitude and direction of closure failure is characterized by Burgers vector."@en .
+
+crystal:LineSense a owl:Class ;
+    rdfs:label "Line Sense"@en ;
+    rdfs:comment "Sense that characterizes a directed line (has a start and an end)."@en .
+
+crystal:SlipDirection a owl:Class ;
+    rdfs:label "Slip Direction"@en ;
+    rdfs:comment "The direction in the slip plane corresponding to one of the shortest lattice translation vectors."@en ;
+    rdfs:subClassOf crystal:LatticeDirection .
+
+crystal:CrystallineDefect a owl:Class ;
+    rdfs:label "Crystalline Defect"@en ;
+    rdfs:comment "Lattice irregularity having one or more of its dimensions on the order of an atomic diameter."@en .
+
+mdo:Occupancy a owl:Class ;
+    rdfs:label "Occupancy"@en ;
+    rdfs:comment "An occupancy ties a specific species to a site."@en ;
+    rdfs:subClassOf [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty mdo:hasSpecies ;
+                        owl:someValuesFrom mdo:Species ] [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:Species ;
+                        owl:onProperty mdo:hasSpecies ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty mdo:hasSpecies ;
+                        owl:someValuesFrom mdo:Species ] [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:Species ;
+                        owl:onProperty mdo:hasSpecies ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty mdo:hasSite ;
+                        owl:someValuesFrom mdo:Site ] [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:Site ;
+                        owl:onProperty mdo:hasSite ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty mdo:hasSite ;
+                        owl:someValuesFrom mdo:Site ] [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:Site ;
+                        owl:onProperty mdo:hasSite ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty mdo:hasSpecies ;
+                        owl:someValuesFrom mdo:Species ] [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:Species ;
+                        owl:onProperty mdo:hasSpecies ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty mdo:hasSpecies ;
+                        owl:someValuesFrom mdo:Species ] [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:Species ;
+                        owl:onProperty mdo:hasSpecies ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty mdo:hasSpecies ;
+                        owl:someValuesFrom mdo:Species ] [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:Species ;
+                        owl:onProperty mdo:hasSpecies ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty mdo:hasSpecies ;
+                        owl:someValuesFrom mdo:Species ] [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:Species ;
+                        owl:onProperty mdo:hasSpecies ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty mdo:hasSite ;
+                        owl:someValuesFrom mdo:Site ] [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:Site ;
+                        owl:onProperty mdo:hasSite ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty mdo:hasSpecies ;
+                        owl:someValuesFrom mdo:Species ] [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:Species ;
+                        owl:onProperty mdo:hasSpecies ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty mdo:hasSpecies ;
+                        owl:someValuesFrom mdo:Species ] [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:Species ;
+                        owl:onProperty mdo:hasSpecies ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty mdo:hasSpecies ;
+                        owl:someValuesFrom mdo:Species ] [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:Species ;
+                        owl:onProperty mdo:hasSpecies ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty mdo:hasSite ;
+                        owl:someValuesFrom mdo:Site ] [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:Site ;
+                        owl:onProperty mdo:hasSite ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty mdo:hasSpecies ;
+                        owl:someValuesFrom mdo:Species ] [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:Species ;
+                        owl:onProperty mdo:hasSpecies ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty mdo:hasSpecies ;
+                        owl:someValuesFrom mdo:Species ] [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:Species ;
+                        owl:onProperty mdo:hasSpecies ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty mdo:hasSite ;
+                        owl:someValuesFrom mdo:Site ] [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:Site ;
+                        owl:onProperty mdo:hasSite ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty mdo:hasSite ;
+                        owl:someValuesFrom mdo:Site ] [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:Site ;
+                        owl:onProperty mdo:hasSite ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty mdo:hasSite ;
+                        owl:someValuesFrom mdo:Site ] [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:Site ;
+                        owl:onProperty mdo:hasSite ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty mdo:hasSite ;
+                        owl:someValuesFrom mdo:Site ] [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:Site ;
+                        owl:onProperty mdo:hasSite ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty mdo:hasSite ;
+                        owl:someValuesFrom mdo:Site ] [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:Site ;
+                        owl:onProperty mdo:hasSite ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty mdo:hasSpecies ;
+                        owl:someValuesFrom mdo:Species ] [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:Species ;
+                        owl:onProperty mdo:hasSpecies ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty mdo:hasSite ;
+                        owl:someValuesFrom mdo:Site ] [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:Site ;
+                        owl:onProperty mdo:hasSite ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty mdo:hasSite ;
+                        owl:someValuesFrom mdo:Site ] [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:Site ;
+                        owl:onProperty mdo:hasSite ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty mdo:hasSite ;
+                        owl:someValuesFrom mdo:Site ] [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:Site ;
+                        owl:onProperty mdo:hasSite ] ) ] .
+
+crystal:CrystalStructure a owl:Class ;
+    rdfs:label "Crystal Structure"@en ;
+    rdfs:comment "A crystal structure is described by both of the lattice geometry and atomic arrangements within the unit cell."@en ;
+    rdfs:subClassOf [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasSlipPlane ;
+                        owl:someValuesFrom crystal:SlipPlane ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:SlipPlane ;
+                        owl:onProperty crystal:hasSlipPlane ] ) ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom mdo:Lattice ;
+            owl:onProperty crystal:hasLattice ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom mdo:Lattice ;
+            owl:onProperty crystal:hasLattice ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasSlipSystem ;
+                        owl:someValuesFrom crystal:SlipSystem ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:SlipSystem ;
+                        owl:onProperty crystal:hasSlipSystem ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty mdo:hasOccupancy ;
+                        owl:someValuesFrom mdo:Occupancy ] [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:Occupancy ;
+                        owl:onProperty mdo:hasOccupancy ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasSlipPlane ;
+                        owl:someValuesFrom crystal:SlipPlane ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:SlipPlane ;
+                        owl:onProperty crystal:hasSlipPlane ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasSlipPlane ;
+                        owl:someValuesFrom crystal:SlipPlane ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:SlipPlane ;
+                        owl:onProperty crystal:hasSlipPlane ] ) ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom mdo:Lattice ;
+            owl:onProperty crystal:hasLattice ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty mdo:hasOccupancy ;
+                        owl:someValuesFrom mdo:Occupancy ] [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:Occupancy ;
+                        owl:onProperty mdo:hasOccupancy ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty mdo:hasOccupancy ;
+                        owl:someValuesFrom mdo:Occupancy ] [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:Occupancy ;
+                        owl:onProperty mdo:hasOccupancy ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasSlipPlane ;
+                        owl:someValuesFrom crystal:SlipPlane ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:SlipPlane ;
+                        owl:onProperty crystal:hasSlipPlane ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty mdo:hasOccupancy ;
+                        owl:someValuesFrom mdo:Occupancy ] [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:Occupancy ;
+                        owl:onProperty mdo:hasOccupancy ] ) ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom mdo:Lattice ;
+            owl:onProperty crystal:hasLattice ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasSlipSystem ;
+                        owl:someValuesFrom crystal:SlipSystem ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:SlipSystem ;
+                        owl:onProperty crystal:hasSlipSystem ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasSlipSystem ;
+                        owl:someValuesFrom crystal:SlipSystem ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:SlipSystem ;
+                        owl:onProperty crystal:hasSlipSystem ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasSlipPlane ;
+                        owl:someValuesFrom crystal:SlipPlane ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:SlipPlane ;
+                        owl:onProperty crystal:hasSlipPlane ] ) ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom mdo:Lattice ;
+            owl:onProperty crystal:hasLattice ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty mdo:hasOccupancy ;
+                        owl:someValuesFrom mdo:Occupancy ] [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:Occupancy ;
+                        owl:onProperty mdo:hasOccupancy ] ) ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom mdo:Lattice ;
+            owl:onProperty crystal:hasLattice ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasSlipPlane ;
+                        owl:someValuesFrom crystal:SlipPlane ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:SlipPlane ;
+                        owl:onProperty crystal:hasSlipPlane ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasSlipPlane ;
+                        owl:someValuesFrom crystal:SlipPlane ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:SlipPlane ;
+                        owl:onProperty crystal:hasSlipPlane ] ) ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom mdo:Lattice ;
+            owl:onProperty crystal:hasLattice ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasSlipPlane ;
+                        owl:someValuesFrom crystal:SlipPlane ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:SlipPlane ;
+                        owl:onProperty crystal:hasSlipPlane ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasSlipSystem ;
+                        owl:someValuesFrom crystal:SlipSystem ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:SlipSystem ;
+                        owl:onProperty crystal:hasSlipSystem ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasSlipSystem ;
+                        owl:someValuesFrom crystal:SlipSystem ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:SlipSystem ;
+                        owl:onProperty crystal:hasSlipSystem ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasSlipSystem ;
+                        owl:someValuesFrom crystal:SlipSystem ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:SlipSystem ;
+                        owl:onProperty crystal:hasSlipSystem ] ) ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom mdo:Lattice ;
+            owl:onProperty crystal:hasLattice ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasSlipSystem ;
+                        owl:someValuesFrom crystal:SlipSystem ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:SlipSystem ;
+                        owl:onProperty crystal:hasSlipSystem ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty mdo:hasOccupancy ;
+                        owl:someValuesFrom mdo:Occupancy ] [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:Occupancy ;
+                        owl:onProperty mdo:hasOccupancy ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasSlipSystem ;
+                        owl:someValuesFrom crystal:SlipSystem ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:SlipSystem ;
+                        owl:onProperty crystal:hasSlipSystem ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty mdo:hasOccupancy ;
+                        owl:someValuesFrom mdo:Occupancy ] [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:Occupancy ;
+                        owl:onProperty mdo:hasOccupancy ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasSlipSystem ;
+                        owl:someValuesFrom crystal:SlipSystem ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:SlipSystem ;
+                        owl:onProperty crystal:hasSlipSystem ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasSlipSystem ;
+                        owl:someValuesFrom crystal:SlipSystem ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:SlipSystem ;
+                        owl:onProperty crystal:hasSlipSystem ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty mdo:hasOccupancy ;
+                        owl:someValuesFrom mdo:Occupancy ] [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:Occupancy ;
+                        owl:onProperty mdo:hasOccupancy ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasSlipPlane ;
+                        owl:someValuesFrom crystal:SlipPlane ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:SlipPlane ;
+                        owl:onProperty crystal:hasSlipPlane ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasSlipPlane ;
+                        owl:someValuesFrom crystal:SlipPlane ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:SlipPlane ;
+                        owl:onProperty crystal:hasSlipPlane ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty mdo:hasOccupancy ;
+                        owl:someValuesFrom mdo:Occupancy ] [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:Occupancy ;
+                        owl:onProperty mdo:hasOccupancy ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasSlipPlane ;
+                        owl:someValuesFrom crystal:SlipPlane ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:SlipPlane ;
+                        owl:onProperty crystal:hasSlipPlane ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasSlipPlane ;
+                        owl:someValuesFrom crystal:SlipPlane ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:SlipPlane ;
+                        owl:onProperty crystal:hasSlipPlane ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasSlipSystem ;
+                        owl:someValuesFrom crystal:SlipSystem ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:SlipSystem ;
+                        owl:onProperty crystal:hasSlipSystem ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty mdo:hasOccupancy ;
+                        owl:someValuesFrom mdo:Occupancy ] [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:Occupancy ;
+                        owl:onProperty mdo:hasOccupancy ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasSlipSystem ;
+                        owl:someValuesFrom crystal:SlipSystem ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:SlipSystem ;
+                        owl:onProperty crystal:hasSlipSystem ] ) ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom mdo:Lattice ;
+            owl:onProperty crystal:hasLattice ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty mdo:hasOccupancy ;
+                        owl:someValuesFrom mdo:Occupancy ] [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:Occupancy ;
+                        owl:onProperty mdo:hasOccupancy ] ) ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom mdo:Lattice ;
+            owl:onProperty crystal:hasLattice ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom mdo:Lattice ;
+            owl:onProperty crystal:hasLattice ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty mdo:hasOccupancy ;
+                        owl:someValuesFrom mdo:Occupancy ] [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:Occupancy ;
+                        owl:onProperty mdo:hasOccupancy ] ) ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom mdo:Lattice ;
+            owl:onProperty crystal:hasLattice ] .
+
+crystal:hasLatticePoint a owl:ObjectProperty ;
+    rdfs:label "has lattice point"@en ;
+    rdfs:comment "hasLatticePoint represents the relationship between a lattice or lattice plane or lattice direction with lattice points."@en ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( crystal:LatticeDirection crystal:LatticePlane mdo:Lattice ) ],
+        [ a owl:Class ;
+            owl:unionOf ( crystal:LatticeDirection crystal:LatticePlane mdo:Lattice ) ],
+        [ a owl:Class ;
+            owl:unionOf ( crystal:LatticeDirection crystal:LatticePlane mdo:Lattice ) ],
+        [ a owl:Class ;
+            owl:unionOf ( crystal:LatticeDirection crystal:LatticePlane mdo:Lattice ) ],
+        [ a owl:Class ;
+            owl:unionOf ( crystal:LatticeDirection crystal:LatticePlane mdo:Lattice ) ],
+        [ a owl:Class ;
+            owl:unionOf ( crystal:LatticeDirection crystal:LatticePlane mdo:Lattice ) ],
+        [ a owl:Class ;
+            owl:unionOf ( crystal:LatticeDirection crystal:LatticePlane mdo:Lattice ) ],
+        [ a owl:Class ;
+            owl:unionOf ( crystal:LatticeDirection crystal:LatticePlane mdo:Lattice ) ],
+        [ a owl:Class ;
+            owl:unionOf ( crystal:LatticeDirection crystal:LatticePlane mdo:Lattice ) ],
+        [ a owl:Class ;
+            owl:unionOf ( crystal:LatticeDirection crystal:LatticePlane mdo:Lattice ) ],
+        [ a owl:Class ;
+            owl:unionOf ( crystal:LatticeDirection crystal:LatticePlane mdo:Lattice ) ],
+        [ a owl:Class ;
+            owl:unionOf ( crystal:LatticeDirection crystal:LatticePlane mdo:Lattice ) ] ;
+    rdfs:range crystal:LatticePoint .
+
+crystal:hasSlipPlaneNormal a owl:ObjectProperty ;
+    rdfs:label "has slip plane normal"@en ;
+    rdfs:comment "hasSlipPlaneNormal represents the relationship between a slip plane or slip system with slip plane normal."@en ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( crystal:SlipPlane crystal:SlipSystem ) ],
+        [ a owl:Class ;
+            owl:unionOf ( crystal:SlipPlane crystal:SlipSystem ) ],
+        [ a owl:Class ;
+            owl:unionOf ( crystal:SlipPlane crystal:SlipSystem ) ],
+        [ a owl:Class ;
+            owl:unionOf ( crystal:SlipPlane crystal:SlipSystem ) ],
+        [ a owl:Class ;
+            owl:unionOf ( crystal:SlipPlane crystal:SlipSystem ) ],
+        [ a owl:Class ;
+            owl:unionOf ( crystal:SlipPlane crystal:SlipSystem ) ],
+        [ a owl:Class ;
+            owl:unionOf ( crystal:SlipPlane crystal:SlipSystem ) ],
+        [ a owl:Class ;
+            owl:unionOf ( crystal:SlipPlane crystal:SlipSystem ) ],
+        [ a owl:Class ;
+            owl:unionOf ( crystal:SlipPlane crystal:SlipSystem ) ],
+        [ a owl:Class ;
+            owl:unionOf ( crystal:SlipPlane crystal:SlipSystem ) ],
+        [ a owl:Class ;
+            owl:unionOf ( crystal:SlipPlane crystal:SlipSystem ) ],
+        [ a owl:Class ;
+            owl:unionOf ( crystal:SlipPlane crystal:SlipSystem ) ] ;
+    rdfs:range crystal:SlipPlaneNormal .
+
+mdo:Site a owl:Class ;
+    rdfs:label "Site"@en ;
+    rdfs:comment "A site is a point in a lattice."@en ;
+    rdfs:subClassOf [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:CoordinateVector ;
+                        owl:onProperty mdo:hasCartesianCoordinates ] [ a owl:Restriction ;
+                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onClass mdo:CoordinateVector ;
+                        owl:onProperty mdo:hasCartesianCoordinates ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:CoordinateVector ;
+                        owl:onProperty mdo:hasFractionalCoordinates ] [ a owl:Restriction ;
+                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onClass mdo:CoordinateVector ;
+                        owl:onProperty mdo:hasFractionalCoordinates ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:CoordinateVector ;
+                        owl:onProperty mdo:hasCartesianCoordinates ] [ a owl:Restriction ;
+                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onClass mdo:CoordinateVector ;
+                        owl:onProperty mdo:hasCartesianCoordinates ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:CoordinateVector ;
+                        owl:onProperty mdo:hasFractionalCoordinates ] [ a owl:Restriction ;
+                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onClass mdo:CoordinateVector ;
+                        owl:onProperty mdo:hasFractionalCoordinates ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:CoordinateVector ;
+                        owl:onProperty mdo:hasCartesianCoordinates ] [ a owl:Restriction ;
+                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onClass mdo:CoordinateVector ;
+                        owl:onProperty mdo:hasCartesianCoordinates ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:CoordinateVector ;
+                        owl:onProperty mdo:hasCartesianCoordinates ] [ a owl:Restriction ;
+                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onClass mdo:CoordinateVector ;
+                        owl:onProperty mdo:hasCartesianCoordinates ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:CoordinateVector ;
+                        owl:onProperty mdo:hasFractionalCoordinates ] [ a owl:Restriction ;
+                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onClass mdo:CoordinateVector ;
+                        owl:onProperty mdo:hasFractionalCoordinates ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:CoordinateVector ;
+                        owl:onProperty mdo:hasFractionalCoordinates ] [ a owl:Restriction ;
+                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onClass mdo:CoordinateVector ;
+                        owl:onProperty mdo:hasFractionalCoordinates ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:CoordinateVector ;
+                        owl:onProperty mdo:hasCartesianCoordinates ] [ a owl:Restriction ;
+                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onClass mdo:CoordinateVector ;
+                        owl:onProperty mdo:hasCartesianCoordinates ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:CoordinateVector ;
+                        owl:onProperty mdo:hasFractionalCoordinates ] [ a owl:Restriction ;
+                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onClass mdo:CoordinateVector ;
+                        owl:onProperty mdo:hasFractionalCoordinates ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:CoordinateVector ;
+                        owl:onProperty mdo:hasFractionalCoordinates ] [ a owl:Restriction ;
+                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onClass mdo:CoordinateVector ;
+                        owl:onProperty mdo:hasFractionalCoordinates ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:CoordinateVector ;
+                        owl:onProperty mdo:hasFractionalCoordinates ] [ a owl:Restriction ;
+                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onClass mdo:CoordinateVector ;
+                        owl:onProperty mdo:hasFractionalCoordinates ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:CoordinateVector ;
+                        owl:onProperty mdo:hasFractionalCoordinates ] [ a owl:Restriction ;
+                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onClass mdo:CoordinateVector ;
+                        owl:onProperty mdo:hasFractionalCoordinates ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:CoordinateVector ;
+                        owl:onProperty mdo:hasFractionalCoordinates ] [ a owl:Restriction ;
+                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onClass mdo:CoordinateVector ;
+                        owl:onProperty mdo:hasFractionalCoordinates ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:CoordinateVector ;
+                        owl:onProperty mdo:hasFractionalCoordinates ] [ a owl:Restriction ;
+                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onClass mdo:CoordinateVector ;
+                        owl:onProperty mdo:hasFractionalCoordinates ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:CoordinateVector ;
+                        owl:onProperty mdo:hasCartesianCoordinates ] [ a owl:Restriction ;
+                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onClass mdo:CoordinateVector ;
+                        owl:onProperty mdo:hasCartesianCoordinates ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:CoordinateVector ;
+                        owl:onProperty mdo:hasCartesianCoordinates ] [ a owl:Restriction ;
+                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onClass mdo:CoordinateVector ;
+                        owl:onProperty mdo:hasCartesianCoordinates ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:CoordinateVector ;
+                        owl:onProperty mdo:hasFractionalCoordinates ] [ a owl:Restriction ;
+                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onClass mdo:CoordinateVector ;
+                        owl:onProperty mdo:hasFractionalCoordinates ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:CoordinateVector ;
+                        owl:onProperty mdo:hasCartesianCoordinates ] [ a owl:Restriction ;
+                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onClass mdo:CoordinateVector ;
+                        owl:onProperty mdo:hasCartesianCoordinates ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:CoordinateVector ;
+                        owl:onProperty mdo:hasFractionalCoordinates ] [ a owl:Restriction ;
+                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onClass mdo:CoordinateVector ;
+                        owl:onProperty mdo:hasFractionalCoordinates ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:CoordinateVector ;
+                        owl:onProperty mdo:hasCartesianCoordinates ] [ a owl:Restriction ;
+                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onClass mdo:CoordinateVector ;
+                        owl:onProperty mdo:hasCartesianCoordinates ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:CoordinateVector ;
+                        owl:onProperty mdo:hasCartesianCoordinates ] [ a owl:Restriction ;
+                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onClass mdo:CoordinateVector ;
+                        owl:onProperty mdo:hasCartesianCoordinates ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:CoordinateVector ;
+                        owl:onProperty mdo:hasCartesianCoordinates ] [ a owl:Restriction ;
+                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onClass mdo:CoordinateVector ;
+                        owl:onProperty mdo:hasCartesianCoordinates ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:CoordinateVector ;
+                        owl:onProperty mdo:hasCartesianCoordinates ] [ a owl:Restriction ;
+                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onClass mdo:CoordinateVector ;
+                        owl:onProperty mdo:hasCartesianCoordinates ] ) ] .
+
+mdo:Species a owl:Class ;
+    rdfs:label "Species"@en ;
+    rdfs:comment "A species is the combination of atoms on each site."@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onClass chebi:CHEBI_33250 ;
+            owl:onProperty mdo:hasElement ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onClass chebi:CHEBI_33250 ;
+            owl:onProperty mdo:hasElement ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onClass chebi:CHEBI_33250 ;
+            owl:onProperty mdo:hasElement ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onClass chebi:CHEBI_33250 ;
+            owl:onProperty mdo:hasElement ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onClass chebi:CHEBI_33250 ;
+            owl:onProperty mdo:hasElement ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onClass chebi:CHEBI_33250 ;
+            owl:onProperty mdo:hasElement ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onClass chebi:CHEBI_33250 ;
+            owl:onProperty mdo:hasElement ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onClass chebi:CHEBI_33250 ;
+            owl:onProperty mdo:hasElement ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onClass chebi:CHEBI_33250 ;
+            owl:onProperty mdo:hasElement ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onClass chebi:CHEBI_33250 ;
+            owl:onProperty mdo:hasElement ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onClass chebi:CHEBI_33250 ;
+            owl:onProperty mdo:hasElement ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onClass chebi:CHEBI_33250 ;
+            owl:onProperty mdo:hasElement ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] .
+
+crystal:SlipPlaneNormal a owl:Class ;
+    rdfs:label "Slip Plane Normal"@en ;
+    rdfs:comment "Unit normal vector of slip planes"@en .
+
+crystal:LatticeDirection a owl:Class ;
+    rdfs:label "Lattice Direction"@en ;
+    rdfs:comment "A direction inside the lattice that connecting two lattice points."@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onDataRange xsd:string ;
+            owl:onProperty crystal:directionMillerIndice ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasFamilyCrystalDirection ;
+            owl:someValuesFrom crystal:FamilyOfCrystalDirection ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasLatticePoint ;
+            owl:someValuesFrom crystal:LatticePoint ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasFamilyCrystalDirection ;
+            owl:someValuesFrom crystal:FamilyOfCrystalDirection ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasLatticePoint ;
+            owl:someValuesFrom crystal:LatticePoint ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:string ;
+            owl:onProperty crystal:directionMillerIndice ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:string ;
+            owl:onProperty crystal:directionMillerIndice ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:string ;
+            owl:onProperty crystal:directionMillerIndice ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:string ;
+            owl:onProperty crystal:directionMillerIndice ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasFamilyCrystalDirection ;
+            owl:someValuesFrom crystal:FamilyOfCrystalDirection ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:string ;
+            owl:onProperty crystal:directionMillerIndice ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:string ;
+            owl:onProperty crystal:directionMillerIndice ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasFamilyCrystalDirection ;
+            owl:someValuesFrom crystal:FamilyOfCrystalDirection ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasLatticePoint ;
+            owl:someValuesFrom crystal:LatticePoint ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasFamilyCrystalDirection ;
+            owl:someValuesFrom crystal:FamilyOfCrystalDirection ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasFamilyCrystalDirection ;
+            owl:someValuesFrom crystal:FamilyOfCrystalDirection ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasFamilyCrystalDirection ;
+            owl:someValuesFrom crystal:FamilyOfCrystalDirection ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:string ;
+            owl:onProperty crystal:directionMillerIndice ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasLatticePoint ;
+            owl:someValuesFrom crystal:LatticePoint ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasFamilyCrystalDirection ;
+            owl:someValuesFrom crystal:FamilyOfCrystalDirection ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasFamilyCrystalDirection ;
+            owl:someValuesFrom crystal:FamilyOfCrystalDirection ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasFamilyCrystalDirection ;
+            owl:someValuesFrom crystal:FamilyOfCrystalDirection ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasLatticePoint ;
+            owl:someValuesFrom crystal:LatticePoint ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:string ;
+            owl:onProperty crystal:directionMillerIndice ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:string ;
+            owl:onProperty crystal:directionMillerIndice ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:string ;
+            owl:onProperty crystal:directionMillerIndice ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasLatticePoint ;
+            owl:someValuesFrom crystal:LatticePoint ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasLatticePoint ;
+            owl:someValuesFrom crystal:LatticePoint ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasLatticePoint ;
+            owl:someValuesFrom crystal:LatticePoint ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasLatticePoint ;
+            owl:someValuesFrom crystal:LatticePoint ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasLatticePoint ;
+            owl:someValuesFrom crystal:LatticePoint ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasFamilyCrystalDirection ;
+            owl:someValuesFrom crystal:FamilyOfCrystalDirection ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasLatticePoint ;
+            owl:someValuesFrom crystal:LatticePoint ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:string ;
+            owl:onProperty crystal:directionMillerIndice ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasLatticePoint ;
+            owl:someValuesFrom crystal:LatticePoint ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasFamilyCrystalDirection ;
+            owl:someValuesFrom crystal:FamilyOfCrystalDirection ] .
+
+crystal:LatticePlane a owl:Class ;
+    rdfs:label "Lattice Plane"@en ;
+    rdfs:comment "Lattice plane, forms an infinitely stretched plane (characterized through a plane normal) that cuts through lattice points such that again a regular arrangement of lattice points in the plane occurs."@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty crystal:hasFamilyCrystalPlane ;
+            owl:someValuesFrom crystal:FamilyOfCrystalPlane ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasFamilyCrystalPlane ;
+            owl:someValuesFrom crystal:FamilyOfCrystalPlane ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:string ;
+            owl:onProperty crystal:planeMillerIndice ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasLatticePoint ;
+            owl:someValuesFrom crystal:LatticePoint ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasFamilyCrystalPlane ;
+            owl:someValuesFrom crystal:FamilyOfCrystalPlane ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:string ;
+            owl:onProperty crystal:planeMillerIndice ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasFamilyCrystalPlane ;
+            owl:someValuesFrom crystal:FamilyOfCrystalPlane ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasLatticeDirection ;
+            owl:someValuesFrom crystal:LatticeDirection ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasLatticePoint ;
+            owl:someValuesFrom crystal:LatticePoint ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasLatticeDirection ;
+            owl:someValuesFrom crystal:LatticeDirection ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasLatticeDirection ;
+            owl:someValuesFrom crystal:LatticeDirection ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasLatticeDirection ;
+            owl:someValuesFrom crystal:LatticeDirection ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasLatticeDirection ;
+            owl:someValuesFrom crystal:LatticeDirection ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasFamilyCrystalPlane ;
+            owl:someValuesFrom crystal:FamilyOfCrystalPlane ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:string ;
+            owl:onProperty crystal:planeMillerIndice ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasLatticeDirection ;
+            owl:someValuesFrom crystal:LatticeDirection ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasFamilyCrystalPlane ;
+            owl:someValuesFrom crystal:FamilyOfCrystalPlane ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasLatticePoint ;
+            owl:someValuesFrom crystal:LatticePoint ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:string ;
+            owl:onProperty crystal:planeMillerIndice ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:string ;
+            owl:onProperty crystal:planeMillerIndice ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasLatticeDirection ;
+            owl:someValuesFrom crystal:LatticeDirection ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:string ;
+            owl:onProperty crystal:planeMillerIndice ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasFamilyCrystalPlane ;
+            owl:someValuesFrom crystal:FamilyOfCrystalPlane ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasFamilyCrystalPlane ;
+            owl:someValuesFrom crystal:FamilyOfCrystalPlane ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:string ;
+            owl:onProperty crystal:planeMillerIndice ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasLatticeDirection ;
+            owl:someValuesFrom crystal:LatticeDirection ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:string ;
+            owl:onProperty crystal:planeMillerIndice ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasFamilyCrystalPlane ;
+            owl:someValuesFrom crystal:FamilyOfCrystalPlane ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasLatticeDirection ;
+            owl:someValuesFrom crystal:LatticeDirection ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasLatticePoint ;
+            owl:someValuesFrom crystal:LatticePoint ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasLatticePoint ;
+            owl:someValuesFrom crystal:LatticePoint ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasFamilyCrystalPlane ;
+            owl:someValuesFrom crystal:FamilyOfCrystalPlane ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasLatticePoint ;
+            owl:someValuesFrom crystal:LatticePoint ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasLatticePoint ;
+            owl:someValuesFrom crystal:LatticePoint ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasLatticeDirection ;
+            owl:someValuesFrom crystal:LatticeDirection ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasLatticePoint ;
+            owl:someValuesFrom crystal:LatticePoint ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasLatticeDirection ;
+            owl:someValuesFrom crystal:LatticeDirection ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasFamilyCrystalPlane ;
+            owl:someValuesFrom crystal:FamilyOfCrystalPlane ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasFamilyCrystalPlane ;
+            owl:someValuesFrom crystal:FamilyOfCrystalPlane ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasLatticeDirection ;
+            owl:someValuesFrom crystal:LatticeDirection ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasLatticePoint ;
+            owl:someValuesFrom crystal:LatticePoint ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasLatticePoint ;
+            owl:someValuesFrom crystal:LatticePoint ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasLatticePoint ;
+            owl:someValuesFrom crystal:LatticePoint ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasLatticePoint ;
+            owl:someValuesFrom crystal:LatticePoint ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:string ;
+            owl:onProperty crystal:planeMillerIndice ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:string ;
+            owl:onProperty crystal:planeMillerIndice ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:string ;
+            owl:onProperty crystal:planeMillerIndice ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:string ;
+            owl:onProperty crystal:planeMillerIndice ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] .
+
+crystal:LatticePoint a owl:Class ;
+    rdfs:label "Lattice Point"@en ;
+    rdfs:comment "Lattice points are the points where atoms or molecules are located"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:translationVectorConstantV ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:translationVectorConstantW ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:translationVectorConstantU ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:translationVectorConstantW ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:translationVectorConstantV ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:translationVectorConstantW ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:translationVectorConstantV ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:translationVectorConstantW ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:translationVectorConstantV ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:translationVectorConstantU ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:translationVectorConstantU ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:translationVectorConstantU ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:translationVectorConstantV ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:translationVectorConstantV ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:translationVectorConstantU ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:translationVectorConstantV ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:translationVectorConstantU ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:translationVectorConstantU ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:translationVectorConstantV ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:translationVectorConstantU ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:translationVectorConstantW ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:translationVectorConstantU ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:translationVectorConstantU ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:translationVectorConstantW ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:translationVectorConstantU ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:translationVectorConstantV ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:translationVectorConstantW ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:translationVectorConstantV ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:translationVectorConstantW ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:translationVectorConstantW ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:translationVectorConstantW ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:translationVectorConstantV ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:translationVectorConstantW ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:translationVectorConstantW ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:translationVectorConstantV ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:translationVectorConstantU ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] .
+
+mdo:Lattice a owl:Class ;
+    rdfs:label "Lattice"@en ;
+    rdfs:comment "A lattice defines a peroidic arrangement of one or more atoms."@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty crystal:hasLatticePoint ;
+            owl:someValuesFrom crystal:LatticePoint ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasBasis ;
+                        owl:someValuesFrom mdo:Basis ] [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:Basis ;
+                        owl:onProperty crystal:hasBasis ] ) ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasLatticeDirection ;
+            owl:someValuesFrom crystal:LatticeDirection ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasLatticeDirection ;
+            owl:someValuesFrom crystal:LatticeDirection ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasLatticeDirection ;
+            owl:someValuesFrom crystal:LatticeDirection ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasLatticePlane ;
+            owl:someValuesFrom crystal:LatticePlane ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasUnitCell ;
+                        owl:someValuesFrom crystal:UnitCell ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:UnitCell ;
+                        owl:onProperty crystal:hasUnitCell ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasUnitCell ;
+                        owl:someValuesFrom crystal:UnitCell ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:UnitCell ;
+                        owl:onProperty crystal:hasUnitCell ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasUnitCell ;
+                        owl:someValuesFrom crystal:UnitCell ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:UnitCell ;
+                        owl:onProperty crystal:hasUnitCell ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasBasis ;
+                        owl:someValuesFrom mdo:Basis ] [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:Basis ;
+                        owl:onProperty crystal:hasBasis ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasBasis ;
+                        owl:someValuesFrom mdo:Basis ] [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:Basis ;
+                        owl:onProperty crystal:hasBasis ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasBasis ;
+                        owl:someValuesFrom mdo:Basis ] [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:Basis ;
+                        owl:onProperty crystal:hasBasis ] ) ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasLatticePoint ;
+            owl:someValuesFrom crystal:LatticePoint ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasLatticePoint ;
+            owl:someValuesFrom crystal:LatticePoint ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasUnitCell ;
+                        owl:someValuesFrom crystal:UnitCell ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:UnitCell ;
+                        owl:onProperty crystal:hasUnitCell ] ) ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasLatticePoint ;
+            owl:someValuesFrom crystal:LatticePoint ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasLatticePlane ;
+            owl:someValuesFrom crystal:LatticePlane ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasLatticePlane ;
+            owl:someValuesFrom crystal:LatticePlane ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasLatticePlane ;
+            owl:someValuesFrom crystal:LatticePlane ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasUnitCell ;
+                        owl:someValuesFrom crystal:UnitCell ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:UnitCell ;
+                        owl:onProperty crystal:hasUnitCell ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasBasis ;
+                        owl:someValuesFrom mdo:Basis ] [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:Basis ;
+                        owl:onProperty crystal:hasBasis ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasBasis ;
+                        owl:someValuesFrom mdo:Basis ] [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:Basis ;
+                        owl:onProperty crystal:hasBasis ] ) ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasLatticePlane ;
+            owl:someValuesFrom crystal:LatticePlane ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasLatticePoint ;
+            owl:someValuesFrom crystal:LatticePoint ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasUnitCell ;
+                        owl:someValuesFrom crystal:UnitCell ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:UnitCell ;
+                        owl:onProperty crystal:hasUnitCell ] ) ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasLatticePlane ;
+            owl:someValuesFrom crystal:LatticePlane ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasLatticePoint ;
+            owl:someValuesFrom crystal:LatticePoint ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasLatticePlane ;
+            owl:someValuesFrom crystal:LatticePlane ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasBasis ;
+                        owl:someValuesFrom mdo:Basis ] [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:Basis ;
+                        owl:onProperty crystal:hasBasis ] ) ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasLatticePoint ;
+            owl:someValuesFrom crystal:LatticePoint ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasUnitCell ;
+                        owl:someValuesFrom crystal:UnitCell ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:UnitCell ;
+                        owl:onProperty crystal:hasUnitCell ] ) ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasLatticePoint ;
+            owl:someValuesFrom crystal:LatticePoint ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasUnitCell ;
+                        owl:someValuesFrom crystal:UnitCell ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:UnitCell ;
+                        owl:onProperty crystal:hasUnitCell ] ) ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasLatticePoint ;
+            owl:someValuesFrom crystal:LatticePoint ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasBasis ;
+                        owl:someValuesFrom mdo:Basis ] [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:Basis ;
+                        owl:onProperty crystal:hasBasis ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasBasis ;
+                        owl:someValuesFrom mdo:Basis ] [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:Basis ;
+                        owl:onProperty crystal:hasBasis ] ) ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasLatticeDirection ;
+            owl:someValuesFrom crystal:LatticeDirection ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasLatticePlane ;
+            owl:someValuesFrom crystal:LatticePlane ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasLatticePlane ;
+            owl:someValuesFrom crystal:LatticePlane ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasLatticePlane ;
+            owl:someValuesFrom crystal:LatticePlane ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasLatticeDirection ;
+            owl:someValuesFrom crystal:LatticeDirection ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasLatticeDirection ;
+            owl:someValuesFrom crystal:LatticeDirection ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasLatticePlane ;
+            owl:someValuesFrom crystal:LatticePlane ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasUnitCell ;
+                        owl:someValuesFrom crystal:UnitCell ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:UnitCell ;
+                        owl:onProperty crystal:hasUnitCell ] ) ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasLatticePoint ;
+            owl:someValuesFrom crystal:LatticePoint ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasBasis ;
+                        owl:someValuesFrom mdo:Basis ] [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:Basis ;
+                        owl:onProperty crystal:hasBasis ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasUnitCell ;
+                        owl:someValuesFrom crystal:UnitCell ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:UnitCell ;
+                        owl:onProperty crystal:hasUnitCell ] ) ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasLatticeDirection ;
+            owl:someValuesFrom crystal:LatticeDirection ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasUnitCell ;
+                        owl:someValuesFrom crystal:UnitCell ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:UnitCell ;
+                        owl:onProperty crystal:hasUnitCell ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasUnitCell ;
+                        owl:someValuesFrom crystal:UnitCell ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:UnitCell ;
+                        owl:onProperty crystal:hasUnitCell ] ) ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasLatticePoint ;
+            owl:someValuesFrom crystal:LatticePoint ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasLatticePlane ;
+            owl:someValuesFrom crystal:LatticePlane ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasBasis ;
+                        owl:someValuesFrom mdo:Basis ] [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:Basis ;
+                        owl:onProperty crystal:hasBasis ] ) ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasLatticeDirection ;
+            owl:someValuesFrom crystal:LatticeDirection ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasLatticeDirection ;
+            owl:someValuesFrom crystal:LatticeDirection ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasLatticeDirection ;
+            owl:someValuesFrom crystal:LatticeDirection ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasLatticeDirection ;
+            owl:someValuesFrom crystal:LatticeDirection ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasLatticePoint ;
+            owl:someValuesFrom crystal:LatticePoint ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasBasis ;
+                        owl:someValuesFrom mdo:Basis ] [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:Basis ;
+                        owl:onProperty crystal:hasBasis ] ) ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasLatticeDirection ;
+            owl:someValuesFrom crystal:LatticeDirection ] .
+
+crystal:SlipSystem a owl:Class ;
+    rdfs:label "Slip System"@en ;
+    rdfs:comment "Slip system is defined as the set of slip planes with the same unit normal vector and the same slip direction."@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty crystal:hasSlipDirection ;
+            owl:someValuesFrom crystal:SlipDirection ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasSlipDirection ;
+            owl:someValuesFrom crystal:SlipDirection ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasSlipPlaneNormal ;
+            owl:someValuesFrom crystal:SlipPlaneNormal ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasSlipPlaneNormal ;
+            owl:someValuesFrom crystal:SlipPlaneNormal ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasSlipPlaneNormal ;
+            owl:someValuesFrom crystal:SlipPlaneNormal ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasSlipDirection ;
+            owl:someValuesFrom crystal:SlipDirection ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasSlipPlaneNormal ;
+            owl:someValuesFrom crystal:SlipPlaneNormal ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasSlipPlaneNormal ;
+            owl:someValuesFrom crystal:SlipPlaneNormal ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasSlipPlaneNormal ;
+            owl:someValuesFrom crystal:SlipPlaneNormal ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasSlipDirection ;
+            owl:someValuesFrom crystal:SlipDirection ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasSlipPlaneNormal ;
+            owl:someValuesFrom crystal:SlipPlaneNormal ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasSlipDirection ;
+            owl:someValuesFrom crystal:SlipDirection ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasSlipPlaneNormal ;
+            owl:someValuesFrom crystal:SlipPlaneNormal ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasSlipPlaneNormal ;
+            owl:someValuesFrom crystal:SlipPlaneNormal ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasSlipDirection ;
+            owl:someValuesFrom crystal:SlipDirection ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasSlipPlaneNormal ;
+            owl:someValuesFrom crystal:SlipPlaneNormal ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasSlipPlaneNormal ;
+            owl:someValuesFrom crystal:SlipPlaneNormal ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasSlipPlaneNormal ;
+            owl:someValuesFrom crystal:SlipPlaneNormal ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasSlipDirection ;
+            owl:someValuesFrom crystal:SlipDirection ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasSlipDirection ;
+            owl:someValuesFrom crystal:SlipDirection ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasSlipDirection ;
+            owl:someValuesFrom crystal:SlipDirection ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasSlipDirection ;
+            owl:someValuesFrom crystal:SlipDirection ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasSlipDirection ;
+            owl:someValuesFrom crystal:SlipDirection ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasSlipDirection ;
+            owl:someValuesFrom crystal:SlipDirection ] .
+
+mdo:Basis a owl:Class ;
+    rdfs:label "Basis"@en ;
+    rdfs:comment "A basis defines a spatial unit used to express fractional coordinates."@en .
+
+crystal:SlipPlane a owl:Class ;
+    rdfs:label "Slip Plane"@en ;
+    rdfs:comment "Slip plane is normally the plane with the highest density of atoms, i.e. those which are most widely spaced."@en,
+        "The crystallographic plane along which the dislocation line traverses."@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty crystal:hasSlipDirection ;
+            owl:someValuesFrom crystal:SlipDirection ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasSlipPlaneNormal ;
+                        owl:someValuesFrom crystal:SlipPlaneNormal ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:SlipPlaneNormal ;
+                        owl:onProperty crystal:hasSlipPlaneNormal ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasSlipPlaneNormal ;
+                        owl:someValuesFrom crystal:SlipPlaneNormal ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:SlipPlaneNormal ;
+                        owl:onProperty crystal:hasSlipPlaneNormal ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasSlipPlaneNormal ;
+                        owl:someValuesFrom crystal:SlipPlaneNormal ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:SlipPlaneNormal ;
+                        owl:onProperty crystal:hasSlipPlaneNormal ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasSlipPlaneNormal ;
+                        owl:someValuesFrom crystal:SlipPlaneNormal ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:SlipPlaneNormal ;
+                        owl:onProperty crystal:hasSlipPlaneNormal ] ) ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasSlipDirection ;
+            owl:someValuesFrom crystal:SlipDirection ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasSlipDirection ;
+            owl:someValuesFrom crystal:SlipDirection ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasSlipPlaneNormal ;
+                        owl:someValuesFrom crystal:SlipPlaneNormal ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:SlipPlaneNormal ;
+                        owl:onProperty crystal:hasSlipPlaneNormal ] ) ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasSlipDirection ;
+            owl:someValuesFrom crystal:SlipDirection ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasSlipPlaneNormal ;
+                        owl:someValuesFrom crystal:SlipPlaneNormal ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:SlipPlaneNormal ;
+                        owl:onProperty crystal:hasSlipPlaneNormal ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasSlipPlaneNormal ;
+                        owl:someValuesFrom crystal:SlipPlaneNormal ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:SlipPlaneNormal ;
+                        owl:onProperty crystal:hasSlipPlaneNormal ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasSlipPlaneNormal ;
+                        owl:someValuesFrom crystal:SlipPlaneNormal ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:SlipPlaneNormal ;
+                        owl:onProperty crystal:hasSlipPlaneNormal ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasSlipPlaneNormal ;
+                        owl:someValuesFrom crystal:SlipPlaneNormal ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:SlipPlaneNormal ;
+                        owl:onProperty crystal:hasSlipPlaneNormal ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasSlipPlaneNormal ;
+                        owl:someValuesFrom crystal:SlipPlaneNormal ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:SlipPlaneNormal ;
+                        owl:onProperty crystal:hasSlipPlaneNormal ] ) ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasSlipDirection ;
+            owl:someValuesFrom crystal:SlipDirection ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasSlipDirection ;
+            owl:someValuesFrom crystal:SlipDirection ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasSlipDirection ;
+            owl:someValuesFrom crystal:SlipDirection ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasSlipDirection ;
+            owl:someValuesFrom crystal:SlipDirection ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasSlipDirection ;
+            owl:someValuesFrom crystal:SlipDirection ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasSlipPlaneNormal ;
+                        owl:someValuesFrom crystal:SlipPlaneNormal ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:SlipPlaneNormal ;
+                        owl:onProperty crystal:hasSlipPlaneNormal ] ) ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasSlipDirection ;
+            owl:someValuesFrom crystal:SlipDirection ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty crystal:hasSlipPlaneNormal ;
+                        owl:someValuesFrom crystal:SlipPlaneNormal ] [ a owl:Restriction ;
+                        owl:allValuesFrom crystal:SlipPlaneNormal ;
+                        owl:onProperty crystal:hasSlipPlaneNormal ] ) ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasSlipDirection ;
+            owl:someValuesFrom crystal:SlipDirection ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasSlipDirection ;
+            owl:someValuesFrom crystal:SlipDirection ],
+        crystal:LatticePlane .
+
+crystal:UnitCell a owl:Class ;
+    rdfs:label "Unit Cell"@en ;
+    rdfs:comment "Basic structural unit or building block of the crystal structure and defines the crystal structure by virtue of its geometry and the atom positions within."@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:latticeParameterAngleBeta ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:latticeParameterLengthB ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:latticeParameterLengthB ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:latticeParameterLengthB ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:latticeParameterAngleBeta ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:latticeParameterAngleBeta ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:latticeParameterAngleBeta ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:latticeParameterLengthC ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:latticeParameterLengthC ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:latticeParameterAngleAlpha ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:latticeParameterAngleAlpha ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:latticeParameterLengthB ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:latticeParameterAngleAlpha ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:latticeParameterAngleGamma ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:latticeParameterLengthB ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:latticeParameterLengthC ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:latticeParameterAngleBeta ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasCrystalSystem ;
+            owl:someValuesFrom crystal:CrystalSystem ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:latticeParameterAngleGamma ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:latticeParameterAngleAlpha ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:latticeParameterLengthB ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:latticeParameterLengthB ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:latticeParameterLengthC ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:latticeParameterAngleGamma ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:latticeParameterLengthA ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:latticeParameterAngleBeta ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasCrystalSystem ;
+            owl:someValuesFrom crystal:CrystalSystem ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:latticeParameterLengthC ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasCrystalSystem ;
+            owl:someValuesFrom crystal:CrystalSystem ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:latticeParameterAngleAlpha ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:latticeParameterAngleGamma ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:latticeParameterAngleBeta ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasCrystalSystem ;
+            owl:someValuesFrom crystal:CrystalSystem ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:latticeParameterAngleAlpha ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:latticeParameterAngleGamma ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:latticeParameterLengthA ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:latticeParameterLengthC ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:latticeParameterLengthC ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:latticeParameterAngleBeta ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:latticeParameterAngleBeta ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:latticeParameterAngleBeta ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:latticeParameterLengthC ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:latticeParameterAngleBeta ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:latticeParameterLengthA ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:latticeParameterAngleAlpha ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:latticeParameterAngleGamma ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:latticeParameterLengthA ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasCrystalSystem ;
+            owl:someValuesFrom crystal:CrystalSystem ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:latticeParameterLengthC ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:latticeParameterLengthC ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasCrystalSystem ;
+            owl:someValuesFrom crystal:CrystalSystem ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:latticeParameterLengthB ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:latticeParameterAngleGamma ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasCrystalSystem ;
+            owl:someValuesFrom crystal:CrystalSystem ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:latticeParameterLengthB ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:latticeParameterLengthB ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:latticeParameterLengthA ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:latticeParameterAngleAlpha ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:latticeParameterLengthA ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:latticeParameterLengthA ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:latticeParameterLengthA ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:latticeParameterLengthC ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:latticeParameterAngleAlpha ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:latticeParameterLengthA ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasCrystalSystem ;
+            owl:someValuesFrom crystal:CrystalSystem ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:latticeParameterAngleAlpha ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:latticeParameterAngleGamma ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:latticeParameterAngleGamma ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:latticeParameterLengthA ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:latticeParameterLengthA ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:latticeParameterAngleBeta ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:latticeParameterLengthB ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:latticeParameterAngleGamma ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:latticeParameterAngleAlpha ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:latticeParameterLengthA ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasCrystalSystem ;
+            owl:someValuesFrom crystal:CrystalSystem ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:latticeParameterAngleGamma ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:latticeParameterLengthC ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasCrystalSystem ;
+            owl:someValuesFrom crystal:CrystalSystem ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasCrystalSystem ;
+            owl:someValuesFrom crystal:CrystalSystem ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:latticeParameterAngleGamma ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:latticeParameterLengthB ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty crystal:latticeParameterAngleAlpha ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onProperty crystal:hasCrystalSystem ;
+            owl:someValuesFrom crystal:CrystalSystem ] ;
+    owl:disjointWith mdo:Basis .
+
+mdo:CoordinateVector a owl:Class ;
+    rdfs:label "Coordinate Vector"@en ;
+    rdfs:comment "A coordinate vector is the coordinates of a point in space."@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty mdo:Z_axisCoordinate ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty mdo:Z_axisCoordinate ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty mdo:Y_axisCoordinate ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty mdo:Z_axisCoordinate ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty mdo:Y_axisCoordinate ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty mdo:Y_axisCoordinate ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty mdo:X_axisCoordinate ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty mdo:Y_axisCoordinate ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty mdo:Y_axisCoordinate ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty mdo:Z_axisCoordinate ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty mdo:X_axisCoordinate ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty mdo:X_axisCoordinate ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty mdo:Z_axisCoordinate ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty mdo:Y_axisCoordinate ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty mdo:X_axisCoordinate ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty mdo:Z_axisCoordinate ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty mdo:X_axisCoordinate ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty mdo:Y_axisCoordinate ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty mdo:Y_axisCoordinate ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty mdo:Y_axisCoordinate ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty mdo:Z_axisCoordinate ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty mdo:Z_axisCoordinate ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty mdo:Y_axisCoordinate ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty mdo:Y_axisCoordinate ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty mdo:X_axisCoordinate ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty mdo:X_axisCoordinate ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty mdo:X_axisCoordinate ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty mdo:Y_axisCoordinate ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty mdo:Z_axisCoordinate ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty mdo:Z_axisCoordinate ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty mdo:X_axisCoordinate ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty mdo:X_axisCoordinate ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty mdo:X_axisCoordinate ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty mdo:X_axisCoordinate ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty mdo:Z_axisCoordinate ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty mdo:Z_axisCoordinate ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( crystal:Cubic crystal:Hexagonal crystal:Monoclinic crystal:Orthorombic crystal:Rhombohedral crystal:Tetragonal crystal:Triclinic ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( crystal:Cubic crystal:Hexagonal crystal:Monoclinic crystal:Orthorombic crystal:Rhombohedral crystal:Tetragonal crystal:Triclinic ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( crystal:Cubic crystal:Hexagonal crystal:Monoclinic crystal:Orthorombic crystal:Rhombohedral crystal:Tetragonal crystal:Triclinic ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( crystal:Cubic crystal:Hexagonal crystal:Monoclinic crystal:Orthorombic crystal:Rhombohedral crystal:Tetragonal crystal:Triclinic ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( crystal:Cubic crystal:Hexagonal crystal:Monoclinic crystal:Orthorombic crystal:Rhombohedral crystal:Tetragonal crystal:Triclinic ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( crystal:Cubic crystal:Hexagonal crystal:Monoclinic crystal:Orthorombic crystal:Rhombohedral crystal:Tetragonal crystal:Triclinic ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( crystal:Cubic crystal:Hexagonal crystal:Monoclinic crystal:Orthorombic crystal:Rhombohedral crystal:Tetragonal crystal:Triclinic ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( crystal:Cubic crystal:Hexagonal crystal:Monoclinic crystal:Orthorombic crystal:Rhombohedral crystal:Tetragonal crystal:Triclinic ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( crystal:Cubic crystal:Hexagonal crystal:Monoclinic crystal:Orthorombic crystal:Rhombohedral crystal:Tetragonal crystal:Triclinic ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( crystal:Cubic crystal:Hexagonal crystal:Monoclinic crystal:Orthorombic crystal:Rhombohedral crystal:Tetragonal crystal:Triclinic ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( crystal:Cubic crystal:Hexagonal crystal:Monoclinic crystal:Orthorombic crystal:Rhombohedral crystal:Tetragonal crystal:Triclinic ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( crystal:Cubic crystal:Hexagonal crystal:Monoclinic crystal:Orthorombic crystal:Rhombohedral crystal:Tetragonal crystal:Triclinic ) .
+
