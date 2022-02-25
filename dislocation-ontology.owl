@@ -584,6 +584,13 @@
 
     <owl:Class rdf:about="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/SlipPlaneNormal">
         <rdfs:subClassOf rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/Vector"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/directionMillerIndice"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Unit normal vector of slip planes</rdfs:comment>
         <rdfs:label xml:lang="en">Slip Plane Normal</rdfs:label>
     </owl:Class>
