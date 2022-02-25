@@ -1,0 +1,632 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://az-ihsan.github.io/ontologies/crystallography/crystallography.owl/"
+     xml:base="https://az-ihsan.github.io/ontologies/crystallography/crystallography.owl/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:crystallography="https://az-ihsan.github.io/ontologies/crystallography/crystallography.owl#">
+    <owl:Ontology rdf:about="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/hasBasis -->
+
+    <owl:ObjectProperty rdf:about="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/hasBasis">
+        <rdfs:comment xml:lang="en">hasBasis represents the relationship between a lattice or coordinate vector basis and basis.</rdfs:comment>
+        <rdfs:label xml:lang="en">has basis</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/hasDirection -->
+
+    <owl:ObjectProperty rdf:about="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/hasDirection">
+        <rdfs:domain rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/Vector"/>
+        <rdfs:label xml:lang="en">has direction</rdfs:label>
+        <rdfs:label xml:lang="en">hasDirection relates the Vector with &apos;Coordinate Vector of Basis&apos;</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/hasFirstAxisVector -->
+
+    <owl:ObjectProperty rdf:about="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/hasFirstAxisVector">
+        <rdfs:comment xml:lang="en">hasFirstAxisVector represents the relationship between a basis and a coordinate vector to define the coordianates of the axis vector the first basis</rdfs:comment>
+        <rdfs:label xml:lang="en">has first axis vector</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/hasSecondAxisVector -->
+
+    <owl:ObjectProperty rdf:about="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/hasSecondAxisVector">
+        <rdfs:comment xml:lang="en">hasSexondAxisVector represents the relationship between a basis and a coordinate vector to define the coordianates of the axis vector the second basis</rdfs:comment>
+        <rdfs:label xml:lang="en">has second axis vector</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/hasThirdAxisVector -->
+
+    <owl:ObjectProperty rdf:about="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/hasThirdAxisVector">
+        <rdfs:comment xml:lang="en">hasThirdAxisVector represents the relationship between a basis and a coordinate vector to define the coordianates of the axis vector the third basis</rdfs:comment>
+        <rdfs:label xml:lang="en">has third axis vector</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/hasBurgersVector -->
+
+    <owl:ObjectProperty rdf:about="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/hasBurgersVector">
+        <rdfs:domain rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/Dislocation"/>
+        <rdfs:range rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/BurgersVector"/>
+        <rdfs:comment xml:lang="en">Representas relation from dislocation to Burgers vector</rdfs:comment>
+        <rdfs:label xml:lang="en">has Burgers vector</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/hasFamilyCrystalDirection -->
+
+    <owl:ObjectProperty rdf:about="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/hasFamilyCrystalDirection">
+        <rdfs:domain rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/LatticeDirection"/>
+        <rdfs:range rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/FamilyOfCrystalDirection"/>
+        <rdfs:comment xml:lang="en">hasFamilyCrystalDirection represents the relationship between lattice direction and family of crystal direction.</rdfs:comment>
+        <rdfs:label xml:lang="en">has family crystal direction</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/hasFamilyCrystalPlane -->
+
+    <owl:ObjectProperty rdf:about="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/hasFamilyCrystalPlane">
+        <rdfs:domain rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/LatticePlane"/>
+        <rdfs:range rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/FamilyOfCrystalPlane"/>
+        <rdfs:comment xml:lang="en">hasFamilyCrystalPlane represents the relationship between lattice Plane and family of crystal plane.</rdfs:comment>
+        <rdfs:label xml:lang="en">has family crystal plane</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/hasLatticeDirection -->
+
+    <owl:ObjectProperty rdf:about="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/hasLatticeDirection">
+        <rdfs:range rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/LatticeDirection"/>
+        <rdfs:comment xml:lang="en">hasLatticeDirection represents the relationship between a lattice or a lattice plane and lattice directions.</rdfs:comment>
+        <rdfs:label xml:lang="en">has lattice direction</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/hasLatticePlane -->
+
+    <owl:ObjectProperty rdf:about="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/hasLatticePlane">
+        <rdfs:range rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/LatticePlane"/>
+        <rdfs:comment xml:lang="en">hasLatticePlane represents the relationship between a lattice and lattice planes.</rdfs:comment>
+        <rdfs:label xml:lang="en">has lattice plane</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/hasLatticePoint -->
+
+    <owl:ObjectProperty rdf:about="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/hasLatticePoint">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/Lattice"/>
+                    <rdf:Description rdf:about="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/LatticeDirection"/>
+                    <rdf:Description rdf:about="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/LatticePlane"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/LatticePoint"/>
+        <rdfs:comment xml:lang="en">hasLatticePoint represents the relationship between a lattice or lattice plane or lattice direction with lattice points.</rdfs:comment>
+        <rdfs:label xml:lang="en">has lattice point</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/hasLineSense -->
+
+    <owl:ObjectProperty rdf:about="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/hasLineSense">
+        <rdfs:domain rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/Dislocation"/>
+        <rdfs:range rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/LineSense"/>
+        <rdfs:comment xml:lang="en">hasLineSense represents the relationship between a dislocation and a line sense.</rdfs:comment>
+        <rdfs:label xml:lang="en">has line sense</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/hasSlipDirection -->
+
+    <owl:ObjectProperty rdf:about="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/hasSlipDirection">
+        <rdfs:subPropertyOf rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/hasLatticeDirection"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/SlipPlane"/>
+                    <rdf:Description rdf:about="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/SlipSystem"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/SlipDirection"/>
+        <rdfs:comment xml:lang="en">hasSlipDirection represents the relationship  between Slip Plane or Slip system and Slip Direction they own.</rdfs:comment>
+        <rdfs:label xml:lang="en">has slip direction</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/hasSlipPlane -->
+
+    <owl:ObjectProperty rdf:about="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/hasSlipPlane">
+        <rdfs:subPropertyOf rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/hasLatticePlane"/>
+        <rdfs:range rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/SlipPlane"/>
+        <rdfs:comment xml:lang="en">hasSlipPlane represents the relationship between crystal structure and slip plane it owns.</rdfs:comment>
+        <rdfs:label xml:lang="en">has slip plane</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/hasSlipPlaneNormal -->
+
+    <owl:ObjectProperty rdf:about="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/hasSlipPlaneNormal">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/SlipPlane"/>
+                    <rdf:Description rdf:about="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/SlipSystem"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/SlipPlaneNormal"/>
+        <rdfs:comment xml:lang="en">hasSlipPlaneNormal represents the relationship between a slip plane or slip system with slip plane normal.</rdfs:comment>
+        <rdfs:label xml:lang="en">has slip plane normal</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/hasSlipSystem -->
+
+    <owl:ObjectProperty rdf:about="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/hasSlipSystem">
+        <rdfs:range rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/SlipSystem"/>
+        <rdfs:comment xml:lang="en">hasSlipSystem represents the relationship between a crystal structure and slip system.</rdfs:comment>
+        <rdfs:label xml:lang="en">has slip system</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/movesOn -->
+
+    <owl:ObjectProperty rdf:about="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/movesOn">
+        <rdfs:domain rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/Dislocation"/>
+        <rdfs:range rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/SlipPlane"/>
+        <rdfs:comment xml:lang="en">movesOn represents the relationship between dislocation and slip plane it moves on.</rdfs:comment>
+        <rdfs:label xml:lang="en">moves on</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/directionMillerIndice -->
+
+    <owl:DatatypeProperty rdf:about="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/directionMillerIndice">
+        <rdfs:domain rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/LatticeDirection"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">directionMillerIndice represents Miller indice of lattice direction in string.</rdfs:comment>
+        <rdfs:label xml:lang="en">direction miller indice</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/familyDirectionMillerIndice -->
+
+    <owl:DatatypeProperty rdf:about="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/familyDirectionMillerIndice">
+        <rdfs:domain rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/FamilyOfCrystalDirection"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">familyDirectionMillerIndice reprersent a set of miller indices of lattice direction in string.</rdfs:comment>
+        <rdfs:label xml:lang="en">family direction miller indice</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/familyPlaneMillerIndice -->
+
+    <owl:DatatypeProperty rdf:about="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/familyPlaneMillerIndice">
+        <rdfs:domain rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/FamilyOfCrystalPlane"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">familyPlaneMillerIndice represents a set of Miller indice of lattice plane in string.</rdfs:comment>
+        <rdfs:label xml:lang="en">family plane miller indice</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/planeMillerIndice -->
+
+    <owl:DatatypeProperty rdf:about="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/planeMillerIndice">
+        <rdfs:domain rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/LatticePlane"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">planeMillerIndice represents Miller indice of lattice plane in string.</rdfs:comment>
+        <rdfs:label xml:lang="en">plane miller indice</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/Lattice -->
+
+    <owl:Class rdf:about="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/Lattice">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/hasLatticeDirection"/>
+                        <owl:someValuesFrom rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/LatticeDirection"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/hasLatticeDirection"/>
+                        <owl:allValuesFrom rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/LatticeDirection"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/hasLatticePlane"/>
+                        <owl:someValuesFrom rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/LatticePlane"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/hasLatticeDirection"/>
+                        <owl:allValuesFrom rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/LatticeDirection"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/hasLatticePoint"/>
+                        <owl:someValuesFrom rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/LatticePoint"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/hasLatticePoint"/>
+                        <owl:allValuesFrom rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/LatticePoint"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A lattice defines a periodic arrangement of one or more atoms.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A mathematical repsentation to represent the periodicity of a crystal.</rdfs:comment>
+        <rdfs:label xml:lang="en">Lattice</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/Vector -->
+
+    <owl:Class rdf:about="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/Vector">
+        <rdfs:comment xml:lang="en">(Euclidean) vector used to represent quantities that both magnitude and direction.</rdfs:comment>
+        <rdfs:label xml:lang="en">Vector</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/BurgersVector -->
+
+    <owl:Class rdf:about="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/BurgersVector">
+        <rdfs:subClassOf rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/Vector"/>
+        <rdfs:comment xml:lang="en">An elementary unit (length order of lattice parameter) of lattice translation.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The basic notion of Burgers vector comes from the closure failure of initially perfect lattice due to the existance of dislocation. The magnitude and direction of closure failure is characterized by Burgers vector.</rdfs:comment>
+        <rdfs:label xml:lang="en">Burgers Vector</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/Dislocation -->
+
+    <owl:Class rdf:about="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/Dislocation">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/hasBurgersVector"/>
+                        <owl:someValuesFrom rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/BurgersVector"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/hasBurgersVector"/>
+                        <owl:allValuesFrom rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/BurgersVector"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/hasLineSense"/>
+                        <owl:someValuesFrom rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/LineSense"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/hasLineSense"/>
+                        <owl:allValuesFrom rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/LineSense"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/movesOn"/>
+                <owl:someValuesFrom rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/SlipPlane"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A line object that is a boundary separating the regions on the slip plane which have undergone slip from those that have not.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Linear or one-dimensional defect around which some of the atoms are misaligned.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Presence of dislocation introduces local disturbance of the atomic-level geometry.</rdfs:comment>
+        <rdfs:label xml:lang="en">Dislocation</rdfs:label>
+        <rdfs:label xml:lang="de">Versetzung</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/FamilyOfCrystalDirection -->
+
+    <owl:Class rdf:about="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/FamilyOfCrystalDirection">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/familyDirectionMillerIndice"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">a set of symmetrically equivalent directions in the lattice.</rdfs:comment>
+        <rdfs:label xml:lang="en">Family of Crystal Direction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/FamilyOfCrystalPlane -->
+
+    <owl:Class rdf:about="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/FamilyOfCrystalPlane">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/familyPlaneMillerIndice"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">a set of symmetrically equivalent planes in the lattice.</rdfs:comment>
+        <rdfs:label xml:lang="en">Family of Crystal Plane</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/LatticeDirection -->
+
+    <owl:Class rdf:about="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/LatticeDirection">
+        <rdfs:subClassOf rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/Vector"/>
+        <rdfs:subClassOf rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/FamilyOfCrystalDirection"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/hasLatticePoint"/>
+                        <owl:someValuesFrom rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/LatticePoint"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/hasLatticePoint"/>
+                        <owl:allValuesFrom rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/LatticePoint"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/directionMillerIndice"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A direction inside the lattice that connecting two lattice points.</rdfs:comment>
+        <rdfs:label xml:lang="en">Lattice Direction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/LatticePlane -->
+
+    <owl:Class rdf:about="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/LatticePlane">
+        <rdfs:subClassOf rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/FamilyOfCrystalPlane"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/hasLatticeDirection"/>
+                        <owl:someValuesFrom rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/LatticeDirection"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/hasLatticeDirection"/>
+                        <owl:allValuesFrom rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/LatticeDirection"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/hasLatticePoint"/>
+                        <owl:someValuesFrom rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/LatticePoint"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/hasLatticePoint"/>
+                        <owl:allValuesFrom rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/LatticePoint"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/planeMillerIndice"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Lattice plane, forms an infinitely stretched plane (characterized through a plane normal) that cuts through lattice points such that again a regular arrangement of lattice points in the plane occurs.</rdfs:comment>
+        <rdfs:label xml:lang="en">Lattice Plane</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/LatticePoint -->
+
+    <owl:Class rdf:about="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/LatticePoint">
+        <rdfs:comment xml:lang="en">Lattice points are the points where atoms or molecules are located</rdfs:comment>
+        <rdfs:label xml:lang="en">Lattice Point</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/LineSense -->
+
+    <owl:Class rdf:about="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/LineSense">
+        <rdfs:comment xml:lang="en">Sense that characterizes a directed line (has a start and an end).</rdfs:comment>
+        <rdfs:label xml:lang="en">Line Sense</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/SlipDirection -->
+
+    <owl:Class rdf:about="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/SlipDirection">
+        <rdfs:subClassOf rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/LatticeDirection"/>
+        <rdfs:comment xml:lang="en">The direction in the slip plane corresponding to one of the shortest lattice translation vectors.</rdfs:comment>
+        <rdfs:label xml:lang="en">Slip Direction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/SlipPlane -->
+
+    <owl:Class rdf:about="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/SlipPlane">
+        <rdfs:subClassOf rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/LatticePlane"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/hasSlipDirection"/>
+                        <owl:someValuesFrom rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/SlipDirection"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/hasSlipDirection"/>
+                        <owl:allValuesFrom rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/SlipDirection"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/hasSlipPlaneNormal"/>
+                        <owl:someValuesFrom rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/SlipPlaneNormal"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/hasSlipPlaneNormal"/>
+                        <owl:allValuesFrom rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/SlipPlaneNormal"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Slip plane is normally the plane with the highest density of atoms, i.e. those which are most widely spaced.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The crystallographic plane along which the dislocation line traverses.</rdfs:comment>
+        <rdfs:label xml:lang="en">Slip Plane</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/SlipPlaneNormal -->
+
+    <owl:Class rdf:about="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/SlipPlaneNormal">
+        <rdfs:subClassOf rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/Vector"/>
+        <rdfs:comment xml:lang="en">Unit normal vector of slip planes</rdfs:comment>
+        <rdfs:label xml:lang="en">Slip Plane Normal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/SlipSystem -->
+
+    <owl:Class rdf:about="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/SlipSystem">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/hasSlipDirection"/>
+                        <owl:someValuesFrom rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/SlipDirection"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/hasSlipDirection"/>
+                        <owl:allValuesFrom rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/SlipDirection"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/hasSlipPlaneNormal"/>
+                        <owl:someValuesFrom rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/SlipPlaneNormal"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/hasSlipPlaneNormal"/>
+                        <owl:allValuesFrom rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/SlipPlaneNormal"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Slip system is defined as the set of slip planes with the same unit normal vector and the same slip direction.</rdfs:comment>
+        <rdfs:label xml:lang="en">Slip System</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
