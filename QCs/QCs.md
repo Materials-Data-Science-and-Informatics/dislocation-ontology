@@ -10,7 +10,9 @@
 
 CQ1.1 Cubic crystal system:
 ```
-PREFIX : <https://raw.githubusercontent.com/az-ihsan/dislocation-ontology/master/crystallography.owl/> 
+PREFIX diso: <https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/>
+PREFIX cryso: <https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/> 
+PREFIX cdo: <https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystalline-defect-ontology.owl/>  
 PREFIX chebi: <http://purl.obolibrary.org/obo/> 
 PREFIX mdo: <https://w3id.org/mdo/structure/> 
 PREFIX ns1: <http://purl.obolibrary.org/obo/chebi/> 
@@ -20,16 +22,17 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 SELECT ?crystalstructure ?crystal_system WHERE{
-	?crystalstructure a :CrystalStructure ; :hasLattice ?lattice .
-	?lattice :hasUnitCell ?unitcell .
-	?unitcell  :hasCrystalSystem ?crystal_system.
-	?crystal_system a :Cubic .
+	?crystalstructure a cryso:CrystalStructure ; cryso:hasLattice ?lattice .
+	?lattice cryso:hasCrystalSystem ?crystal_system.
+	?crystal_system a cryso:Cubic .
 }
 ```
 
 CQ1.2 Hexagonal crystal system:
 ```
-PREFIX : <https://raw.githubusercontent.com/az-ihsan/dislocation-ontology/master/crystallography.owl/>  
+PREFIX diso: <https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/>
+PREFIX cryso: <https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/> 
+PREFIX cdo: <https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystalline-defect-ontology.owl/>  
 PREFIX chebi: <http://purl.obolibrary.org/obo/> 
 PREFIX mdo: <https://w3id.org/mdo/structure/> 
 PREFIX ns1: <http://purl.obolibrary.org/obo/chebi/> 
@@ -39,15 +42,16 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 SELECT ?crystalstructure ?crystal_system WHERE{
-	?crystalstructure a :CrystalStructure ; :hasLattice ?lattice .
-	?lattice :hasUnitCell ?unitcell .
-	?unitcell  :hasCrystalSystem ?crystal_system.
-	?crystal_system a :Hexagonal .
+	?crystalstructure a cryso:CrystalStructure ; cryso:hasLattice ?lattice .
+	?lattice cryso:hasCrystalSystem ?crystal_system.
+	?crystal_system a cryso:Hexagonal .
 }
 ```
 CQs. 2 Lattice parameter lengths:
 ```
-PREFIX : <https://raw.githubusercontent.com/az-ihsan/dislocation-ontology/master/crystallography.owl/> 
+PREFIX diso: <https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/>
+PREFIX cryso: <https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/> 
+PREFIX cdo: <https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystalline-defect-ontology.owl/>  
 PREFIX chebi: <http://purl.obolibrary.org/obo/> 
 PREFIX mdo: <https://w3id.org/mdo/structure/> 
 PREFIX ns1: <http://purl.obolibrary.org/obo/chebi/> 
@@ -57,17 +61,20 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 SELECT ?crystalstructure ?length_a ?length_b ?length_c WHERE{
-	?crystalstructure a :CrystalStructure ; :hasLattice ?lattice .
-	?lattice :hasUnitCell ?unitcell .
-	?unitcell  :latticeParameterLengthA ?length_a;
-		:latticeParameterLengthB ?length_b;
-		:latticeParameterLengthC ?length_c.
+	?crystalstructure a cryso:CrystalStructure ; cryso:hasLattice ?lattice .
+	?lattice cryso:hasUnitCell ?unitcell .
+	?unitcell cryso:hasLatticeParameterLength ?latticeParameterLength.  
+	?latticeParameterLength cryso:latticeParameterLengthA ?length_a;
+		cryso:latticeParameterLengthB ?length_b;
+		cryso:latticeParameterLengthC ?length_c.
 }
 ```
 
 CQs. 3 Lattice parameter angles:
 ```
-PREFIX : <https://raw.githubusercontent.com/az-ihsan/dislocation-ontology/master/crystallography.owl/> 
+PREFIX diso: <https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/>
+PREFIX cryso: <https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/> 
+PREFIX cdo: <https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystalline-defect-ontology.owl/>  
 PREFIX chebi: <http://purl.obolibrary.org/obo/> 
 PREFIX mdo: <https://w3id.org/mdo/structure/> 
 PREFIX ns1: <http://purl.obolibrary.org/obo/chebi/> 
@@ -77,17 +84,20 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 SELECT ?crystalstructure ?angle_alpha ?angle_beta ?angle_gamma WHERE{
-	?crystalstructure a :CrystalStructure ; :hasLattice ?lattice .
-	?lattice :hasUnitCell ?unitcell .
-	?unitcell  :latticeParameterAngleAlpha ?angle_alpha;
-		:latticeParameterAngleBeta ?angle_beta;
-		:latticeParameterAngleGamma ?angle_gamma.
+	?crystalstructure a cryso:CrystalStructure ; cryso:hasLattice ?lattice .
+	?lattice cryso:hasUnitCell ?unitcell .
+	?unitcell cryso:hasLatticeParameterAngle ?latticeParameterAngle.
+	?latticeParameterAngle cryso:latticeParameterAngleAlpha ?angle_alpha;  
+		cryso:latticeParameterAngleBeta ?angle_beta;
+		cryso:latticeParameterAngleGamma ?angle_gamma.
 }
 ```
 
 CQs. 4:
 ```
-PREFIX : <https://raw.githubusercontent.com/az-ihsan/dislocation-ontology/master/crystallography.owl/>  
+PREFIX diso: <https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/>
+PREFIX cryso: <https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/> 
+PREFIX cdo: <https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystalline-defect-ontology.owl/>  
 PREFIX chebi: <http://purl.obolibrary.org/obo/> 
 PREFIX mdo: <https://w3id.org/mdo/structure/> 
 PREFIX ns1: <http://purl.obolibrary.org/obo/chebi/> 
@@ -97,16 +107,20 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 SELECT ?crystalstructure ?slip_system ?slip_plane_normal_val ?slip_direction_val WHERE{
-	?crystalstructure a :CrystalStructure ; :hasSlipSystem ?slip_system . 
-	?slip_system :hasSlipPlaneNormal ?slip_plane_normal ; :hasSlipDirection ?slip_direction.
-	?slip_plane_normal :directionMillerIndice ?slip_plane_normal_val. 
-	?slip_direction :directionMillerIndice ?slip_direction_val.
+	?crystalstructure a cryso:CrystalStructure ; 
+		diso:hasSlipSystem ?slip_system . 
+	?slip_system diso:hasSlipPlaneNormal ?slip_plane_normal ; 
+		diso:hasSlipDirection ?slip_direction.
+	?slip_plane_normal diso:directionMillerIndice ?slip_plane_normal_val. 
+	?slip_direction diso:directionMillerIndice ?slip_direction_val.
 }
 ```
 
 CQs. 5:
 ```
-PREFIX : <https://raw.githubusercontent.com/az-ihsan/dislocation-ontology/master/crystallography.owl/> 
+PREFIX diso: <https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/>
+PREFIX cryso: <https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/> 
+PREFIX cdo: <https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystalline-defect-ontology.owl/>  
 PREFIX chebi: <http://purl.obolibrary.org/obo/> 
 PREFIX mdo: <https://w3id.org/mdo/structure/> 
 PREFIX ns1: <http://purl.obolibrary.org/obo/chebi/> 
@@ -117,14 +131,16 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 SELECT  ?crystal_structure ?slip_plane_val 
 WHERE{
-	?crystal_structure a :CrystalStructure.
-	?crystal_structure :hasSlipPlane ?slip_plane.
-	?slip_plane :planeMillerIndice ?slip_plane_val.
+	?crystal_structure a cryso:CrystalStructure.
+	?crystal_structure diso:hasSlipPlane ?slip_plane.
+	?slip_plane diso:planeMillerIndice ?slip_plane_val.
 }
 ```
 CQs 6 Slip direction of (111) plane:
 ```
-PREFIX : <https://raw.githubusercontent.com/az-ihsan/dislocation-ontology/master/crystallography.owl/>  
+PREFIX diso: <https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/>
+PREFIX cryso: <https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/> 
+PREFIX cdo: <https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystalline-defect-ontology.owl/>  
 PREFIX chebi: <http://purl.obolibrary.org/obo/> 
 PREFIX mdo: <https://w3id.org/mdo/structure/> 
 PREFIX ns1: <http://purl.obolibrary.org/obo/chebi/> 
@@ -134,9 +150,9 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 SELECT  ?slip_plane ?slip_direction_val WHERE{
-	?slip_plane a :SlipPlane.
-	?slip_plane :planeMillerIndice "(111)"^^xsd:string;
-		:hasSlipDirection ?slip_direction. 
-	?slip_direction :directionMillerIndice ?slip_direction_val.
+	?slip_plane a diso:SlipPlane.
+	?slip_plane diso:planeMillerIndice "(111)"^^xsd:string;
+		diso:hasSlipDirection ?slip_direction. 
+	?slip_direction diso:directionMillerIndice ?slip_direction_val.
 }
 ```

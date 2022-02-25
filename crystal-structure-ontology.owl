@@ -6,8 +6,26 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:crystallography="https://az-ihsan.github.io/ontologies/crystallography/crystallography.owl#">
     <owl:Ontology rdf:about="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#defintion -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#defintion"/>
     
 
 
@@ -54,6 +72,7 @@
 
     <owl:ObjectProperty rdf:about="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/hasCrystalSystem">
         <rdfs:domain rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/Lattice"/>
+        <rdfs:range rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/CrystalSystem"/>
         <rdfs:comment xml:lang="en">hasCrystalSystem represents the relationship between unit cell and crystal system.</rdfs:comment>
         <rdfs:label xml:lang="en">has crystal system</rdfs:label>
     </owl:ObjectProperty>
@@ -94,13 +113,17 @@
 
     <!-- https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/hasLatticeParameterAngle -->
 
-    <owl:ObjectProperty rdf:about="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/hasLatticeParameterAngle"/>
+    <owl:ObjectProperty rdf:about="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/hasLatticeParameterAngle">
+        <rdfs:label xml:lang="en">has lattice parameter angle</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
     <!-- https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/hasLatticeParameterLength -->
 
-    <owl:ObjectProperty rdf:about="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/hasLatticeParameterLength"/>
+    <owl:ObjectProperty rdf:about="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/hasLatticeParameterLength">
+        <rdfs:label xml:lang="en">has lattice parameter length</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
@@ -226,15 +249,6 @@
 
     <owl:DatatypeProperty rdf:about="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/centering">
         <rdfs:domain rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/BravaisLattice"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/crystalSystem -->
-
-    <owl:DatatypeProperty rdf:about="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/crystalSystem">
-        <rdfs:domain rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/Lattice"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -414,8 +428,8 @@
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">A chemical entity constituting the smallest component of an element having the chemical properties of the element.</rdfs:comment>
         <rdfs:label xml:lang="en">Atom</rdfs:label>
+        <skos:defintion xml:lang="en">A chemical entity constituting the smallest component of an element having the chemical properties of the element.</skos:defintion>
     </owl:Class>
     
 
@@ -470,8 +484,8 @@
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">A coordinate vector of particular basis. It has relation to a specific basis.</rdfs:comment>
         <rdfs:label xml:lang="en">Coordinate Vector of Basis</rdfs:label>
+        <skos:defintion xml:lang="en">A coordinate vector of particular basis. It has relation to a specific basis.</skos:defintion>
     </owl:Class>
     
 
@@ -499,8 +513,35 @@
                 <owl:allValuesFrom rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/Lattice"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">A crystal structure is described by both of the lattice geometry and atomic arrangements within the unit cell.</rdfs:comment>
         <rdfs:label xml:lang="en">Crystal Structure</rdfs:label>
+        <skos:defintion xml:lang="en">A crystal structure is described by both of the lattice geometry and atomic arrangements within the unit cell.</skos:defintion>
+    </owl:Class>
+    
+
+
+    <!-- https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/CrystalSystem -->
+
+    <owl:Class rdf:about="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/CrystalSystem">
+        <rdfs:label xml:lang="en">Crystal System</rdfs:label>
+        <skos:defintion xml:lang="en">A classification scheme for crystal structures on the basis of unit cell geometry.</skos:defintion>
+    </owl:Class>
+    
+
+
+    <!-- https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/Cubic -->
+
+    <owl:Class rdf:about="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/Cubic">
+        <rdfs:subClassOf rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/CrystalSystem"/>
+        <rdfs:label xml:lang="en">Cubic</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/Hexagonal -->
+
+    <owl:Class rdf:about="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/Hexagonal">
+        <rdfs:subClassOf rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/CrystalSystem"/>
+        <rdfs:label xml:lang="en">Hexagonal</rdfs:label>
     </owl:Class>
     
 
@@ -526,6 +567,20 @@
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/hasCrystalSystem"/>
+                        <owl:someValuesFrom rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/CrystalSystem"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/hasCrystalSystem"/>
+                        <owl:allValuesFrom rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/CrystalSystem"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
                         <owl:onProperty rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/hasUnitCell"/>
                         <owl:someValuesFrom rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/UnitCell"/>
                     </owl:Restriction>
@@ -536,15 +591,8 @@
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/crystalSystem"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">A lattice defines a periodic arrangement of one or more atoms.</rdfs:comment>
         <rdfs:label xml:lang="en">Lattice</rdfs:label>
+        <skos:defintion xml:lang="en">A lattice defines a periodic arrangement of one or more atoms.</skos:defintion>
     </owl:Class>
     
 
@@ -573,8 +621,8 @@
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">The three angles of edges in lattice parameter lengths characterizing the unit cell.</rdfs:comment>
         <rdfs:label xml:lang="en">Lattice Parameter Angle</rdfs:label>
+        <skos:defintion xml:lang="en">The three angles of edges in lattice parameter lengths characterizing the unit cell.</skos:defintion>
     </owl:Class>
     
 
@@ -603,8 +651,53 @@
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">The three edges characterize the unit cell that parallelepiped.</rdfs:comment>
         <rdfs:label xml:lang="en">Lattice Parameter Length</rdfs:label>
+        <skos:defintion xml:lang="en">The three edges characterize the unit cell that parallelepiped.</skos:defintion>
+    </owl:Class>
+    
+
+
+    <!-- https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/Monoclinic -->
+
+    <owl:Class rdf:about="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/Monoclinic">
+        <rdfs:subClassOf rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/CrystalSystem"/>
+        <rdfs:label xml:lang="en">Monoclinic</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/Orthorhombic -->
+
+    <owl:Class rdf:about="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/Orthorhombic">
+        <rdfs:subClassOf rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/CrystalSystem"/>
+        <rdfs:label xml:lang="en">Orthorhombic</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/Tetragonal -->
+
+    <owl:Class rdf:about="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/Tetragonal">
+        <rdfs:subClassOf rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/CrystalSystem"/>
+        <rdfs:label xml:lang="en">Tetragonal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/Triclinic -->
+
+    <owl:Class rdf:about="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/Triclinic">
+        <rdfs:subClassOf rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/CrystalSystem"/>
+        <rdfs:label xml:lang="en">Triclinic</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/Trigonal -->
+
+    <owl:Class rdf:about="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/Trigonal">
+        <rdfs:subClassOf rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/CrystalSystem"/>
+        <rdfs:label xml:lang="en">Trigonal</rdfs:label>
     </owl:Class>
     
 
@@ -640,8 +733,8 @@
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">Basic structural unit or building block of the crystal structure and defines the crystal structure by virtue of its geometry and the atom positions within.</rdfs:comment>
         <rdfs:label xml:lang="en">Unit Cell</rdfs:label>
+        <skos:defintion xml:lang="en">Basic structural unit or building block of the crystal structure and defines the crystal structure by virtue of its geometry and the atom positions within.</skos:defintion>
     </owl:Class>
     
 
@@ -686,8 +779,8 @@
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">(Euclidean) vector used to represent quantities that both magnitude and direction.</rdfs:comment>
         <rdfs:label xml:lang="en">Vector</rdfs:label>
+        <skos:defintion xml:lang="en">(Euclidean) vector used to represent quantities that both magnitude and direction.</skos:defintion>
     </owl:Class>
     
 
@@ -717,8 +810,8 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A basis defines a spatial unit used to express fractional coordinates.</rdfs:comment>
-        <rdfs:comment xml:lang="en">Set of vector(in 2-D two vectors and in 3-D three vectors) that linearly independent.</rdfs:comment>
         <rdfs:label xml:lang="en">Basis</rdfs:label>
+        <skos:defintion xml:lang="en">Set of vector(in 2-D two vectors and in 3-D three vectors) that linearly independent.</skos:defintion>
     </owl:Class>
     
 
@@ -747,8 +840,8 @@
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">A coordinate vector according to standard basis, i.e., e_x (1, 0, 0), e_y(0, 1, 0), and e_z (0, 0, 1).</rdfs:comment>
         <rdfs:label xml:lang="en">Coordinate Vector</rdfs:label>
+        <skos:defintion xml:lang="en">A coordinate vector according to standard basis, i.e., e_x (1, 0, 0), e_y(0, 1, 0), and e_z (0, 0, 1).</skos:defintion>
     </owl:Class>
     
 
@@ -784,8 +877,8 @@
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">An occupancy ties a specific species to a site.</rdfs:comment>
         <rdfs:label xml:lang="en">Occupancy</rdfs:label>
+        <skos:defintion xml:lang="en">An occupancy ties a specific species to a site.</skos:defintion>
     </owl:Class>
     
 
@@ -823,8 +916,8 @@
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">A site is a point in a lattice.</rdfs:comment>
         <rdfs:label xml:lang="en">Site</rdfs:label>
+        <skos:defintion xml:lang="en">A site is a point in a lattice.</skos:defintion>
     </owl:Class>
     
 
@@ -839,9 +932,32 @@
                 <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33250"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">A species is the combination of atoms on each site.</rdfs:comment>
         <rdfs:label xml:lang="en">Species</rdfs:label>
+        <skos:defintion xml:lang="en">A species is the combination of atoms on each site.</skos:defintion>
     </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/Cubic"/>
+            <rdf:Description rdf:about="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/Hexagonal"/>
+            <rdf:Description rdf:about="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/Monoclinic"/>
+            <rdf:Description rdf:about="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/Orthorhombic"/>
+            <rdf:Description rdf:about="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/Tetragonal"/>
+            <rdf:Description rdf:about="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/Triclinic"/>
+            <rdf:Description rdf:about="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/Trigonal"/>
+        </owl:members>
+    </rdf:Description>
 </rdf:RDF>
 
 

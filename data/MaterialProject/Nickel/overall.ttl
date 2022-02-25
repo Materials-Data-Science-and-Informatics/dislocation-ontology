@@ -1,0 +1,678 @@
+@prefix cdo: <https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystalline-defect-ontology.owl> .
+@prefix chebi: <http://purl.obolibrary.org/obo/> .
+@prefix cryso: <https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/> .
+@prefix diso: <https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/> .
+@prefix ex: <www.example.org/mp-23/> .
+@prefix ex1: <www.example.org/mp-1246134/> .
+@prefix ex2: <www.example.org/mp-1008728/> .
+@prefix ex21: <www.example.org/mp-1094136/> .
+@prefix ex22: <www.example.org/mp-10257/> .
+@prefix ex3: <www.example.org/mp-1014111/> .
+@prefix mdo: <https://w3id.org/mdo/structure/> .
+@prefix ns1: <http://purl.obolibrary.org/obo/chebi/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+owl:qualifiedCardinality a owl:AnnotationProperty .
+
+cdo: a owl:Ontology ;
+    owl:imports <https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl>,
+        <https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl> .
+
+<https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystalline-defect-ontology.owl/CrystallineMaterial> a owl:Class ;
+    rdfs:subClassOf [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty <https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystalline-defect-ontology.owl/hasCrystalStructure> ;
+                        owl:someValuesFrom cryso:CrystalStructure ] [ a owl:Restriction ;
+                        owl:allValuesFrom cryso:CrystalStructure ;
+                        owl:onProperty <https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystalline-defect-ontology.owl/hasCrystalStructure> ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty <https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystalline-defect-ontology.owl/hasCrystalStructure> ;
+                        owl:someValuesFrom cryso:CrystalStructure ] [ a owl:Restriction ;
+                        owl:allValuesFrom cryso:CrystalStructure ;
+                        owl:onProperty <https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystalline-defect-ontology.owl/hasCrystalStructure> ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty <https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystalline-defect-ontology.owl/hasCrystalStructure> ;
+                        owl:someValuesFrom cryso:CrystalStructure ] [ a owl:Restriction ;
+                        owl:allValuesFrom cryso:CrystalStructure ;
+                        owl:onProperty <https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystalline-defect-ontology.owl/hasCrystalStructure> ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty <https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystalline-defect-ontology.owl/hasCrystalStructure> ;
+                        owl:someValuesFrom cryso:CrystalStructure ] [ a owl:Restriction ;
+                        owl:allValuesFrom cryso:CrystalStructure ;
+                        owl:onProperty <https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystalline-defect-ontology.owl/hasCrystalStructure> ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty <https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystalline-defect-ontology.owl/hasCrystalStructure> ;
+                        owl:someValuesFrom cryso:CrystalStructure ] [ a owl:Restriction ;
+                        owl:allValuesFrom cryso:CrystalStructure ;
+                        owl:onProperty <https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystalline-defect-ontology.owl/hasCrystalStructure> ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty <https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystalline-defect-ontology.owl/hasCrystalStructure> ;
+                        owl:someValuesFrom cryso:CrystalStructure ] [ a owl:Restriction ;
+                        owl:allValuesFrom cryso:CrystalStructure ;
+                        owl:onProperty <https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystalline-defect-ontology.owl/hasCrystalStructure> ] ) ] .
+
+<https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystalline-defect-ontology.owl/GrainBoundary> a owl:Class ;
+    rdfs:subClassOf <https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystalline-defect-ontology.owl/CrystallineDefect> .
+
+<https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystalline-defect-ontology.owl/PointDefect> a owl:Class ;
+    rdfs:subClassOf <https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystalline-defect-ontology.owl/CrystallineDefect> .
+
+<https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystalline-defect-ontology.owl/hasCrystallineDefect> a owl:ObjectProperty .
+
+diso:Dislocation rdfs:subClassOf <https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystalline-defect-ontology.owl/CrystallineDefect> .
+
+diso:LatticePoint rdfs:subClassOf [ a owl:Class ;
+            owl:unionOf ( [ a owl:Class ;
+                        owl:intersectionOf ( [ a owl:Restriction ;
+                                    owl:onProperty mdo:hasCartesianCoordinates ;
+                                    owl:someValuesFrom cryso:CoordinateVectorOfBasis ] [ a owl:Restriction ;
+                                    owl:allValuesFrom cryso:CoordinateVectorOfBasis ;
+                                    owl:onProperty mdo:hasCartesianCoordinates ] ) ] [ a owl:Class ;
+                        owl:intersectionOf ( [ a owl:Restriction ;
+                                    owl:onProperty mdo:hasCartesianCoordinates ;
+                                    owl:someValuesFrom mdo:CoordinateVector ] [ a owl:Restriction ;
+                                    owl:allValuesFrom mdo:CoordinateVector ;
+                                    owl:onProperty mdo:hasCartesianCoordinates ] ) ] ) ],
+        [ a owl:Class ;
+            owl:unionOf ( [ a owl:Class ;
+                        owl:intersectionOf ( [ a owl:Restriction ;
+                                    owl:onProperty mdo:hasCartesianCoordinates ;
+                                    owl:someValuesFrom cryso:CoordinateVectorOfBasis ] [ a owl:Restriction ;
+                                    owl:allValuesFrom cryso:CoordinateVectorOfBasis ;
+                                    owl:onProperty mdo:hasCartesianCoordinates ] ) ] [ a owl:Class ;
+                        owl:intersectionOf ( [ a owl:Restriction ;
+                                    owl:onProperty mdo:hasCartesianCoordinates ;
+                                    owl:someValuesFrom mdo:CoordinateVector ] [ a owl:Restriction ;
+                                    owl:allValuesFrom mdo:CoordinateVector ;
+                                    owl:onProperty mdo:hasCartesianCoordinates ] ) ] ) ],
+        [ a owl:Class ;
+            owl:unionOf ( [ a owl:Class ;
+                        owl:intersectionOf ( [ a owl:Restriction ;
+                                    owl:onProperty mdo:hasCartesianCoordinates ;
+                                    owl:someValuesFrom cryso:CoordinateVectorOfBasis ] [ a owl:Restriction ;
+                                    owl:allValuesFrom cryso:CoordinateVectorOfBasis ;
+                                    owl:onProperty mdo:hasCartesianCoordinates ] ) ] [ a owl:Class ;
+                        owl:intersectionOf ( [ a owl:Restriction ;
+                                    owl:onProperty mdo:hasCartesianCoordinates ;
+                                    owl:someValuesFrom mdo:CoordinateVector ] [ a owl:Restriction ;
+                                    owl:allValuesFrom mdo:CoordinateVector ;
+                                    owl:onProperty mdo:hasCartesianCoordinates ] ) ] ) ],
+        [ a owl:Class ;
+            owl:unionOf ( [ a owl:Class ;
+                        owl:intersectionOf ( [ a owl:Restriction ;
+                                    owl:onProperty mdo:hasCartesianCoordinates ;
+                                    owl:someValuesFrom cryso:CoordinateVectorOfBasis ] [ a owl:Restriction ;
+                                    owl:allValuesFrom cryso:CoordinateVectorOfBasis ;
+                                    owl:onProperty mdo:hasCartesianCoordinates ] ) ] [ a owl:Class ;
+                        owl:intersectionOf ( [ a owl:Restriction ;
+                                    owl:onProperty mdo:hasCartesianCoordinates ;
+                                    owl:someValuesFrom mdo:CoordinateVector ] [ a owl:Restriction ;
+                                    owl:allValuesFrom mdo:CoordinateVector ;
+                                    owl:onProperty mdo:hasCartesianCoordinates ] ) ] ) ],
+        [ a owl:Class ;
+            owl:unionOf ( [ a owl:Class ;
+                        owl:intersectionOf ( [ a owl:Restriction ;
+                                    owl:onProperty mdo:hasCartesianCoordinates ;
+                                    owl:someValuesFrom cryso:CoordinateVectorOfBasis ] [ a owl:Restriction ;
+                                    owl:allValuesFrom cryso:CoordinateVectorOfBasis ;
+                                    owl:onProperty mdo:hasCartesianCoordinates ] ) ] [ a owl:Class ;
+                        owl:intersectionOf ( [ a owl:Restriction ;
+                                    owl:onProperty mdo:hasCartesianCoordinates ;
+                                    owl:someValuesFrom mdo:CoordinateVector ] [ a owl:Restriction ;
+                                    owl:allValuesFrom mdo:CoordinateVector ;
+                                    owl:onProperty mdo:hasCartesianCoordinates ] ) ] ) ],
+        [ a owl:Class ;
+            owl:unionOf ( [ a owl:Class ;
+                        owl:intersectionOf ( [ a owl:Restriction ;
+                                    owl:onProperty mdo:hasCartesianCoordinates ;
+                                    owl:someValuesFrom cryso:CoordinateVectorOfBasis ] [ a owl:Restriction ;
+                                    owl:allValuesFrom cryso:CoordinateVectorOfBasis ;
+                                    owl:onProperty mdo:hasCartesianCoordinates ] ) ] [ a owl:Class ;
+                        owl:intersectionOf ( [ a owl:Restriction ;
+                                    owl:onProperty mdo:hasCartesianCoordinates ;
+                                    owl:someValuesFrom mdo:CoordinateVector ] [ a owl:Restriction ;
+                                    owl:allValuesFrom mdo:CoordinateVector ;
+                                    owl:onProperty mdo:hasCartesianCoordinates ] ) ] ) ] .
+
+ex2:mp-1008728_crystal_strcture a cdo:CrystalStructure ;
+    cryso:hasLattice ex2:mp-1008728_lattice ;
+    mdo:hasOccupancy ex2:mp-1008728_occupancy_0 .
+
+ex3:mp-1014111_crystal_strcture a cdo:CrystalStructure ;
+    cryso:hasLattice ex3:mp-1014111_lattice ;
+    mdo:hasOccupancy ex3:mp-1014111_occupancy_0,
+        ex3:mp-1014111_occupancy_1 .
+
+ex22:mp-10257_crystal_strcture a cdo:CrystalStructure ;
+    cryso:hasLattice ex22:mp-10257_lattice ;
+    mdo:hasOccupancy ex22:mp-10257_occupancy_0,
+        ex22:mp-10257_occupancy_1 .
+
+ex21:mp-1094136_crystal_strcture a cdo:CrystalStructure ;
+    cryso:hasLattice ex21:mp-1094136_lattice ;
+    diso:hasSlipPlane ex21:mp-23_slip_plane_0,
+        ex21:mp-23_slip_plane_1,
+        ex21:mp-23_slip_plane_2,
+        ex21:mp-23_slip_plane_3 ;
+    diso:hasSlipSystem ex21:mp-23_slip_system_0,
+        ex21:mp-23_slip_system_1,
+        ex21:mp-23_slip_system_10,
+        ex21:mp-23_slip_system_11,
+        ex21:mp-23_slip_system_2,
+        ex21:mp-23_slip_system_3,
+        ex21:mp-23_slip_system_4,
+        ex21:mp-23_slip_system_5,
+        ex21:mp-23_slip_system_6,
+        ex21:mp-23_slip_system_7,
+        ex21:mp-23_slip_system_8,
+        ex21:mp-23_slip_system_9 ;
+    mdo:hasOccupancy ex21:mp-1094136_occupancy_0,
+        ex21:mp-1094136_occupancy_1 .
+
+ex21:mp-23_family_crystal_direction a diso:FamilyOfCrystalDirection ;
+    diso:familyDirectionMillerIndice "<110>"^^xsd:string .
+
+ex21:mp-23_family_crystal_plane a diso:FamilyOfCrystalPlane ;
+    diso:familyPlaneMillerIndice "{111}"^^xsd:string .
+
+ex1:mp-1246134_crystal_strcture a cdo:CrystalStructure ;
+    cryso:hasLattice ex1:mp-1246134_lattice ;
+    mdo:hasOccupancy ex1:mp-1246134_occupancy_0 .
+
+ex:mp-23_crystal_strcture a cdo:CrystalStructure ;
+    cryso:hasLattice ex:mp-23_lattice ;
+    mdo:hasOccupancy ex:mp-23_occupancy_0 .
+
+ex2:mp-1008728_atom_0 a chebi:CHEBI_33250 ;
+    ns1:formula "Ni"^^xsd:string .
+
+ex2:mp-1008728_crystal_system a cryso:Hexagonal .
+
+ex2:mp-1008728_frac_coord_0 a mdo:CoordinateVector ;
+    mdo:X_axisCoordinate 0e+00 ;
+    mdo:Y_axisCoordinate 0e+00 ;
+    mdo:Z_axisCoordinate 0e+00 .
+
+ex2:mp-1008728_lattice a cryso:Lattice ;
+    cryso:hasCrystalSystem ex2:mp-1008728_crystal_system ;
+    cryso:hasUnitCell ex2:mp-1008728_unit_cell .
+
+ex2:mp-1008728_lattice_parameter_angle a cryso:LatticeParameterAngle ;
+    cryso:latticeParameterAngleAlpha 1.094712e+02 ;
+    cryso:latticeParameterAngleBeta 1.094712e+02 ;
+    cryso:latticeParameterAngleGamma 1.094712e+02 .
+
+ex2:mp-1008728_lattice_parameter_length a cryso:LatticeParameterLength ;
+    cryso:latticeParameterLengthA 2.416394e+00 ;
+    cryso:latticeParameterLengthB 2.416394e+00 ;
+    cryso:latticeParameterLengthC 2.416394e+00 .
+
+ex2:mp-1008728_occupancy_0 a mdo:Occupancy ;
+    mdo:hasSite ex2:mp-1008728_site_0 ;
+    mdo:hasSpecies ex2:mp-1008728_species_0 .
+
+ex2:mp-1008728_site_0 a mdo:Site ;
+    mdo:hasFractionalCoordinates ex2:mp-1008728_frac_coord_0 .
+
+ex2:mp-1008728_species_0 a mdo:Species ;
+    mdo:hasElement ex2:mp-1008728_atom_0 .
+
+ex2:mp-1008728_unit_cell a cryso:UnitCell ;
+    cryso:hasLatticeParameterAngle ex2:mp-1008728_lattice_parameter_angle ;
+    cryso:hasLatticeParameterLength ex2:mp-1008728_lattice_parameter_length .
+
+ex3:mp-1014111_atom_0 a chebi:CHEBI_33250 ;
+    ns1:formula "Ni"^^xsd:string .
+
+ex3:mp-1014111_atom_1 a chebi:CHEBI_33250 ;
+    ns1:formula "Ni"^^xsd:string .
+
+ex3:mp-1014111_crystal_system a cryso:Trigonal .
+
+ex3:mp-1014111_frac_coord_0 a mdo:CoordinateVector ;
+    mdo:X_axisCoordinate 3.33333e-01 ;
+    mdo:Y_axisCoordinate 6.66667e-01 ;
+    mdo:Z_axisCoordinate 4.25238e-01 .
+
+ex3:mp-1014111_frac_coord_1 a mdo:CoordinateVector ;
+    mdo:X_axisCoordinate 6.66667e-01 ;
+    mdo:Y_axisCoordinate 3.33333e-01 ;
+    mdo:Z_axisCoordinate 5.74762e-01 .
+
+ex3:mp-1014111_lattice a cryso:Lattice ;
+    cryso:hasCrystalSystem ex3:mp-1014111_crystal_system ;
+    cryso:hasUnitCell ex3:mp-1014111_unit_cell .
+
+ex3:mp-1014111_lattice_parameter_angle a cryso:LatticeParameterAngle ;
+    cryso:latticeParameterAngleAlpha 9e+01 ;
+    cryso:latticeParameterAngleBeta 9e+01 ;
+    cryso:latticeParameterAngleGamma 1.2e+02 .
+
+ex3:mp-1014111_lattice_parameter_length a cryso:LatticeParameterLength ;
+    cryso:latticeParameterLengthA 2.416684e+00 ;
+    cryso:latticeParameterLengthB 2.416684e+00 ;
+    cryso:latticeParameterLengthC 1.351535e+01 .
+
+ex3:mp-1014111_occupancy_0 a mdo:Occupancy ;
+    mdo:hasSite ex3:mp-1014111_site_0 ;
+    mdo:hasSpecies ex3:mp-1014111_species_0 .
+
+ex3:mp-1014111_occupancy_1 a mdo:Occupancy ;
+    mdo:hasSite ex3:mp-1014111_site_1 ;
+    mdo:hasSpecies ex3:mp-1014111_species_1 .
+
+ex3:mp-1014111_site_0 a mdo:Site ;
+    mdo:hasFractionalCoordinates ex3:mp-1014111_frac_coord_0 .
+
+ex3:mp-1014111_site_1 a mdo:Site ;
+    mdo:hasFractionalCoordinates ex3:mp-1014111_frac_coord_1 .
+
+ex3:mp-1014111_species_0 a mdo:Species ;
+    mdo:hasElement ex3:mp-1014111_atom_0 .
+
+ex3:mp-1014111_species_1 a mdo:Species ;
+    mdo:hasElement ex3:mp-1014111_atom_1 .
+
+ex3:mp-1014111_unit_cell a cryso:UnitCell ;
+    cryso:hasLatticeParameterAngle ex3:mp-1014111_lattice_parameter_angle ;
+    cryso:hasLatticeParameterLength ex3:mp-1014111_lattice_parameter_length .
+
+ex22:mp-10257_atom_0 a chebi:CHEBI_33250 ;
+    ns1:formula "Ni"^^xsd:string .
+
+ex22:mp-10257_atom_1 a chebi:CHEBI_33250 ;
+    ns1:formula "Ni"^^xsd:string .
+
+ex22:mp-10257_crystal_system a cryso:Hexagonal .
+
+ex22:mp-10257_frac_coord_0 a mdo:CoordinateVector ;
+    mdo:X_axisCoordinate 3.33333e-01 ;
+    mdo:Y_axisCoordinate 6.66667e-01 ;
+    mdo:Z_axisCoordinate 2.5e-01 .
+
+ex22:mp-10257_frac_coord_1 a mdo:CoordinateVector ;
+    mdo:X_axisCoordinate 6.66667e-01 ;
+    mdo:Y_axisCoordinate 3.33333e-01 ;
+    mdo:Z_axisCoordinate 7.5e-01 .
+
+ex22:mp-10257_lattice a cryso:Lattice ;
+    cryso:hasCrystalSystem ex22:mp-10257_crystal_system ;
+    cryso:hasUnitCell ex22:mp-10257_unit_cell .
+
+ex22:mp-10257_lattice_parameter_angle a cryso:LatticeParameterAngle ;
+    cryso:latticeParameterAngleAlpha 9e+01 ;
+    cryso:latticeParameterAngleBeta 9e+01 ;
+    cryso:latticeParameterAngleGamma 1.2e+02 .
+
+ex22:mp-10257_lattice_parameter_length a cryso:LatticeParameterLength ;
+    cryso:latticeParameterLengthA 2.474278e+00 ;
+    cryso:latticeParameterLengthB 2.474278e+00 ;
+    cryso:latticeParameterLengthC 4.070181e+00 .
+
+ex22:mp-10257_occupancy_0 a mdo:Occupancy ;
+    mdo:hasSite ex22:mp-10257_site_0 ;
+    mdo:hasSpecies ex22:mp-10257_species_0 .
+
+ex22:mp-10257_occupancy_1 a mdo:Occupancy ;
+    mdo:hasSite ex22:mp-10257_site_1 ;
+    mdo:hasSpecies ex22:mp-10257_species_1 .
+
+ex22:mp-10257_site_0 a mdo:Site ;
+    mdo:hasFractionalCoordinates ex22:mp-10257_frac_coord_0 .
+
+ex22:mp-10257_site_1 a mdo:Site ;
+    mdo:hasFractionalCoordinates ex22:mp-10257_frac_coord_1 .
+
+ex22:mp-10257_species_0 a mdo:Species ;
+    mdo:hasElement ex22:mp-10257_atom_0 .
+
+ex22:mp-10257_species_1 a mdo:Species ;
+    mdo:hasElement ex22:mp-10257_atom_1 .
+
+ex22:mp-10257_unit_cell a cryso:UnitCell ;
+    cryso:hasLatticeParameterAngle ex22:mp-10257_lattice_parameter_angle ;
+    cryso:hasLatticeParameterLength ex22:mp-10257_lattice_parameter_length .
+
+ex21:mp-1094136_atom_0 a chebi:CHEBI_33250 ;
+    ns1:formula "Ni"^^xsd:string .
+
+ex21:mp-1094136_atom_1 a chebi:CHEBI_33250 ;
+    ns1:formula "Ni"^^xsd:string .
+
+ex21:mp-1094136_crystal_system a cryso:Cubic .
+
+ex21:mp-1094136_frac_coord_0 a mdo:CoordinateVector ;
+    mdo:X_axisCoordinate 0e+00 ;
+    mdo:Y_axisCoordinate 0e+00 ;
+    mdo:Z_axisCoordinate 4.23977e-01 .
+
+ex21:mp-1094136_frac_coord_1 a mdo:CoordinateVector ;
+    mdo:X_axisCoordinate 0e+00 ;
+    mdo:Y_axisCoordinate 0e+00 ;
+    mdo:Z_axisCoordinate 5.76023e-01 .
+
+ex21:mp-1094136_lattice a cryso:Lattice ;
+    cryso:hasCrystalSystem ex21:mp-1094136_crystal_system ;
+    cryso:hasUnitCell ex21:mp-1094136_unit_cell .
+
+ex21:mp-1094136_lattice_parameter_angle a cryso:LatticeParameterAngle ;
+    cryso:latticeParameterAngleAlpha 9e+01 ;
+    cryso:latticeParameterAngleBeta 9e+01 ;
+    cryso:latticeParameterAngleGamma 1.2e+02 .
+
+ex21:mp-1094136_lattice_parameter_length a cryso:LatticeParameterLength ;
+    cryso:latticeParameterLengthA 2.38205e+00 ;
+    cryso:latticeParameterLengthB 2.38205e+00 ;
+    cryso:latticeParameterLengthC 1.491233e+01 .
+
+ex21:mp-1094136_occupancy_0 a mdo:Occupancy ;
+    mdo:hasSite ex21:mp-1094136_site_0 ;
+    mdo:hasSpecies ex21:mp-1094136_species_0 .
+
+ex21:mp-1094136_occupancy_1 a mdo:Occupancy ;
+    mdo:hasSite ex21:mp-1094136_site_1 ;
+    mdo:hasSpecies ex21:mp-1094136_species_1 .
+
+ex21:mp-1094136_site_0 a mdo:Site ;
+    mdo:hasFractionalCoordinates ex21:mp-1094136_frac_coord_0 .
+
+ex21:mp-1094136_site_1 a mdo:Site ;
+    mdo:hasFractionalCoordinates ex21:mp-1094136_frac_coord_1 .
+
+ex21:mp-1094136_species_0 a mdo:Species ;
+    mdo:hasElement ex21:mp-1094136_atom_0 .
+
+ex21:mp-1094136_species_1 a mdo:Species ;
+    mdo:hasElement ex21:mp-1094136_atom_1 .
+
+ex21:mp-1094136_unit_cell a cryso:UnitCell ;
+    cryso:hasLatticeParameterAngle ex21:mp-1094136_lattice_parameter_angle ;
+    cryso:hasLatticeParameterLength ex21:mp-1094136_lattice_parameter_length .
+
+ex21:mp-23_slip_plane_0 a diso:SlipPlane ;
+    diso:hasNormalVector ex21:mp-23_slip_plane_normal_0 ;
+    diso:hasSlipDirection ex21:mp-23_slip_plane_0_slip_direction_0,
+        ex21:mp-23_slip_plane_0_slip_direction_1,
+        ex21:mp-23_slip_plane_0_slip_direction_2 ;
+    diso:planeMillerIndice "(11-1)"^^xsd:string .
+
+ex21:mp-23_slip_plane_1 a diso:SlipPlane ;
+    diso:hasNormalVector ex21:mp-23_slip_plane_normal_1 ;
+    diso:hasSlipDirection ex21:mp-23_slip_plane_1_slip_direction_0,
+        ex21:mp-23_slip_plane_1_slip_direction_1,
+        ex21:mp-23_slip_plane_1_slip_direction_2 ;
+    diso:planeMillerIndice "(111)"^^xsd:string .
+
+ex21:mp-23_slip_plane_2 a diso:SlipPlane ;
+    diso:hasNormalVector ex21:mp-23_slip_plane_normal_2 ;
+    diso:hasSlipDirection ex21:mp-23_slip_plane_2_slip_direction_0,
+        ex21:mp-23_slip_plane_2_slip_direction_1,
+        ex21:mp-23_slip_plane_2_slip_direction_2 ;
+    diso:planeMillerIndice "(1-11)"^^xsd:string .
+
+ex21:mp-23_slip_plane_3 a diso:SlipPlane ;
+    diso:hasNormalVector ex21:mp-23_slip_plane_normal_3 ;
+    diso:hasSlipDirection ex21:mp-23_slip_plane_3_slip_direction_0,
+        ex21:mp-23_slip_plane_3_slip_direction_1,
+        ex21:mp-23_slip_plane_3_slip_direction_2 ;
+    diso:planeMillerIndice "(1-1-1)"^^xsd:string .
+
+ex21:mp-23_slip_system_0 a diso:SlipSystem ;
+    diso:hasSlipDirection ex21:mp-23_slip_plane_0_slip_direction_0 ;
+    diso:hasSlipPlaneNormal ex21:mp-23_slip_plane_normal_0 .
+
+ex21:mp-23_slip_system_1 a diso:SlipSystem ;
+    diso:hasSlipDirection ex21:mp-23_slip_plane_0_slip_direction_1 ;
+    diso:hasSlipPlaneNormal ex21:mp-23_slip_plane_normal_0 .
+
+ex21:mp-23_slip_system_10 a diso:SlipSystem ;
+    diso:hasSlipDirection ex21:mp-23_slip_plane_3_slip_direction_1 ;
+    diso:hasSlipPlaneNormal ex21:mp-23_slip_plane_normal_3 .
+
+ex21:mp-23_slip_system_11 a diso:SlipSystem ;
+    diso:hasSlipDirection ex21:mp-23_slip_plane_3_slip_direction_2 ;
+    diso:hasSlipPlaneNormal ex21:mp-23_slip_plane_normal_3 .
+
+ex21:mp-23_slip_system_2 a diso:SlipSystem ;
+    diso:hasSlipDirection ex21:mp-23_slip_plane_0_slip_direction_2 ;
+    diso:hasSlipPlaneNormal ex21:mp-23_slip_plane_normal_0 .
+
+ex21:mp-23_slip_system_3 a diso:SlipSystem ;
+    diso:hasSlipDirection ex21:mp-23_slip_plane_1_slip_direction_0 ;
+    diso:hasSlipPlaneNormal ex21:mp-23_slip_plane_normal_1 .
+
+ex21:mp-23_slip_system_4 a diso:SlipSystem ;
+    diso:hasSlipDirection ex21:mp-23_slip_plane_1_slip_direction_1 ;
+    diso:hasSlipPlaneNormal ex21:mp-23_slip_plane_normal_1 .
+
+ex21:mp-23_slip_system_5 a diso:SlipSystem ;
+    diso:hasSlipDirection ex21:mp-23_slip_plane_1_slip_direction_2 ;
+    diso:hasSlipPlaneNormal ex21:mp-23_slip_plane_normal_1 .
+
+ex21:mp-23_slip_system_6 a diso:SlipSystem ;
+    diso:hasSlipDirection ex21:mp-23_slip_plane_2_slip_direction_0 ;
+    diso:hasSlipPlaneNormal ex21:mp-23_slip_plane_normal_2 .
+
+ex21:mp-23_slip_system_7 a diso:SlipSystem ;
+    diso:hasSlipDirection ex21:mp-23_slip_plane_2_slip_direction_1 ;
+    diso:hasSlipPlaneNormal ex21:mp-23_slip_plane_normal_2 .
+
+ex21:mp-23_slip_system_8 a diso:SlipSystem ;
+    diso:hasSlipDirection ex21:mp-23_slip_plane_2_slip_direction_2 ;
+    diso:hasSlipPlaneNormal ex21:mp-23_slip_plane_normal_2 .
+
+ex21:mp-23_slip_system_9 a diso:SlipSystem ;
+    diso:hasSlipDirection ex21:mp-23_slip_plane_3_slip_direction_0 ;
+    diso:hasSlipPlaneNormal ex21:mp-23_slip_plane_normal_3 .
+
+ex1:mp-1246134_atom_0 a chebi:CHEBI_33250 ;
+    ns1:formula "Ni"^^xsd:string .
+
+ex1:mp-1246134_crystal_system a cryso:Hexagonal .
+
+ex1:mp-1246134_frac_coord_0 a mdo:CoordinateVector ;
+    mdo:X_axisCoordinate 0e+00 ;
+    mdo:Y_axisCoordinate 0e+00 ;
+    mdo:Z_axisCoordinate 0e+00 .
+
+ex1:mp-1246134_lattice a cryso:Lattice ;
+    cryso:hasCrystalSystem ex1:mp-1246134_crystal_system ;
+    cryso:hasUnitCell ex1:mp-1246134_unit_cell .
+
+ex1:mp-1246134_lattice_parameter_angle a cryso:LatticeParameterAngle ;
+    cryso:latticeParameterAngleAlpha 1.2e+02 ;
+    cryso:latticeParameterAngleBeta 9e+01 ;
+    cryso:latticeParameterAngleGamma 9e+01 .
+
+ex1:mp-1246134_lattice_parameter_length a cryso:LatticeParameterLength ;
+    cryso:latticeParameterLengthA 2.338222e+00 ;
+    cryso:latticeParameterLengthB 2.398096e+00 ;
+    cryso:latticeParameterLengthC 2.398096e+00 .
+
+ex1:mp-1246134_occupancy_0 a mdo:Occupancy ;
+    mdo:hasSite ex1:mp-1246134_site_0 ;
+    mdo:hasSpecies ex1:mp-1246134_species_0 .
+
+ex1:mp-1246134_site_0 a mdo:Site ;
+    mdo:hasFractionalCoordinates ex1:mp-1246134_frac_coord_0 .
+
+ex1:mp-1246134_species_0 a mdo:Species ;
+    mdo:hasElement ex1:mp-1246134_atom_0 .
+
+ex1:mp-1246134_unit_cell a cryso:UnitCell ;
+    cryso:hasLatticeParameterAngle ex1:mp-1246134_lattice_parameter_angle ;
+    cryso:hasLatticeParameterLength ex1:mp-1246134_lattice_parameter_length .
+
+ex:mp-23_atom_0 a chebi:CHEBI_33250 ;
+    ns1:formula "Ni"^^xsd:string .
+
+ex:mp-23_crystal_system a cryso:Cubic .
+
+ex:mp-23_frac_coord_0 a mdo:CoordinateVector ;
+    mdo:X_axisCoordinate 0e+00 ;
+    mdo:Y_axisCoordinate 0e+00 ;
+    mdo:Z_axisCoordinate 0e+00 .
+
+ex:mp-23_lattice a cryso:Lattice ;
+    cryso:hasCrystalSystem ex:mp-23_crystal_system ;
+    cryso:hasUnitCell ex:mp-23_unit_cell .
+
+ex:mp-23_lattice_parameter_angle a cryso:LatticeParameterAngle ;
+    cryso:latticeParameterAngleAlpha 6e+01 ;
+    cryso:latticeParameterAngleBeta 6e+01 ;
+    cryso:latticeParameterAngleGamma 6e+01 .
+
+ex:mp-23_lattice_parameter_length a cryso:LatticeParameterLength ;
+    cryso:latticeParameterLengthA 2.478974e+00 ;
+    cryso:latticeParameterLengthB 2.478974e+00 ;
+    cryso:latticeParameterLengthC 2.478974e+00 .
+
+ex:mp-23_occupancy_0 a mdo:Occupancy ;
+    mdo:hasSite ex:mp-23_site_0 ;
+    mdo:hasSpecies ex:mp-23_species_0 .
+
+ex:mp-23_site_0 a mdo:Site ;
+    mdo:hasFractionalCoordinates ex:mp-23_frac_coord_0 .
+
+ex:mp-23_species_0 a mdo:Species ;
+    mdo:hasElement ex:mp-23_atom_0 .
+
+ex:mp-23_unit_cell a cryso:UnitCell ;
+    cryso:hasLatticeParameterAngle ex:mp-23_lattice_parameter_angle ;
+    cryso:hasLatticeParameterLength ex:mp-23_lattice_parameter_length .
+
+ex21:mp-23_slip_plane_0_slip_direction_0 a diso:SlipDirection ;
+    diso:directionMillerIndice "[101]"^^xsd:string .
+
+ex21:mp-23_slip_plane_0_slip_direction_1 a diso:SlipDirection ;
+    diso:directionMillerIndice "[1-10]"^^xsd:string .
+
+ex21:mp-23_slip_plane_0_slip_direction_2 a diso:SlipDirection ;
+    diso:directionMillerIndice "[011]"^^xsd:string .
+
+ex21:mp-23_slip_plane_1_slip_direction_0 a diso:SlipDirection ;
+    diso:directionMillerIndice "[1-10]"^^xsd:string .
+
+ex21:mp-23_slip_plane_1_slip_direction_1 a diso:SlipDirection ;
+    diso:directionMillerIndice "[10-1]"^^xsd:string .
+
+ex21:mp-23_slip_plane_1_slip_direction_2 a diso:SlipDirection ;
+    diso:directionMillerIndice "[0-11]"^^xsd:string .
+
+ex21:mp-23_slip_plane_2_slip_direction_0 a diso:SlipDirection ;
+    diso:directionMillerIndice "[10-1]"^^xsd:string .
+
+ex21:mp-23_slip_plane_2_slip_direction_1 a diso:SlipDirection ;
+    diso:directionMillerIndice "[110]"^^xsd:string .
+
+ex21:mp-23_slip_plane_2_slip_direction_2 a diso:SlipDirection ;
+    diso:directionMillerIndice "[011]"^^xsd:string .
+
+ex21:mp-23_slip_plane_3_slip_direction_0 a diso:SlipDirection ;
+    diso:directionMillerIndice "[110]"^^xsd:string .
+
+ex21:mp-23_slip_plane_3_slip_direction_1 a diso:SlipDirection ;
+    diso:directionMillerIndice "[101]"^^xsd:string .
+
+ex21:mp-23_slip_plane_3_slip_direction_2 a diso:SlipDirection ;
+    diso:directionMillerIndice "[0-11]"^^xsd:string .
+
+<https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystalline-defect-ontology.owl/CrystallineDefect> a owl:Class .
+
+ex21:mp-23_slip_plane_normal_0 a diso:SlipPlaneNormal ;
+    diso:directionMillerIndice "[11-1]"^^xsd:string .
+
+ex21:mp-23_slip_plane_normal_1 a diso:SlipPlaneNormal ;
+    diso:directionMillerIndice "[111]"^^xsd:string .
+
+ex21:mp-23_slip_plane_normal_2 a diso:SlipPlaneNormal ;
+    diso:directionMillerIndice "[1-11]"^^xsd:string .
+
+ex21:mp-23_slip_plane_normal_3 a diso:SlipPlaneNormal ;
+    diso:directionMillerIndice "[1-1-1]"^^xsd:string .
+
+diso:hasSlipPlane rdfs:range diso:SlipPlane .
+
+cryso:CrystalStructure rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty diso:hasSlipPlane ;
+            owl:someValuesFrom diso:SlipPlane ],
+        [ a owl:Restriction ;
+            owl:onProperty diso:hasSlipPlane ;
+            owl:someValuesFrom diso:SlipPlane ],
+        [ a owl:Restriction ;
+            owl:onProperty diso:hasSlipSystem ;
+            owl:someValuesFrom diso:SlipSystem ],
+        [ a owl:Restriction ;
+            owl:onProperty diso:hasSlipPlane ;
+            owl:someValuesFrom diso:SlipPlane ],
+        [ a owl:Restriction ;
+            owl:onProperty diso:hasSlipPlane ;
+            owl:someValuesFrom diso:SlipPlane ],
+        [ a owl:Restriction ;
+            owl:onProperty diso:hasSlipSystem ;
+            owl:someValuesFrom diso:SlipSystem ],
+        [ a owl:Restriction ;
+            owl:onProperty diso:hasSlipSystem ;
+            owl:someValuesFrom diso:SlipSystem ],
+        [ a owl:Restriction ;
+            owl:onProperty diso:hasSlipSystem ;
+            owl:someValuesFrom diso:SlipSystem ],
+        [ a owl:Restriction ;
+            owl:onProperty diso:hasSlipPlane ;
+            owl:someValuesFrom diso:SlipPlane ],
+        [ a owl:Restriction ;
+            owl:onProperty diso:hasSlipPlane ;
+            owl:someValuesFrom diso:SlipPlane ],
+        [ a owl:Restriction ;
+            owl:onProperty diso:hasSlipSystem ;
+            owl:someValuesFrom diso:SlipSystem ],
+        [ a owl:Restriction ;
+            owl:onProperty diso:hasSlipSystem ;
+            owl:someValuesFrom diso:SlipSystem ] .
+
+<https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystalline-defect-ontology.owl/hasCrystalStructure> a owl:ObjectProperty .
+
+[] owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger .
+
+[] owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger .
+
+[] owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger .
+
+[] owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger .
+
+[] owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger .
+
+[] owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger .
+
+[] owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger .
+
+[] owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger .
+
+[] owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger .
+
+[] owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger .
+
+[] owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger .
+
+[] owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger .
+
+[] owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger .
+
+[] owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger .
+
+[] owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger .
+
+[] owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger .
+
+[] owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger .
+
+[] owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger .
+

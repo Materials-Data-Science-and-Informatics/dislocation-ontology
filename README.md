@@ -7,7 +7,7 @@ In this work, first steps towards formalizing the knowledge of dislocations toge
 * `data`
     * `MaterialProject_Nickel` 
     The Nickel data is collected from [Materials Project](https://materialsproject.org)
-    * Slip system data is taken from [the Crystallography and Crystal Defects book](DOI:10.1002/9781119961468)
+    * Slip system data of FCC Nickel is taken from [the Crystallography and Crystal Defects book](DOI:10.1002/9781119961468)
 * `CQs` is a folder for storing the collection of the competence questions.
 
 ### Acknowledgments
@@ -24,5 +24,5 @@ title={Steps towards a Dislocation Ontology for Crystalline Materials},
 author={Ahmad Zainul Ihsan and Danilo Dessì and Mehwish Alam and Harald Sack and Stefan Sandfeld},
 booktitle={Second International Workshop on Semantic Digital Twins },
 year={2021},
-url={https://openreview.net/forum?id=jiCgp4qEvFS}
+url={http://ceur-ws.org/Vol-2887/paper4.pdf}
 }`
