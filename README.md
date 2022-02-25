@@ -5,7 +5,7 @@ In this work, first steps towards formalizing the knowledge of dislocations toge
 
 ### Project Structure
 * `data`
-    * `MaterialProject_Nickel` 
+    * `MaterialProject/Nickel` 
     The Nickel data is collected from [Materials Project](https://materialsproject.org)
     * Slip system data of FCC Nickel is taken from [the Crystallography and Crystal Defects book](DOI:10.1002/9781119961468)
 * `CQs` is a folder for storing the collection of the competence questions.
