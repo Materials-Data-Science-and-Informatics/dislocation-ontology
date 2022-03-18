@@ -45,8 +45,9 @@
 
 
     <!-- https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/hasSlipSystem -->
-
     <owl:ObjectProperty rdf:about="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/hasSlipSystem"/>
+
+
     
 
 
@@ -89,14 +90,15 @@
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
+
     
 
 
     <!-- https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/Dislocation -->
-
     <owl:Class rdf:about="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/Dislocation">
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystalline-defect-ontology.owl/CrystallineDefect"/>
     </owl:Class>
+
     
 
 
@@ -146,6 +148,7 @@
     <!-- https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/SlipSystem -->
 
     <owl:Class rdf:about="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/SlipSystem"/>
+
     
 
 
