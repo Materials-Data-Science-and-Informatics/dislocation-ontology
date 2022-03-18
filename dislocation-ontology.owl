@@ -34,22 +34,21 @@
 
     <!-- https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl/hasBurgersVector -->
 
-
     <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl/hasBurgersVector">
         <rdfs:domain rdf:resource="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl/Dislocation"/>
         <rdfs:range rdf:resource="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl/BurgersVector"/>
         <rdfs:comment xml:lang="en">Representas relation from dislocation to Burgers vector</rdfs:comment>
         <rdfs:label xml:lang="en">has Burgers vector</rdfs:label>
-
     </owl:ObjectProperty>
     
+
+
     <!-- https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl/hasEndNode -->
 
     <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl/hasEndNode">
         <rdfs:subPropertyOf rdf:resource="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl/hasNode"/>
         <rdfs:domain rdf:resource="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl/Segment"/>
         <rdfs:range rdf:resource="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl/Node"/>
-
     </owl:ObjectProperty>
     
 
@@ -125,6 +124,7 @@
     </owl:ObjectProperty>
     
 
+
     <!-- https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl/hasMathematicalRepresentation -->
 
     <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl/hasMathematicalRepresentation">
@@ -184,7 +184,6 @@
 
 
     <!-- https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl/hasSlipDirection -->
-
 
     <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl/hasSlipDirection">
         <rdfs:subPropertyOf rdf:resource="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl/hasLatticeDirection"/>
@@ -254,7 +253,6 @@
 
     <!-- https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl/movesOn -->
 
-
     <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl/movesOn">
         <rdfs:domain rdf:resource="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl/Dislocation"/>
         <rdfs:range rdf:resource="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl/SlipPlane"/>
@@ -306,6 +304,8 @@
         <rdfs:label xml:lang="en">family plane miller indice</rdfs:label>
     </owl:DatatypeProperty>
     
+
+
     <!-- https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl/masterNodeID -->
 
     <owl:DatatypeProperty rdf:about="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl/masterNodeID"/>
@@ -315,6 +315,8 @@
     <!-- https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl/nodeID -->
 
     <owl:DatatypeProperty rdf:about="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl/nodeID"/>
+    
+
 
     <!-- https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl/planeMillerIndice -->
 
@@ -342,17 +344,9 @@
      -->
 
     
-    <!-- https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owlVector -->
-
-    <owl:Class rdf:about="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owlVector">
-        <rdfs:comment xml:lang="en">(Euclidean) vector used to represent quantities that both magnitude and direction.</rdfs:comment>
-        <rdfs:label xml:lang="en">Vector</rdfs:label>
-    </owl:Class>
-    
 
 
     <!-- https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl/Lattice -->
-
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl/Lattice">
         <rdfs:subClassOf>
@@ -407,8 +401,16 @@
     <!-- https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl/PositionVector -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl/PositionVector">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owlVector"/>
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl/Vector"/>
+    </owl:Class>
+    
 
+
+    <!-- https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl/Vector -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl/Vector">
+        <rdfs:comment xml:lang="en">(Euclidean) vector used to represent quantities that both magnitude and direction.</rdfs:comment>
+        <rdfs:label xml:lang="en">Vector</rdfs:label>
     </owl:Class>
     
 
@@ -444,7 +446,6 @@
 
 
     <!-- https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl/Dislocation -->
-
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl/Dislocation">
         <rdfs:subClassOf>
@@ -483,7 +484,6 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-
                 <owl:onProperty rdf:resource="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl/movesOn"/>
                 <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl/SlipPlane"/>
             </owl:Restriction>
@@ -532,7 +532,6 @@
     <!-- https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl/LatticeDirection -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl/LatticeDirection">
-
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl/Vector"/>
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl/FamilyOfCrystalDirection"/>
         <rdfs:subClassOf>
@@ -596,14 +595,12 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-
                 <owl:onProperty rdf:resource="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl/hasOrigin"/>
                 <owl:allValuesFrom rdf:resource="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl/Origin"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-
                 <owl:onProperty rdf:resource="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl/planeMillerIndice"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
@@ -618,18 +615,18 @@
     <!-- https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl/LatticePoint -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl/LatticePoint">
-
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl/hasPositionVector"/>
                 <owl:allValuesFrom rdf:resource="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl/PositionVector"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-
         <rdfs:comment xml:lang="en">Lattice points are the points where atoms or molecules are located</rdfs:comment>
         <rdfs:label xml:lang="en">Lattice Point</rdfs:label>
     </owl:Class>
     
+
+
     <!-- https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl/Line -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl/Line">
@@ -640,6 +637,8 @@
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
+    
+
 
     <!-- https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl/LineSense -->
 
@@ -648,6 +647,8 @@
         <rdfs:label xml:lang="en">Line Sense</rdfs:label>
     </owl:Class>
     
+
+
     <!-- https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl/Node -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl/Node">
@@ -664,7 +665,7 @@
     <!-- https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl/NodeVelocity -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl/NodeVelocity">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owlVector"/>
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl/Vector"/>
     </owl:Class>
     
 
@@ -700,6 +701,8 @@
     <!-- https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl/ShapeFunction -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl/ShapeFunction"/>
+    
+
 
     <!-- https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl/SlipDirection -->
 
@@ -753,7 +756,6 @@
     <!-- https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl/SlipPlaneNormal -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl/SlipPlaneNormal">
-
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl/Vector"/>
         <rdfs:subClassOf>
             <owl:Restriction>
