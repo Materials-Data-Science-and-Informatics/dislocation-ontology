@@ -66,6 +66,7 @@
     
 
 
+
     <!-- http://qudt.org/schema/qudt/hasQuantityKind -->
 
     <owl:ObjectProperty rdf:about="http://qudt.org/schema/qudt/hasQuantityKind">
@@ -98,6 +99,7 @@
         <rdfs:label>unit</rdfs:label>
     </owl:ObjectProperty>
     
+
 
 
     <!-- https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl/hasBasis -->
@@ -135,6 +137,16 @@
         <rdfs:range rdf:resource="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl/CrystalSystem"/>
         <rdfs:comment xml:lang="en">hasCrystalSystem represents the relationship between unit cell and crystal system.</rdfs:comment>
         <rdfs:label xml:lang="en">has crystal system</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl/hasDirection -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl/hasDirection">
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl/Vector"/>
+        <rdfs:label xml:lang="en">has direction</rdfs:label>
+        <rdfs:label xml:lang="en">hasDirection relates the Vector with &apos;Coordinate Vector of Basis&apos;</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -177,7 +189,14 @@
     
 
 
+    <!-- https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl/hasPositionalVector -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl/hasPositionalVector"/>
+    
+
+
     <!-- https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl/hasSecondAxisVector -->
+
 
     <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl/hasSecondAxisVector">
         <rdfs:domain rdf:resource="https://w3id.org/mdo/structure/Basis"/>
@@ -314,6 +333,8 @@
     
 
 
+
+
     <!-- https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl/firstAxisComponent -->
 
     <owl:DatatypeProperty rdf:about="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl/firstAxisComponent">
@@ -401,6 +422,8 @@
     
 
 
+
+
     <!-- https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl/secondAxisComponent -->
 
     <owl:DatatypeProperty rdf:about="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl/secondAxisComponent">
@@ -412,9 +435,12 @@
     
 
 
+
+
     <!-- https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl/thirdAxisComponent -->
 
     <owl:DatatypeProperty rdf:about="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl/thirdAxisComponent">
+
         <rdfs:domain rdf:resource="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl/CoordinateVectorOfBasis"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
         <rdfs:comment xml:lang="en">A third vector component related to the third axis vector of a basis</rdfs:comment>
@@ -492,6 +518,8 @@
         <skos:defintion xml:lang="en">A chemical entity constituting the smallest component of an element having the chemical properties of the element.</skos:defintion>
     </owl:Class>
     
+
+
 
 
     <!-- http://qudt.org/schema/qudt/Quantity -->
@@ -574,9 +602,7 @@
         <rdfs:isDefinedBy rdf:resource="http://qudt.org/schema/qudt"/>
         <rdfs:label>Unit</rdfs:label>
     </owl:Class>
-    
-
-
+   
     <!-- https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl/BravaisLattice -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl/BravaisLattice">
@@ -595,6 +621,7 @@
     <!-- https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl/CoordinateVectorOfBasis -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl/CoordinateVectorOfBasis">
+
         <rdfs:subClassOf rdf:resource="http://qudt.org/schema/qudt/Quantity"/>
         <rdfs:subClassOf>
             <owl:Class>
@@ -614,6 +641,7 @@
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
+
                         <owl:onProperty rdf:resource="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl/firstAxisComponent"/>
                         <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
                     </owl:Restriction>
@@ -818,6 +846,13 @@
     </owl:Class>
     
 
+    <!-- https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl/PositionVector -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl/PositionVector">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl/Vector"/>
+        <skos:defintion xml:lang="en">In geometry, a position or position vector, also known as location vector or radius vector, is a Euclidean vector that represents the position of a point P in space in relation to an arbitrary reference origin O</skos:defintion>
+    </owl:Class>
+
 
     <!-- https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl/Tetragonal -->
 
@@ -892,6 +927,7 @@
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
                             <owl:Restriction>
+
                                 <owl:onProperty rdf:resource="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl/hasVectorComponent"/>
                                 <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl/CoordinateVectorOfBasis"/>
                             </owl:Restriction>
@@ -904,6 +940,7 @@
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
                             <owl:Restriction>
+
                                 <owl:onProperty rdf:resource="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl/hasVectorComponent"/>
                                 <owl:someValuesFrom rdf:resource="https://w3id.org/mdo/structure/CoordinateVector"/>
                             </owl:Restriction>

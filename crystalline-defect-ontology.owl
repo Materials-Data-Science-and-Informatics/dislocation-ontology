@@ -5,12 +5,13 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:qudt="http://qudt.org/schema/qudt/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#">
     <owl:Ontology rdf:about="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystalline-defect-ontology.owl">
         <owl:versionIRI rdf:resource="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystalline-defect-ontology.owl/0.1"/>
-        <owl:imports rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl"/>
-        <owl:imports rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl/0.1"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl/0.1"/>
     </owl:Ontology>
     
 
@@ -43,11 +44,10 @@
     
 
 
-    <!-- https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/hasSlipPlane -->
+    <!-- https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/hasSlipSystem -->
+    <owl:ObjectProperty rdf:about="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/hasSlipSystem"/>
 
-    <rdf:Description rdf:about="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/hasSlipPlane">
-        <rdfs:range rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/SlipPlane"/>
-    </rdf:Description>
+
     
 
 
@@ -74,36 +74,37 @@
     
 
 
+    <!-- https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/CoordinateVectorOfBasis -->
+
+    <owl:Class rdf:about="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/CoordinateVectorOfBasis"/>
+    
+
+
     <!-- https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/CrystalStructure -->
 
-    <rdf:Description rdf:about="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/CrystalStructure">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/hasSlipPlane"/>
-                <owl:someValuesFrom rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/SlipPlane"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+    <owl:Class rdf:about="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/CrystalStructure">
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/hasSlipSystem"/>
                 <owl:someValuesFrom rdf:resource="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/SlipSystem"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-    </rdf:Description>
+    </owl:Class>
+
     
 
 
     <!-- https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/Dislocation -->
-
-    <rdf:Description rdf:about="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/Dislocation">
+    <owl:Class rdf:about="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/Dislocation">
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystalline-defect-ontology.owl/CrystallineDefect"/>
-    </rdf:Description>
+    </owl:Class>
+
     
 
 
     <!-- https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/LatticePoint -->
 
-    <rdf:Description rdf:about="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/LatticePoint">
+    <owl:Class rdf:about="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/LatticePoint">
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -134,7 +135,20 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:subClassOf>
-    </rdf:Description>
+    </owl:Class>
+    
+
+
+    <!-- https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/SlipPlane -->
+
+    <owl:Class rdf:about="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/SlipPlane"/>
+    
+
+
+    <!-- https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/SlipSystem -->
+
+    <owl:Class rdf:about="https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/SlipSystem"/>
+
     
 
 
