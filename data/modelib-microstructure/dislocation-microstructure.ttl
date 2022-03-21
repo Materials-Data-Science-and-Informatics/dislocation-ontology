@@ -1,5 +1,7 @@
-@prefix cso: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl/> .
-@prefix diso: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl/> .
+@prefix : <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl> .
+@prefix cso: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl#> .
+@prefix default1: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl> .
+@prefix diso: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl#> .
 @prefix ex: <http://example.org/dislocation-microstructure/> .
 @prefix mdo: <https://w3id.org/mdo/structure/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -9,7 +11,9 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix terms: <http://purl.org/dc/terms/> .
 @prefix unit: <http://qudt.org/vocab/unit/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 ex:linker_0 a diso:Segment ;
@@ -902,14 +906,29 @@ ex:loop_9 a diso:Dislocation ;
     diso:hasMathematicalRepresentation ex:line_9 ;
     diso:movesOn ex:loop_9_slip_plane .
 
+terms:contributor a owl:AnnotationProperty .
+
+terms:created a owl:AnnotationProperty .
+
+terms:creator a owl:AnnotationProperty .
+
+terms:title a owl:AnnotationProperty .
+
+vann:preferredNamespacePrefix a owl:AnnotationProperty .
+
 qudt:description a owl:AnnotationProperty .
 
 rdf:HTML a rdfs:Datatype .
 
 skos:defintion a owl:AnnotationProperty .
 
-<https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl> a owl:Ontology ;
-    owl:versionIRI cso:0.1 .
+: a owl:Ontology ;
+    terms:contributor "Stefan Sandfeld"^^xsd:string ;
+    terms:created "21.03.2022"@en ;
+    terms:creator "Ahmad Zainul Ihsan"@en ;
+    terms:title "Crystal Structure Ontology"@en ;
+    vann:preferredNamespacePrefix "CSO"^^xsd:string ;
+    rdfs:seeAlso "https://github.com/Materials-Data-Science-and-Informatics/dislocation-ontology" .
 
 cso:Cubic a owl:Class ;
     rdfs:label "Cubic"@en ;
@@ -947,8 +966,13 @@ cso:hasCrystalStructure a owl:ObjectProperty ;
 cso:hasPositionalVector a owl:ObjectProperty ;
     rdfs:range cso:PositionVector .
 
-<https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl> a owl:Ontology ;
-    owl:versionIRI diso:0.1 .
+default1: a owl:Ontology ;
+    terms:contributor "Stefan Sandfeld"^^xsd:string ;
+    terms:created "21.03.2022"@en ;
+    terms:creator "Ahmad Zainul Ihsan"@en ;
+    terms:title "Dislocation Ontology"@en ;
+    vann:preferredNamespacePrefix "DISO"^^xsd:string ;
+    rdfs:seeAlso "https://github.com/Materials-Data-Science-and-Informatics/dislocation-ontology" .
 
 diso:hasEndNode a owl:ObjectProperty ;
     rdfs:domain diso:Segment ;
@@ -983,11 +1007,13 @@ diso:hasStartNode a owl:ObjectProperty ;
     rdfs:range diso:Node ;
     rdfs:subPropertyOf diso:hasNode .
 
-diso:masterNodeID a owl:DatatypeProperty .
+diso:masterNodeID a owl:DatatypeProperty ;
+    rdfs:domain diso:Node ;
+    rdfs:range xsd:int .
 
-diso:nodeID a owl:DatatypeProperty .
-
-diso:slipArea a owl:DatatypeProperty .
+diso:slipArea a owl:DatatypeProperty ;
+    rdfs:domain diso:DiscretizedLine ;
+    rdfs:range xsd:double .
 
 mdo:ElementRatio a owl:DatatypeProperty ;
     rdfs:label "element ratio"@en ;
@@ -4847,10 +4873,6 @@ diso:familyPlaneMillerIndice a owl:DatatypeProperty ;
 diso:hasMathematicalRepresentation a owl:ObjectProperty ;
     rdfs:subPropertyOf diso:hasRepresentation .
 
-diso:hasNodeVelocity a owl:ObjectProperty ;
-    rdfs:domain diso:Node ;
-    rdfs:range diso:NodeVelocity .
-
 diso:hasNumericalRepresentation a owl:ObjectProperty ;
     rdfs:subPropertyOf diso:hasRepresentation .
 
@@ -5601,8 +5623,8 @@ cso:hasUnitCell a owl:ObjectProperty ;
     rdfs:range cso:UnitCell .
 
 cso:hasVectorComponent a owl:ObjectProperty ;
-    rdfs:label "has vector component"@en,
-        "hasVectorComponent relates the Vector with 'Vector Component of Basis'"@en ;
+    rdfs:label "has vector component"@en ;
+    rdfs:comment "hasVectorComponent relates the Vector with 'Vector Component of Basis'"@en ;
     rdfs:domain cso:Vector .
 
 diso:ShapeFunction a owl:Class .
@@ -5690,16 +5712,16 @@ cso:UnitCell a owl:Class ;
     rdfs:label "Unit Cell"@en ;
     rdfs:subClassOf [ a owl:Class ;
             owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty cso:hasLatticeParameterAngle ;
-                        owl:someValuesFrom cso:LatticeParameterAngle ] [ a owl:Restriction ;
-                        owl:allValuesFrom cso:LatticeParameterAngle ;
-                        owl:onProperty cso:hasLatticeParameterAngle ] ) ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
                         owl:onProperty cso:hasLatticeParameterLength ;
                         owl:someValuesFrom cso:LatticeParameterLength ] [ a owl:Restriction ;
                         owl:allValuesFrom cso:LatticeParameterLength ;
-                        owl:onProperty cso:hasLatticeParameterLength ] ) ] ;
+                        owl:onProperty cso:hasLatticeParameterLength ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty cso:hasLatticeParameterAngle ;
+                        owl:someValuesFrom cso:LatticeParameterAngle ] [ a owl:Restriction ;
+                        owl:allValuesFrom cso:LatticeParameterAngle ;
+                        owl:onProperty cso:hasLatticeParameterAngle ] ) ] ;
     skos:defintion "Basic structural unit or building block of the crystal structure and defines the crystal structure by virtue of its geometry and the atom positions within."@en .
 
 diso:FamilyOfCrystalDirection a owl:Class ;
@@ -5727,16 +5749,16 @@ diso:SlipSystem a owl:Class ;
     rdfs:comment "Slip system is defined as the set of slip planes with the same unit normal vector and the same slip direction."@en ;
     rdfs:subClassOf [ a owl:Class ;
             owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty diso:hasSlipPlaneNormal ;
-                        owl:someValuesFrom diso:SlipPlaneNormal ] [ a owl:Restriction ;
-                        owl:allValuesFrom diso:SlipPlaneNormal ;
-                        owl:onProperty diso:hasSlipPlaneNormal ] ) ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
                         owl:onProperty diso:hasSlipDirection ;
                         owl:someValuesFrom diso:SlipDirection ] [ a owl:Restriction ;
                         owl:allValuesFrom diso:SlipDirection ;
-                        owl:onProperty diso:hasSlipDirection ] ) ] .
+                        owl:onProperty diso:hasSlipDirection ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty diso:hasSlipPlaneNormal ;
+                        owl:someValuesFrom diso:SlipPlaneNormal ] [ a owl:Restriction ;
+                        owl:allValuesFrom diso:SlipPlaneNormal ;
+                        owl:onProperty diso:hasSlipPlaneNormal ] ) ] .
 
 ex:node_69 a diso:Node ;
     cso:hasPositionVector ex:node_69_position_vector ;
@@ -5870,6 +5892,21 @@ mdo:Species a owl:Class ;
 ex:loop_1_discretized_line a diso:DiscretizedLine ;
     diso:slipArea 3.960489e+04 .
 
+cso:Vector a owl:Class ;
+    rdfs:label "Vector"@en ;
+    rdfs:comment "(Euclidean) vector used to represent quantities that both magnitude and direction."@en ;
+    rdfs:subClassOf [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty cso:hasVectorComponent ;
+                        owl:someValuesFrom cso:VectorComponentsOfBasis ] [ a owl:Restriction ;
+                        owl:allValuesFrom cso:VectorComponentsOfBasis ;
+                        owl:onProperty cso:hasVectorComponent ] ) ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty cso:magnitude ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ;
+    skos:defintion "(Euclidean) vector used to represent quantities that both magnitude and direction."@en .
+
 diso:hasLatticeDirection a owl:ObjectProperty ;
     rdfs:label "has lattice direction"@en ;
     rdfs:comment "hasLatticeDirection represents the relationship between a lattice or a lattice plane and lattice directions."@en ;
@@ -5888,22 +5925,16 @@ cso:Lattice a owl:Class ;
         "A mathematical repsentation to represent the periodicity of a crystal."@en ;
     rdfs:subClassOf [ a owl:Class ;
             owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty diso:hasLatticePlane ;
-                        owl:someValuesFrom diso:LatticePlane ] [ a owl:Restriction ;
-                        owl:allValuesFrom diso:LatticeDirection ;
-                        owl:onProperty diso:hasLatticeDirection ] ) ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
                         owl:onProperty diso:hasLatticeDirection ;
                         owl:someValuesFrom diso:LatticeDirection ] [ a owl:Restriction ;
                         owl:allValuesFrom diso:LatticeDirection ;
                         owl:onProperty diso:hasLatticeDirection ] ) ],
         [ a owl:Class ;
             owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty cso:hasBasis ;
-                        owl:someValuesFrom mdo:Basis ] [ a owl:Restriction ;
-                        owl:allValuesFrom mdo:Basis ;
-                        owl:onProperty cso:hasBasis ] ) ],
+                        owl:onProperty cso:hasCrystalSystem ;
+                        owl:someValuesFrom cso:CrystalSystem ] [ a owl:Restriction ;
+                        owl:allValuesFrom cso:CrystalSystem ;
+                        owl:onProperty cso:hasCrystalSystem ] ) ],
         [ a owl:Class ;
             owl:intersectionOf ( [ a owl:Restriction ;
                         owl:onProperty cso:hasUnitCell ;
@@ -5918,31 +5949,28 @@ cso:Lattice a owl:Class ;
                         owl:onProperty diso:hasLatticePoint ] ) ],
         [ a owl:Class ;
             owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty cso:hasCrystalSystem ;
-                        owl:someValuesFrom cso:CrystalSystem ] [ a owl:Restriction ;
-                        owl:allValuesFrom cso:CrystalSystem ;
-                        owl:onProperty cso:hasCrystalSystem ] ) ] ;
-    skos:defintion "A lattice defines a periodic arrangement of one or more atoms."@en .
-
-cso:Vector a owl:Class ;
-    rdfs:label "Vector"@en ;
-    rdfs:comment "(Euclidean) vector used to represent quantities that both magnitude and direction."@en ;
-    rdfs:subClassOf [ a owl:Class ;
+                        owl:onProperty cso:hasBasis ;
+                        owl:someValuesFrom mdo:Basis ] [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:Basis ;
+                        owl:onProperty cso:hasBasis ] ) ],
+        [ a owl:Class ;
             owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty cso:hasVectorComponent ;
-                        owl:someValuesFrom cso:VectorComponentsOfBasis ] [ a owl:Restriction ;
-                        owl:allValuesFrom cso:VectorComponentsOfBasis ;
-                        owl:onProperty cso:hasVectorComponent ] ) ],
-        [ a owl:Restriction ;
-            owl:onDataRange xsd:double ;
-            owl:onProperty cso:magnitude ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ;
-    skos:defintion "(Euclidean) vector used to represent quantities that both magnitude and direction."@en .
+                        owl:onProperty diso:hasLatticePlane ;
+                        owl:someValuesFrom diso:LatticePlane ] [ a owl:Restriction ;
+                        owl:allValuesFrom diso:LatticeDirection ;
+                        owl:onProperty diso:hasLatticeDirection ] ) ] ;
+    skos:defintion "A lattice defines a periodic arrangement of one or more atoms."@en .
 
 diso:LatticePlane a owl:Class ;
     rdfs:label "Lattice Plane"@en ;
     rdfs:comment "Lattice plane, forms an infinitely stretched plane (characterized through a plane normal) that cuts through lattice points such that again a regular arrangement of lattice points in the plane occurs."@en ;
     rdfs:subClassOf [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty diso:hasLatticeDirection ;
+                        owl:someValuesFrom diso:LatticeDirection ] [ a owl:Restriction ;
+                        owl:allValuesFrom diso:LatticeDirection ;
+                        owl:onProperty diso:hasLatticeDirection ] ) ],
+        [ a owl:Class ;
             owl:intersectionOf ( [ a owl:Restriction ;
                         owl:onProperty diso:hasLatticePoint ;
                         owl:someValuesFrom diso:LatticePoint ] [ a owl:Restriction ;
@@ -5952,12 +5980,6 @@ diso:LatticePlane a owl:Class ;
             owl:onDataRange xsd:string ;
             owl:onProperty diso:planeMillerIndice ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty diso:hasLatticeDirection ;
-                        owl:someValuesFrom diso:LatticeDirection ] [ a owl:Restriction ;
-                        owl:allValuesFrom diso:LatticeDirection ;
-                        owl:onProperty diso:hasLatticeDirection ] ) ],
         [ a owl:Restriction ;
             owl:allValuesFrom diso:Origin ;
             owl:onProperty diso:hasOrigin ],
@@ -5979,11 +6001,11 @@ mdo:Basis a owl:Class ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
         [ a owl:Restriction ;
             owl:onClass mdo:CoordinateVector ;
-            owl:onProperty cso:hasSecondAxisVector ;
+            owl:onProperty cso:hasThirdAxisVector ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
         [ a owl:Restriction ;
             owl:onClass mdo:CoordinateVector ;
-            owl:onProperty cso:hasThirdAxisVector ;
+            owl:onProperty cso:hasSecondAxisVector ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ;
     skos:defintion "Set of vector(in 2-D two vectors and in 3-D three vectors) that linearly independent."@en .
 
@@ -6032,30 +6054,22 @@ diso:Dislocation a owl:Class ;
         "Presence of dislocation introduces local disturbance of the atomic-level geometry."@en ;
     rdfs:subClassOf [ a owl:Class ;
             owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty diso:hasBurgersVector ;
+                        owl:someValuesFrom diso:BurgersVector ] [ a owl:Restriction ;
+                        owl:allValuesFrom diso:BurgersVector ;
+                        owl:onProperty diso:hasBurgersVector ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
                         owl:onProperty diso:hasLineSense ;
                         owl:someValuesFrom diso:LineSense ] [ a owl:Restriction ;
                         owl:allValuesFrom diso:LineSense ;
                         owl:onProperty diso:hasLineSense ] ) ],
         [ a owl:Restriction ;
-            owl:onProperty diso:movesOn ;
-            owl:someValuesFrom diso:SlipPlane ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty diso:hasBurgersVector ;
-                        owl:someValuesFrom diso:BurgersVector ] [ a owl:Restriction ;
-                        owl:allValuesFrom diso:BurgersVector ;
-                        owl:onProperty diso:hasBurgersVector ] ) ],
-        [ a owl:Restriction ;
             owl:onProperty diso:hasMathematicalRepresentation ;
-            owl:someValuesFrom diso:Line ] .
-
-diso:DiscretizedLine a owl:Class ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom diso:ShapeFunction ;
-            owl:onProperty diso:hasShapeFunction ],
+            owl:someValuesFrom diso:Line ],
         [ a owl:Restriction ;
-            owl:allValuesFrom diso:Segment ;
-            owl:onProperty diso:hasSegment ] .
+            owl:onProperty diso:movesOn ;
+            owl:someValuesFrom diso:SlipPlane ] .
 
 diso:SlipPlane a owl:Class ;
     rdfs:label "Slip Plane"@en ;
@@ -6063,16 +6077,16 @@ diso:SlipPlane a owl:Class ;
         "The crystallographic plane along which the dislocation line traverses."@en ;
     rdfs:subClassOf [ a owl:Class ;
             owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty diso:hasSlipDirection ;
-                        owl:someValuesFrom diso:SlipDirection ] [ a owl:Restriction ;
-                        owl:allValuesFrom diso:SlipDirection ;
-                        owl:onProperty diso:hasSlipDirection ] ) ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
                         owl:onProperty diso:hasSlipPlaneNormal ;
                         owl:someValuesFrom diso:SlipPlaneNormal ] [ a owl:Restriction ;
                         owl:allValuesFrom diso:SlipPlaneNormal ;
                         owl:onProperty diso:hasSlipPlaneNormal ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty diso:hasSlipDirection ;
+                        owl:someValuesFrom diso:SlipDirection ] [ a owl:Restriction ;
+                        owl:allValuesFrom diso:SlipDirection ;
+                        owl:onProperty diso:hasSlipDirection ] ) ],
         diso:LatticePlane .
 
 diso:SlipPlaneNormal a owl:Class ;
@@ -6084,6 +6098,14 @@ diso:SlipPlaneNormal a owl:Class ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
         cso:Vector .
 
+diso:DiscretizedLine a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom diso:Segment ;
+            owl:onProperty diso:hasSegment ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom diso:ShapeFunction ;
+            owl:onProperty diso:hasShapeFunction ] .
+
 ex:loop_6_discretized_line a diso:DiscretizedLine ;
     diso:slipArea 9.485375e+05 .
 
@@ -6091,7 +6113,7 @@ mdo:CoordinateVector a owl:Class ;
     rdfs:label "Coordinate Vector"@en ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onDataRange xsd:double ;
-            owl:onProperty mdo:Y_axisCoordinate ;
+            owl:onProperty mdo:X_axisCoordinate ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
         [ a owl:Restriction ;
             owl:onDataRange xsd:double ;
@@ -6099,7 +6121,7 @@ mdo:CoordinateVector a owl:Class ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
         [ a owl:Restriction ;
             owl:onDataRange xsd:double ;
-            owl:onProperty mdo:X_axisCoordinate ;
+            owl:onProperty mdo:Y_axisCoordinate ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ;
     skos:defintion "A coordinate vector according to standard basis, i.e., e_x (1, 0, 0), e_y(0, 1, 0), and e_z (0, 0, 1)."@en .
 
@@ -6121,32 +6143,26 @@ ex:loop_8_discretized_line a diso:DiscretizedLine ;
 ex:loop_10_discretized_line a diso:DiscretizedLine ;
     diso:slipArea 7.152368e+05 .
 
-diso:NodeVelocity a owl:Class ;
-    rdfs:subClassOf cso:Vector .
-
 cso:PositionVector a owl:Class ;
     rdfs:subClassOf cso:Vector ;
     skos:defintion "In geometry, a position or position vector, also known as location vector or radius vector, is a Euclidean vector that represents the position of a point P in space in relation to an arbitrary reference origin O"@en .
 
 diso:Node a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom diso:NodeVelocity ;
-            owl:onProperty diso:hasNodeVelocity ],
-        [ a owl:Restriction ;
             owl:allValuesFrom cso:PositionVector ;
             owl:onProperty cso:hasPositionVector ] .
 
 diso:Segment a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom diso:Node ;
-            owl:onProperty diso:hasNode ],
+            owl:allValuesFrom diso:DiscretizedLine ;
+            owl:onProperty diso:isSegmentOf ],
         [ a owl:Restriction ;
             owl:onClass diso:Node ;
             owl:onProperty diso:hasNode ;
             owl:qualifiedCardinality "2"^^xsd:nonNegativeInteger ],
         [ a owl:Restriction ;
-            owl:allValuesFrom diso:DiscretizedLine ;
-            owl:onProperty diso:isSegmentOf ] .
+            owl:allValuesFrom diso:Node ;
+            owl:onProperty diso:hasNode ] .
 
 ex:coordinate_basis a mdo:Basis ;
     cso:hasFirstAxisVector ex:crystal_coordinate_first_axis ;

@@ -3,11 +3,11 @@ from rdflib.namespace import  Namespace, RDF, XSD
 
 
 #crystal structure ontology
-CSO = Namespace("https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl/")
+CSO = Namespace("https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl#")
 #dislocation ontology
-DISO = Namespace("https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl/")
+DISO = Namespace("https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl#")
 #crystalline-defect-ontology
-CDO = Namespace("https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystalline-defect-ontology.owl/")
+CDO = Namespace("https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystalline-defect-ontology.owl#")
 MDO = Namespace("https://w3id.org/mdo/structure/")
 CHEBI = Namespace("http://purl.obolibrary.org/obo/")
 CHEBIdat = Namespace("http://purl.obolibrary.org/obo/chebi/")
