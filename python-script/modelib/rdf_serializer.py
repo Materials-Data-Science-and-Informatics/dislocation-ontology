@@ -3,9 +3,9 @@ from rdflib.namespace import  Namespace, RDF, XSD
 
 
 #crystal structure ontology
-CSO = Namespace("https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl/")
+CSO = Namespace("https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl#")
 #dislocation ontology
-DISO = Namespace("https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl/")
+DISO = Namespace("https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl#")
 #crystalline-defect-ontology
 MDO = Namespace("https://w3id.org/mdo/structure/")
 QUDT = Namespace("http://qudt.org/2.0/schema/qudt/")

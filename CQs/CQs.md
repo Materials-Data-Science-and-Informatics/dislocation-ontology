@@ -10,9 +10,9 @@
 
 CQ1.1 Cubic crystal system:
 ```
-PREFIX diso: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl/>
-PREFIX cso: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl/> 
-PREFIX cdo: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystalline-defect-ontology.owl/>  
+PREFIX diso: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl#>
+PREFIX cso: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl#> 
+PREFIX cdo: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystalline-defect-ontology.owl#>  
 PREFIX chebi: <http://purl.obolibrary.org/obo/> 
 PREFIX mdo: <https://w3id.org/mdo/structure/> 
 PREFIX ns1: <http://purl.obolibrary.org/obo/chebi/> 
@@ -30,9 +30,9 @@ SELECT ?crystalstructure ?crystal_system WHERE{
 
 CQ1.2 Hexagonal crystal system:
 ```
-PREFIX diso: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl/>
-PREFIX cso: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl/> 
-PREFIX cdo: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystalline-defect-ontology.owl/>  
+PREFIX diso: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl#>
+PREFIX cso: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl#> 
+PREFIX cdo: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystalline-defect-ontology.owl#>  
 PREFIX chebi: <http://purl.obolibrary.org/obo/> 
 PREFIX mdo: <https://w3id.org/mdo/structure/> 
 PREFIX ns1: <http://purl.obolibrary.org/obo/chebi/> 
@@ -49,9 +49,9 @@ SELECT ?crystalstructure ?crystal_system WHERE{
 ```
 CQs. 2 Lattice parameter lengths:
 ```
-PREFIX diso: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl/>
-PREFIX cso: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl/> 
-PREFIX cdo: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystalline-defect-ontology.owl/>  
+PREFIX diso: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl#>
+PREFIX cso: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl#> 
+PREFIX cdo: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystalline-defect-ontology.owl#>  
 PREFIX chebi: <http://purl.obolibrary.org/obo/> 
 PREFIX mdo: <https://w3id.org/mdo/structure/> 
 PREFIX ns1: <http://purl.obolibrary.org/obo/chebi/> 
@@ -72,9 +72,9 @@ SELECT ?crystalstructure ?length_a ?length_b ?length_c WHERE{
 
 CQs. 3 Lattice parameter angles:
 ```
-PREFIX diso: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl/>
-PREFIX cso: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl/> 
-PREFIX cdo: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystalline-defect-ontology.owl/>  
+PREFIX diso: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl#>
+PREFIX cso: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl#> 
+PREFIX cdo: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystalline-defect-ontology.owl#>  
 PREFIX chebi: <http://purl.obolibrary.org/obo/> 
 PREFIX mdo: <https://w3id.org/mdo/structure/> 
 PREFIX ns1: <http://purl.obolibrary.org/obo/chebi/> 
@@ -95,9 +95,9 @@ SELECT ?crystalstructure ?angle_alpha ?angle_beta ?angle_gamma WHERE{
 
 CQs. 4:
 ```
-PREFIX diso: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl/>
-PREFIX cso: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl/> 
-PREFIX cdo: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystalline-defect-ontology.owl/>  
+PREFIX diso: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl#>
+PREFIX cso: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl#> 
+PREFIX cdo: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystalline-defect-ontology.owl#>  
 PREFIX chebi: <http://purl.obolibrary.org/obo/> 
 PREFIX mdo: <https://w3id.org/mdo/structure/> 
 PREFIX ns1: <http://purl.obolibrary.org/obo/chebi/> 
@@ -118,9 +118,9 @@ SELECT ?crystalstructure ?slip_system ?slip_plane_normal_val ?slip_direction_val
 
 CQs. 5:
 ```
-PREFIX diso: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl/>
-PREFIX cso: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl/> 
-PREFIX cdo: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystalline-defect-ontology.owl/>  
+PREFIX diso: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl#>
+PREFIX cso: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl#> 
+PREFIX cdo: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystalline-defect-ontology.owl#>  
 PREFIX chebi: <http://purl.obolibrary.org/obo/> 
 PREFIX mdo: <https://w3id.org/mdo/structure/> 
 PREFIX ns1: <http://purl.obolibrary.org/obo/chebi/> 
@@ -138,9 +138,9 @@ WHERE{
 ```
 CQs 6 Slip direction of (111) plane:
 ```
-PREFIX diso: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl/>
-PREFIX cso: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl/> 
-PREFIX cdo: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystalline-defect-ontology.owl/>  
+PREFIX diso: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl#>
+PREFIX cso: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl#> 
+PREFIX cdo: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystalline-defect-ontology.owl#>  
 PREFIX chebi: <http://purl.obolibrary.org/obo/> 
 PREFIX mdo: <https://w3id.org/mdo/structure/> 
 PREFIX ns1: <http://purl.obolibrary.org/obo/chebi/> 
