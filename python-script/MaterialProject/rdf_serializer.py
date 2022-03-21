@@ -3,11 +3,11 @@ from rdflib.namespace import  Namespace, RDF, XSD
 
 
 #crystal structure ontology
-CRYSO = Namespace("https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystal-structure-ontology.owl/")
+CSO = Namespace("https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl/")
 #dislocation ontology
-DISO = Namespace("https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/dislocation-ontology.owl/")
+DISO = Namespace("https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl/")
 #crystalline-defect-ontology
-CDO = Namespace("https://gitlab.com/azihsan/dislocation-ontology/-/raw/master/crystalline-defect-ontology.owl")
+CDO = Namespace("https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystalline-defect-ontology.owl/")
 MDO = Namespace("https://w3id.org/mdo/structure/")
 CHEBI = Namespace("http://purl.obolibrary.org/obo/")
 CHEBIdat = Namespace("http://purl.obolibrary.org/obo/chebi/")
@@ -41,32 +41,32 @@ def rdf_serializer(cif_dict, space_group_dict, slip_configs, slip_plane_normals,
     dat_atom = Literal(cif_dict['_chemical_formula_structural'], datatype=XSD.string)
     
     g = Graph()
-    g.parse("../crystalline-defect-ontology.owl", format="xml")
+    # g.parse("../../crystalline-defect-ontology.owl", format="xml")
     
     #binding alias for namespace in rdf graph
     g.bind("ex", example)
     g.bind("cdo", CDO)
     g.bind("diso", DISO)
-    g.bind("cryso", CRYSO)
+    g.bind("cso", CSO)
     g.bind("mdo", MDO)
     g.bind("chebi", CHEBI)
     
     g.add((crystal_structure, RDF.type, CDO.CrystalStructure))
-    g.add((crystal_structure,CRYSO.hasLattice, lattice))
-    g.add((lattice, RDF.type, CRYSO.Lattice))
-    g.add((lattice, CRYSO.hasCrystalSystem, crystal_system))
-    g.add((lattice, CRYSO.hasUnitCell, unit_cell))
-    g.add((unit_cell, RDF.type, CRYSO.UnitCell))
-    g.add((unit_cell, CRYSO.hasLatticeParameterLength, lattice_param_length))
-    g.add((unit_cell, CRYSO.hasLatticeParameterAngle, lattice_param_angle))
-    g.add((lattice_param_length, RDF.type, CRYSO.LatticeParameterLength))
-    g.add((lattice_param_angle, RDF.type, CRYSO.LatticeParameterAngle))
-    g.add((lattice_param_length, CRYSO.latticeParameterLengthA , length_a))
-    g.add((lattice_param_length, CRYSO.latticeParameterLengthB, length_b))
-    g.add((lattice_param_length, CRYSO.latticeParameterLengthC, length_c))
-    g.add((lattice_param_angle, CRYSO.latticeParameterAngleAlpha, angle_alpha))
-    g.add((lattice_param_angle, CRYSO.latticeParameterAngleBeta, angle_beta))
-    g.add((lattice_param_angle, CRYSO.latticeParameterAngleGamma, angle_gamma))
+    g.add((crystal_structure,CSO.hasLattice, lattice))
+    g.add((lattice, RDF.type, CSO.Lattice))
+    g.add((lattice, CSO.hasCrystalSystem, crystal_system))
+    g.add((lattice, CSO.hasUnitCell, unit_cell))
+    g.add((unit_cell, RDF.type, CSO.UnitCell))
+    g.add((unit_cell, CSO.hasLatticeParameterLength, lattice_param_length))
+    g.add((unit_cell, CSO.hasLatticeParameterAngle, lattice_param_angle))
+    g.add((lattice_param_length, RDF.type, CSO.LatticeParameterLength))
+    g.add((lattice_param_angle, RDF.type, CSO.LatticeParameterAngle))
+    g.add((lattice_param_length, CSO.latticeParameterLengthA , length_a))
+    g.add((lattice_param_length, CSO.latticeParameterLengthB, length_b))
+    g.add((lattice_param_length, CSO.latticeParameterLengthC, length_c))
+    g.add((lattice_param_angle, CSO.latticeParameterAngleAlpha, angle_alpha))
+    g.add((lattice_param_angle, CSO.latticeParameterAngleBeta, angle_beta))
+    g.add((lattice_param_angle, CSO.latticeParameterAngleGamma, angle_gamma))
     
     #Occupancy
     for i in range(len(cif_dict['_atom_site_occupancy'])):
@@ -91,7 +91,7 @@ def rdf_serializer(cif_dict, space_group_dict, slip_configs, slip_plane_normals,
     
     # add data about slip system, slip direction, slip      
     space_group_data = space_group_dict['spacegroup']
-    g.add((crystal_system, RDF.type, CRYSO[space_group_data['crystal_system'].capitalize()]))
+    g.add((crystal_system, RDF.type, CSO[space_group_data['crystal_system'].capitalize()]))
     sg_id= sg_id.split('_')[0] # remove spacegroup word
     if (space_group_data['crystal_system'].lower() == 'cubic') and (space_group_data['symbol'][0].lower() == 'f'):
         family_crystal_plane = example['{}_family_crystal_plane'.format(sg_id)]

@@ -19,7 +19,7 @@ slip_plane_normals = {'(11-1)': ['[11-1]',] ,
 # Load data 
 def main():
     G = Graph()
-    for path1, path2 in zip(Path("../../data/MaterialProject_Nickel/Nickel/json/").iterdir(), Path("../data/MaterialProject_Nickel/Nickel/spacegroup/").iterdir()):
+    for path1, path2 in zip(Path("../../data/MaterialProject/Nickel/json/").iterdir(), Path("../../data/MaterialProject/Nickel/spacegroup/").iterdir()):
         if (path1.is_file()) and(path2.is_file()):
             base_1 = os.path.basename(path1)
             mat_id = os.path.splitext(base_1)[0]
@@ -32,7 +32,7 @@ def main():
                 g = rdf_serializer(json_nickel_data, json_nickel_sg, slip_configs, slip_plane_normals, example_uri, mat_id, sg_id)
                 G = G+g
 
-    G.serialize(destination='../../data/MaterialProject_Nickel/Nickel/overall.ttl', format='turtle')
+    G.serialize(destination='../../data/MaterialProject/Nickel/overall.ttl', format='turtle')
 
 if __name__ == "__main__":
     main()
