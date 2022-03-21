@@ -41,7 +41,7 @@ def rdf_serializer(cif_dict, space_group_dict, slip_configs, slip_plane_normals,
     dat_atom = Literal(cif_dict['_chemical_formula_structural'], datatype=XSD.string)
     
     g = Graph()
-    # g.parse("../../crystalline-defect-ontology.owl", format="xml")
+    g.parse("../../crystalline-defect-ontology.owl", format="xml")
     
     #binding alias for namespace in rdf graph
     g.bind("ex", example)
