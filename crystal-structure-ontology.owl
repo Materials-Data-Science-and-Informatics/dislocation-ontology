@@ -1,18 +1,15 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://az-ihsan.github.io/ontologies/crystallography/crystallography.owl/"
-     xml:base="https://az-ihsan.github.io/ontologies/crystallography/crystallography.owl/"
+<rdf:RDF xmlns="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl"
+     xml:base="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:qudt="http://qudt.org/schema/qudt/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-     xmlns:crystallography="https://az-ihsan.github.io/ontologies/crystallography/crystallography.owl#">
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#">
     <owl:Ontology rdf:about="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl"/>
     
-
-
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
