@@ -5,6 +5,11 @@
 4. Given a crystal structure, what are the slip systems of it?
 5. Given a crystal structure, what are the slip planes of it?
 6. Given a slip plane of the crystal structure, what is the slip direction?
+7. Given a 3-D vector instance (velocity, Burgers vector, vector position, etc), what are the vector components?
+8. Given a 3-D vector instance (velocity, Burgers vector, vector position, etc), what is the vector magnitude?
+9. Given a Basis of a vector in 3-D space, what are the first, second, and third axis vector?
+10. Given a 3-D vector instance (velocity, Burgers vector, vector position, etc), what is the unit?
+
 
 ## Answer to CQs via SPARQL
 
@@ -155,4 +160,131 @@ SELECT  ?slip_plane ?slip_direction_val WHERE{
 		diso:hasSlipDirection ?slip_direction. 
 	?slip_direction diso:directionMillerIndice ?slip_direction_val.
 }
+```
+CQs 7:
+
+```
+PREFIX diso: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl#>
+PREFIX cso: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl#> 
+PREFIX cdo: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystalline-defect-ontology.owl#>   
+PREFIX mdo: <https://w3id.org/mdo/structure/> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?Burgers_vector ?firstAxisComponent ?secondAxisComponent ?thirdAxisComponent WHERE{
+	?Burgers_vector a diso:BurgersVector;
+		cso:hasVectorComponents ?VectorComponentsOfBasis .
+	?VectorComponentsOfBasis cso:firstAxisComponent ?firstAxisComponent;
+		cso:secondAxisComponent ?secondAxisComponent;
+		cso:thirdAxisComponent ?thirdAxisComponent .
+}
+```
+
+CQs 8: 
+
+```
+PREFIX diso: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl#>
+PREFIX cso: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl#> 
+PREFIX cdo: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystalline-defect-ontology.owl#>   
+PREFIX mdo: <https://w3id.org/mdo/structure/> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?Burgers_vector ?vectorMagnitude WHERE{
+	?Burgers_vector a diso:BurgersVector;
+		cso:vectorMagnitude ?vectorMagnitude .
+}
+```
+
+CQs 9a: first axis basis
+```
+PREFIX diso: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl#>
+PREFIX cso: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl#> 
+PREFIX cdo: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystalline-defect-ontology.owl#>   
+PREFIX mdo: <https://w3id.org/mdo/structure/> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?Burgers_vector ?first_axis_basis_e_x ?first_axis_basis_e_y ?first_axis_basis_e_z WHERE{
+	?Burgers_vector a diso:BurgersVector;
+		cso:hasVectorComponents ?VectorComponents . 
+	?VectorComponents cso:hasBasis ?Basis .
+	?Basis cso:hasFirstAxisVector ?CoordinateVector .
+	?CoordinateVector mdo:X_axisCoordinate ?first_axis_basis_e_x;
+		mdo:Y_axisCoordinate ?first_axis_basis_e_y;
+		mdo:Z_axisCoordinate ?first_axis_basis_e_z . 
+}
+```
+
+CQs 9b: second axis basis
+```
+PREFIX diso: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl#>
+PREFIX cso: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl#> 
+PREFIX cdo: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystalline-defect-ontology.owl#>   
+PREFIX mdo: <https://w3id.org/mdo/structure/> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?Burgers_vector ?second_axis_basis_e_x ?second_axis_basis_e_y ?second_axis_basis_e_z WHERE{
+	?Burgers_vector a diso:BurgersVector;
+		cso:hasVectorComponents ?VectorComponents . 
+	?VectorComponents cso:hasBasis ?Basis .
+	?Basis cso:hasSecondAxisVector ?CoordinateVector .
+	?CoordinateVector mdo:X_axisCoordinate ?second_axis_basis_e_x;
+		mdo:Y_axisCoordinate ?second_axis_basis_e_y;
+		mdo:Z_axisCoordinate ?second_axis_basis_e_z . 
+}
+```
+
+CQs 9c: third axis basis
+```
+PREFIX diso: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl#>
+PREFIX cso: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl#> 
+PREFIX cdo: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystalline-defect-ontology.owl#>   
+PREFIX mdo: <https://w3id.org/mdo/structure/> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?Burgers_vector ?third_axis_basis_e_x ?third_axis_basis_e_y ?third_axis_basis_e_z WHERE{
+	?Burgers_vector a diso:BurgersVector;
+		cso:hasVectorComponents ?VectorComponents . 
+	?VectorComponents cso:hasBasis ?Basis .
+	?Basis cso:hasThirdAxisVector ?CoordinateVector .
+	?CoordinateVector mdo:X_axisCoordinate ?third_axis_basis_e_x;
+		mdo:Y_axisCoordinate ?third_axis_basis_e_y;
+		mdo:Z_axisCoordinate ?third_axis_basis_e_z . 
+}
+
+```
+
+CQs 10: unit of Burgers vector 
+```
+PREFIX diso: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl#>
+PREFIX cso: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl#> 
+PREFIX cdo: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystalline-defect-ontology.owl#>   
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX mdo: <https://w3id.org/mdo/structure/> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?Burgers_vector ?unit ?quantity_kind WHERE{
+	?Burgers_vector a diso:BurgersVector;
+		cso:hasVectorComponents ?VectorComponents ;
+		qudt:hasQuantityKind ?quantity_kind ;
+		qudt:quantityValue ?qv.
+	?qv qudt:unit ?unit.
+}
+
 ```
