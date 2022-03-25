@@ -75,6 +75,8 @@
 
     <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl#hasPositionVector">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl#PositionVector"/>
+        <rdfs:label xml:lang="en">has position vector</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -96,6 +98,8 @@
         <rdfs:subPropertyOf rdf:resource="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl#hasNode"/>
         <rdfs:domain rdf:resource="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl#Segment"/>
         <rdfs:range rdf:resource="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl#Node"/>
+        <rdfs:comment xml:lang="en">Sub-property of hasNode that relates the segment with the end node</rdfs:comment>
+        <rdfs:label xml:lang="en">has end node</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -176,6 +180,8 @@
 
     <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl#hasMathematicalRepresentation">
         <rdfs:subPropertyOf rdf:resource="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl#hasRepresentation"/>
+        <rdfs:comment xml:lang="en">relates the entity with its mathematical representation</rdfs:comment>
+        <rdfs:label xml:lang="en">has mathematical representation</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -185,6 +191,8 @@
     <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl#hasNode">
         <rdfs:domain rdf:resource="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl#Segment"/>
         <rdfs:range rdf:resource="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl#Node"/>
+        <rdfs:comment xml:lang="en">hasNode represents the directed relation between segment and node</rdfs:comment>
+        <rdfs:label xml:lang="en">has node</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -193,6 +201,8 @@
 
     <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl#hasNumericalRepresentation">
         <rdfs:subPropertyOf rdf:resource="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl#hasRepresentation"/>
+        <rdfs:comment xml:lang="en">relates the entity with its numerical representation</rdfs:comment>
+        <rdfs:label xml:lang="en">has numerical representation</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -202,13 +212,18 @@
     <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl#hasOrigin">
         <rdfs:domain rdf:resource="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl#LatticePlane"/>
         <rdfs:range rdf:resource="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl#Origin"/>
+        <rdfs:comment xml:lang="en">hasOrigin represents the directed relation between lattice plane and origin</rdfs:comment>
+        <rdfs:label xml:lang="en">has origin</rdfs:label>
     </owl:ObjectProperty>
     
 
 
     <!-- https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl#hasRepresentation -->
 
-    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl#hasRepresentation"/>
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl#hasRepresentation">
+        <rdfs:comment xml:lang="en">has representation relates the entity to another representation of entity</rdfs:comment>
+        <rdfs:label xml:lang="en">has representation</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
@@ -218,6 +233,8 @@
         <owl:inverseOf rdf:resource="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl#isSegmentOf"/>
         <rdfs:domain rdf:resource="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl#DiscretizedLine"/>
         <rdfs:range rdf:resource="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl#Segment"/>
+        <rdfs:comment xml:lang="en">hasSegment represents the directed relation between discretized line and segment</rdfs:comment>
+        <rdfs:label xml:lang="en">has segment</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -227,6 +244,8 @@
     <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl#hasShapeFunction">
         <rdfs:domain rdf:resource="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl#DiscretizedLine"/>
         <rdfs:range rdf:resource="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl#ShapeFunction"/>
+        <rdfs:comment xml:lang="en">hasShapeFunction represents the directed relation between discretized line and shape function</rdfs:comment>
+        <rdfs:label xml:lang="en">has shape function</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -295,6 +314,8 @@
         <rdfs:subPropertyOf rdf:resource="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl#hasNode"/>
         <rdfs:domain rdf:resource="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl#Segment"/>
         <rdfs:range rdf:resource="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl#Node"/>
+        <rdfs:comment xml:lang="en">Sub-property of hasNode that relates the segment with the start node</rdfs:comment>
+        <rdfs:label xml:lang="en">has start node</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -304,6 +325,8 @@
     <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl#isSegmentOf">
         <rdfs:domain rdf:resource="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl#Segment"/>
         <rdfs:range rdf:resource="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl#DiscretizedLine"/>
+        <rdfs:comment xml:lang="en">Inverse of hasSegment</rdfs:comment>
+        <rdfs:label xml:lang="en">is segment of</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -468,6 +491,8 @@
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl#PositionVector">
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl#Vector"/>
+        <rdfs:comment xml:lang="en">Position vector is a Euclidean vector that represents the position of a point P in space in relation to an arbitrary reference origin O.</rdfs:comment>
+        <rdfs:label xml:lang="en">Position Vector</rdfs:label>
     </owl:Class>
     
 
@@ -514,6 +539,8 @@
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">The numerical representation of dislocation line as a mathematical line, e.g. an oriented curve, is being discretized into the number of segments.</rdfs:comment>
+        <rdfs:label xml:lang="en">Discretized Line</rdfs:label>
     </owl:Class>
     
 
@@ -709,6 +736,8 @@
                 <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl#DiscretizedLine"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Mathematical representation of dislocation as &apos;Line&apos;. An instance of mathematical representation of dislocation line is an oriented curve paramterized by its arc length.</rdfs:comment>
+        <rdfs:label xml:lang="en">Line</rdfs:label>
     </owl:Class>
     
 
@@ -731,6 +760,8 @@
                 <owl:allValuesFrom rdf:resource="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl#PositionVector"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Node of a segment</rdfs:comment>
+        <rdfs:label xml:lang="en">Node</rdfs:label>
     </owl:Class>
     
 
@@ -739,6 +770,8 @@
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl#Origin">
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl#PositionVector"/>
+        <rdfs:comment xml:lang="en">Origin is fixed point which is needed by vector to identify other points in the space relatives to its origin.</rdfs:comment>
+        <rdfs:label xml:lang="en">Origin</rdfs:label>
     </owl:Class>
     
 
@@ -758,20 +791,18 @@
                 <owl:allValuesFrom rdf:resource="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl#DiscretizedLine"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl#hasNode"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl#Node"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A segment is a part of a line that is bounded by two distinct end points, and contains every point on the line that is between its endpoints.</rdfs:comment>
+        <rdfs:label xml:lang="en">Segment</rdfs:label>
     </owl:Class>
     
 
 
     <!-- https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl#ShapeFunction -->
 
-    <owl:Class rdf:about="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl#ShapeFunction"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl#ShapeFunction">
+        <rdfs:comment xml:lang="en">The shape function is the function which interpolates the solution between the discrete values obtained at the mesh nodes. In the dicretized dislocation, the shape function detemines the shape of segment, ultimately determines the whole discretized line shape. Examples of shape function that is used to discretized the dislocation are, circular, elliptic, helical, linear, cubic, and quintic.</rdfs:comment>
+        <rdfs:label xml:lang="en">Shape Function</rdfs:label>
+    </owl:Class>
     
 
 
