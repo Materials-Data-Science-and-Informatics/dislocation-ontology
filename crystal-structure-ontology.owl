@@ -213,9 +213,9 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl#hasPositionalVector -->
+    <!-- https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl#hasPositionVector -->
 
-    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl#hasPositionalVector">
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl#hasPositionVector">
         <rdfs:range rdf:resource="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl#PositionVector"/>
     </owl:ObjectProperty>
     
@@ -825,7 +825,8 @@
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl#PositionVector">
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl#Vector"/>
-        <skos:defintion xml:lang="en">In geometry, a position or position vector, also known as location vector or radius vector, is a Euclidean vector that represents the position of a point P in space in relation to an arbitrary reference origin O</skos:defintion>
+        <rdfs:label>Position Vector</rdfs:label>
+        <skos:defintion xml:lang="en">Position vector is a Euclidean vector that represents the position of a point P in space in relation to an arbitrary reference origin O.</skos:defintion>
     </owl:Class>
     
 
