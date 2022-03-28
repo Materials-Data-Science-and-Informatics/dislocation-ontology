@@ -18,6 +18,7 @@ QUDT_QK = Namespace("http://qudt.org/vocab/quantitykind/")
 # returning graph object of rdflib
 def rdf_serializer(node_data, linker_data, loop_data, iri):
     
+    unit_of_length = 2.489e-10 # Burgers vector
     example = Namespace(iri)
     g = Graph()
     g.parse("../../crystal-structure-ontology.owl", format="xml")
@@ -35,7 +36,6 @@ def rdf_serializer(node_data, linker_data, loop_data, iri):
     crystal_coordinate_first_axis = example['crystal_coordinate_first_axis']
     crystal_coordinate_second_axis = example['crystal_coordinate_second_axis']
     crystal_coordinate_third_axis = example['crystal_coordinate_third_axis']
-    unit = example['Unit']
     
     g.add((basis, RDF.type, MDO.Basis))
     g.add((basis, CSO.hasFirstAxisVector, crystal_coordinate_first_axis))
@@ -54,6 +54,15 @@ def rdf_serializer(node_data, linker_data, loop_data, iri):
     g.add((crystal_coordinate_third_axis, MDO.Y_axisCoordinate, Literal(0.0, datatype=XSD.double)))
     g.add((crystal_coordinate_third_axis, MDO.Z_axisCoordinate, Literal(1.0, datatype=XSD.double)))
     
+    # dimensionless unit
+    qv_unitless = example['quantity_value_unitless']
+    g.add((qv_unitless, RDF.type, QUDT.QuantityValue))
+    g.add((qv_unitless, QUDT.unit, QUDT_UNIT['UNITLESS']))
+
+    # unit of length
+    qv_m = example['quantity_value_M']
+    g.add((qv_m, RDF.type, QUDT.QuantityValue))
+    g.add((qv_m, QUDT.unit, QUDT_UNIT['M']))
 
     for node in node_data:
         id = node['master_id']
@@ -70,13 +79,13 @@ def rdf_serializer(node_data, linker_data, loop_data, iri):
         g.add((node_position_vector, RDF.type, CSO.PositionVector))
         g.add((node_position_vector, CSO.hasVectorComponents, node_coordinate))
         g.add((node_coordinate, RDF.type, CSO.VectorComponentsOfBasis))
-        # still not quite sure what is the unit in modelib for node position
-        # g.add((node_coordinate, QUDT.quantityValue, qv_m))
-        # g.add((node_coordinate, QUDT.hasQuantityKind, QUDT_QK.Length))
-        g.add((node_coordinate, CSO.firstAxisComponent, Literal(coordinate[0], datatype=XSD.double)))
-        g.add((node_coordinate, CSO.secondAxisComponent, Literal(coordinate[1], datatype=XSD.double)))
-        g.add((node_coordinate, CSO.thirdAxisComponent, Literal(coordinate[2], datatype=XSD.double)))
+        g.add((node_coordinate, QUDT.quantityValue, qv_m))
+        g.add((node_coordinate, QUDT.hasQuantityKind, QUDT_QK.Length))
+        g.add((node_coordinate, CSO.firstAxisComponent, Literal(coordinate[0]*unit_of_length, datatype=XSD.double)))
+        g.add((node_coordinate, CSO.secondAxisComponent, Literal(coordinate[1]*unit_of_length, datatype=XSD.double)))
+        g.add((node_coordinate, CSO.thirdAxisComponent, Literal(coordinate[2]*unit_of_length, datatype=XSD.double)))
         g.add((node_coordinate, CSO.hasBasis, basis))
+
         # g.add((node_individual, DISO.hasNodeVelocity, node_velocity))
         # g.add((node_velocity, RDF.type, DISO.NodeVelocity))
         # g.add((node_velocity, CSO.hasVectorComponents, node_vector_velocity_components))
@@ -88,19 +97,11 @@ def rdf_serializer(node_data, linker_data, loop_data, iri):
         # g.add((node_vector_velocity_components, CSO.thirdAxisComponent, Literal(n_v[2], datatype=XSD.double)))
         # g.add((node_vector_velocity_components, CSO.hasBasis, basis))
         
-    # dimensionless unit
-    qv_unitless = example['quantity_value_unitless']
-    g.add((qv_unitless, RDF.type, QUDT.QuantityValue))
-    g.add((qv_unitless, QUDT.unit, QUDT_UNIT['UNITLESS']))
 
-    # unit of length
-    qv_m = example['quantity_value_M']
-    g.add((qv_m, RDF.type, QUDT.QuantityValue))
-    g.add((qv_m, QUDT.unit, QUDT_UNIT['M']))
     
     for loop in loop_data:
         id = loop['id']
-        Burgers_vec = loop['burgers_vector']
+        slip_direction_loop = loop['burgers_vector']
         plane_normal = loop['plane_normal']
         plane_origin = loop['plane_origin']
         slip_area = loop['slip_area']
@@ -118,7 +119,7 @@ def rdf_serializer(node_data, linker_data, loop_data, iri):
         line = example['line_{}'.format(id)]
         discretized_line = example['loop_{}_discretized_line'.format(id)]
         pn, denum_pn  = plane_normal, min([abs(i) for i in plane_normal if i != 0])
-        bv, denum_bv = Burgers_vec, min([abs(i) for i in Burgers_vec if i != 0])
+        sd, denum_sd = slip_direction_loop, min([abs(i) for i in slip_direction_loop if i != 0])
         g.add((loop, RDF.type, DISO.Dislocation))
         g.add((loop, DISO.hasBurgersVector, Burgers_vector))
         g.add((loop, DISO.movesOn, slip_plane))
@@ -127,18 +128,18 @@ def rdf_serializer(node_data, linker_data, loop_data, iri):
         plane_miller_indice = '({}{}{})'.format(int(pn[0]/denum_pn), int(pn[1]/denum_pn), int(pn[2]/denum_pn))
         g.add((slip_plane, DISO.planeMillerIndice, Literal(plane_miller_indice, datatype=XSD.string)))
         g.add((slip_plane, DISO.hasSlipDirection, slip_direction))
-        g.add((slip_direction, RDF.type, DISO.slip_direction))
+        g.add((slip_direction, RDF.type, DISO.SlipDirection))
         g.add((slip_direction, CSO.hasVectorComponents, vector_components_slip_direction))
-        direction_miller_indice = '[{}{}{}]'.format(int(bv[0]/denum_bv), int(bv[1]/denum_bv), int(bv[2]/denum_bv))
+        direction_miller_indice = '[{}{}{}]'.format(int(sd[0]/denum_sd), int(sd[1]/denum_sd), int(sd[2]/denum_sd))
         g.add((slip_direction, DISO.directionMillerIndice, Literal(direction_miller_indice, datatype=XSD.string)))
         g.add((vector_components_slip_direction, QUDT.quantityValue, qv_unitless))
         g.add((vector_components_slip_direction, QUDT.hasQuantityKind, QUDT_QK.Dimensionless))
-        slip_direction_magnitude = np.linalg.norm(np.asanyarray(bv))
+        slip_direction_magnitude = np.linalg.norm(np.asanyarray(sd))
         g.add((slip_direction, CSO.vectorMagnitude, Literal(slip_direction_magnitude, datatype=XSD.double)))
         g.add((vector_components_slip_direction, RDF.type, CSO.VectorComponentsOfBasis))
-        g.add((vector_components_slip_direction, CSO.firstAxisComponent, Literal(bv[0], datatype=XSD.double)))
-        g.add((vector_components_slip_direction, CSO.secondAxisComponent, Literal(bv[1], datatype=XSD.double)))
-        g.add((vector_components_slip_direction, CSO.thirdAxisComponent, Literal(bv[2], datatype=XSD.double)))
+        g.add((vector_components_slip_direction, CSO.firstAxisComponent, Literal(sd[0], datatype=XSD.double)))
+        g.add((vector_components_slip_direction, CSO.secondAxisComponent, Literal(sd[1], datatype=XSD.double)))
+        g.add((vector_components_slip_direction, CSO.thirdAxisComponent, Literal(sd[2], datatype=XSD.double)))
         g.add((vector_components_slip_direction, CSO.hasBasis, basis))
         g.add((slip_plane_normal, RDF.type, DISO.SlipPlaneNormal))
         slip_plane_direction_miller_indice = '[{}{}{}]'.format(int(pn[0]/denum_pn), int(pn[1]/denum_pn), int(pn[2]/denum_pn))
@@ -168,12 +169,12 @@ def rdf_serializer(node_data, linker_data, loop_data, iri):
         g.add((Burgers_vector, CSO.hasVectorComponents, vector_components_Burgers_vector))
         g.add((vector_components_Burgers_vector, QUDT.quantityValue, qv_m))
         g.add((Burgers_vector, QUDT.hasQuantityKind, QUDT_QK.Length))
-        Burgers_vector_magnitude = np.linalg.norm(3.3e-10 * np.asanyarray(bv))
+        Burgers_vector_magnitude = unit_of_length
         g.add((Burgers_vector, CSO.vectorMagnitude, Literal(Burgers_vector_magnitude, datatype=XSD.double)))
         g.add((vector_components_Burgers_vector, RDF.type, CSO.VectorComponentsOfBasis))
-        g.add((vector_components_Burgers_vector, CSO.firstAxisComponent, Literal(Burgers_vec[0] * 3.3e-10, datatype=XSD.double)))
-        g.add((vector_components_Burgers_vector, CSO.secondAxisComponent, Literal(Burgers_vec[1]  * 3.3e-10, datatype=XSD.double)))
-        g.add((vector_components_Burgers_vector, CSO.thirdAxisComponent, Literal(Burgers_vec[2] * 3.3e-10, datatype=XSD.double)))
+        g.add((vector_components_Burgers_vector, CSO.firstAxisComponent, Literal(slip_direction_loop[0] * unit_of_length, datatype=XSD.double)))
+        g.add((vector_components_Burgers_vector, CSO.secondAxisComponent, Literal(slip_direction_loop[1]  * unit_of_length, datatype=XSD.double)))
+        g.add((vector_components_Burgers_vector, CSO.thirdAxisComponent, Literal(slip_direction_loop[2] * unit_of_length, datatype=XSD.double)))
         g.add((vector_components_Burgers_vector, CSO.hasBasis, basis))
 
     for i, linker in enumerate(linker_data):
