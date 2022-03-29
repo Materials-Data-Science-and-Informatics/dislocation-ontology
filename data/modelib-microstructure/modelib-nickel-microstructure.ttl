@@ -939,9 +939,8 @@ ex:crystal_structure a cso:CrystalStructure ;
         ex:active_slip_system_4,
         ex:active_slip_system_5,
         ex:active_slip_system_6,
-        ex:active_slip_system_7 .
-
-ex:crystal_system a cso:Cubic .
+        ex:active_slip_system_7 ;
+    mdo:hasSpaceGroup ex:space_group .
 
 ex:lattice_parameter_angle a cso:LatticeParameterAngle ;
     cso:latticeParameterAngleAlpha 9e+01 ;
@@ -3095,6 +3094,15 @@ ex:node_9_coordinate a cso:VectorComponentsOfBasis ;
 ex:node_9_position_vector a cso:PositionVector ;
     cso:hasVectorComponents ex:node_9_coordinate .
 
+ex:point_group a mdo:PointGroup ;
+    cso:isPointGroupOf ex:crystal_system ;
+    mdo:PointGroupHMName "m-3m"^^xsd:string .
+
+ex:space_group a mdo:SpaceGroup ;
+    mdo:SpaceGroupID 225 ;
+    mdo:SpaceGroupSymbol "Fm-3m"^^xsd:string ;
+    mdo:hasPointGroup ex:point_group .
+
 ex:unit_cell a cso:UnitCell ;
     cso:hasLatticeParameterAngle ex:lattice_parameter_angle ;
     cso:hasLatticeParameterLength ex:lattice_parameter_length .
@@ -3114,6 +3122,8 @@ cdo:CrystallineMaterial a owl:Class ;
                         owl:someValuesFrom cso:CrystalStructure ] [ a owl:Restriction ;
                         owl:allValuesFrom cso:CrystalStructure ;
                         owl:onProperty cdo:hasCrystalStructure ] ) ] .
+
+ex:crystal_system a cso:Cubic .
 
 ex:loop_0_slip_direction a diso:SlipDirection ;
     cso:hasVectorComponents ex:loop_0_vector_components_slip_direction ;

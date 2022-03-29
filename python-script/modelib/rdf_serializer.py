@@ -48,6 +48,8 @@ def rdf_serializer(cif_data, space_group_data, node_data, linker_data, loop_data
     crystal_coordinate_first_axis = example['crystal_coordinate_first_axis']
     crystal_coordinate_second_axis = example['crystal_coordinate_second_axis']
     crystal_coordinate_third_axis = example['crystal_coordinate_third_axis']
+    space_group = example['space_group']
+    point_group = example['point_group']
     
     ## length data value
     length_a = Literal(cif_data['_cell_length_a'], datatype=XSD.double) 
@@ -63,11 +65,19 @@ def rdf_serializer(cif_data, space_group_data, node_data, linker_data, loop_data
     g.add((crystal, RDF.type, CDO.CrystallineMaterial))
     g.add((crystal, CDO.hasCrystalStructure, crystal_structure))
     g.add((crystal_structure, RDF.type, CSO.CrystalStructure))
-    g.add((crystal_structure,CSO.hasLattice, Bravais_lattice))
+    g.add((crystal_structure, CSO.hasLattice, Bravais_lattice))
+    g.add((crystal_structure, MDO.hasSpaceGroup, space_group))
+    g.add((space_group, RDF.type, MDO.SpaceGroup))
+    g.add((space_group, MDO.SpaceGroupID, Literal(space_group_data['number'], datatype=XSD.integer)))
+    g.add((space_group, MDO.SpaceGroupSymbol, Literal(space_group_data['symbol'], datatype=XSD.string)))
+    g.add((space_group, MDO.hasPointGroup, point_group))
+    g.add((point_group, RDF.type, MDO.PointGroup))
+    g.add((point_group, MDO.PointGroupHMName, Literal(space_group_data['point_group'], datatype=XSD.string)))
     g.add((Bravais_lattice, RDF.type, CSO.BravaisLattice))
     g.add((Bravais_lattice, CSO.centering, Literal(space_group_data['symbol'][0], datatype=XSD.string)))
     g.add((Bravais_lattice, CSO.hasCrystalSystem, crystal_system))
     g.add((crystal_system, RDF.type, CSO[space_group_data['crystal_system'].capitalize()]))
+    g.add((point_group, CSO.isPointGroupOf, crystal_system))
     g.add((Bravais_lattice, CSO.hasUnitCell, unit_cell))
     g.add((unit_cell, RDF.type, CSO.UnitCell))
     g.add((unit_cell, CSO.hasLatticeParameterLength, lattice_param_length))

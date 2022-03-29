@@ -14,6 +14,9 @@
 13. Given a 3-D vector instance ( Burgers vector, vector position, etc), what is the vector magnitude?
 14. Given a Basis of a vector in 3-D space, what are the first, second, and third axis vector?
 15. Given a 3-D vector instance (Burgers vector, vector position, etc), what is the unit?
+16. Given the space group of a crystal structure, what is the bravais lattice centering?
+17. Given the crystal structure, what are the corresponding space group and point group?
+18. Given the point group of a crystal structure, what is the corresponding crystal system?
 
 
 ## Answer to CQs via SPARQL
@@ -394,5 +397,65 @@ SELECT ?Burgers_vector ?unit ?quantity_kind WHERE{
 	?VectorComponents qudt:hasQuantityKind ?quantity_kind ;
 		qudt:quantityValue ?qv.
 	?qv qudt:unit ?unit.
+}
+```
+
+CQs 16: Given the space group of a crystal structure, what is the bravais lattice centering?
+```
+PREFIX diso: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl#>
+PREFIX cso: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl#> 
+PREFIX cdo: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystalline-defect-ontology.owl#>   
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX mdo: <https://w3id.org/mdo/structure/> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT  ?crystal_structure ?centering WHERE{
+	?crystal_structure a cso:CrystalStructure;
+		cso:hasLattice ?bravais_lattice . 
+	?bravais_lattice cso:centering ?centering . 
+}
+```
+
+CQs 17: Given the crystal structure, what are the corresponding space group and point group?
+```
+PREFIX diso: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl#>
+PREFIX cso: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl#> 
+PREFIX cdo: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystalline-defect-ontology.owl#>   
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX mdo: <https://w3id.org/mdo/structure/> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT  ?crystal_structure ?space_group ?point_group WHERE{
+	?crystal_structure a cso:CrystalStructure;
+		mdo:hasSpaceGroup ?sg.
+	?sg mdo:hasPointGroup ?pg ;
+	 	mdo:SpaceGroupSymbol ?space_group . 
+	?pg mdo:PointGroupHMName ?point_group .
+}
+```
+
+CQs 18: Given the point group of a crystal structure, what is the corresponding crystal system?
+```
+PREFIX diso: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl#>
+PREFIX cso: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl#> 
+PREFIX cdo: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystalline-defect-ontology.owl#>   
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX mdo: <https://w3id.org/mdo/structure/> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT  ?point_group ?crystal_system WHERE{
+	?point_group a mdo:PointGroup;
+		cso:isPointGroupOf ?cs.
+	?cs rdf:type cso:CrystalSystem.
+	?cs rdf:type ?crystal_system
 }
 ```
