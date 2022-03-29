@@ -414,6 +414,46 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 SELECT  ?crystal_structure ?centering WHERE{
 	?crystal_structure a cso:CrystalStructure;
+		cso:hasLattice ?bravais_lattice . 
+	?bravais_lattice cso:centering ?centering . 
+}
+```
+
+CQs 17: Given the crystal structure, what are the corresponding space group and point group?
+```
+PREFIX diso: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl#>
+PREFIX cso: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl#> 
+PREFIX cdo: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystalline-defect-ontology.owl#>   
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX mdo: <https://w3id.org/mdo/structure/> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT  ?crystal_structure ?space_group ?point_group WHERE{
+	?crystal_structure a cso:CrystalStructure;
+		mdo:hasSpaceGroup ?sg.
+	?sg mdo:hasPointGroup ?pg ;
+	 	mdo:SpaceGroupSymbol ?space_group;
+	?pg mdo:PointGroupHMName ?point_group .
+}
+```
+
+CQs 18: Given the point group of a crystal structure, what is the corresponding crystal system?
+```
+PREFIX diso: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl#>
+PREFIX cso: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl#> 
+PREFIX cdo: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystalline-defect-ontology.owl#>   
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX mdo: <https://w3id.org/mdo/structure/> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT  ?crystal_structure ?centering WHERE{
+	?crystal_structure a cso:CrystalStructure;
 		cso:hasLattice ?bravais_lattice;
 	?bravais_lattice cso:centering ?centering
 }
