@@ -51,7 +51,7 @@ def rdf_serializer(cif_dict, space_group_dict, slip_configs, slip_plane_normals,
     g.bind("mdo", MDO)
     g.bind("chebi", CHEBI)
     
-    g.add((crystal_structure, RDF.type, CDO.CrystalStructure))
+    g.add((crystal_structure, RDF.type, CSO.CrystalStructure))
     g.add((crystal_structure,CSO.hasLattice, lattice))
     g.add((lattice, RDF.type, CSO.Lattice))
     g.add((lattice, CSO.hasCrystalSystem, crystal_system))

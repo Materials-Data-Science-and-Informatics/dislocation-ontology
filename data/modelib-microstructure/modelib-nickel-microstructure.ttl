@@ -1,6 +1,6 @@
-@prefix : <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl> .
+@prefix : <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystalline-defect-ontology.owl> .
+@prefix cdo: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystalline-defect-ontology.owl#> .
 @prefix cso: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl#> .
-@prefix default1: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl> .
 @prefix diso: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl#> .
 @prefix ex: <http://example.org/dislocation-microstructure/> .
 @prefix mdo: <https://w3id.org/mdo/structure/> .
@@ -9,11 +9,22 @@
 @prefix qudt: <http://qudt.org/schema/qudt/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix terms: <http://purl.org/dc/terms/> .
 @prefix unit: <http://qudt.org/vocab/unit/> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:crystal a cdo:CrystallineMaterial ;
+    cdo:hasCrystalStructure ex:crystal_structure ;
+    cdo:hasCrystallographicDefect ex:loop_0,
+        ex:loop_1,
+        ex:loop_2,
+        ex:loop_3,
+        ex:loop_4,
+        ex:loop_6,
+        ex:loop_7,
+        ex:loop_8,
+        ex:loop_9 .
 
 ex:linker_0 a diso:Segment ;
     diso:hasEndNode ex:node_1 ;
@@ -840,166 +851,60 @@ ex:linker_99 a diso:Segment ;
     diso:hasStartNode ex:node_88 ;
     diso:isSegmentOf ex:loop_4_discretized_line .
 
-ex:loop_0 a diso:Dislocation ;
-    diso:hasBurgersVector ex:loop_0_Burgers_vector ;
-    diso:hasMathematicalRepresentation ex:line_0 ;
-    diso:movesOn ex:loop_0_slip_plane .
-
-ex:loop_1 a diso:Dislocation ;
-    diso:hasBurgersVector ex:loop_1_Burgers_vector ;
-    diso:hasMathematicalRepresentation ex:line_1 ;
-    diso:movesOn ex:loop_1_slip_plane .
-
-ex:loop_2 a diso:Dislocation ;
-    diso:hasBurgersVector ex:loop_2_Burgers_vector ;
-    diso:hasMathematicalRepresentation ex:line_2 ;
-    diso:movesOn ex:loop_2_slip_plane .
-
-ex:loop_3 a diso:Dislocation ;
-    diso:hasBurgersVector ex:loop_3_Burgers_vector ;
-    diso:hasMathematicalRepresentation ex:line_3 ;
-    diso:movesOn ex:loop_3_slip_plane .
-
-ex:loop_4 a diso:Dislocation ;
-    diso:hasBurgersVector ex:loop_4_Burgers_vector ;
-    diso:hasMathematicalRepresentation ex:line_4 ;
-    diso:movesOn ex:loop_4_slip_plane .
-
-ex:loop_6 a diso:Dislocation ;
-    diso:hasBurgersVector ex:loop_6_Burgers_vector ;
-    diso:hasMathematicalRepresentation ex:line_6 ;
-    diso:movesOn ex:loop_6_slip_plane .
-
-ex:loop_7 a diso:Dislocation ;
-    diso:hasBurgersVector ex:loop_7_Burgers_vector ;
-    diso:hasMathematicalRepresentation ex:line_7 ;
-    diso:movesOn ex:loop_7_slip_plane .
-
-ex:loop_8 a diso:Dislocation ;
-    diso:hasBurgersVector ex:loop_8_Burgers_vector ;
-    diso:hasMathematicalRepresentation ex:line_8 ;
-    diso:movesOn ex:loop_8_slip_plane .
-
-ex:loop_9 a diso:Dislocation ;
-    diso:hasBurgersVector ex:loop_9_Burgers_vector ;
-    diso:hasMathematicalRepresentation ex:line_9 ;
-    diso:movesOn ex:loop_9_slip_plane .
-
-terms:contributor a owl:AnnotationProperty .
-
-terms:created a owl:AnnotationProperty .
-
-terms:creator a owl:AnnotationProperty .
-
-terms:title a owl:AnnotationProperty .
-
-vann:preferredNamespacePrefix a owl:AnnotationProperty .
-
-qudt:description a owl:AnnotationProperty .
-
-rdf:HTML a rdfs:Datatype .
-
-skos:defintion a owl:AnnotationProperty .
+owl:qualifiedCardinality a owl:AnnotationProperty .
 
 : a owl:Ontology ;
     terms:contributor "Stefan Sandfeld"^^xsd:string ;
     terms:created "21.03.2022"@en ;
     terms:creator "Ahmad Zainul Ihsan"@en ;
-    terms:title "Crystal Structure Ontology"@en ;
-    vann:preferredNamespacePrefix "CSO"^^xsd:string ;
-    rdfs:seeAlso "https://github.com/Materials-Data-Science-and-Informatics/dislocation-ontology" .
+    terms:title "Crystallographic Defect Ontology"@en ;
+    vann:preferredNamespacePrefix "CDO"^^xsd:string ;
+    rdfs:seeAlso "https://github.com/Materials-Data-Science-and-Informatics/dislocation-ontology" ;
+    owl:imports <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl>,
+        <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl> .
 
-cso:Cubic a owl:Class ;
-    rdfs:label "Cubic"@en ;
-    rdfs:subClassOf cso:CrystalSystem .
+cdo:GrainBoundary a owl:Class ;
+    rdfs:subClassOf cdo:CrystallographicDefect .
 
-cso:Hexagonal a owl:Class ;
-    rdfs:label "Hexagonal"@en ;
-    rdfs:subClassOf cso:CrystalSystem .
+cdo:PointDefect a owl:Class ;
+    rdfs:subClassOf cdo:CrystallographicDefect .
 
-cso:Monoclinic a owl:Class ;
-    rdfs:label "Monoclinic"@en ;
-    rdfs:subClassOf cso:CrystalSystem .
+ex:Bravais_lattice a cso:BravaisLattice ;
+    cso:centering "F"^^xsd:string ;
+    cso:hasCrystalSystem ex:crystal_system ;
+    cso:hasUnitCell ex:unit_cell .
 
-cso:Orthorhombic a owl:Class ;
-    rdfs:label "Orthorhombic"@en ;
-    rdfs:subClassOf cso:CrystalSystem .
+ex:active_slip_system_0 a diso:SlipSystem ;
+    diso:hasSlipDirection ex:loop_0_slip_direction ;
+    diso:hasSlipPlaneNormal ex:loop_0_slip_plane_normal .
 
-cso:Tetragonal a owl:Class ;
-    rdfs:label "Tetragonal"@en ;
-    rdfs:subClassOf cso:CrystalSystem .
+ex:active_slip_system_1 a diso:SlipSystem ;
+    diso:hasSlipDirection ex:loop_1_slip_direction ;
+    diso:hasSlipPlaneNormal ex:loop_1_slip_plane_normal .
 
-cso:Triclinic a owl:Class ;
-    rdfs:label "Triclinic"@en ;
-    rdfs:subClassOf cso:CrystalSystem .
+ex:active_slip_system_2 a diso:SlipSystem ;
+    diso:hasSlipDirection ex:loop_3_slip_direction ;
+    diso:hasSlipPlaneNormal ex:loop_3_slip_plane_normal .
 
-cso:Trigonal a owl:Class ;
-    rdfs:label "Trigonal"@en ;
-    rdfs:subClassOf cso:CrystalSystem .
+ex:active_slip_system_3 a diso:SlipSystem ;
+    diso:hasSlipDirection ex:loop_4_slip_direction ;
+    diso:hasSlipPlaneNormal ex:loop_4_slip_plane_normal .
 
-cso:hasCrystalStructure a owl:ObjectProperty ;
-    rdfs:label "has crystal structure"@en ;
-    rdfs:comment "hasCrystalStructure represents the relationship between crystalline material and crystal structure."@en ;
-    rdfs:range cso:CrystalStructure .
+ex:active_slip_system_4 a diso:SlipSystem ;
+    diso:hasSlipDirection ex:loop_6_slip_direction ;
+    diso:hasSlipPlaneNormal ex:loop_6_slip_plane_normal .
 
-default1: a owl:Ontology ;
-    terms:contributor "Stefan Sandfeld"^^xsd:string ;
-    terms:created "21.03.2022"@en ;
-    terms:creator "Ahmad Zainul Ihsan"@en ;
-    terms:title "Dislocation Ontology"@en ;
-    vann:preferredNamespacePrefix "DISO"^^xsd:string ;
-    rdfs:seeAlso "https://github.com/Materials-Data-Science-and-Informatics/dislocation-ontology" .
+ex:active_slip_system_5 a diso:SlipSystem ;
+    diso:hasSlipDirection ex:loop_7_slip_direction ;
+    diso:hasSlipPlaneNormal ex:loop_7_slip_plane_normal .
 
-diso:hasEndNode a owl:ObjectProperty ;
-    rdfs:label "has end node"@en ;
-    rdfs:comment "Sub-property of hasNode that relates the segment with the end node"@en ;
-    rdfs:domain diso:Segment ;
-    rdfs:range diso:Node ;
-    rdfs:subPropertyOf diso:hasNode .
+ex:active_slip_system_6 a diso:SlipSystem ;
+    diso:hasSlipDirection ex:loop_8_slip_direction ;
+    diso:hasSlipPlaneNormal ex:loop_8_slip_plane_normal .
 
-diso:hasFamilyCrystalDirection a owl:ObjectProperty ;
-    rdfs:label "has family crystal direction"@en ;
-    rdfs:comment "hasFamilyCrystalDirection represents the relationship between lattice direction and family of crystal direction."@en ;
-    rdfs:domain diso:LatticeDirection ;
-    rdfs:range diso:FamilyOfCrystalDirection .
-
-diso:hasFamilyCrystalPlane a owl:ObjectProperty ;
-    rdfs:label "has family crystal plane"@en ;
-    rdfs:comment "hasFamilyCrystalPlane represents the relationship between lattice Plane and family of crystal plane."@en ;
-    rdfs:domain diso:LatticePlane ;
-    rdfs:range diso:FamilyOfCrystalPlane .
-
-diso:hasSlipPlane a owl:ObjectProperty ;
-    rdfs:label "has slip plane"@en ;
-    rdfs:comment "hasSlipPlane represents the relationship between crystal structure and slip plane it owns."@en ;
-    rdfs:range diso:SlipPlane ;
-    rdfs:subPropertyOf diso:hasLatticePlane .
-
-diso:hasSlipSystem a owl:ObjectProperty ;
-    rdfs:label "has slip system"@en ;
-    rdfs:comment "hasSlipSystem represents the relationship between a crystal structure and slip system."@en ;
-    rdfs:range diso:SlipSystem .
-
-diso:hasStartNode a owl:ObjectProperty ;
-    rdfs:label "has start node"@en ;
-    rdfs:comment "Sub-property of hasNode that relates the segment with the start node"@en ;
-    rdfs:domain diso:Segment ;
-    rdfs:range diso:Node ;
-    rdfs:subPropertyOf diso:hasNode .
-
-diso:masterNodeID a owl:DatatypeProperty ;
-    rdfs:domain diso:Node ;
-    rdfs:range xsd:int .
-
-diso:slipArea a owl:DatatypeProperty ;
-    rdfs:domain diso:DiscretizedLine ;
-    rdfs:range xsd:double .
-
-mdo:ElementRatio a owl:DatatypeProperty ;
-    rdfs:label "element ratio"@en ;
-    rdfs:comment "ElementRatio represents that a species has the ratio in a double."@en ;
-    rdfs:domain mdo:Species ;
-    rdfs:range xsd:double .
+ex:active_slip_system_7 a diso:SlipSystem ;
+    diso:hasSlipDirection ex:loop_9_slip_direction ;
+    diso:hasSlipPlaneNormal ex:loop_9_slip_plane_normal .
 
 ex:crystal_coordinate_first_axis a mdo:CoordinateVector ;
     mdo:X_axisCoordinate 1e+00 ;
@@ -1015,6 +920,38 @@ ex:crystal_coordinate_third_axis a mdo:CoordinateVector ;
     mdo:X_axisCoordinate 0e+00 ;
     mdo:Y_axisCoordinate 0e+00 ;
     mdo:Z_axisCoordinate 1e+00 .
+
+ex:crystal_structure a cso:CrystalStructure ;
+    cso:hasLattice ex:Bravais_lattice ;
+    diso:hasSlipPlane ex:loop_0_slip_plane,
+        ex:loop_1_slip_plane,
+        ex:loop_2_slip_plane,
+        ex:loop_3_slip_plane,
+        ex:loop_4_slip_plane,
+        ex:loop_6_slip_plane,
+        ex:loop_7_slip_plane,
+        ex:loop_8_slip_plane,
+        ex:loop_9_slip_plane ;
+    diso:hasSlipSystem ex:active_slip_system_0,
+        ex:active_slip_system_1,
+        ex:active_slip_system_2,
+        ex:active_slip_system_3,
+        ex:active_slip_system_4,
+        ex:active_slip_system_5,
+        ex:active_slip_system_6,
+        ex:active_slip_system_7 .
+
+ex:crystal_system a cso:Cubic .
+
+ex:lattice_parameter_angle a cso:LatticeParameterAngle ;
+    cso:latticeParameterAngleAlpha 9e+01 ;
+    cso:latticeParameterAngleBeta 9e+01 ;
+    cso:latticeParameterAngleGamma 9e+01 .
+
+ex:lattice_parameter_length a cso:LatticeParameterLength ;
+    cso:latticeParameterLengthA 3.505798e+00 ;
+    cso:latticeParameterLengthB 3.505798e+00 ;
+    cso:latticeParameterLengthC 3.505798e+00 .
 
 ex:line_0 a diso:Line ;
     diso:hasNumericalRepresentation ex:loop_0_discretized_line .
@@ -1043,30 +980,20 @@ ex:line_8 a diso:Line ;
 ex:line_9 a diso:Line ;
     diso:hasNumericalRepresentation ex:loop_9_discretized_line .
 
+ex:loop_0 a diso:Dislocation ;
+    diso:hasBurgersVector ex:loop_0_Burgers_vector ;
+    diso:hasMathematicalRepresentation ex:line_0 ;
+    diso:movesOn ex:loop_0_slip_plane .
+
 ex:loop_0_Burgers_vector a diso:BurgersVector ;
-    qudt:hasQuantityKind quantityKind:Length ;
     cso:hasVectorComponents ex:loop_0_vector_components_Burgers_vector ;
     cso:vectorMagnitude 2.489e-10 .
-
-ex:loop_0_slip_direction a diso:SlipDirection ;
-    cso:hasVectorComponents ex:loop_0_vector_components_slip_direction ;
-    cso:vectorMagnitude 1e+00 ;
-    diso:directionMillerIndice "[1-10]"^^xsd:string .
-
-ex:loop_0_slip_plane a diso:SlipPlane ;
-    diso:hasOrigin ex:loop_0_slip_plane_origin ;
-    diso:hasSlipDirection ex:loop_0_slip_direction ;
-    diso:hasSlipPlaneNormal ex:loop_0_slip_plane_normal ;
-    diso:planeMillerIndice "(111)"^^xsd:string .
-
-ex:loop_0_slip_plane_normal a diso:SlipPlaneNormal ;
-    cso:hasVectorComponents ex:loop_0_vector_components_of_slip_plane_normal ;
-    diso:directionMillerIndice "[111]"^^xsd:string .
 
 ex:loop_0_slip_plane_origin a diso:Origin ;
     cso:hasVectorComponents ex:loop_0_vector_components_origin .
 
 ex:loop_0_vector_components_Burgers_vector a cso:VectorComponentsOfBasis ;
+    qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 1.759989e-10 ;
     cso:hasBasis ex:coordinate_basis ;
@@ -1082,10 +1009,10 @@ ex:loop_0_vector_components_of_slip_plane_normal a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 5.773503e-01 .
 
 ex:loop_0_vector_components_origin a cso:VectorComponentsOfBasis ;
-    cso:firstAxisComponent 1.979899e+02 ;
+    cso:firstAxisComponent 4.927969e-08 ;
     cso:hasBasis ex:coordinate_basis ;
-    cso:secondAxisComponent 1.979899e+02 ;
-    cso:thirdAxisComponent 1.979899e+02 .
+    cso:secondAxisComponent 4.927969e-08 ;
+    cso:thirdAxisComponent 4.927969e-08 .
 
 ex:loop_0_vector_components_slip_direction a cso:VectorComponentsOfBasis ;
     qudt:hasQuantityKind quantityKind:Dimensionless ;
@@ -1095,30 +1022,20 @@ ex:loop_0_vector_components_slip_direction a cso:VectorComponentsOfBasis ;
     cso:secondAxisComponent -7.071068e-01 ;
     cso:thirdAxisComponent 0e+00 .
 
+ex:loop_1 a diso:Dislocation ;
+    diso:hasBurgersVector ex:loop_1_Burgers_vector ;
+    diso:hasMathematicalRepresentation ex:line_1 ;
+    diso:movesOn ex:loop_1_slip_plane .
+
 ex:loop_1_Burgers_vector a diso:BurgersVector ;
-    qudt:hasQuantityKind quantityKind:Length ;
     cso:hasVectorComponents ex:loop_1_vector_components_Burgers_vector ;
     cso:vectorMagnitude 2.489e-10 .
-
-ex:loop_1_slip_direction a diso:SlipDirection ;
-    cso:hasVectorComponents ex:loop_1_vector_components_slip_direction ;
-    cso:vectorMagnitude 1e+00 ;
-    diso:directionMillerIndice "[-10-1]"^^xsd:string .
-
-ex:loop_1_slip_plane a diso:SlipPlane ;
-    diso:hasOrigin ex:loop_1_slip_plane_origin ;
-    diso:hasSlipDirection ex:loop_1_slip_direction ;
-    diso:hasSlipPlaneNormal ex:loop_1_slip_plane_normal ;
-    diso:planeMillerIndice "(-1-11)"^^xsd:string .
-
-ex:loop_1_slip_plane_normal a diso:SlipPlaneNormal ;
-    cso:hasVectorComponents ex:loop_1_vector_components_of_slip_plane_normal ;
-    diso:directionMillerIndice "[-1-11]"^^xsd:string .
 
 ex:loop_1_slip_plane_origin a diso:Origin ;
     cso:hasVectorComponents ex:loop_1_vector_components_origin .
 
 ex:loop_1_vector_components_Burgers_vector a cso:VectorComponentsOfBasis ;
+    qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -1.759989e-10 ;
     cso:hasBasis ex:coordinate_basis ;
@@ -1134,10 +1051,10 @@ ex:loop_1_vector_components_of_slip_plane_normal a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 5.773503e-01 .
 
 ex:loop_1_vector_components_origin a cso:VectorComponentsOfBasis ;
-    cso:firstAxisComponent 7.589613e+01 ;
+    cso:firstAxisComponent 1.889055e-08 ;
     cso:hasBasis ex:coordinate_basis ;
-    cso:secondAxisComponent 7.589613e+01 ;
-    cso:thirdAxisComponent -7.589613e+01 .
+    cso:secondAxisComponent 1.889055e-08 ;
+    cso:thirdAxisComponent -1.889055e-08 .
 
 ex:loop_1_vector_components_slip_direction a cso:VectorComponentsOfBasis ;
     qudt:hasQuantityKind quantityKind:Dimensionless ;
@@ -1147,21 +1064,20 @@ ex:loop_1_vector_components_slip_direction a cso:VectorComponentsOfBasis ;
     cso:secondAxisComponent 0e+00 ;
     cso:thirdAxisComponent -7.071068e-01 .
 
+ex:loop_2 a diso:Dislocation ;
+    diso:hasBurgersVector ex:loop_2_Burgers_vector ;
+    diso:hasMathematicalRepresentation ex:line_2 ;
+    diso:movesOn ex:loop_2_slip_plane .
+
 ex:loop_2_Burgers_vector a diso:BurgersVector ;
-    qudt:hasQuantityKind quantityKind:Length ;
     cso:hasVectorComponents ex:loop_2_vector_components_Burgers_vector ;
     cso:vectorMagnitude 2.489e-10 .
 
 ex:loop_2_slip_direction a diso:SlipDirection ;
     cso:hasVectorComponents ex:loop_2_vector_components_slip_direction ;
     cso:vectorMagnitude 1e+00 ;
-    diso:directionMillerIndice "[-10-1]"^^xsd:string .
-
-ex:loop_2_slip_plane a diso:SlipPlane ;
-    diso:hasOrigin ex:loop_2_slip_plane_origin ;
-    diso:hasSlipDirection ex:loop_2_slip_direction ;
-    diso:hasSlipPlaneNormal ex:loop_2_slip_plane_normal ;
-    diso:planeMillerIndice "(-1-11)"^^xsd:string .
+    diso:directionMillerIndice "[-10-1]"^^xsd:string ;
+    diso:familyDirectionMillerIndice "<110>"^^xsd:string .
 
 ex:loop_2_slip_plane_normal a diso:SlipPlaneNormal ;
     cso:hasVectorComponents ex:loop_2_vector_components_of_slip_plane_normal ;
@@ -1171,6 +1087,7 @@ ex:loop_2_slip_plane_origin a diso:Origin ;
     cso:hasVectorComponents ex:loop_2_vector_components_origin .
 
 ex:loop_2_vector_components_Burgers_vector a cso:VectorComponentsOfBasis ;
+    qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -1.759989e-10 ;
     cso:hasBasis ex:coordinate_basis ;
@@ -1186,10 +1103,10 @@ ex:loop_2_vector_components_of_slip_plane_normal a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 5.773503e-01 .
 
 ex:loop_2_vector_components_origin a cso:VectorComponentsOfBasis ;
-    cso:firstAxisComponent -1.588633e+02 ;
+    cso:firstAxisComponent -3.954108e-08 ;
     cso:hasBasis ex:coordinate_basis ;
-    cso:secondAxisComponent -1.588633e+02 ;
-    cso:thirdAxisComponent 1.588633e+02 .
+    cso:secondAxisComponent -3.954108e-08 ;
+    cso:thirdAxisComponent 3.954108e-08 .
 
 ex:loop_2_vector_components_slip_direction a cso:VectorComponentsOfBasis ;
     qudt:hasQuantityKind quantityKind:Dimensionless ;
@@ -1199,30 +1116,20 @@ ex:loop_2_vector_components_slip_direction a cso:VectorComponentsOfBasis ;
     cso:secondAxisComponent 0e+00 ;
     cso:thirdAxisComponent -7.071068e-01 .
 
+ex:loop_3 a diso:Dislocation ;
+    diso:hasBurgersVector ex:loop_3_Burgers_vector ;
+    diso:hasMathematicalRepresentation ex:line_3 ;
+    diso:movesOn ex:loop_3_slip_plane .
+
 ex:loop_3_Burgers_vector a diso:BurgersVector ;
-    qudt:hasQuantityKind quantityKind:Length ;
     cso:hasVectorComponents ex:loop_3_vector_components_Burgers_vector ;
     cso:vectorMagnitude 2.489e-10 .
-
-ex:loop_3_slip_direction a diso:SlipDirection ;
-    cso:hasVectorComponents ex:loop_3_vector_components_slip_direction ;
-    cso:vectorMagnitude 1e+00 ;
-    diso:directionMillerIndice "[-101]"^^xsd:string .
-
-ex:loop_3_slip_plane a diso:SlipPlane ;
-    diso:hasOrigin ex:loop_3_slip_plane_origin ;
-    diso:hasSlipDirection ex:loop_3_slip_direction ;
-    diso:hasSlipPlaneNormal ex:loop_3_slip_plane_normal ;
-    diso:planeMillerIndice "(-11-1)"^^xsd:string .
-
-ex:loop_3_slip_plane_normal a diso:SlipPlaneNormal ;
-    cso:hasVectorComponents ex:loop_3_vector_components_of_slip_plane_normal ;
-    diso:directionMillerIndice "[-11-1]"^^xsd:string .
 
 ex:loop_3_slip_plane_origin a diso:Origin ;
     cso:hasVectorComponents ex:loop_3_vector_components_origin .
 
 ex:loop_3_vector_components_Burgers_vector a cso:VectorComponentsOfBasis ;
+    qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -1.759989e-10 ;
     cso:hasBasis ex:coordinate_basis ;
@@ -1238,10 +1145,10 @@ ex:loop_3_vector_components_of_slip_plane_normal a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent -5.773503e-01 .
 
 ex:loop_3_vector_components_origin a cso:VectorComponentsOfBasis ;
-    cso:firstAxisComponent -1.263364e+02 ;
+    cso:firstAxisComponent -3.144513e-08 ;
     cso:hasBasis ex:coordinate_basis ;
-    cso:secondAxisComponent 1.263364e+02 ;
-    cso:thirdAxisComponent -1.263364e+02 .
+    cso:secondAxisComponent 3.144513e-08 ;
+    cso:thirdAxisComponent -3.144513e-08 .
 
 ex:loop_3_vector_components_slip_direction a cso:VectorComponentsOfBasis ;
     qudt:hasQuantityKind quantityKind:Dimensionless ;
@@ -1251,30 +1158,20 @@ ex:loop_3_vector_components_slip_direction a cso:VectorComponentsOfBasis ;
     cso:secondAxisComponent 0e+00 ;
     cso:thirdAxisComponent 7.071068e-01 .
 
+ex:loop_4 a diso:Dislocation ;
+    diso:hasBurgersVector ex:loop_4_Burgers_vector ;
+    diso:hasMathematicalRepresentation ex:line_4 ;
+    diso:movesOn ex:loop_4_slip_plane .
+
 ex:loop_4_Burgers_vector a diso:BurgersVector ;
-    qudt:hasQuantityKind quantityKind:Length ;
     cso:hasVectorComponents ex:loop_4_vector_components_Burgers_vector ;
     cso:vectorMagnitude 2.489e-10 .
-
-ex:loop_4_slip_direction a diso:SlipDirection ;
-    cso:hasVectorComponents ex:loop_4_vector_components_slip_direction ;
-    cso:vectorMagnitude 1e+00 ;
-    diso:directionMillerIndice "[011]"^^xsd:string .
-
-ex:loop_4_slip_plane a diso:SlipPlane ;
-    diso:hasOrigin ex:loop_4_slip_plane_origin ;
-    diso:hasSlipDirection ex:loop_4_slip_direction ;
-    diso:hasSlipPlaneNormal ex:loop_4_slip_plane_normal ;
-    diso:planeMillerIndice "(-11-1)"^^xsd:string .
-
-ex:loop_4_slip_plane_normal a diso:SlipPlaneNormal ;
-    cso:hasVectorComponents ex:loop_4_vector_components_of_slip_plane_normal ;
-    diso:directionMillerIndice "[-11-1]"^^xsd:string .
 
 ex:loop_4_slip_plane_origin a diso:Origin ;
     cso:hasVectorComponents ex:loop_4_vector_components_origin .
 
 ex:loop_4_vector_components_Burgers_vector a cso:VectorComponentsOfBasis ;
+    qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 0e+00 ;
     cso:hasBasis ex:coordinate_basis ;
@@ -1290,10 +1187,10 @@ ex:loop_4_vector_components_of_slip_plane_normal a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent -5.773503e-01 .
 
 ex:loop_4_vector_components_origin a cso:VectorComponentsOfBasis ;
-    cso:firstAxisComponent 7.542472e+01 ;
+    cso:firstAxisComponent 1.877321e-08 ;
     cso:hasBasis ex:coordinate_basis ;
-    cso:secondAxisComponent -7.542472e+01 ;
-    cso:thirdAxisComponent 7.542472e+01 .
+    cso:secondAxisComponent -1.877321e-08 ;
+    cso:thirdAxisComponent 1.877321e-08 .
 
 ex:loop_4_vector_components_slip_direction a cso:VectorComponentsOfBasis ;
     qudt:hasQuantityKind quantityKind:Dimensionless ;
@@ -1303,30 +1200,20 @@ ex:loop_4_vector_components_slip_direction a cso:VectorComponentsOfBasis ;
     cso:secondAxisComponent 7.071068e-01 ;
     cso:thirdAxisComponent 7.071068e-01 .
 
+ex:loop_6 a diso:Dislocation ;
+    diso:hasBurgersVector ex:loop_6_Burgers_vector ;
+    diso:hasMathematicalRepresentation ex:line_6 ;
+    diso:movesOn ex:loop_6_slip_plane .
+
 ex:loop_6_Burgers_vector a diso:BurgersVector ;
-    qudt:hasQuantityKind quantityKind:Length ;
     cso:hasVectorComponents ex:loop_6_vector_components_Burgers_vector ;
     cso:vectorMagnitude 2.489e-10 .
-
-ex:loop_6_slip_direction a diso:SlipDirection ;
-    cso:hasVectorComponents ex:loop_6_vector_components_slip_direction ;
-    cso:vectorMagnitude 1e+00 ;
-    diso:directionMillerIndice "[0-1-1]"^^xsd:string .
-
-ex:loop_6_slip_plane a diso:SlipPlane ;
-    diso:hasOrigin ex:loop_6_slip_plane_origin ;
-    diso:hasSlipDirection ex:loop_6_slip_direction ;
-    diso:hasSlipPlaneNormal ex:loop_6_slip_plane_normal ;
-    diso:planeMillerIndice "(-1-11)"^^xsd:string .
-
-ex:loop_6_slip_plane_normal a diso:SlipPlaneNormal ;
-    cso:hasVectorComponents ex:loop_6_vector_components_of_slip_plane_normal ;
-    diso:directionMillerIndice "[-1-11]"^^xsd:string .
 
 ex:loop_6_slip_plane_origin a diso:Origin ;
     cso:hasVectorComponents ex:loop_6_vector_components_origin .
 
 ex:loop_6_vector_components_Burgers_vector a cso:VectorComponentsOfBasis ;
+    qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 0e+00 ;
     cso:hasBasis ex:coordinate_basis ;
@@ -1342,10 +1229,10 @@ ex:loop_6_vector_components_of_slip_plane_normal a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 5.773503e-01 .
 
 ex:loop_6_vector_components_origin a cso:VectorComponentsOfBasis ;
-    cso:firstAxisComponent 3.106556e+02 ;
+    cso:firstAxisComponent 7.732217e-08 ;
     cso:hasBasis ex:coordinate_basis ;
-    cso:secondAxisComponent 3.106556e+02 ;
-    cso:thirdAxisComponent -3.106556e+02 .
+    cso:secondAxisComponent 7.732217e-08 ;
+    cso:thirdAxisComponent -7.732217e-08 .
 
 ex:loop_6_vector_components_slip_direction a cso:VectorComponentsOfBasis ;
     qudt:hasQuantityKind quantityKind:Dimensionless ;
@@ -1355,30 +1242,20 @@ ex:loop_6_vector_components_slip_direction a cso:VectorComponentsOfBasis ;
     cso:secondAxisComponent -7.071068e-01 ;
     cso:thirdAxisComponent -7.071068e-01 .
 
+ex:loop_7 a diso:Dislocation ;
+    diso:hasBurgersVector ex:loop_7_Burgers_vector ;
+    diso:hasMathematicalRepresentation ex:line_7 ;
+    diso:movesOn ex:loop_7_slip_plane .
+
 ex:loop_7_Burgers_vector a diso:BurgersVector ;
-    qudt:hasQuantityKind quantityKind:Length ;
     cso:hasVectorComponents ex:loop_7_vector_components_Burgers_vector ;
     cso:vectorMagnitude 2.489e-10 .
-
-ex:loop_7_slip_direction a diso:SlipDirection ;
-    cso:hasVectorComponents ex:loop_7_vector_components_slip_direction ;
-    cso:vectorMagnitude 1e+00 ;
-    diso:directionMillerIndice "[110]"^^xsd:string .
-
-ex:loop_7_slip_plane a diso:SlipPlane ;
-    diso:hasOrigin ex:loop_7_slip_plane_origin ;
-    diso:hasSlipDirection ex:loop_7_slip_direction ;
-    diso:hasSlipPlaneNormal ex:loop_7_slip_plane_normal ;
-    diso:planeMillerIndice "(-11-1)"^^xsd:string .
-
-ex:loop_7_slip_plane_normal a diso:SlipPlaneNormal ;
-    cso:hasVectorComponents ex:loop_7_vector_components_of_slip_plane_normal ;
-    diso:directionMillerIndice "[-11-1]"^^xsd:string .
 
 ex:loop_7_slip_plane_origin a diso:Origin ;
     cso:hasVectorComponents ex:loop_7_vector_components_origin .
 
 ex:loop_7_vector_components_Burgers_vector a cso:VectorComponentsOfBasis ;
+    qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 1.759989e-10 ;
     cso:hasBasis ex:coordinate_basis ;
@@ -1394,10 +1271,10 @@ ex:loop_7_vector_components_of_slip_plane_normal a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent -5.773503e-01 .
 
 ex:loop_7_vector_components_origin a cso:VectorComponentsOfBasis ;
-    cso:firstAxisComponent 3.11127e+01 ;
+    cso:firstAxisComponent 7.743951e-09 ;
     cso:hasBasis ex:coordinate_basis ;
-    cso:secondAxisComponent -3.11127e+01 ;
-    cso:thirdAxisComponent 3.11127e+01 .
+    cso:secondAxisComponent -7.743951e-09 ;
+    cso:thirdAxisComponent 7.743951e-09 .
 
 ex:loop_7_vector_components_slip_direction a cso:VectorComponentsOfBasis ;
     qudt:hasQuantityKind quantityKind:Dimensionless ;
@@ -1407,30 +1284,20 @@ ex:loop_7_vector_components_slip_direction a cso:VectorComponentsOfBasis ;
     cso:secondAxisComponent 7.071068e-01 ;
     cso:thirdAxisComponent 0e+00 .
 
+ex:loop_8 a diso:Dislocation ;
+    diso:hasBurgersVector ex:loop_8_Burgers_vector ;
+    diso:hasMathematicalRepresentation ex:line_8 ;
+    diso:movesOn ex:loop_8_slip_plane .
+
 ex:loop_8_Burgers_vector a diso:BurgersVector ;
-    qudt:hasQuantityKind quantityKind:Length ;
     cso:hasVectorComponents ex:loop_8_vector_components_Burgers_vector ;
     cso:vectorMagnitude 2.489e-10 .
-
-ex:loop_8_slip_direction a diso:SlipDirection ;
-    cso:hasVectorComponents ex:loop_8_vector_components_slip_direction ;
-    cso:vectorMagnitude 1e+00 ;
-    diso:directionMillerIndice "[-10-1]"^^xsd:string .
-
-ex:loop_8_slip_plane a diso:SlipPlane ;
-    diso:hasOrigin ex:loop_8_slip_plane_origin ;
-    diso:hasSlipDirection ex:loop_8_slip_direction ;
-    diso:hasSlipPlaneNormal ex:loop_8_slip_plane_normal ;
-    diso:planeMillerIndice "(-111)"^^xsd:string .
-
-ex:loop_8_slip_plane_normal a diso:SlipPlaneNormal ;
-    cso:hasVectorComponents ex:loop_8_vector_components_of_slip_plane_normal ;
-    diso:directionMillerIndice "[-111]"^^xsd:string .
 
 ex:loop_8_slip_plane_origin a diso:Origin ;
     cso:hasVectorComponents ex:loop_8_vector_components_origin .
 
 ex:loop_8_vector_components_Burgers_vector a cso:VectorComponentsOfBasis ;
+    qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -1.759989e-10 ;
     cso:hasBasis ex:coordinate_basis ;
@@ -1446,10 +1313,10 @@ ex:loop_8_vector_components_of_slip_plane_normal a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 5.773503e-01 .
 
 ex:loop_8_vector_components_origin a cso:VectorComponentsOfBasis ;
-    cso:firstAxisComponent -2.140177e+02 ;
+    cso:firstAxisComponent -5.326899e-08 ;
     cso:hasBasis ex:coordinate_basis ;
-    cso:secondAxisComponent 2.140177e+02 ;
-    cso:thirdAxisComponent 2.140177e+02 .
+    cso:secondAxisComponent 5.326899e-08 ;
+    cso:thirdAxisComponent 5.326899e-08 .
 
 ex:loop_8_vector_components_slip_direction a cso:VectorComponentsOfBasis ;
     qudt:hasQuantityKind quantityKind:Dimensionless ;
@@ -1459,30 +1326,20 @@ ex:loop_8_vector_components_slip_direction a cso:VectorComponentsOfBasis ;
     cso:secondAxisComponent 0e+00 ;
     cso:thirdAxisComponent -7.071068e-01 .
 
+ex:loop_9 a diso:Dislocation ;
+    diso:hasBurgersVector ex:loop_9_Burgers_vector ;
+    diso:hasMathematicalRepresentation ex:line_9 ;
+    diso:movesOn ex:loop_9_slip_plane .
+
 ex:loop_9_Burgers_vector a diso:BurgersVector ;
-    qudt:hasQuantityKind quantityKind:Length ;
     cso:hasVectorComponents ex:loop_9_vector_components_Burgers_vector ;
     cso:vectorMagnitude 2.489e-10 .
-
-ex:loop_9_slip_direction a diso:SlipDirection ;
-    cso:hasVectorComponents ex:loop_9_vector_components_slip_direction ;
-    cso:vectorMagnitude 1e+00 ;
-    diso:directionMillerIndice "[01-1]"^^xsd:string .
-
-ex:loop_9_slip_plane a diso:SlipPlane ;
-    diso:hasOrigin ex:loop_9_slip_plane_origin ;
-    diso:hasSlipDirection ex:loop_9_slip_direction ;
-    diso:hasSlipPlaneNormal ex:loop_9_slip_plane_normal ;
-    diso:planeMillerIndice "(1-1-1)"^^xsd:string .
-
-ex:loop_9_slip_plane_normal a diso:SlipPlaneNormal ;
-    cso:hasVectorComponents ex:loop_9_vector_components_of_slip_plane_normal ;
-    diso:directionMillerIndice "[1-1-1]"^^xsd:string .
 
 ex:loop_9_slip_plane_origin a diso:Origin ;
     cso:hasVectorComponents ex:loop_9_vector_components_origin .
 
 ex:loop_9_vector_components_Burgers_vector a cso:VectorComponentsOfBasis ;
+    qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 0e+00 ;
     cso:hasBasis ex:coordinate_basis ;
@@ -1498,10 +1355,10 @@ ex:loop_9_vector_components_of_slip_plane_normal a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent -5.773503e-01 .
 
 ex:loop_9_vector_components_origin a cso:VectorComponentsOfBasis ;
-    cso:firstAxisComponent -2.140177e+02 ;
+    cso:firstAxisComponent -5.326899e-08 ;
     cso:hasBasis ex:coordinate_basis ;
-    cso:secondAxisComponent 2.140177e+02 ;
-    cso:thirdAxisComponent 2.140177e+02 .
+    cso:secondAxisComponent 5.326899e-08 ;
+    cso:thirdAxisComponent 5.326899e-08 .
 
 ex:loop_9_vector_components_slip_direction a cso:VectorComponentsOfBasis ;
     qudt:hasQuantityKind quantityKind:Dimensionless ;
@@ -3238,212 +3095,168 @@ ex:node_9_coordinate a cso:VectorComponentsOfBasis ;
 ex:node_9_position_vector a cso:PositionVector ;
     cso:hasVectorComponents ex:node_9_coordinate .
 
-<http://purl.obolibrary.org/obo/chebi/formula> a owl:DatatypeProperty ;
-    rdfs:domain <http://purl.obolibrary.org/obo/CHEBI_33250> ;
-    rdfs:range xsd:string .
+ex:unit_cell a cso:UnitCell ;
+    cso:hasLatticeParameterAngle ex:lattice_parameter_angle ;
+    cso:hasLatticeParameterLength ex:lattice_parameter_length .
 
-qudt:Quantity a owl:Class ;
-    rdfs:label "Quantity" ;
-    qudt:description """<p class="lm-para">A quantity is the measurement of an observable property of a particular object, event, or physical system. A quantity is always associated with the context of measurement (i.e. the thing measured, the measured value, the accuracy of measurement, etc.) whereas the underlying quantity kind is independent of any particular measurement. Thus, length is a quantity kind while the height of a rocket is a specific quantity of length; its magnitude that may be expressed in meters, feet, inches, etc. Examples of physical quantities include physical constants, such as the speed of light in a vacuum, Planck's constant, the electric permittivity of free space, and the fine structure constant. </p>
+cdo:CrystallineMaterial a owl:Class ;
+    rdfs:label "Crystalline Material"@en ;
+    rdfs:comment "Crystalline material is material characterized by a periodic arrangement of the constituent atoms. The arrangement could be described its crystal structure."@en ;
+    rdfs:subClassOf [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty cdo:hasCrystallographicDefect ;
+                        owl:someValuesFrom cdo:CrystallographicDefect ] [ a owl:Restriction ;
+                        owl:allValuesFrom cdo:CrystallographicDefect ;
+                        owl:onProperty cdo:hasCrystallographicDefect ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty cdo:hasCrystalStructure ;
+                        owl:someValuesFrom cso:CrystalStructure ] [ a owl:Restriction ;
+                        owl:allValuesFrom cso:CrystalStructure ;
+                        owl:onProperty cdo:hasCrystalStructure ] ) ] .
 
-<p class="lm-para">In other words, quantities are quantifiable aspects of the world, such as time, distance, velocity, mass, momentum, energy, and weight, and units are used to describe their measure. Many of which are related to each other by various physical laws, and as a result the units of some of the quantities can be expressed as products (or ratios) of powers of other units (e.g., momentum is mass times velocity and velocity is measured in distance divided by time). These relationships are discussed in dimensional analysis. Those that cannot be so expressed can be regarded as "fundamental" in this sense.</p>
-<p class="lm-para">A quantity is distinguished from a "quantity kind" in that the former carries a value and the latter is a type specifier.</p>"""^^rdf:HTML ;
-    rdfs:isDefinedBy <http://qudt.org/2.0/schema/qudt>,
-        <http://qudt.org/schema/qudt> ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom qudt:QuantityKind ;
-            owl:onProperty qudt:hasQuantityKind ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom qudt:QuantityValue ;
-            owl:onProperty qudt:quantityValue ] .
+ex:loop_0_slip_direction a diso:SlipDirection ;
+    cso:hasVectorComponents ex:loop_0_vector_components_slip_direction ;
+    cso:vectorMagnitude 1e+00 ;
+    diso:directionMillerIndice "[1-10]"^^xsd:string ;
+    diso:familyDirectionMillerIndice "<110>"^^xsd:string .
 
-qudt:quantityValue a owl:ObjectProperty ;
-    rdfs:label "quantity value" ;
-    rdfs:isDefinedBy <http://qudt.org/2.0/schema/qudt>,
-        <http://qudt.org/schema/qudt> ;
-    rdfs:range qudt:QuantityValue .
+ex:loop_0_slip_plane a diso:SlipPlane ;
+    diso:familyPlaneMillerIndice "{111}"^^xsd:string ;
+    diso:hasOrigin ex:loop_0_slip_plane_origin ;
+    diso:hasSlipDirection ex:loop_0_slip_direction ;
+    diso:hasSlipPlaneNormal ex:loop_0_slip_plane_normal ;
+    diso:planeMillerIndice "(111)"^^xsd:string .
 
-qudt:unit a owl:ObjectProperty ;
-    rdfs:label "unit" ;
-    qudt:description "A reference to the unit of measure of a quantity (variable or constant) of interest."^^rdf:HTML ;
-    rdfs:isDefinedBy <http://qudt.org/2.0/schema/qudt>,
-        <http://qudt.org/schema/qudt> ;
-    rdfs:range qudt:Unit .
+ex:loop_0_slip_plane_normal a diso:SlipPlaneNormal ;
+    cso:hasVectorComponents ex:loop_0_vector_components_of_slip_plane_normal ;
+    diso:directionMillerIndice "[111]"^^xsd:string .
 
-cso:BravaisLattice a owl:Class ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:onDataRange xsd:string ;
-            owl:onProperty cso:centering ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
-        cso:Lattice .
+ex:loop_1_slip_direction a diso:SlipDirection ;
+    cso:hasVectorComponents ex:loop_1_vector_components_slip_direction ;
+    cso:vectorMagnitude 1e+00 ;
+    diso:directionMillerIndice "[-10-1]"^^xsd:string ;
+    diso:familyDirectionMillerIndice "<110>"^^xsd:string .
 
-cso:centering a owl:DatatypeProperty ;
-    rdfs:domain cso:BravaisLattice ;
-    rdfs:range xsd:string .
+ex:loop_1_slip_plane a diso:SlipPlane ;
+    diso:familyPlaneMillerIndice "{111}"^^xsd:string ;
+    diso:hasOrigin ex:loop_1_slip_plane_origin ;
+    diso:hasSlipDirection ex:loop_1_slip_direction ;
+    diso:hasSlipPlaneNormal ex:loop_1_slip_plane_normal ;
+    diso:planeMillerIndice "(-1-11)"^^xsd:string .
 
-cso:firstAxisComponent a owl:DatatypeProperty ;
-    rdfs:label "first axis component"@en ;
-    rdfs:comment "A first vector component related to the first axis vector of a basis"@en ;
-    rdfs:domain cso:VectorComponentsOfBasis ;
-    rdfs:range xsd:double .
+ex:loop_1_slip_plane_normal a diso:SlipPlaneNormal ;
+    cso:hasVectorComponents ex:loop_1_vector_components_of_slip_plane_normal ;
+    diso:directionMillerIndice "[-1-11]"^^xsd:string .
 
-cso:hasFirstAxisVector a owl:ObjectProperty ;
-    rdfs:label "has first axis vector"@en ;
-    rdfs:comment "hasFirstAxisVector represents the relationship between a basis and a coordinate vector to define the coordianates of the axis vector the first basis"@en ;
-    rdfs:domain mdo:Basis ;
-    rdfs:range mdo:CoordinateVector .
+ex:loop_2_slip_plane a diso:SlipPlane ;
+    diso:familyPlaneMillerIndice "{111}"^^xsd:string ;
+    diso:hasOrigin ex:loop_2_slip_plane_origin ;
+    diso:hasSlipDirection ex:loop_2_slip_direction ;
+    diso:hasSlipPlaneNormal ex:loop_2_slip_plane_normal ;
+    diso:planeMillerIndice "(-1-11)"^^xsd:string .
 
-cso:hasLattice a owl:ObjectProperty ;
-    rdfs:label "has lattice"@en ;
-    rdfs:comment "hasLattice represents the relationship between a crystal structure and lattice."@en ;
-    rdfs:domain cso:CrystalStructure ;
-    rdfs:range cso:Lattice .
+ex:loop_3_slip_direction a diso:SlipDirection ;
+    cso:hasVectorComponents ex:loop_3_vector_components_slip_direction ;
+    cso:vectorMagnitude 1e+00 ;
+    diso:directionMillerIndice "[-101]"^^xsd:string ;
+    diso:familyDirectionMillerIndice "<110>"^^xsd:string .
 
-cso:hasSecondAxisVector a owl:ObjectProperty ;
-    rdfs:label "has second axis vector"@en ;
-    rdfs:comment "hasSexondAxisVector represents the relationship between a basis and a coordinate vector to define the coordianates of the axis vector the second basis"@en ;
-    rdfs:domain mdo:Basis ;
-    rdfs:range mdo:CoordinateVector .
+ex:loop_3_slip_plane a diso:SlipPlane ;
+    diso:familyPlaneMillerIndice "{111}"^^xsd:string ;
+    diso:hasOrigin ex:loop_3_slip_plane_origin ;
+    diso:hasSlipDirection ex:loop_3_slip_direction ;
+    diso:hasSlipPlaneNormal ex:loop_3_slip_plane_normal ;
+    diso:planeMillerIndice "(-11-1)"^^xsd:string .
 
-cso:hasThirdAxisVector a owl:ObjectProperty ;
-    rdfs:label "has third axis vector"@en ;
-    rdfs:comment "hasThirdAxisVector represents the relationship between a basis and a coordinate vector to define the coordianates of the axis vector the third basis"@en ;
-    rdfs:domain mdo:Basis ;
-    rdfs:range mdo:CoordinateVector .
+ex:loop_3_slip_plane_normal a diso:SlipPlaneNormal ;
+    cso:hasVectorComponents ex:loop_3_vector_components_of_slip_plane_normal ;
+    diso:directionMillerIndice "[-11-1]"^^xsd:string .
 
-cso:latticeParameterAngleAlpha a owl:DatatypeProperty ;
-    rdfs:label "lattice parameter angle alpha"@en ;
-    rdfs:comment "latticeParameterAngleAlpha represents lattice parameter angle alpha of lattice parameter angle in double."@en ;
-    rdfs:domain cso:LatticeParameterAngle ;
-    rdfs:range xsd:double .
+ex:loop_4_slip_direction a diso:SlipDirection ;
+    cso:hasVectorComponents ex:loop_4_vector_components_slip_direction ;
+    cso:vectorMagnitude 1e+00 ;
+    diso:directionMillerIndice "[011]"^^xsd:string ;
+    diso:familyDirectionMillerIndice "<110>"^^xsd:string .
 
-cso:latticeParameterAngleBeta a owl:DatatypeProperty ;
-    rdfs:label "lattice parameter angle beta"@en ;
-    rdfs:comment "latticeParameterAngleBeta represents lattice parameter angle beta of lattice parameter angle in double."@en ;
-    rdfs:domain cso:LatticeParameterAngle ;
-    rdfs:range xsd:double .
+ex:loop_4_slip_plane a diso:SlipPlane ;
+    diso:familyPlaneMillerIndice "{111}"^^xsd:string ;
+    diso:hasOrigin ex:loop_4_slip_plane_origin ;
+    diso:hasSlipDirection ex:loop_4_slip_direction ;
+    diso:hasSlipPlaneNormal ex:loop_4_slip_plane_normal ;
+    diso:planeMillerIndice "(-11-1)"^^xsd:string .
 
-cso:latticeParameterAngleGamma a owl:DatatypeProperty ;
-    rdfs:label "lattice parameter angle gamma"@en ;
-    rdfs:comment "latticeParameterAngleGamma represents lattice parameter angle gamma of lattice parameter angle in double."@en ;
-    rdfs:domain cso:LatticeParameterAngle ;
-    rdfs:range xsd:double .
+ex:loop_4_slip_plane_normal a diso:SlipPlaneNormal ;
+    cso:hasVectorComponents ex:loop_4_vector_components_of_slip_plane_normal ;
+    diso:directionMillerIndice "[-11-1]"^^xsd:string .
 
-cso:latticeParameterLengthA a owl:DatatypeProperty ;
-    rdfs:label "lattice parameter length a"@en ;
-    rdfs:comment "latticeParameterLengthA represents lattice parameter length a of lattice parameter length in double."@en ;
-    rdfs:domain cso:LatticeParameterLength ;
-    rdfs:range xsd:double .
+ex:loop_6_slip_direction a diso:SlipDirection ;
+    cso:hasVectorComponents ex:loop_6_vector_components_slip_direction ;
+    cso:vectorMagnitude 1e+00 ;
+    diso:directionMillerIndice "[0-1-1]"^^xsd:string ;
+    diso:familyDirectionMillerIndice "<110>"^^xsd:string .
 
-cso:latticeParameterLengthB a owl:DatatypeProperty ;
-    rdfs:label "lattice parameter length b"@en ;
-    rdfs:comment "latticeParameterLengthB represents lattice parameter length b of lattice parameter length in double."@en ;
-    rdfs:domain cso:LatticeParameterLength ;
-    rdfs:range xsd:double .
+ex:loop_6_slip_plane a diso:SlipPlane ;
+    diso:familyPlaneMillerIndice "{111}"^^xsd:string ;
+    diso:hasOrigin ex:loop_6_slip_plane_origin ;
+    diso:hasSlipDirection ex:loop_6_slip_direction ;
+    diso:hasSlipPlaneNormal ex:loop_6_slip_plane_normal ;
+    diso:planeMillerIndice "(-1-11)"^^xsd:string .
 
-cso:latticeParameterLengthC a owl:DatatypeProperty ;
-    rdfs:label "lattice parameter length c"@en ;
-    rdfs:comment "latticeParameterLengthA represents lattice parameter length c of lattice parameter length in double."@en ;
-    rdfs:domain cso:LatticeParameterLength ;
-    rdfs:range xsd:double .
+ex:loop_6_slip_plane_normal a diso:SlipPlaneNormal ;
+    cso:hasVectorComponents ex:loop_6_vector_components_of_slip_plane_normal ;
+    diso:directionMillerIndice "[-1-11]"^^xsd:string .
 
-cso:secondAxisComponent a owl:DatatypeProperty ;
-    rdfs:label "second axis component"@en ;
-    rdfs:comment "A second vector component related to the second axis vector of a basis"@en ;
-    rdfs:domain cso:VectorComponentsOfBasis ;
-    rdfs:range xsd:double .
+ex:loop_7_slip_direction a diso:SlipDirection ;
+    cso:hasVectorComponents ex:loop_7_vector_components_slip_direction ;
+    cso:vectorMagnitude 1e+00 ;
+    diso:directionMillerIndice "[110]"^^xsd:string ;
+    diso:familyDirectionMillerIndice "<110>"^^xsd:string .
 
-cso:thirdAxisComponent a owl:DatatypeProperty ;
-    rdfs:label "third axis component"@en ;
-    rdfs:comment "A third vector component related to the third axis vector of a basis"@en ;
-    rdfs:domain cso:VectorComponentsOfBasis ;
-    rdfs:range xsd:double .
+ex:loop_7_slip_plane a diso:SlipPlane ;
+    diso:familyPlaneMillerIndice "{111}"^^xsd:string ;
+    diso:hasOrigin ex:loop_7_slip_plane_origin ;
+    diso:hasSlipDirection ex:loop_7_slip_direction ;
+    diso:hasSlipPlaneNormal ex:loop_7_slip_plane_normal ;
+    diso:planeMillerIndice "(-11-1)"^^xsd:string .
 
-cso:vectorMagnitude a owl:DatatypeProperty ;
-    rdfs:label "vector magnitude"@en ;
-    rdfs:domain cso:Vector ;
-    rdfs:range xsd:double .
+ex:loop_7_slip_plane_normal a diso:SlipPlaneNormal ;
+    cso:hasVectorComponents ex:loop_7_vector_components_of_slip_plane_normal ;
+    diso:directionMillerIndice "[-11-1]"^^xsd:string .
 
-diso:dislocationID a owl:DatatypeProperty ;
-    rdfs:domain diso:DiscretizedLine ;
-    rdfs:range xsd:int .
+ex:loop_8_slip_direction a diso:SlipDirection ;
+    cso:hasVectorComponents ex:loop_8_vector_components_slip_direction ;
+    cso:vectorMagnitude 1e+00 ;
+    diso:directionMillerIndice "[-10-1]"^^xsd:string ;
+    diso:familyDirectionMillerIndice "<110>"^^xsd:string .
 
-diso:familyDirectionMillerIndice a owl:DatatypeProperty ;
-    rdfs:label "family direction miller indice"@en ;
-    rdfs:comment "familyDirectionMillerIndice reprersent a set of miller indices of lattice direction in string."@en ;
-    rdfs:domain diso:FamilyOfCrystalDirection ;
-    rdfs:range xsd:string .
+ex:loop_8_slip_plane a diso:SlipPlane ;
+    diso:familyPlaneMillerIndice "{111}"^^xsd:string ;
+    diso:hasOrigin ex:loop_8_slip_plane_origin ;
+    diso:hasSlipDirection ex:loop_8_slip_direction ;
+    diso:hasSlipPlaneNormal ex:loop_8_slip_plane_normal ;
+    diso:planeMillerIndice "(-111)"^^xsd:string .
 
-diso:familyPlaneMillerIndice a owl:DatatypeProperty ;
-    rdfs:label "family plane miller indice"@en ;
-    rdfs:comment "familyPlaneMillerIndice represents a set of Miller indice of lattice plane in string."@en ;
-    rdfs:domain diso:FamilyOfCrystalPlane ;
-    rdfs:range xsd:string .
+ex:loop_8_slip_plane_normal a diso:SlipPlaneNormal ;
+    cso:hasVectorComponents ex:loop_8_vector_components_of_slip_plane_normal ;
+    diso:directionMillerIndice "[-111]"^^xsd:string .
 
-diso:hasMathematicalRepresentation a owl:ObjectProperty ;
-    rdfs:label "has mathematical representation"@en ;
-    rdfs:comment "relates the entity with its mathematical representation"@en ;
-    rdfs:subPropertyOf diso:hasRepresentation .
+ex:loop_9_slip_direction a diso:SlipDirection ;
+    cso:hasVectorComponents ex:loop_9_vector_components_slip_direction ;
+    cso:vectorMagnitude 1e+00 ;
+    diso:directionMillerIndice "[01-1]"^^xsd:string ;
+    diso:familyDirectionMillerIndice "<110>"^^xsd:string .
 
-diso:hasNumericalRepresentation a owl:ObjectProperty ;
-    rdfs:label "has numerical representation"@en ;
-    rdfs:comment "relates the entity with its numerical representation"@en ;
-    rdfs:subPropertyOf diso:hasRepresentation .
+ex:loop_9_slip_plane a diso:SlipPlane ;
+    diso:familyPlaneMillerIndice "{111}"^^xsd:string ;
+    diso:hasOrigin ex:loop_9_slip_plane_origin ;
+    diso:hasSlipDirection ex:loop_9_slip_direction ;
+    diso:hasSlipPlaneNormal ex:loop_9_slip_plane_normal ;
+    diso:planeMillerIndice "(1-1-1)"^^xsd:string .
 
-diso:hasOrigin a owl:ObjectProperty ;
-    rdfs:label "has origin"@en ;
-    rdfs:comment "hasOrigin represents the directed relation between lattice plane and origin"@en ;
-    rdfs:domain diso:LatticePlane ;
-    rdfs:range diso:Origin .
-
-diso:hasSegment a owl:ObjectProperty ;
-    rdfs:label "has segment"@en ;
-    rdfs:comment "hasSegment represents the directed relation between discretized line and segment"@en ;
-    rdfs:domain diso:DiscretizedLine ;
-    rdfs:range diso:Segment ;
-    owl:inverseOf diso:isSegmentOf .
-
-diso:hasShapeFunction a owl:ObjectProperty ;
-    rdfs:label "has shape function"@en ;
-    rdfs:comment "hasShapeFunction represents the directed relation between discretized line and shape function"@en ;
-    rdfs:domain diso:DiscretizedLine ;
-    rdfs:range diso:ShapeFunction .
-
-diso:movesOn a owl:ObjectProperty ;
-    rdfs:label "moves on"@en ;
-    rdfs:comment "movesOn represents the relationship between dislocation and slip plane it moves on."@en ;
-    rdfs:domain diso:Dislocation ;
-    rdfs:range diso:SlipPlane .
-
-diso:planeMillerIndice a owl:DatatypeProperty ;
-    rdfs:label "plane miller indice"@en ;
-    rdfs:comment "planeMillerIndice represents Miller indice of lattice plane in string."@en ;
-    rdfs:domain diso:LatticePlane ;
-    rdfs:range xsd:string .
-
-mdo:X_axisCoordinate a owl:DatatypeProperty ;
-    rdfs:label "X_axis coordinate"@en ;
-    rdfs:comment "X_axisCoordinate represents that a coordinate vector has the value of a coordinate in a double in X axis."@en ;
-    rdfs:domain mdo:CoordinateVector ;
-    rdfs:range xsd:double .
-
-mdo:Y_axisCoordinate a owl:DatatypeProperty ;
-    rdfs:label "Y_axis coordinate"@en ;
-    rdfs:comment "Y_axisCoordinate represents that a coordinate vector has the value of a coordinate in a double in Y axis."@en ;
-    rdfs:domain mdo:CoordinateVector ;
-    rdfs:range xsd:double .
-
-mdo:Z_axisCoordinate a owl:DatatypeProperty ;
-    rdfs:label "Z_axis coordinate"@en ;
-    rdfs:comment "Z_axisCoordinate represents that a coordinate vector has the value of a coordinate in a double in Z axis."@en ;
-    rdfs:domain mdo:CoordinateVector ;
-    rdfs:range xsd:double .
-
-mdo:hasElement a owl:ObjectProperty ;
-    rdfs:label "has element"@en ;
-    rdfs:comment "hasElement represents the relationship between a species and atoms it has."@en ;
-    rdfs:domain mdo:Species ;
-    rdfs:range <http://purl.obolibrary.org/obo/CHEBI_33250> .
+ex:loop_9_slip_plane_normal a diso:SlipPlaneNormal ;
+    cso:hasVectorComponents ex:loop_9_vector_components_of_slip_plane_normal ;
+    diso:directionMillerIndice "[1-1-1]"^^xsd:string .
 
 ex:node_0 a diso:Node ;
     cso:hasPositionVector ex:node_0_position_vector .
@@ -3898,187 +3711,9 @@ ex:node_98 a diso:Node ;
 ex:node_99 a diso:Node ;
     cso:hasPositionVector ex:node_99_position_vector .
 
-qudt:Unit a owl:Class ;
-    rdfs:label "Unit" ;
-    qudt:description "A unit of measure, or unit, is a particular quantity value that has been chosen as a scale for measuring other quantities the same kind (more generally of equivalent dimension). For example, the meter is a quantity of length that has been rigorously defined and standardized by the BIPM (International Board of Weights and Measures). Any measurement of the length can be expressed as a number multiplied by the unit meter. More formally, the value of a physical quantity Q with respect to a unit (U) is expressed as the scalar multiple of a real number (n) and U, as  \\(Q = nU\\)."^^rdf:HTML ;
-    rdfs:isDefinedBy <http://qudt.org/2.0/schema/qudt>,
-        <http://qudt.org/schema/qudt> ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom qudt:QuantityKind ;
-            owl:onProperty qudt:hasQuantityKind ] .
+cdo:hasCrystalStructure a owl:ObjectProperty .
 
-cso:hasCrystalSystem a owl:ObjectProperty ;
-    rdfs:label "has crystal system"@en ;
-    rdfs:comment "hasCrystalSystem represents the relationship between unit cell and crystal system."@en ;
-    rdfs:domain cso:Lattice ;
-    rdfs:range cso:CrystalSystem .
-
-cso:hasLatticeParameterAngle a owl:ObjectProperty ;
-    rdfs:label "has lattice parameter angle"@en .
-
-cso:hasLatticeParameterLength a owl:ObjectProperty ;
-    rdfs:label "has lattice parameter length"@en .
-
-cso:hasPositionVector a owl:ObjectProperty ;
-    rdfs:label "has position vector"@en ;
-    rdfs:range cso:PositionVector ;
-    rdfs:subPropertyOf owl:topObjectProperty .
-
-cso:hasUnitCell a owl:ObjectProperty ;
-    rdfs:label "has unit cell"@en ;
-    rdfs:comment "hasUnitCell hasSpecies represents the relationship between a lattice and  unit cells."@en ;
-    rdfs:domain cso:Lattice ;
-    rdfs:range cso:UnitCell .
-
-cso:hasVectorComponents a owl:ObjectProperty ;
-    rdfs:label "has vector components"@en ;
-    rdfs:comment "hasVectorComponent relates the Vector with 'Vector Components of Basis'"@en ;
-    rdfs:domain cso:Vector .
-
-diso:ShapeFunction a owl:Class ;
-    rdfs:label "Shape Function"@en ;
-    rdfs:comment "The shape function is the function which interpolates the solution between the discrete values obtained at the mesh nodes. In the dicretized dislocation, the shape function detemines the shape of segment, ultimately determines the whole discretized line shape. Examples of shape function that is used to discretized the dislocation are, circular, elliptic, helical, linear, cubic, and quintic."@en .
-
-diso:directionMillerIndice a owl:DatatypeProperty ;
-    rdfs:label "direction miller indice"@en ;
-    rdfs:comment "directionMillerIndice represents Miller indice of lattice direction in string."@en ;
-    rdfs:domain diso:LatticeDirection ;
-    rdfs:range xsd:string .
-
-diso:hasBurgersVector a owl:ObjectProperty ;
-    rdfs:label "has Burgers vector"@en ;
-    rdfs:comment "Representas relation from dislocation to Burgers vector"@en ;
-    rdfs:domain diso:Dislocation ;
-    rdfs:range diso:BurgersVector .
-
-diso:hasLatticePlane a owl:ObjectProperty ;
-    rdfs:label "has lattice plane"@en ;
-    rdfs:comment "hasLatticePlane represents the relationship between a lattice and lattice planes."@en ;
-    rdfs:range diso:LatticePlane .
-
-diso:hasLineSense a owl:ObjectProperty ;
-    rdfs:label "has line sense"@en ;
-    rdfs:comment "hasLineSense represents the relationship between a dislocation and a line sense."@en ;
-    rdfs:domain diso:Dislocation ;
-    rdfs:range diso:LineSense .
-
-diso:hasRepresentation a owl:ObjectProperty ;
-    rdfs:label "has representation"@en ;
-    rdfs:comment "has representation relates the entity to another representation of entity"@en .
-
-diso:isSegmentOf a owl:ObjectProperty ;
-    rdfs:label "is segment of"@en ;
-    rdfs:comment "Inverse of hasSegment"@en ;
-    rdfs:domain diso:Segment ;
-    rdfs:range diso:DiscretizedLine .
-
-mdo:hasCartesianCoordinates a owl:ObjectProperty ;
-    rdfs:label "has cartesian coordinates"@en ;
-    rdfs:comment "hasCartesianCoordinates represents the relationship between a site and coordinates in cartesian format it has."@en ;
-    rdfs:range mdo:CoordinateVector .
-
-mdo:hasFractionalCoordinates a owl:ObjectProperty ;
-    rdfs:label "has fractional coordinates"@en ;
-    rdfs:comment "hasFractionalCoordinates represents the relationship between a site and coordinates in fractional format it has."@en ;
-    rdfs:domain mdo:Site ;
-    rdfs:range mdo:CoordinateVector .
-
-mdo:hasOccupancy a owl:ObjectProperty ;
-    rdfs:label "has occupancy"@en ;
-    rdfs:comment "hasOccupancy represents the relationship between a structure and occupancies it has."@en ;
-    rdfs:domain cso:CrystalStructure ;
-    rdfs:range mdo:Occupancy .
-
-mdo:hasSite a owl:ObjectProperty ;
-    rdfs:label "has site"@en ;
-    rdfs:comment "hasSite represents the relationship between an occupancy and sites it ties."@en ;
-    rdfs:domain mdo:Occupancy ;
-    rdfs:range mdo:Site .
-
-mdo:hasSpecies a owl:ObjectProperty ;
-    rdfs:label "has species"@en ;
-    rdfs:comment "hasSpecies represents the relationship between an occupancy and species it ties."@en ;
-    rdfs:domain mdo:Occupancy ;
-    rdfs:range mdo:Species .
-
-<http://purl.obolibrary.org/obo/CHEBI_33250> a owl:Class ;
-    rdfs:label "Atom"@en ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:onDataRange xsd:string ;
-            owl:onProperty <http://purl.obolibrary.org/obo/chebi/formula> ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ;
-    skos:defintion "A chemical entity constituting the smallest component of an element having the chemical properties of the element."@en .
-
-cso:CrystalStructure a owl:Class ;
-    rdfs:label "Crystal Structure"@en ;
-    rdfs:subClassOf [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty mdo:hasOccupancy ;
-                        owl:someValuesFrom mdo:Occupancy ] [ a owl:Restriction ;
-                        owl:allValuesFrom mdo:Occupancy ;
-                        owl:onProperty mdo:hasOccupancy ] ) ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom cso:Lattice ;
-            owl:onProperty cso:hasLattice ] ;
-    skos:defintion "A crystal structure is described by both of the lattice geometry and atomic arrangements within the unit cell."@en .
-
-cso:UnitCell a owl:Class ;
-    rdfs:label "Unit Cell"@en ;
-    rdfs:subClassOf [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty cso:hasLatticeParameterAngle ;
-                        owl:someValuesFrom cso:LatticeParameterAngle ] [ a owl:Restriction ;
-                        owl:allValuesFrom cso:LatticeParameterAngle ;
-                        owl:onProperty cso:hasLatticeParameterAngle ] ) ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty cso:hasLatticeParameterLength ;
-                        owl:someValuesFrom cso:LatticeParameterLength ] [ a owl:Restriction ;
-                        owl:allValuesFrom cso:LatticeParameterLength ;
-                        owl:onProperty cso:hasLatticeParameterLength ] ) ] ;
-    skos:defintion "Basic structural unit or building block of the crystal structure and defines the crystal structure by virtue of its geometry and the atom positions within."@en .
-
-diso:FamilyOfCrystalDirection a owl:Class ;
-    rdfs:label "Family of Crystal Direction"@en ;
-    rdfs:comment "a set of symmetrically equivalent directions in the lattice."@en ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:onDataRange xsd:string ;
-            owl:onProperty diso:familyDirectionMillerIndice ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] .
-
-diso:FamilyOfCrystalPlane a owl:Class ;
-    rdfs:label "Family of Crystal Plane"@en ;
-    rdfs:comment "a set of symmetrically equivalent planes in the lattice."@en ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:onDataRange xsd:string ;
-            owl:onProperty diso:familyPlaneMillerIndice ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] .
-
-diso:LineSense a owl:Class ;
-    rdfs:label "Line Sense"@en ;
-    rdfs:comment "Sense that characterizes a directed line (has a start and an end)."@en .
-
-diso:SlipSystem a owl:Class ;
-    rdfs:label "Slip System"@en ;
-    rdfs:comment "Slip system is defined as the set of slip planes with the same unit normal vector and the same slip direction."@en ;
-    rdfs:subClassOf [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty diso:hasSlipDirection ;
-                        owl:someValuesFrom diso:SlipDirection ] [ a owl:Restriction ;
-                        owl:allValuesFrom diso:SlipDirection ;
-                        owl:onProperty diso:hasSlipDirection ] ) ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty diso:hasSlipPlaneNormal ;
-                        owl:someValuesFrom diso:SlipPlaneNormal ] [ a owl:Restriction ;
-                        owl:allValuesFrom diso:SlipPlaneNormal ;
-                        owl:onProperty diso:hasSlipPlaneNormal ] ) ] .
-
-diso:hasNode a owl:ObjectProperty ;
-    rdfs:label "has node"@en ;
-    rdfs:comment "hasNode represents the directed relation between segment and node"@en ;
-    rdfs:domain diso:Segment ;
-    rdfs:range diso:Node .
+cdo:hasCrystallographicDefect a owl:ObjectProperty .
 
 ex:node_15 a diso:Node ;
     cso:hasPositionVector ex:node_15_position_vector .
@@ -4092,126 +3727,9 @@ ex:node_72 a diso:Node ;
 ex:node_96 a diso:Node ;
     cso:hasPositionVector ex:node_96_position_vector .
 
-qudt:QuantityKind a owl:Class ;
-    rdfs:label "Quantity Kind" ;
-    qudt:description "A <b>Quantity Kind</b> is any observable property that can be  measured and quantified numerically. Familiar examples include physical properties such as length, mass, time, force, energy, power, electric charge, etc. Less familiar examples include currency, interest rate, price to earning ratio, and information capacity."^^rdf:HTML ;
-    rdfs:isDefinedBy <http://qudt.org/2.0/schema/qudt>,
-        <http://qudt.org/schema/qudt> .
-
-qudt:QuantityValue a owl:Class ;
-    rdfs:label "Quantity value" ;
-    qudt:description "A <i>Quantity Value</i> expresses the magnitude and kind of a quantity and is given by the product of a numerical value <code>n</code> and a unit of measure <code>U</code>. The number multiplying the unit is referred to as the numerical value of the quantity expressed in that unit. Refer to <a href=\"http://physics.nist.gov/Pubs/SP811/sec07.html\">NIST SP 811 section 7</a> for more on quantity values."^^rdf:HTML ;
-    rdfs:isDefinedBy <http://qudt.org/2.0/schema/qudt>,
-        <http://qudt.org/schema/qudt> ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom qudt:Unit ;
-            owl:onProperty qudt:unit ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom qudt:QuantityKind ;
-            owl:onProperty qudt:hasQuantityKind ],
-        [ a owl:Restriction ;
-            owl:cardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty qudt:hasQuantityKind ] .
-
-qudt:hasQuantityKind a owl:ObjectProperty ;
-    rdfs:label "has quantity kind" ;
-    rdfs:isDefinedBy <http://qudt.org/2.0/schema/qudt>,
-        <http://qudt.org/schema/qudt> ;
-    rdfs:range qudt:QuantityKind .
-
-cso:hasBasis a owl:ObjectProperty ;
-    rdfs:label "has basis"@en ;
-    rdfs:comment "hasBasis represents the relationship between a lattice or coordinate vector basis and basis."@en ;
-    rdfs:domain [ a owl:Class ;
-            owl:unionOf ( cso:Lattice cso:VectorComponentsOfBasis ) ] ;
-    rdfs:range mdo:Basis .
-
-diso:hasSlipDirection a owl:ObjectProperty ;
-    rdfs:label "has slip direction"@en ;
-    rdfs:comment "hasSlipDirection represents the relationship  between Slip Plane or Slip system and Slip Direction they own."@en ;
-    rdfs:domain [ a owl:Class ;
-            owl:unionOf ( diso:SlipPlane diso:SlipSystem ) ] ;
-    rdfs:range diso:SlipDirection ;
-    rdfs:subPropertyOf diso:hasLatticeDirection .
-
-diso:hasSlipPlaneNormal a owl:ObjectProperty ;
-    rdfs:label "has slip plane normal"@en ;
-    rdfs:comment "hasSlipPlaneNormal represents the relationship between a slip plane or slip system with slip plane normal."@en ;
-    rdfs:domain [ a owl:Class ;
-            owl:unionOf ( diso:SlipPlane diso:SlipSystem ) ] ;
-    rdfs:range diso:SlipPlaneNormal .
-
-mdo:Site a owl:Class ;
-    rdfs:label "Site"@en ;
-    rdfs:subClassOf [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:allValuesFrom mdo:CoordinateVector ;
-                        owl:onProperty mdo:hasFractionalCoordinates ] [ a owl:Restriction ;
-                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                        owl:onClass mdo:CoordinateVector ;
-                        owl:onProperty mdo:hasFractionalCoordinates ] ) ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:allValuesFrom mdo:CoordinateVector ;
-                        owl:onProperty mdo:hasCartesianCoordinates ] [ a owl:Restriction ;
-                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                        owl:onClass mdo:CoordinateVector ;
-                        owl:onProperty mdo:hasCartesianCoordinates ] ) ] ;
-    skos:defintion "A site is a point in a lattice."@en .
-
-cso:LatticeParameterAngle a owl:Class ;
-    rdfs:label "Lattice Parameter Angle"@en ;
-    rdfs:subClassOf [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onDataRange xsd:double ;
-                        owl:onProperty cso:latticeParameterAngleAlpha ;
-                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] [ a owl:Restriction ;
-                        owl:onDataRange xsd:double ;
-                        owl:onProperty cso:latticeParameterAngleBeta ;
-                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] [ a owl:Restriction ;
-                        owl:onDataRange xsd:double ;
-                        owl:onProperty cso:latticeParameterAngleGamma ;
-                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ) ] ;
-    skos:defintion "The three angles of edges in lattice parameter lengths characterizing the unit cell."@en .
-
-cso:LatticeParameterLength a owl:Class ;
-    rdfs:label "Lattice Parameter Length"@en ;
-    rdfs:subClassOf [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onDataRange xsd:double ;
-                        owl:onProperty cso:latticeParameterLengthA ;
-                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] [ a owl:Restriction ;
-                        owl:onDataRange xsd:double ;
-                        owl:onProperty cso:latticeParameterLengthB ;
-                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] [ a owl:Restriction ;
-                        owl:onDataRange xsd:double ;
-                        owl:onProperty cso:latticeParameterLengthC ;
-                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ) ] ;
-    skos:defintion "The three edges characterize the unit cell that parallelepiped."@en .
-
-mdo:Occupancy a owl:Class ;
-    rdfs:label "Occupancy"@en ;
-    rdfs:subClassOf [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty mdo:hasSpecies ;
-                        owl:someValuesFrom mdo:Species ] [ a owl:Restriction ;
-                        owl:allValuesFrom mdo:Species ;
-                        owl:onProperty mdo:hasSpecies ] ) ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty mdo:hasSite ;
-                        owl:someValuesFrom mdo:Site ] [ a owl:Restriction ;
-                        owl:allValuesFrom mdo:Site ;
-                        owl:onProperty mdo:hasSite ] ) ] ;
-    skos:defintion "An occupancy ties a specific species to a site."@en .
-
-mdo:Species a owl:Class ;
-    rdfs:label "Species"@en ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:onClass <http://purl.obolibrary.org/obo/CHEBI_33250> ;
-            owl:onProperty mdo:hasElement ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ;
-    skos:defintion "A species is the combination of atoms on each site."@en .
+cdo:CrystallographicDefect a owl:Class ;
+    rdfs:label "Crystallographic Defect"@en ;
+    rdfs:comment "Lattice irregularity having one or more of its dimensions on the order of an atomic diameter."@en .
 
 ex:loop_8_discretized_line a diso:DiscretizedLine ;
     diso:slipArea 2.313398e+03 .
@@ -4222,231 +3740,8 @@ ex:node_122 a diso:Node ;
 ex:node_58 a diso:Node ;
     cso:hasPositionVector ex:node_58_position_vector .
 
-cso:Vector a owl:Class ;
-    rdfs:label "Vector"@en ;
-    rdfs:comment "(Euclidean) vector used to represent quantities that both magnitude and direction."@en ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:onDataRange xsd:double ;
-            owl:onProperty cso:vectorMagnitude ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty cso:hasVectorComponents ;
-                        owl:someValuesFrom cso:VectorComponentsOfBasis ] [ a owl:Restriction ;
-                        owl:allValuesFrom cso:VectorComponentsOfBasis ;
-                        owl:onProperty cso:hasVectorComponents ] ) ] ;
-    skos:defintion "(Euclidean) vector used to represent quantities that both magnitude and direction."@en .
-
-diso:hasLatticeDirection a owl:ObjectProperty ;
-    rdfs:label "has lattice direction"@en ;
-    rdfs:comment "hasLatticeDirection represents the relationship between a lattice or a lattice plane and lattice directions."@en ;
-    rdfs:range diso:LatticeDirection .
-
-diso:hasLatticePoint a owl:ObjectProperty ;
-    rdfs:label "has lattice point"@en ;
-    rdfs:comment "hasLatticePoint represents the relationship between a lattice or lattice plane or lattice direction with lattice points."@en ;
-    rdfs:domain [ a owl:Class ;
-            owl:unionOf ( cso:Lattice diso:LatticeDirection diso:LatticePlane ) ] ;
-    rdfs:range diso:LatticePoint .
-
-cso:Lattice a owl:Class ;
-    rdfs:label "Lattice"@en ;
-    rdfs:comment "A lattice defines a periodic arrangement of one or more atoms."@en,
-        "A mathematical repsentation to represent the periodicity of a crystal."@en ;
-    rdfs:subClassOf [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty cso:hasBasis ;
-                        owl:someValuesFrom mdo:Basis ] [ a owl:Restriction ;
-                        owl:allValuesFrom mdo:Basis ;
-                        owl:onProperty cso:hasBasis ] ) ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty diso:hasLatticeDirection ;
-                        owl:someValuesFrom diso:LatticeDirection ] [ a owl:Restriction ;
-                        owl:allValuesFrom diso:LatticeDirection ;
-                        owl:onProperty diso:hasLatticeDirection ] ) ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty diso:hasLatticePlane ;
-                        owl:someValuesFrom diso:LatticePlane ] [ a owl:Restriction ;
-                        owl:allValuesFrom diso:LatticeDirection ;
-                        owl:onProperty diso:hasLatticeDirection ] ) ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty diso:hasLatticePoint ;
-                        owl:someValuesFrom diso:LatticePoint ] [ a owl:Restriction ;
-                        owl:allValuesFrom diso:LatticePoint ;
-                        owl:onProperty diso:hasLatticePoint ] ) ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty cso:hasCrystalSystem ;
-                        owl:someValuesFrom cso:CrystalSystem ] [ a owl:Restriction ;
-                        owl:allValuesFrom cso:CrystalSystem ;
-                        owl:onProperty cso:hasCrystalSystem ] ) ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty cso:hasUnitCell ;
-                        owl:someValuesFrom cso:UnitCell ] [ a owl:Restriction ;
-                        owl:allValuesFrom cso:UnitCell ;
-                        owl:onProperty cso:hasUnitCell ] ) ] ;
-    skos:defintion "A lattice defines a periodic arrangement of one or more atoms."@en .
-
-diso:LatticePlane a owl:Class ;
-    rdfs:label "Lattice Plane"@en ;
-    rdfs:comment "Lattice plane, forms an infinitely stretched plane (characterized through a plane normal) that cuts through lattice points such that again a regular arrangement of lattice points in the plane occurs."@en ;
-    rdfs:subClassOf [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty diso:hasLatticePoint ;
-                        owl:someValuesFrom diso:LatticePoint ] [ a owl:Restriction ;
-                        owl:allValuesFrom diso:LatticePoint ;
-                        owl:onProperty diso:hasLatticePoint ] ) ],
-        [ a owl:Restriction ;
-            owl:onDataRange xsd:string ;
-            owl:onProperty diso:planeMillerIndice ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty diso:hasLatticeDirection ;
-                        owl:someValuesFrom diso:LatticeDirection ] [ a owl:Restriction ;
-                        owl:allValuesFrom diso:LatticeDirection ;
-                        owl:onProperty diso:hasLatticeDirection ] ) ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom diso:Origin ;
-            owl:onProperty diso:hasOrigin ],
-        diso:FamilyOfCrystalPlane .
-
-diso:LatticePoint a owl:Class ;
-    rdfs:label "Lattice Point"@en ;
-    rdfs:comment "Lattice points are the points where atoms or molecules are located"@en ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom cso:PositionVector ;
-            owl:onProperty cso:hasPositionVector ] .
-
-mdo:Basis a owl:Class ;
-    rdfs:label "Basis"@en ;
-    rdfs:comment "A basis defines a spatial unit used to express fractional coordinates."@en ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:onClass mdo:CoordinateVector ;
-            owl:onProperty cso:hasThirdAxisVector ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
-        [ a owl:Restriction ;
-            owl:onClass mdo:CoordinateVector ;
-            owl:onProperty cso:hasSecondAxisVector ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
-        [ a owl:Restriction ;
-            owl:onClass mdo:CoordinateVector ;
-            owl:onProperty cso:hasFirstAxisVector ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ;
-    skos:defintion "Set of vector(in 2-D two vectors and in 3-D three vectors) that linearly independent."@en .
-
-cso:CrystalSystem a owl:Class ;
-    rdfs:label "Crystal System"@en ;
-    skos:defintion "A classification scheme for crystal structures on the basis of unit cell geometry."@en .
-
-diso:LatticeDirection a owl:Class ;
-    rdfs:label "Lattice Direction"@en ;
-    rdfs:comment "A direction inside the lattice that connecting two lattice points."@en ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:onDataRange xsd:string ;
-            owl:onProperty diso:directionMillerIndice ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty diso:hasLatticePoint ;
-                        owl:someValuesFrom diso:LatticePoint ] [ a owl:Restriction ;
-                        owl:allValuesFrom diso:LatticePoint ;
-                        owl:onProperty diso:hasLatticePoint ] ) ],
-        cso:Vector,
-        diso:FamilyOfCrystalDirection .
-
-diso:Line a owl:Class ;
-    rdfs:label "Line"@en ;
-    rdfs:comment "Mathematical representation of dislocation as 'Line'. An instance of mathematical representation of dislocation line is an oriented curve paramterized by its arc length."@en ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty diso:hasNumericalRepresentation ;
-            owl:someValuesFrom diso:DiscretizedLine ] .
-
-diso:Origin a owl:Class ;
-    rdfs:label "Origin"@en ;
-    rdfs:comment "Origin is fixed point which is needed by vector to identify other points in the space relatives to its origin."@en ;
-    rdfs:subClassOf cso:PositionVector .
-
-diso:BurgersVector a owl:Class ;
-    rdfs:label "Burgers Vector"@en ;
-    rdfs:comment "An elementary unit (length order of lattice parameter) of lattice translation."@en,
-        "The basic notion of Burgers vector comes from the closure failure of initially perfect lattice due to the existance of dislocation. The magnitude and direction of closure failure is characterized by Burgers vector."@en ;
-    rdfs:subClassOf cso:Vector .
-
 diso:Dislocation a owl:Class ;
-    rdfs:label "Versetzung"@de,
-        "Dislocation"@en ;
-    rdfs:comment "A line object that is a boundary separating the regions on the slip plane which have undergone slip from those that have not."@en,
-        "Linear or one-dimensional defect around which some of the atoms are misaligned."@en,
-        "Presence of dislocation introduces local disturbance of the atomic-level geometry."@en ;
-    rdfs:subClassOf [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty diso:hasBurgersVector ;
-                        owl:someValuesFrom diso:BurgersVector ] [ a owl:Restriction ;
-                        owl:allValuesFrom diso:BurgersVector ;
-                        owl:onProperty diso:hasBurgersVector ] ) ],
-        [ a owl:Restriction ;
-            owl:onProperty diso:hasMathematicalRepresentation ;
-            owl:someValuesFrom diso:Line ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty diso:hasLineSense ;
-                        owl:someValuesFrom diso:LineSense ] [ a owl:Restriction ;
-                        owl:allValuesFrom diso:LineSense ;
-                        owl:onProperty diso:hasLineSense ] ) ],
-        [ a owl:Restriction ;
-            owl:onProperty diso:movesOn ;
-            owl:someValuesFrom diso:SlipPlane ] .
-
-diso:SlipDirection a owl:Class ;
-    rdfs:label "Slip Direction"@en ;
-    rdfs:comment "The direction in the slip plane corresponding to one of the shortest lattice translation vectors."@en ;
-    rdfs:subClassOf diso:LatticeDirection .
-
-diso:SlipPlane a owl:Class ;
-    rdfs:label "Slip Plane"@en ;
-    rdfs:comment "Slip plane is normally the plane with the highest density of atoms, i.e. those which are most widely spaced."@en,
-        "The crystallographic plane along which the dislocation line traverses."@en ;
-    rdfs:subClassOf [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty diso:hasSlipPlaneNormal ;
-                        owl:someValuesFrom diso:SlipPlaneNormal ] [ a owl:Restriction ;
-                        owl:allValuesFrom diso:SlipPlaneNormal ;
-                        owl:onProperty diso:hasSlipPlaneNormal ] ) ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty diso:hasSlipDirection ;
-                        owl:someValuesFrom diso:SlipDirection ] [ a owl:Restriction ;
-                        owl:allValuesFrom diso:SlipDirection ;
-                        owl:onProperty diso:hasSlipDirection ] ) ],
-        diso:LatticePlane .
-
-diso:SlipPlaneNormal a owl:Class ;
-    rdfs:label "Slip Plane Normal"@en ;
-    rdfs:comment "Unit normal vector of slip planes"@en ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:onDataRange xsd:string ;
-            owl:onProperty diso:directionMillerIndice ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
-        cso:Vector .
-
-diso:DiscretizedLine a owl:Class ;
-    rdfs:label "Discretized Line"@en ;
-    rdfs:comment "The numerical representation of dislocation line as a mathematical line, e.g. an oriented curve, is being discretized into the number of segments."@en ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom diso:ShapeFunction ;
-            owl:onProperty diso:hasShapeFunction ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom diso:Segment ;
-            owl:onProperty diso:hasSegment ],
-        [ a owl:Restriction ;
-            owl:onDataRange xsd:int ;
-            owl:onProperty diso:dislocationID ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] .
+    rdfs:subClassOf cdo:CrystallographicDefect .
 
 ex:loop_6_discretized_line a diso:DiscretizedLine ;
     diso:slipArea 2.517926e+05 .
@@ -4456,22 +3751,6 @@ ex:loop_9_discretized_line a diso:DiscretizedLine ;
 
 ex:quantity_value_unitless a qudt:QuantityValue ;
     qudt:unit unit:UNITLESS .
-
-mdo:CoordinateVector a owl:Class ;
-    rdfs:label "Coordinate Vector"@en ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:onDataRange xsd:double ;
-            owl:onProperty mdo:X_axisCoordinate ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
-        [ a owl:Restriction ;
-            owl:onDataRange xsd:double ;
-            owl:onProperty mdo:Z_axisCoordinate ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
-        [ a owl:Restriction ;
-            owl:onDataRange xsd:double ;
-            owl:onProperty mdo:Y_axisCoordinate ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ;
-    skos:defintion "A coordinate vector according to standard basis, i.e., e_x (1, 0, 0), e_y(0, 1, 0), and e_z (0, 0, 1)."@en .
 
 ex:loop_1_discretized_line a diso:DiscretizedLine ;
     diso:slipArea 8.653104e+05 .
@@ -4491,57 +3770,17 @@ ex:loop_4_discretized_line a diso:DiscretizedLine ;
 ex:loop_7_discretized_line a diso:DiscretizedLine ;
     diso:slipArea 2.53093e+06 .
 
-cso:PositionVector a owl:Class ;
-    rdfs:label "Position Vector",
-        "Position Vector"@en ;
-    rdfs:comment "Position vector is a Euclidean vector that represents the position of a point P in space in relation to an arbitrary reference origin O."@en ;
-    rdfs:subClassOf cso:Vector ;
-    skos:defintion "Position vector is a Euclidean vector that represents the position of a point P in space in relation to an arbitrary reference origin O."@en .
-
-diso:Node a owl:Class ;
-    rdfs:label "Node"@en ;
-    rdfs:comment "Node of a segment"@en ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom cso:PositionVector ;
-            owl:onProperty cso:hasPositionVector ] .
-
 ex:quantity_value_M a qudt:QuantityValue ;
     qudt:unit unit:M .
-
-diso:Segment a owl:Class ;
-    rdfs:label "Segment"@en ;
-    rdfs:comment "A segment is a part of a line that is bounded by two distinct end points, and contains every point on the line that is between its endpoints."@en ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom diso:Node ;
-            owl:onProperty diso:hasNode ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom diso:DiscretizedLine ;
-            owl:onProperty diso:isSegmentOf ] .
 
 ex:coordinate_basis a mdo:Basis ;
     cso:hasFirstAxisVector ex:crystal_coordinate_first_axis ;
     cso:hasSecondAxisVector ex:crystal_coordinate_second_axis ;
     cso:hasThirdAxisVector ex:crystal_coordinate_third_axis .
 
-cso:VectorComponentsOfBasis a owl:Class ;
-    rdfs:label "Vector Components of Basis"@en ;
-    rdfs:subClassOf [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty cso:hasBasis ;
-                        owl:someValuesFrom mdo:Basis ] [ a owl:Restriction ;
-                        owl:allValuesFrom mdo:Basis ;
-                        owl:onProperty cso:hasBasis ] ) ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onDataRange xsd:double ;
-                        owl:onProperty cso:firstAxisComponent ;
-                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] [ a owl:Restriction ;
-                        owl:onDataRange xsd:double ;
-                        owl:onProperty cso:secondAxisComponent ;
-                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] [ a owl:Restriction ;
-                        owl:onDataRange xsd:double ;
-                        owl:onProperty cso:thirdAxisComponent ;
-                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ) ],
-        qudt:Quantity ;
-    skos:defintion "Vector components/vector coordinates of particular basis. It has relation to a specific basis."@en .
+[] owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger .
+
+[] owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger .
+
+[] owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger .
 
