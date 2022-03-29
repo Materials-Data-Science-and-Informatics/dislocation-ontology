@@ -270,6 +270,25 @@
     
 
 
+    <!-- https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl#isPointGroupOf -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl#isPointGroupOf">
+        <rdfs:comment xml:lang="en">inverse property of hasPointGroup</rdfs:comment>
+        <rdfs:label xml:lang="en">is point group of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl#isSpaceGroupOf -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl#isSpaceGroupOf">
+        <owl:inverseOf rdf:resource="https://w3id.org/mdo/structure/hasSpaceGroup"/>
+        <rdfs:comment xml:lang="en">inverse property of hasSpaceGroup</rdfs:comment>
+        <rdfs:label xml:lang="en">is space group of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/mdo/structure/hasCartesianCoordinates -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/mdo/structure/hasCartesianCoordinates">
@@ -316,7 +335,14 @@
     <!-- https://w3id.org/mdo/structure/hasPointGroup -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/mdo/structure/hasPointGroup">
-        <rdfs:domain rdf:resource="https://w3id.org/mdo/structure/SpaceGroup"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl#CrystalSystem"/>
+                    <rdf:Description rdf:about="https://w3id.org/mdo/structure/SpaceGroup"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="https://w3id.org/mdo/structure/PointGroup"/>
         <rdfs:comment xml:lang="en">hasPointGroup represents the relationship between a space group and point groups it corresponds to.</rdfs:comment>
         <rdfs:label xml:lang="en">has point group</rdfs:label>
@@ -338,6 +364,7 @@
     <!-- https://w3id.org/mdo/structure/hasSpaceGroup -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/mdo/structure/hasSpaceGroup">
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl#CrystalStructure"/>
         <rdfs:range rdf:resource="https://w3id.org/mdo/structure/SpaceGroup"/>
         <rdfs:comment xml:lang="en">hasSpaceGroup represents the relationship between a structure and a space group it corresponds to.</rdfs:comment>
         <rdfs:label xml:lang="en">has space group</rdfs:label>
@@ -743,6 +770,21 @@
     <!-- https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl#CrystalSystem -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl#CrystalSystem">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/mdo/structure/hasPointGroup"/>
+                        <owl:allValuesFrom rdf:resource="https://w3id.org/mdo/structure/PointGroup"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/mdo/structure/hasPointGroup"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="https://w3id.org/mdo/structure/PointGroup"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Crystal System</rdfs:label>
         <skos:defintion xml:lang="en">A classification scheme for crystal structures on the basis of unit cell geometry.</skos:defintion>
     </owl:Class>
