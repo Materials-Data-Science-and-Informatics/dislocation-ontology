@@ -466,7 +466,6 @@
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">Crystal Structure</rdfs:label>
     </owl:Class>
     
 
