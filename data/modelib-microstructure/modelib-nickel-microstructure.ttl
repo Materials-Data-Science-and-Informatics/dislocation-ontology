@@ -3101,7 +3101,7 @@ ex:point_group a mdo:PointGroup ;
 ex:space_group a mdo:SpaceGroup ;
     mdo:SpaceGroupID 225 ;
     mdo:SpaceGroupSymbol "Fm-3m"^^xsd:string ;
-    mdo:hasPointgroup ex:point_group .
+    mdo:hasPointGroup ex:point_group .
 
 ex:unit_cell a cso:UnitCell ;
     cso:hasLatticeParameterAngle ex:lattice_parameter_angle ;

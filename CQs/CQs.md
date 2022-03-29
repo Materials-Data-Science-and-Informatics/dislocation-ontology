@@ -435,7 +435,7 @@ SELECT  ?crystal_structure ?space_group ?point_group WHERE{
 	?crystal_structure a cso:CrystalStructure;
 		mdo:hasSpaceGroup ?sg.
 	?sg mdo:hasPointGroup ?pg ;
-	 	mdo:SpaceGroupSymbol ?space_group;
+	 	mdo:SpaceGroupSymbol ?space_group . 
 	?pg mdo:PointGroupHMName ?point_group .
 }
 ```
@@ -452,9 +452,10 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT  ?crystal_structure ?centering WHERE{
-	?crystal_structure a cso:CrystalStructure;
-		cso:hasLattice ?bravais_lattice;
-	?bravais_lattice cso:centering ?centering
+SELECT  ?point_group ?crystal_system WHERE{
+	?point_group a mdo:PointGroup;
+		cso:isPointGroupOf ?cs.
+	?cs rdf:type cso:CrystalSystem.
+	?cs rdf:type ?crystal_system
 }
 ```
