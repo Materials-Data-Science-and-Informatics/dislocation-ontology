@@ -273,6 +273,7 @@
     <!-- https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl#isPointGroupOf -->
 
     <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl#isPointGroupOf">
+        <owl:inverseOf rdf:resource="https://w3id.org/mdo/structure/hasPointGroup"/>
         <rdfs:comment xml:lang="en">inverse property of hasPointGroup</rdfs:comment>
         <rdfs:label xml:lang="en">is point group of</rdfs:label>
     </owl:ObjectProperty>
