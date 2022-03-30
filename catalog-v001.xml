@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
-    <uri id="Imports Wizard Entry" name="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl" uri="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl"/>
-    <uri id="Imports Wizard Entry" name="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl" uri="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl"/>
+    <uri id="Imports Wizard Entry" name="https://purls.helmholtz-metadaten.de/diso" uri="https://purls.helmholtz-metadaten.de/diso"/>
+    <uri id="Imports Wizard Entry" name="https://purls.helmholtz-metadaten.de/cso" uri="https://purls.helmholtz-metadaten.de/cso"/>
 </catalog>
