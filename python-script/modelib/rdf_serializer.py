@@ -4,9 +4,9 @@ import numpy as np
 
 
 #crystal structure ontology
-CSO = Namespace("https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl#")
+CSO = Namespace("https://purls.helmholtz-metadaten.de/cso#")
 #dislocation ontology
-DISO = Namespace("https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl#")
+DISO = Namespace("https://purls.helmholtz-metadaten.de/diso#")
 #crystalline-defect-ontology
 CDO = Namespace("https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystalline-defect-ontology.owl#")
 MDO = Namespace("https://w3id.org/mdo/structure/")
