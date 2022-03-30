@@ -1,7 +1,7 @@
 @prefix : <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystalline-defect-ontology.owl> .
 @prefix cdo: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystalline-defect-ontology.owl#> .
-@prefix cso: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl#> .
-@prefix diso: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl#> .
+@prefix cso: <https://purls.helmholtz-metadaten.de/cso#> .
+@prefix diso: <https://purls.helmholtz-metadaten.de/diso#> .
 @prefix ex: <http://example.org/dislocation-microstructure/> .
 @prefix mdo: <https://w3id.org/mdo/structure/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -867,6 +867,9 @@ cdo:GrainBoundary a owl:Class ;
     rdfs:subClassOf cdo:CrystallographicDefect .
 
 cdo:PointDefect a owl:Class ;
+    rdfs:subClassOf cdo:CrystallographicDefect .
+
+<https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl#Dislocation> a owl:Class ;
     rdfs:subClassOf cdo:CrystallographicDefect .
 
 ex:Bravais_lattice a cso:BravaisLattice ;
@@ -3119,8 +3122,8 @@ cdo:CrystallineMaterial a owl:Class ;
         [ a owl:Class ;
             owl:intersectionOf ( [ a owl:Restriction ;
                         owl:onProperty cdo:hasCrystalStructure ;
-                        owl:someValuesFrom cso:CrystalStructure ] [ a owl:Restriction ;
-                        owl:allValuesFrom cso:CrystalStructure ;
+                        owl:someValuesFrom <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl#CrystalStructure> ] [ a owl:Restriction ;
+                        owl:allValuesFrom <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl#CrystalStructure> ;
                         owl:onProperty cdo:hasCrystalStructure ] ) ] .
 
 ex:crystal_system a cso:Cubic .
@@ -3749,9 +3752,6 @@ ex:node_122 a diso:Node ;
 
 ex:node_58 a diso:Node ;
     cso:hasPositionVector ex:node_58_position_vector .
-
-diso:Dislocation a owl:Class ;
-    rdfs:subClassOf cdo:CrystallographicDefect .
 
 ex:loop_6_discretized_line a diso:DiscretizedLine ;
     diso:slipArea 2.517926e+05 .
