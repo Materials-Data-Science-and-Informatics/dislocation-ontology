@@ -1,5 +1,5 @@
-@prefix : <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystalline-defect-ontology.owl> .
-@prefix cdo: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystalline-defect-ontology.owl#> .
+@prefix : <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystallographic-defect-ontology.owl> .
+@prefix cdo: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystallographic-defect-ontology.owl#> .
 @prefix cso: <https://purls.helmholtz-metadaten.de/cso#> .
 @prefix diso: <https://purls.helmholtz-metadaten.de/diso#> .
 @prefix ex: <http://example.org/dislocation-microstructure/> .
@@ -9,6 +9,7 @@
 @prefix qudt: <http://qudt.org/schema/qudt/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix terms: <http://purl.org/dc/terms/> .
 @prefix unit: <http://qudt.org/vocab/unit/> .
 @prefix vann: <http://purl.org/vocab/vann/> .
@@ -853,6 +854,9 @@ ex:linker_99 a diso:Segment ;
 
 owl:qualifiedCardinality a owl:AnnotationProperty .
 
+skos:prefLabel a owl:AnnotationProperty ;
+    rdfs:subPropertyOf rdfs:label .
+
 : a owl:Ontology ;
     terms:contributor "Stefan Sandfeld"^^xsd:string ;
     terms:created "21.03.2022"@en ;
@@ -871,6 +875,11 @@ cdo:PointDefect a owl:Class ;
 
 <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl#Dislocation> a owl:Class ;
     rdfs:subClassOf cdo:CrystallographicDefect .
+
+<http://emmo.info/emmo/middle/physicalistic#EMMO_4207e895_8b83_4318_996a_72cfb32acd94> a owl:Class ;
+    rdfs:comment "A instance of a material (e.g. nitrogen) can represent different states of matter. The fact that the individual also belongs to other classes (e.g. Gas) would reveal the actual form in which the material is found."@en,
+        "Material usually means some definite kind, quality, or quantity of matter, especially as intended for use."@en ;
+    skos:prefLabel "Material"@en .
 
 ex:Bravais_lattice a cso:BravaisLattice ;
     cso:centering "F"^^xsd:string ;
@@ -3124,7 +3133,8 @@ cdo:CrystallineMaterial a owl:Class ;
                         owl:onProperty cdo:hasCrystalStructure ;
                         owl:someValuesFrom <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl#CrystalStructure> ] [ a owl:Restriction ;
                         owl:allValuesFrom <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl#CrystalStructure> ;
-                        owl:onProperty cdo:hasCrystalStructure ] ) ] .
+                        owl:onProperty cdo:hasCrystalStructure ] ) ],
+        <http://emmo.info/emmo/middle/physicalistic#EMMO_4207e895_8b83_4318_996a_72cfb32acd94> .
 
 ex:crystal_system a cso:Cubic .
 
@@ -3723,6 +3733,8 @@ ex:node_98 a diso:Node ;
 
 ex:node_99 a diso:Node ;
     cso:hasPositionVector ex:node_99_position_vector .
+
+<https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl#CrystalStructure> a owl:Class .
 
 cdo:hasCrystalStructure a owl:ObjectProperty .
 
