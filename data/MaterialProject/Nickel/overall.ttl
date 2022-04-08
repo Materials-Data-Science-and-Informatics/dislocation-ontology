@@ -1,13 +1,13 @@
 @prefix : <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystalline-defect-ontology.owl> .
 @prefix cdo: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystalline-defect-ontology.owl#> .
 @prefix chebi: <http://purl.obolibrary.org/obo/> .
-@prefix cso: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl#> .
-@prefix diso: <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl#> .
-@prefix ex: <www.example.org/Ni_mp-1014111_conventional_standard/> .
-@prefix ex1: <www.example.org/Ni_mp-1008728_conventional_standard/> .
+@prefix cso: <https://purls.helmholtz-metadaten.de/cso#> .
+@prefix diso: <https://purls.helmholtz-metadaten.de/diso#> .
+@prefix ex: <www.example.org/Ni_mp-1008728_conventional_standard/> .
+@prefix ex1: <www.example.org/Ni_mp-1094136_conventional_standard/> .
 @prefix ex11: <www.example.org/Ni_mp-23_conventional_standard/> .
-@prefix ex12: <www.example.org/Ni_mp-1094136_conventional_standard/> .
 @prefix ex2: <www.example.org/Ni_mp-10257_conventional_standard/> .
+@prefix ex3: <www.example.org/Ni_mp-1014111_conventional_standard/> .
 @prefix mdo: <https://w3id.org/mdo/structure/> .
 @prefix ns1: <http://purl.obolibrary.org/obo/chebi/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -47,32 +47,8 @@ cdo:CrystallineMaterial a owl:Class ;
         [ a owl:Class ;
             owl:intersectionOf ( [ a owl:Restriction ;
                         owl:onProperty cdo:hasCrystalStructure ;
-                        owl:someValuesFrom cso:CrystalStructure ] [ a owl:Restriction ;
-                        owl:allValuesFrom cso:CrystalStructure ;
-                        owl:onProperty cdo:hasCrystalStructure ] ) ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty cdo:hasCrystalStructure ;
-                        owl:someValuesFrom cso:CrystalStructure ] [ a owl:Restriction ;
-                        owl:allValuesFrom cso:CrystalStructure ;
-                        owl:onProperty cdo:hasCrystalStructure ] ) ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty cdo:hasCrystallographicDefect ;
-                        owl:someValuesFrom cdo:CrystallographicDefect ] [ a owl:Restriction ;
-                        owl:allValuesFrom cdo:CrystallographicDefect ;
-                        owl:onProperty cdo:hasCrystallographicDefect ] ) ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty cdo:hasCrystallographicDefect ;
-                        owl:someValuesFrom cdo:CrystallographicDefect ] [ a owl:Restriction ;
-                        owl:allValuesFrom cdo:CrystallographicDefect ;
-                        owl:onProperty cdo:hasCrystallographicDefect ] ) ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty cdo:hasCrystalStructure ;
-                        owl:someValuesFrom cso:CrystalStructure ] [ a owl:Restriction ;
-                        owl:allValuesFrom cso:CrystalStructure ;
+                        owl:someValuesFrom <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl#CrystalStructure> ] [ a owl:Restriction ;
+                        owl:allValuesFrom <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl#CrystalStructure> ;
                         owl:onProperty cdo:hasCrystalStructure ] ) ],
         [ a owl:Class ;
             owl:intersectionOf ( [ a owl:Restriction ;
@@ -83,14 +59,38 @@ cdo:CrystallineMaterial a owl:Class ;
         [ a owl:Class ;
             owl:intersectionOf ( [ a owl:Restriction ;
                         owl:onProperty cdo:hasCrystalStructure ;
-                        owl:someValuesFrom cso:CrystalStructure ] [ a owl:Restriction ;
-                        owl:allValuesFrom cso:CrystalStructure ;
+                        owl:someValuesFrom <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl#CrystalStructure> ] [ a owl:Restriction ;
+                        owl:allValuesFrom <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl#CrystalStructure> ;
                         owl:onProperty cdo:hasCrystalStructure ] ) ],
         [ a owl:Class ;
             owl:intersectionOf ( [ a owl:Restriction ;
                         owl:onProperty cdo:hasCrystalStructure ;
-                        owl:someValuesFrom cso:CrystalStructure ] [ a owl:Restriction ;
-                        owl:allValuesFrom cso:CrystalStructure ;
+                        owl:someValuesFrom <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl#CrystalStructure> ] [ a owl:Restriction ;
+                        owl:allValuesFrom <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl#CrystalStructure> ;
+                        owl:onProperty cdo:hasCrystalStructure ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty cdo:hasCrystallographicDefect ;
+                        owl:someValuesFrom cdo:CrystallographicDefect ] [ a owl:Restriction ;
+                        owl:allValuesFrom cdo:CrystallographicDefect ;
+                        owl:onProperty cdo:hasCrystallographicDefect ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty cdo:hasCrystalStructure ;
+                        owl:someValuesFrom <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl#CrystalStructure> ] [ a owl:Restriction ;
+                        owl:allValuesFrom <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl#CrystalStructure> ;
+                        owl:onProperty cdo:hasCrystalStructure ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty cdo:hasCrystallographicDefect ;
+                        owl:someValuesFrom cdo:CrystallographicDefect ] [ a owl:Restriction ;
+                        owl:allValuesFrom cdo:CrystallographicDefect ;
+                        owl:onProperty cdo:hasCrystallographicDefect ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty cdo:hasCrystalStructure ;
+                        owl:someValuesFrom <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl#CrystalStructure> ] [ a owl:Restriction ;
+                        owl:allValuesFrom <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl#CrystalStructure> ;
                         owl:onProperty cdo:hasCrystalStructure ] ) ] .
 
 cdo:GrainBoundary a owl:Class ;
@@ -99,50 +99,50 @@ cdo:GrainBoundary a owl:Class ;
 cdo:PointDefect a owl:Class ;
     rdfs:subClassOf cdo:CrystallographicDefect .
 
-diso:Dislocation a owl:Class ;
+<https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/dislocation-ontology.owl#Dislocation> a owl:Class ;
     rdfs:subClassOf cdo:CrystallographicDefect .
 
-ex1:Ni_mp-1008728_conventional_standard_crystal_strcture a cso:CrystalStructure ;
-    cso:hasLattice ex1:Ni_mp-1008728_conventional_standard_lattice ;
-    diso:hasSlipPlane ex1:mp-23_slip_plane_0,
-        ex1:mp-23_slip_plane_1,
-        ex1:mp-23_slip_plane_2,
-        ex1:mp-23_slip_plane_3 ;
-    diso:hasSlipSystem ex1:mp-23_slip_system_0,
-        ex1:mp-23_slip_system_1,
-        ex1:mp-23_slip_system_10,
-        ex1:mp-23_slip_system_11,
-        ex1:mp-23_slip_system_2,
-        ex1:mp-23_slip_system_3,
-        ex1:mp-23_slip_system_4,
-        ex1:mp-23_slip_system_5,
-        ex1:mp-23_slip_system_6,
-        ex1:mp-23_slip_system_7,
-        ex1:mp-23_slip_system_8,
-        ex1:mp-23_slip_system_9 ;
-    mdo:hasOccupancy ex1:Ni_mp-1008728_conventional_standard_occupancy_0,
-        ex1:Ni_mp-1008728_conventional_standard_occupancy_1 .
+ex:Ni_mp-1008728_conventional_standard_crystal_strcture a cso:CrystalStructure ;
+    cso:hasLattice ex:Ni_mp-1008728_conventional_standard_lattice ;
+    diso:hasSlipPlane ex:mp-23_slip_plane_0,
+        ex:mp-23_slip_plane_1,
+        ex:mp-23_slip_plane_2,
+        ex:mp-23_slip_plane_3 ;
+    diso:hasSlipSystem ex:mp-23_slip_system_0,
+        ex:mp-23_slip_system_1,
+        ex:mp-23_slip_system_10,
+        ex:mp-23_slip_system_11,
+        ex:mp-23_slip_system_2,
+        ex:mp-23_slip_system_3,
+        ex:mp-23_slip_system_4,
+        ex:mp-23_slip_system_5,
+        ex:mp-23_slip_system_6,
+        ex:mp-23_slip_system_7,
+        ex:mp-23_slip_system_8,
+        ex:mp-23_slip_system_9 ;
+    mdo:hasOccupancy ex:Ni_mp-1008728_conventional_standard_occupancy_0,
+        ex:Ni_mp-1008728_conventional_standard_occupancy_1 .
 
-ex1:mp-23_family_crystal_direction a diso:FamilyOfCrystalDirection ;
+ex:mp-23_family_crystal_direction a diso:FamilyOfCrystalDirection ;
     diso:familyDirectionMillerIndice "<110>"^^xsd:string .
 
-ex1:mp-23_family_crystal_plane a diso:FamilyOfCrystalPlane ;
+ex:mp-23_family_crystal_plane a diso:FamilyOfCrystalPlane ;
     diso:familyPlaneMillerIndice "{111}"^^xsd:string .
 
-ex:Ni_mp-1014111_conventional_standard_crystal_strcture a cso:CrystalStructure ;
-    cso:hasLattice ex:Ni_mp-1014111_conventional_standard_lattice ;
-    mdo:hasOccupancy ex:Ni_mp-1014111_conventional_standard_occupancy_0,
-        ex:Ni_mp-1014111_conventional_standard_occupancy_1 .
+ex3:Ni_mp-1014111_conventional_standard_crystal_strcture a cso:CrystalStructure ;
+    cso:hasLattice ex3:Ni_mp-1014111_conventional_standard_lattice ;
+    mdo:hasOccupancy ex3:Ni_mp-1014111_conventional_standard_occupancy_0,
+        ex3:Ni_mp-1014111_conventional_standard_occupancy_1 .
 
 ex2:Ni_mp-10257_conventional_standard_crystal_strcture a cso:CrystalStructure ;
     cso:hasLattice ex2:Ni_mp-10257_conventional_standard_lattice ;
     mdo:hasOccupancy ex2:Ni_mp-10257_conventional_standard_occupancy_0,
         ex2:Ni_mp-10257_conventional_standard_occupancy_1 .
 
-ex12:Ni_mp-1094136_conventional_standard_crystal_strcture a cso:CrystalStructure ;
-    cso:hasLattice ex12:Ni_mp-1094136_conventional_standard_lattice ;
-    mdo:hasOccupancy ex12:Ni_mp-1094136_conventional_standard_occupancy_0,
-        ex12:Ni_mp-1094136_conventional_standard_occupancy_1 .
+ex1:Ni_mp-1094136_conventional_standard_crystal_strcture a cso:CrystalStructure ;
+    cso:hasLattice ex1:Ni_mp-1094136_conventional_standard_lattice ;
+    mdo:hasOccupancy ex1:Ni_mp-1094136_conventional_standard_occupancy_0,
+        ex1:Ni_mp-1094136_conventional_standard_occupancy_1 .
 
 ex11:Ni_mp-23_conventional_standard_crystal_strcture a cso:CrystalStructure ;
     cso:hasLattice ex11:Ni_mp-23_conventional_standard_lattice ;
@@ -151,193 +151,193 @@ ex11:Ni_mp-23_conventional_standard_crystal_strcture a cso:CrystalStructure ;
         ex11:Ni_mp-23_conventional_standard_occupancy_2,
         ex11:Ni_mp-23_conventional_standard_occupancy_3 .
 
-ex1:Ni_mp-1008728_conventional_standard_atom_0 a chebi:CHEBI_33250 ;
+ex:Ni_mp-1008728_conventional_standard_atom_0 a chebi:CHEBI_33250 ;
     ns1:formula "Ni"^^xsd:string .
 
-ex1:Ni_mp-1008728_conventional_standard_atom_1 a chebi:CHEBI_33250 ;
+ex:Ni_mp-1008728_conventional_standard_atom_1 a chebi:CHEBI_33250 ;
     ns1:formula "Ni"^^xsd:string .
 
-ex1:Ni_mp-1008728_conventional_standard_crystal_system a cso:Cubic .
+ex:Ni_mp-1008728_conventional_standard_crystal_system a cso:Cubic .
 
-ex1:Ni_mp-1008728_conventional_standard_frac_coord_0 a mdo:CoordinateVector ;
+ex:Ni_mp-1008728_conventional_standard_frac_coord_0 a mdo:CoordinateVector ;
     mdo:X_axisCoordinate 0e+00 ;
     mdo:Y_axisCoordinate 0e+00 ;
     mdo:Z_axisCoordinate 0e+00 .
 
-ex1:Ni_mp-1008728_conventional_standard_frac_coord_1 a mdo:CoordinateVector ;
+ex:Ni_mp-1008728_conventional_standard_frac_coord_1 a mdo:CoordinateVector ;
     mdo:X_axisCoordinate 5e-01 ;
     mdo:Y_axisCoordinate 5e-01 ;
     mdo:Z_axisCoordinate 5e-01 .
 
-ex1:Ni_mp-1008728_conventional_standard_lattice a cso:Lattice ;
-    cso:hasCrystalSystem ex1:Ni_mp-1008728_conventional_standard_crystal_system ;
-    cso:hasUnitCell ex1:Ni_mp-1008728_conventional_standard_unit_cell .
+ex:Ni_mp-1008728_conventional_standard_lattice a cso:Lattice ;
+    cso:hasCrystalSystem ex:Ni_mp-1008728_conventional_standard_crystal_system ;
+    cso:hasUnitCell ex:Ni_mp-1008728_conventional_standard_unit_cell .
 
-ex1:Ni_mp-1008728_conventional_standard_lattice_parameter_angle a cso:LatticeParameterAngle ;
+ex:Ni_mp-1008728_conventional_standard_lattice_parameter_angle a cso:LatticeParameterAngle ;
     cso:latticeParameterAngleAlpha 9e+01 ;
     cso:latticeParameterAngleBeta 9e+01 ;
     cso:latticeParameterAngleGamma 9e+01 .
 
-ex1:Ni_mp-1008728_conventional_standard_lattice_parameter_length a cso:LatticeParameterLength ;
+ex:Ni_mp-1008728_conventional_standard_lattice_parameter_length a cso:LatticeParameterLength ;
     cso:latticeParameterLengthA 2.790212e+00 ;
     cso:latticeParameterLengthB 2.790212e+00 ;
     cso:latticeParameterLengthC 2.790212e+00 .
 
-ex1:Ni_mp-1008728_conventional_standard_occupancy_0 a mdo:Occupancy ;
-    mdo:hasSite ex1:Ni_mp-1008728_conventional_standard_site_0 ;
-    mdo:hasSpecies ex1:Ni_mp-1008728_conventional_standard_species_0 .
+ex:Ni_mp-1008728_conventional_standard_occupancy_0 a mdo:Occupancy ;
+    mdo:hasSite ex:Ni_mp-1008728_conventional_standard_site_0 ;
+    mdo:hasSpecies ex:Ni_mp-1008728_conventional_standard_species_0 .
 
-ex1:Ni_mp-1008728_conventional_standard_occupancy_1 a mdo:Occupancy ;
-    mdo:hasSite ex1:Ni_mp-1008728_conventional_standard_site_1 ;
-    mdo:hasSpecies ex1:Ni_mp-1008728_conventional_standard_species_1 .
+ex:Ni_mp-1008728_conventional_standard_occupancy_1 a mdo:Occupancy ;
+    mdo:hasSite ex:Ni_mp-1008728_conventional_standard_site_1 ;
+    mdo:hasSpecies ex:Ni_mp-1008728_conventional_standard_species_1 .
 
-ex1:Ni_mp-1008728_conventional_standard_site_0 a mdo:Site ;
-    mdo:hasFractionalCoordinates ex1:Ni_mp-1008728_conventional_standard_frac_coord_0 .
+ex:Ni_mp-1008728_conventional_standard_site_0 a mdo:Site ;
+    mdo:hasFractionalCoordinates ex:Ni_mp-1008728_conventional_standard_frac_coord_0 .
 
-ex1:Ni_mp-1008728_conventional_standard_site_1 a mdo:Site ;
-    mdo:hasFractionalCoordinates ex1:Ni_mp-1008728_conventional_standard_frac_coord_1 .
+ex:Ni_mp-1008728_conventional_standard_site_1 a mdo:Site ;
+    mdo:hasFractionalCoordinates ex:Ni_mp-1008728_conventional_standard_frac_coord_1 .
 
-ex1:Ni_mp-1008728_conventional_standard_species_0 a mdo:Species ;
-    mdo:hasElement ex1:Ni_mp-1008728_conventional_standard_atom_0 .
+ex:Ni_mp-1008728_conventional_standard_species_0 a mdo:Species ;
+    mdo:hasElement ex:Ni_mp-1008728_conventional_standard_atom_0 .
 
-ex1:Ni_mp-1008728_conventional_standard_species_1 a mdo:Species ;
-    mdo:hasElement ex1:Ni_mp-1008728_conventional_standard_atom_1 .
+ex:Ni_mp-1008728_conventional_standard_species_1 a mdo:Species ;
+    mdo:hasElement ex:Ni_mp-1008728_conventional_standard_atom_1 .
 
-ex1:Ni_mp-1008728_conventional_standard_unit_cell a cso:UnitCell ;
-    cso:hasLatticeParameterAngle ex1:Ni_mp-1008728_conventional_standard_lattice_parameter_angle ;
-    cso:hasLatticeParameterLength ex1:Ni_mp-1008728_conventional_standard_lattice_parameter_length .
+ex:Ni_mp-1008728_conventional_standard_unit_cell a cso:UnitCell ;
+    cso:hasLatticeParameterAngle ex:Ni_mp-1008728_conventional_standard_lattice_parameter_angle ;
+    cso:hasLatticeParameterLength ex:Ni_mp-1008728_conventional_standard_lattice_parameter_length .
 
-ex1:mp-23_slip_plane_0 a diso:SlipPlane ;
-    diso:hasNormalVector ex1:mp-23_slip_plane_normal_0 ;
-    diso:hasSlipDirection ex1:mp-23_slip_plane_0_slip_direction_0,
-        ex1:mp-23_slip_plane_0_slip_direction_1,
-        ex1:mp-23_slip_plane_0_slip_direction_2 ;
+ex:mp-23_slip_plane_0 a diso:SlipPlane ;
+    diso:hasNormalVector ex:mp-23_slip_plane_normal_0 ;
+    diso:hasSlipDirection ex:mp-23_slip_plane_0_slip_direction_0,
+        ex:mp-23_slip_plane_0_slip_direction_1,
+        ex:mp-23_slip_plane_0_slip_direction_2 ;
     diso:planeMillerIndice "(11-1)"^^xsd:string .
 
-ex1:mp-23_slip_plane_1 a diso:SlipPlane ;
-    diso:hasNormalVector ex1:mp-23_slip_plane_normal_1 ;
-    diso:hasSlipDirection ex1:mp-23_slip_plane_1_slip_direction_0,
-        ex1:mp-23_slip_plane_1_slip_direction_1,
-        ex1:mp-23_slip_plane_1_slip_direction_2 ;
+ex:mp-23_slip_plane_1 a diso:SlipPlane ;
+    diso:hasNormalVector ex:mp-23_slip_plane_normal_1 ;
+    diso:hasSlipDirection ex:mp-23_slip_plane_1_slip_direction_0,
+        ex:mp-23_slip_plane_1_slip_direction_1,
+        ex:mp-23_slip_plane_1_slip_direction_2 ;
     diso:planeMillerIndice "(111)"^^xsd:string .
 
-ex1:mp-23_slip_plane_2 a diso:SlipPlane ;
-    diso:hasNormalVector ex1:mp-23_slip_plane_normal_2 ;
-    diso:hasSlipDirection ex1:mp-23_slip_plane_2_slip_direction_0,
-        ex1:mp-23_slip_plane_2_slip_direction_1,
-        ex1:mp-23_slip_plane_2_slip_direction_2 ;
+ex:mp-23_slip_plane_2 a diso:SlipPlane ;
+    diso:hasNormalVector ex:mp-23_slip_plane_normal_2 ;
+    diso:hasSlipDirection ex:mp-23_slip_plane_2_slip_direction_0,
+        ex:mp-23_slip_plane_2_slip_direction_1,
+        ex:mp-23_slip_plane_2_slip_direction_2 ;
     diso:planeMillerIndice "(1-11)"^^xsd:string .
 
-ex1:mp-23_slip_plane_3 a diso:SlipPlane ;
-    diso:hasNormalVector ex1:mp-23_slip_plane_normal_3 ;
-    diso:hasSlipDirection ex1:mp-23_slip_plane_3_slip_direction_0,
-        ex1:mp-23_slip_plane_3_slip_direction_1,
-        ex1:mp-23_slip_plane_3_slip_direction_2 ;
+ex:mp-23_slip_plane_3 a diso:SlipPlane ;
+    diso:hasNormalVector ex:mp-23_slip_plane_normal_3 ;
+    diso:hasSlipDirection ex:mp-23_slip_plane_3_slip_direction_0,
+        ex:mp-23_slip_plane_3_slip_direction_1,
+        ex:mp-23_slip_plane_3_slip_direction_2 ;
     diso:planeMillerIndice "(1-1-1)"^^xsd:string .
 
-ex1:mp-23_slip_system_0 a diso:SlipSystem ;
-    diso:hasSlipDirection ex1:mp-23_slip_plane_0_slip_direction_0 ;
-    diso:hasSlipPlaneNormal ex1:mp-23_slip_plane_normal_0 .
+ex:mp-23_slip_system_0 a diso:SlipSystem ;
+    diso:hasSlipDirection ex:mp-23_slip_plane_0_slip_direction_0 ;
+    diso:hasSlipPlaneNormal ex:mp-23_slip_plane_normal_0 .
 
-ex1:mp-23_slip_system_1 a diso:SlipSystem ;
-    diso:hasSlipDirection ex1:mp-23_slip_plane_0_slip_direction_1 ;
-    diso:hasSlipPlaneNormal ex1:mp-23_slip_plane_normal_0 .
+ex:mp-23_slip_system_1 a diso:SlipSystem ;
+    diso:hasSlipDirection ex:mp-23_slip_plane_0_slip_direction_1 ;
+    diso:hasSlipPlaneNormal ex:mp-23_slip_plane_normal_0 .
 
-ex1:mp-23_slip_system_10 a diso:SlipSystem ;
-    diso:hasSlipDirection ex1:mp-23_slip_plane_3_slip_direction_1 ;
-    diso:hasSlipPlaneNormal ex1:mp-23_slip_plane_normal_3 .
+ex:mp-23_slip_system_10 a diso:SlipSystem ;
+    diso:hasSlipDirection ex:mp-23_slip_plane_3_slip_direction_1 ;
+    diso:hasSlipPlaneNormal ex:mp-23_slip_plane_normal_3 .
 
-ex1:mp-23_slip_system_11 a diso:SlipSystem ;
-    diso:hasSlipDirection ex1:mp-23_slip_plane_3_slip_direction_2 ;
-    diso:hasSlipPlaneNormal ex1:mp-23_slip_plane_normal_3 .
+ex:mp-23_slip_system_11 a diso:SlipSystem ;
+    diso:hasSlipDirection ex:mp-23_slip_plane_3_slip_direction_2 ;
+    diso:hasSlipPlaneNormal ex:mp-23_slip_plane_normal_3 .
 
-ex1:mp-23_slip_system_2 a diso:SlipSystem ;
-    diso:hasSlipDirection ex1:mp-23_slip_plane_0_slip_direction_2 ;
-    diso:hasSlipPlaneNormal ex1:mp-23_slip_plane_normal_0 .
+ex:mp-23_slip_system_2 a diso:SlipSystem ;
+    diso:hasSlipDirection ex:mp-23_slip_plane_0_slip_direction_2 ;
+    diso:hasSlipPlaneNormal ex:mp-23_slip_plane_normal_0 .
 
-ex1:mp-23_slip_system_3 a diso:SlipSystem ;
-    diso:hasSlipDirection ex1:mp-23_slip_plane_1_slip_direction_0 ;
-    diso:hasSlipPlaneNormal ex1:mp-23_slip_plane_normal_1 .
+ex:mp-23_slip_system_3 a diso:SlipSystem ;
+    diso:hasSlipDirection ex:mp-23_slip_plane_1_slip_direction_0 ;
+    diso:hasSlipPlaneNormal ex:mp-23_slip_plane_normal_1 .
 
-ex1:mp-23_slip_system_4 a diso:SlipSystem ;
-    diso:hasSlipDirection ex1:mp-23_slip_plane_1_slip_direction_1 ;
-    diso:hasSlipPlaneNormal ex1:mp-23_slip_plane_normal_1 .
+ex:mp-23_slip_system_4 a diso:SlipSystem ;
+    diso:hasSlipDirection ex:mp-23_slip_plane_1_slip_direction_1 ;
+    diso:hasSlipPlaneNormal ex:mp-23_slip_plane_normal_1 .
 
-ex1:mp-23_slip_system_5 a diso:SlipSystem ;
-    diso:hasSlipDirection ex1:mp-23_slip_plane_1_slip_direction_2 ;
-    diso:hasSlipPlaneNormal ex1:mp-23_slip_plane_normal_1 .
+ex:mp-23_slip_system_5 a diso:SlipSystem ;
+    diso:hasSlipDirection ex:mp-23_slip_plane_1_slip_direction_2 ;
+    diso:hasSlipPlaneNormal ex:mp-23_slip_plane_normal_1 .
 
-ex1:mp-23_slip_system_6 a diso:SlipSystem ;
-    diso:hasSlipDirection ex1:mp-23_slip_plane_2_slip_direction_0 ;
-    diso:hasSlipPlaneNormal ex1:mp-23_slip_plane_normal_2 .
+ex:mp-23_slip_system_6 a diso:SlipSystem ;
+    diso:hasSlipDirection ex:mp-23_slip_plane_2_slip_direction_0 ;
+    diso:hasSlipPlaneNormal ex:mp-23_slip_plane_normal_2 .
 
-ex1:mp-23_slip_system_7 a diso:SlipSystem ;
-    diso:hasSlipDirection ex1:mp-23_slip_plane_2_slip_direction_1 ;
-    diso:hasSlipPlaneNormal ex1:mp-23_slip_plane_normal_2 .
+ex:mp-23_slip_system_7 a diso:SlipSystem ;
+    diso:hasSlipDirection ex:mp-23_slip_plane_2_slip_direction_1 ;
+    diso:hasSlipPlaneNormal ex:mp-23_slip_plane_normal_2 .
 
-ex1:mp-23_slip_system_8 a diso:SlipSystem ;
-    diso:hasSlipDirection ex1:mp-23_slip_plane_2_slip_direction_2 ;
-    diso:hasSlipPlaneNormal ex1:mp-23_slip_plane_normal_2 .
+ex:mp-23_slip_system_8 a diso:SlipSystem ;
+    diso:hasSlipDirection ex:mp-23_slip_plane_2_slip_direction_2 ;
+    diso:hasSlipPlaneNormal ex:mp-23_slip_plane_normal_2 .
 
-ex1:mp-23_slip_system_9 a diso:SlipSystem ;
-    diso:hasSlipDirection ex1:mp-23_slip_plane_3_slip_direction_0 ;
-    diso:hasSlipPlaneNormal ex1:mp-23_slip_plane_normal_3 .
+ex:mp-23_slip_system_9 a diso:SlipSystem ;
+    diso:hasSlipDirection ex:mp-23_slip_plane_3_slip_direction_0 ;
+    diso:hasSlipPlaneNormal ex:mp-23_slip_plane_normal_3 .
 
-ex:Ni_mp-1014111_conventional_standard_atom_0 a chebi:CHEBI_33250 ;
+ex3:Ni_mp-1014111_conventional_standard_atom_0 a chebi:CHEBI_33250 ;
     ns1:formula "Ni"^^xsd:string .
 
-ex:Ni_mp-1014111_conventional_standard_atom_1 a chebi:CHEBI_33250 ;
+ex3:Ni_mp-1014111_conventional_standard_atom_1 a chebi:CHEBI_33250 ;
     ns1:formula "Ni"^^xsd:string .
 
-ex:Ni_mp-1014111_conventional_standard_crystal_system a cso:Cubic .
+ex3:Ni_mp-1014111_conventional_standard_crystal_system a cso:Cubic .
 
-ex:Ni_mp-1014111_conventional_standard_frac_coord_0 a mdo:CoordinateVector ;
+ex3:Ni_mp-1014111_conventional_standard_frac_coord_0 a mdo:CoordinateVector ;
     mdo:X_axisCoordinate 3.333333e-01 ;
     mdo:Y_axisCoordinate 6.666667e-01 ;
     mdo:Z_axisCoordinate 4.25238e-01 .
 
-ex:Ni_mp-1014111_conventional_standard_frac_coord_1 a mdo:CoordinateVector ;
+ex3:Ni_mp-1014111_conventional_standard_frac_coord_1 a mdo:CoordinateVector ;
     mdo:X_axisCoordinate 6.666667e-01 ;
     mdo:Y_axisCoordinate 3.333333e-01 ;
     mdo:Z_axisCoordinate 5.74762e-01 .
 
-ex:Ni_mp-1014111_conventional_standard_lattice a cso:Lattice ;
-    cso:hasCrystalSystem ex:Ni_mp-1014111_conventional_standard_crystal_system ;
-    cso:hasUnitCell ex:Ni_mp-1014111_conventional_standard_unit_cell .
+ex3:Ni_mp-1014111_conventional_standard_lattice a cso:Lattice ;
+    cso:hasCrystalSystem ex3:Ni_mp-1014111_conventional_standard_crystal_system ;
+    cso:hasUnitCell ex3:Ni_mp-1014111_conventional_standard_unit_cell .
 
-ex:Ni_mp-1014111_conventional_standard_lattice_parameter_angle a cso:LatticeParameterAngle ;
+ex3:Ni_mp-1014111_conventional_standard_lattice_parameter_angle a cso:LatticeParameterAngle ;
     cso:latticeParameterAngleAlpha 9e+01 ;
     cso:latticeParameterAngleBeta 9e+01 ;
     cso:latticeParameterAngleGamma 1.2e+02 .
 
-ex:Ni_mp-1014111_conventional_standard_lattice_parameter_length a cso:LatticeParameterLength ;
+ex3:Ni_mp-1014111_conventional_standard_lattice_parameter_length a cso:LatticeParameterLength ;
     cso:latticeParameterLengthA 2.416684e+00 ;
     cso:latticeParameterLengthB 2.416684e+00 ;
     cso:latticeParameterLengthC 1.351535e+01 .
 
-ex:Ni_mp-1014111_conventional_standard_occupancy_0 a mdo:Occupancy ;
-    mdo:hasSite ex:Ni_mp-1014111_conventional_standard_site_0 ;
-    mdo:hasSpecies ex:Ni_mp-1014111_conventional_standard_species_0 .
+ex3:Ni_mp-1014111_conventional_standard_occupancy_0 a mdo:Occupancy ;
+    mdo:hasSite ex3:Ni_mp-1014111_conventional_standard_site_0 ;
+    mdo:hasSpecies ex3:Ni_mp-1014111_conventional_standard_species_0 .
 
-ex:Ni_mp-1014111_conventional_standard_occupancy_1 a mdo:Occupancy ;
-    mdo:hasSite ex:Ni_mp-1014111_conventional_standard_site_1 ;
-    mdo:hasSpecies ex:Ni_mp-1014111_conventional_standard_species_1 .
+ex3:Ni_mp-1014111_conventional_standard_occupancy_1 a mdo:Occupancy ;
+    mdo:hasSite ex3:Ni_mp-1014111_conventional_standard_site_1 ;
+    mdo:hasSpecies ex3:Ni_mp-1014111_conventional_standard_species_1 .
 
-ex:Ni_mp-1014111_conventional_standard_site_0 a mdo:Site ;
-    mdo:hasFractionalCoordinates ex:Ni_mp-1014111_conventional_standard_frac_coord_0 .
+ex3:Ni_mp-1014111_conventional_standard_site_0 a mdo:Site ;
+    mdo:hasFractionalCoordinates ex3:Ni_mp-1014111_conventional_standard_frac_coord_0 .
 
-ex:Ni_mp-1014111_conventional_standard_site_1 a mdo:Site ;
-    mdo:hasFractionalCoordinates ex:Ni_mp-1014111_conventional_standard_frac_coord_1 .
+ex3:Ni_mp-1014111_conventional_standard_site_1 a mdo:Site ;
+    mdo:hasFractionalCoordinates ex3:Ni_mp-1014111_conventional_standard_frac_coord_1 .
 
-ex:Ni_mp-1014111_conventional_standard_species_0 a mdo:Species ;
-    mdo:hasElement ex:Ni_mp-1014111_conventional_standard_atom_0 .
+ex3:Ni_mp-1014111_conventional_standard_species_0 a mdo:Species ;
+    mdo:hasElement ex3:Ni_mp-1014111_conventional_standard_atom_0 .
 
-ex:Ni_mp-1014111_conventional_standard_species_1 a mdo:Species ;
-    mdo:hasElement ex:Ni_mp-1014111_conventional_standard_atom_1 .
+ex3:Ni_mp-1014111_conventional_standard_species_1 a mdo:Species ;
+    mdo:hasElement ex3:Ni_mp-1014111_conventional_standard_atom_1 .
 
-ex:Ni_mp-1014111_conventional_standard_unit_cell a cso:UnitCell ;
-    cso:hasLatticeParameterAngle ex:Ni_mp-1014111_conventional_standard_lattice_parameter_angle ;
-    cso:hasLatticeParameterLength ex:Ni_mp-1014111_conventional_standard_lattice_parameter_length .
+ex3:Ni_mp-1014111_conventional_standard_unit_cell a cso:UnitCell ;
+    cso:hasLatticeParameterAngle ex3:Ni_mp-1014111_conventional_standard_lattice_parameter_angle ;
+    cso:hasLatticeParameterLength ex3:Ni_mp-1014111_conventional_standard_lattice_parameter_length .
 
 ex2:Ni_mp-10257_conventional_standard_atom_0 a chebi:CHEBI_33250 ;
     ns1:formula "Ni"^^xsd:string .
@@ -395,61 +395,61 @@ ex2:Ni_mp-10257_conventional_standard_unit_cell a cso:UnitCell ;
     cso:hasLatticeParameterAngle ex2:Ni_mp-10257_conventional_standard_lattice_parameter_angle ;
     cso:hasLatticeParameterLength ex2:Ni_mp-10257_conventional_standard_lattice_parameter_length .
 
-ex12:Ni_mp-1094136_conventional_standard_atom_0 a chebi:CHEBI_33250 ;
+ex1:Ni_mp-1094136_conventional_standard_atom_0 a chebi:CHEBI_33250 ;
     ns1:formula "Ni"^^xsd:string .
 
-ex12:Ni_mp-1094136_conventional_standard_atom_1 a chebi:CHEBI_33250 ;
+ex1:Ni_mp-1094136_conventional_standard_atom_1 a chebi:CHEBI_33250 ;
     ns1:formula "Ni"^^xsd:string .
 
-ex12:Ni_mp-1094136_conventional_standard_crystal_system a cso:Hexagonal .
+ex1:Ni_mp-1094136_conventional_standard_crystal_system a cso:Hexagonal .
 
-ex12:Ni_mp-1094136_conventional_standard_frac_coord_0 a mdo:CoordinateVector ;
+ex1:Ni_mp-1094136_conventional_standard_frac_coord_0 a mdo:CoordinateVector ;
     mdo:X_axisCoordinate 0e+00 ;
     mdo:Y_axisCoordinate 0e+00 ;
     mdo:Z_axisCoordinate 4.23977e-01 .
 
-ex12:Ni_mp-1094136_conventional_standard_frac_coord_1 a mdo:CoordinateVector ;
+ex1:Ni_mp-1094136_conventional_standard_frac_coord_1 a mdo:CoordinateVector ;
     mdo:X_axisCoordinate 0e+00 ;
     mdo:Y_axisCoordinate 0e+00 ;
     mdo:Z_axisCoordinate 5.76023e-01 .
 
-ex12:Ni_mp-1094136_conventional_standard_lattice a cso:Lattice ;
-    cso:hasCrystalSystem ex12:Ni_mp-1094136_conventional_standard_crystal_system ;
-    cso:hasUnitCell ex12:Ni_mp-1094136_conventional_standard_unit_cell .
+ex1:Ni_mp-1094136_conventional_standard_lattice a cso:Lattice ;
+    cso:hasCrystalSystem ex1:Ni_mp-1094136_conventional_standard_crystal_system ;
+    cso:hasUnitCell ex1:Ni_mp-1094136_conventional_standard_unit_cell .
 
-ex12:Ni_mp-1094136_conventional_standard_lattice_parameter_angle a cso:LatticeParameterAngle ;
+ex1:Ni_mp-1094136_conventional_standard_lattice_parameter_angle a cso:LatticeParameterAngle ;
     cso:latticeParameterAngleAlpha 9e+01 ;
     cso:latticeParameterAngleBeta 9e+01 ;
     cso:latticeParameterAngleGamma 1.2e+02 .
 
-ex12:Ni_mp-1094136_conventional_standard_lattice_parameter_length a cso:LatticeParameterLength ;
+ex1:Ni_mp-1094136_conventional_standard_lattice_parameter_length a cso:LatticeParameterLength ;
     cso:latticeParameterLengthA 2.38205e+00 ;
     cso:latticeParameterLengthB 2.38205e+00 ;
     cso:latticeParameterLengthC 1.491233e+01 .
 
-ex12:Ni_mp-1094136_conventional_standard_occupancy_0 a mdo:Occupancy ;
-    mdo:hasSite ex12:Ni_mp-1094136_conventional_standard_site_0 ;
-    mdo:hasSpecies ex12:Ni_mp-1094136_conventional_standard_species_0 .
+ex1:Ni_mp-1094136_conventional_standard_occupancy_0 a mdo:Occupancy ;
+    mdo:hasSite ex1:Ni_mp-1094136_conventional_standard_site_0 ;
+    mdo:hasSpecies ex1:Ni_mp-1094136_conventional_standard_species_0 .
 
-ex12:Ni_mp-1094136_conventional_standard_occupancy_1 a mdo:Occupancy ;
-    mdo:hasSite ex12:Ni_mp-1094136_conventional_standard_site_1 ;
-    mdo:hasSpecies ex12:Ni_mp-1094136_conventional_standard_species_1 .
+ex1:Ni_mp-1094136_conventional_standard_occupancy_1 a mdo:Occupancy ;
+    mdo:hasSite ex1:Ni_mp-1094136_conventional_standard_site_1 ;
+    mdo:hasSpecies ex1:Ni_mp-1094136_conventional_standard_species_1 .
 
-ex12:Ni_mp-1094136_conventional_standard_site_0 a mdo:Site ;
-    mdo:hasFractionalCoordinates ex12:Ni_mp-1094136_conventional_standard_frac_coord_0 .
+ex1:Ni_mp-1094136_conventional_standard_site_0 a mdo:Site ;
+    mdo:hasFractionalCoordinates ex1:Ni_mp-1094136_conventional_standard_frac_coord_0 .
 
-ex12:Ni_mp-1094136_conventional_standard_site_1 a mdo:Site ;
-    mdo:hasFractionalCoordinates ex12:Ni_mp-1094136_conventional_standard_frac_coord_1 .
+ex1:Ni_mp-1094136_conventional_standard_site_1 a mdo:Site ;
+    mdo:hasFractionalCoordinates ex1:Ni_mp-1094136_conventional_standard_frac_coord_1 .
 
-ex12:Ni_mp-1094136_conventional_standard_species_0 a mdo:Species ;
-    mdo:hasElement ex12:Ni_mp-1094136_conventional_standard_atom_0 .
+ex1:Ni_mp-1094136_conventional_standard_species_0 a mdo:Species ;
+    mdo:hasElement ex1:Ni_mp-1094136_conventional_standard_atom_0 .
 
-ex12:Ni_mp-1094136_conventional_standard_species_1 a mdo:Species ;
-    mdo:hasElement ex12:Ni_mp-1094136_conventional_standard_atom_1 .
+ex1:Ni_mp-1094136_conventional_standard_species_1 a mdo:Species ;
+    mdo:hasElement ex1:Ni_mp-1094136_conventional_standard_atom_1 .
 
-ex12:Ni_mp-1094136_conventional_standard_unit_cell a cso:UnitCell ;
-    cso:hasLatticeParameterAngle ex12:Ni_mp-1094136_conventional_standard_lattice_parameter_angle ;
-    cso:hasLatticeParameterLength ex12:Ni_mp-1094136_conventional_standard_lattice_parameter_length .
+ex1:Ni_mp-1094136_conventional_standard_unit_cell a cso:UnitCell ;
+    cso:hasLatticeParameterAngle ex1:Ni_mp-1094136_conventional_standard_lattice_parameter_angle ;
+    cso:hasLatticeParameterLength ex1:Ni_mp-1094136_conventional_standard_lattice_parameter_length .
 
 ex11:Ni_mp-23_conventional_standard_atom_0 a chebi:CHEBI_33250 ;
     ns1:formula "Ni"^^xsd:string .
@@ -543,52 +543,52 @@ ex11:Ni_mp-23_conventional_standard_unit_cell a cso:UnitCell ;
     cso:hasLatticeParameterAngle ex11:Ni_mp-23_conventional_standard_lattice_parameter_angle ;
     cso:hasLatticeParameterLength ex11:Ni_mp-23_conventional_standard_lattice_parameter_length .
 
-ex1:mp-23_slip_plane_0_slip_direction_0 a diso:SlipDirection ;
+ex:mp-23_slip_plane_0_slip_direction_0 a diso:SlipDirection ;
     diso:directionMillerIndice "[101]"^^xsd:string .
 
-ex1:mp-23_slip_plane_0_slip_direction_1 a diso:SlipDirection ;
+ex:mp-23_slip_plane_0_slip_direction_1 a diso:SlipDirection ;
     diso:directionMillerIndice "[1-10]"^^xsd:string .
 
-ex1:mp-23_slip_plane_0_slip_direction_2 a diso:SlipDirection ;
+ex:mp-23_slip_plane_0_slip_direction_2 a diso:SlipDirection ;
     diso:directionMillerIndice "[011]"^^xsd:string .
 
-ex1:mp-23_slip_plane_1_slip_direction_0 a diso:SlipDirection ;
+ex:mp-23_slip_plane_1_slip_direction_0 a diso:SlipDirection ;
     diso:directionMillerIndice "[1-10]"^^xsd:string .
 
-ex1:mp-23_slip_plane_1_slip_direction_1 a diso:SlipDirection ;
+ex:mp-23_slip_plane_1_slip_direction_1 a diso:SlipDirection ;
     diso:directionMillerIndice "[10-1]"^^xsd:string .
 
-ex1:mp-23_slip_plane_1_slip_direction_2 a diso:SlipDirection ;
+ex:mp-23_slip_plane_1_slip_direction_2 a diso:SlipDirection ;
     diso:directionMillerIndice "[0-11]"^^xsd:string .
 
-ex1:mp-23_slip_plane_2_slip_direction_0 a diso:SlipDirection ;
+ex:mp-23_slip_plane_2_slip_direction_0 a diso:SlipDirection ;
     diso:directionMillerIndice "[10-1]"^^xsd:string .
 
-ex1:mp-23_slip_plane_2_slip_direction_1 a diso:SlipDirection ;
+ex:mp-23_slip_plane_2_slip_direction_1 a diso:SlipDirection ;
     diso:directionMillerIndice "[110]"^^xsd:string .
 
-ex1:mp-23_slip_plane_2_slip_direction_2 a diso:SlipDirection ;
+ex:mp-23_slip_plane_2_slip_direction_2 a diso:SlipDirection ;
     diso:directionMillerIndice "[011]"^^xsd:string .
 
-ex1:mp-23_slip_plane_3_slip_direction_0 a diso:SlipDirection ;
+ex:mp-23_slip_plane_3_slip_direction_0 a diso:SlipDirection ;
     diso:directionMillerIndice "[110]"^^xsd:string .
 
-ex1:mp-23_slip_plane_3_slip_direction_1 a diso:SlipDirection ;
+ex:mp-23_slip_plane_3_slip_direction_1 a diso:SlipDirection ;
     diso:directionMillerIndice "[101]"^^xsd:string .
 
-ex1:mp-23_slip_plane_3_slip_direction_2 a diso:SlipDirection ;
+ex:mp-23_slip_plane_3_slip_direction_2 a diso:SlipDirection ;
     diso:directionMillerIndice "[0-11]"^^xsd:string .
 
-ex1:mp-23_slip_plane_normal_0 a diso:SlipPlaneNormal ;
+ex:mp-23_slip_plane_normal_0 a diso:SlipPlaneNormal ;
     diso:directionMillerIndice "[11-1]"^^xsd:string .
 
-ex1:mp-23_slip_plane_normal_1 a diso:SlipPlaneNormal ;
+ex:mp-23_slip_plane_normal_1 a diso:SlipPlaneNormal ;
     diso:directionMillerIndice "[111]"^^xsd:string .
 
-ex1:mp-23_slip_plane_normal_2 a diso:SlipPlaneNormal ;
+ex:mp-23_slip_plane_normal_2 a diso:SlipPlaneNormal ;
     diso:directionMillerIndice "[1-11]"^^xsd:string .
 
-ex1:mp-23_slip_plane_normal_3 a diso:SlipPlaneNormal ;
+ex:mp-23_slip_plane_normal_3 a diso:SlipPlaneNormal ;
     diso:directionMillerIndice "[1-1-1]"^^xsd:string .
 
 cdo:hasCrystalStructure a owl:ObjectProperty .
