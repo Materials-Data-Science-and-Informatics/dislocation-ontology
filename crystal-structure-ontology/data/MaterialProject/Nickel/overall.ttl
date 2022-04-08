@@ -1,0 +1,559 @@
+@prefix : <https://purls.helmholtz-metadaten.de/cdo> .
+@prefix cdo: <https://purls.helmholtz-metadaten.de/cdo#> .
+@prefix chebi: <http://purl.obolibrary.org/obo/> .
+@prefix cso: <https://purls.helmholtz-metadaten.de/cso#> .
+@prefix diso: <https://purls.helmholtz-metadaten.de/diso#> .
+@prefix ex: <www.example.org/Ni_mp-1014111_conventional_standard/> .
+@prefix ex1: <www.example.org/Ni_mp-1008728_conventional_standard/> .
+@prefix ex2: <www.example.org/Ni_mp-1094136_conventional_standard/> .
+@prefix ex3: <www.example.org/Ni_mp-10257_conventional_standard/> .
+@prefix ex31: <www.example.org/Ni_mp-23_conventional_standard/> .
+@prefix mdo: <https://w3id.org/mdo/structure/> .
+@prefix ns1: <http://purl.obolibrary.org/obo/chebi/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+owl:qualifiedCardinality a owl:AnnotationProperty .
+
+skos:prefLabel a owl:AnnotationProperty ;
+    rdfs:subPropertyOf rdfs:label .
+
+: a owl:Ontology ;
+    terms:contributor "Said Fathalla"^^xsd:string,
+        "Stefan Sandfeld"^^xsd:string ;
+    terms:created "21.03.2022"@en ;
+    terms:creator "Ahmad Zainul Ihsan"@en ;
+    terms:title "Crystallographic Defect Ontology"@en ;
+    vann:preferredNamespacePrefix "CDO"^^xsd:string ;
+    rdfs:seeAlso "https://github.com/Materials-Data-Science-and-Informatics/dislocation-ontology" ;
+    owl:imports <https://purls.helmholtz-metadaten.de/cso>,
+        <https://purls.helmholtz-metadaten.de/diso> .
+
+cdo:GrainBoundary a owl:Class ;
+    rdfs:subClassOf cdo:CrystallographicDefect .
+
+cdo:PointDefect a owl:Class ;
+    rdfs:subClassOf cdo:CrystallographicDefect .
+
+diso:Dislocation a owl:Class ;
+    rdfs:subClassOf cdo:CrystallographicDefect .
+
+ex1:Ni_mp-1008728_conventional_standard_crystal_strcture a cso:CrystalStructure ;
+    cso:hasLattice ex1:Ni_mp-1008728_conventional_standard_Bravais_lattice ;
+    mdo:hasOccupancy ex1:Ni_mp-1008728_conventional_standard_occupancy_0,
+        ex1:Ni_mp-1008728_conventional_standard_occupancy_1 ;
+    mdo:hasSpaceGroup ex1:Ni_mp-1008728_conventional_standard_space_group .
+
+ex:Ni_mp-1014111_conventional_standard_crystal_strcture a cso:CrystalStructure ;
+    cso:hasLattice ex:Ni_mp-1014111_conventional_standard_Bravais_lattice ;
+    mdo:hasOccupancy ex:Ni_mp-1014111_conventional_standard_occupancy_0,
+        ex:Ni_mp-1014111_conventional_standard_occupancy_1 ;
+    mdo:hasSpaceGroup ex:Ni_mp-1014111_conventional_standard_space_group .
+
+ex3:Ni_mp-10257_conventional_standard_crystal_strcture a cso:CrystalStructure ;
+    cso:hasLattice ex3:Ni_mp-10257_conventional_standard_Bravais_lattice ;
+    mdo:hasOccupancy ex3:Ni_mp-10257_conventional_standard_occupancy_0,
+        ex3:Ni_mp-10257_conventional_standard_occupancy_1 ;
+    mdo:hasSpaceGroup ex3:Ni_mp-10257_conventional_standard_space_group .
+
+ex2:Ni_mp-1094136_conventional_standard_crystal_strcture a cso:CrystalStructure ;
+    cso:hasLattice ex2:Ni_mp-1094136_conventional_standard_Bravais_lattice ;
+    mdo:hasOccupancy ex2:Ni_mp-1094136_conventional_standard_occupancy_0,
+        ex2:Ni_mp-1094136_conventional_standard_occupancy_1 ;
+    mdo:hasSpaceGroup ex2:Ni_mp-1094136_conventional_standard_space_group .
+
+ex31:Ni_mp-23_conventional_standard_crystal_strcture a cso:CrystalStructure ;
+    cso:hasLattice ex31:Ni_mp-23_conventional_standard_Bravais_lattice ;
+    mdo:hasOccupancy ex31:Ni_mp-23_conventional_standard_occupancy_0,
+        ex31:Ni_mp-23_conventional_standard_occupancy_1,
+        ex31:Ni_mp-23_conventional_standard_occupancy_2,
+        ex31:Ni_mp-23_conventional_standard_occupancy_3 ;
+    mdo:hasSpaceGroup ex31:Ni_mp-23_conventional_standard_space_group .
+
+<http://emmo.info/emmo/middle/physicalistic#EMMO_4207e895_8b83_4318_996a_72cfb32acd94> a owl:Class ;
+    rdfs:comment "A instance of a material (e.g. nitrogen) can represent different states of matter. The fact that the individual also belongs to other classes (e.g. Gas) would reveal the actual form in which the material is found."@en,
+        "Material usually means some definite kind, quality, or quantity of matter, especially as intended for use."@en ;
+    skos:prefLabel "Material"@en .
+
+ex1:Ni_mp-1008728_conventional_standard_Bravais_lattice a cso:BravaisLattice ;
+    cso:centering "F"^^xsd:string ;
+    cso:hasCrystalSystem ex1:Ni_mp-1008728_conventional_standard_crystal_system ;
+    cso:hasUnitCell ex1:Ni_mp-1008728_conventional_standard_unit_cell .
+
+ex1:Ni_mp-1008728_conventional_standard_atom_0 a chebi:CHEBI_33250 ;
+    ns1:formula "Ni"^^xsd:string .
+
+ex1:Ni_mp-1008728_conventional_standard_atom_1 a chebi:CHEBI_33250 ;
+    ns1:formula "Ni"^^xsd:string .
+
+ex1:Ni_mp-1008728_conventional_standard_frac_coord_0 a mdo:CoordinateVector ;
+    mdo:X_axisCoordinate 0e+00 ;
+    mdo:Y_axisCoordinate 0e+00 ;
+    mdo:Z_axisCoordinate 0e+00 .
+
+ex1:Ni_mp-1008728_conventional_standard_frac_coord_1 a mdo:CoordinateVector ;
+    mdo:X_axisCoordinate 5e-01 ;
+    mdo:Y_axisCoordinate 5e-01 ;
+    mdo:Z_axisCoordinate 5e-01 .
+
+ex1:Ni_mp-1008728_conventional_standard_lattice_parameter_angle a cso:LatticeParameterAngle ;
+    cso:latticeParameterAngleAlpha 9e+01 ;
+    cso:latticeParameterAngleBeta 9e+01 ;
+    cso:latticeParameterAngleGamma 9e+01 .
+
+ex1:Ni_mp-1008728_conventional_standard_lattice_parameter_length a cso:LatticeParameterLength ;
+    cso:latticeParameterLengthA 2.790212e+00 ;
+    cso:latticeParameterLengthB 2.790212e+00 ;
+    cso:latticeParameterLengthC 2.790212e+00 .
+
+ex1:Ni_mp-1008728_conventional_standard_occupancy_0 a mdo:Occupancy ;
+    mdo:hasSite ex1:Ni_mp-1008728_conventional_standard_site_0 ;
+    mdo:hasSpecies ex1:Ni_mp-1008728_conventional_standard_species_0 .
+
+ex1:Ni_mp-1008728_conventional_standard_occupancy_1 a mdo:Occupancy ;
+    mdo:hasSite ex1:Ni_mp-1008728_conventional_standard_site_1 ;
+    mdo:hasSpecies ex1:Ni_mp-1008728_conventional_standard_species_1 .
+
+ex1:Ni_mp-1008728_conventional_standard_point_group a mdo:PointGroup ;
+    cso:isPointGroupOf ex1:Ni_mp-1008728_conventional_standard_crystal_system ;
+    mdo:PointGroupHMName "m-3m"^^xsd:string .
+
+ex1:Ni_mp-1008728_conventional_standard_site_0 a mdo:Site ;
+    mdo:hasFractionalCoordinates ex1:Ni_mp-1008728_conventional_standard_frac_coord_0 .
+
+ex1:Ni_mp-1008728_conventional_standard_site_1 a mdo:Site ;
+    mdo:hasFractionalCoordinates ex1:Ni_mp-1008728_conventional_standard_frac_coord_1 .
+
+ex1:Ni_mp-1008728_conventional_standard_space_group a mdo:SpaceGroup ;
+    mdo:SpaceGroupID 225 ;
+    mdo:SpaceGroupSymbol "Fm-3m"^^xsd:string ;
+    mdo:hasPointGroup ex1:Ni_mp-1008728_conventional_standard_point_group .
+
+ex1:Ni_mp-1008728_conventional_standard_species_0 a mdo:Species ;
+    mdo:hasElement ex1:Ni_mp-1008728_conventional_standard_atom_0 .
+
+ex1:Ni_mp-1008728_conventional_standard_species_1 a mdo:Species ;
+    mdo:hasElement ex1:Ni_mp-1008728_conventional_standard_atom_1 .
+
+ex1:Ni_mp-1008728_conventional_standard_unit_cell a cso:UnitCell ;
+    cso:hasLatticeParameterAngle ex1:Ni_mp-1008728_conventional_standard_lattice_parameter_angle ;
+    cso:hasLatticeParameterLength ex1:Ni_mp-1008728_conventional_standard_lattice_parameter_length .
+
+ex:Ni_mp-1014111_conventional_standard_Bravais_lattice a cso:BravaisLattice ;
+    cso:centering "I"^^xsd:string ;
+    cso:hasCrystalSystem ex:Ni_mp-1014111_conventional_standard_crystal_system ;
+    cso:hasUnitCell ex:Ni_mp-1014111_conventional_standard_unit_cell .
+
+ex:Ni_mp-1014111_conventional_standard_atom_0 a chebi:CHEBI_33250 ;
+    ns1:formula "Ni"^^xsd:string .
+
+ex:Ni_mp-1014111_conventional_standard_atom_1 a chebi:CHEBI_33250 ;
+    ns1:formula "Ni"^^xsd:string .
+
+ex:Ni_mp-1014111_conventional_standard_frac_coord_0 a mdo:CoordinateVector ;
+    mdo:X_axisCoordinate 3.333333e-01 ;
+    mdo:Y_axisCoordinate 6.666667e-01 ;
+    mdo:Z_axisCoordinate 4.25238e-01 .
+
+ex:Ni_mp-1014111_conventional_standard_frac_coord_1 a mdo:CoordinateVector ;
+    mdo:X_axisCoordinate 6.666667e-01 ;
+    mdo:Y_axisCoordinate 3.333333e-01 ;
+    mdo:Z_axisCoordinate 5.74762e-01 .
+
+ex:Ni_mp-1014111_conventional_standard_lattice_parameter_angle a cso:LatticeParameterAngle ;
+    cso:latticeParameterAngleAlpha 9e+01 ;
+    cso:latticeParameterAngleBeta 9e+01 ;
+    cso:latticeParameterAngleGamma 1.2e+02 .
+
+ex:Ni_mp-1014111_conventional_standard_lattice_parameter_length a cso:LatticeParameterLength ;
+    cso:latticeParameterLengthA 2.416684e+00 ;
+    cso:latticeParameterLengthB 2.416684e+00 ;
+    cso:latticeParameterLengthC 1.351535e+01 .
+
+ex:Ni_mp-1014111_conventional_standard_occupancy_0 a mdo:Occupancy ;
+    mdo:hasSite ex:Ni_mp-1014111_conventional_standard_site_0 ;
+    mdo:hasSpecies ex:Ni_mp-1014111_conventional_standard_species_0 .
+
+ex:Ni_mp-1014111_conventional_standard_occupancy_1 a mdo:Occupancy ;
+    mdo:hasSite ex:Ni_mp-1014111_conventional_standard_site_1 ;
+    mdo:hasSpecies ex:Ni_mp-1014111_conventional_standard_species_1 .
+
+ex:Ni_mp-1014111_conventional_standard_point_group a mdo:PointGroup ;
+    cso:isPointGroupOf ex:Ni_mp-1014111_conventional_standard_crystal_system ;
+    mdo:PointGroupHMName "m-3m"^^xsd:string .
+
+ex:Ni_mp-1014111_conventional_standard_site_0 a mdo:Site ;
+    mdo:hasFractionalCoordinates ex:Ni_mp-1014111_conventional_standard_frac_coord_0 .
+
+ex:Ni_mp-1014111_conventional_standard_site_1 a mdo:Site ;
+    mdo:hasFractionalCoordinates ex:Ni_mp-1014111_conventional_standard_frac_coord_1 .
+
+ex:Ni_mp-1014111_conventional_standard_space_group a mdo:SpaceGroup ;
+    mdo:SpaceGroupID 229 ;
+    mdo:SpaceGroupSymbol "Im-3m"^^xsd:string ;
+    mdo:hasPointGroup ex:Ni_mp-1014111_conventional_standard_point_group .
+
+ex:Ni_mp-1014111_conventional_standard_species_0 a mdo:Species ;
+    mdo:hasElement ex:Ni_mp-1014111_conventional_standard_atom_0 .
+
+ex:Ni_mp-1014111_conventional_standard_species_1 a mdo:Species ;
+    mdo:hasElement ex:Ni_mp-1014111_conventional_standard_atom_1 .
+
+ex:Ni_mp-1014111_conventional_standard_unit_cell a cso:UnitCell ;
+    cso:hasLatticeParameterAngle ex:Ni_mp-1014111_conventional_standard_lattice_parameter_angle ;
+    cso:hasLatticeParameterLength ex:Ni_mp-1014111_conventional_standard_lattice_parameter_length .
+
+ex3:Ni_mp-10257_conventional_standard_Bravais_lattice a cso:BravaisLattice ;
+    cso:centering "P"^^xsd:string ;
+    cso:hasCrystalSystem ex3:Ni_mp-10257_conventional_standard_crystal_system ;
+    cso:hasUnitCell ex3:Ni_mp-10257_conventional_standard_unit_cell .
+
+ex3:Ni_mp-10257_conventional_standard_atom_0 a chebi:CHEBI_33250 ;
+    ns1:formula "Ni"^^xsd:string .
+
+ex3:Ni_mp-10257_conventional_standard_atom_1 a chebi:CHEBI_33250 ;
+    ns1:formula "Ni"^^xsd:string .
+
+ex3:Ni_mp-10257_conventional_standard_frac_coord_0 a mdo:CoordinateVector ;
+    mdo:X_axisCoordinate 6.666667e-01 ;
+    mdo:Y_axisCoordinate 3.333333e-01 ;
+    mdo:Z_axisCoordinate 7.5e-01 .
+
+ex3:Ni_mp-10257_conventional_standard_frac_coord_1 a mdo:CoordinateVector ;
+    mdo:X_axisCoordinate 3.333333e-01 ;
+    mdo:Y_axisCoordinate 6.666667e-01 ;
+    mdo:Z_axisCoordinate 2.5e-01 .
+
+ex3:Ni_mp-10257_conventional_standard_lattice_parameter_angle a cso:LatticeParameterAngle ;
+    cso:latticeParameterAngleAlpha 9e+01 ;
+    cso:latticeParameterAngleBeta 9e+01 ;
+    cso:latticeParameterAngleGamma 1.2e+02 .
+
+ex3:Ni_mp-10257_conventional_standard_lattice_parameter_length a cso:LatticeParameterLength ;
+    cso:latticeParameterLengthA 2.474278e+00 ;
+    cso:latticeParameterLengthB 2.474278e+00 ;
+    cso:latticeParameterLengthC 4.070181e+00 .
+
+ex3:Ni_mp-10257_conventional_standard_occupancy_0 a mdo:Occupancy ;
+    mdo:hasSite ex3:Ni_mp-10257_conventional_standard_site_0 ;
+    mdo:hasSpecies ex3:Ni_mp-10257_conventional_standard_species_0 .
+
+ex3:Ni_mp-10257_conventional_standard_occupancy_1 a mdo:Occupancy ;
+    mdo:hasSite ex3:Ni_mp-10257_conventional_standard_site_1 ;
+    mdo:hasSpecies ex3:Ni_mp-10257_conventional_standard_species_1 .
+
+ex3:Ni_mp-10257_conventional_standard_point_group a mdo:PointGroup ;
+    cso:isPointGroupOf ex3:Ni_mp-10257_conventional_standard_crystal_system ;
+    mdo:PointGroupHMName "-3m"^^xsd:string .
+
+ex3:Ni_mp-10257_conventional_standard_site_0 a mdo:Site ;
+    mdo:hasFractionalCoordinates ex3:Ni_mp-10257_conventional_standard_frac_coord_0 .
+
+ex3:Ni_mp-10257_conventional_standard_site_1 a mdo:Site ;
+    mdo:hasFractionalCoordinates ex3:Ni_mp-10257_conventional_standard_frac_coord_1 .
+
+ex3:Ni_mp-10257_conventional_standard_space_group a mdo:SpaceGroup ;
+    mdo:SpaceGroupID 164 ;
+    mdo:SpaceGroupSymbol "P-3m1"^^xsd:string ;
+    mdo:hasPointGroup ex3:Ni_mp-10257_conventional_standard_point_group .
+
+ex3:Ni_mp-10257_conventional_standard_species_0 a mdo:Species ;
+    mdo:hasElement ex3:Ni_mp-10257_conventional_standard_atom_0 .
+
+ex3:Ni_mp-10257_conventional_standard_species_1 a mdo:Species ;
+    mdo:hasElement ex3:Ni_mp-10257_conventional_standard_atom_1 .
+
+ex3:Ni_mp-10257_conventional_standard_unit_cell a cso:UnitCell ;
+    cso:hasLatticeParameterAngle ex3:Ni_mp-10257_conventional_standard_lattice_parameter_angle ;
+    cso:hasLatticeParameterLength ex3:Ni_mp-10257_conventional_standard_lattice_parameter_length .
+
+ex2:Ni_mp-1094136_conventional_standard_Bravais_lattice a cso:BravaisLattice ;
+    cso:centering "P"^^xsd:string ;
+    cso:hasCrystalSystem ex2:Ni_mp-1094136_conventional_standard_crystal_system ;
+    cso:hasUnitCell ex2:Ni_mp-1094136_conventional_standard_unit_cell .
+
+ex2:Ni_mp-1094136_conventional_standard_atom_0 a chebi:CHEBI_33250 ;
+    ns1:formula "Ni"^^xsd:string .
+
+ex2:Ni_mp-1094136_conventional_standard_atom_1 a chebi:CHEBI_33250 ;
+    ns1:formula "Ni"^^xsd:string .
+
+ex2:Ni_mp-1094136_conventional_standard_frac_coord_0 a mdo:CoordinateVector ;
+    mdo:X_axisCoordinate 0e+00 ;
+    mdo:Y_axisCoordinate 0e+00 ;
+    mdo:Z_axisCoordinate 4.23977e-01 .
+
+ex2:Ni_mp-1094136_conventional_standard_frac_coord_1 a mdo:CoordinateVector ;
+    mdo:X_axisCoordinate 0e+00 ;
+    mdo:Y_axisCoordinate 0e+00 ;
+    mdo:Z_axisCoordinate 5.76023e-01 .
+
+ex2:Ni_mp-1094136_conventional_standard_lattice_parameter_angle a cso:LatticeParameterAngle ;
+    cso:latticeParameterAngleAlpha 9e+01 ;
+    cso:latticeParameterAngleBeta 9e+01 ;
+    cso:latticeParameterAngleGamma 1.2e+02 .
+
+ex2:Ni_mp-1094136_conventional_standard_lattice_parameter_length a cso:LatticeParameterLength ;
+    cso:latticeParameterLengthA 2.38205e+00 ;
+    cso:latticeParameterLengthB 2.38205e+00 ;
+    cso:latticeParameterLengthC 1.491233e+01 .
+
+ex2:Ni_mp-1094136_conventional_standard_occupancy_0 a mdo:Occupancy ;
+    mdo:hasSite ex2:Ni_mp-1094136_conventional_standard_site_0 ;
+    mdo:hasSpecies ex2:Ni_mp-1094136_conventional_standard_species_0 .
+
+ex2:Ni_mp-1094136_conventional_standard_occupancy_1 a mdo:Occupancy ;
+    mdo:hasSite ex2:Ni_mp-1094136_conventional_standard_site_1 ;
+    mdo:hasSpecies ex2:Ni_mp-1094136_conventional_standard_species_1 .
+
+ex2:Ni_mp-1094136_conventional_standard_point_group a mdo:PointGroup ;
+    cso:isPointGroupOf ex2:Ni_mp-1094136_conventional_standard_crystal_system ;
+    mdo:PointGroupHMName "6/mmm"^^xsd:string .
+
+ex2:Ni_mp-1094136_conventional_standard_site_0 a mdo:Site ;
+    mdo:hasFractionalCoordinates ex2:Ni_mp-1094136_conventional_standard_frac_coord_0 .
+
+ex2:Ni_mp-1094136_conventional_standard_site_1 a mdo:Site ;
+    mdo:hasFractionalCoordinates ex2:Ni_mp-1094136_conventional_standard_frac_coord_1 .
+
+ex2:Ni_mp-1094136_conventional_standard_space_group a mdo:SpaceGroup ;
+    mdo:SpaceGroupID 194 ;
+    mdo:SpaceGroupSymbol "P6_3/mmc"^^xsd:string ;
+    mdo:hasPointGroup ex2:Ni_mp-1094136_conventional_standard_point_group .
+
+ex2:Ni_mp-1094136_conventional_standard_species_0 a mdo:Species ;
+    mdo:hasElement ex2:Ni_mp-1094136_conventional_standard_atom_0 .
+
+ex2:Ni_mp-1094136_conventional_standard_species_1 a mdo:Species ;
+    mdo:hasElement ex2:Ni_mp-1094136_conventional_standard_atom_1 .
+
+ex2:Ni_mp-1094136_conventional_standard_unit_cell a cso:UnitCell ;
+    cso:hasLatticeParameterAngle ex2:Ni_mp-1094136_conventional_standard_lattice_parameter_angle ;
+    cso:hasLatticeParameterLength ex2:Ni_mp-1094136_conventional_standard_lattice_parameter_length .
+
+ex31:Ni_mp-23_conventional_standard_Bravais_lattice a cso:BravaisLattice ;
+    cso:centering "P"^^xsd:string ;
+    cso:hasCrystalSystem ex31:Ni_mp-23_conventional_standard_crystal_system ;
+    cso:hasUnitCell ex31:Ni_mp-23_conventional_standard_unit_cell .
+
+ex31:Ni_mp-23_conventional_standard_atom_0 a chebi:CHEBI_33250 ;
+    ns1:formula "Ni"^^xsd:string .
+
+ex31:Ni_mp-23_conventional_standard_atom_1 a chebi:CHEBI_33250 ;
+    ns1:formula "Ni"^^xsd:string .
+
+ex31:Ni_mp-23_conventional_standard_atom_2 a chebi:CHEBI_33250 ;
+    ns1:formula "Ni"^^xsd:string .
+
+ex31:Ni_mp-23_conventional_standard_atom_3 a chebi:CHEBI_33250 ;
+    ns1:formula "Ni"^^xsd:string .
+
+ex31:Ni_mp-23_conventional_standard_frac_coord_0 a mdo:CoordinateVector ;
+    mdo:X_axisCoordinate 0e+00 ;
+    mdo:Y_axisCoordinate 0e+00 ;
+    mdo:Z_axisCoordinate 0e+00 .
+
+ex31:Ni_mp-23_conventional_standard_frac_coord_1 a mdo:CoordinateVector ;
+    mdo:X_axisCoordinate 0e+00 ;
+    mdo:Y_axisCoordinate 5e-01 ;
+    mdo:Z_axisCoordinate 5e-01 .
+
+ex31:Ni_mp-23_conventional_standard_frac_coord_2 a mdo:CoordinateVector ;
+    mdo:X_axisCoordinate 5e-01 ;
+    mdo:Y_axisCoordinate 0e+00 ;
+    mdo:Z_axisCoordinate 5e-01 .
+
+ex31:Ni_mp-23_conventional_standard_frac_coord_3 a mdo:CoordinateVector ;
+    mdo:X_axisCoordinate 5e-01 ;
+    mdo:Y_axisCoordinate 5e-01 ;
+    mdo:Z_axisCoordinate 0e+00 .
+
+ex31:Ni_mp-23_conventional_standard_lattice_parameter_angle a cso:LatticeParameterAngle ;
+    cso:latticeParameterAngleAlpha 9e+01 ;
+    cso:latticeParameterAngleBeta 9e+01 ;
+    cso:latticeParameterAngleGamma 9e+01 .
+
+ex31:Ni_mp-23_conventional_standard_lattice_parameter_length a cso:LatticeParameterLength ;
+    cso:latticeParameterLengthA 3.505798e+00 ;
+    cso:latticeParameterLengthB 3.505798e+00 ;
+    cso:latticeParameterLengthC 3.505798e+00 .
+
+ex31:Ni_mp-23_conventional_standard_occupancy_0 a mdo:Occupancy ;
+    mdo:hasSite ex31:Ni_mp-23_conventional_standard_site_0 ;
+    mdo:hasSpecies ex31:Ni_mp-23_conventional_standard_species_0 .
+
+ex31:Ni_mp-23_conventional_standard_occupancy_1 a mdo:Occupancy ;
+    mdo:hasSite ex31:Ni_mp-23_conventional_standard_site_1 ;
+    mdo:hasSpecies ex31:Ni_mp-23_conventional_standard_species_1 .
+
+ex31:Ni_mp-23_conventional_standard_occupancy_2 a mdo:Occupancy ;
+    mdo:hasSite ex31:Ni_mp-23_conventional_standard_site_2 ;
+    mdo:hasSpecies ex31:Ni_mp-23_conventional_standard_species_2 .
+
+ex31:Ni_mp-23_conventional_standard_occupancy_3 a mdo:Occupancy ;
+    mdo:hasSite ex31:Ni_mp-23_conventional_standard_site_3 ;
+    mdo:hasSpecies ex31:Ni_mp-23_conventional_standard_species_3 .
+
+ex31:Ni_mp-23_conventional_standard_point_group a mdo:PointGroup ;
+    cso:isPointGroupOf ex31:Ni_mp-23_conventional_standard_crystal_system ;
+    mdo:PointGroupHMName "6/mmm"^^xsd:string .
+
+ex31:Ni_mp-23_conventional_standard_site_0 a mdo:Site ;
+    mdo:hasFractionalCoordinates ex31:Ni_mp-23_conventional_standard_frac_coord_0 .
+
+ex31:Ni_mp-23_conventional_standard_site_1 a mdo:Site ;
+    mdo:hasFractionalCoordinates ex31:Ni_mp-23_conventional_standard_frac_coord_1 .
+
+ex31:Ni_mp-23_conventional_standard_site_2 a mdo:Site ;
+    mdo:hasFractionalCoordinates ex31:Ni_mp-23_conventional_standard_frac_coord_2 .
+
+ex31:Ni_mp-23_conventional_standard_site_3 a mdo:Site ;
+    mdo:hasFractionalCoordinates ex31:Ni_mp-23_conventional_standard_frac_coord_3 .
+
+ex31:Ni_mp-23_conventional_standard_space_group a mdo:SpaceGroup ;
+    mdo:SpaceGroupID 191 ;
+    mdo:SpaceGroupSymbol "P6/mmm"^^xsd:string ;
+    mdo:hasPointGroup ex31:Ni_mp-23_conventional_standard_point_group .
+
+ex31:Ni_mp-23_conventional_standard_species_0 a mdo:Species ;
+    mdo:hasElement ex31:Ni_mp-23_conventional_standard_atom_0 .
+
+ex31:Ni_mp-23_conventional_standard_species_1 a mdo:Species ;
+    mdo:hasElement ex31:Ni_mp-23_conventional_standard_atom_1 .
+
+ex31:Ni_mp-23_conventional_standard_species_2 a mdo:Species ;
+    mdo:hasElement ex31:Ni_mp-23_conventional_standard_atom_2 .
+
+ex31:Ni_mp-23_conventional_standard_species_3 a mdo:Species ;
+    mdo:hasElement ex31:Ni_mp-23_conventional_standard_atom_3 .
+
+ex31:Ni_mp-23_conventional_standard_unit_cell a cso:UnitCell ;
+    cso:hasLatticeParameterAngle ex31:Ni_mp-23_conventional_standard_lattice_parameter_angle ;
+    cso:hasLatticeParameterLength ex31:Ni_mp-23_conventional_standard_lattice_parameter_length .
+
+cdo:CrystallineMaterial a owl:Class ;
+    rdfs:label "Crystalline Material"@en ;
+    rdfs:comment "Crystalline material is material characterized by a periodic arrangement of the constituent atoms. The arrangement could be described its crystal structure."@en ;
+    rdfs:subClassOf [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty cdo:hasCrystallographicDefect ;
+                        owl:someValuesFrom cdo:CrystallographicDefect ] [ a owl:Restriction ;
+                        owl:allValuesFrom cdo:CrystallographicDefect ;
+                        owl:onProperty cdo:hasCrystallographicDefect ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty cdo:hasCrystalStructure ;
+                        owl:someValuesFrom cso:CrystalStructure ] [ a owl:Restriction ;
+                        owl:allValuesFrom cso:CrystalStructure ;
+                        owl:onProperty cdo:hasCrystalStructure ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty cdo:hasCrystalStructure ;
+                        owl:someValuesFrom cso:CrystalStructure ] [ a owl:Restriction ;
+                        owl:allValuesFrom cso:CrystalStructure ;
+                        owl:onProperty cdo:hasCrystalStructure ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty cdo:hasCrystallographicDefect ;
+                        owl:someValuesFrom cdo:CrystallographicDefect ] [ a owl:Restriction ;
+                        owl:allValuesFrom cdo:CrystallographicDefect ;
+                        owl:onProperty cdo:hasCrystallographicDefect ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty cdo:hasCrystallographicDefect ;
+                        owl:someValuesFrom cdo:CrystallographicDefect ] [ a owl:Restriction ;
+                        owl:allValuesFrom cdo:CrystallographicDefect ;
+                        owl:onProperty cdo:hasCrystallographicDefect ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty cdo:hasCrystallographicDefect ;
+                        owl:someValuesFrom cdo:CrystallographicDefect ] [ a owl:Restriction ;
+                        owl:allValuesFrom cdo:CrystallographicDefect ;
+                        owl:onProperty cdo:hasCrystallographicDefect ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty cdo:hasCrystallographicDefect ;
+                        owl:someValuesFrom cdo:CrystallographicDefect ] [ a owl:Restriction ;
+                        owl:allValuesFrom cdo:CrystallographicDefect ;
+                        owl:onProperty cdo:hasCrystallographicDefect ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty cdo:hasCrystalStructure ;
+                        owl:someValuesFrom cso:CrystalStructure ] [ a owl:Restriction ;
+                        owl:allValuesFrom cso:CrystalStructure ;
+                        owl:onProperty cdo:hasCrystalStructure ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty cdo:hasCrystalStructure ;
+                        owl:someValuesFrom cso:CrystalStructure ] [ a owl:Restriction ;
+                        owl:allValuesFrom cso:CrystalStructure ;
+                        owl:onProperty cdo:hasCrystalStructure ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty cdo:hasCrystalStructure ;
+                        owl:someValuesFrom cso:CrystalStructure ] [ a owl:Restriction ;
+                        owl:allValuesFrom cso:CrystalStructure ;
+                        owl:onProperty cdo:hasCrystalStructure ] ) ],
+        <http://emmo.info/emmo/middle/physicalistic#EMMO_4207e895_8b83_4318_996a_72cfb32acd94> .
+
+ex1:Ni_mp-1008728_conventional_standard_crystal_system a cso:Cubic .
+
+ex:Ni_mp-1014111_conventional_standard_crystal_system a cso:Cubic .
+
+ex3:Ni_mp-10257_conventional_standard_crystal_system a cso:Trigonal .
+
+ex2:Ni_mp-1094136_conventional_standard_crystal_system a cso:Hexagonal .
+
+ex31:Ni_mp-23_conventional_standard_crystal_system a cso:Hexagonal .
+
+cdo:hasCrystalStructure a owl:ObjectProperty ;
+    rdfs:label "has crystal structure"@en ;
+    rdfs:domain cdo:CrystallineMaterial ;
+    rdfs:range cso:CrystalStructure .
+
+cdo:hasCrystallographicDefect a owl:ObjectProperty ;
+    rdfs:label "has crystallographic defect"@en ;
+    rdfs:domain cdo:CrystallineMaterial ;
+    rdfs:range cdo:CrystallographicDefect .
+
+cdo:CrystallographicDefect a owl:Class ;
+    rdfs:label "Crystallographic Defect"@en ;
+    rdfs:comment "Lattice irregularity having one or more of its dimensions on the order of an atomic diameter."@en .
+
+cso:CrystalStructure a owl:Class .
+
+[] owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger .
+
+[] owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger .
+
+[] owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger .
+
+[] owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger .
+
+[] owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger .
+
+[] owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger .
+
+[] owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger .
+
+[] owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger .
+
+[] owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger .
+
+[] owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger .
+
+[] owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger .
+
+[] owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger .
+
+[] owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger .
+
+[] owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger .
+
+[] owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger .
+

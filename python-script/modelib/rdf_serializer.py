@@ -8,7 +8,7 @@ CSO = Namespace("https://purls.helmholtz-metadaten.de/cso#")
 #dislocation ontology
 DISO = Namespace("https://purls.helmholtz-metadaten.de/diso#")
 #crystalline-defect-ontology
-CDO = Namespace("https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystallographic-defect-ontology.owl#")
+CDO = Namespace("https://purls.helmholtz-metadaten.de/cdo#")
 MDO = Namespace("https://w3id.org/mdo/structure/")
 QUDT = Namespace("http://qudt.org/schema/qudt/")
 QUDT_UNIT = Namespace("http://qudt.org/vocab/unit/")
