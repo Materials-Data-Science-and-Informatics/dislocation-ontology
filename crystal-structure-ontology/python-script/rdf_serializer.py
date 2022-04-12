@@ -18,7 +18,7 @@ def rdf_serializer(cif_dict, space_group_data, slip_configs, slip_plane_normals,
     #Material data URI
     example = Namespace(uri)
     g = Graph()
-    g.parse("../../crystallographic-defect-ontology/crystallographic-defect-ontology.owl", format="xml")
+    g.parse("../../crystal-structure-ontology/crystal-structure-ontology.owl", format="xml")
     space_group_data = space_group_data['spacegroup']
     Bravais_lattice = example['{}_Bravais_lattice'.format(mat_id)]
     crystal_structure = example['{}_crystal_strcture'.format(mat_id)]
