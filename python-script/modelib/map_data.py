@@ -8,8 +8,8 @@ from rdf_serializer import rdf_serializer
 def main():
     G = Graph()
     path_microstructure = "../../data/modelib-microstructure/modelib-nickel-microstructure.h5"
-    path_nickel_cif = "../../data/MaterialProject/Nickel/json/Ni_mp-23_conventional_standard.json"
-    path_nickel_space_group = "../../data/MaterialProject/Nickel/spacegroup/mp-23_spacegroup.json"
+    path_nickel_cif = "../../crystal-structure-ontology/data/MaterialProject/Nickel/json/Ni_mp-23_conventional_standard.json"
+    path_nickel_space_group = "../../crystal-structure-ontology/data/MaterialProject/Nickel/spacegroup/mp-23_spacegroup.json"
     data = h5py.File(path_microstructure, "r")
     node_data_50 = data['00000050']['node data']
     linker_data_50 = data['00000050']['linker data']

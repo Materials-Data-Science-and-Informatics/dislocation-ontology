@@ -995,13 +995,13 @@ ex:loop_0 a diso:Dislocation ;
     diso:movesOn ex:loop_0_slip_plane .
 
 ex:loop_0_Burgers_vector a diso:BurgersVector ;
-    cso:hasVectorComponents ex:loop_0_vector_components_Burgers_vector ;
+    cso:hasVectorComponent ex:loop_0_vector_components_Burgers_vector ;
     cso:vectorMagnitude 2.489e-10 .
 
 ex:loop_0_slip_plane_origin a diso:Origin ;
-    cso:hasVectorComponents ex:loop_0_vector_components_origin .
+    cso:hasVectorComponent ex:loop_0_vector_components_origin .
 
-ex:loop_0_vector_components_Burgers_vector a cso:VectorComponentsOfBasis ;
+ex:loop_0_vector_components_Burgers_vector a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 1.759989e-10 ;
@@ -1009,7 +1009,7 @@ ex:loop_0_vector_components_Burgers_vector a cso:VectorComponentsOfBasis ;
     cso:secondAxisComponent -1.759989e-10 ;
     cso:thirdAxisComponent 0e+00 .
 
-ex:loop_0_vector_components_of_slip_plane_normal a cso:VectorComponentsOfBasis ;
+ex:loop_0_vector_components_of_slip_plane_normal a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Dimensionless ;
     qudt:quantityValue ex:quantity_value_unitless ;
     cso:firstAxisComponent 5.773503e-01 ;
@@ -1017,13 +1017,13 @@ ex:loop_0_vector_components_of_slip_plane_normal a cso:VectorComponentsOfBasis ;
     cso:secondAxisComponent 5.773503e-01 ;
     cso:thirdAxisComponent 5.773503e-01 .
 
-ex:loop_0_vector_components_origin a cso:VectorComponentsOfBasis ;
+ex:loop_0_vector_components_origin a cso:VectorComponentOfBasis ;
     cso:firstAxisComponent 4.927969e-08 ;
     cso:hasBasis ex:coordinate_basis ;
     cso:secondAxisComponent 4.927969e-08 ;
     cso:thirdAxisComponent 4.927969e-08 .
 
-ex:loop_0_vector_components_slip_direction a cso:VectorComponentsOfBasis ;
+ex:loop_0_vector_components_slip_direction a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Dimensionless ;
     qudt:quantityValue ex:quantity_value_unitless ;
     cso:firstAxisComponent 7.071068e-01 ;
@@ -1037,13 +1037,13 @@ ex:loop_1 a diso:Dislocation ;
     diso:movesOn ex:loop_1_slip_plane .
 
 ex:loop_1_Burgers_vector a diso:BurgersVector ;
-    cso:hasVectorComponents ex:loop_1_vector_components_Burgers_vector ;
+    cso:hasVectorComponent ex:loop_1_vector_components_Burgers_vector ;
     cso:vectorMagnitude 2.489e-10 .
 
 ex:loop_1_slip_plane_origin a diso:Origin ;
-    cso:hasVectorComponents ex:loop_1_vector_components_origin .
+    cso:hasVectorComponent ex:loop_1_vector_components_origin .
 
-ex:loop_1_vector_components_Burgers_vector a cso:VectorComponentsOfBasis ;
+ex:loop_1_vector_components_Burgers_vector a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -1.759989e-10 ;
@@ -1051,7 +1051,7 @@ ex:loop_1_vector_components_Burgers_vector a cso:VectorComponentsOfBasis ;
     cso:secondAxisComponent 0e+00 ;
     cso:thirdAxisComponent -1.759989e-10 .
 
-ex:loop_1_vector_components_of_slip_plane_normal a cso:VectorComponentsOfBasis ;
+ex:loop_1_vector_components_of_slip_plane_normal a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Dimensionless ;
     qudt:quantityValue ex:quantity_value_unitless ;
     cso:firstAxisComponent -5.773503e-01 ;
@@ -1059,13 +1059,13 @@ ex:loop_1_vector_components_of_slip_plane_normal a cso:VectorComponentsOfBasis ;
     cso:secondAxisComponent -5.773503e-01 ;
     cso:thirdAxisComponent 5.773503e-01 .
 
-ex:loop_1_vector_components_origin a cso:VectorComponentsOfBasis ;
+ex:loop_1_vector_components_origin a cso:VectorComponentOfBasis ;
     cso:firstAxisComponent 1.889055e-08 ;
     cso:hasBasis ex:coordinate_basis ;
     cso:secondAxisComponent 1.889055e-08 ;
     cso:thirdAxisComponent -1.889055e-08 .
 
-ex:loop_1_vector_components_slip_direction a cso:VectorComponentsOfBasis ;
+ex:loop_1_vector_components_slip_direction a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Dimensionless ;
     qudt:quantityValue ex:quantity_value_unitless ;
     cso:firstAxisComponent -7.071068e-01 ;
@@ -1079,23 +1079,23 @@ ex:loop_2 a diso:Dislocation ;
     diso:movesOn ex:loop_2_slip_plane .
 
 ex:loop_2_Burgers_vector a diso:BurgersVector ;
-    cso:hasVectorComponents ex:loop_2_vector_components_Burgers_vector ;
+    cso:hasVectorComponent ex:loop_2_vector_components_Burgers_vector ;
     cso:vectorMagnitude 2.489e-10 .
 
 ex:loop_2_slip_direction a diso:SlipDirection ;
-    cso:hasVectorComponents ex:loop_2_vector_components_slip_direction ;
+    cso:hasVectorComponent ex:loop_2_vector_components_slip_direction ;
     cso:vectorMagnitude 1e+00 ;
     diso:directionMillerIndice "[-10-1]"^^xsd:string ;
     diso:familyDirectionMillerIndice "<110>"^^xsd:string .
 
 ex:loop_2_slip_plane_normal a diso:SlipPlaneNormal ;
-    cso:hasVectorComponents ex:loop_2_vector_components_of_slip_plane_normal ;
+    cso:hasVectorComponent ex:loop_2_vector_components_of_slip_plane_normal ;
     diso:directionMillerIndice "[-1-11]"^^xsd:string .
 
 ex:loop_2_slip_plane_origin a diso:Origin ;
-    cso:hasVectorComponents ex:loop_2_vector_components_origin .
+    cso:hasVectorComponent ex:loop_2_vector_components_origin .
 
-ex:loop_2_vector_components_Burgers_vector a cso:VectorComponentsOfBasis ;
+ex:loop_2_vector_components_Burgers_vector a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -1.759989e-10 ;
@@ -1103,7 +1103,7 @@ ex:loop_2_vector_components_Burgers_vector a cso:VectorComponentsOfBasis ;
     cso:secondAxisComponent 0e+00 ;
     cso:thirdAxisComponent -1.759989e-10 .
 
-ex:loop_2_vector_components_of_slip_plane_normal a cso:VectorComponentsOfBasis ;
+ex:loop_2_vector_components_of_slip_plane_normal a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Dimensionless ;
     qudt:quantityValue ex:quantity_value_unitless ;
     cso:firstAxisComponent -5.773503e-01 ;
@@ -1111,13 +1111,13 @@ ex:loop_2_vector_components_of_slip_plane_normal a cso:VectorComponentsOfBasis ;
     cso:secondAxisComponent -5.773503e-01 ;
     cso:thirdAxisComponent 5.773503e-01 .
 
-ex:loop_2_vector_components_origin a cso:VectorComponentsOfBasis ;
+ex:loop_2_vector_components_origin a cso:VectorComponentOfBasis ;
     cso:firstAxisComponent -3.954108e-08 ;
     cso:hasBasis ex:coordinate_basis ;
     cso:secondAxisComponent -3.954108e-08 ;
     cso:thirdAxisComponent 3.954108e-08 .
 
-ex:loop_2_vector_components_slip_direction a cso:VectorComponentsOfBasis ;
+ex:loop_2_vector_components_slip_direction a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Dimensionless ;
     qudt:quantityValue ex:quantity_value_unitless ;
     cso:firstAxisComponent -7.071068e-01 ;
@@ -1131,13 +1131,13 @@ ex:loop_3 a diso:Dislocation ;
     diso:movesOn ex:loop_3_slip_plane .
 
 ex:loop_3_Burgers_vector a diso:BurgersVector ;
-    cso:hasVectorComponents ex:loop_3_vector_components_Burgers_vector ;
+    cso:hasVectorComponent ex:loop_3_vector_components_Burgers_vector ;
     cso:vectorMagnitude 2.489e-10 .
 
 ex:loop_3_slip_plane_origin a diso:Origin ;
-    cso:hasVectorComponents ex:loop_3_vector_components_origin .
+    cso:hasVectorComponent ex:loop_3_vector_components_origin .
 
-ex:loop_3_vector_components_Burgers_vector a cso:VectorComponentsOfBasis ;
+ex:loop_3_vector_components_Burgers_vector a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -1.759989e-10 ;
@@ -1145,7 +1145,7 @@ ex:loop_3_vector_components_Burgers_vector a cso:VectorComponentsOfBasis ;
     cso:secondAxisComponent 0e+00 ;
     cso:thirdAxisComponent 1.759989e-10 .
 
-ex:loop_3_vector_components_of_slip_plane_normal a cso:VectorComponentsOfBasis ;
+ex:loop_3_vector_components_of_slip_plane_normal a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Dimensionless ;
     qudt:quantityValue ex:quantity_value_unitless ;
     cso:firstAxisComponent -5.773503e-01 ;
@@ -1153,13 +1153,13 @@ ex:loop_3_vector_components_of_slip_plane_normal a cso:VectorComponentsOfBasis ;
     cso:secondAxisComponent 5.773503e-01 ;
     cso:thirdAxisComponent -5.773503e-01 .
 
-ex:loop_3_vector_components_origin a cso:VectorComponentsOfBasis ;
+ex:loop_3_vector_components_origin a cso:VectorComponentOfBasis ;
     cso:firstAxisComponent -3.144513e-08 ;
     cso:hasBasis ex:coordinate_basis ;
     cso:secondAxisComponent 3.144513e-08 ;
     cso:thirdAxisComponent -3.144513e-08 .
 
-ex:loop_3_vector_components_slip_direction a cso:VectorComponentsOfBasis ;
+ex:loop_3_vector_components_slip_direction a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Dimensionless ;
     qudt:quantityValue ex:quantity_value_unitless ;
     cso:firstAxisComponent -7.071068e-01 ;
@@ -1173,13 +1173,13 @@ ex:loop_4 a diso:Dislocation ;
     diso:movesOn ex:loop_4_slip_plane .
 
 ex:loop_4_Burgers_vector a diso:BurgersVector ;
-    cso:hasVectorComponents ex:loop_4_vector_components_Burgers_vector ;
+    cso:hasVectorComponent ex:loop_4_vector_components_Burgers_vector ;
     cso:vectorMagnitude 2.489e-10 .
 
 ex:loop_4_slip_plane_origin a diso:Origin ;
-    cso:hasVectorComponents ex:loop_4_vector_components_origin .
+    cso:hasVectorComponent ex:loop_4_vector_components_origin .
 
-ex:loop_4_vector_components_Burgers_vector a cso:VectorComponentsOfBasis ;
+ex:loop_4_vector_components_Burgers_vector a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 0e+00 ;
@@ -1187,7 +1187,7 @@ ex:loop_4_vector_components_Burgers_vector a cso:VectorComponentsOfBasis ;
     cso:secondAxisComponent 1.759989e-10 ;
     cso:thirdAxisComponent 1.759989e-10 .
 
-ex:loop_4_vector_components_of_slip_plane_normal a cso:VectorComponentsOfBasis ;
+ex:loop_4_vector_components_of_slip_plane_normal a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Dimensionless ;
     qudt:quantityValue ex:quantity_value_unitless ;
     cso:firstAxisComponent -5.773503e-01 ;
@@ -1195,13 +1195,13 @@ ex:loop_4_vector_components_of_slip_plane_normal a cso:VectorComponentsOfBasis ;
     cso:secondAxisComponent 5.773503e-01 ;
     cso:thirdAxisComponent -5.773503e-01 .
 
-ex:loop_4_vector_components_origin a cso:VectorComponentsOfBasis ;
+ex:loop_4_vector_components_origin a cso:VectorComponentOfBasis ;
     cso:firstAxisComponent 1.877321e-08 ;
     cso:hasBasis ex:coordinate_basis ;
     cso:secondAxisComponent -1.877321e-08 ;
     cso:thirdAxisComponent 1.877321e-08 .
 
-ex:loop_4_vector_components_slip_direction a cso:VectorComponentsOfBasis ;
+ex:loop_4_vector_components_slip_direction a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Dimensionless ;
     qudt:quantityValue ex:quantity_value_unitless ;
     cso:firstAxisComponent 0e+00 ;
@@ -1215,13 +1215,13 @@ ex:loop_6 a diso:Dislocation ;
     diso:movesOn ex:loop_6_slip_plane .
 
 ex:loop_6_Burgers_vector a diso:BurgersVector ;
-    cso:hasVectorComponents ex:loop_6_vector_components_Burgers_vector ;
+    cso:hasVectorComponent ex:loop_6_vector_components_Burgers_vector ;
     cso:vectorMagnitude 2.489e-10 .
 
 ex:loop_6_slip_plane_origin a diso:Origin ;
-    cso:hasVectorComponents ex:loop_6_vector_components_origin .
+    cso:hasVectorComponent ex:loop_6_vector_components_origin .
 
-ex:loop_6_vector_components_Burgers_vector a cso:VectorComponentsOfBasis ;
+ex:loop_6_vector_components_Burgers_vector a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 0e+00 ;
@@ -1229,7 +1229,7 @@ ex:loop_6_vector_components_Burgers_vector a cso:VectorComponentsOfBasis ;
     cso:secondAxisComponent -1.759989e-10 ;
     cso:thirdAxisComponent -1.759989e-10 .
 
-ex:loop_6_vector_components_of_slip_plane_normal a cso:VectorComponentsOfBasis ;
+ex:loop_6_vector_components_of_slip_plane_normal a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Dimensionless ;
     qudt:quantityValue ex:quantity_value_unitless ;
     cso:firstAxisComponent -5.773503e-01 ;
@@ -1237,13 +1237,13 @@ ex:loop_6_vector_components_of_slip_plane_normal a cso:VectorComponentsOfBasis ;
     cso:secondAxisComponent -5.773503e-01 ;
     cso:thirdAxisComponent 5.773503e-01 .
 
-ex:loop_6_vector_components_origin a cso:VectorComponentsOfBasis ;
+ex:loop_6_vector_components_origin a cso:VectorComponentOfBasis ;
     cso:firstAxisComponent 7.732217e-08 ;
     cso:hasBasis ex:coordinate_basis ;
     cso:secondAxisComponent 7.732217e-08 ;
     cso:thirdAxisComponent -7.732217e-08 .
 
-ex:loop_6_vector_components_slip_direction a cso:VectorComponentsOfBasis ;
+ex:loop_6_vector_components_slip_direction a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Dimensionless ;
     qudt:quantityValue ex:quantity_value_unitless ;
     cso:firstAxisComponent 0e+00 ;
@@ -1257,13 +1257,13 @@ ex:loop_7 a diso:Dislocation ;
     diso:movesOn ex:loop_7_slip_plane .
 
 ex:loop_7_Burgers_vector a diso:BurgersVector ;
-    cso:hasVectorComponents ex:loop_7_vector_components_Burgers_vector ;
+    cso:hasVectorComponent ex:loop_7_vector_components_Burgers_vector ;
     cso:vectorMagnitude 2.489e-10 .
 
 ex:loop_7_slip_plane_origin a diso:Origin ;
-    cso:hasVectorComponents ex:loop_7_vector_components_origin .
+    cso:hasVectorComponent ex:loop_7_vector_components_origin .
 
-ex:loop_7_vector_components_Burgers_vector a cso:VectorComponentsOfBasis ;
+ex:loop_7_vector_components_Burgers_vector a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 1.759989e-10 ;
@@ -1271,7 +1271,7 @@ ex:loop_7_vector_components_Burgers_vector a cso:VectorComponentsOfBasis ;
     cso:secondAxisComponent 1.759989e-10 ;
     cso:thirdAxisComponent 0e+00 .
 
-ex:loop_7_vector_components_of_slip_plane_normal a cso:VectorComponentsOfBasis ;
+ex:loop_7_vector_components_of_slip_plane_normal a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Dimensionless ;
     qudt:quantityValue ex:quantity_value_unitless ;
     cso:firstAxisComponent -5.773503e-01 ;
@@ -1279,13 +1279,13 @@ ex:loop_7_vector_components_of_slip_plane_normal a cso:VectorComponentsOfBasis ;
     cso:secondAxisComponent 5.773503e-01 ;
     cso:thirdAxisComponent -5.773503e-01 .
 
-ex:loop_7_vector_components_origin a cso:VectorComponentsOfBasis ;
+ex:loop_7_vector_components_origin a cso:VectorComponentOfBasis ;
     cso:firstAxisComponent 7.743951e-09 ;
     cso:hasBasis ex:coordinate_basis ;
     cso:secondAxisComponent -7.743951e-09 ;
     cso:thirdAxisComponent 7.743951e-09 .
 
-ex:loop_7_vector_components_slip_direction a cso:VectorComponentsOfBasis ;
+ex:loop_7_vector_components_slip_direction a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Dimensionless ;
     qudt:quantityValue ex:quantity_value_unitless ;
     cso:firstAxisComponent 7.071068e-01 ;
@@ -1299,13 +1299,13 @@ ex:loop_8 a diso:Dislocation ;
     diso:movesOn ex:loop_8_slip_plane .
 
 ex:loop_8_Burgers_vector a diso:BurgersVector ;
-    cso:hasVectorComponents ex:loop_8_vector_components_Burgers_vector ;
+    cso:hasVectorComponent ex:loop_8_vector_components_Burgers_vector ;
     cso:vectorMagnitude 2.489e-10 .
 
 ex:loop_8_slip_plane_origin a diso:Origin ;
-    cso:hasVectorComponents ex:loop_8_vector_components_origin .
+    cso:hasVectorComponent ex:loop_8_vector_components_origin .
 
-ex:loop_8_vector_components_Burgers_vector a cso:VectorComponentsOfBasis ;
+ex:loop_8_vector_components_Burgers_vector a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -1.759989e-10 ;
@@ -1313,7 +1313,7 @@ ex:loop_8_vector_components_Burgers_vector a cso:VectorComponentsOfBasis ;
     cso:secondAxisComponent 0e+00 ;
     cso:thirdAxisComponent -1.759989e-10 .
 
-ex:loop_8_vector_components_of_slip_plane_normal a cso:VectorComponentsOfBasis ;
+ex:loop_8_vector_components_of_slip_plane_normal a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Dimensionless ;
     qudt:quantityValue ex:quantity_value_unitless ;
     cso:firstAxisComponent -5.773503e-01 ;
@@ -1321,13 +1321,13 @@ ex:loop_8_vector_components_of_slip_plane_normal a cso:VectorComponentsOfBasis ;
     cso:secondAxisComponent 5.773503e-01 ;
     cso:thirdAxisComponent 5.773503e-01 .
 
-ex:loop_8_vector_components_origin a cso:VectorComponentsOfBasis ;
+ex:loop_8_vector_components_origin a cso:VectorComponentOfBasis ;
     cso:firstAxisComponent -5.326899e-08 ;
     cso:hasBasis ex:coordinate_basis ;
     cso:secondAxisComponent 5.326899e-08 ;
     cso:thirdAxisComponent 5.326899e-08 .
 
-ex:loop_8_vector_components_slip_direction a cso:VectorComponentsOfBasis ;
+ex:loop_8_vector_components_slip_direction a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Dimensionless ;
     qudt:quantityValue ex:quantity_value_unitless ;
     cso:firstAxisComponent -7.071068e-01 ;
@@ -1341,13 +1341,13 @@ ex:loop_9 a diso:Dislocation ;
     diso:movesOn ex:loop_9_slip_plane .
 
 ex:loop_9_Burgers_vector a diso:BurgersVector ;
-    cso:hasVectorComponents ex:loop_9_vector_components_Burgers_vector ;
+    cso:hasVectorComponent ex:loop_9_vector_components_Burgers_vector ;
     cso:vectorMagnitude 2.489e-10 .
 
 ex:loop_9_slip_plane_origin a diso:Origin ;
-    cso:hasVectorComponents ex:loop_9_vector_components_origin .
+    cso:hasVectorComponent ex:loop_9_vector_components_origin .
 
-ex:loop_9_vector_components_Burgers_vector a cso:VectorComponentsOfBasis ;
+ex:loop_9_vector_components_Burgers_vector a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 0e+00 ;
@@ -1355,7 +1355,7 @@ ex:loop_9_vector_components_Burgers_vector a cso:VectorComponentsOfBasis ;
     cso:secondAxisComponent 1.759989e-10 ;
     cso:thirdAxisComponent -1.759989e-10 .
 
-ex:loop_9_vector_components_of_slip_plane_normal a cso:VectorComponentsOfBasis ;
+ex:loop_9_vector_components_of_slip_plane_normal a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Dimensionless ;
     qudt:quantityValue ex:quantity_value_unitless ;
     cso:firstAxisComponent 5.773503e-01 ;
@@ -1363,13 +1363,13 @@ ex:loop_9_vector_components_of_slip_plane_normal a cso:VectorComponentsOfBasis ;
     cso:secondAxisComponent -5.773503e-01 ;
     cso:thirdAxisComponent -5.773503e-01 .
 
-ex:loop_9_vector_components_origin a cso:VectorComponentsOfBasis ;
+ex:loop_9_vector_components_origin a cso:VectorComponentOfBasis ;
     cso:firstAxisComponent -5.326899e-08 ;
     cso:hasBasis ex:coordinate_basis ;
     cso:secondAxisComponent 5.326899e-08 ;
     cso:thirdAxisComponent 5.326899e-08 .
 
-ex:loop_9_vector_components_slip_direction a cso:VectorComponentsOfBasis ;
+ex:loop_9_vector_components_slip_direction a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Dimensionless ;
     qudt:quantityValue ex:quantity_value_unitless ;
     cso:firstAxisComponent 0e+00 ;
@@ -1377,7 +1377,7 @@ ex:loop_9_vector_components_slip_direction a cso:VectorComponentsOfBasis ;
     cso:secondAxisComponent 7.071068e-01 ;
     cso:thirdAxisComponent -7.071068e-01 .
 
-ex:node_0_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_0_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -4.954676e-08 ;
@@ -1386,9 +1386,9 @@ ex:node_0_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 1.86675e-07 .
 
 ex:node_0_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_0_coordinate .
+    cso:hasVectorComponent ex:node_0_coordinate .
 
-ex:node_100_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_100_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -1.638315e-07 ;
@@ -1397,9 +1397,9 @@ ex:node_100_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 6.619817e-08 .
 
 ex:node_100_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_100_coordinate .
+    cso:hasVectorComponent ex:node_100_coordinate .
 
-ex:node_101_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_101_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 7.024538e-08 ;
@@ -1408,9 +1408,9 @@ ex:node_101_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 1.763006e-07 .
 
 ex:node_101_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_101_coordinate .
+    cso:hasVectorComponent ex:node_101_coordinate .
 
-ex:node_102_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_102_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -1.802916e-07 ;
@@ -1419,9 +1419,9 @@ ex:node_102_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 2.623574e-08 .
 
 ex:node_102_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_102_coordinate .
+    cso:hasVectorComponent ex:node_102_coordinate .
 
-ex:node_103_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_103_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -5.3694e-08 ;
@@ -1430,9 +1430,9 @@ ex:node_103_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent -1.644326e-07 .
 
 ex:node_103_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_103_coordinate .
+    cso:hasVectorComponent ex:node_103_coordinate .
 
-ex:node_104_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_104_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -4.379076e-08 ;
@@ -1441,9 +1441,9 @@ ex:node_104_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 1.715659e-07 .
 
 ex:node_104_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_104_coordinate .
+    cso:hasVectorComponent ex:node_104_coordinate .
 
-ex:node_106_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_106_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -1.751509e-07 ;
@@ -1452,9 +1452,9 @@ ex:node_106_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 4.863732e-08 .
 
 ex:node_106_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_106_coordinate .
+    cso:hasVectorComponent ex:node_106_coordinate .
 
-ex:node_109_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_109_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 1.822536e-07 ;
@@ -1463,9 +1463,9 @@ ex:node_109_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent -1.137627e-08 .
 
 ex:node_109_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_109_coordinate .
+    cso:hasVectorComponent ex:node_109_coordinate .
 
-ex:node_10_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_10_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -1.86675e-07 ;
@@ -1474,9 +1474,9 @@ ex:node_10_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent -1.86675e-07 .
 
 ex:node_10_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_10_coordinate .
+    cso:hasVectorComponent ex:node_10_coordinate .
 
-ex:node_110_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_110_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -9.922228e-09 ;
@@ -1485,9 +1485,9 @@ ex:node_110_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 1.786777e-07 .
 
 ex:node_110_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_110_coordinate .
+    cso:hasVectorComponent ex:node_110_coordinate .
 
-ex:node_111_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_111_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -1.86675e-07 ;
@@ -1496,9 +1496,9 @@ ex:node_111_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 4.509384e-08 .
 
 ex:node_111_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_111_coordinate .
+    cso:hasVectorComponent ex:node_111_coordinate .
 
-ex:node_112_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_112_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 7.388163e-08 ;
@@ -1507,9 +1507,9 @@ ex:node_112_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 1.089315e-07 .
 
 ex:node_112_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_112_coordinate .
+    cso:hasVectorComponent ex:node_112_coordinate .
 
-ex:node_113_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_113_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 1.017247e-07 ;
@@ -1518,9 +1518,9 @@ ex:node_113_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 8.965788e-08 .
 
 ex:node_113_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_113_coordinate .
+    cso:hasVectorComponent ex:node_113_coordinate .
 
-ex:node_114_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_114_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 6.332976e-08 ;
@@ -1529,9 +1529,9 @@ ex:node_114_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent -2.626241e-08 .
 
 ex:node_114_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_114_coordinate .
+    cso:hasVectorComponent ex:node_114_coordinate .
 
-ex:node_115_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_115_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 9.061654e-08 ;
@@ -1540,9 +1540,9 @@ ex:node_115_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 1.843941e-08 .
 
 ex:node_115_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_115_coordinate .
+    cso:hasVectorComponent ex:node_115_coordinate .
 
-ex:node_116_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_116_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -6.599513e-08 ;
@@ -1551,9 +1551,9 @@ ex:node_116_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 1.323057e-07 .
 
 ex:node_116_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_116_coordinate .
+    cso:hasVectorComponent ex:node_116_coordinate .
 
-ex:node_118_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_118_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -1.24979e-07 ;
@@ -1562,9 +1562,9 @@ ex:node_118_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent -5.928027e-08 .
 
 ex:node_118_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_118_coordinate .
+    cso:hasVectorComponent ex:node_118_coordinate .
 
-ex:node_119_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_119_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -1.079793e-07 ;
@@ -1573,9 +1573,9 @@ ex:node_119_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent -8.702093e-08 .
 
 ex:node_119_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_119_coordinate .
+    cso:hasVectorComponent ex:node_119_coordinate .
 
-ex:node_11_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_11_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -1.186232e-07 ;
@@ -1584,9 +1584,9 @@ ex:node_11_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent -1.86675e-07 .
 
 ex:node_11_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_11_coordinate .
+    cso:hasVectorComponent ex:node_11_coordinate .
 
-ex:node_120_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_120_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 2.535719e-08 ;
@@ -1595,9 +1595,9 @@ ex:node_120_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 5.938143e-08 .
 
 ex:node_120_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_120_coordinate .
+    cso:hasVectorComponent ex:node_120_coordinate .
 
-ex:node_121_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_121_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 5.404414e-08 ;
@@ -1606,9 +1606,9 @@ ex:node_121_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 2.952272e-08 .
 
 ex:node_121_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_121_coordinate .
+    cso:hasVectorComponent ex:node_121_coordinate .
 
-ex:node_122_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_122_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -9.153194e-08 ;
@@ -1617,9 +1617,9 @@ ex:node_122_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 9.151942e-08 .
 
 ex:node_122_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_122_coordinate .
+    cso:hasVectorComponent ex:node_122_coordinate .
 
-ex:node_123_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_123_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -6.346521e-08 ;
@@ -1628,9 +1628,9 @@ ex:node_123_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 1.263556e-07 .
 
 ex:node_123_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_123_coordinate .
+    cso:hasVectorComponent ex:node_123_coordinate .
 
-ex:node_124_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_124_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 1.206721e-07 ;
@@ -1639,9 +1639,9 @@ ex:node_124_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent -1.223592e-07 .
 
 ex:node_124_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_124_coordinate .
+    cso:hasVectorComponent ex:node_124_coordinate .
 
-ex:node_125_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_125_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 1.366585e-07 ;
@@ -1650,9 +1650,9 @@ ex:node_125_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent -9.599237e-08 .
 
 ex:node_125_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_125_coordinate .
+    cso:hasVectorComponent ex:node_125_coordinate .
 
-ex:node_126_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_126_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -7.774576e-08 ;
@@ -1661,9 +1661,9 @@ ex:node_126_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 1.125645e-07 .
 
 ex:node_126_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_126_coordinate .
+    cso:hasVectorComponent ex:node_126_coordinate .
 
-ex:node_128_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_128_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 1.875083e-08 ;
@@ -1672,9 +1672,9 @@ ex:node_128_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 1.50125e-07 .
 
 ex:node_128_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_128_coordinate .
+    cso:hasVectorComponent ex:node_128_coordinate .
 
-ex:node_129_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_129_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 4.621611e-08 ;
@@ -1683,9 +1683,9 @@ ex:node_129_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 1.291353e-07 .
 
 ex:node_129_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_129_coordinate .
+    cso:hasVectorComponent ex:node_129_coordinate .
 
-ex:node_12_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_12_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 1.86675e-07 ;
@@ -1694,9 +1694,9 @@ ex:node_12_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 1.186232e-07 .
 
 ex:node_12_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_12_coordinate .
+    cso:hasVectorComponent ex:node_12_coordinate .
 
-ex:node_130_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_130_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 1.520791e-07 ;
@@ -1705,9 +1705,9 @@ ex:node_130_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 5.88071e-08 .
 
 ex:node_130_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_130_coordinate .
+    cso:hasVectorComponent ex:node_130_coordinate .
 
-ex:node_131_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_131_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 1.28385e-07 ;
@@ -1716,9 +1716,9 @@ ex:node_131_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 7.213203e-08 .
 
 ex:node_131_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_131_coordinate .
+    cso:hasVectorComponent ex:node_131_coordinate .
 
-ex:node_132_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_132_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 9.24642e-09 ;
@@ -1727,9 +1727,9 @@ ex:node_132_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent -1.19281e-07 .
 
 ex:node_132_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_132_coordinate .
+    cso:hasVectorComponent ex:node_132_coordinate .
 
-ex:node_133_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_133_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 3.64708e-08 ;
@@ -1738,9 +1738,9 @@ ex:node_133_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent -7.195321e-08 .
 
 ex:node_133_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_133_coordinate .
+    cso:hasVectorComponent ex:node_133_coordinate .
 
-ex:node_134_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_134_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 1.504326e-07 ;
@@ -1749,9 +1749,9 @@ ex:node_134_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 1.099127e-07 .
 
 ex:node_134_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_134_coordinate .
+    cso:hasVectorComponent ex:node_134_coordinate .
 
-ex:node_135_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_135_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 1.214072e-07 ;
@@ -1760,9 +1760,9 @@ ex:node_135_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 6.464419e-08 .
 
 ex:node_135_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_135_coordinate .
+    cso:hasVectorComponent ex:node_135_coordinate .
 
-ex:node_136_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_136_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -1.344507e-07 ;
@@ -1771,9 +1771,9 @@ ex:node_136_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 8.733807e-08 .
 
 ex:node_136_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_136_coordinate .
+    cso:hasVectorComponent ex:node_136_coordinate .
 
-ex:node_137_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_137_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -1.011158e-07 ;
@@ -1782,9 +1782,9 @@ ex:node_137_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 1.097887e-07 .
 
 ex:node_137_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_137_coordinate .
+    cso:hasVectorComponent ex:node_137_coordinate .
 
-ex:node_138_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_138_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 3.373199e-08 ;
@@ -1793,9 +1793,9 @@ ex:node_138_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 1.577783e-07 .
 
 ex:node_138_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_138_coordinate .
+    cso:hasVectorComponent ex:node_138_coordinate .
 
-ex:node_139_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_139_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -2.273317e-09 ;
@@ -1804,9 +1804,9 @@ ex:node_139_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 1.421922e-07 .
 
 ex:node_139_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_139_coordinate .
+    cso:hasVectorComponent ex:node_139_coordinate .
 
-ex:node_13_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_13_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 1.86675e-07 ;
@@ -1815,9 +1815,9 @@ ex:node_13_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 1.86675e-07 .
 
 ex:node_13_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_13_coordinate .
+    cso:hasVectorComponent ex:node_13_coordinate .
 
-ex:node_140_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_140_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -1.597936e-07 ;
@@ -1826,9 +1826,9 @@ ex:node_140_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent -2.672661e-09 .
 
 ex:node_140_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_140_coordinate .
+    cso:hasVectorComponent ex:node_140_coordinate .
 
-ex:node_141_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_141_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -1.42011e-07 ;
@@ -1837,9 +1837,9 @@ ex:node_141_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent -3.103814e-08 .
 
 ex:node_141_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_141_coordinate .
+    cso:hasVectorComponent ex:node_141_coordinate .
 
-ex:node_142_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_142_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -7.232557e-08 ;
@@ -1848,9 +1848,9 @@ ex:node_142_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent -1.400091e-07 .
 
 ex:node_142_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_142_coordinate .
+    cso:hasVectorComponent ex:node_142_coordinate .
 
-ex:node_143_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_143_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -9.049994e-08 ;
@@ -1859,9 +1859,9 @@ ex:node_143_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent -1.140291e-07 .
 
 ex:node_143_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_143_coordinate .
+    cso:hasVectorComponent ex:node_143_coordinate .
 
-ex:node_144_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_144_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -2.96983e-08 ;
@@ -1870,9 +1870,9 @@ ex:node_144_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 1.322634e-07 .
 
 ex:node_144_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_144_coordinate .
+    cso:hasVectorComponent ex:node_144_coordinate .
 
-ex:node_145_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_145_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -3.159094e-09 ;
@@ -1881,9 +1881,9 @@ ex:node_145_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 9.156685e-08 .
 
 ex:node_145_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_145_coordinate .
+    cso:hasVectorComponent ex:node_145_coordinate .
 
-ex:node_146_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_146_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 1.176197e-07 ;
@@ -1892,9 +1892,9 @@ ex:node_146_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent -3.04865e-08 .
 
 ex:node_146_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_146_coordinate .
+    cso:hasVectorComponent ex:node_146_coordinate .
 
-ex:node_147_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_147_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 8.518204e-08 ;
@@ -1903,9 +1903,9 @@ ex:node_147_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent -1.485849e-09 .
 
 ex:node_147_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_147_coordinate .
+    cso:hasVectorComponent ex:node_147_coordinate .
 
-ex:node_148_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_148_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -1.531753e-07 ;
@@ -1914,9 +1914,9 @@ ex:node_148_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 7.738731e-08 .
 
 ex:node_148_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_148_coordinate .
+    cso:hasVectorComponent ex:node_148_coordinate .
 
-ex:node_14_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_14_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 8.656898e-08 ;
@@ -1925,9 +1925,9 @@ ex:node_14_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 1.86675e-07 .
 
 ex:node_14_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_14_coordinate .
+    cso:hasVectorComponent ex:node_14_coordinate .
 
-ex:node_151_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_151_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -3.677235e-08 ;
@@ -1936,9 +1936,9 @@ ex:node_151_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 1.555982e-07 .
 
 ex:node_151_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_151_coordinate .
+    cso:hasVectorComponent ex:node_151_coordinate .
 
-ex:node_152_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_152_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 9.80519e-08 ;
@@ -1947,9 +1947,9 @@ ex:node_152_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent -1.652816e-07 .
 
 ex:node_152_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_152_coordinate .
+    cso:hasVectorComponent ex:node_152_coordinate .
 
-ex:node_153_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_153_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 1.072485e-07 ;
@@ -1958,9 +1958,9 @@ ex:node_153_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent -1.463181e-07 .
 
 ex:node_153_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_153_coordinate .
+    cso:hasVectorComponent ex:node_153_coordinate .
 
-ex:node_154_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_154_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 1.70147e-07 ;
@@ -1969,9 +1969,9 @@ ex:node_154_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent -4.047362e-08 .
 
 ex:node_154_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_154_coordinate .
+    cso:hasVectorComponent ex:node_154_coordinate .
 
-ex:node_155_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_155_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 1.536468e-07 ;
@@ -1980,9 +1980,9 @@ ex:node_155_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent -6.917637e-08 .
 
 ex:node_155_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_155_coordinate .
+    cso:hasVectorComponent ex:node_155_coordinate .
 
-ex:node_156_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_156_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -3.466242e-08 ;
@@ -1991,9 +1991,9 @@ ex:node_156_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 1.593858e-07 .
 
 ex:node_156_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_156_coordinate .
+    cso:hasVectorComponent ex:node_156_coordinate .
 
-ex:node_157_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_157_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -5.549039e-08 ;
@@ -2002,9 +2002,9 @@ ex:node_157_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 1.34696e-07 .
 
 ex:node_157_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_157_coordinate .
+    cso:hasVectorComponent ex:node_157_coordinate .
 
-ex:node_158_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_158_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -1.755888e-07 ;
@@ -2013,9 +2013,9 @@ ex:node_158_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 7.332673e-08 .
 
 ex:node_158_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_158_coordinate .
+    cso:hasVectorComponent ex:node_158_coordinate .
 
-ex:node_159_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_159_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -1.463744e-07 ;
@@ -2024,9 +2024,9 @@ ex:node_159_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 9.039892e-08 .
 
 ex:node_159_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_159_coordinate .
+    cso:hasVectorComponent ex:node_159_coordinate .
 
-ex:node_15_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_15_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -1.86675e-07 ;
@@ -2035,9 +2035,9 @@ ex:node_15_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 3.273579e-08 .
 
 ex:node_15_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_15_coordinate .
+    cso:hasVectorComponent ex:node_15_coordinate .
 
-ex:node_160_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_160_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -4.125276e-08 ;
@@ -2046,9 +2046,9 @@ ex:node_160_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 1.523324e-07 .
 
 ex:node_160_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_160_coordinate .
+    cso:hasVectorComponent ex:node_160_coordinate .
 
-ex:node_164_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_164_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 1.600195e-07 ;
@@ -2057,9 +2057,9 @@ ex:node_164_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent -6.109791e-08 .
 
 ex:node_164_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_164_coordinate .
+    cso:hasVectorComponent ex:node_164_coordinate .
 
-ex:node_165_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_165_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -1.017596e-07 ;
@@ -2068,9 +2068,9 @@ ex:node_165_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 9.040085e-08 .
 
 ex:node_165_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_165_coordinate .
+    cso:hasVectorComponent ex:node_165_coordinate .
 
-ex:node_166_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_166_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -8.378315e-08 ;
@@ -2079,9 +2079,9 @@ ex:node_166_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 1.025265e-07 .
 
 ex:node_166_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_166_coordinate .
+    cso:hasVectorComponent ex:node_166_coordinate .
 
-ex:node_167_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_167_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -3.676917e-08 ;
@@ -2090,9 +2090,9 @@ ex:node_167_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 1.572953e-07 .
 
 ex:node_167_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_167_coordinate .
+    cso:hasVectorComponent ex:node_167_coordinate .
 
-ex:node_168_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_168_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -2.233527e-08 ;
@@ -2101,9 +2101,9 @@ ex:node_168_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 1.732463e-07 .
 
 ex:node_168_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_168_coordinate .
+    cso:hasVectorComponent ex:node_168_coordinate .
 
-ex:node_169_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_169_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -1.86675e-07 ;
@@ -2112,9 +2112,9 @@ ex:node_169_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 2.323185e-08 .
 
 ex:node_169_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_169_coordinate .
+    cso:hasVectorComponent ex:node_169_coordinate .
 
-ex:node_16_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_16_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -1.86675e-07 ;
@@ -2123,9 +2123,9 @@ ex:node_16_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 1.86675e-07 .
 
 ex:node_16_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_16_coordinate .
+    cso:hasVectorComponent ex:node_16_coordinate .
 
-ex:node_171_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_171_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -1.33504e-08 ;
@@ -2134,9 +2134,9 @@ ex:node_171_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent -1.56137e-07 .
 
 ex:node_171_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_171_coordinate .
+    cso:hasVectorComponent ex:node_171_coordinate .
 
-ex:node_173_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_173_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -1.968583e-09 ;
@@ -2145,9 +2145,9 @@ ex:node_173_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 1.827422e-07 .
 
 ex:node_173_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_173_coordinate .
+    cso:hasVectorComponent ex:node_173_coordinate .
 
-ex:node_174_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_174_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -1.170491e-07 ;
@@ -2156,9 +2156,9 @@ ex:node_174_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 8.882602e-08 .
 
 ex:node_174_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_174_coordinate .
+    cso:hasVectorComponent ex:node_174_coordinate .
 
-ex:node_175_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_175_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 1.693692e-07 ;
@@ -2167,9 +2167,9 @@ ex:node_175_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent -6.906659e-08 .
 
 ex:node_175_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_175_coordinate .
+    cso:hasVectorComponent ex:node_175_coordinate .
 
-ex:node_179_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_179_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -3.502793e-08 ;
@@ -2178,9 +2178,9 @@ ex:node_179_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 1.789057e-07 .
 
 ex:node_179_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_179_coordinate .
+    cso:hasVectorComponent ex:node_179_coordinate .
 
-ex:node_17_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_17_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -9.43354e-08 ;
@@ -2189,9 +2189,9 @@ ex:node_17_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 1.86675e-07 .
 
 ex:node_17_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_17_coordinate .
+    cso:hasVectorComponent ex:node_17_coordinate .
 
-ex:node_180_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_180_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -1.280784e-07 ;
@@ -2200,9 +2200,9 @@ ex:node_180_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 8.862134e-08 .
 
 ex:node_180_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_180_coordinate .
+    cso:hasVectorComponent ex:node_180_coordinate .
 
-ex:node_18_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_18_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 1.86675e-07 ;
@@ -2211,9 +2211,9 @@ ex:node_18_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent -9.43354e-08 .
 
 ex:node_18_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_18_coordinate .
+    cso:hasVectorComponent ex:node_18_coordinate .
 
-ex:node_19_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_19_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 1.86675e-07 ;
@@ -2222,9 +2222,9 @@ ex:node_19_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent -1.86675e-07 .
 
 ex:node_19_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_19_coordinate .
+    cso:hasVectorComponent ex:node_19_coordinate .
 
-ex:node_1_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_1_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 1.478391e-07 ;
@@ -2233,9 +2233,9 @@ ex:node_1_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 1.86675e-07 .
 
 ex:node_1_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_1_coordinate .
+    cso:hasVectorComponent ex:node_1_coordinate .
 
-ex:node_20_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_20_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -3.566673e-08 ;
@@ -2244,9 +2244,9 @@ ex:node_20_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent -1.86675e-07 .
 
 ex:node_20_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_20_coordinate .
+    cso:hasVectorComponent ex:node_20_coordinate .
 
-ex:node_21_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_21_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -4.899504e-08 ;
@@ -2255,9 +2255,9 @@ ex:node_21_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 1.86675e-07 .
 
 ex:node_21_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_21_coordinate .
+    cso:hasVectorComponent ex:node_21_coordinate .
 
-ex:node_22_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_22_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 5.631964e-08 ;
@@ -2266,9 +2266,9 @@ ex:node_22_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 1.86675e-07 .
 
 ex:node_22_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_22_coordinate .
+    cso:hasVectorComponent ex:node_22_coordinate .
 
-ex:node_23_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_23_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 1.86675e-07 ;
@@ -2277,9 +2277,9 @@ ex:node_23_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 5.631964e-08 .
 
 ex:node_23_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_23_coordinate .
+    cso:hasVectorComponent ex:node_23_coordinate .
 
-ex:node_24_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_24_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 1.86675e-07 ;
@@ -2288,9 +2288,9 @@ ex:node_24_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent -8.66513e-08 .
 
 ex:node_24_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_24_coordinate .
+    cso:hasVectorComponent ex:node_24_coordinate .
 
-ex:node_26_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_26_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -1.86675e-07 ;
@@ -2299,9 +2299,9 @@ ex:node_26_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent -1.86675e-07 .
 
 ex:node_26_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_26_coordinate .
+    cso:hasVectorComponent ex:node_26_coordinate .
 
-ex:node_27_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_27_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -1.59807e-07 ;
@@ -2310,9 +2310,9 @@ ex:node_27_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent -1.86675e-07 .
 
 ex:node_27_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_27_coordinate .
+    cso:hasVectorComponent ex:node_27_coordinate .
 
-ex:node_28_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_28_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 1.86675e-07 ;
@@ -2321,9 +2321,9 @@ ex:node_28_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 1.59807e-07 .
 
 ex:node_28_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_28_coordinate .
+    cso:hasVectorComponent ex:node_28_coordinate .
 
-ex:node_29_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_29_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 1.86675e-07 ;
@@ -2332,9 +2332,9 @@ ex:node_29_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 1.86675e-07 .
 
 ex:node_29_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_29_coordinate .
+    cso:hasVectorComponent ex:node_29_coordinate .
 
-ex:node_2_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_2_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 1.86675e-07 ;
@@ -2343,9 +2343,9 @@ ex:node_2_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 1.478391e-07 .
 
 ex:node_2_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_2_coordinate .
+    cso:hasVectorComponent ex:node_2_coordinate .
 
-ex:node_30_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_30_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -6.348201e-09 ;
@@ -2354,9 +2354,9 @@ ex:node_30_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 1.86675e-07 .
 
 ex:node_30_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_30_coordinate .
+    cso:hasVectorComponent ex:node_30_coordinate .
 
-ex:node_31_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_31_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 8.962326e-08 ;
@@ -2365,9 +2365,9 @@ ex:node_31_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent -1.86675e-07 .
 
 ex:node_31_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_31_coordinate .
+    cso:hasVectorComponent ex:node_31_coordinate .
 
-ex:node_32_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_32_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 1.86675e-07 ;
@@ -2376,9 +2376,9 @@ ex:node_32_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent -1.86675e-07 .
 
 ex:node_32_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_32_coordinate .
+    cso:hasVectorComponent ex:node_32_coordinate .
 
-ex:node_33_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_33_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 1.86675e-07 ;
@@ -2387,9 +2387,9 @@ ex:node_33_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 5.042894e-09 .
 
 ex:node_33_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_33_coordinate .
+    cso:hasVectorComponent ex:node_33_coordinate .
 
-ex:node_34_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_34_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 7.384856e-09 ;
@@ -2398,9 +2398,9 @@ ex:node_34_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 1.86675e-07 .
 
 ex:node_34_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_34_coordinate .
+    cso:hasVectorComponent ex:node_34_coordinate .
 
-ex:node_35_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_35_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 2.323185e-08 ;
@@ -2409,9 +2409,9 @@ ex:node_35_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 1.86675e-07 .
 
 ex:node_35_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_35_coordinate .
+    cso:hasVectorComponent ex:node_35_coordinate .
 
-ex:node_36_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_36_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 1.86675e-07 ;
@@ -2420,9 +2420,9 @@ ex:node_36_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 2.323185e-08 .
 
 ex:node_36_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_36_coordinate .
+    cso:hasVectorComponent ex:node_36_coordinate .
 
-ex:node_37_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_37_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 1.86675e-07 ;
@@ -2431,9 +2431,9 @@ ex:node_37_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent -1.86675e-07 .
 
 ex:node_37_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_37_coordinate .
+    cso:hasVectorComponent ex:node_37_coordinate .
 
-ex:node_38_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_38_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 2.323185e-08 ;
@@ -2442,9 +2442,9 @@ ex:node_38_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent -1.86675e-07 .
 
 ex:node_38_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_38_coordinate .
+    cso:hasVectorComponent ex:node_38_coordinate .
 
-ex:node_3_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_3_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 1.86675e-07 ;
@@ -2453,9 +2453,9 @@ ex:node_3_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 4.525412e-08 .
 
 ex:node_3_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_3_coordinate .
+    cso:hasVectorComponent ex:node_3_coordinate .
 
-ex:node_40_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_40_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 8.783155e-08 ;
@@ -2464,9 +2464,9 @@ ex:node_40_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 9.91969e-08 .
 
 ex:node_40_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_40_coordinate .
+    cso:hasVectorComponent ex:node_40_coordinate .
 
-ex:node_41_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_41_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 7.697178e-08 ;
@@ -2475,9 +2475,9 @@ ex:node_41_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent -4.000603e-09 .
 
 ex:node_41_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_41_coordinate .
+    cso:hasVectorComponent ex:node_41_coordinate .
 
-ex:node_42_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_42_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -4.76957e-08 ;
@@ -2486,9 +2486,9 @@ ex:node_42_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 1.419101e-07 .
 
 ex:node_42_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_42_coordinate .
+    cso:hasVectorComponent ex:node_42_coordinate .
 
-ex:node_43_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_43_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -1.165103e-07 ;
@@ -2497,9 +2497,9 @@ ex:node_43_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent -7.323262e-08 .
 
 ex:node_43_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_43_coordinate .
+    cso:hasVectorComponent ex:node_43_coordinate .
 
-ex:node_44_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_44_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 3.928646e-08 ;
@@ -2508,9 +2508,9 @@ ex:node_44_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 4.479508e-08 .
 
 ex:node_44_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_44_coordinate .
+    cso:hasVectorComponent ex:node_44_coordinate .
 
-ex:node_45_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_45_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -7.624437e-08 ;
@@ -2519,9 +2519,9 @@ ex:node_45_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 1.116928e-07 .
 
 ex:node_45_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_45_coordinate .
+    cso:hasVectorComponent ex:node_45_coordinate .
 
-ex:node_46_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_46_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 1.284761e-07 ;
@@ -2530,9 +2530,9 @@ ex:node_46_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent -1.093369e-07 .
 
 ex:node_46_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_46_coordinate .
+    cso:hasVectorComponent ex:node_46_coordinate .
 
-ex:node_48_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_48_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 3.246628e-08 ;
@@ -2541,9 +2541,9 @@ ex:node_48_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 1.397083e-07 .
 
 ex:node_48_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_48_coordinate .
+    cso:hasVectorComponent ex:node_48_coordinate .
 
-ex:node_49_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_49_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 1.406748e-07 ;
@@ -2552,9 +2552,9 @@ ex:node_49_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 6.486091e-08 .
 
 ex:node_49_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_49_coordinate .
+    cso:hasVectorComponent ex:node_49_coordinate .
 
-ex:node_4_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_4_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -3.512122e-08 ;
@@ -2563,9 +2563,9 @@ ex:node_4_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent -1.86675e-07 .
 
 ex:node_4_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_4_coordinate .
+    cso:hasVectorComponent ex:node_4_coordinate .
 
-ex:node_50_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_50_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 2.304018e-08 ;
@@ -2574,9 +2574,9 @@ ex:node_50_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent -9.542942e-08 .
 
 ex:node_50_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_50_coordinate .
+    cso:hasVectorComponent ex:node_50_coordinate .
 
-ex:node_51_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_51_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 1.363011e-07 ;
@@ -2585,9 +2585,9 @@ ex:node_51_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 8.765444e-08 .
 
 ex:node_51_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_51_coordinate .
+    cso:hasVectorComponent ex:node_51_coordinate .
 
-ex:node_52_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_52_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -1.180751e-07 ;
@@ -2596,9 +2596,9 @@ ex:node_52_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 9.852766e-08 .
 
 ex:node_52_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_52_coordinate .
+    cso:hasVectorComponent ex:node_52_coordinate .
 
-ex:node_53_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_53_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 1.551372e-08 ;
@@ -2607,9 +2607,9 @@ ex:node_53_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 1.490858e-07 .
 
 ex:node_53_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_53_coordinate .
+    cso:hasVectorComponent ex:node_53_coordinate .
 
-ex:node_54_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_54_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -1.507578e-07 ;
@@ -2618,9 +2618,9 @@ ex:node_54_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent -1.683311e-08 .
 
 ex:node_54_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_54_coordinate .
+    cso:hasVectorComponent ex:node_54_coordinate .
 
-ex:node_55_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_55_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -8.150018e-08 ;
@@ -2629,9 +2629,9 @@ ex:node_55_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent -1.271695e-07 .
 
 ex:node_55_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_55_coordinate .
+    cso:hasVectorComponent ex:node_55_coordinate .
 
-ex:node_56_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_56_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -1.771258e-08 ;
@@ -2640,9 +2640,9 @@ ex:node_56_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 1.108306e-07 .
 
 ex:node_56_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_56_coordinate .
+    cso:hasVectorComponent ex:node_56_coordinate .
 
-ex:node_57_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_57_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 1.005524e-07 ;
@@ -2651,9 +2651,9 @@ ex:node_57_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent -1.549722e-08 .
 
 ex:node_57_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_57_coordinate .
+    cso:hasVectorComponent ex:node_57_coordinate .
 
-ex:node_58_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_58_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -1.398434e-07 ;
@@ -2662,9 +2662,9 @@ ex:node_58_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 9.151942e-08 .
 
 ex:node_58_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_58_coordinate .
+    cso:hasVectorComponent ex:node_58_coordinate .
 
-ex:node_59_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_59_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -1.390926e-08 ;
@@ -2673,9 +2673,9 @@ ex:node_59_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 1.736013e-07 .
 
 ex:node_59_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_59_coordinate .
+    cso:hasVectorComponent ex:node_59_coordinate .
 
-ex:node_5_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_5_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 5.667164e-08 ;
@@ -2684,9 +2684,9 @@ ex:node_5_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent -1.86675e-07 .
 
 ex:node_5_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_5_coordinate .
+    cso:hasVectorComponent ex:node_5_coordinate .
 
-ex:node_60_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_60_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 1.020229e-07 ;
@@ -2695,9 +2695,9 @@ ex:node_60_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent -1.567358e-07 .
 
 ex:node_60_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_60_coordinate .
+    cso:hasVectorComponent ex:node_60_coordinate .
 
-ex:node_61_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_61_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 1.62422e-07 ;
@@ -2706,9 +2706,9 @@ ex:node_61_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent -5.515886e-08 .
 
 ex:node_61_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_61_coordinate .
+    cso:hasVectorComponent ex:node_61_coordinate .
 
-ex:node_63_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_63_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -1.63048e-07 ;
@@ -2717,9 +2717,9 @@ ex:node_63_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 8.388438e-08 .
 
 ex:node_63_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_63_coordinate .
+    cso:hasVectorComponent ex:node_63_coordinate .
 
-ex:node_64_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_64_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 4.532149e-09 ;
@@ -2728,9 +2728,9 @@ ex:node_64_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 1.605152e-07 .
 
 ex:node_64_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_64_coordinate .
+    cso:hasVectorComponent ex:node_64_coordinate .
 
-ex:node_65_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_65_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 1.626013e-07 ;
@@ -2739,9 +2739,9 @@ ex:node_65_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 5.390626e-08 .
 
 ex:node_65_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_65_coordinate .
+    cso:hasVectorComponent ex:node_65_coordinate .
 
-ex:node_66_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_66_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -5.318183e-09 ;
@@ -2750,9 +2750,9 @@ ex:node_66_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent -1.434943e-07 .
 
 ex:node_66_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_66_coordinate .
+    cso:hasVectorComponent ex:node_66_coordinate .
 
-ex:node_67_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_67_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 1.643564e-07 ;
@@ -2761,9 +2761,9 @@ ex:node_67_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 1.320192e-07 .
 
 ex:node_67_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_67_coordinate .
+    cso:hasVectorComponent ex:node_67_coordinate .
 
-ex:node_68_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_68_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -1.499337e-07 ;
@@ -2772,9 +2772,9 @@ ex:node_68_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 7.639035e-08 .
 
 ex:node_68_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_68_coordinate .
+    cso:hasVectorComponent ex:node_68_coordinate .
 
-ex:node_69_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_69_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 5.211362e-08 ;
@@ -2783,9 +2783,9 @@ ex:node_69_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 1.667159e-07 .
 
 ex:node_69_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_69_coordinate .
+    cso:hasVectorComponent ex:node_69_coordinate .
 
-ex:node_6_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_6_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 1.86675e-07 ;
@@ -2794,9 +2794,9 @@ ex:node_6_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent -5.667164e-08 .
 
 ex:node_6_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_6_coordinate .
+    cso:hasVectorComponent ex:node_6_coordinate .
 
-ex:node_70_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_70_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -1.692972e-07 ;
@@ -2805,9 +2805,9 @@ ex:node_70_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 1.141499e-08 .
 
 ex:node_70_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_70_coordinate .
+    cso:hasVectorComponent ex:node_70_coordinate .
 
-ex:node_71_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_71_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -6.299939e-08 ;
@@ -2816,9 +2816,9 @@ ex:node_71_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent -1.524947e-07 .
 
 ex:node_71_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_71_coordinate .
+    cso:hasVectorComponent ex:node_71_coordinate .
 
-ex:node_72_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_72_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -3.11518e-08 ;
@@ -2827,9 +2827,9 @@ ex:node_72_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 1.397808e-07 .
 
 ex:node_72_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_72_coordinate .
+    cso:hasVectorComponent ex:node_72_coordinate .
 
-ex:node_73_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_73_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 1.362522e-07 ;
@@ -2838,9 +2838,9 @@ ex:node_73_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent -4.535167e-08 .
 
 ex:node_73_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_73_coordinate .
+    cso:hasVectorComponent ex:node_73_coordinate .
 
-ex:node_74_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_74_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -1.645312e-07 ;
@@ -2849,9 +2849,9 @@ ex:node_74_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 6.265345e-08 .
 
 ex:node_74_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_74_coordinate .
+    cso:hasVectorComponent ex:node_74_coordinate .
 
-ex:node_77_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_77_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 1.768321e-07 ;
@@ -2860,9 +2860,9 @@ ex:node_77_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent -2.563001e-08 .
 
 ex:node_77_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_77_coordinate .
+    cso:hasVectorComponent ex:node_77_coordinate .
 
-ex:node_78_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_78_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -2.302004e-08 ;
@@ -2871,9 +2871,9 @@ ex:node_78_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 1.697899e-07 .
 
 ex:node_78_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_78_coordinate .
+    cso:hasVectorComponent ex:node_78_coordinate .
 
-ex:node_79_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_79_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -1.843691e-07 ;
@@ -2882,9 +2882,9 @@ ex:node_79_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 6.0093e-08 .
 
 ex:node_79_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_79_coordinate .
+    cso:hasVectorComponent ex:node_79_coordinate .
 
-ex:node_7_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_7_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 1.86675e-07 ;
@@ -2893,9 +2893,9 @@ ex:node_7_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 1.725331e-07 .
 
 ex:node_7_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_7_coordinate .
+    cso:hasVectorComponent ex:node_7_coordinate .
 
-ex:node_80_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_80_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 6.000636e-08 ;
@@ -2904,9 +2904,9 @@ ex:node_80_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 1.188756e-07 .
 
 ex:node_80_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_80_coordinate .
+    cso:hasVectorComponent ex:node_80_coordinate .
 
-ex:node_81_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_81_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 1.153332e-07 ;
@@ -2915,9 +2915,9 @@ ex:node_81_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 8.050631e-08 .
 
 ex:node_81_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_81_coordinate .
+    cso:hasVectorComponent ex:node_81_coordinate .
 
-ex:node_82_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_82_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 4.98367e-08 ;
@@ -2926,9 +2926,9 @@ ex:node_82_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent -4.886543e-08 .
 
 ex:node_82_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_82_coordinate .
+    cso:hasVectorComponent ex:node_82_coordinate .
 
-ex:node_83_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_83_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 1.054294e-07 ;
@@ -2937,9 +2937,9 @@ ex:node_83_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 4.131822e-08 .
 
 ex:node_83_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_83_coordinate .
+    cso:hasVectorComponent ex:node_83_coordinate .
 
-ex:node_84_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_84_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -8.391877e-08 ;
@@ -2948,9 +2948,9 @@ ex:node_84_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 1.209298e-07 .
 
 ex:node_84_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_84_coordinate .
+    cso:hasVectorComponent ex:node_84_coordinate .
 
-ex:node_85_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_85_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -2.352333e-08 ;
@@ -2959,9 +2959,9 @@ ex:node_85_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 1.364575e-07 .
 
 ex:node_85_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_85_coordinate .
+    cso:hasVectorComponent ex:node_85_coordinate .
 
-ex:node_86_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_86_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -1.3345e-07 ;
@@ -2970,9 +2970,9 @@ ex:node_86_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent -4.520458e-08 .
 
 ex:node_86_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_86_coordinate .
+    cso:hasVectorComponent ex:node_86_coordinate .
 
-ex:node_87_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_87_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -9.932097e-08 ;
@@ -2981,9 +2981,9 @@ ex:node_87_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent -1.006321e-07 .
 
 ex:node_87_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_87_coordinate .
+    cso:hasVectorComponent ex:node_87_coordinate .
 
-ex:node_88_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_88_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 1.132436e-08 ;
@@ -2992,9 +2992,9 @@ ex:node_88_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 7.463429e-08 .
 
 ex:node_88_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_88_coordinate .
+    cso:hasVectorComponent ex:node_88_coordinate .
 
-ex:node_89_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_89_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 6.966311e-08 ;
@@ -3003,9 +3003,9 @@ ex:node_89_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 1.357978e-08 .
 
 ex:node_89_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_89_coordinate .
+    cso:hasVectorComponent ex:node_89_coordinate .
 
-ex:node_91_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_91_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -5.11746e-08 ;
@@ -3014,9 +3014,9 @@ ex:node_91_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 1.401223e-07 .
 
 ex:node_91_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_91_coordinate .
+    cso:hasVectorComponent ex:node_91_coordinate .
 
-ex:node_92_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_92_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 1.135116e-07 ;
@@ -3025,9 +3025,9 @@ ex:node_92_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent -1.347858e-07 .
 
 ex:node_92_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_92_coordinate .
+    cso:hasVectorComponent ex:node_92_coordinate .
 
-ex:node_93_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_93_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 1.450339e-07 ;
@@ -3036,9 +3036,9 @@ ex:node_93_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent -8.25924e-08 .
 
 ex:node_93_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_93_coordinate .
+    cso:hasVectorComponent ex:node_93_coordinate .
 
-ex:node_94_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_94_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -6.757285e-08 ;
@@ -3047,9 +3047,9 @@ ex:node_94_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 1.243198e-07 .
 
 ex:node_94_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_94_coordinate .
+    cso:hasVectorComponent ex:node_94_coordinate .
 
-ex:node_96_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_96_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -5.983962e-09 ;
@@ -3058,9 +3058,9 @@ ex:node_96_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 1.687991e-07 .
 
 ex:node_96_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_96_coordinate .
+    cso:hasVectorComponent ex:node_96_coordinate .
 
-ex:node_97_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_97_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 1.717058e-07 ;
@@ -3069,9 +3069,9 @@ ex:node_97_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 5.018647e-08 .
 
 ex:node_97_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_97_coordinate .
+    cso:hasVectorComponent ex:node_97_coordinate .
 
-ex:node_98_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_98_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -2.194021e-08 ;
@@ -3080,9 +3080,9 @@ ex:node_98_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent -1.689327e-07 .
 
 ex:node_98_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_98_coordinate .
+    cso:hasVectorComponent ex:node_98_coordinate .
 
-ex:node_99_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_99_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent 1.776792e-07 ;
@@ -3091,9 +3091,9 @@ ex:node_99_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 1.542604e-07 .
 
 ex:node_99_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_99_coordinate .
+    cso:hasVectorComponent ex:node_99_coordinate .
 
-ex:node_9_coordinate a cso:VectorComponentsOfBasis ;
+ex:node_9_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
     qudt:quantityValue ex:quantity_value_M ;
     cso:firstAxisComponent -1.86675e-07 ;
@@ -3102,7 +3102,7 @@ ex:node_9_coordinate a cso:VectorComponentsOfBasis ;
     cso:thirdAxisComponent 4.875457e-08 .
 
 ex:node_9_position_vector a cso:PositionVector ;
-    cso:hasVectorComponents ex:node_9_coordinate .
+    cso:hasVectorComponent ex:node_9_coordinate .
 
 ex:point_group a mdo:PointGroup ;
     cso:isPointGroupOf ex:crystal_system ;
@@ -3120,7 +3120,7 @@ ex:unit_cell a cso:UnitCell ;
 ex:crystal_system a cso:Cubic .
 
 ex:loop_0_slip_direction a diso:SlipDirection ;
-    cso:hasVectorComponents ex:loop_0_vector_components_slip_direction ;
+    cso:hasVectorComponent ex:loop_0_vector_components_slip_direction ;
     cso:vectorMagnitude 1e+00 ;
     diso:directionMillerIndice "[1-10]"^^xsd:string ;
     diso:familyDirectionMillerIndice "<110>"^^xsd:string .
@@ -3133,11 +3133,11 @@ ex:loop_0_slip_plane a diso:SlipPlane ;
     diso:planeMillerIndice "(111)"^^xsd:string .
 
 ex:loop_0_slip_plane_normal a diso:SlipPlaneNormal ;
-    cso:hasVectorComponents ex:loop_0_vector_components_of_slip_plane_normal ;
+    cso:hasVectorComponent ex:loop_0_vector_components_of_slip_plane_normal ;
     diso:directionMillerIndice "[111]"^^xsd:string .
 
 ex:loop_1_slip_direction a diso:SlipDirection ;
-    cso:hasVectorComponents ex:loop_1_vector_components_slip_direction ;
+    cso:hasVectorComponent ex:loop_1_vector_components_slip_direction ;
     cso:vectorMagnitude 1e+00 ;
     diso:directionMillerIndice "[-10-1]"^^xsd:string ;
     diso:familyDirectionMillerIndice "<110>"^^xsd:string .
@@ -3150,7 +3150,7 @@ ex:loop_1_slip_plane a diso:SlipPlane ;
     diso:planeMillerIndice "(-1-11)"^^xsd:string .
 
 ex:loop_1_slip_plane_normal a diso:SlipPlaneNormal ;
-    cso:hasVectorComponents ex:loop_1_vector_components_of_slip_plane_normal ;
+    cso:hasVectorComponent ex:loop_1_vector_components_of_slip_plane_normal ;
     diso:directionMillerIndice "[-1-11]"^^xsd:string .
 
 ex:loop_2_slip_plane a diso:SlipPlane ;
@@ -3161,7 +3161,7 @@ ex:loop_2_slip_plane a diso:SlipPlane ;
     diso:planeMillerIndice "(-1-11)"^^xsd:string .
 
 ex:loop_3_slip_direction a diso:SlipDirection ;
-    cso:hasVectorComponents ex:loop_3_vector_components_slip_direction ;
+    cso:hasVectorComponent ex:loop_3_vector_components_slip_direction ;
     cso:vectorMagnitude 1e+00 ;
     diso:directionMillerIndice "[-101]"^^xsd:string ;
     diso:familyDirectionMillerIndice "<110>"^^xsd:string .
@@ -3174,11 +3174,11 @@ ex:loop_3_slip_plane a diso:SlipPlane ;
     diso:planeMillerIndice "(-11-1)"^^xsd:string .
 
 ex:loop_3_slip_plane_normal a diso:SlipPlaneNormal ;
-    cso:hasVectorComponents ex:loop_3_vector_components_of_slip_plane_normal ;
+    cso:hasVectorComponent ex:loop_3_vector_components_of_slip_plane_normal ;
     diso:directionMillerIndice "[-11-1]"^^xsd:string .
 
 ex:loop_4_slip_direction a diso:SlipDirection ;
-    cso:hasVectorComponents ex:loop_4_vector_components_slip_direction ;
+    cso:hasVectorComponent ex:loop_4_vector_components_slip_direction ;
     cso:vectorMagnitude 1e+00 ;
     diso:directionMillerIndice "[011]"^^xsd:string ;
     diso:familyDirectionMillerIndice "<110>"^^xsd:string .
@@ -3191,11 +3191,11 @@ ex:loop_4_slip_plane a diso:SlipPlane ;
     diso:planeMillerIndice "(-11-1)"^^xsd:string .
 
 ex:loop_4_slip_plane_normal a diso:SlipPlaneNormal ;
-    cso:hasVectorComponents ex:loop_4_vector_components_of_slip_plane_normal ;
+    cso:hasVectorComponent ex:loop_4_vector_components_of_slip_plane_normal ;
     diso:directionMillerIndice "[-11-1]"^^xsd:string .
 
 ex:loop_6_slip_direction a diso:SlipDirection ;
-    cso:hasVectorComponents ex:loop_6_vector_components_slip_direction ;
+    cso:hasVectorComponent ex:loop_6_vector_components_slip_direction ;
     cso:vectorMagnitude 1e+00 ;
     diso:directionMillerIndice "[0-1-1]"^^xsd:string ;
     diso:familyDirectionMillerIndice "<110>"^^xsd:string .
@@ -3208,11 +3208,11 @@ ex:loop_6_slip_plane a diso:SlipPlane ;
     diso:planeMillerIndice "(-1-11)"^^xsd:string .
 
 ex:loop_6_slip_plane_normal a diso:SlipPlaneNormal ;
-    cso:hasVectorComponents ex:loop_6_vector_components_of_slip_plane_normal ;
+    cso:hasVectorComponent ex:loop_6_vector_components_of_slip_plane_normal ;
     diso:directionMillerIndice "[-1-11]"^^xsd:string .
 
 ex:loop_7_slip_direction a diso:SlipDirection ;
-    cso:hasVectorComponents ex:loop_7_vector_components_slip_direction ;
+    cso:hasVectorComponent ex:loop_7_vector_components_slip_direction ;
     cso:vectorMagnitude 1e+00 ;
     diso:directionMillerIndice "[110]"^^xsd:string ;
     diso:familyDirectionMillerIndice "<110>"^^xsd:string .
@@ -3225,11 +3225,11 @@ ex:loop_7_slip_plane a diso:SlipPlane ;
     diso:planeMillerIndice "(-11-1)"^^xsd:string .
 
 ex:loop_7_slip_plane_normal a diso:SlipPlaneNormal ;
-    cso:hasVectorComponents ex:loop_7_vector_components_of_slip_plane_normal ;
+    cso:hasVectorComponent ex:loop_7_vector_components_of_slip_plane_normal ;
     diso:directionMillerIndice "[-11-1]"^^xsd:string .
 
 ex:loop_8_slip_direction a diso:SlipDirection ;
-    cso:hasVectorComponents ex:loop_8_vector_components_slip_direction ;
+    cso:hasVectorComponent ex:loop_8_vector_components_slip_direction ;
     cso:vectorMagnitude 1e+00 ;
     diso:directionMillerIndice "[-10-1]"^^xsd:string ;
     diso:familyDirectionMillerIndice "<110>"^^xsd:string .
@@ -3242,11 +3242,11 @@ ex:loop_8_slip_plane a diso:SlipPlane ;
     diso:planeMillerIndice "(-111)"^^xsd:string .
 
 ex:loop_8_slip_plane_normal a diso:SlipPlaneNormal ;
-    cso:hasVectorComponents ex:loop_8_vector_components_of_slip_plane_normal ;
+    cso:hasVectorComponent ex:loop_8_vector_components_of_slip_plane_normal ;
     diso:directionMillerIndice "[-111]"^^xsd:string .
 
 ex:loop_9_slip_direction a diso:SlipDirection ;
-    cso:hasVectorComponents ex:loop_9_vector_components_slip_direction ;
+    cso:hasVectorComponent ex:loop_9_vector_components_slip_direction ;
     cso:vectorMagnitude 1e+00 ;
     diso:directionMillerIndice "[01-1]"^^xsd:string ;
     diso:familyDirectionMillerIndice "<110>"^^xsd:string .
@@ -3259,7 +3259,7 @@ ex:loop_9_slip_plane a diso:SlipPlane ;
     diso:planeMillerIndice "(1-1-1)"^^xsd:string .
 
 ex:loop_9_slip_plane_normal a diso:SlipPlaneNormal ;
-    cso:hasVectorComponents ex:loop_9_vector_components_of_slip_plane_normal ;
+    cso:hasVectorComponent ex:loop_9_vector_components_of_slip_plane_normal ;
     diso:directionMillerIndice "[1-1-1]"^^xsd:string .
 
 ex:node_0 a diso:Node ;
@@ -3730,16 +3730,16 @@ cdo:CrystallineMaterial a owl:Class ;
     rdfs:comment "Crystalline material is material characterized by a periodic arrangement of the constituent atoms. The arrangement could be described its crystal structure."@en ;
     rdfs:subClassOf [ a owl:Class ;
             owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty cdo:hasCrystalStructure ;
-                        owl:someValuesFrom cso:CrystalStructure ] [ a owl:Restriction ;
-                        owl:allValuesFrom cso:CrystalStructure ;
-                        owl:onProperty cdo:hasCrystalStructure ] ) ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
                         owl:onProperty cdo:hasCrystallographicDefect ;
                         owl:someValuesFrom cdo:CrystallographicDefect ] [ a owl:Restriction ;
                         owl:allValuesFrom cdo:CrystallographicDefect ;
                         owl:onProperty cdo:hasCrystallographicDefect ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty cdo:hasCrystalStructure ;
+                        owl:someValuesFrom cso:CrystalStructure ] [ a owl:Restriction ;
+                        owl:allValuesFrom cso:CrystalStructure ;
+                        owl:onProperty cdo:hasCrystalStructure ] ) ],
         <http://emmo.info/emmo/middle/physicalistic#EMMO_4207e895_8b83_4318_996a_72cfb32acd94> .
 
 ex:node_15 a diso:Node ;

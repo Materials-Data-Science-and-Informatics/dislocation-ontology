@@ -28,12 +28,6 @@ PREFIX diso: <https://purls.helmholtz-metadaten.de/diso#>
 PREFIX cso: <https://purls.helmholtz-metadaten.de/cso#> 
 PREFIX cdo: <https://purls.helmholtz-metadaten.de/cdo#>  
 PREFIX chebi: <http://purl.obolibrary.org/obo/> 
-PREFIX mdo: <https://w3id.org/mdo/structure/> 
-PREFIX ns1: <http://purl.obolibrary.org/obo/chebi/> 
-PREFIX owl: <http://www.w3.org/2002/07/owl#> 
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 SELECT ?crystalstructure ?crystal_system WHERE{
 	?crystalstructure a cso:CrystalStructure ; cso:hasLattice ?lattice .
@@ -47,13 +41,6 @@ CQ1.2: Which crystal structure share the same hexagonal crystal system?
 PREFIX diso: <https://purls.helmholtz-metadaten.de/diso#>
 PREFIX cso: <https://purls.helmholtz-metadaten.de/cso#> 
 PREFIX cdo: <https://purls.helmholtz-metadaten.de/cdo#>  
-PREFIX chebi: <http://purl.obolibrary.org/obo/> 
-PREFIX mdo: <https://w3id.org/mdo/structure/> 
-PREFIX ns1: <http://purl.obolibrary.org/obo/chebi/> 
-PREFIX owl: <http://www.w3.org/2002/07/owl#> 
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 SELECT ?crystalstructure ?crystal_system WHERE{
 	?crystalstructure a cso:CrystalStructure ; cso:hasLattice ?lattice .
@@ -66,13 +53,6 @@ CQs. 2: What are the lattice parameters of length given a crystal structure?
 PREFIX diso: <https://purls.helmholtz-metadaten.de/diso#>
 PREFIX cso: <https://purls.helmholtz-metadaten.de/cso#> 
 PREFIX cdo: <https://purls.helmholtz-metadaten.de/cdo#>  
-PREFIX chebi: <http://purl.obolibrary.org/obo/> 
-PREFIX mdo: <https://w3id.org/mdo/structure/> 
-PREFIX ns1: <http://purl.obolibrary.org/obo/chebi/> 
-PREFIX owl: <http://www.w3.org/2002/07/owl#> 
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 SELECT ?crystalstructure ?length_a ?length_b ?length_c WHERE{
 	?crystalstructure a cso:CrystalStructure ; cso:hasLattice ?lattice .
@@ -89,13 +69,7 @@ CQs. 3: What are the lattice parameters of angle given a crystal structure?
 PREFIX diso: <https://purls.helmholtz-metadaten.de/diso#>
 PREFIX cso: <https://purls.helmholtz-metadaten.de/cso#> 
 PREFIX cdo: <https://purls.helmholtz-metadaten.de/cdo#>  
-PREFIX chebi: <http://purl.obolibrary.org/obo/> 
-PREFIX mdo: <https://w3id.org/mdo/structure/> 
-PREFIX ns1: <http://purl.obolibrary.org/obo/chebi/> 
-PREFIX owl: <http://www.w3.org/2002/07/owl#> 
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
 
 SELECT ?crystalstructure ?angle_alpha ?angle_beta ?angle_gamma WHERE{
 	?crystalstructure a cso:CrystalStructure ; cso:hasLattice ?lattice .
@@ -112,13 +86,6 @@ CQs. 4: What are the slip systems of a given crystal structure?
 PREFIX diso: <https://purls.helmholtz-metadaten.de/diso#>
 PREFIX cso: <https://purls.helmholtz-metadaten.de/cso#> 
 PREFIX cdo: <https://purls.helmholtz-metadaten.de/cdo#>  
-PREFIX chebi: <http://purl.obolibrary.org/obo/> 
-PREFIX mdo: <https://w3id.org/mdo/structure/> 
-PREFIX ns1: <http://purl.obolibrary.org/obo/chebi/> 
-PREFIX owl: <http://www.w3.org/2002/07/owl#> 
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 SELECT ?crystalstructure ?slip_system ?slip_plane_normal_val ?slip_direction_val WHERE{
 	?crystalstructure a cso:CrystalStructure ; 
@@ -135,13 +102,6 @@ CQs. 5: What are the slip planes of a given crystal structure?
 PREFIX diso: <https://purls.helmholtz-metadaten.de/diso#>
 PREFIX cso: <https://purls.helmholtz-metadaten.de/cso#> 
 PREFIX cdo: <https://purls.helmholtz-metadaten.de/cdo#>  
-PREFIX chebi: <http://purl.obolibrary.org/obo/> 
-PREFIX mdo: <https://w3id.org/mdo/structure/> 
-PREFIX ns1: <http://purl.obolibrary.org/obo/chebi/> 
-PREFIX owl: <http://www.w3.org/2002/07/owl#> 
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 SELECT  ?crystal_structure ?slip_plane ?slip_plane_miller_indice 
 WHERE{
@@ -156,13 +116,6 @@ CQs. 6: What is the family of slip plane given a slip plane in the crystal?
 PREFIX diso: <https://purls.helmholtz-metadaten.de/diso#>
 PREFIX cso: <https://purls.helmholtz-metadaten.de/cso#> 
 PREFIX cdo: <https://purls.helmholtz-metadaten.de/cdo#>  
-PREFIX chebi: <http://purl.obolibrary.org/obo/> 
-PREFIX mdo: <https://w3id.org/mdo/structure/> 
-PREFIX ns1: <http://purl.obolibrary.org/obo/chebi/> 
-PREFIX owl: <http://www.w3.org/2002/07/owl#> 
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 SELECT  ?slip_plane ?slip_plane_miller_indice ?family_of_slip_plane_miller_indice
 WHERE{
@@ -178,13 +131,6 @@ CQs. 7: What is the  family of slip direction given a slip direction in the crys
 PREFIX diso: <https://purls.helmholtz-metadaten.de/diso#>
 PREFIX cso: <https://purls.helmholtz-metadaten.de/cso#> 
 PREFIX cdo: <https://purls.helmholtz-metadaten.de/cdo#>  
-PREFIX chebi: <http://purl.obolibrary.org/obo/> 
-PREFIX mdo: <https://w3id.org/mdo/structure/> 
-PREFIX ns1: <http://purl.obolibrary.org/obo/chebi/> 
-PREFIX owl: <http://www.w3.org/2002/07/owl#> 
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 SELECT  ?slip_direction ?slip_direction_miller_indice ?family_of_slip_direction_miller_indice
 WHERE{
@@ -199,12 +145,6 @@ CQs 8: Given the space group of a crystal structure, what is the bravais lattice
 PREFIX diso: <https://purls.helmholtz-metadaten.de/diso#>
 PREFIX cso: <https://purls.helmholtz-metadaten.de/cso#> 
 PREFIX cdo: <https://purls.helmholtz-metadaten.de/cdo#>   
-PREFIX qudt: <http://qudt.org/schema/qudt/>
-PREFIX mdo: <https://w3id.org/mdo/structure/> 
-PREFIX owl: <http://www.w3.org/2002/07/owl#> 
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 SELECT  ?crystal_structure ?centering WHERE{
 	?crystal_structure a cso:CrystalStructure;
@@ -218,12 +158,8 @@ CQs 9: Given the crystal structure, what are the corresponding space group and p
 PREFIX diso: <https://purls.helmholtz-metadaten.de/diso#>
 PREFIX cso: <https://purls.helmholtz-metadaten.de/cso#> 
 PREFIX cdo: <https://purls.helmholtz-metadaten.de/cdo#>   
-PREFIX qudt: <http://qudt.org/schema/qudt/>
 PREFIX mdo: <https://w3id.org/mdo/structure/> 
-PREFIX owl: <http://www.w3.org/2002/07/owl#> 
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
 
 SELECT  ?crystal_structure ?space_group ?point_group WHERE{
 	?crystal_structure a cso:CrystalStructure;
@@ -239,12 +175,7 @@ CQs 10: Given the point group of a crystal structure, what is the corresponding 
 PREFIX diso: <https://purls.helmholtz-metadaten.de/diso#>
 PREFIX cso: <https://purls.helmholtz-metadaten.de/cso#> 
 PREFIX cdo: <https://purls.helmholtz-metadaten.de/cdo#>   
-PREFIX qudt: <http://qudt.org/schema/qudt/>
 PREFIX mdo: <https://w3id.org/mdo/structure/> 
-PREFIX owl: <http://www.w3.org/2002/07/owl#> 
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 SELECT  ?point_group ?crystal_system WHERE{
 	?point_group a mdo:PointGroup;
@@ -259,13 +190,6 @@ CQs. 11: In which slip planes is a dislocation moves on?
 PREFIX diso: <https://purls.helmholtz-metadaten.de/diso#>
 PREFIX cso: <https://purls.helmholtz-metadaten.de/cso#> 
 PREFIX cdo: <https://purls.helmholtz-metadaten.de/cdo#>  
-PREFIX chebi: <http://purl.obolibrary.org/obo/> 
-PREFIX mdo: <https://w3id.org/mdo/structure/> 
-PREFIX ns1: <http://purl.obolibrary.org/obo/chebi/> 
-PREFIX owl: <http://www.w3.org/2002/07/owl#> 
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 SELECT  ?dislocation ?slip_plane ?slip_plane_miller_indice
 WHERE{
@@ -279,19 +203,13 @@ CQs. 12: What is the Burgers vector of the dislocation?
 PREFIX diso: <https://purls.helmholtz-metadaten.de/diso#>
 PREFIX cso: <https://purls.helmholtz-metadaten.de/cso#> 
 PREFIX cdo: <https://purls.helmholtz-metadaten.de/cdo#>  
-PREFIX chebi: <http://purl.obolibrary.org/obo/> 
-PREFIX mdo: <https://w3id.org/mdo/structure/> 
-PREFIX ns1: <http://purl.obolibrary.org/obo/chebi/> 
-PREFIX owl: <http://www.w3.org/2002/07/owl#> 
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
 
 SELECT ?dislocation ?firstAxisComponent ?secondAxisComponent ?thirdAxisComponent  WHERE{
 	?dislocation a diso:Dislocation . 
 	?dislocation diso:hasBurgersVector ?Burgers_vector.
-	?Burgers_vector	cso:hasVectorComponents ?VectorComponentsOfBasis .
-	?VectorComponentsOfBasis cso:firstAxisComponent ?firstAxisComponent;
+	?Burgers_vector	cso:hasVectorComponent ?VectorComponentOfBasis .
+	?VectorComponentOfBasis cso:firstAxisComponent ?firstAxisComponent;
 		cso:secondAxisComponent ?secondAxisComponent;
 		cso:thirdAxisComponent ?thirdAxisComponent .
 }
@@ -301,13 +219,7 @@ CQs. 13: What is the Burgers vector magnitude of the dislocation?
 PREFIX diso: <https://purls.helmholtz-metadaten.de/diso#>
 PREFIX cso: <https://purls.helmholtz-metadaten.de/cso#> 
 PREFIX cdo: <https://purls.helmholtz-metadaten.de/cdo#>  
-PREFIX chebi: <http://purl.obolibrary.org/obo/> 
-PREFIX mdo: <https://w3id.org/mdo/structure/> 
-PREFIX ns1: <http://purl.obolibrary.org/obo/chebi/> 
-PREFIX owl: <http://www.w3.org/2002/07/owl#> 
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
 SELECT ?dislocation ?Burgers_vector_magnitude  WHERE{
 	?dislocation a diso:Dislocation . 
 	?dislocation diso:hasBurgersVector ?Burgers_vector.
@@ -319,12 +231,6 @@ CQs 14: Given a slip plane of the crystal structure, what is the slip direction?
 PREFIX diso: <https://purls.helmholtz-metadaten.de/diso#>
 PREFIX cso: <https://purls.helmholtz-metadaten.de/cso#> 
 PREFIX cdo: <https://purls.helmholtz-metadaten.de/cdo#>  
-PREFIX chebi: <http://purl.obolibrary.org/obo/> 
-PREFIX mdo: <https://w3id.org/mdo/structure/> 
-PREFIX ns1: <http://purl.obolibrary.org/obo/chebi/> 
-PREFIX owl: <http://www.w3.org/2002/07/owl#> 
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 SELECT  ?slip_plane ?slip_direction_val WHERE{
@@ -340,16 +246,11 @@ CQs 15: Given a 3-D vector instance (Burgers vector, vector position, etc), what
 PREFIX diso: <https://purls.helmholtz-metadaten.de/diso#>
 PREFIX cso: <https://purls.helmholtz-metadaten.de/cso#> 
 PREFIX cdo: <https://purls.helmholtz-metadaten.de/cdo#>   
-PREFIX mdo: <https://w3id.org/mdo/structure/> 
-PREFIX owl: <http://www.w3.org/2002/07/owl#> 
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 SELECT ?Burgers_vector ?firstAxisComponent ?secondAxisComponent ?thirdAxisComponent WHERE{
 	?Burgers_vector a diso:BurgersVector;
-		cso:hasVectorComponents ?VectorComponentsOfBasis .
-	?VectorComponentsOfBasis cso:firstAxisComponent ?firstAxisComponent;
+		cso:hasVectorComponent ?VectorComponentOfBasis .
+	?VectorComponentOfBasis cso:firstAxisComponent ?firstAxisComponent;
 		cso:secondAxisComponent ?secondAxisComponent;
 		cso:thirdAxisComponent ?thirdAxisComponent .
 }
@@ -361,11 +262,6 @@ CQs 16: Given a 3-D vector instance ( Burgers vector, vector position, etc), wha
 PREFIX diso: <https://purls.helmholtz-metadaten.de/diso#>
 PREFIX cso: <https://purls.helmholtz-metadaten.de/cso#> 
 PREFIX cdo: <https://purls.helmholtz-metadaten.de/cdo#>   
-PREFIX mdo: <https://w3id.org/mdo/structure/> 
-PREFIX owl: <http://www.w3.org/2002/07/owl#> 
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 SELECT ?Burgers_vector ?vectorMagnitude WHERE{
 	?Burgers_vector a diso:BurgersVector;
@@ -378,15 +274,11 @@ CQs 17a: first axis basis
 PREFIX diso: <https://purls.helmholtz-metadaten.de/diso#>
 PREFIX cso: <https://purls.helmholtz-metadaten.de/cso#> 
 PREFIX cdo: <https://purls.helmholtz-metadaten.de/cdo#>   
-PREFIX mdo: <https://w3id.org/mdo/structure/> 
-PREFIX owl: <http://www.w3.org/2002/07/owl#> 
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
 
 SELECT ?Burgers_vector ?first_axis_basis_e_x ?first_axis_basis_e_y ?first_axis_basis_e_z WHERE{
 	?Burgers_vector a diso:BurgersVector;
-		cso:hasVectorComponents ?VectorComponents . 
+		cso:hasVectorComponent ?VectorComponents . 
 	?VectorComponents cso:hasBasis ?Basis .
 	?Basis cso:hasFirstAxisVector ?CoordinateVector .
 	?CoordinateVector mdo:X_axisCoordinate ?first_axis_basis_e_x;
@@ -400,15 +292,10 @@ CQs 17b: second axis basis
 PREFIX diso: <https://purls.helmholtz-metadaten.de/diso#>
 PREFIX cso: <https://purls.helmholtz-metadaten.de/cso#> 
 PREFIX cdo: <https://purls.helmholtz-metadaten.de/cdo#>   
-PREFIX mdo: <https://w3id.org/mdo/structure/> 
-PREFIX owl: <http://www.w3.org/2002/07/owl#> 
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 SELECT ?Burgers_vector ?second_axis_basis_e_x ?second_axis_basis_e_y ?second_axis_basis_e_z WHERE{
 	?Burgers_vector a diso:BurgersVector;
-		cso:hasVectorComponents ?VectorComponents . 
+		cso:hasVectorComponent ?VectorComponents . 
 	?VectorComponents cso:hasBasis ?Basis .
 	?Basis cso:hasSecondAxisVector ?CoordinateVector .
 	?CoordinateVector mdo:X_axisCoordinate ?second_axis_basis_e_x;
@@ -422,15 +309,10 @@ CQs 17c: third axis basis
 PREFIX diso: <https://purls.helmholtz-metadaten.de/diso#>
 PREFIX cso: <https://purls.helmholtz-metadaten.de/cso#> 
 PREFIX cdo: <https://purls.helmholtz-metadaten.de/cdo#>   
-PREFIX mdo: <https://w3id.org/mdo/structure/> 
-PREFIX owl: <http://www.w3.org/2002/07/owl#> 
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 SELECT ?Burgers_vector ?third_axis_basis_e_x ?third_axis_basis_e_y ?third_axis_basis_e_z WHERE{
 	?Burgers_vector a diso:BurgersVector;
-		cso:hasVectorComponents ?VectorComponents . 
+		cso:hasVectorComponent ?VectorComponents . 
 	?VectorComponents cso:hasBasis ?Basis .
 	?Basis cso:hasThirdAxisVector ?CoordinateVector .
 	?CoordinateVector mdo:X_axisCoordinate ?third_axis_basis_e_x;
@@ -445,15 +327,10 @@ PREFIX diso: <https://purls.helmholtz-metadaten.de/diso#>
 PREFIX cso: <https://purls.helmholtz-metadaten.de/cso#> 
 PREFIX cdo: <https://purls.helmholtz-metadaten.de/cdo#>   
 PREFIX qudt: <http://qudt.org/schema/qudt/>
-PREFIX mdo: <https://w3id.org/mdo/structure/> 
-PREFIX owl: <http://www.w3.org/2002/07/owl#> 
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 SELECT ?Burgers_vector ?unit ?quantity_kind WHERE{
 	?Burgers_vector a diso:BurgersVector;
-		cso:hasVectorComponents ?VectorComponents .
+		cso:hasVectorComponent ?VectorComponents .
 	?VectorComponents qudt:hasQuantityKind ?quantity_kind ;
 		qudt:quantityValue ?qv.
 	?qv qudt:unit ?unit.

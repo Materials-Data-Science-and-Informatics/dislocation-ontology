@@ -150,7 +150,7 @@
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/cso#Lattice"/>
-                    <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/cso#VectorComponentsOfBasis"/>
+                    <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/cso#VectorComponentOfBasis"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -261,12 +261,12 @@
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/cso#hasVectorComponents -->
+    <!-- https://purls.helmholtz-metadaten.de/cso#hasVectorComponent -->
 
-    <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/cso#hasVectorComponents">
+    <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/cso#hasVectorComponent">
         <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/cso#Vector"/>
         <rdfs:comment xml:lang="en">hasVectorComponent relates the Vector with &apos;Vector Components of Basis&apos;</rdfs:comment>
-        <rdfs:label xml:lang="en">has vector components</rdfs:label>
+        <rdfs:label xml:lang="en">has vector component</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -417,7 +417,7 @@
     <!-- https://purls.helmholtz-metadaten.de/cso#firstAxisComponent -->
 
     <owl:DatatypeProperty rdf:about="https://purls.helmholtz-metadaten.de/cso#firstAxisComponent">
-        <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/cso#VectorComponentsOfBasis"/>
+        <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/cso#VectorComponentOfBasis"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
         <rdfs:comment xml:lang="en">A first vector component related to the first axis vector of a basis</rdfs:comment>
         <rdfs:label xml:lang="en">first axis component</rdfs:label>
@@ -494,7 +494,7 @@
     <!-- https://purls.helmholtz-metadaten.de/cso#secondAxisComponent -->
 
     <owl:DatatypeProperty rdf:about="https://purls.helmholtz-metadaten.de/cso#secondAxisComponent">
-        <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/cso#VectorComponentsOfBasis"/>
+        <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/cso#VectorComponentOfBasis"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
         <rdfs:comment xml:lang="en">A second vector component related to the second axis vector of a basis</rdfs:comment>
         <rdfs:label xml:lang="en">second axis component</rdfs:label>
@@ -505,7 +505,7 @@
     <!-- https://purls.helmholtz-metadaten.de/cso#thirdAxisComponent -->
 
     <owl:DatatypeProperty rdf:about="https://purls.helmholtz-metadaten.de/cso#thirdAxisComponent">
-        <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/cso#VectorComponentsOfBasis"/>
+        <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/cso#VectorComponentOfBasis"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
         <rdfs:comment xml:lang="en">A third vector component related to the third axis vector of a basis</rdfs:comment>
         <rdfs:label xml:lang="en">third axis component</rdfs:label>
@@ -1021,12 +1021,12 @@
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/cso#hasVectorComponents"/>
-                        <owl:someValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/cso#VectorComponentsOfBasis"/>
+                        <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/cso#hasVectorComponent"/>
+                        <owl:someValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/cso#VectorComponentOfBasis"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/cso#hasVectorComponents"/>
-                        <owl:allValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/cso#VectorComponentsOfBasis"/>
+                        <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/cso#hasVectorComponent"/>
+                        <owl:allValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/cso#VectorComponentOfBasis"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -1044,9 +1044,9 @@
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/cso#VectorComponentsOfBasis -->
+    <!-- https://purls.helmholtz-metadaten.de/cso#VectorComponentOfBasis -->
 
-    <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/cso#VectorComponentsOfBasis">
+    <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/cso#VectorComponentOfBasis">
         <rdfs:subClassOf rdf:resource="http://qudt.org/schema/qudt/Quantity"/>
         <rdfs:subClassOf>
             <owl:Class>
@@ -1083,7 +1083,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">Vector Components of Basis</rdfs:label>
+        <rdfs:label xml:lang="en">Vector Component of Basis</rdfs:label>
         <skos:defintion xml:lang="en">Vector components/vector coordinates of particular basis. It has relation to a specific basis.</skos:defintion>
     </owl:Class>
     
