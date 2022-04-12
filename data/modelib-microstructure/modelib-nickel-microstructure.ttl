@@ -17,840 +17,850 @@
 
 ex:crystal a cdo:CrystallineMaterial ;
     cdo:hasCrystalStructure ex:crystal_structure ;
-    cdo:hasCrystallographicDefect ex:loop_0,
-        ex:loop_1,
-        ex:loop_2,
-        ex:loop_3,
-        ex:loop_4,
-        ex:loop_6,
-        ex:loop_7,
-        ex:loop_8,
-        ex:loop_9 .
+    cdo:hasCrystallographicDefect ex:dislocation_0,
+        ex:dislocation_1,
+        ex:dislocation_2,
+        ex:dislocation_3,
+        ex:dislocation_4,
+        ex:dislocation_6,
+        ex:dislocation_7,
+        ex:dislocation_8,
+        ex:dislocation_9 .
 
 ex:linker_0 a diso:Segment ;
     diso:hasEndNode ex:node_1 ;
     diso:hasStartNode ex:node_0 ;
-    diso:isSegmentOf ex:loop_0_discretized_line .
+    diso:isSegmentOf ex:dislocation_0_discretized_line .
 
 ex:linker_1 a diso:Segment ;
     diso:hasEndNode ex:node_0 ;
     diso:hasStartNode ex:node_179 ;
-    diso:isSegmentOf ex:loop_0_discretized_line .
+    diso:isSegmentOf ex:dislocation_0_discretized_line .
 
 ex:linker_10 a diso:Segment ;
     diso:hasEndNode ex:node_131 ;
     diso:hasStartNode ex:node_49 ;
-    diso:isSegmentOf ex:loop_0_discretized_line .
+    diso:isSegmentOf ex:dislocation_0_discretized_line .
 
 ex:linker_100 a diso:Segment ;
     diso:hasEndNode ex:node_121 ;
     diso:hasStartNode ex:node_89 ;
-    diso:isSegmentOf ex:loop_4_discretized_line .
+    diso:isSegmentOf ex:dislocation_4_discretized_line .
 
 ex:linker_101 a diso:Segment ;
     diso:hasEndNode ex:node_89 ;
     diso:hasStartNode ex:node_147 ;
-    diso:isSegmentOf ex:loop_4_discretized_line .
+    diso:isSegmentOf ex:dislocation_4_discretized_line .
 
 ex:linker_102 a diso:Segment ;
     diso:hasEndNode ex:node_104 ;
     diso:hasStartNode ex:node_167 ;
-    diso:isSegmentOf ex:loop_4_discretized_line .
+    diso:isSegmentOf ex:dislocation_4_discretized_line .
 
 ex:linker_103 a diso:Segment ;
     diso:hasEndNode ex:node_164 ;
     diso:hasStartNode ex:node_175 ;
-    diso:isSegmentOf ex:loop_4_discretized_line .
+    diso:isSegmentOf ex:dislocation_4_discretized_line .
 
 ex:linker_104 a diso:Segment ;
     diso:hasEndNode ex:node_32 ;
     diso:hasStartNode ex:node_31 ;
-    diso:isSegmentOf ex:loop_6_discretized_line .
+    diso:isSegmentOf ex:dislocation_6_discretized_line .
 
 ex:linker_105 a diso:Segment ;
     diso:hasEndNode ex:node_31 ;
     diso:hasStartNode ex:node_152 ;
-    diso:isSegmentOf ex:loop_6_discretized_line .
+    diso:isSegmentOf ex:dislocation_6_discretized_line .
 
 ex:linker_106 a diso:Segment ;
     diso:hasEndNode ex:node_33 ;
     diso:hasStartNode ex:node_32 ;
-    diso:isSegmentOf ex:loop_6_discretized_line .
+    diso:isSegmentOf ex:dislocation_6_discretized_line .
 
 ex:linker_107 a diso:Segment ;
     diso:hasEndNode ex:node_109 ;
     diso:hasStartNode ex:node_33 ;
-    diso:isSegmentOf ex:loop_6_discretized_line .
+    diso:isSegmentOf ex:dislocation_6_discretized_line .
 
 ex:linker_108 a diso:Segment ;
     diso:hasEndNode ex:node_124 ;
     diso:hasStartNode ex:node_46 ;
-    diso:isSegmentOf ex:loop_6_discretized_line .
+    diso:isSegmentOf ex:dislocation_6_discretized_line .
 
 ex:linker_109 a diso:Segment ;
     diso:hasEndNode ex:node_46 ;
     diso:hasStartNode ex:node_125 ;
-    diso:isSegmentOf ex:loop_6_discretized_line .
+    diso:isSegmentOf ex:dislocation_6_discretized_line .
 
 ex:linker_11 a diso:Segment ;
     diso:hasEndNode ex:node_96 ;
     diso:hasStartNode ex:node_64 ;
-    diso:isSegmentOf ex:loop_0_discretized_line .
+    diso:isSegmentOf ex:dislocation_0_discretized_line .
 
 ex:linker_110 a diso:Segment ;
     diso:hasEndNode ex:node_152 ;
     diso:hasStartNode ex:node_60 ;
-    diso:isSegmentOf ex:loop_6_discretized_line .
+    diso:isSegmentOf ex:dislocation_6_discretized_line .
 
 ex:linker_111 a diso:Segment ;
     diso:hasEndNode ex:node_60 ;
     diso:hasStartNode ex:node_153 ;
-    diso:isSegmentOf ex:loop_6_discretized_line .
+    diso:isSegmentOf ex:dislocation_6_discretized_line .
 
 ex:linker_112 a diso:Segment ;
     diso:hasEndNode ex:node_61 ;
     diso:hasStartNode ex:node_154 ;
-    diso:isSegmentOf ex:loop_6_discretized_line .
+    diso:isSegmentOf ex:dislocation_6_discretized_line .
 
 ex:linker_113 a diso:Segment ;
     diso:hasEndNode ex:node_155 ;
     diso:hasStartNode ex:node_61 ;
-    diso:isSegmentOf ex:loop_6_discretized_line .
+    diso:isSegmentOf ex:dislocation_6_discretized_line .
 
 ex:linker_114 a diso:Segment ;
     diso:hasEndNode ex:node_77 ;
     diso:hasStartNode ex:node_109 ;
-    diso:isSegmentOf ex:loop_6_discretized_line .
+    diso:isSegmentOf ex:dislocation_6_discretized_line .
 
 ex:linker_115 a diso:Segment ;
     diso:hasEndNode ex:node_154 ;
     diso:hasStartNode ex:node_77 ;
-    diso:isSegmentOf ex:loop_6_discretized_line .
+    diso:isSegmentOf ex:dislocation_6_discretized_line .
 
 ex:linker_116 a diso:Segment ;
     diso:hasEndNode ex:node_92 ;
     diso:hasStartNode ex:node_124 ;
-    diso:isSegmentOf ex:loop_6_discretized_line .
+    diso:isSegmentOf ex:dislocation_6_discretized_line .
 
 ex:linker_117 a diso:Segment ;
     diso:hasEndNode ex:node_153 ;
     diso:hasStartNode ex:node_92 ;
-    diso:isSegmentOf ex:loop_6_discretized_line .
+    diso:isSegmentOf ex:dislocation_6_discretized_line .
 
 ex:linker_118 a diso:Segment ;
     diso:hasEndNode ex:node_125 ;
     diso:hasStartNode ex:node_93 ;
-    diso:isSegmentOf ex:loop_6_discretized_line .
+    diso:isSegmentOf ex:dislocation_6_discretized_line .
 
 ex:linker_119 a diso:Segment ;
     diso:hasEndNode ex:node_93 ;
     diso:hasStartNode ex:node_155 ;
-    diso:isSegmentOf ex:loop_6_discretized_line .
+    diso:isSegmentOf ex:dislocation_6_discretized_line .
 
 ex:linker_12 a diso:Segment ;
     diso:hasEndNode ex:node_64 ;
     diso:hasStartNode ex:node_128 ;
-    diso:isSegmentOf ex:loop_0_discretized_line .
+    diso:isSegmentOf ex:dislocation_0_discretized_line .
 
 ex:linker_120 a diso:Segment ;
     diso:hasEndNode ex:node_35 ;
     diso:hasStartNode ex:node_34 ;
-    diso:isSegmentOf ex:loop_7_discretized_line .
+    diso:isSegmentOf ex:dislocation_7_discretized_line .
 
 ex:linker_121 a diso:Segment ;
     diso:hasEndNode ex:node_34 ;
     diso:hasStartNode ex:node_173 ;
-    diso:isSegmentOf ex:loop_7_discretized_line .
+    diso:isSegmentOf ex:dislocation_7_discretized_line .
 
 ex:linker_122 a diso:Segment ;
     diso:hasEndNode ex:node_36 ;
     diso:hasStartNode ex:node_35 ;
-    diso:isSegmentOf ex:loop_7_discretized_line .
+    diso:isSegmentOf ex:dislocation_7_discretized_line .
 
 ex:linker_123 a diso:Segment ;
     diso:hasEndNode ex:node_37 ;
     diso:hasStartNode ex:node_36 ;
-    diso:isSegmentOf ex:loop_7_discretized_line .
+    diso:isSegmentOf ex:dislocation_7_discretized_line .
 
 ex:linker_124 a diso:Segment ;
     diso:hasEndNode ex:node_38 ;
     diso:hasStartNode ex:node_37 ;
-    diso:isSegmentOf ex:loop_7_discretized_line .
+    diso:isSegmentOf ex:dislocation_7_discretized_line .
 
 ex:linker_125 a diso:Segment ;
     diso:hasEndNode ex:node_169 ;
     diso:hasStartNode ex:node_38 ;
-    diso:isSegmentOf ex:loop_7_discretized_line .
+    diso:isSegmentOf ex:dislocation_7_discretized_line .
 
 ex:linker_126 a diso:Segment ;
     diso:hasEndNode ex:node_42 ;
     diso:hasStartNode ex:node_157 ;
-    diso:isSegmentOf ex:loop_7_discretized_line .
+    diso:isSegmentOf ex:dislocation_7_discretized_line .
 
 ex:linker_127 a diso:Segment ;
     diso:hasEndNode ex:node_160 ;
     diso:hasStartNode ex:node_42 ;
-    diso:isSegmentOf ex:loop_7_discretized_line .
+    diso:isSegmentOf ex:dislocation_7_discretized_line .
 
 ex:linker_128 a diso:Segment ;
     diso:hasEndNode ex:node_122 ;
     diso:hasStartNode ex:node_58 ;
-    diso:isSegmentOf ex:loop_7_discretized_line .
+    diso:isSegmentOf ex:dislocation_7_discretized_line .
 
 ex:linker_129 a diso:Segment ;
     diso:hasEndNode ex:node_58 ;
     diso:hasStartNode ex:node_159 ;
-    diso:isSegmentOf ex:loop_7_discretized_line .
+    diso:isSegmentOf ex:dislocation_7_discretized_line .
 
 ex:linker_13 a diso:Segment ;
     diso:hasEndNode ex:node_65 ;
     diso:hasStartNode ex:node_97 ;
-    diso:isSegmentOf ex:loop_0_discretized_line .
+    diso:isSegmentOf ex:dislocation_0_discretized_line .
 
 ex:linker_130 a diso:Segment ;
     diso:hasEndNode ex:node_63 ;
     diso:hasStartNode ex:node_158 ;
-    diso:isSegmentOf ex:loop_7_discretized_line .
+    diso:isSegmentOf ex:dislocation_7_discretized_line .
 
 ex:linker_131 a diso:Segment ;
     diso:hasEndNode ex:node_159 ;
     diso:hasStartNode ex:node_63 ;
-    diso:isSegmentOf ex:loop_7_discretized_line .
+    diso:isSegmentOf ex:dislocation_7_discretized_line .
 
 ex:linker_132 a diso:Segment ;
     diso:hasEndNode ex:node_110 ;
     diso:hasStartNode ex:node_78 ;
-    diso:isSegmentOf ex:loop_7_discretized_line .
+    diso:isSegmentOf ex:dislocation_7_discretized_line .
 
 ex:linker_133 a diso:Segment ;
     diso:hasEndNode ex:node_78 ;
     diso:hasStartNode ex:node_156 ;
-    diso:isSegmentOf ex:loop_7_discretized_line .
+    diso:isSegmentOf ex:dislocation_7_discretized_line .
 
 ex:linker_134 a diso:Segment ;
     diso:hasEndNode ex:node_79 ;
     diso:hasStartNode ex:node_111 ;
-    diso:isSegmentOf ex:loop_7_discretized_line .
+    diso:isSegmentOf ex:dislocation_7_discretized_line .
 
 ex:linker_135 a diso:Segment ;
     diso:hasEndNode ex:node_158 ;
     diso:hasStartNode ex:node_79 ;
-    diso:isSegmentOf ex:loop_7_discretized_line .
+    diso:isSegmentOf ex:dislocation_7_discretized_line .
 
 ex:linker_136 a diso:Segment ;
     diso:hasEndNode ex:node_94 ;
     diso:hasStartNode ex:node_126 ;
-    diso:isSegmentOf ex:loop_7_discretized_line .
+    diso:isSegmentOf ex:dislocation_7_discretized_line .
 
 ex:linker_137 a diso:Segment ;
     diso:hasEndNode ex:node_157 ;
     diso:hasStartNode ex:node_94 ;
-    diso:isSegmentOf ex:loop_7_discretized_line .
+    diso:isSegmentOf ex:dislocation_7_discretized_line .
 
 ex:linker_138 a diso:Segment ;
     diso:hasEndNode ex:node_173 ;
     diso:hasStartNode ex:node_110 ;
-    diso:isSegmentOf ex:loop_7_discretized_line .
+    diso:isSegmentOf ex:dislocation_7_discretized_line .
 
 ex:linker_139 a diso:Segment ;
     diso:hasEndNode ex:node_111 ;
     diso:hasStartNode ex:node_169 ;
-    diso:isSegmentOf ex:loop_7_discretized_line .
+    diso:isSegmentOf ex:dislocation_7_discretized_line .
 
 ex:linker_14 a diso:Segment ;
     diso:hasEndNode ex:node_130 ;
     diso:hasStartNode ex:node_65 ;
-    diso:isSegmentOf ex:loop_0_discretized_line .
+    diso:isSegmentOf ex:dislocation_0_discretized_line .
 
 ex:linker_140 a diso:Segment ;
     diso:hasEndNode ex:node_166 ;
     diso:hasStartNode ex:node_122 ;
-    diso:isSegmentOf ex:loop_7_discretized_line .
+    diso:isSegmentOf ex:dislocation_7_discretized_line .
 
 ex:linker_141 a diso:Segment ;
     diso:hasEndNode ex:node_126 ;
     diso:hasStartNode ex:node_166 ;
-    diso:isSegmentOf ex:loop_7_discretized_line .
+    diso:isSegmentOf ex:dislocation_7_discretized_line .
 
 ex:linker_142 a diso:Segment ;
     diso:hasEndNode ex:node_156 ;
     diso:hasStartNode ex:node_160 ;
-    diso:isSegmentOf ex:loop_7_discretized_line .
+    diso:isSegmentOf ex:dislocation_7_discretized_line .
 
 ex:linker_143 a diso:Segment ;
     diso:hasEndNode ex:node_122 ;
     diso:hasStartNode ex:node_58 ;
-    diso:isSegmentOf ex:loop_8_discretized_line .
+    diso:isSegmentOf ex:dislocation_8_discretized_line .
 
 ex:linker_144 a diso:Segment ;
     diso:hasEndNode ex:node_58 ;
     diso:hasStartNode ex:node_180 ;
-    diso:isSegmentOf ex:loop_8_discretized_line .
+    diso:isSegmentOf ex:dislocation_8_discretized_line .
 
 ex:linker_145 a diso:Segment ;
     diso:hasEndNode ex:node_165 ;
     diso:hasStartNode ex:node_122 ;
-    diso:isSegmentOf ex:loop_8_discretized_line .
+    diso:isSegmentOf ex:dislocation_8_discretized_line .
 
 ex:linker_146 a diso:Segment ;
     diso:hasEndNode ex:node_174 ;
     diso:hasStartNode ex:node_165 ;
-    diso:isSegmentOf ex:loop_8_discretized_line .
+    diso:isSegmentOf ex:dislocation_8_discretized_line .
 
 ex:linker_147 a diso:Segment ;
     diso:hasEndNode ex:node_180 ;
     diso:hasStartNode ex:node_174 ;
-    diso:isSegmentOf ex:loop_8_discretized_line .
+    diso:isSegmentOf ex:dislocation_8_discretized_line .
 
 ex:linker_148 a diso:Segment ;
     diso:hasEndNode ex:node_26 ;
     diso:hasStartNode ex:node_15 ;
-    diso:isSegmentOf ex:loop_9_discretized_line .
+    diso:isSegmentOf ex:dislocation_9_discretized_line .
 
 ex:linker_149 a diso:Segment ;
     diso:hasEndNode ex:node_15 ;
     diso:hasStartNode ex:node_106 ;
-    diso:isSegmentOf ex:loop_9_discretized_line .
+    diso:isSegmentOf ex:dislocation_9_discretized_line .
 
 ex:linker_15 a diso:Segment ;
     diso:hasEndNode ex:node_80 ;
     diso:hasStartNode ex:node_112 ;
-    diso:isSegmentOf ex:loop_0_discretized_line .
+    diso:isSegmentOf ex:dislocation_0_discretized_line .
 
 ex:linker_150 a diso:Segment ;
     diso:hasEndNode ex:node_27 ;
     diso:hasStartNode ex:node_26 ;
-    diso:isSegmentOf ex:loop_9_discretized_line .
+    diso:isSegmentOf ex:dislocation_9_discretized_line .
 
 ex:linker_151 a diso:Segment ;
     diso:hasEndNode ex:node_28 ;
     diso:hasStartNode ex:node_27 ;
-    diso:isSegmentOf ex:loop_9_discretized_line .
+    diso:isSegmentOf ex:dislocation_9_discretized_line .
 
 ex:linker_152 a diso:Segment ;
     diso:hasEndNode ex:node_29 ;
     diso:hasStartNode ex:node_28 ;
-    diso:isSegmentOf ex:loop_9_discretized_line .
+    diso:isSegmentOf ex:dislocation_9_discretized_line .
 
 ex:linker_153 a diso:Segment ;
     diso:hasEndNode ex:node_30 ;
     diso:hasStartNode ex:node_29 ;
-    diso:isSegmentOf ex:loop_9_discretized_line .
+    diso:isSegmentOf ex:dislocation_9_discretized_line .
 
 ex:linker_154 a diso:Segment ;
     diso:hasEndNode ex:node_96 ;
     diso:hasStartNode ex:node_30 ;
-    diso:isSegmentOf ex:loop_9_discretized_line .
+    diso:isSegmentOf ex:dislocation_9_discretized_line .
 
 ex:linker_155 a diso:Segment ;
     diso:hasEndNode ex:node_122 ;
     diso:hasStartNode ex:node_45 ;
-    diso:isSegmentOf ex:loop_9_discretized_line .
+    diso:isSegmentOf ex:dislocation_9_discretized_line .
 
 ex:linker_156 a diso:Segment ;
     diso:hasEndNode ex:node_45 ;
     diso:hasStartNode ex:node_123 ;
-    diso:isSegmentOf ex:loop_9_discretized_line .
+    diso:isSegmentOf ex:dislocation_9_discretized_line .
 
 ex:linker_157 a diso:Segment ;
     diso:hasEndNode ex:node_58 ;
     diso:hasStartNode ex:node_122 ;
-    diso:isSegmentOf ex:loop_9_discretized_line .
+    diso:isSegmentOf ex:dislocation_9_discretized_line .
 
 ex:linker_158 a diso:Segment ;
     diso:hasEndNode ex:node_148 ;
     diso:hasStartNode ex:node_58 ;
-    diso:isSegmentOf ex:loop_9_discretized_line .
+    diso:isSegmentOf ex:dislocation_9_discretized_line .
 
 ex:linker_159 a diso:Segment ;
     diso:hasEndNode ex:node_59 ;
     diso:hasStartNode ex:node_96 ;
-    diso:isSegmentOf ex:loop_9_discretized_line .
+    diso:isSegmentOf ex:dislocation_9_discretized_line .
 
 ex:linker_16 a diso:Segment ;
     diso:hasEndNode ex:node_129 ;
     diso:hasStartNode ex:node_80 ;
-    diso:isSegmentOf ex:loop_0_discretized_line .
+    diso:isSegmentOf ex:dislocation_0_discretized_line .
 
 ex:linker_160 a diso:Segment ;
     diso:hasEndNode ex:node_151 ;
     diso:hasStartNode ex:node_59 ;
-    diso:isSegmentOf ex:loop_9_discretized_line .
+    diso:isSegmentOf ex:dislocation_9_discretized_line .
 
 ex:linker_161 a diso:Segment ;
     diso:hasEndNode ex:node_106 ;
     diso:hasStartNode ex:node_74 ;
-    diso:isSegmentOf ex:loop_9_discretized_line .
+    diso:isSegmentOf ex:dislocation_9_discretized_line .
 
 ex:linker_162 a diso:Segment ;
     diso:hasEndNode ex:node_74 ;
     diso:hasStartNode ex:node_148 ;
-    diso:isSegmentOf ex:loop_9_discretized_line .
+    diso:isSegmentOf ex:dislocation_9_discretized_line .
 
 ex:linker_163 a diso:Segment ;
     diso:hasEndNode ex:node_123 ;
     diso:hasStartNode ex:node_91 ;
-    diso:isSegmentOf ex:loop_9_discretized_line .
+    diso:isSegmentOf ex:dislocation_9_discretized_line .
 
 ex:linker_164 a diso:Segment ;
     diso:hasEndNode ex:node_91 ;
     diso:hasStartNode ex:node_151 ;
-    diso:isSegmentOf ex:loop_9_discretized_line .
+    diso:isSegmentOf ex:dislocation_9_discretized_line .
 
 ex:linker_17 a diso:Segment ;
     diso:hasEndNode ex:node_113 ;
     diso:hasStartNode ex:node_81 ;
-    diso:isSegmentOf ex:loop_0_discretized_line .
+    diso:isSegmentOf ex:dislocation_0_discretized_line .
 
 ex:linker_18 a diso:Segment ;
     diso:hasEndNode ex:node_81 ;
     diso:hasStartNode ex:node_131 ;
-    diso:isSegmentOf ex:loop_0_discretized_line .
+    diso:isSegmentOf ex:dislocation_0_discretized_line .
 
 ex:linker_19 a diso:Segment ;
     diso:hasEndNode ex:node_168 ;
     diso:hasStartNode ex:node_96 ;
-    diso:isSegmentOf ex:loop_0_discretized_line .
+    diso:isSegmentOf ex:dislocation_0_discretized_line .
 
 ex:linker_2 a diso:Segment ;
     diso:hasEndNode ex:node_2 ;
     diso:hasStartNode ex:node_1 ;
-    diso:isSegmentOf ex:loop_0_discretized_line .
+    diso:isSegmentOf ex:dislocation_0_discretized_line .
 
 ex:linker_20 a diso:Segment ;
     diso:hasEndNode ex:node_179 ;
     diso:hasStartNode ex:node_168 ;
-    diso:isSegmentOf ex:loop_0_discretized_line .
+    diso:isSegmentOf ex:dislocation_0_discretized_line .
 
 ex:linker_21 a diso:Segment ;
     diso:hasEndNode ex:node_5 ;
     diso:hasStartNode ex:node_4 ;
-    diso:isSegmentOf ex:loop_1_discretized_line .
+    diso:isSegmentOf ex:dislocation_1_discretized_line .
 
 ex:linker_22 a diso:Segment ;
     diso:hasEndNode ex:node_4 ;
     diso:hasStartNode ex:node_98 ;
-    diso:isSegmentOf ex:loop_1_discretized_line .
+    diso:isSegmentOf ex:dislocation_1_discretized_line .
 
 ex:linker_23 a diso:Segment ;
     diso:hasEndNode ex:node_6 ;
     diso:hasStartNode ex:node_5 ;
-    diso:isSegmentOf ex:loop_1_discretized_line .
+    diso:isSegmentOf ex:dislocation_1_discretized_line .
 
 ex:linker_24 a diso:Segment ;
     diso:hasEndNode ex:node_7 ;
     diso:hasStartNode ex:node_6 ;
-    diso:isSegmentOf ex:loop_1_discretized_line .
+    diso:isSegmentOf ex:dislocation_1_discretized_line .
 
 ex:linker_25 a diso:Segment ;
     diso:hasEndNode ex:node_99 ;
     diso:hasStartNode ex:node_7 ;
-    diso:isSegmentOf ex:loop_1_discretized_line .
+    diso:isSegmentOf ex:dislocation_1_discretized_line .
 
 ex:linker_26 a diso:Segment ;
     diso:hasEndNode ex:node_114 ;
     diso:hasStartNode ex:node_41 ;
-    diso:isSegmentOf ex:loop_1_discretized_line .
+    diso:isSegmentOf ex:dislocation_1_discretized_line .
 
 ex:linker_27 a diso:Segment ;
     diso:hasEndNode ex:node_41 ;
     diso:hasStartNode ex:node_115 ;
-    diso:isSegmentOf ex:loop_1_discretized_line .
+    diso:isSegmentOf ex:dislocation_1_discretized_line .
 
 ex:linker_28 a diso:Segment ;
     diso:hasEndNode ex:node_132 ;
     diso:hasStartNode ex:node_50 ;
-    diso:isSegmentOf ex:loop_1_discretized_line .
+    diso:isSegmentOf ex:dislocation_1_discretized_line .
 
 ex:linker_29 a diso:Segment ;
     diso:hasEndNode ex:node_50 ;
     diso:hasStartNode ex:node_133 ;
-    diso:isSegmentOf ex:loop_1_discretized_line .
+    diso:isSegmentOf ex:dislocation_1_discretized_line .
 
 ex:linker_3 a diso:Segment ;
     diso:hasEndNode ex:node_3 ;
     diso:hasStartNode ex:node_2 ;
-    diso:isSegmentOf ex:loop_0_discretized_line .
+    diso:isSegmentOf ex:dislocation_0_discretized_line .
 
 ex:linker_30 a diso:Segment ;
     diso:hasEndNode ex:node_51 ;
     diso:hasStartNode ex:node_134 ;
-    diso:isSegmentOf ex:loop_1_discretized_line .
+    diso:isSegmentOf ex:dislocation_1_discretized_line .
 
 ex:linker_31 a diso:Segment ;
     diso:hasEndNode ex:node_135 ;
     diso:hasStartNode ex:node_51 ;
-    diso:isSegmentOf ex:loop_1_discretized_line .
+    diso:isSegmentOf ex:dislocation_1_discretized_line .
 
 ex:linker_32 a diso:Segment ;
     diso:hasEndNode ex:node_66 ;
     diso:hasStartNode ex:node_132 ;
-    diso:isSegmentOf ex:loop_1_discretized_line .
+    diso:isSegmentOf ex:dislocation_1_discretized_line .
 
 ex:linker_33 a diso:Segment ;
     diso:hasEndNode ex:node_171 ;
     diso:hasStartNode ex:node_66 ;
-    diso:isSegmentOf ex:loop_1_discretized_line .
+    diso:isSegmentOf ex:dislocation_1_discretized_line .
 
 ex:linker_34 a diso:Segment ;
     diso:hasEndNode ex:node_67 ;
     diso:hasStartNode ex:node_99 ;
-    diso:isSegmentOf ex:loop_1_discretized_line .
+    diso:isSegmentOf ex:dislocation_1_discretized_line .
 
 ex:linker_35 a diso:Segment ;
     diso:hasEndNode ex:node_134 ;
     diso:hasStartNode ex:node_67 ;
-    diso:isSegmentOf ex:loop_1_discretized_line .
+    diso:isSegmentOf ex:dislocation_1_discretized_line .
 
 ex:linker_36 a diso:Segment ;
     diso:hasEndNode ex:node_82 ;
     diso:hasStartNode ex:node_114 ;
-    diso:isSegmentOf ex:loop_1_discretized_line .
+    diso:isSegmentOf ex:dislocation_1_discretized_line .
 
 ex:linker_37 a diso:Segment ;
     diso:hasEndNode ex:node_133 ;
     diso:hasStartNode ex:node_82 ;
-    diso:isSegmentOf ex:loop_1_discretized_line .
+    diso:isSegmentOf ex:dislocation_1_discretized_line .
 
 ex:linker_38 a diso:Segment ;
     diso:hasEndNode ex:node_115 ;
     diso:hasStartNode ex:node_83 ;
-    diso:isSegmentOf ex:loop_1_discretized_line .
+    diso:isSegmentOf ex:dislocation_1_discretized_line .
 
 ex:linker_39 a diso:Segment ;
     diso:hasEndNode ex:node_83 ;
     diso:hasStartNode ex:node_135 ;
-    diso:isSegmentOf ex:loop_1_discretized_line .
+    diso:isSegmentOf ex:dislocation_1_discretized_line .
 
 ex:linker_4 a diso:Segment ;
     diso:hasEndNode ex:node_97 ;
     diso:hasStartNode ex:node_3 ;
-    diso:isSegmentOf ex:loop_0_discretized_line .
+    diso:isSegmentOf ex:dislocation_0_discretized_line .
 
 ex:linker_40 a diso:Segment ;
     diso:hasEndNode ex:node_98 ;
     diso:hasStartNode ex:node_171 ;
-    diso:isSegmentOf ex:loop_1_discretized_line .
+    diso:isSegmentOf ex:dislocation_1_discretized_line .
 
 ex:linker_41 a diso:Segment ;
     diso:hasEndNode ex:node_10 ;
     diso:hasStartNode ex:node_9 ;
-    diso:isSegmentOf ex:loop_2_discretized_line .
+    diso:isSegmentOf ex:dislocation_2_discretized_line .
 
 ex:linker_42 a diso:Segment ;
     diso:hasEndNode ex:node_9 ;
     diso:hasStartNode ex:node_100 ;
-    diso:isSegmentOf ex:loop_2_discretized_line .
+    diso:isSegmentOf ex:dislocation_2_discretized_line .
 
 ex:linker_43 a diso:Segment ;
     diso:hasEndNode ex:node_11 ;
     diso:hasStartNode ex:node_10 ;
-    diso:isSegmentOf ex:loop_2_discretized_line .
+    diso:isSegmentOf ex:dislocation_2_discretized_line .
 
 ex:linker_44 a diso:Segment ;
     diso:hasEndNode ex:node_12 ;
     diso:hasStartNode ex:node_11 ;
-    diso:isSegmentOf ex:loop_2_discretized_line .
+    diso:isSegmentOf ex:dislocation_2_discretized_line .
 
 ex:linker_45 a diso:Segment ;
     diso:hasEndNode ex:node_13 ;
     diso:hasStartNode ex:node_12 ;
-    diso:isSegmentOf ex:loop_2_discretized_line .
+    diso:isSegmentOf ex:dislocation_2_discretized_line .
 
 ex:linker_46 a diso:Segment ;
     diso:hasEndNode ex:node_14 ;
     diso:hasStartNode ex:node_13 ;
-    diso:isSegmentOf ex:loop_2_discretized_line .
+    diso:isSegmentOf ex:dislocation_2_discretized_line .
 
 ex:linker_47 a diso:Segment ;
     diso:hasEndNode ex:node_101 ;
     diso:hasStartNode ex:node_14 ;
-    diso:isSegmentOf ex:loop_2_discretized_line .
+    diso:isSegmentOf ex:dislocation_2_discretized_line .
 
 ex:linker_48 a diso:Segment ;
     diso:hasEndNode ex:node_42 ;
     diso:hasStartNode ex:node_72 ;
-    diso:isSegmentOf ex:loop_2_discretized_line .
+    diso:isSegmentOf ex:dislocation_2_discretized_line .
 
 ex:linker_49 a diso:Segment ;
     diso:hasEndNode ex:node_116 ;
     diso:hasStartNode ex:node_42 ;
-    diso:isSegmentOf ex:loop_2_discretized_line .
+    diso:isSegmentOf ex:dislocation_2_discretized_line .
 
 ex:linker_5 a diso:Segment ;
     diso:hasEndNode ex:node_112 ;
     diso:hasStartNode ex:node_40 ;
-    diso:isSegmentOf ex:loop_0_discretized_line .
+    diso:isSegmentOf ex:dislocation_0_discretized_line .
 
 ex:linker_50 a diso:Segment ;
     diso:hasEndNode ex:node_136 ;
     diso:hasStartNode ex:node_52 ;
-    diso:isSegmentOf ex:loop_2_discretized_line .
+    diso:isSegmentOf ex:dislocation_2_discretized_line .
 
 ex:linker_51 a diso:Segment ;
     diso:hasEndNode ex:node_52 ;
     diso:hasStartNode ex:node_137 ;
-    diso:isSegmentOf ex:loop_2_discretized_line .
+    diso:isSegmentOf ex:dislocation_2_discretized_line .
 
 ex:linker_52 a diso:Segment ;
     diso:hasEndNode ex:node_53 ;
     diso:hasStartNode ex:node_138 ;
-    diso:isSegmentOf ex:loop_2_discretized_line .
+    diso:isSegmentOf ex:dislocation_2_discretized_line .
 
 ex:linker_53 a diso:Segment ;
     diso:hasEndNode ex:node_139 ;
     diso:hasStartNode ex:node_53 ;
-    diso:isSegmentOf ex:loop_2_discretized_line .
+    diso:isSegmentOf ex:dislocation_2_discretized_line .
 
 ex:linker_54 a diso:Segment ;
     diso:hasEndNode ex:node_100 ;
     diso:hasStartNode ex:node_68 ;
-    diso:isSegmentOf ex:loop_2_discretized_line .
+    diso:isSegmentOf ex:dislocation_2_discretized_line .
 
 ex:linker_55 a diso:Segment ;
     diso:hasEndNode ex:node_68 ;
     diso:hasStartNode ex:node_136 ;
-    diso:isSegmentOf ex:loop_2_discretized_line .
+    diso:isSegmentOf ex:dislocation_2_discretized_line .
 
 ex:linker_56 a diso:Segment ;
     diso:hasEndNode ex:node_69 ;
     diso:hasStartNode ex:node_101 ;
-    diso:isSegmentOf ex:loop_2_discretized_line .
+    diso:isSegmentOf ex:dislocation_2_discretized_line .
 
 ex:linker_57 a diso:Segment ;
     diso:hasEndNode ex:node_138 ;
     diso:hasStartNode ex:node_69 ;
-    diso:isSegmentOf ex:loop_2_discretized_line .
+    diso:isSegmentOf ex:dislocation_2_discretized_line .
 
 ex:linker_58 a diso:Segment ;
     diso:hasEndNode ex:node_72 ;
     diso:hasStartNode ex:node_85 ;
-    diso:isSegmentOf ex:loop_2_discretized_line .
+    diso:isSegmentOf ex:dislocation_2_discretized_line .
 
 ex:linker_59 a diso:Segment ;
     diso:hasEndNode ex:node_84 ;
     diso:hasStartNode ex:node_116 ;
-    diso:isSegmentOf ex:loop_2_discretized_line .
+    diso:isSegmentOf ex:dislocation_2_discretized_line .
 
 ex:linker_6 a diso:Segment ;
     diso:hasEndNode ex:node_40 ;
     diso:hasStartNode ex:node_113 ;
-    diso:isSegmentOf ex:loop_0_discretized_line .
+    diso:isSegmentOf ex:dislocation_0_discretized_line .
 
 ex:linker_60 a diso:Segment ;
     diso:hasEndNode ex:node_137 ;
     diso:hasStartNode ex:node_84 ;
-    diso:isSegmentOf ex:loop_2_discretized_line .
+    diso:isSegmentOf ex:dislocation_2_discretized_line .
 
 ex:linker_61 a diso:Segment ;
     diso:hasEndNode ex:node_85 ;
     diso:hasStartNode ex:node_139 ;
-    diso:isSegmentOf ex:loop_2_discretized_line .
+    diso:isSegmentOf ex:dislocation_2_discretized_line .
 
 ex:linker_62 a diso:Segment ;
     diso:hasEndNode ex:node_16 ;
     diso:hasStartNode ex:node_15 ;
-    diso:isSegmentOf ex:loop_3_discretized_line .
+    diso:isSegmentOf ex:dislocation_3_discretized_line .
 
 ex:linker_63 a diso:Segment ;
     diso:hasEndNode ex:node_15 ;
     diso:hasStartNode ex:node_102 ;
-    diso:isSegmentOf ex:loop_3_discretized_line .
+    diso:isSegmentOf ex:dislocation_3_discretized_line .
 
 ex:linker_64 a diso:Segment ;
     diso:hasEndNode ex:node_17 ;
     diso:hasStartNode ex:node_16 ;
-    diso:isSegmentOf ex:loop_3_discretized_line .
+    diso:isSegmentOf ex:dislocation_3_discretized_line .
 
 ex:linker_65 a diso:Segment ;
     diso:hasEndNode ex:node_18 ;
     diso:hasStartNode ex:node_17 ;
-    diso:isSegmentOf ex:loop_3_discretized_line .
+    diso:isSegmentOf ex:dislocation_3_discretized_line .
 
 ex:linker_66 a diso:Segment ;
     diso:hasEndNode ex:node_19 ;
     diso:hasStartNode ex:node_18 ;
-    diso:isSegmentOf ex:loop_3_discretized_line .
+    diso:isSegmentOf ex:dislocation_3_discretized_line .
 
 ex:linker_67 a diso:Segment ;
     diso:hasEndNode ex:node_20 ;
     diso:hasStartNode ex:node_19 ;
-    diso:isSegmentOf ex:loop_3_discretized_line .
+    diso:isSegmentOf ex:dislocation_3_discretized_line .
 
 ex:linker_68 a diso:Segment ;
     diso:hasEndNode ex:node_103 ;
     diso:hasStartNode ex:node_20 ;
-    diso:isSegmentOf ex:loop_3_discretized_line .
+    diso:isSegmentOf ex:dislocation_3_discretized_line .
 
 ex:linker_69 a diso:Segment ;
     diso:hasEndNode ex:node_118 ;
     diso:hasStartNode ex:node_43 ;
-    diso:isSegmentOf ex:loop_3_discretized_line .
+    diso:isSegmentOf ex:dislocation_3_discretized_line .
 
 ex:linker_7 a diso:Segment ;
     diso:hasEndNode ex:node_128 ;
     diso:hasStartNode ex:node_48 ;
-    diso:isSegmentOf ex:loop_0_discretized_line .
+    diso:isSegmentOf ex:dislocation_0_discretized_line .
 
 ex:linker_70 a diso:Segment ;
     diso:hasEndNode ex:node_43 ;
     diso:hasStartNode ex:node_119 ;
-    diso:isSegmentOf ex:loop_3_discretized_line .
+    diso:isSegmentOf ex:dislocation_3_discretized_line .
 
 ex:linker_71 a diso:Segment ;
     diso:hasEndNode ex:node_140 ;
     diso:hasStartNode ex:node_54 ;
-    diso:isSegmentOf ex:loop_3_discretized_line .
+    diso:isSegmentOf ex:dislocation_3_discretized_line .
 
 ex:linker_72 a diso:Segment ;
     diso:hasEndNode ex:node_54 ;
     diso:hasStartNode ex:node_141 ;
-    diso:isSegmentOf ex:loop_3_discretized_line .
+    diso:isSegmentOf ex:dislocation_3_discretized_line .
 
 ex:linker_73 a diso:Segment ;
     diso:hasEndNode ex:node_55 ;
     diso:hasStartNode ex:node_142 ;
-    diso:isSegmentOf ex:loop_3_discretized_line .
+    diso:isSegmentOf ex:dislocation_3_discretized_line .
 
 ex:linker_74 a diso:Segment ;
     diso:hasEndNode ex:node_143 ;
     diso:hasStartNode ex:node_55 ;
-    diso:isSegmentOf ex:loop_3_discretized_line .
+    diso:isSegmentOf ex:dislocation_3_discretized_line .
 
 ex:linker_75 a diso:Segment ;
     diso:hasEndNode ex:node_102 ;
     diso:hasStartNode ex:node_70 ;
-    diso:isSegmentOf ex:loop_3_discretized_line .
+    diso:isSegmentOf ex:dislocation_3_discretized_line .
 
 ex:linker_76 a diso:Segment ;
     diso:hasEndNode ex:node_70 ;
     diso:hasStartNode ex:node_140 ;
-    diso:isSegmentOf ex:loop_3_discretized_line .
+    diso:isSegmentOf ex:dislocation_3_discretized_line .
 
 ex:linker_77 a diso:Segment ;
     diso:hasEndNode ex:node_71 ;
     diso:hasStartNode ex:node_103 ;
-    diso:isSegmentOf ex:loop_3_discretized_line .
+    diso:isSegmentOf ex:dislocation_3_discretized_line .
 
 ex:linker_78 a diso:Segment ;
     diso:hasEndNode ex:node_142 ;
     diso:hasStartNode ex:node_71 ;
-    diso:isSegmentOf ex:loop_3_discretized_line .
+    diso:isSegmentOf ex:dislocation_3_discretized_line .
 
 ex:linker_79 a diso:Segment ;
     diso:hasEndNode ex:node_86 ;
     diso:hasStartNode ex:node_118 ;
-    diso:isSegmentOf ex:loop_3_discretized_line .
+    diso:isSegmentOf ex:dislocation_3_discretized_line .
 
 ex:linker_8 a diso:Segment ;
     diso:hasEndNode ex:node_48 ;
     diso:hasStartNode ex:node_129 ;
-    diso:isSegmentOf ex:loop_0_discretized_line .
+    diso:isSegmentOf ex:dislocation_0_discretized_line .
 
 ex:linker_80 a diso:Segment ;
     diso:hasEndNode ex:node_141 ;
     diso:hasStartNode ex:node_86 ;
-    diso:isSegmentOf ex:loop_3_discretized_line .
+    diso:isSegmentOf ex:dislocation_3_discretized_line .
 
 ex:linker_81 a diso:Segment ;
     diso:hasEndNode ex:node_119 ;
     diso:hasStartNode ex:node_87 ;
-    diso:isSegmentOf ex:loop_3_discretized_line .
+    diso:isSegmentOf ex:dislocation_3_discretized_line .
 
 ex:linker_82 a diso:Segment ;
     diso:hasEndNode ex:node_87 ;
     diso:hasStartNode ex:node_143 ;
-    diso:isSegmentOf ex:loop_3_discretized_line .
+    diso:isSegmentOf ex:dislocation_3_discretized_line .
 
 ex:linker_83 a diso:Segment ;
     diso:hasEndNode ex:node_22 ;
     diso:hasStartNode ex:node_21 ;
-    diso:isSegmentOf ex:loop_4_discretized_line .
+    diso:isSegmentOf ex:dislocation_4_discretized_line .
 
 ex:linker_84 a diso:Segment ;
     diso:hasEndNode ex:node_21 ;
     diso:hasStartNode ex:node_104 ;
-    diso:isSegmentOf ex:loop_4_discretized_line .
+    diso:isSegmentOf ex:dislocation_4_discretized_line .
 
 ex:linker_85 a diso:Segment ;
     diso:hasEndNode ex:node_23 ;
     diso:hasStartNode ex:node_22 ;
-    diso:isSegmentOf ex:loop_4_discretized_line .
+    diso:isSegmentOf ex:dislocation_4_discretized_line .
 
 ex:linker_86 a diso:Segment ;
     diso:hasEndNode ex:node_24 ;
     diso:hasStartNode ex:node_23 ;
-    diso:isSegmentOf ex:loop_4_discretized_line .
+    diso:isSegmentOf ex:dislocation_4_discretized_line .
 
 ex:linker_87 a diso:Segment ;
     diso:hasEndNode ex:node_175 ;
     diso:hasStartNode ex:node_24 ;
-    diso:isSegmentOf ex:loop_4_discretized_line .
+    diso:isSegmentOf ex:dislocation_4_discretized_line .
 
 ex:linker_88 a diso:Segment ;
     diso:hasEndNode ex:node_120 ;
     diso:hasStartNode ex:node_44 ;
-    diso:isSegmentOf ex:loop_4_discretized_line .
+    diso:isSegmentOf ex:dislocation_4_discretized_line .
 
 ex:linker_89 a diso:Segment ;
     diso:hasEndNode ex:node_44 ;
     diso:hasStartNode ex:node_121 ;
-    diso:isSegmentOf ex:loop_4_discretized_line .
+    diso:isSegmentOf ex:dislocation_4_discretized_line .
 
 ex:linker_9 a diso:Segment ;
     diso:hasEndNode ex:node_49 ;
     diso:hasStartNode ex:node_130 ;
-    diso:isSegmentOf ex:loop_0_discretized_line .
+    diso:isSegmentOf ex:dislocation_0_discretized_line .
 
 ex:linker_90 a diso:Segment ;
     diso:hasEndNode ex:node_144 ;
     diso:hasStartNode ex:node_56 ;
-    diso:isSegmentOf ex:loop_4_discretized_line .
+    diso:isSegmentOf ex:dislocation_4_discretized_line .
 
 ex:linker_91 a diso:Segment ;
     diso:hasEndNode ex:node_56 ;
     diso:hasStartNode ex:node_145 ;
-    diso:isSegmentOf ex:loop_4_discretized_line .
+    diso:isSegmentOf ex:dislocation_4_discretized_line .
 
 ex:linker_92 a diso:Segment ;
     diso:hasEndNode ex:node_57 ;
     diso:hasStartNode ex:node_146 ;
-    diso:isSegmentOf ex:loop_4_discretized_line .
+    diso:isSegmentOf ex:dislocation_4_discretized_line .
 
 ex:linker_93 a diso:Segment ;
     diso:hasEndNode ex:node_147 ;
     diso:hasStartNode ex:node_57 ;
-    diso:isSegmentOf ex:loop_4_discretized_line .
+    diso:isSegmentOf ex:dislocation_4_discretized_line .
 
 ex:linker_94 a diso:Segment ;
     diso:hasEndNode ex:node_72 ;
     diso:hasStartNode ex:node_144 ;
-    diso:isSegmentOf ex:loop_4_discretized_line .
+    diso:isSegmentOf ex:dislocation_4_discretized_line .
 
 ex:linker_95 a diso:Segment ;
     diso:hasEndNode ex:node_167 ;
     diso:hasStartNode ex:node_72 ;
-    diso:isSegmentOf ex:loop_4_discretized_line .
+    diso:isSegmentOf ex:dislocation_4_discretized_line .
 
 ex:linker_96 a diso:Segment ;
     diso:hasEndNode ex:node_146 ;
     diso:hasStartNode ex:node_73 ;
-    diso:isSegmentOf ex:loop_4_discretized_line .
+    diso:isSegmentOf ex:dislocation_4_discretized_line .
 
 ex:linker_97 a diso:Segment ;
     diso:hasEndNode ex:node_73 ;
     diso:hasStartNode ex:node_164 ;
-    diso:isSegmentOf ex:loop_4_discretized_line .
+    diso:isSegmentOf ex:dislocation_4_discretized_line .
 
 ex:linker_98 a diso:Segment ;
     diso:hasEndNode ex:node_88 ;
     diso:hasStartNode ex:node_120 ;
-    diso:isSegmentOf ex:loop_4_discretized_line .
+    diso:isSegmentOf ex:dislocation_4_discretized_line .
 
 ex:linker_99 a diso:Segment ;
     diso:hasEndNode ex:node_145 ;
     diso:hasStartNode ex:node_88 ;
-    diso:isSegmentOf ex:loop_4_discretized_line .
+    diso:isSegmentOf ex:dislocation_4_discretized_line .
+
+terms:contributor a owl:AnnotationProperty .
+
+terms:created a owl:AnnotationProperty .
+
+terms:creator a owl:AnnotationProperty .
+
+terms:title a owl:AnnotationProperty .
+
+vann:preferredNamespacePrefix a owl:AnnotationProperty .
 
 owl:qualifiedCardinality a owl:AnnotationProperty .
 
@@ -867,6 +877,10 @@ skos:prefLabel a owl:AnnotationProperty ;
     rdfs:seeAlso "https://github.com/Materials-Data-Science-and-Informatics/dislocation-ontology" ;
     owl:imports <https://purls.helmholtz-metadaten.de/cso>,
         <https://purls.helmholtz-metadaten.de/diso> .
+
+cdo:Dislocation a owl:Class ;
+    rdfs:subClassOf cdo:CrystallographicDefect ;
+    owl:equivalentClass diso:Dislocation .
 
 cdo:GrainBoundary a owl:Class ;
     rdfs:subClassOf cdo:CrystallographicDefect .
@@ -885,36 +899,36 @@ ex:Bravais_lattice a cso:BravaisLattice ;
     cso:hasUnitCell ex:unit_cell .
 
 ex:active_slip_system_0 a diso:SlipSystem ;
-    diso:hasSlipDirection ex:loop_0_slip_direction ;
-    diso:hasSlipPlaneNormal ex:loop_0_slip_plane_normal .
+    diso:hasSlipDirection ex:dislocation_0_slip_direction ;
+    diso:hasSlipPlaneNormal ex:dislocation_0_slip_plane_normal .
 
 ex:active_slip_system_1 a diso:SlipSystem ;
-    diso:hasSlipDirection ex:loop_1_slip_direction ;
-    diso:hasSlipPlaneNormal ex:loop_1_slip_plane_normal .
+    diso:hasSlipDirection ex:dislocation_1_slip_direction ;
+    diso:hasSlipPlaneNormal ex:dislocation_1_slip_plane_normal .
 
 ex:active_slip_system_2 a diso:SlipSystem ;
-    diso:hasSlipDirection ex:loop_3_slip_direction ;
-    diso:hasSlipPlaneNormal ex:loop_3_slip_plane_normal .
+    diso:hasSlipDirection ex:dislocation_3_slip_direction ;
+    diso:hasSlipPlaneNormal ex:dislocation_3_slip_plane_normal .
 
 ex:active_slip_system_3 a diso:SlipSystem ;
-    diso:hasSlipDirection ex:loop_4_slip_direction ;
-    diso:hasSlipPlaneNormal ex:loop_4_slip_plane_normal .
+    diso:hasSlipDirection ex:dislocation_4_slip_direction ;
+    diso:hasSlipPlaneNormal ex:dislocation_4_slip_plane_normal .
 
 ex:active_slip_system_4 a diso:SlipSystem ;
-    diso:hasSlipDirection ex:loop_6_slip_direction ;
-    diso:hasSlipPlaneNormal ex:loop_6_slip_plane_normal .
+    diso:hasSlipDirection ex:dislocation_6_slip_direction ;
+    diso:hasSlipPlaneNormal ex:dislocation_6_slip_plane_normal .
 
 ex:active_slip_system_5 a diso:SlipSystem ;
-    diso:hasSlipDirection ex:loop_7_slip_direction ;
-    diso:hasSlipPlaneNormal ex:loop_7_slip_plane_normal .
+    diso:hasSlipDirection ex:dislocation_7_slip_direction ;
+    diso:hasSlipPlaneNormal ex:dislocation_7_slip_plane_normal .
 
 ex:active_slip_system_6 a diso:SlipSystem ;
-    diso:hasSlipDirection ex:loop_8_slip_direction ;
-    diso:hasSlipPlaneNormal ex:loop_8_slip_plane_normal .
+    diso:hasSlipDirection ex:dislocation_8_slip_direction ;
+    diso:hasSlipPlaneNormal ex:dislocation_8_slip_plane_normal .
 
 ex:active_slip_system_7 a diso:SlipSystem ;
-    diso:hasSlipDirection ex:loop_9_slip_direction ;
-    diso:hasSlipPlaneNormal ex:loop_9_slip_plane_normal .
+    diso:hasSlipDirection ex:dislocation_9_slip_direction ;
+    diso:hasSlipPlaneNormal ex:dislocation_9_slip_plane_normal .
 
 ex:crystal_coordinate_first_axis a mdo:CoordinateVector ;
     mdo:X_axisCoordinate 1e+00 ;
@@ -933,15 +947,15 @@ ex:crystal_coordinate_third_axis a mdo:CoordinateVector ;
 
 ex:crystal_structure a cso:CrystalStructure ;
     cso:hasLattice ex:Bravais_lattice ;
-    diso:hasSlipPlane ex:loop_0_slip_plane,
-        ex:loop_1_slip_plane,
-        ex:loop_2_slip_plane,
-        ex:loop_3_slip_plane,
-        ex:loop_4_slip_plane,
-        ex:loop_6_slip_plane,
-        ex:loop_7_slip_plane,
-        ex:loop_8_slip_plane,
-        ex:loop_9_slip_plane ;
+    diso:hasSlipPlane ex:dislocation_0_slip_plane,
+        ex:dislocation_1_slip_plane,
+        ex:dislocation_2_slip_plane,
+        ex:dislocation_3_slip_plane,
+        ex:dislocation_4_slip_plane,
+        ex:dislocation_6_slip_plane,
+        ex:dislocation_7_slip_plane,
+        ex:dislocation_8_slip_plane,
+        ex:dislocation_9_slip_plane ;
     diso:hasSlipSystem ex:active_slip_system_0,
         ex:active_slip_system_1,
         ex:active_slip_system_2,
@@ -951,6 +965,394 @@ ex:crystal_structure a cso:CrystalStructure ;
         ex:active_slip_system_6,
         ex:active_slip_system_7 ;
     mdo:hasSpaceGroup ex:space_group .
+
+ex:dislocation_0 a diso:Dislocation ;
+    diso:hasBurgersVector ex:dislocation_0_Burgers_vector ;
+    diso:hasMathematicalRepresentation ex:line_0 ;
+    diso:movesOn ex:dislocation_0_slip_plane .
+
+ex:dislocation_0_Burgers_vector a diso:BurgersVector ;
+    cso:hasVectorComponent ex:dislocation_0_vector_components_Burgers_vector ;
+    cso:vectorMagnitude 2.489e-10 .
+
+ex:dislocation_0_slip_plane_origin a diso:Origin ;
+    cso:hasVectorComponent ex:dislocation_0_vector_components_origin .
+
+ex:dislocation_0_vector_components_Burgers_vector a cso:VectorComponentOfBasis ;
+    qudt:hasQuantityKind quantityKind:Length ;
+    qudt:quantityValue ex:quantity_value_M ;
+    cso:firstAxisComponent 1.759989e-10 ;
+    cso:hasBasis ex:coordinate_basis ;
+    cso:secondAxisComponent -1.759989e-10 ;
+    cso:thirdAxisComponent 0e+00 .
+
+ex:dislocation_0_vector_components_of_slip_plane_normal a cso:VectorComponentOfBasis ;
+    qudt:hasQuantityKind quantityKind:Dimensionless ;
+    qudt:quantityValue ex:quantity_value_unitless ;
+    cso:firstAxisComponent 5.773503e-01 ;
+    cso:hasBasis ex:coordinate_basis ;
+    cso:secondAxisComponent 5.773503e-01 ;
+    cso:thirdAxisComponent 5.773503e-01 .
+
+ex:dislocation_0_vector_components_origin a cso:VectorComponentOfBasis ;
+    cso:firstAxisComponent 4.927969e-08 ;
+    cso:hasBasis ex:coordinate_basis ;
+    cso:secondAxisComponent 4.927969e-08 ;
+    cso:thirdAxisComponent 4.927969e-08 .
+
+ex:dislocation_0_vector_components_slip_direction a cso:VectorComponentOfBasis ;
+    qudt:hasQuantityKind quantityKind:Dimensionless ;
+    qudt:quantityValue ex:quantity_value_unitless ;
+    cso:firstAxisComponent 7.071068e-01 ;
+    cso:hasBasis ex:coordinate_basis ;
+    cso:secondAxisComponent -7.071068e-01 ;
+    cso:thirdAxisComponent 0e+00 .
+
+ex:dislocation_1 a diso:Dislocation ;
+    diso:hasBurgersVector ex:dislocation_1_Burgers_vector ;
+    diso:hasMathematicalRepresentation ex:line_1 ;
+    diso:movesOn ex:dislocation_1_slip_plane .
+
+ex:dislocation_1_Burgers_vector a diso:BurgersVector ;
+    cso:hasVectorComponent ex:dislocation_1_vector_components_Burgers_vector ;
+    cso:vectorMagnitude 2.489e-10 .
+
+ex:dislocation_1_slip_plane_origin a diso:Origin ;
+    cso:hasVectorComponent ex:dislocation_1_vector_components_origin .
+
+ex:dislocation_1_vector_components_Burgers_vector a cso:VectorComponentOfBasis ;
+    qudt:hasQuantityKind quantityKind:Length ;
+    qudt:quantityValue ex:quantity_value_M ;
+    cso:firstAxisComponent -1.759989e-10 ;
+    cso:hasBasis ex:coordinate_basis ;
+    cso:secondAxisComponent 0e+00 ;
+    cso:thirdAxisComponent -1.759989e-10 .
+
+ex:dislocation_1_vector_components_of_slip_plane_normal a cso:VectorComponentOfBasis ;
+    qudt:hasQuantityKind quantityKind:Dimensionless ;
+    qudt:quantityValue ex:quantity_value_unitless ;
+    cso:firstAxisComponent -5.773503e-01 ;
+    cso:hasBasis ex:coordinate_basis ;
+    cso:secondAxisComponent -5.773503e-01 ;
+    cso:thirdAxisComponent 5.773503e-01 .
+
+ex:dislocation_1_vector_components_origin a cso:VectorComponentOfBasis ;
+    cso:firstAxisComponent 1.889055e-08 ;
+    cso:hasBasis ex:coordinate_basis ;
+    cso:secondAxisComponent 1.889055e-08 ;
+    cso:thirdAxisComponent -1.889055e-08 .
+
+ex:dislocation_1_vector_components_slip_direction a cso:VectorComponentOfBasis ;
+    qudt:hasQuantityKind quantityKind:Dimensionless ;
+    qudt:quantityValue ex:quantity_value_unitless ;
+    cso:firstAxisComponent -7.071068e-01 ;
+    cso:hasBasis ex:coordinate_basis ;
+    cso:secondAxisComponent 0e+00 ;
+    cso:thirdAxisComponent -7.071068e-01 .
+
+ex:dislocation_2 a diso:Dislocation ;
+    diso:hasBurgersVector ex:dislocation_2_Burgers_vector ;
+    diso:hasMathematicalRepresentation ex:line_2 ;
+    diso:movesOn ex:dislocation_2_slip_plane .
+
+ex:dislocation_2_Burgers_vector a diso:BurgersVector ;
+    cso:hasVectorComponent ex:dislocation_2_vector_components_Burgers_vector ;
+    cso:vectorMagnitude 2.489e-10 .
+
+ex:dislocation_2_slip_direction a diso:SlipDirection ;
+    cso:hasVectorComponent ex:dislocation_2_vector_components_slip_direction ;
+    cso:vectorMagnitude 1e+00 ;
+    diso:directionMillerIndice "[-10-1]"^^xsd:string ;
+    diso:familyDirectionMillerIndice "<110>"^^xsd:string .
+
+ex:dislocation_2_slip_plane_normal a diso:SlipPlaneNormal ;
+    cso:hasVectorComponent ex:dislocation_2_vector_components_of_slip_plane_normal ;
+    diso:directionMillerIndice "[-1-11]"^^xsd:string .
+
+ex:dislocation_2_slip_plane_origin a diso:Origin ;
+    cso:hasVectorComponent ex:dislocation_2_vector_components_origin .
+
+ex:dislocation_2_vector_components_Burgers_vector a cso:VectorComponentOfBasis ;
+    qudt:hasQuantityKind quantityKind:Length ;
+    qudt:quantityValue ex:quantity_value_M ;
+    cso:firstAxisComponent -1.759989e-10 ;
+    cso:hasBasis ex:coordinate_basis ;
+    cso:secondAxisComponent 0e+00 ;
+    cso:thirdAxisComponent -1.759989e-10 .
+
+ex:dislocation_2_vector_components_of_slip_plane_normal a cso:VectorComponentOfBasis ;
+    qudt:hasQuantityKind quantityKind:Dimensionless ;
+    qudt:quantityValue ex:quantity_value_unitless ;
+    cso:firstAxisComponent -5.773503e-01 ;
+    cso:hasBasis ex:coordinate_basis ;
+    cso:secondAxisComponent -5.773503e-01 ;
+    cso:thirdAxisComponent 5.773503e-01 .
+
+ex:dislocation_2_vector_components_origin a cso:VectorComponentOfBasis ;
+    cso:firstAxisComponent -3.954108e-08 ;
+    cso:hasBasis ex:coordinate_basis ;
+    cso:secondAxisComponent -3.954108e-08 ;
+    cso:thirdAxisComponent 3.954108e-08 .
+
+ex:dislocation_2_vector_components_slip_direction a cso:VectorComponentOfBasis ;
+    qudt:hasQuantityKind quantityKind:Dimensionless ;
+    qudt:quantityValue ex:quantity_value_unitless ;
+    cso:firstAxisComponent -7.071068e-01 ;
+    cso:hasBasis ex:coordinate_basis ;
+    cso:secondAxisComponent 0e+00 ;
+    cso:thirdAxisComponent -7.071068e-01 .
+
+ex:dislocation_3 a diso:Dislocation ;
+    diso:hasBurgersVector ex:dislocation_3_Burgers_vector ;
+    diso:hasMathematicalRepresentation ex:line_3 ;
+    diso:movesOn ex:dislocation_3_slip_plane .
+
+ex:dislocation_3_Burgers_vector a diso:BurgersVector ;
+    cso:hasVectorComponent ex:dislocation_3_vector_components_Burgers_vector ;
+    cso:vectorMagnitude 2.489e-10 .
+
+ex:dislocation_3_slip_plane_origin a diso:Origin ;
+    cso:hasVectorComponent ex:dislocation_3_vector_components_origin .
+
+ex:dislocation_3_vector_components_Burgers_vector a cso:VectorComponentOfBasis ;
+    qudt:hasQuantityKind quantityKind:Length ;
+    qudt:quantityValue ex:quantity_value_M ;
+    cso:firstAxisComponent -1.759989e-10 ;
+    cso:hasBasis ex:coordinate_basis ;
+    cso:secondAxisComponent 0e+00 ;
+    cso:thirdAxisComponent 1.759989e-10 .
+
+ex:dislocation_3_vector_components_of_slip_plane_normal a cso:VectorComponentOfBasis ;
+    qudt:hasQuantityKind quantityKind:Dimensionless ;
+    qudt:quantityValue ex:quantity_value_unitless ;
+    cso:firstAxisComponent -5.773503e-01 ;
+    cso:hasBasis ex:coordinate_basis ;
+    cso:secondAxisComponent 5.773503e-01 ;
+    cso:thirdAxisComponent -5.773503e-01 .
+
+ex:dislocation_3_vector_components_origin a cso:VectorComponentOfBasis ;
+    cso:firstAxisComponent -3.144513e-08 ;
+    cso:hasBasis ex:coordinate_basis ;
+    cso:secondAxisComponent 3.144513e-08 ;
+    cso:thirdAxisComponent -3.144513e-08 .
+
+ex:dislocation_3_vector_components_slip_direction a cso:VectorComponentOfBasis ;
+    qudt:hasQuantityKind quantityKind:Dimensionless ;
+    qudt:quantityValue ex:quantity_value_unitless ;
+    cso:firstAxisComponent -7.071068e-01 ;
+    cso:hasBasis ex:coordinate_basis ;
+    cso:secondAxisComponent 0e+00 ;
+    cso:thirdAxisComponent 7.071068e-01 .
+
+ex:dislocation_4 a diso:Dislocation ;
+    diso:hasBurgersVector ex:dislocation_4_Burgers_vector ;
+    diso:hasMathematicalRepresentation ex:line_4 ;
+    diso:movesOn ex:dislocation_4_slip_plane .
+
+ex:dislocation_4_Burgers_vector a diso:BurgersVector ;
+    cso:hasVectorComponent ex:dislocation_4_vector_components_Burgers_vector ;
+    cso:vectorMagnitude 2.489e-10 .
+
+ex:dislocation_4_slip_plane_origin a diso:Origin ;
+    cso:hasVectorComponent ex:dislocation_4_vector_components_origin .
+
+ex:dislocation_4_vector_components_Burgers_vector a cso:VectorComponentOfBasis ;
+    qudt:hasQuantityKind quantityKind:Length ;
+    qudt:quantityValue ex:quantity_value_M ;
+    cso:firstAxisComponent 0e+00 ;
+    cso:hasBasis ex:coordinate_basis ;
+    cso:secondAxisComponent 1.759989e-10 ;
+    cso:thirdAxisComponent 1.759989e-10 .
+
+ex:dislocation_4_vector_components_of_slip_plane_normal a cso:VectorComponentOfBasis ;
+    qudt:hasQuantityKind quantityKind:Dimensionless ;
+    qudt:quantityValue ex:quantity_value_unitless ;
+    cso:firstAxisComponent -5.773503e-01 ;
+    cso:hasBasis ex:coordinate_basis ;
+    cso:secondAxisComponent 5.773503e-01 ;
+    cso:thirdAxisComponent -5.773503e-01 .
+
+ex:dislocation_4_vector_components_origin a cso:VectorComponentOfBasis ;
+    cso:firstAxisComponent 1.877321e-08 ;
+    cso:hasBasis ex:coordinate_basis ;
+    cso:secondAxisComponent -1.877321e-08 ;
+    cso:thirdAxisComponent 1.877321e-08 .
+
+ex:dislocation_4_vector_components_slip_direction a cso:VectorComponentOfBasis ;
+    qudt:hasQuantityKind quantityKind:Dimensionless ;
+    qudt:quantityValue ex:quantity_value_unitless ;
+    cso:firstAxisComponent 0e+00 ;
+    cso:hasBasis ex:coordinate_basis ;
+    cso:secondAxisComponent 7.071068e-01 ;
+    cso:thirdAxisComponent 7.071068e-01 .
+
+ex:dislocation_6 a diso:Dislocation ;
+    diso:hasBurgersVector ex:dislocation_6_Burgers_vector ;
+    diso:hasMathematicalRepresentation ex:line_6 ;
+    diso:movesOn ex:dislocation_6_slip_plane .
+
+ex:dislocation_6_Burgers_vector a diso:BurgersVector ;
+    cso:hasVectorComponent ex:dislocation_6_vector_components_Burgers_vector ;
+    cso:vectorMagnitude 2.489e-10 .
+
+ex:dislocation_6_slip_plane_origin a diso:Origin ;
+    cso:hasVectorComponent ex:dislocation_6_vector_components_origin .
+
+ex:dislocation_6_vector_components_Burgers_vector a cso:VectorComponentOfBasis ;
+    qudt:hasQuantityKind quantityKind:Length ;
+    qudt:quantityValue ex:quantity_value_M ;
+    cso:firstAxisComponent 0e+00 ;
+    cso:hasBasis ex:coordinate_basis ;
+    cso:secondAxisComponent -1.759989e-10 ;
+    cso:thirdAxisComponent -1.759989e-10 .
+
+ex:dislocation_6_vector_components_of_slip_plane_normal a cso:VectorComponentOfBasis ;
+    qudt:hasQuantityKind quantityKind:Dimensionless ;
+    qudt:quantityValue ex:quantity_value_unitless ;
+    cso:firstAxisComponent -5.773503e-01 ;
+    cso:hasBasis ex:coordinate_basis ;
+    cso:secondAxisComponent -5.773503e-01 ;
+    cso:thirdAxisComponent 5.773503e-01 .
+
+ex:dislocation_6_vector_components_origin a cso:VectorComponentOfBasis ;
+    cso:firstAxisComponent 7.732217e-08 ;
+    cso:hasBasis ex:coordinate_basis ;
+    cso:secondAxisComponent 7.732217e-08 ;
+    cso:thirdAxisComponent -7.732217e-08 .
+
+ex:dislocation_6_vector_components_slip_direction a cso:VectorComponentOfBasis ;
+    qudt:hasQuantityKind quantityKind:Dimensionless ;
+    qudt:quantityValue ex:quantity_value_unitless ;
+    cso:firstAxisComponent 0e+00 ;
+    cso:hasBasis ex:coordinate_basis ;
+    cso:secondAxisComponent -7.071068e-01 ;
+    cso:thirdAxisComponent -7.071068e-01 .
+
+ex:dislocation_7 a diso:Dislocation ;
+    diso:hasBurgersVector ex:dislocation_7_Burgers_vector ;
+    diso:hasMathematicalRepresentation ex:line_7 ;
+    diso:movesOn ex:dislocation_7_slip_plane .
+
+ex:dislocation_7_Burgers_vector a diso:BurgersVector ;
+    cso:hasVectorComponent ex:dislocation_7_vector_components_Burgers_vector ;
+    cso:vectorMagnitude 2.489e-10 .
+
+ex:dislocation_7_slip_plane_origin a diso:Origin ;
+    cso:hasVectorComponent ex:dislocation_7_vector_components_origin .
+
+ex:dislocation_7_vector_components_Burgers_vector a cso:VectorComponentOfBasis ;
+    qudt:hasQuantityKind quantityKind:Length ;
+    qudt:quantityValue ex:quantity_value_M ;
+    cso:firstAxisComponent 1.759989e-10 ;
+    cso:hasBasis ex:coordinate_basis ;
+    cso:secondAxisComponent 1.759989e-10 ;
+    cso:thirdAxisComponent 0e+00 .
+
+ex:dislocation_7_vector_components_of_slip_plane_normal a cso:VectorComponentOfBasis ;
+    qudt:hasQuantityKind quantityKind:Dimensionless ;
+    qudt:quantityValue ex:quantity_value_unitless ;
+    cso:firstAxisComponent -5.773503e-01 ;
+    cso:hasBasis ex:coordinate_basis ;
+    cso:secondAxisComponent 5.773503e-01 ;
+    cso:thirdAxisComponent -5.773503e-01 .
+
+ex:dislocation_7_vector_components_origin a cso:VectorComponentOfBasis ;
+    cso:firstAxisComponent 7.743951e-09 ;
+    cso:hasBasis ex:coordinate_basis ;
+    cso:secondAxisComponent -7.743951e-09 ;
+    cso:thirdAxisComponent 7.743951e-09 .
+
+ex:dislocation_7_vector_components_slip_direction a cso:VectorComponentOfBasis ;
+    qudt:hasQuantityKind quantityKind:Dimensionless ;
+    qudt:quantityValue ex:quantity_value_unitless ;
+    cso:firstAxisComponent 7.071068e-01 ;
+    cso:hasBasis ex:coordinate_basis ;
+    cso:secondAxisComponent 7.071068e-01 ;
+    cso:thirdAxisComponent 0e+00 .
+
+ex:dislocation_8 a diso:Dislocation ;
+    diso:hasBurgersVector ex:dislocation_8_Burgers_vector ;
+    diso:hasMathematicalRepresentation ex:line_8 ;
+    diso:movesOn ex:dislocation_8_slip_plane .
+
+ex:dislocation_8_Burgers_vector a diso:BurgersVector ;
+    cso:hasVectorComponent ex:dislocation_8_vector_components_Burgers_vector ;
+    cso:vectorMagnitude 2.489e-10 .
+
+ex:dislocation_8_slip_plane_origin a diso:Origin ;
+    cso:hasVectorComponent ex:dislocation_8_vector_components_origin .
+
+ex:dislocation_8_vector_components_Burgers_vector a cso:VectorComponentOfBasis ;
+    qudt:hasQuantityKind quantityKind:Length ;
+    qudt:quantityValue ex:quantity_value_M ;
+    cso:firstAxisComponent -1.759989e-10 ;
+    cso:hasBasis ex:coordinate_basis ;
+    cso:secondAxisComponent 0e+00 ;
+    cso:thirdAxisComponent -1.759989e-10 .
+
+ex:dislocation_8_vector_components_of_slip_plane_normal a cso:VectorComponentOfBasis ;
+    qudt:hasQuantityKind quantityKind:Dimensionless ;
+    qudt:quantityValue ex:quantity_value_unitless ;
+    cso:firstAxisComponent -5.773503e-01 ;
+    cso:hasBasis ex:coordinate_basis ;
+    cso:secondAxisComponent 5.773503e-01 ;
+    cso:thirdAxisComponent 5.773503e-01 .
+
+ex:dislocation_8_vector_components_origin a cso:VectorComponentOfBasis ;
+    cso:firstAxisComponent -5.326899e-08 ;
+    cso:hasBasis ex:coordinate_basis ;
+    cso:secondAxisComponent 5.326899e-08 ;
+    cso:thirdAxisComponent 5.326899e-08 .
+
+ex:dislocation_8_vector_components_slip_direction a cso:VectorComponentOfBasis ;
+    qudt:hasQuantityKind quantityKind:Dimensionless ;
+    qudt:quantityValue ex:quantity_value_unitless ;
+    cso:firstAxisComponent -7.071068e-01 ;
+    cso:hasBasis ex:coordinate_basis ;
+    cso:secondAxisComponent 0e+00 ;
+    cso:thirdAxisComponent -7.071068e-01 .
+
+ex:dislocation_9 a diso:Dislocation ;
+    diso:hasBurgersVector ex:dislocation_9_Burgers_vector ;
+    diso:hasMathematicalRepresentation ex:line_9 ;
+    diso:movesOn ex:dislocation_9_slip_plane .
+
+ex:dislocation_9_Burgers_vector a diso:BurgersVector ;
+    cso:hasVectorComponent ex:dislocation_9_vector_components_Burgers_vector ;
+    cso:vectorMagnitude 2.489e-10 .
+
+ex:dislocation_9_slip_plane_origin a diso:Origin ;
+    cso:hasVectorComponent ex:dislocation_9_vector_components_origin .
+
+ex:dislocation_9_vector_components_Burgers_vector a cso:VectorComponentOfBasis ;
+    qudt:hasQuantityKind quantityKind:Length ;
+    qudt:quantityValue ex:quantity_value_M ;
+    cso:firstAxisComponent 0e+00 ;
+    cso:hasBasis ex:coordinate_basis ;
+    cso:secondAxisComponent 1.759989e-10 ;
+    cso:thirdAxisComponent -1.759989e-10 .
+
+ex:dislocation_9_vector_components_of_slip_plane_normal a cso:VectorComponentOfBasis ;
+    qudt:hasQuantityKind quantityKind:Dimensionless ;
+    qudt:quantityValue ex:quantity_value_unitless ;
+    cso:firstAxisComponent 5.773503e-01 ;
+    cso:hasBasis ex:coordinate_basis ;
+    cso:secondAxisComponent -5.773503e-01 ;
+    cso:thirdAxisComponent -5.773503e-01 .
+
+ex:dislocation_9_vector_components_origin a cso:VectorComponentOfBasis ;
+    cso:firstAxisComponent -5.326899e-08 ;
+    cso:hasBasis ex:coordinate_basis ;
+    cso:secondAxisComponent 5.326899e-08 ;
+    cso:thirdAxisComponent 5.326899e-08 .
+
+ex:dislocation_9_vector_components_slip_direction a cso:VectorComponentOfBasis ;
+    qudt:hasQuantityKind quantityKind:Dimensionless ;
+    qudt:quantityValue ex:quantity_value_unitless ;
+    cso:firstAxisComponent 0e+00 ;
+    cso:hasBasis ex:coordinate_basis ;
+    cso:secondAxisComponent 7.071068e-01 ;
+    cso:thirdAxisComponent -7.071068e-01 .
 
 ex:lattice_parameter_angle a cso:LatticeParameterAngle ;
     cso:latticeParameterAngleAlpha 9e+01 ;
@@ -963,419 +1365,31 @@ ex:lattice_parameter_length a cso:LatticeParameterLength ;
     cso:latticeParameterLengthC 3.505798e+00 .
 
 ex:line_0 a diso:Line ;
-    diso:hasNumericalRepresentation ex:loop_0_discretized_line .
+    diso:hasNumericalRepresentation ex:dislocation_0_discretized_line .
 
 ex:line_1 a diso:Line ;
-    diso:hasNumericalRepresentation ex:loop_1_discretized_line .
+    diso:hasNumericalRepresentation ex:dislocation_1_discretized_line .
 
 ex:line_2 a diso:Line ;
-    diso:hasNumericalRepresentation ex:loop_2_discretized_line .
+    diso:hasNumericalRepresentation ex:dislocation_2_discretized_line .
 
 ex:line_3 a diso:Line ;
-    diso:hasNumericalRepresentation ex:loop_3_discretized_line .
+    diso:hasNumericalRepresentation ex:dislocation_3_discretized_line .
 
 ex:line_4 a diso:Line ;
-    diso:hasNumericalRepresentation ex:loop_4_discretized_line .
+    diso:hasNumericalRepresentation ex:dislocation_4_discretized_line .
 
 ex:line_6 a diso:Line ;
-    diso:hasNumericalRepresentation ex:loop_6_discretized_line .
+    diso:hasNumericalRepresentation ex:dislocation_6_discretized_line .
 
 ex:line_7 a diso:Line ;
-    diso:hasNumericalRepresentation ex:loop_7_discretized_line .
+    diso:hasNumericalRepresentation ex:dislocation_7_discretized_line .
 
 ex:line_8 a diso:Line ;
-    diso:hasNumericalRepresentation ex:loop_8_discretized_line .
+    diso:hasNumericalRepresentation ex:dislocation_8_discretized_line .
 
 ex:line_9 a diso:Line ;
-    diso:hasNumericalRepresentation ex:loop_9_discretized_line .
-
-ex:loop_0 a diso:Dislocation ;
-    diso:hasBurgersVector ex:loop_0_Burgers_vector ;
-    diso:hasMathematicalRepresentation ex:line_0 ;
-    diso:movesOn ex:loop_0_slip_plane .
-
-ex:loop_0_Burgers_vector a diso:BurgersVector ;
-    cso:hasVectorComponent ex:loop_0_vector_components_Burgers_vector ;
-    cso:vectorMagnitude 2.489e-10 .
-
-ex:loop_0_slip_plane_origin a diso:Origin ;
-    cso:hasVectorComponent ex:loop_0_vector_components_origin .
-
-ex:loop_0_vector_components_Burgers_vector a cso:VectorComponentOfBasis ;
-    qudt:hasQuantityKind quantityKind:Length ;
-    qudt:quantityValue ex:quantity_value_M ;
-    cso:firstAxisComponent 1.759989e-10 ;
-    cso:hasBasis ex:coordinate_basis ;
-    cso:secondAxisComponent -1.759989e-10 ;
-    cso:thirdAxisComponent 0e+00 .
-
-ex:loop_0_vector_components_of_slip_plane_normal a cso:VectorComponentOfBasis ;
-    qudt:hasQuantityKind quantityKind:Dimensionless ;
-    qudt:quantityValue ex:quantity_value_unitless ;
-    cso:firstAxisComponent 5.773503e-01 ;
-    cso:hasBasis ex:coordinate_basis ;
-    cso:secondAxisComponent 5.773503e-01 ;
-    cso:thirdAxisComponent 5.773503e-01 .
-
-ex:loop_0_vector_components_origin a cso:VectorComponentOfBasis ;
-    cso:firstAxisComponent 4.927969e-08 ;
-    cso:hasBasis ex:coordinate_basis ;
-    cso:secondAxisComponent 4.927969e-08 ;
-    cso:thirdAxisComponent 4.927969e-08 .
-
-ex:loop_0_vector_components_slip_direction a cso:VectorComponentOfBasis ;
-    qudt:hasQuantityKind quantityKind:Dimensionless ;
-    qudt:quantityValue ex:quantity_value_unitless ;
-    cso:firstAxisComponent 7.071068e-01 ;
-    cso:hasBasis ex:coordinate_basis ;
-    cso:secondAxisComponent -7.071068e-01 ;
-    cso:thirdAxisComponent 0e+00 .
-
-ex:loop_1 a diso:Dislocation ;
-    diso:hasBurgersVector ex:loop_1_Burgers_vector ;
-    diso:hasMathematicalRepresentation ex:line_1 ;
-    diso:movesOn ex:loop_1_slip_plane .
-
-ex:loop_1_Burgers_vector a diso:BurgersVector ;
-    cso:hasVectorComponent ex:loop_1_vector_components_Burgers_vector ;
-    cso:vectorMagnitude 2.489e-10 .
-
-ex:loop_1_slip_plane_origin a diso:Origin ;
-    cso:hasVectorComponent ex:loop_1_vector_components_origin .
-
-ex:loop_1_vector_components_Burgers_vector a cso:VectorComponentOfBasis ;
-    qudt:hasQuantityKind quantityKind:Length ;
-    qudt:quantityValue ex:quantity_value_M ;
-    cso:firstAxisComponent -1.759989e-10 ;
-    cso:hasBasis ex:coordinate_basis ;
-    cso:secondAxisComponent 0e+00 ;
-    cso:thirdAxisComponent -1.759989e-10 .
-
-ex:loop_1_vector_components_of_slip_plane_normal a cso:VectorComponentOfBasis ;
-    qudt:hasQuantityKind quantityKind:Dimensionless ;
-    qudt:quantityValue ex:quantity_value_unitless ;
-    cso:firstAxisComponent -5.773503e-01 ;
-    cso:hasBasis ex:coordinate_basis ;
-    cso:secondAxisComponent -5.773503e-01 ;
-    cso:thirdAxisComponent 5.773503e-01 .
-
-ex:loop_1_vector_components_origin a cso:VectorComponentOfBasis ;
-    cso:firstAxisComponent 1.889055e-08 ;
-    cso:hasBasis ex:coordinate_basis ;
-    cso:secondAxisComponent 1.889055e-08 ;
-    cso:thirdAxisComponent -1.889055e-08 .
-
-ex:loop_1_vector_components_slip_direction a cso:VectorComponentOfBasis ;
-    qudt:hasQuantityKind quantityKind:Dimensionless ;
-    qudt:quantityValue ex:quantity_value_unitless ;
-    cso:firstAxisComponent -7.071068e-01 ;
-    cso:hasBasis ex:coordinate_basis ;
-    cso:secondAxisComponent 0e+00 ;
-    cso:thirdAxisComponent -7.071068e-01 .
-
-ex:loop_2 a diso:Dislocation ;
-    diso:hasBurgersVector ex:loop_2_Burgers_vector ;
-    diso:hasMathematicalRepresentation ex:line_2 ;
-    diso:movesOn ex:loop_2_slip_plane .
-
-ex:loop_2_Burgers_vector a diso:BurgersVector ;
-    cso:hasVectorComponent ex:loop_2_vector_components_Burgers_vector ;
-    cso:vectorMagnitude 2.489e-10 .
-
-ex:loop_2_slip_direction a diso:SlipDirection ;
-    cso:hasVectorComponent ex:loop_2_vector_components_slip_direction ;
-    cso:vectorMagnitude 1e+00 ;
-    diso:directionMillerIndice "[-10-1]"^^xsd:string ;
-    diso:familyDirectionMillerIndice "<110>"^^xsd:string .
-
-ex:loop_2_slip_plane_normal a diso:SlipPlaneNormal ;
-    cso:hasVectorComponent ex:loop_2_vector_components_of_slip_plane_normal ;
-    diso:directionMillerIndice "[-1-11]"^^xsd:string .
-
-ex:loop_2_slip_plane_origin a diso:Origin ;
-    cso:hasVectorComponent ex:loop_2_vector_components_origin .
-
-ex:loop_2_vector_components_Burgers_vector a cso:VectorComponentOfBasis ;
-    qudt:hasQuantityKind quantityKind:Length ;
-    qudt:quantityValue ex:quantity_value_M ;
-    cso:firstAxisComponent -1.759989e-10 ;
-    cso:hasBasis ex:coordinate_basis ;
-    cso:secondAxisComponent 0e+00 ;
-    cso:thirdAxisComponent -1.759989e-10 .
-
-ex:loop_2_vector_components_of_slip_plane_normal a cso:VectorComponentOfBasis ;
-    qudt:hasQuantityKind quantityKind:Dimensionless ;
-    qudt:quantityValue ex:quantity_value_unitless ;
-    cso:firstAxisComponent -5.773503e-01 ;
-    cso:hasBasis ex:coordinate_basis ;
-    cso:secondAxisComponent -5.773503e-01 ;
-    cso:thirdAxisComponent 5.773503e-01 .
-
-ex:loop_2_vector_components_origin a cso:VectorComponentOfBasis ;
-    cso:firstAxisComponent -3.954108e-08 ;
-    cso:hasBasis ex:coordinate_basis ;
-    cso:secondAxisComponent -3.954108e-08 ;
-    cso:thirdAxisComponent 3.954108e-08 .
-
-ex:loop_2_vector_components_slip_direction a cso:VectorComponentOfBasis ;
-    qudt:hasQuantityKind quantityKind:Dimensionless ;
-    qudt:quantityValue ex:quantity_value_unitless ;
-    cso:firstAxisComponent -7.071068e-01 ;
-    cso:hasBasis ex:coordinate_basis ;
-    cso:secondAxisComponent 0e+00 ;
-    cso:thirdAxisComponent -7.071068e-01 .
-
-ex:loop_3 a diso:Dislocation ;
-    diso:hasBurgersVector ex:loop_3_Burgers_vector ;
-    diso:hasMathematicalRepresentation ex:line_3 ;
-    diso:movesOn ex:loop_3_slip_plane .
-
-ex:loop_3_Burgers_vector a diso:BurgersVector ;
-    cso:hasVectorComponent ex:loop_3_vector_components_Burgers_vector ;
-    cso:vectorMagnitude 2.489e-10 .
-
-ex:loop_3_slip_plane_origin a diso:Origin ;
-    cso:hasVectorComponent ex:loop_3_vector_components_origin .
-
-ex:loop_3_vector_components_Burgers_vector a cso:VectorComponentOfBasis ;
-    qudt:hasQuantityKind quantityKind:Length ;
-    qudt:quantityValue ex:quantity_value_M ;
-    cso:firstAxisComponent -1.759989e-10 ;
-    cso:hasBasis ex:coordinate_basis ;
-    cso:secondAxisComponent 0e+00 ;
-    cso:thirdAxisComponent 1.759989e-10 .
-
-ex:loop_3_vector_components_of_slip_plane_normal a cso:VectorComponentOfBasis ;
-    qudt:hasQuantityKind quantityKind:Dimensionless ;
-    qudt:quantityValue ex:quantity_value_unitless ;
-    cso:firstAxisComponent -5.773503e-01 ;
-    cso:hasBasis ex:coordinate_basis ;
-    cso:secondAxisComponent 5.773503e-01 ;
-    cso:thirdAxisComponent -5.773503e-01 .
-
-ex:loop_3_vector_components_origin a cso:VectorComponentOfBasis ;
-    cso:firstAxisComponent -3.144513e-08 ;
-    cso:hasBasis ex:coordinate_basis ;
-    cso:secondAxisComponent 3.144513e-08 ;
-    cso:thirdAxisComponent -3.144513e-08 .
-
-ex:loop_3_vector_components_slip_direction a cso:VectorComponentOfBasis ;
-    qudt:hasQuantityKind quantityKind:Dimensionless ;
-    qudt:quantityValue ex:quantity_value_unitless ;
-    cso:firstAxisComponent -7.071068e-01 ;
-    cso:hasBasis ex:coordinate_basis ;
-    cso:secondAxisComponent 0e+00 ;
-    cso:thirdAxisComponent 7.071068e-01 .
-
-ex:loop_4 a diso:Dislocation ;
-    diso:hasBurgersVector ex:loop_4_Burgers_vector ;
-    diso:hasMathematicalRepresentation ex:line_4 ;
-    diso:movesOn ex:loop_4_slip_plane .
-
-ex:loop_4_Burgers_vector a diso:BurgersVector ;
-    cso:hasVectorComponent ex:loop_4_vector_components_Burgers_vector ;
-    cso:vectorMagnitude 2.489e-10 .
-
-ex:loop_4_slip_plane_origin a diso:Origin ;
-    cso:hasVectorComponent ex:loop_4_vector_components_origin .
-
-ex:loop_4_vector_components_Burgers_vector a cso:VectorComponentOfBasis ;
-    qudt:hasQuantityKind quantityKind:Length ;
-    qudt:quantityValue ex:quantity_value_M ;
-    cso:firstAxisComponent 0e+00 ;
-    cso:hasBasis ex:coordinate_basis ;
-    cso:secondAxisComponent 1.759989e-10 ;
-    cso:thirdAxisComponent 1.759989e-10 .
-
-ex:loop_4_vector_components_of_slip_plane_normal a cso:VectorComponentOfBasis ;
-    qudt:hasQuantityKind quantityKind:Dimensionless ;
-    qudt:quantityValue ex:quantity_value_unitless ;
-    cso:firstAxisComponent -5.773503e-01 ;
-    cso:hasBasis ex:coordinate_basis ;
-    cso:secondAxisComponent 5.773503e-01 ;
-    cso:thirdAxisComponent -5.773503e-01 .
-
-ex:loop_4_vector_components_origin a cso:VectorComponentOfBasis ;
-    cso:firstAxisComponent 1.877321e-08 ;
-    cso:hasBasis ex:coordinate_basis ;
-    cso:secondAxisComponent -1.877321e-08 ;
-    cso:thirdAxisComponent 1.877321e-08 .
-
-ex:loop_4_vector_components_slip_direction a cso:VectorComponentOfBasis ;
-    qudt:hasQuantityKind quantityKind:Dimensionless ;
-    qudt:quantityValue ex:quantity_value_unitless ;
-    cso:firstAxisComponent 0e+00 ;
-    cso:hasBasis ex:coordinate_basis ;
-    cso:secondAxisComponent 7.071068e-01 ;
-    cso:thirdAxisComponent 7.071068e-01 .
-
-ex:loop_6 a diso:Dislocation ;
-    diso:hasBurgersVector ex:loop_6_Burgers_vector ;
-    diso:hasMathematicalRepresentation ex:line_6 ;
-    diso:movesOn ex:loop_6_slip_plane .
-
-ex:loop_6_Burgers_vector a diso:BurgersVector ;
-    cso:hasVectorComponent ex:loop_6_vector_components_Burgers_vector ;
-    cso:vectorMagnitude 2.489e-10 .
-
-ex:loop_6_slip_plane_origin a diso:Origin ;
-    cso:hasVectorComponent ex:loop_6_vector_components_origin .
-
-ex:loop_6_vector_components_Burgers_vector a cso:VectorComponentOfBasis ;
-    qudt:hasQuantityKind quantityKind:Length ;
-    qudt:quantityValue ex:quantity_value_M ;
-    cso:firstAxisComponent 0e+00 ;
-    cso:hasBasis ex:coordinate_basis ;
-    cso:secondAxisComponent -1.759989e-10 ;
-    cso:thirdAxisComponent -1.759989e-10 .
-
-ex:loop_6_vector_components_of_slip_plane_normal a cso:VectorComponentOfBasis ;
-    qudt:hasQuantityKind quantityKind:Dimensionless ;
-    qudt:quantityValue ex:quantity_value_unitless ;
-    cso:firstAxisComponent -5.773503e-01 ;
-    cso:hasBasis ex:coordinate_basis ;
-    cso:secondAxisComponent -5.773503e-01 ;
-    cso:thirdAxisComponent 5.773503e-01 .
-
-ex:loop_6_vector_components_origin a cso:VectorComponentOfBasis ;
-    cso:firstAxisComponent 7.732217e-08 ;
-    cso:hasBasis ex:coordinate_basis ;
-    cso:secondAxisComponent 7.732217e-08 ;
-    cso:thirdAxisComponent -7.732217e-08 .
-
-ex:loop_6_vector_components_slip_direction a cso:VectorComponentOfBasis ;
-    qudt:hasQuantityKind quantityKind:Dimensionless ;
-    qudt:quantityValue ex:quantity_value_unitless ;
-    cso:firstAxisComponent 0e+00 ;
-    cso:hasBasis ex:coordinate_basis ;
-    cso:secondAxisComponent -7.071068e-01 ;
-    cso:thirdAxisComponent -7.071068e-01 .
-
-ex:loop_7 a diso:Dislocation ;
-    diso:hasBurgersVector ex:loop_7_Burgers_vector ;
-    diso:hasMathematicalRepresentation ex:line_7 ;
-    diso:movesOn ex:loop_7_slip_plane .
-
-ex:loop_7_Burgers_vector a diso:BurgersVector ;
-    cso:hasVectorComponent ex:loop_7_vector_components_Burgers_vector ;
-    cso:vectorMagnitude 2.489e-10 .
-
-ex:loop_7_slip_plane_origin a diso:Origin ;
-    cso:hasVectorComponent ex:loop_7_vector_components_origin .
-
-ex:loop_7_vector_components_Burgers_vector a cso:VectorComponentOfBasis ;
-    qudt:hasQuantityKind quantityKind:Length ;
-    qudt:quantityValue ex:quantity_value_M ;
-    cso:firstAxisComponent 1.759989e-10 ;
-    cso:hasBasis ex:coordinate_basis ;
-    cso:secondAxisComponent 1.759989e-10 ;
-    cso:thirdAxisComponent 0e+00 .
-
-ex:loop_7_vector_components_of_slip_plane_normal a cso:VectorComponentOfBasis ;
-    qudt:hasQuantityKind quantityKind:Dimensionless ;
-    qudt:quantityValue ex:quantity_value_unitless ;
-    cso:firstAxisComponent -5.773503e-01 ;
-    cso:hasBasis ex:coordinate_basis ;
-    cso:secondAxisComponent 5.773503e-01 ;
-    cso:thirdAxisComponent -5.773503e-01 .
-
-ex:loop_7_vector_components_origin a cso:VectorComponentOfBasis ;
-    cso:firstAxisComponent 7.743951e-09 ;
-    cso:hasBasis ex:coordinate_basis ;
-    cso:secondAxisComponent -7.743951e-09 ;
-    cso:thirdAxisComponent 7.743951e-09 .
-
-ex:loop_7_vector_components_slip_direction a cso:VectorComponentOfBasis ;
-    qudt:hasQuantityKind quantityKind:Dimensionless ;
-    qudt:quantityValue ex:quantity_value_unitless ;
-    cso:firstAxisComponent 7.071068e-01 ;
-    cso:hasBasis ex:coordinate_basis ;
-    cso:secondAxisComponent 7.071068e-01 ;
-    cso:thirdAxisComponent 0e+00 .
-
-ex:loop_8 a diso:Dislocation ;
-    diso:hasBurgersVector ex:loop_8_Burgers_vector ;
-    diso:hasMathematicalRepresentation ex:line_8 ;
-    diso:movesOn ex:loop_8_slip_plane .
-
-ex:loop_8_Burgers_vector a diso:BurgersVector ;
-    cso:hasVectorComponent ex:loop_8_vector_components_Burgers_vector ;
-    cso:vectorMagnitude 2.489e-10 .
-
-ex:loop_8_slip_plane_origin a diso:Origin ;
-    cso:hasVectorComponent ex:loop_8_vector_components_origin .
-
-ex:loop_8_vector_components_Burgers_vector a cso:VectorComponentOfBasis ;
-    qudt:hasQuantityKind quantityKind:Length ;
-    qudt:quantityValue ex:quantity_value_M ;
-    cso:firstAxisComponent -1.759989e-10 ;
-    cso:hasBasis ex:coordinate_basis ;
-    cso:secondAxisComponent 0e+00 ;
-    cso:thirdAxisComponent -1.759989e-10 .
-
-ex:loop_8_vector_components_of_slip_plane_normal a cso:VectorComponentOfBasis ;
-    qudt:hasQuantityKind quantityKind:Dimensionless ;
-    qudt:quantityValue ex:quantity_value_unitless ;
-    cso:firstAxisComponent -5.773503e-01 ;
-    cso:hasBasis ex:coordinate_basis ;
-    cso:secondAxisComponent 5.773503e-01 ;
-    cso:thirdAxisComponent 5.773503e-01 .
-
-ex:loop_8_vector_components_origin a cso:VectorComponentOfBasis ;
-    cso:firstAxisComponent -5.326899e-08 ;
-    cso:hasBasis ex:coordinate_basis ;
-    cso:secondAxisComponent 5.326899e-08 ;
-    cso:thirdAxisComponent 5.326899e-08 .
-
-ex:loop_8_vector_components_slip_direction a cso:VectorComponentOfBasis ;
-    qudt:hasQuantityKind quantityKind:Dimensionless ;
-    qudt:quantityValue ex:quantity_value_unitless ;
-    cso:firstAxisComponent -7.071068e-01 ;
-    cso:hasBasis ex:coordinate_basis ;
-    cso:secondAxisComponent 0e+00 ;
-    cso:thirdAxisComponent -7.071068e-01 .
-
-ex:loop_9 a diso:Dislocation ;
-    diso:hasBurgersVector ex:loop_9_Burgers_vector ;
-    diso:hasMathematicalRepresentation ex:line_9 ;
-    diso:movesOn ex:loop_9_slip_plane .
-
-ex:loop_9_Burgers_vector a diso:BurgersVector ;
-    cso:hasVectorComponent ex:loop_9_vector_components_Burgers_vector ;
-    cso:vectorMagnitude 2.489e-10 .
-
-ex:loop_9_slip_plane_origin a diso:Origin ;
-    cso:hasVectorComponent ex:loop_9_vector_components_origin .
-
-ex:loop_9_vector_components_Burgers_vector a cso:VectorComponentOfBasis ;
-    qudt:hasQuantityKind quantityKind:Length ;
-    qudt:quantityValue ex:quantity_value_M ;
-    cso:firstAxisComponent 0e+00 ;
-    cso:hasBasis ex:coordinate_basis ;
-    cso:secondAxisComponent 1.759989e-10 ;
-    cso:thirdAxisComponent -1.759989e-10 .
-
-ex:loop_9_vector_components_of_slip_plane_normal a cso:VectorComponentOfBasis ;
-    qudt:hasQuantityKind quantityKind:Dimensionless ;
-    qudt:quantityValue ex:quantity_value_unitless ;
-    cso:firstAxisComponent 5.773503e-01 ;
-    cso:hasBasis ex:coordinate_basis ;
-    cso:secondAxisComponent -5.773503e-01 ;
-    cso:thirdAxisComponent -5.773503e-01 .
-
-ex:loop_9_vector_components_origin a cso:VectorComponentOfBasis ;
-    cso:firstAxisComponent -5.326899e-08 ;
-    cso:hasBasis ex:coordinate_basis ;
-    cso:secondAxisComponent 5.326899e-08 ;
-    cso:thirdAxisComponent 5.326899e-08 .
-
-ex:loop_9_vector_components_slip_direction a cso:VectorComponentOfBasis ;
-    qudt:hasQuantityKind quantityKind:Dimensionless ;
-    qudt:quantityValue ex:quantity_value_unitless ;
-    cso:firstAxisComponent 0e+00 ;
-    cso:hasBasis ex:coordinate_basis ;
-    cso:secondAxisComponent 7.071068e-01 ;
-    cso:thirdAxisComponent -7.071068e-01 .
+    diso:hasNumericalRepresentation ex:dislocation_9_discretized_line .
 
 ex:node_0_coordinate a cso:VectorComponentOfBasis ;
     qudt:hasQuantityKind quantityKind:Length ;
@@ -3119,147 +3133,147 @@ ex:unit_cell a cso:UnitCell ;
 
 ex:crystal_system a cso:Cubic .
 
-ex:loop_0_slip_direction a diso:SlipDirection ;
-    cso:hasVectorComponent ex:loop_0_vector_components_slip_direction ;
+ex:dislocation_0_slip_direction a diso:SlipDirection ;
+    cso:hasVectorComponent ex:dislocation_0_vector_components_slip_direction ;
     cso:vectorMagnitude 1e+00 ;
     diso:directionMillerIndice "[1-10]"^^xsd:string ;
     diso:familyDirectionMillerIndice "<110>"^^xsd:string .
 
-ex:loop_0_slip_plane a diso:SlipPlane ;
+ex:dislocation_0_slip_plane a diso:SlipPlane ;
     diso:familyPlaneMillerIndice "{111}"^^xsd:string ;
-    diso:hasOrigin ex:loop_0_slip_plane_origin ;
-    diso:hasSlipDirection ex:loop_0_slip_direction ;
-    diso:hasSlipPlaneNormal ex:loop_0_slip_plane_normal ;
+    diso:hasOrigin ex:dislocation_0_slip_plane_origin ;
+    diso:hasSlipDirection ex:dislocation_0_slip_direction ;
+    diso:hasSlipPlaneNormal ex:dislocation_0_slip_plane_normal ;
     diso:planeMillerIndice "(111)"^^xsd:string .
 
-ex:loop_0_slip_plane_normal a diso:SlipPlaneNormal ;
-    cso:hasVectorComponent ex:loop_0_vector_components_of_slip_plane_normal ;
+ex:dislocation_0_slip_plane_normal a diso:SlipPlaneNormal ;
+    cso:hasVectorComponent ex:dislocation_0_vector_components_of_slip_plane_normal ;
     diso:directionMillerIndice "[111]"^^xsd:string .
 
-ex:loop_1_slip_direction a diso:SlipDirection ;
-    cso:hasVectorComponent ex:loop_1_vector_components_slip_direction ;
+ex:dislocation_1_slip_direction a diso:SlipDirection ;
+    cso:hasVectorComponent ex:dislocation_1_vector_components_slip_direction ;
     cso:vectorMagnitude 1e+00 ;
     diso:directionMillerIndice "[-10-1]"^^xsd:string ;
     diso:familyDirectionMillerIndice "<110>"^^xsd:string .
 
-ex:loop_1_slip_plane a diso:SlipPlane ;
+ex:dislocation_1_slip_plane a diso:SlipPlane ;
     diso:familyPlaneMillerIndice "{111}"^^xsd:string ;
-    diso:hasOrigin ex:loop_1_slip_plane_origin ;
-    diso:hasSlipDirection ex:loop_1_slip_direction ;
-    diso:hasSlipPlaneNormal ex:loop_1_slip_plane_normal ;
+    diso:hasOrigin ex:dislocation_1_slip_plane_origin ;
+    diso:hasSlipDirection ex:dislocation_1_slip_direction ;
+    diso:hasSlipPlaneNormal ex:dislocation_1_slip_plane_normal ;
     diso:planeMillerIndice "(-1-11)"^^xsd:string .
 
-ex:loop_1_slip_plane_normal a diso:SlipPlaneNormal ;
-    cso:hasVectorComponent ex:loop_1_vector_components_of_slip_plane_normal ;
+ex:dislocation_1_slip_plane_normal a diso:SlipPlaneNormal ;
+    cso:hasVectorComponent ex:dislocation_1_vector_components_of_slip_plane_normal ;
     diso:directionMillerIndice "[-1-11]"^^xsd:string .
 
-ex:loop_2_slip_plane a diso:SlipPlane ;
+ex:dislocation_2_slip_plane a diso:SlipPlane ;
     diso:familyPlaneMillerIndice "{111}"^^xsd:string ;
-    diso:hasOrigin ex:loop_2_slip_plane_origin ;
-    diso:hasSlipDirection ex:loop_2_slip_direction ;
-    diso:hasSlipPlaneNormal ex:loop_2_slip_plane_normal ;
+    diso:hasOrigin ex:dislocation_2_slip_plane_origin ;
+    diso:hasSlipDirection ex:dislocation_2_slip_direction ;
+    diso:hasSlipPlaneNormal ex:dislocation_2_slip_plane_normal ;
     diso:planeMillerIndice "(-1-11)"^^xsd:string .
 
-ex:loop_3_slip_direction a diso:SlipDirection ;
-    cso:hasVectorComponent ex:loop_3_vector_components_slip_direction ;
+ex:dislocation_3_slip_direction a diso:SlipDirection ;
+    cso:hasVectorComponent ex:dislocation_3_vector_components_slip_direction ;
     cso:vectorMagnitude 1e+00 ;
     diso:directionMillerIndice "[-101]"^^xsd:string ;
     diso:familyDirectionMillerIndice "<110>"^^xsd:string .
 
-ex:loop_3_slip_plane a diso:SlipPlane ;
+ex:dislocation_3_slip_plane a diso:SlipPlane ;
     diso:familyPlaneMillerIndice "{111}"^^xsd:string ;
-    diso:hasOrigin ex:loop_3_slip_plane_origin ;
-    diso:hasSlipDirection ex:loop_3_slip_direction ;
-    diso:hasSlipPlaneNormal ex:loop_3_slip_plane_normal ;
+    diso:hasOrigin ex:dislocation_3_slip_plane_origin ;
+    diso:hasSlipDirection ex:dislocation_3_slip_direction ;
+    diso:hasSlipPlaneNormal ex:dislocation_3_slip_plane_normal ;
     diso:planeMillerIndice "(-11-1)"^^xsd:string .
 
-ex:loop_3_slip_plane_normal a diso:SlipPlaneNormal ;
-    cso:hasVectorComponent ex:loop_3_vector_components_of_slip_plane_normal ;
+ex:dislocation_3_slip_plane_normal a diso:SlipPlaneNormal ;
+    cso:hasVectorComponent ex:dislocation_3_vector_components_of_slip_plane_normal ;
     diso:directionMillerIndice "[-11-1]"^^xsd:string .
 
-ex:loop_4_slip_direction a diso:SlipDirection ;
-    cso:hasVectorComponent ex:loop_4_vector_components_slip_direction ;
+ex:dislocation_4_slip_direction a diso:SlipDirection ;
+    cso:hasVectorComponent ex:dislocation_4_vector_components_slip_direction ;
     cso:vectorMagnitude 1e+00 ;
     diso:directionMillerIndice "[011]"^^xsd:string ;
     diso:familyDirectionMillerIndice "<110>"^^xsd:string .
 
-ex:loop_4_slip_plane a diso:SlipPlane ;
+ex:dislocation_4_slip_plane a diso:SlipPlane ;
     diso:familyPlaneMillerIndice "{111}"^^xsd:string ;
-    diso:hasOrigin ex:loop_4_slip_plane_origin ;
-    diso:hasSlipDirection ex:loop_4_slip_direction ;
-    diso:hasSlipPlaneNormal ex:loop_4_slip_plane_normal ;
+    diso:hasOrigin ex:dislocation_4_slip_plane_origin ;
+    diso:hasSlipDirection ex:dislocation_4_slip_direction ;
+    diso:hasSlipPlaneNormal ex:dislocation_4_slip_plane_normal ;
     diso:planeMillerIndice "(-11-1)"^^xsd:string .
 
-ex:loop_4_slip_plane_normal a diso:SlipPlaneNormal ;
-    cso:hasVectorComponent ex:loop_4_vector_components_of_slip_plane_normal ;
+ex:dislocation_4_slip_plane_normal a diso:SlipPlaneNormal ;
+    cso:hasVectorComponent ex:dislocation_4_vector_components_of_slip_plane_normal ;
     diso:directionMillerIndice "[-11-1]"^^xsd:string .
 
-ex:loop_6_slip_direction a diso:SlipDirection ;
-    cso:hasVectorComponent ex:loop_6_vector_components_slip_direction ;
+ex:dislocation_6_slip_direction a diso:SlipDirection ;
+    cso:hasVectorComponent ex:dislocation_6_vector_components_slip_direction ;
     cso:vectorMagnitude 1e+00 ;
     diso:directionMillerIndice "[0-1-1]"^^xsd:string ;
     diso:familyDirectionMillerIndice "<110>"^^xsd:string .
 
-ex:loop_6_slip_plane a diso:SlipPlane ;
+ex:dislocation_6_slip_plane a diso:SlipPlane ;
     diso:familyPlaneMillerIndice "{111}"^^xsd:string ;
-    diso:hasOrigin ex:loop_6_slip_plane_origin ;
-    diso:hasSlipDirection ex:loop_6_slip_direction ;
-    diso:hasSlipPlaneNormal ex:loop_6_slip_plane_normal ;
+    diso:hasOrigin ex:dislocation_6_slip_plane_origin ;
+    diso:hasSlipDirection ex:dislocation_6_slip_direction ;
+    diso:hasSlipPlaneNormal ex:dislocation_6_slip_plane_normal ;
     diso:planeMillerIndice "(-1-11)"^^xsd:string .
 
-ex:loop_6_slip_plane_normal a diso:SlipPlaneNormal ;
-    cso:hasVectorComponent ex:loop_6_vector_components_of_slip_plane_normal ;
+ex:dislocation_6_slip_plane_normal a diso:SlipPlaneNormal ;
+    cso:hasVectorComponent ex:dislocation_6_vector_components_of_slip_plane_normal ;
     diso:directionMillerIndice "[-1-11]"^^xsd:string .
 
-ex:loop_7_slip_direction a diso:SlipDirection ;
-    cso:hasVectorComponent ex:loop_7_vector_components_slip_direction ;
+ex:dislocation_7_slip_direction a diso:SlipDirection ;
+    cso:hasVectorComponent ex:dislocation_7_vector_components_slip_direction ;
     cso:vectorMagnitude 1e+00 ;
     diso:directionMillerIndice "[110]"^^xsd:string ;
     diso:familyDirectionMillerIndice "<110>"^^xsd:string .
 
-ex:loop_7_slip_plane a diso:SlipPlane ;
+ex:dislocation_7_slip_plane a diso:SlipPlane ;
     diso:familyPlaneMillerIndice "{111}"^^xsd:string ;
-    diso:hasOrigin ex:loop_7_slip_plane_origin ;
-    diso:hasSlipDirection ex:loop_7_slip_direction ;
-    diso:hasSlipPlaneNormal ex:loop_7_slip_plane_normal ;
+    diso:hasOrigin ex:dislocation_7_slip_plane_origin ;
+    diso:hasSlipDirection ex:dislocation_7_slip_direction ;
+    diso:hasSlipPlaneNormal ex:dislocation_7_slip_plane_normal ;
     diso:planeMillerIndice "(-11-1)"^^xsd:string .
 
-ex:loop_7_slip_plane_normal a diso:SlipPlaneNormal ;
-    cso:hasVectorComponent ex:loop_7_vector_components_of_slip_plane_normal ;
+ex:dislocation_7_slip_plane_normal a diso:SlipPlaneNormal ;
+    cso:hasVectorComponent ex:dislocation_7_vector_components_of_slip_plane_normal ;
     diso:directionMillerIndice "[-11-1]"^^xsd:string .
 
-ex:loop_8_slip_direction a diso:SlipDirection ;
-    cso:hasVectorComponent ex:loop_8_vector_components_slip_direction ;
+ex:dislocation_8_slip_direction a diso:SlipDirection ;
+    cso:hasVectorComponent ex:dislocation_8_vector_components_slip_direction ;
     cso:vectorMagnitude 1e+00 ;
     diso:directionMillerIndice "[-10-1]"^^xsd:string ;
     diso:familyDirectionMillerIndice "<110>"^^xsd:string .
 
-ex:loop_8_slip_plane a diso:SlipPlane ;
+ex:dislocation_8_slip_plane a diso:SlipPlane ;
     diso:familyPlaneMillerIndice "{111}"^^xsd:string ;
-    diso:hasOrigin ex:loop_8_slip_plane_origin ;
-    diso:hasSlipDirection ex:loop_8_slip_direction ;
-    diso:hasSlipPlaneNormal ex:loop_8_slip_plane_normal ;
+    diso:hasOrigin ex:dislocation_8_slip_plane_origin ;
+    diso:hasSlipDirection ex:dislocation_8_slip_direction ;
+    diso:hasSlipPlaneNormal ex:dislocation_8_slip_plane_normal ;
     diso:planeMillerIndice "(-111)"^^xsd:string .
 
-ex:loop_8_slip_plane_normal a diso:SlipPlaneNormal ;
-    cso:hasVectorComponent ex:loop_8_vector_components_of_slip_plane_normal ;
+ex:dislocation_8_slip_plane_normal a diso:SlipPlaneNormal ;
+    cso:hasVectorComponent ex:dislocation_8_vector_components_of_slip_plane_normal ;
     diso:directionMillerIndice "[-111]"^^xsd:string .
 
-ex:loop_9_slip_direction a diso:SlipDirection ;
-    cso:hasVectorComponent ex:loop_9_vector_components_slip_direction ;
+ex:dislocation_9_slip_direction a diso:SlipDirection ;
+    cso:hasVectorComponent ex:dislocation_9_vector_components_slip_direction ;
     cso:vectorMagnitude 1e+00 ;
     diso:directionMillerIndice "[01-1]"^^xsd:string ;
     diso:familyDirectionMillerIndice "<110>"^^xsd:string .
 
-ex:loop_9_slip_plane a diso:SlipPlane ;
+ex:dislocation_9_slip_plane a diso:SlipPlane ;
     diso:familyPlaneMillerIndice "{111}"^^xsd:string ;
-    diso:hasOrigin ex:loop_9_slip_plane_origin ;
-    diso:hasSlipDirection ex:loop_9_slip_direction ;
-    diso:hasSlipPlaneNormal ex:loop_9_slip_plane_normal ;
+    diso:hasOrigin ex:dislocation_9_slip_plane_origin ;
+    diso:hasSlipDirection ex:dislocation_9_slip_direction ;
+    diso:hasSlipPlaneNormal ex:dislocation_9_slip_plane_normal ;
     diso:planeMillerIndice "(1-1-1)"^^xsd:string .
 
-ex:loop_9_slip_plane_normal a diso:SlipPlaneNormal ;
-    cso:hasVectorComponent ex:loop_9_vector_components_of_slip_plane_normal ;
+ex:dislocation_9_slip_plane_normal a diso:SlipPlaneNormal ;
+    cso:hasVectorComponent ex:dislocation_9_vector_components_of_slip_plane_normal ;
     diso:directionMillerIndice "[1-1-1]"^^xsd:string .
 
 ex:node_0 a diso:Node ;
@@ -3730,16 +3744,16 @@ cdo:CrystallineMaterial a owl:Class ;
     rdfs:comment "Crystalline material is material characterized by a periodic arrangement of the constituent atoms. The arrangement could be described its crystal structure."@en ;
     rdfs:subClassOf [ a owl:Class ;
             owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty cdo:hasCrystallographicDefect ;
-                        owl:someValuesFrom cdo:CrystallographicDefect ] [ a owl:Restriction ;
-                        owl:allValuesFrom cdo:CrystallographicDefect ;
-                        owl:onProperty cdo:hasCrystallographicDefect ] ) ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
                         owl:onProperty cdo:hasCrystalStructure ;
                         owl:someValuesFrom cso:CrystalStructure ] [ a owl:Restriction ;
                         owl:allValuesFrom cso:CrystalStructure ;
                         owl:onProperty cdo:hasCrystalStructure ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty cdo:hasCrystallographicDefect ;
+                        owl:someValuesFrom cdo:CrystallographicDefect ] [ a owl:Restriction ;
+                        owl:allValuesFrom cdo:CrystallographicDefect ;
+                        owl:onProperty cdo:hasCrystallographicDefect ] ) ],
         <http://emmo.info/emmo/middle/physicalistic#EMMO_4207e895_8b83_4318_996a_72cfb32acd94> .
 
 ex:node_15 a diso:Node ;
@@ -3756,7 +3770,7 @@ ex:node_96 a diso:Node ;
 
 cso:CrystalStructure a owl:Class .
 
-ex:loop_8_discretized_line a diso:DiscretizedLine ;
+ex:dislocation_8_discretized_line a diso:DiscretizedLine ;
     diso:slipArea 2.313398e+03 .
 
 ex:node_122 a diso:Node ;
@@ -3769,34 +3783,31 @@ cdo:CrystallographicDefect a owl:Class ;
     rdfs:label "Crystallographic Defect"@en ;
     rdfs:comment "Lattice irregularity having one or more of its dimensions on the order of an atomic diameter."@en .
 
-diso:Dislocation a owl:Class ;
-    rdfs:subClassOf cdo:CrystallographicDefect .
-
-ex:loop_6_discretized_line a diso:DiscretizedLine ;
+ex:dislocation_6_discretized_line a diso:DiscretizedLine ;
     diso:slipArea 2.517926e+05 .
 
-ex:loop_9_discretized_line a diso:DiscretizedLine ;
+ex:dislocation_9_discretized_line a diso:DiscretizedLine ;
     diso:slipArea 1.817344e+06 .
 
 ex:quantity_value_unitless a qudt:QuantityValue ;
     qudt:unit unit:UNITLESS .
 
-ex:loop_1_discretized_line a diso:DiscretizedLine ;
+ex:dislocation_1_discretized_line a diso:DiscretizedLine ;
     diso:slipArea 8.653104e+05 .
 
-ex:loop_0_discretized_line a diso:DiscretizedLine ;
+ex:dislocation_0_discretized_line a diso:DiscretizedLine ;
     diso:slipArea 4.569865e+05 .
 
-ex:loop_2_discretized_line a diso:DiscretizedLine ;
+ex:dislocation_2_discretized_line a diso:DiscretizedLine ;
     diso:slipArea 2.13002e+06 .
 
-ex:loop_3_discretized_line a diso:DiscretizedLine ;
+ex:dislocation_3_discretized_line a diso:DiscretizedLine ;
     diso:slipArea 2.339134e+06 .
 
-ex:loop_4_discretized_line a diso:DiscretizedLine ;
+ex:dislocation_4_discretized_line a diso:DiscretizedLine ;
     diso:slipArea 8.401768e+05 .
 
-ex:loop_7_discretized_line a diso:DiscretizedLine ;
+ex:dislocation_7_discretized_line a diso:DiscretizedLine ;
     diso:slipArea 2.53093e+06 .
 
 ex:quantity_value_M a qudt:QuantityValue ;

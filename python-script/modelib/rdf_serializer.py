@@ -165,18 +165,18 @@ def rdf_serializer(cif_data, space_group_data, node_data, linker_data, loop_data
         plane_origin = loop['plane_origin']
         slip_area = loop['slip_area']
 
-        dislocation_loop = example['loop_{}'.format(id)]
-        Burgers_vector = example['loop_{}_Burgers_vector'.format(id)]
-        vector_components_Burgers_vector = example['loop_{}_vector_components_Burgers_vector'.format(id)]
-        slip_plane = example['loop_{}_slip_plane'.format(id)]
-        slip_direction = example['loop_{}_slip_direction'.format(id)]
-        vector_components_slip_direction = example['loop_{}_vector_components_slip_direction'.format(id)]
-        slip_plane_normal = example['loop_{}_slip_plane_normal'.format(id)]
-        vector_components_of_slip_plane_normal = example['loop_{}_vector_components_of_slip_plane_normal'.format(id)]
-        slip_plane_origin = example['loop_{}_slip_plane_origin'.format(id)]
-        vector_components_slip_plane_origin = example['loop_{}_vector_components_origin'.format(id)]
+        dislocation_loop = example['dislocation_{}'.format(id)]
+        Burgers_vector = example['dislocation_{}_Burgers_vector'.format(id)]
+        vector_components_Burgers_vector = example['dislocation_{}_vector_components_Burgers_vector'.format(id)]
+        slip_plane = example['dislocation_{}_slip_plane'.format(id)]
+        slip_direction = example['dislocation_{}_slip_direction'.format(id)]
+        vector_components_slip_direction = example['dislocation_{}_vector_components_slip_direction'.format(id)]
+        slip_plane_normal = example['dislocation_{}_slip_plane_normal'.format(id)]
+        vector_components_of_slip_plane_normal = example['dislocation_{}_vector_components_of_slip_plane_normal'.format(id)]
+        slip_plane_origin = example['dislocation_{}_slip_plane_origin'.format(id)]
+        vector_components_slip_plane_origin = example['dislocation_{}_vector_components_origin'.format(id)]
         line = example['line_{}'.format(id)]
-        discretized_line = example['loop_{}_discretized_line'.format(id)]
+        discretized_line = example['dislocation_{}_discretized_line'.format(id)]
         pn, denum_pn  = plane_normal, min([abs(i) for i in plane_normal if i != 0])
         sd, denum_sd = slip_direction_loop, min([abs(i) for i in slip_direction_loop if i != 0])
 
@@ -259,10 +259,10 @@ def rdf_serializer(cif_data, space_group_data, node_data, linker_data, loop_data
         segment = example['linker_{}'.format(i)]
         start_node_id = linker['start_node_id']
         end_node_id = linker['end_node_id']
-        loop_id = linker['loop_id']
+        dislocation_id = linker['loop_id']
         g.add((segment, RDF.type, DISO.Segment))
         g.add((segment, DISO.hasStartNode, example['node_{}'.format(start_node_id)]))
         g.add((segment, DISO.hasEndNode, example['node_{}'.format(end_node_id)]))
-        g.add((segment, DISO.isSegmentOf, example['loop_{}_discretized_line'.format(loop_id)]))
+        g.add((segment, DISO.isSegmentOf, example['dislocation_{}_discretized_line'.format(dislocation_id)]))
         
     return g

@@ -25,7 +25,7 @@ def main():
             mat_id = os.path.splitext(base_1)[0]
             base_2 = os.path.basename(path2)
             sg_id = os.path.splitext(base_2)[0]
-            example_uri = "www.example.org/{}/".format(mat_id)
+            example_uri = "http://www.example.org/{}/".format(mat_id)
             with open(path1) as data1, open(path2) as data2: 
                 json_nickel_data = json.load(data1)
                 json_nickel_sg = json.load(data2)

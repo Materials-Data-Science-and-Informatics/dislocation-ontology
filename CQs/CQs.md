@@ -160,7 +160,6 @@ PREFIX cso: <https://purls.helmholtz-metadaten.de/cso#>
 PREFIX cdo: <https://purls.helmholtz-metadaten.de/cdo#>   
 PREFIX mdo: <https://w3id.org/mdo/structure/> 
 
-
 SELECT  ?crystal_structure ?space_group ?point_group WHERE{
 	?crystal_structure a cso:CrystalStructure;
 		mdo:hasSpaceGroup ?sg.
@@ -273,7 +272,8 @@ CQs 17a: first axis basis
 ```
 PREFIX diso: <https://purls.helmholtz-metadaten.de/diso#>
 PREFIX cso: <https://purls.helmholtz-metadaten.de/cso#> 
-PREFIX cdo: <https://purls.helmholtz-metadaten.de/cdo#>   
+PREFIX cdo: <https://purls.helmholtz-metadaten.de/cdo#>
+PREFIX mdo: <https://w3id.org/mdo/structure/>    
 
 
 SELECT ?Burgers_vector ?first_axis_basis_e_x ?first_axis_basis_e_y ?first_axis_basis_e_z WHERE{
@@ -291,7 +291,8 @@ CQs 17b: second axis basis
 ```
 PREFIX diso: <https://purls.helmholtz-metadaten.de/diso#>
 PREFIX cso: <https://purls.helmholtz-metadaten.de/cso#> 
-PREFIX cdo: <https://purls.helmholtz-metadaten.de/cdo#>   
+PREFIX cdo: <https://purls.helmholtz-metadaten.de/cdo#>
+PREFIX mdo: <https://w3id.org/mdo/structure/>    
 
 SELECT ?Burgers_vector ?second_axis_basis_e_x ?second_axis_basis_e_y ?second_axis_basis_e_z WHERE{
 	?Burgers_vector a diso:BurgersVector;
@@ -308,7 +309,8 @@ CQs 17c: third axis basis
 ```
 PREFIX diso: <https://purls.helmholtz-metadaten.de/diso#>
 PREFIX cso: <https://purls.helmholtz-metadaten.de/cso#> 
-PREFIX cdo: <https://purls.helmholtz-metadaten.de/cdo#>   
+PREFIX cdo: <https://purls.helmholtz-metadaten.de/cdo#>
+PREFIX mdo: <https://w3id.org/mdo/structure/>    
 
 SELECT ?Burgers_vector ?third_axis_basis_e_x ?third_axis_basis_e_y ?third_axis_basis_e_z WHERE{
 	?Burgers_vector a diso:BurgersVector;
