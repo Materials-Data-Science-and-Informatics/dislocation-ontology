@@ -32,9 +32,9 @@ def rdf_serializer(cif_dict, space_group_data, slip_configs, slip_plane_normals,
     point_group = example['{}_point_group'.format(mat_id)]
     
     ## length data value
-    length_a = Literal(cif_dict['_cell_length_a'], datatype=XSD.double) 
-    length_b = Literal(cif_dict['_cell_length_b'], datatype=XSD.double)
-    length_c = Literal(cif_dict['_cell_length_c'], datatype=XSD.double)
+    length_a = Literal(cif_dict['_cell_length_a']*1e-10, datatype=XSD.double) 
+    length_b = Literal(cif_dict['_cell_length_b']*1e-10, datatype=XSD.double)
+    length_c = Literal(cif_dict['_cell_length_c']*1e-10, datatype=XSD.double)
     
     ##angle data value
     angle_alpha = Literal(cif_dict['_cell_angle_alpha'], datatype=XSD.double)  

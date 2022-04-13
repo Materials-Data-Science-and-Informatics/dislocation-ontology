@@ -1360,9 +1360,9 @@ ex:lattice_parameter_angle a cso:LatticeParameterAngle ;
     cso:latticeParameterAngleGamma 9e+01 .
 
 ex:lattice_parameter_length a cso:LatticeParameterLength ;
-    cso:latticeParameterLengthA 3.505798e+00 ;
-    cso:latticeParameterLengthB 3.505798e+00 ;
-    cso:latticeParameterLengthC 3.505798e+00 .
+    cso:latticeParameterLengthA 3.505798e-10 ;
+    cso:latticeParameterLengthB 3.505798e-10 ;
+    cso:latticeParameterLengthC 3.505798e-10 .
 
 ex:line_0 a diso:Line ;
     diso:hasNumericalRepresentation ex:dislocation_0_discretized_line .
@@ -3744,16 +3744,16 @@ cdo:CrystallineMaterial a owl:Class ;
     rdfs:comment "Crystalline material is material characterized by a periodic arrangement of the constituent atoms. The arrangement could be described its crystal structure."@en ;
     rdfs:subClassOf [ a owl:Class ;
             owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty cdo:hasCrystalStructure ;
-                        owl:someValuesFrom cso:CrystalStructure ] [ a owl:Restriction ;
-                        owl:allValuesFrom cso:CrystalStructure ;
-                        owl:onProperty cdo:hasCrystalStructure ] ) ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
                         owl:onProperty cdo:hasCrystallographicDefect ;
                         owl:someValuesFrom cdo:CrystallographicDefect ] [ a owl:Restriction ;
                         owl:allValuesFrom cdo:CrystallographicDefect ;
                         owl:onProperty cdo:hasCrystallographicDefect ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty cdo:hasCrystalStructure ;
+                        owl:someValuesFrom cso:CrystalStructure ] [ a owl:Restriction ;
+                        owl:allValuesFrom cso:CrystalStructure ;
+                        owl:onProperty cdo:hasCrystalStructure ] ) ],
         <http://emmo.info/emmo/middle/physicalistic#EMMO_4207e895_8b83_4318_996a_72cfb32acd94> .
 
 ex:node_15 a diso:Node ;
