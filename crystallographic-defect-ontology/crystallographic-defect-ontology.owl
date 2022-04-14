@@ -178,15 +178,6 @@
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/cdo#Dislocation -->
-
-    <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/cdo#Dislocation">
-        <owl:equivalentClass rdf:resource="https://purls.helmholtz-metadaten.de/diso#Dislocation"/>
-        <rdfs:subClassOf rdf:resource="https://purls.helmholtz-metadaten.de/cdo#CrystallographicDefect"/>
-    </owl:Class>
-    
-
-
     <!-- https://purls.helmholtz-metadaten.de/cdo#GrainBoundary -->
 
     <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/cdo#GrainBoundary">
@@ -211,7 +202,9 @@
 
     <!-- https://purls.helmholtz-metadaten.de/diso#Dislocation -->
 
-    <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#Dislocation"/>
+    <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/diso#Dislocation">
+        <rdfs:subClassOf rdf:resource="https://purls.helmholtz-metadaten.de/cdo#CrystallographicDefect"/>
+    </owl:Class>
     <rdf:Description>
         <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
     </rdf:Description>

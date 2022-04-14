@@ -95,19 +95,19 @@ def rdf_serializer(cif_data, space_group_data, node_data, linker_data, loop_data
     g.add((basis, RDF.type, MDO.Basis))
     g.add((basis, CSO.hasFirstAxisVector, crystal_coordinate_first_axis))
     g.add((crystal_coordinate_first_axis, RDF.type, MDO.CoordinateVector))
-    g.add((crystal_coordinate_first_axis, MDO.X_axisCoordinate, Literal(1.0, datatype=XSD.double)))
-    g.add((crystal_coordinate_first_axis, MDO.Y_axisCoordinate, Literal(0.0, datatype=XSD.double)))
-    g.add((crystal_coordinate_first_axis, MDO.Z_axisCoordinate, Literal(0.0, datatype=XSD.double)))
+    g.add((crystal_coordinate_first_axis, MDO.X_axisCoordinate, Literal(0.0, datatype=XSD.double)))
+    g.add((crystal_coordinate_first_axis, MDO.Y_axisCoordinate, Literal(0.707, datatype=XSD.double)))
+    g.add((crystal_coordinate_first_axis, MDO.Z_axisCoordinate, Literal(0.707, datatype=XSD.double)))
     g.add((basis, CSO.hasSecondAxisVector, crystal_coordinate_second_axis))
     g.add((crystal_coordinate_second_axis, RDF.type, MDO.CoordinateVector))
-    g.add((crystal_coordinate_second_axis, MDO.X_axisCoordinate, Literal(0.0, datatype=XSD.double)))
-    g.add((crystal_coordinate_second_axis, MDO.Y_axisCoordinate, Literal(1.0, datatype=XSD.double)))
-    g.add((crystal_coordinate_second_axis, MDO.Z_axisCoordinate, Literal(0.0, datatype=XSD.double)))
+    g.add((crystal_coordinate_second_axis, MDO.X_axisCoordinate, Literal(0.707, datatype=XSD.double)))
+    g.add((crystal_coordinate_second_axis, MDO.Y_axisCoordinate, Literal(0.0, datatype=XSD.double)))
+    g.add((crystal_coordinate_second_axis, MDO.Z_axisCoordinate, Literal(0.707, datatype=XSD.double)))
     g.add((basis, CSO.hasThirdAxisVector, crystal_coordinate_third_axis))
     g.add((crystal_coordinate_third_axis, RDF.type, MDO.CoordinateVector))
-    g.add((crystal_coordinate_third_axis, MDO.X_axisCoordinate, Literal(0.0, datatype=XSD.double)))
-    g.add((crystal_coordinate_third_axis, MDO.Y_axisCoordinate, Literal(0.0, datatype=XSD.double)))
-    g.add((crystal_coordinate_third_axis, MDO.Z_axisCoordinate, Literal(1.0, datatype=XSD.double)))
+    g.add((crystal_coordinate_third_axis, MDO.X_axisCoordinate, Literal(0.707, datatype=XSD.double)))
+    g.add((crystal_coordinate_third_axis, MDO.Y_axisCoordinate, Literal(0.707, datatype=XSD.double)))
+    g.add((crystal_coordinate_third_axis, MDO.Z_axisCoordinate, Literal(0.0, datatype=XSD.double)))
     
     # dimensionless unit
     qv_unitless = example['quantity_value_unitless']
@@ -137,9 +137,9 @@ def rdf_serializer(cif_data, space_group_data, node_data, linker_data, loop_data
         g.add((node_coordinate, RDF.type, CSO.VectorComponentOfBasis))
         g.add((node_coordinate, QUDT.quantityValue, qv_m))
         g.add((node_coordinate, QUDT.hasQuantityKind, QUDT_QK.Length))
-        g.add((node_coordinate, CSO.firstAxisComponent, Literal(coordinate[0]*unit_of_length, datatype=XSD.double)))
-        g.add((node_coordinate, CSO.secondAxisComponent, Literal(coordinate[1]*unit_of_length, datatype=XSD.double)))
-        g.add((node_coordinate, CSO.thirdAxisComponent, Literal(coordinate[2]*unit_of_length, datatype=XSD.double)))
+        g.add((node_coordinate, CSO.firstAxisComponent, Literal(coordinate[0], datatype=XSD.double)))
+        g.add((node_coordinate, CSO.secondAxisComponent, Literal(coordinate[1], datatype=XSD.double)))
+        g.add((node_coordinate, CSO.thirdAxisComponent, Literal(coordinate[2], datatype=XSD.double)))
         g.add((node_coordinate, CSO.hasBasis, basis))
 
         # g.add((node_individual, DISO.hasNodeVelocity, node_velocity))
@@ -222,9 +222,9 @@ def rdf_serializer(cif_data, space_group_data, node_data, linker_data, loop_data
         g.add((slip_plane_origin, RDF.type, DISO.Origin))
         g.add((slip_plane_origin, CSO.hasVectorComponent, vector_components_slip_plane_origin))
         g.add((vector_components_slip_plane_origin, RDF.type, CSO.VectorComponentOfBasis))
-        g.add((vector_components_slip_plane_origin, CSO.firstAxisComponent, Literal(plane_origin[0] * unit_of_length, datatype=XSD.double)))
-        g.add((vector_components_slip_plane_origin, CSO.secondAxisComponent, Literal(plane_origin[1] * unit_of_length, datatype=XSD.double)))
-        g.add((vector_components_slip_plane_origin, CSO.thirdAxisComponent, Literal(plane_origin[2] * unit_of_length, datatype=XSD.double)))
+        g.add((vector_components_slip_plane_origin, CSO.firstAxisComponent, Literal(plane_origin[0], datatype=XSD.double)))
+        g.add((vector_components_slip_plane_origin, CSO.secondAxisComponent, Literal(plane_origin[1], datatype=XSD.double)))
+        g.add((vector_components_slip_plane_origin, CSO.thirdAxisComponent, Literal(plane_origin[2], datatype=XSD.double)))
         g.add((vector_components_slip_plane_origin, CSO.hasBasis, basis))
         g.add((dislocation_loop, DISO.hasMathematicalRepresentation, line))
         g.add((line, RDF.type, DISO.Line))
@@ -256,7 +256,7 @@ def rdf_serializer(cif_data, space_group_data, node_data, linker_data, loop_data
 
     # segment/linker data
     for i, linker in enumerate(linker_data):
-        segment = example['linker_{}'.format(i)]
+        segment = example['segment_{}'.format(i)]
         start_node_id = linker['start_node_id']
         end_node_id = linker['end_node_id']
         dislocation_id = linker['loop_id']
