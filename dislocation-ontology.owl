@@ -129,6 +129,14 @@
     <!-- https://purls.helmholtz-metadaten.de/diso#hasLatticeDirection -->
 
     <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/diso#hasLatticeDirection">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/cso#Lattice"/>
+                    <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#LatticePlane"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/diso#LatticeDirection"/>
         <rdfs:comment xml:lang="en">hasLatticeDirection represents the relationship between a lattice or a lattice plane and lattice directions.</rdfs:comment>
         <rdfs:label xml:lang="en">has lattice direction</rdfs:label>
@@ -139,6 +147,14 @@
     <!-- https://purls.helmholtz-metadaten.de/diso#hasLatticePlane -->
 
     <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/diso#hasLatticePlane">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/cso#CrystalStructure"/>
+                    <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/cso#Lattice"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/diso#LatticePlane"/>
         <rdfs:comment xml:lang="en">hasLatticePlane represents the relationship between a lattice and lattice planes.</rdfs:comment>
         <rdfs:label xml:lang="en">has lattice plane</rdfs:label>
@@ -180,6 +196,7 @@
 
     <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/diso#hasMathematicalRepresentation">
         <rdfs:subPropertyOf rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasRepresentation"/>
+        <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/diso#Dislocation"/>
         <rdfs:comment xml:lang="en">relates the entity with its mathematical representation</rdfs:comment>
         <rdfs:label xml:lang="en">has mathematical representation</rdfs:label>
     </owl:ObjectProperty>
@@ -273,6 +290,7 @@
 
     <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/diso#hasSlipPlane">
         <rdfs:subPropertyOf rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasLatticePlane"/>
+        <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/cso#CrystalStructure"/>
         <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/diso#SlipPlane"/>
         <rdfs:comment xml:lang="en">hasSlipPlane represents the relationship between crystal structure and slip plane it owns.</rdfs:comment>
         <rdfs:label xml:lang="en">has slip plane</rdfs:label>
@@ -301,6 +319,7 @@
     <!-- https://purls.helmholtz-metadaten.de/diso#hasSlipSystem -->
 
     <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/diso#hasSlipSystem">
+        <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/cso#CrystalStructure"/>
         <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/diso#SlipSystem"/>
         <rdfs:comment xml:lang="en">hasSlipSystem represents the relationship between a crystal structure and slip system.</rdfs:comment>
         <rdfs:label xml:lang="en">has slip system</rdfs:label>
@@ -366,7 +385,14 @@
     <!-- https://purls.helmholtz-metadaten.de/diso#directionMillerIndice -->
 
     <owl:DatatypeProperty rdf:about="https://purls.helmholtz-metadaten.de/diso#directionMillerIndice">
-        <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/diso#LatticeDirection"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#LatticeDirection"/>
+                    <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#SlipPlaneNormal"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">directionMillerIndice represents Miller indice of lattice direction in string.</rdfs:comment>
         <rdfs:label xml:lang="en">direction miller indice</rdfs:label>
