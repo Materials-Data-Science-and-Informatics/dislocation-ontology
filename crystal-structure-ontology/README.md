@@ -1,4 +1,4 @@
-### Crystal Structure Ontology (CSO)
+### Crystal Structure Ontology
 
 Crystal Structure Ontology (CSO) is an ontology developed to represent crystallographic information needed to describe the dislocation. In CSO, several MDO classes are reused to describe the crystal coordinate system, motif/base in a crystal structure, point groups, and space groups. 
 The standard coordinate system is defined by `MDO:Basis` and `MDO:CoordinateVector` classes that CSO reuses. 
