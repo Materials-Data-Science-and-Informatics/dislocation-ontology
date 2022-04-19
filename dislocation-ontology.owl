@@ -13,12 +13,12 @@
         <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stefan Sandfeld</terms:contributor>
         <terms:created xml:lang="en">21.03.2022</terms:created>
         <terms:creator xml:lang="en">Ahmad Zainul Ihsan</terms:creator>
+        <terms:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
         <terms:title xml:lang="en">Dislocation Ontology</terms:title>
         <vann:preferredNamespacePrefix rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DISO</vann:preferredNamespacePrefix>
-        <rdfs:seeAlso>https://github.com/Materials-Data-Science-and-Informatics/dislocation-ontology</rdfs:seeAlso>
-        <terms:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</owl:versionInfo>
         <rdfs:label xml:lang="en">Dislocation Ontology</rdfs:label>
+        <rdfs:seeAlso>https://github.com/Materials-Data-Science-and-Informatics/dislocation-ontology</rdfs:seeAlso>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -49,6 +49,12 @@
     <!-- http://purl.org/dc/terms/creator -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
     
 
 
@@ -452,6 +458,8 @@
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A crystal structure is described by both of the lattice geometry and atomic arrangements within the unit cell.</rdfs:comment>
+        <rdfs:label xml:lang="en">Crystal Structure</rdfs:label>
     </owl:Class>
     
 
