@@ -1,6 +1,6 @@
-### Dislocation Ontology
+### Dislocation Ontology (DISO)
 
-In this work, first steps towards formalizing the knowledge of dislocations together with the relevant details concerning the crystallography are introduced. Emphasis is put on representing the dislocation geometry, utilizing semantic formalization using an ontology. We start by designing and modeling a formal definition of crystalline materials in terms of the underlying crystallography including slip plane and slip direction. The former is the plane to which the motion of the dislocation is generally constrained, the latter is the direction along which plastic deformation takes place. Those should be explicitly described along with the idealization of dislocation as a mathematical line and other required details of crystalline materials.
+DISO is an ontology that defines the linear defect concepts and relations in crystalline materials. Moreover, Crystal Structure Ontology (CSO) and Crystallographic Defect Ontology (CDO), which ontologies define the concepts of crystal structureand crystalline defect, respectively, are also introduced in this repository. The ontology development processes are described following the well-known practices, e.g., using ontology metadata and reusing existing  ontologies,  e.g.,  MDO,  EMMO,  and  QUDT. To evaluate DISO, we have gathered competency questions (CQs) that will be answered via SPARQL query.
 
 ### Project Structure
 * [data](/data/)
