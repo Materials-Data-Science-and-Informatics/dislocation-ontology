@@ -878,10 +878,6 @@ skos:prefLabel a owl:AnnotationProperty ;
     owl:imports <https://purls.helmholtz-metadaten.de/cso>,
         <https://purls.helmholtz-metadaten.de/diso> .
 
-cdo:Dislocation a owl:Class ;
-    rdfs:subClassOf cdo:CrystallographicDefect ;
-    owl:equivalentClass diso:Dislocation .
-
 cdo:GrainBoundary a owl:Class ;
     rdfs:subClassOf cdo:CrystallographicDefect .
 
@@ -3782,6 +3778,9 @@ ex:node_58 a diso:Node ;
 cdo:CrystallographicDefect a owl:Class ;
     rdfs:label "Crystallographic Defect"@en ;
     rdfs:comment "Lattice irregularity having one or more of its dimensions on the order of an atomic diameter."@en .
+
+diso:Dislocation a owl:Class ;
+    rdfs:subClassOf cdo:CrystallographicDefect .
 
 ex:dislocation_6_discretized_line a diso:DiscretizedLine ;
     diso:slipArea 2.517926e+05 .
