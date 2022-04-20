@@ -61,9 +61,7 @@ SELECT ?crystalstructure ?angle_alpha ?angle_beta ?angle_gamma WHERE{
 
 CQs 4: Given the space group of a crystal structure, what is the bravais lattice centering?
 ```
-PREFIX diso: <https://purls.helmholtz-metadaten.de/diso#>
 PREFIX cso: <https://purls.helmholtz-metadaten.de/cso#> 
-PREFIX cdo: <https://purls.helmholtz-metadaten.de/cdo#>   
 
 SELECT  ?crystal_structure ?centering WHERE{
 	?crystal_structure a cso:CrystalStructure;

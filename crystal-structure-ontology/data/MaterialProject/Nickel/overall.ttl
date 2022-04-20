@@ -1,11 +1,11 @@
 @prefix : <https://purls.helmholtz-metadaten.de/cso> .
 @prefix chebi: <http://purl.obolibrary.org/obo/> .
 @prefix cso: <https://purls.helmholtz-metadaten.de/cso#> .
-@prefix ex: <http://www.example.org/Ni_mp-10257_conventional_standard/> .
+@prefix ex: <http://www.example.org/Ni_mp-1014111_conventional_standard/> .
 @prefix ex1: <http://www.example.org/Ni_mp-23_conventional_standard/> .
-@prefix ex2: <http://www.example.org/Ni_mp-1008728_conventional_standard/> .
-@prefix ex21: <http://www.example.org/Ni_mp-1094136_conventional_standard/> .
-@prefix ex3: <http://www.example.org/Ni_mp-1014111_conventional_standard/> .
+@prefix ex11: <http://www.example.org/Ni_mp-1008728_conventional_standard/> .
+@prefix ex2: <http://www.example.org/Ni_mp-10257_conventional_standard/> .
+@prefix ex3: <http://www.example.org/Ni_mp-1094136_conventional_standard/> .
 @prefix mdo: <https://w3id.org/mdo/structure/> .
 @prefix ns1: <http://purl.obolibrary.org/obo/chebi/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -29,29 +29,29 @@ vann:preferredNamespacePrefix a owl:AnnotationProperty .
 
 qudt:description a owl:AnnotationProperty .
 
-ex2:Ni_mp-1008728_conventional_standard_crystal_strcture a cso:CrystalStructure ;
-    cso:hasLattice ex2:Ni_mp-1008728_conventional_standard_Bravais_lattice ;
-    mdo:hasOccupancy ex2:Ni_mp-1008728_conventional_standard_occupancy_0,
-        ex2:Ni_mp-1008728_conventional_standard_occupancy_1 ;
-    mdo:hasSpaceGroup ex2:Ni_mp-1008728_conventional_standard_space_group .
+ex11:Ni_mp-1008728_conventional_standard_crystal_strcture a cso:CrystalStructure ;
+    cso:hasLattice ex11:Ni_mp-1008728_conventional_standard_Bravais_lattice ;
+    mdo:hasOccupancy ex11:Ni_mp-1008728_conventional_standard_occupancy_0,
+        ex11:Ni_mp-1008728_conventional_standard_occupancy_1 ;
+    mdo:hasSpaceGroup ex11:Ni_mp-1008728_conventional_standard_space_group .
 
-ex3:Ni_mp-1014111_conventional_standard_crystal_strcture a cso:CrystalStructure ;
-    cso:hasLattice ex3:Ni_mp-1014111_conventional_standard_Bravais_lattice ;
-    mdo:hasOccupancy ex3:Ni_mp-1014111_conventional_standard_occupancy_0,
-        ex3:Ni_mp-1014111_conventional_standard_occupancy_1 ;
-    mdo:hasSpaceGroup ex3:Ni_mp-1014111_conventional_standard_space_group .
+ex:Ni_mp-1014111_conventional_standard_crystal_strcture a cso:CrystalStructure ;
+    cso:hasLattice ex:Ni_mp-1014111_conventional_standard_Bravais_lattice ;
+    mdo:hasOccupancy ex:Ni_mp-1014111_conventional_standard_occupancy_0,
+        ex:Ni_mp-1014111_conventional_standard_occupancy_1 ;
+    mdo:hasSpaceGroup ex:Ni_mp-1014111_conventional_standard_space_group .
 
-ex:Ni_mp-10257_conventional_standard_crystal_strcture a cso:CrystalStructure ;
-    cso:hasLattice ex:Ni_mp-10257_conventional_standard_Bravais_lattice ;
-    mdo:hasOccupancy ex:Ni_mp-10257_conventional_standard_occupancy_0,
-        ex:Ni_mp-10257_conventional_standard_occupancy_1 ;
-    mdo:hasSpaceGroup ex:Ni_mp-10257_conventional_standard_space_group .
+ex2:Ni_mp-10257_conventional_standard_crystal_strcture a cso:CrystalStructure ;
+    cso:hasLattice ex2:Ni_mp-10257_conventional_standard_Bravais_lattice ;
+    mdo:hasOccupancy ex2:Ni_mp-10257_conventional_standard_occupancy_0,
+        ex2:Ni_mp-10257_conventional_standard_occupancy_1 ;
+    mdo:hasSpaceGroup ex2:Ni_mp-10257_conventional_standard_space_group .
 
-ex21:Ni_mp-1094136_conventional_standard_crystal_strcture a cso:CrystalStructure ;
-    cso:hasLattice ex21:Ni_mp-1094136_conventional_standard_Bravais_lattice ;
-    mdo:hasOccupancy ex21:Ni_mp-1094136_conventional_standard_occupancy_0,
-        ex21:Ni_mp-1094136_conventional_standard_occupancy_1 ;
-    mdo:hasSpaceGroup ex21:Ni_mp-1094136_conventional_standard_space_group .
+ex3:Ni_mp-1094136_conventional_standard_crystal_strcture a cso:CrystalStructure ;
+    cso:hasLattice ex3:Ni_mp-1094136_conventional_standard_Bravais_lattice ;
+    mdo:hasOccupancy ex3:Ni_mp-1094136_conventional_standard_occupancy_0,
+        ex3:Ni_mp-1094136_conventional_standard_occupancy_1 ;
+    mdo:hasSpaceGroup ex3:Ni_mp-1094136_conventional_standard_space_group .
 
 ex1:Ni_mp-23_conventional_standard_crystal_strcture a cso:CrystalStructure ;
     cso:hasLattice ex1:Ni_mp-23_conventional_standard_Bravais_lattice ;
@@ -98,17 +98,8 @@ cso:hasCrystalStructure a owl:ObjectProperty ;
     rdfs:range cso:CrystalStructure .
 
 cso:hasPositionVector a owl:ObjectProperty ;
+    rdfs:label "has position vector"@en ;
     rdfs:range cso:PositionVector .
-
-cso:isPointGroupOf a owl:ObjectProperty ;
-    rdfs:label "is point group of"@en ;
-    rdfs:comment "inverse property of hasPointGroup"@en ;
-    owl:inverseOf mdo:hasPointGroup .
-
-cso:isSpaceGroupOf a owl:ObjectProperty ;
-    rdfs:label "is space group of"@en ;
-    rdfs:comment "inverse property of hasSpaceGroup"@en ;
-    owl:inverseOf mdo:hasSpaceGroup .
 
 mdo:ElementRatio a owl:DatatypeProperty ;
     rdfs:label "element ratio"@en ;
@@ -134,11 +125,8 @@ qudt:Quantity a owl:Class ;
             owl:allValuesFrom qudt:QuantityValue ;
             owl:onProperty qudt:quantityValue ],
         [ a owl:Restriction ;
-            owl:allValuesFrom qudt:QuantityKind ;
-            owl:onProperty qudt:hasQuantityKind ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom qudt:QuantityKind ;
-            owl:onProperty qudt:hasQuantityKind ],
+            owl:allValuesFrom qudt:QuantityValue ;
+            owl:onProperty qudt:quantityValue ],
         [ a owl:Restriction ;
             owl:allValuesFrom qudt:QuantityKind ;
             owl:onProperty qudt:hasQuantityKind ],
@@ -152,264 +140,267 @@ qudt:Quantity a owl:Class ;
             owl:allValuesFrom qudt:QuantityValue ;
             owl:onProperty qudt:quantityValue ],
         [ a owl:Restriction ;
-            owl:allValuesFrom qudt:QuantityValue ;
-            owl:onProperty qudt:quantityValue ] .
+            owl:allValuesFrom qudt:QuantityKind ;
+            owl:onProperty qudt:hasQuantityKind ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom qudt:QuantityKind ;
+            owl:onProperty qudt:hasQuantityKind ] .
 
-ex2:Ni_mp-1008728_conventional_standard_Bravais_lattice a cso:BravaisLattice ;
+ex11:Ni_mp-1008728_conventional_standard_Bravais_lattice a cso:BravaisLattice ;
     cso:centering "F"^^xsd:string ;
-    cso:hasCrystalSystem ex2:Ni_mp-1008728_conventional_standard_crystal_system ;
-    cso:hasUnitCell ex2:Ni_mp-1008728_conventional_standard_unit_cell .
+    cso:hasCrystalSystem ex11:Ni_mp-1008728_conventional_standard_crystal_system ;
+    cso:hasUnitCell ex11:Ni_mp-1008728_conventional_standard_unit_cell .
 
-ex2:Ni_mp-1008728_conventional_standard_atom_0 a chebi:CHEBI_33250 ;
+ex11:Ni_mp-1008728_conventional_standard_atom_0 a chebi:CHEBI_33250 ;
     ns1:formula "Ni"^^xsd:string .
 
-ex2:Ni_mp-1008728_conventional_standard_atom_1 a chebi:CHEBI_33250 ;
+ex11:Ni_mp-1008728_conventional_standard_atom_1 a chebi:CHEBI_33250 ;
     ns1:formula "Ni"^^xsd:string .
 
-ex2:Ni_mp-1008728_conventional_standard_frac_coord_0 a mdo:CoordinateVector ;
+ex11:Ni_mp-1008728_conventional_standard_frac_coord_0 a mdo:CoordinateVector ;
     mdo:X_axisCoordinate 0e+00 ;
     mdo:Y_axisCoordinate 0e+00 ;
     mdo:Z_axisCoordinate 0e+00 .
 
-ex2:Ni_mp-1008728_conventional_standard_frac_coord_1 a mdo:CoordinateVector ;
+ex11:Ni_mp-1008728_conventional_standard_frac_coord_1 a mdo:CoordinateVector ;
     mdo:X_axisCoordinate 5e-01 ;
     mdo:Y_axisCoordinate 5e-01 ;
     mdo:Z_axisCoordinate 5e-01 .
 
-ex2:Ni_mp-1008728_conventional_standard_lattice_parameter_angle a cso:LatticeParameterAngle ;
+ex11:Ni_mp-1008728_conventional_standard_lattice_parameter_angle a cso:LatticeParameterAngle ;
     cso:latticeParameterAngleAlpha 9e+01 ;
     cso:latticeParameterAngleBeta 9e+01 ;
     cso:latticeParameterAngleGamma 9e+01 .
 
-ex2:Ni_mp-1008728_conventional_standard_lattice_parameter_length a cso:LatticeParameterLength ;
+ex11:Ni_mp-1008728_conventional_standard_lattice_parameter_length a cso:LatticeParameterLength ;
     cso:latticeParameterLengthA 2.790212e-10 ;
     cso:latticeParameterLengthB 2.790212e-10 ;
     cso:latticeParameterLengthC 2.790212e-10 .
 
-ex2:Ni_mp-1008728_conventional_standard_occupancy_0 a mdo:Occupancy ;
-    mdo:hasSite ex2:Ni_mp-1008728_conventional_standard_site_0 ;
-    mdo:hasSpecies ex2:Ni_mp-1008728_conventional_standard_species_0 .
+ex11:Ni_mp-1008728_conventional_standard_occupancy_0 a mdo:Occupancy ;
+    mdo:hasSite ex11:Ni_mp-1008728_conventional_standard_site_0 ;
+    mdo:hasSpecies ex11:Ni_mp-1008728_conventional_standard_species_0 .
 
-ex2:Ni_mp-1008728_conventional_standard_occupancy_1 a mdo:Occupancy ;
-    mdo:hasSite ex2:Ni_mp-1008728_conventional_standard_site_1 ;
-    mdo:hasSpecies ex2:Ni_mp-1008728_conventional_standard_species_1 .
+ex11:Ni_mp-1008728_conventional_standard_occupancy_1 a mdo:Occupancy ;
+    mdo:hasSite ex11:Ni_mp-1008728_conventional_standard_site_1 ;
+    mdo:hasSpecies ex11:Ni_mp-1008728_conventional_standard_species_1 .
 
-ex2:Ni_mp-1008728_conventional_standard_point_group a mdo:PointGroup ;
-    cso:isPointGroupOf ex2:Ni_mp-1008728_conventional_standard_crystal_system ;
+ex11:Ni_mp-1008728_conventional_standard_point_group a mdo:PointGroup ;
+    cso:isPointGroupOf ex11:Ni_mp-1008728_conventional_standard_crystal_system ;
     mdo:PointGroupHMName "m-3m"^^xsd:string .
 
-ex2:Ni_mp-1008728_conventional_standard_site_0 a mdo:Site ;
-    mdo:hasFractionalCoordinates ex2:Ni_mp-1008728_conventional_standard_frac_coord_0 .
+ex11:Ni_mp-1008728_conventional_standard_site_0 a mdo:Site ;
+    mdo:hasFractionalCoordinates ex11:Ni_mp-1008728_conventional_standard_frac_coord_0 .
 
-ex2:Ni_mp-1008728_conventional_standard_site_1 a mdo:Site ;
-    mdo:hasFractionalCoordinates ex2:Ni_mp-1008728_conventional_standard_frac_coord_1 .
+ex11:Ni_mp-1008728_conventional_standard_site_1 a mdo:Site ;
+    mdo:hasFractionalCoordinates ex11:Ni_mp-1008728_conventional_standard_frac_coord_1 .
 
-ex2:Ni_mp-1008728_conventional_standard_space_group a mdo:SpaceGroup ;
+ex11:Ni_mp-1008728_conventional_standard_space_group a mdo:SpaceGroup ;
     mdo:SpaceGroupID 225 ;
     mdo:SpaceGroupSymbol "Fm-3m"^^xsd:string ;
-    mdo:hasPointGroup ex2:Ni_mp-1008728_conventional_standard_point_group .
+    mdo:hasPointGroup ex11:Ni_mp-1008728_conventional_standard_point_group .
 
-ex2:Ni_mp-1008728_conventional_standard_species_0 a mdo:Species ;
-    mdo:hasElement ex2:Ni_mp-1008728_conventional_standard_atom_0 .
+ex11:Ni_mp-1008728_conventional_standard_species_0 a mdo:Species ;
+    mdo:hasElement ex11:Ni_mp-1008728_conventional_standard_atom_0 .
 
-ex2:Ni_mp-1008728_conventional_standard_species_1 a mdo:Species ;
-    mdo:hasElement ex2:Ni_mp-1008728_conventional_standard_atom_1 .
+ex11:Ni_mp-1008728_conventional_standard_species_1 a mdo:Species ;
+    mdo:hasElement ex11:Ni_mp-1008728_conventional_standard_atom_1 .
 
-ex2:Ni_mp-1008728_conventional_standard_unit_cell a cso:UnitCell ;
-    cso:hasLatticeParameterAngle ex2:Ni_mp-1008728_conventional_standard_lattice_parameter_angle ;
-    cso:hasLatticeParameterLength ex2:Ni_mp-1008728_conventional_standard_lattice_parameter_length .
+ex11:Ni_mp-1008728_conventional_standard_unit_cell a cso:UnitCell ;
+    cso:hasLatticeParameterAngle ex11:Ni_mp-1008728_conventional_standard_lattice_parameter_angle ;
+    cso:hasLatticeParameterLength ex11:Ni_mp-1008728_conventional_standard_lattice_parameter_length .
 
-ex3:Ni_mp-1014111_conventional_standard_Bravais_lattice a cso:BravaisLattice ;
+ex:Ni_mp-1014111_conventional_standard_Bravais_lattice a cso:BravaisLattice ;
     cso:centering "I"^^xsd:string ;
-    cso:hasCrystalSystem ex3:Ni_mp-1014111_conventional_standard_crystal_system ;
-    cso:hasUnitCell ex3:Ni_mp-1014111_conventional_standard_unit_cell .
+    cso:hasCrystalSystem ex:Ni_mp-1014111_conventional_standard_crystal_system ;
+    cso:hasUnitCell ex:Ni_mp-1014111_conventional_standard_unit_cell .
 
-ex3:Ni_mp-1014111_conventional_standard_atom_0 a chebi:CHEBI_33250 ;
+ex:Ni_mp-1014111_conventional_standard_atom_0 a chebi:CHEBI_33250 ;
     ns1:formula "Ni"^^xsd:string .
 
-ex3:Ni_mp-1014111_conventional_standard_atom_1 a chebi:CHEBI_33250 ;
+ex:Ni_mp-1014111_conventional_standard_atom_1 a chebi:CHEBI_33250 ;
     ns1:formula "Ni"^^xsd:string .
 
-ex3:Ni_mp-1014111_conventional_standard_frac_coord_0 a mdo:CoordinateVector ;
+ex:Ni_mp-1014111_conventional_standard_frac_coord_0 a mdo:CoordinateVector ;
     mdo:X_axisCoordinate 3.333333e-01 ;
     mdo:Y_axisCoordinate 6.666667e-01 ;
     mdo:Z_axisCoordinate 4.25238e-01 .
 
-ex3:Ni_mp-1014111_conventional_standard_frac_coord_1 a mdo:CoordinateVector ;
+ex:Ni_mp-1014111_conventional_standard_frac_coord_1 a mdo:CoordinateVector ;
     mdo:X_axisCoordinate 6.666667e-01 ;
     mdo:Y_axisCoordinate 3.333333e-01 ;
     mdo:Z_axisCoordinate 5.74762e-01 .
 
-ex3:Ni_mp-1014111_conventional_standard_lattice_parameter_angle a cso:LatticeParameterAngle ;
+ex:Ni_mp-1014111_conventional_standard_lattice_parameter_angle a cso:LatticeParameterAngle ;
     cso:latticeParameterAngleAlpha 9e+01 ;
     cso:latticeParameterAngleBeta 9e+01 ;
     cso:latticeParameterAngleGamma 1.2e+02 .
 
-ex3:Ni_mp-1014111_conventional_standard_lattice_parameter_length a cso:LatticeParameterLength ;
+ex:Ni_mp-1014111_conventional_standard_lattice_parameter_length a cso:LatticeParameterLength ;
     cso:latticeParameterLengthA 2.416684e-10 ;
     cso:latticeParameterLengthB 2.416684e-10 ;
     cso:latticeParameterLengthC 1.351535e-09 .
 
-ex3:Ni_mp-1014111_conventional_standard_occupancy_0 a mdo:Occupancy ;
-    mdo:hasSite ex3:Ni_mp-1014111_conventional_standard_site_0 ;
-    mdo:hasSpecies ex3:Ni_mp-1014111_conventional_standard_species_0 .
+ex:Ni_mp-1014111_conventional_standard_occupancy_0 a mdo:Occupancy ;
+    mdo:hasSite ex:Ni_mp-1014111_conventional_standard_site_0 ;
+    mdo:hasSpecies ex:Ni_mp-1014111_conventional_standard_species_0 .
 
-ex3:Ni_mp-1014111_conventional_standard_occupancy_1 a mdo:Occupancy ;
-    mdo:hasSite ex3:Ni_mp-1014111_conventional_standard_site_1 ;
-    mdo:hasSpecies ex3:Ni_mp-1014111_conventional_standard_species_1 .
+ex:Ni_mp-1014111_conventional_standard_occupancy_1 a mdo:Occupancy ;
+    mdo:hasSite ex:Ni_mp-1014111_conventional_standard_site_1 ;
+    mdo:hasSpecies ex:Ni_mp-1014111_conventional_standard_species_1 .
 
-ex3:Ni_mp-1014111_conventional_standard_point_group a mdo:PointGroup ;
-    cso:isPointGroupOf ex3:Ni_mp-1014111_conventional_standard_crystal_system ;
+ex:Ni_mp-1014111_conventional_standard_point_group a mdo:PointGroup ;
+    cso:isPointGroupOf ex:Ni_mp-1014111_conventional_standard_crystal_system ;
     mdo:PointGroupHMName "m-3m"^^xsd:string .
 
-ex3:Ni_mp-1014111_conventional_standard_site_0 a mdo:Site ;
-    mdo:hasFractionalCoordinates ex3:Ni_mp-1014111_conventional_standard_frac_coord_0 .
+ex:Ni_mp-1014111_conventional_standard_site_0 a mdo:Site ;
+    mdo:hasFractionalCoordinates ex:Ni_mp-1014111_conventional_standard_frac_coord_0 .
 
-ex3:Ni_mp-1014111_conventional_standard_site_1 a mdo:Site ;
-    mdo:hasFractionalCoordinates ex3:Ni_mp-1014111_conventional_standard_frac_coord_1 .
+ex:Ni_mp-1014111_conventional_standard_site_1 a mdo:Site ;
+    mdo:hasFractionalCoordinates ex:Ni_mp-1014111_conventional_standard_frac_coord_1 .
 
-ex3:Ni_mp-1014111_conventional_standard_space_group a mdo:SpaceGroup ;
+ex:Ni_mp-1014111_conventional_standard_space_group a mdo:SpaceGroup ;
     mdo:SpaceGroupID 229 ;
     mdo:SpaceGroupSymbol "Im-3m"^^xsd:string ;
-    mdo:hasPointGroup ex3:Ni_mp-1014111_conventional_standard_point_group .
+    mdo:hasPointGroup ex:Ni_mp-1014111_conventional_standard_point_group .
 
-ex3:Ni_mp-1014111_conventional_standard_species_0 a mdo:Species ;
-    mdo:hasElement ex3:Ni_mp-1014111_conventional_standard_atom_0 .
+ex:Ni_mp-1014111_conventional_standard_species_0 a mdo:Species ;
+    mdo:hasElement ex:Ni_mp-1014111_conventional_standard_atom_0 .
 
-ex3:Ni_mp-1014111_conventional_standard_species_1 a mdo:Species ;
-    mdo:hasElement ex3:Ni_mp-1014111_conventional_standard_atom_1 .
+ex:Ni_mp-1014111_conventional_standard_species_1 a mdo:Species ;
+    mdo:hasElement ex:Ni_mp-1014111_conventional_standard_atom_1 .
 
-ex3:Ni_mp-1014111_conventional_standard_unit_cell a cso:UnitCell ;
-    cso:hasLatticeParameterAngle ex3:Ni_mp-1014111_conventional_standard_lattice_parameter_angle ;
-    cso:hasLatticeParameterLength ex3:Ni_mp-1014111_conventional_standard_lattice_parameter_length .
+ex:Ni_mp-1014111_conventional_standard_unit_cell a cso:UnitCell ;
+    cso:hasLatticeParameterAngle ex:Ni_mp-1014111_conventional_standard_lattice_parameter_angle ;
+    cso:hasLatticeParameterLength ex:Ni_mp-1014111_conventional_standard_lattice_parameter_length .
 
-ex:Ni_mp-10257_conventional_standard_Bravais_lattice a cso:BravaisLattice ;
+ex2:Ni_mp-10257_conventional_standard_Bravais_lattice a cso:BravaisLattice ;
     cso:centering "P"^^xsd:string ;
-    cso:hasCrystalSystem ex:Ni_mp-10257_conventional_standard_crystal_system ;
-    cso:hasUnitCell ex:Ni_mp-10257_conventional_standard_unit_cell .
+    cso:hasCrystalSystem ex2:Ni_mp-10257_conventional_standard_crystal_system ;
+    cso:hasUnitCell ex2:Ni_mp-10257_conventional_standard_unit_cell .
 
-ex:Ni_mp-10257_conventional_standard_atom_0 a chebi:CHEBI_33250 ;
+ex2:Ni_mp-10257_conventional_standard_atom_0 a chebi:CHEBI_33250 ;
     ns1:formula "Ni"^^xsd:string .
 
-ex:Ni_mp-10257_conventional_standard_atom_1 a chebi:CHEBI_33250 ;
+ex2:Ni_mp-10257_conventional_standard_atom_1 a chebi:CHEBI_33250 ;
     ns1:formula "Ni"^^xsd:string .
 
-ex:Ni_mp-10257_conventional_standard_frac_coord_0 a mdo:CoordinateVector ;
+ex2:Ni_mp-10257_conventional_standard_frac_coord_0 a mdo:CoordinateVector ;
     mdo:X_axisCoordinate 6.666667e-01 ;
     mdo:Y_axisCoordinate 3.333333e-01 ;
     mdo:Z_axisCoordinate 7.5e-01 .
 
-ex:Ni_mp-10257_conventional_standard_frac_coord_1 a mdo:CoordinateVector ;
+ex2:Ni_mp-10257_conventional_standard_frac_coord_1 a mdo:CoordinateVector ;
     mdo:X_axisCoordinate 3.333333e-01 ;
     mdo:Y_axisCoordinate 6.666667e-01 ;
     mdo:Z_axisCoordinate 2.5e-01 .
 
-ex:Ni_mp-10257_conventional_standard_lattice_parameter_angle a cso:LatticeParameterAngle ;
+ex2:Ni_mp-10257_conventional_standard_lattice_parameter_angle a cso:LatticeParameterAngle ;
     cso:latticeParameterAngleAlpha 9e+01 ;
     cso:latticeParameterAngleBeta 9e+01 ;
     cso:latticeParameterAngleGamma 1.2e+02 .
 
-ex:Ni_mp-10257_conventional_standard_lattice_parameter_length a cso:LatticeParameterLength ;
+ex2:Ni_mp-10257_conventional_standard_lattice_parameter_length a cso:LatticeParameterLength ;
     cso:latticeParameterLengthA 2.474278e-10 ;
     cso:latticeParameterLengthB 2.474278e-10 ;
     cso:latticeParameterLengthC 4.070181e-10 .
 
-ex:Ni_mp-10257_conventional_standard_occupancy_0 a mdo:Occupancy ;
-    mdo:hasSite ex:Ni_mp-10257_conventional_standard_site_0 ;
-    mdo:hasSpecies ex:Ni_mp-10257_conventional_standard_species_0 .
+ex2:Ni_mp-10257_conventional_standard_occupancy_0 a mdo:Occupancy ;
+    mdo:hasSite ex2:Ni_mp-10257_conventional_standard_site_0 ;
+    mdo:hasSpecies ex2:Ni_mp-10257_conventional_standard_species_0 .
 
-ex:Ni_mp-10257_conventional_standard_occupancy_1 a mdo:Occupancy ;
-    mdo:hasSite ex:Ni_mp-10257_conventional_standard_site_1 ;
-    mdo:hasSpecies ex:Ni_mp-10257_conventional_standard_species_1 .
+ex2:Ni_mp-10257_conventional_standard_occupancy_1 a mdo:Occupancy ;
+    mdo:hasSite ex2:Ni_mp-10257_conventional_standard_site_1 ;
+    mdo:hasSpecies ex2:Ni_mp-10257_conventional_standard_species_1 .
 
-ex:Ni_mp-10257_conventional_standard_point_group a mdo:PointGroup ;
-    cso:isPointGroupOf ex:Ni_mp-10257_conventional_standard_crystal_system ;
+ex2:Ni_mp-10257_conventional_standard_point_group a mdo:PointGroup ;
+    cso:isPointGroupOf ex2:Ni_mp-10257_conventional_standard_crystal_system ;
     mdo:PointGroupHMName "-3m"^^xsd:string .
 
-ex:Ni_mp-10257_conventional_standard_site_0 a mdo:Site ;
-    mdo:hasFractionalCoordinates ex:Ni_mp-10257_conventional_standard_frac_coord_0 .
+ex2:Ni_mp-10257_conventional_standard_site_0 a mdo:Site ;
+    mdo:hasFractionalCoordinates ex2:Ni_mp-10257_conventional_standard_frac_coord_0 .
 
-ex:Ni_mp-10257_conventional_standard_site_1 a mdo:Site ;
-    mdo:hasFractionalCoordinates ex:Ni_mp-10257_conventional_standard_frac_coord_1 .
+ex2:Ni_mp-10257_conventional_standard_site_1 a mdo:Site ;
+    mdo:hasFractionalCoordinates ex2:Ni_mp-10257_conventional_standard_frac_coord_1 .
 
-ex:Ni_mp-10257_conventional_standard_space_group a mdo:SpaceGroup ;
+ex2:Ni_mp-10257_conventional_standard_space_group a mdo:SpaceGroup ;
     mdo:SpaceGroupID 164 ;
     mdo:SpaceGroupSymbol "P-3m1"^^xsd:string ;
-    mdo:hasPointGroup ex:Ni_mp-10257_conventional_standard_point_group .
+    mdo:hasPointGroup ex2:Ni_mp-10257_conventional_standard_point_group .
 
-ex:Ni_mp-10257_conventional_standard_species_0 a mdo:Species ;
-    mdo:hasElement ex:Ni_mp-10257_conventional_standard_atom_0 .
+ex2:Ni_mp-10257_conventional_standard_species_0 a mdo:Species ;
+    mdo:hasElement ex2:Ni_mp-10257_conventional_standard_atom_0 .
 
-ex:Ni_mp-10257_conventional_standard_species_1 a mdo:Species ;
-    mdo:hasElement ex:Ni_mp-10257_conventional_standard_atom_1 .
+ex2:Ni_mp-10257_conventional_standard_species_1 a mdo:Species ;
+    mdo:hasElement ex2:Ni_mp-10257_conventional_standard_atom_1 .
 
-ex:Ni_mp-10257_conventional_standard_unit_cell a cso:UnitCell ;
-    cso:hasLatticeParameterAngle ex:Ni_mp-10257_conventional_standard_lattice_parameter_angle ;
-    cso:hasLatticeParameterLength ex:Ni_mp-10257_conventional_standard_lattice_parameter_length .
+ex2:Ni_mp-10257_conventional_standard_unit_cell a cso:UnitCell ;
+    cso:hasLatticeParameterAngle ex2:Ni_mp-10257_conventional_standard_lattice_parameter_angle ;
+    cso:hasLatticeParameterLength ex2:Ni_mp-10257_conventional_standard_lattice_parameter_length .
 
-ex21:Ni_mp-1094136_conventional_standard_Bravais_lattice a cso:BravaisLattice ;
+ex3:Ni_mp-1094136_conventional_standard_Bravais_lattice a cso:BravaisLattice ;
     cso:centering "P"^^xsd:string ;
-    cso:hasCrystalSystem ex21:Ni_mp-1094136_conventional_standard_crystal_system ;
-    cso:hasUnitCell ex21:Ni_mp-1094136_conventional_standard_unit_cell .
+    cso:hasCrystalSystem ex3:Ni_mp-1094136_conventional_standard_crystal_system ;
+    cso:hasUnitCell ex3:Ni_mp-1094136_conventional_standard_unit_cell .
 
-ex21:Ni_mp-1094136_conventional_standard_atom_0 a chebi:CHEBI_33250 ;
+ex3:Ni_mp-1094136_conventional_standard_atom_0 a chebi:CHEBI_33250 ;
     ns1:formula "Ni"^^xsd:string .
 
-ex21:Ni_mp-1094136_conventional_standard_atom_1 a chebi:CHEBI_33250 ;
+ex3:Ni_mp-1094136_conventional_standard_atom_1 a chebi:CHEBI_33250 ;
     ns1:formula "Ni"^^xsd:string .
 
-ex21:Ni_mp-1094136_conventional_standard_frac_coord_0 a mdo:CoordinateVector ;
+ex3:Ni_mp-1094136_conventional_standard_frac_coord_0 a mdo:CoordinateVector ;
     mdo:X_axisCoordinate 0e+00 ;
     mdo:Y_axisCoordinate 0e+00 ;
     mdo:Z_axisCoordinate 4.23977e-01 .
 
-ex21:Ni_mp-1094136_conventional_standard_frac_coord_1 a mdo:CoordinateVector ;
+ex3:Ni_mp-1094136_conventional_standard_frac_coord_1 a mdo:CoordinateVector ;
     mdo:X_axisCoordinate 0e+00 ;
     mdo:Y_axisCoordinate 0e+00 ;
     mdo:Z_axisCoordinate 5.76023e-01 .
 
-ex21:Ni_mp-1094136_conventional_standard_lattice_parameter_angle a cso:LatticeParameterAngle ;
+ex3:Ni_mp-1094136_conventional_standard_lattice_parameter_angle a cso:LatticeParameterAngle ;
     cso:latticeParameterAngleAlpha 9e+01 ;
     cso:latticeParameterAngleBeta 9e+01 ;
     cso:latticeParameterAngleGamma 1.2e+02 .
 
-ex21:Ni_mp-1094136_conventional_standard_lattice_parameter_length a cso:LatticeParameterLength ;
+ex3:Ni_mp-1094136_conventional_standard_lattice_parameter_length a cso:LatticeParameterLength ;
     cso:latticeParameterLengthA 2.38205e-10 ;
     cso:latticeParameterLengthB 2.38205e-10 ;
     cso:latticeParameterLengthC 1.491233e-09 .
 
-ex21:Ni_mp-1094136_conventional_standard_occupancy_0 a mdo:Occupancy ;
-    mdo:hasSite ex21:Ni_mp-1094136_conventional_standard_site_0 ;
-    mdo:hasSpecies ex21:Ni_mp-1094136_conventional_standard_species_0 .
+ex3:Ni_mp-1094136_conventional_standard_occupancy_0 a mdo:Occupancy ;
+    mdo:hasSite ex3:Ni_mp-1094136_conventional_standard_site_0 ;
+    mdo:hasSpecies ex3:Ni_mp-1094136_conventional_standard_species_0 .
 
-ex21:Ni_mp-1094136_conventional_standard_occupancy_1 a mdo:Occupancy ;
-    mdo:hasSite ex21:Ni_mp-1094136_conventional_standard_site_1 ;
-    mdo:hasSpecies ex21:Ni_mp-1094136_conventional_standard_species_1 .
+ex3:Ni_mp-1094136_conventional_standard_occupancy_1 a mdo:Occupancy ;
+    mdo:hasSite ex3:Ni_mp-1094136_conventional_standard_site_1 ;
+    mdo:hasSpecies ex3:Ni_mp-1094136_conventional_standard_species_1 .
 
-ex21:Ni_mp-1094136_conventional_standard_point_group a mdo:PointGroup ;
-    cso:isPointGroupOf ex21:Ni_mp-1094136_conventional_standard_crystal_system ;
+ex3:Ni_mp-1094136_conventional_standard_point_group a mdo:PointGroup ;
+    cso:isPointGroupOf ex3:Ni_mp-1094136_conventional_standard_crystal_system ;
     mdo:PointGroupHMName "6/mmm"^^xsd:string .
 
-ex21:Ni_mp-1094136_conventional_standard_site_0 a mdo:Site ;
-    mdo:hasFractionalCoordinates ex21:Ni_mp-1094136_conventional_standard_frac_coord_0 .
+ex3:Ni_mp-1094136_conventional_standard_site_0 a mdo:Site ;
+    mdo:hasFractionalCoordinates ex3:Ni_mp-1094136_conventional_standard_frac_coord_0 .
 
-ex21:Ni_mp-1094136_conventional_standard_site_1 a mdo:Site ;
-    mdo:hasFractionalCoordinates ex21:Ni_mp-1094136_conventional_standard_frac_coord_1 .
+ex3:Ni_mp-1094136_conventional_standard_site_1 a mdo:Site ;
+    mdo:hasFractionalCoordinates ex3:Ni_mp-1094136_conventional_standard_frac_coord_1 .
 
-ex21:Ni_mp-1094136_conventional_standard_space_group a mdo:SpaceGroup ;
+ex3:Ni_mp-1094136_conventional_standard_space_group a mdo:SpaceGroup ;
     mdo:SpaceGroupID 194 ;
     mdo:SpaceGroupSymbol "P6_3/mmc"^^xsd:string ;
-    mdo:hasPointGroup ex21:Ni_mp-1094136_conventional_standard_point_group .
+    mdo:hasPointGroup ex3:Ni_mp-1094136_conventional_standard_point_group .
 
-ex21:Ni_mp-1094136_conventional_standard_species_0 a mdo:Species ;
-    mdo:hasElement ex21:Ni_mp-1094136_conventional_standard_atom_0 .
+ex3:Ni_mp-1094136_conventional_standard_species_0 a mdo:Species ;
+    mdo:hasElement ex3:Ni_mp-1094136_conventional_standard_atom_0 .
 
-ex21:Ni_mp-1094136_conventional_standard_species_1 a mdo:Species ;
-    mdo:hasElement ex21:Ni_mp-1094136_conventional_standard_atom_1 .
+ex3:Ni_mp-1094136_conventional_standard_species_1 a mdo:Species ;
+    mdo:hasElement ex3:Ni_mp-1094136_conventional_standard_atom_1 .
 
-ex21:Ni_mp-1094136_conventional_standard_unit_cell a cso:UnitCell ;
-    cso:hasLatticeParameterAngle ex21:Ni_mp-1094136_conventional_standard_lattice_parameter_angle ;
-    cso:hasLatticeParameterLength ex21:Ni_mp-1094136_conventional_standard_lattice_parameter_length .
+ex3:Ni_mp-1094136_conventional_standard_unit_cell a cso:UnitCell ;
+    cso:hasLatticeParameterAngle ex3:Ni_mp-1094136_conventional_standard_lattice_parameter_angle ;
+    cso:hasLatticeParameterLength ex3:Ni_mp-1094136_conventional_standard_lattice_parameter_length .
 
 ex1:Ni_mp-23_conventional_standard_Bravais_lattice a cso:BravaisLattice ;
     cso:centering "P"^^xsd:string ;
@@ -520,13 +511,13 @@ cso:Trigonal a owl:Class ;
     rdfs:label "Trigonal"@en ;
     rdfs:subClassOf cso:CrystalSystem .
 
-ex2:Ni_mp-1008728_conventional_standard_crystal_system a cso:Cubic .
+ex11:Ni_mp-1008728_conventional_standard_crystal_system a cso:Cubic .
 
-ex3:Ni_mp-1014111_conventional_standard_crystal_system a cso:Cubic .
+ex:Ni_mp-1014111_conventional_standard_crystal_system a cso:Cubic .
 
-ex:Ni_mp-10257_conventional_standard_crystal_system a cso:Trigonal .
+ex2:Ni_mp-10257_conventional_standard_crystal_system a cso:Trigonal .
 
-ex21:Ni_mp-1094136_conventional_standard_crystal_system a cso:Hexagonal .
+ex3:Ni_mp-1094136_conventional_standard_crystal_system a cso:Hexagonal .
 
 ex1:Ni_mp-23_conventional_standard_crystal_system a cso:Hexagonal .
 
@@ -550,6 +541,14 @@ cso:Vector a owl:Class ;
                         owl:someValuesFrom cso:VectorComponentOfBasis ] [ a owl:Restriction ;
                         owl:allValuesFrom cso:VectorComponentOfBasis ;
                         owl:onProperty cso:hasVectorComponent ] ) ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty cso:vectorMagnitude ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty cso:vectorMagnitude ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
         [ a owl:Class ;
             owl:intersectionOf ( [ a owl:Restriction ;
                         owl:onProperty cso:hasVectorComponent ;
@@ -566,14 +565,6 @@ cso:Vector a owl:Class ;
                         owl:someValuesFrom cso:VectorComponentOfBasis ] [ a owl:Restriction ;
                         owl:allValuesFrom cso:VectorComponentOfBasis ;
                         owl:onProperty cso:hasVectorComponent ] ) ],
-        [ a owl:Restriction ;
-            owl:onDataRange xsd:double ;
-            owl:onProperty cso:vectorMagnitude ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
-        [ a owl:Restriction ;
-            owl:onDataRange xsd:double ;
-            owl:onProperty cso:vectorMagnitude ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
         [ a owl:Restriction ;
             owl:onDataRange xsd:double ;
             owl:onProperty cso:vectorMagnitude ;
@@ -595,6 +586,12 @@ cso:Vector a owl:Class ;
 ns1:formula a owl:DatatypeProperty ;
     rdfs:domain chebi:CHEBI_33250 ;
     rdfs:range xsd:string .
+
+qudt:hasQuantityKind a owl:ObjectProperty ;
+    rdfs:label "has quantity kind" ;
+    rdfs:isDefinedBy <http://qudt.org/2.0/schema/qudt>,
+        <http://qudt.org/schema/qudt> ;
+    rdfs:range qudt:QuantityKind .
 
 qudt:quantityValue a owl:ObjectProperty ;
     rdfs:label "quantity value" ;
@@ -642,6 +639,11 @@ cso:hasThirdAxisVector a owl:ObjectProperty ;
     rdfs:comment "hasThirdAxisVector represents the relationship between a basis and a coordinate vector to define the coordianates of the axis vector the third basis"@en ;
     rdfs:domain mdo:Basis ;
     rdfs:range mdo:CoordinateVector .
+
+cso:isSpaceGroupOf a owl:ObjectProperty ;
+    rdfs:label "is space group of"@en ;
+    rdfs:comment "inverse property of hasSpaceGroup"@en ;
+    owl:inverseOf mdo:hasSpaceGroup .
 
 cso:latticeParameterAngleAlpha a owl:DatatypeProperty ;
     rdfs:label "lattice parameter angle alpha"@en ;
@@ -738,23 +740,23 @@ mdo:hasElement a owl:ObjectProperty ;
     rdfs:domain mdo:Species ;
     rdfs:range chebi:CHEBI_33250 .
 
+qudt:QuantityKind a owl:Class ;
+    rdfs:label "Quantity Kind" ;
+    qudt:description "A <b>Quantity Kind</b> is any observable property that can be  measured and quantified numerically. Familiar examples include physical properties such as length, mass, time, force, energy, power, electric charge, etc. Less familiar examples include currency, interest rate, price to earning ratio, and information capacity."^^rdf:HTML ;
+    rdfs:isDefinedBy <http://qudt.org/2.0/schema/qudt>,
+        <http://qudt.org/schema/qudt> .
+
 qudt:QuantityValue a owl:Class ;
     rdfs:label "Quantity value" ;
     qudt:description "A <i>Quantity Value</i> expresses the magnitude and kind of a quantity and is given by the product of a numerical value <code>n</code> and a unit of measure <code>U</code>. The number multiplying the unit is referred to as the numerical value of the quantity expressed in that unit. Refer to <a href=\"http://physics.nist.gov/Pubs/SP811/sec07.html\">NIST SP 811 section 7</a> for more on quantity values."^^rdf:HTML ;
     rdfs:isDefinedBy <http://qudt.org/2.0/schema/qudt>,
         <http://qudt.org/schema/qudt> ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom qudt:QuantityKind ;
-            owl:onProperty qudt:hasQuantityKind ],
-        [ a owl:Restriction ;
             owl:allValuesFrom qudt:Unit ;
             owl:onProperty qudt:unit ],
         [ a owl:Restriction ;
-            owl:cardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty qudt:hasQuantityKind ],
-        [ a owl:Restriction ;
-            owl:cardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty qudt:hasQuantityKind ],
+            owl:allValuesFrom qudt:Unit ;
+            owl:onProperty qudt:unit ],
         [ a owl:Restriction ;
             owl:allValuesFrom qudt:Unit ;
             owl:onProperty qudt:unit ],
@@ -762,53 +764,14 @@ qudt:QuantityValue a owl:Class ;
             owl:allValuesFrom qudt:Unit ;
             owl:onProperty qudt:unit ],
         [ a owl:Restriction ;
-            owl:allValuesFrom qudt:QuantityKind ;
-            owl:onProperty qudt:hasQuantityKind ],
-        [ a owl:Restriction ;
             owl:allValuesFrom qudt:Unit ;
-            owl:onProperty qudt:unit ],
-        [ a owl:Restriction ;
-            owl:cardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty qudt:hasQuantityKind ],
-        [ a owl:Restriction ;
-            owl:cardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty qudt:hasQuantityKind ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom qudt:QuantityKind ;
-            owl:onProperty qudt:hasQuantityKind ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom qudt:Unit ;
-            owl:onProperty qudt:unit ],
-        [ a owl:Restriction ;
-            owl:cardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty qudt:hasQuantityKind ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom qudt:QuantityKind ;
-            owl:onProperty qudt:hasQuantityKind ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom qudt:QuantityKind ;
-            owl:onProperty qudt:hasQuantityKind ] .
+            owl:onProperty qudt:unit ] .
 
 qudt:Unit a owl:Class ;
     rdfs:label "Unit" ;
     qudt:description "A unit of measure, or unit, is a particular quantity value that has been chosen as a scale for measuring other quantities the same kind (more generally of equivalent dimension). For example, the meter is a quantity of length that has been rigorously defined and standardized by the BIPM (International Board of Weights and Measures). Any measurement of the length can be expressed as a number multiplied by the unit meter. More formally, the value of a physical quantity Q with respect to a unit (U) is expressed as the scalar multiple of a real number (n) and U, as  \\(Q = nU\\)."^^rdf:HTML ;
     rdfs:isDefinedBy <http://qudt.org/2.0/schema/qudt>,
-        <http://qudt.org/schema/qudt> ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom qudt:QuantityKind ;
-            owl:onProperty qudt:hasQuantityKind ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom qudt:QuantityKind ;
-            owl:onProperty qudt:hasQuantityKind ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom qudt:QuantityKind ;
-            owl:onProperty qudt:hasQuantityKind ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom qudt:QuantityKind ;
-            owl:onProperty qudt:hasQuantityKind ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom qudt:QuantityKind ;
-            owl:onProperty qudt:hasQuantityKind ] .
+        <http://qudt.org/schema/qudt> .
 
 cso:BravaisLattice a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
@@ -833,90 +796,6 @@ cso:BravaisLattice a owl:Class ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
         cso:Lattice .
 
-cso:CrystalStructure a owl:Class ;
-    rdfs:label "Crystal Structure"@en ;
-    rdfs:subClassOf [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:allValuesFrom mdo:SpaceGroup ;
-                        owl:onProperty mdo:hasSpaceGroup ] [ a owl:Restriction ;
-                        owl:onClass mdo:SpaceGroup ;
-                        owl:onProperty mdo:hasSpaceGroup ;
-                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ) ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom cso:Lattice ;
-            owl:onProperty cso:hasLattice ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty mdo:hasOccupancy ;
-                        owl:someValuesFrom mdo:Occupancy ] [ a owl:Restriction ;
-                        owl:allValuesFrom mdo:Occupancy ;
-                        owl:onProperty mdo:hasOccupancy ] ) ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:allValuesFrom mdo:SpaceGroup ;
-                        owl:onProperty mdo:hasSpaceGroup ] [ a owl:Restriction ;
-                        owl:onClass mdo:SpaceGroup ;
-                        owl:onProperty mdo:hasSpaceGroup ;
-                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ) ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:allValuesFrom mdo:SpaceGroup ;
-                        owl:onProperty mdo:hasSpaceGroup ] [ a owl:Restriction ;
-                        owl:onClass mdo:SpaceGroup ;
-                        owl:onProperty mdo:hasSpaceGroup ;
-                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ) ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom cso:Lattice ;
-            owl:onProperty cso:hasLattice ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom cso:Lattice ;
-            owl:onProperty cso:hasLattice ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom cso:Lattice ;
-            owl:onProperty cso:hasLattice ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:allValuesFrom mdo:SpaceGroup ;
-                        owl:onProperty mdo:hasSpaceGroup ] [ a owl:Restriction ;
-                        owl:onClass mdo:SpaceGroup ;
-                        owl:onProperty mdo:hasSpaceGroup ;
-                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ) ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty mdo:hasOccupancy ;
-                        owl:someValuesFrom mdo:Occupancy ] [ a owl:Restriction ;
-                        owl:allValuesFrom mdo:Occupancy ;
-                        owl:onProperty mdo:hasOccupancy ] ) ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:allValuesFrom mdo:SpaceGroup ;
-                        owl:onProperty mdo:hasSpaceGroup ] [ a owl:Restriction ;
-                        owl:onClass mdo:SpaceGroup ;
-                        owl:onProperty mdo:hasSpaceGroup ;
-                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ) ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty mdo:hasOccupancy ;
-                        owl:someValuesFrom mdo:Occupancy ] [ a owl:Restriction ;
-                        owl:allValuesFrom mdo:Occupancy ;
-                        owl:onProperty mdo:hasOccupancy ] ) ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty mdo:hasOccupancy ;
-                        owl:someValuesFrom mdo:Occupancy ] [ a owl:Restriction ;
-                        owl:allValuesFrom mdo:Occupancy ;
-                        owl:onProperty mdo:hasOccupancy ] ) ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom cso:Lattice ;
-            owl:onProperty cso:hasLattice ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty mdo:hasOccupancy ;
-                        owl:someValuesFrom mdo:Occupancy ] [ a owl:Restriction ;
-                        owl:allValuesFrom mdo:Occupancy ;
-                        owl:onProperty mdo:hasOccupancy ] ) ] ;
-    skos:defintion "A crystal structure is described by both of the lattice geometry and atomic arrangements within the unit cell."@en .
-
 cso:hasCrystalSystem a owl:ObjectProperty ;
     rdfs:label "has crystal system"@en ;
     rdfs:comment "hasCrystalSystem represents the relationship between unit cell and crystal system."@en ;
@@ -939,6 +818,11 @@ cso:hasVectorComponent a owl:ObjectProperty ;
     rdfs:label "has vector component"@en ;
     rdfs:comment "hasVectorComponent relates the Vector with 'Vector Components of Basis'"@en ;
     rdfs:domain cso:Vector .
+
+cso:isPointGroupOf a owl:ObjectProperty ;
+    rdfs:label "is point group of"@en ;
+    rdfs:comment "inverse property of hasPointGroup"@en ;
+    owl:inverseOf mdo:hasPointGroup .
 
 mdo:hasCartesianCoordinates a owl:ObjectProperty ;
     rdfs:label "has cartesian coordinates"@en ;
@@ -975,56 +859,116 @@ mdo:hasSpaceGroup a owl:ObjectProperty ;
     rdfs:domain cso:CrystalStructure ;
     rdfs:range mdo:SpaceGroup .
 
+cso:CrystalStructure a owl:Class ;
+    rdfs:label "Crystal Structure"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom cso:Lattice ;
+            owl:onProperty cso:hasLattice ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty mdo:hasOccupancy ;
+                        owl:someValuesFrom mdo:Occupancy ] [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:Occupancy ;
+                        owl:onProperty mdo:hasOccupancy ] ) ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom cso:Lattice ;
+            owl:onProperty cso:hasLattice ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:SpaceGroup ;
+                        owl:onProperty mdo:hasSpaceGroup ] [ a owl:Restriction ;
+                        owl:onClass mdo:SpaceGroup ;
+                        owl:onProperty mdo:hasSpaceGroup ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ) ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom cso:Lattice ;
+            owl:onProperty cso:hasLattice ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom cso:Lattice ;
+            owl:onProperty cso:hasLattice ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:SpaceGroup ;
+                        owl:onProperty mdo:hasSpaceGroup ] [ a owl:Restriction ;
+                        owl:onClass mdo:SpaceGroup ;
+                        owl:onProperty mdo:hasSpaceGroup ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty mdo:hasOccupancy ;
+                        owl:someValuesFrom mdo:Occupancy ] [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:Occupancy ;
+                        owl:onProperty mdo:hasOccupancy ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty mdo:hasOccupancy ;
+                        owl:someValuesFrom mdo:Occupancy ] [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:Occupancy ;
+                        owl:onProperty mdo:hasOccupancy ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty mdo:hasOccupancy ;
+                        owl:someValuesFrom mdo:Occupancy ] [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:Occupancy ;
+                        owl:onProperty mdo:hasOccupancy ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:SpaceGroup ;
+                        owl:onProperty mdo:hasSpaceGroup ] [ a owl:Restriction ;
+                        owl:onClass mdo:SpaceGroup ;
+                        owl:onProperty mdo:hasSpaceGroup ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:SpaceGroup ;
+                        owl:onProperty mdo:hasSpaceGroup ] [ a owl:Restriction ;
+                        owl:onClass mdo:SpaceGroup ;
+                        owl:onProperty mdo:hasSpaceGroup ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ) ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom cso:Lattice ;
+            owl:onProperty cso:hasLattice ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty mdo:hasOccupancy ;
+                        owl:someValuesFrom mdo:Occupancy ] [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:Occupancy ;
+                        owl:onProperty mdo:hasOccupancy ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:SpaceGroup ;
+                        owl:onProperty mdo:hasSpaceGroup ] [ a owl:Restriction ;
+                        owl:onClass mdo:SpaceGroup ;
+                        owl:onProperty mdo:hasSpaceGroup ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ) ] ;
+    skos:defintion "A crystal structure is described by both of the lattice geometry and atomic arrangements within the unit cell."@en .
+
 cso:Lattice a owl:Class ;
     rdfs:label "Lattice"@en ;
     rdfs:subClassOf [ a owl:Class ;
             owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty cso:hasUnitCell ;
+                        owl:someValuesFrom cso:UnitCell ] [ a owl:Restriction ;
+                        owl:allValuesFrom cso:UnitCell ;
+                        owl:onProperty cso:hasUnitCell ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty cso:hasBasis ;
+                        owl:someValuesFrom mdo:Basis ] [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:Basis ;
+                        owl:onProperty cso:hasBasis ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
                         owl:onProperty cso:hasCrystalSystem ;
                         owl:someValuesFrom cso:CrystalSystem ] [ a owl:Restriction ;
                         owl:allValuesFrom cso:CrystalSystem ;
                         owl:onProperty cso:hasCrystalSystem ] ) ],
         [ a owl:Class ;
             owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty cso:hasUnitCell ;
-                        owl:someValuesFrom cso:UnitCell ] [ a owl:Restriction ;
-                        owl:allValuesFrom cso:UnitCell ;
-                        owl:onProperty cso:hasUnitCell ] ) ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
                         owl:onProperty cso:hasBasis ;
                         owl:someValuesFrom mdo:Basis ] [ a owl:Restriction ;
                         owl:allValuesFrom mdo:Basis ;
                         owl:onProperty cso:hasBasis ] ) ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty cso:hasUnitCell ;
-                        owl:someValuesFrom cso:UnitCell ] [ a owl:Restriction ;
-                        owl:allValuesFrom cso:UnitCell ;
-                        owl:onProperty cso:hasUnitCell ] ) ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty cso:hasBasis ;
-                        owl:someValuesFrom mdo:Basis ] [ a owl:Restriction ;
-                        owl:allValuesFrom mdo:Basis ;
-                        owl:onProperty cso:hasBasis ] ) ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty cso:hasBasis ;
-                        owl:someValuesFrom mdo:Basis ] [ a owl:Restriction ;
-                        owl:allValuesFrom mdo:Basis ;
-                        owl:onProperty cso:hasBasis ] ) ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty cso:hasUnitCell ;
-                        owl:someValuesFrom cso:UnitCell ] [ a owl:Restriction ;
-                        owl:allValuesFrom cso:UnitCell ;
-                        owl:onProperty cso:hasUnitCell ] ) ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty cso:hasCrystalSystem ;
-                        owl:someValuesFrom cso:CrystalSystem ] [ a owl:Restriction ;
-                        owl:allValuesFrom cso:CrystalSystem ;
-                        owl:onProperty cso:hasCrystalSystem ] ) ],
         [ a owl:Class ;
             owl:intersectionOf ( [ a owl:Restriction ;
                         owl:onProperty cso:hasUnitCell ;
@@ -1045,6 +989,12 @@ cso:Lattice a owl:Class ;
                         owl:onProperty cso:hasCrystalSystem ] ) ],
         [ a owl:Class ;
             owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty cso:hasUnitCell ;
+                        owl:someValuesFrom cso:UnitCell ] [ a owl:Restriction ;
+                        owl:allValuesFrom cso:UnitCell ;
+                        owl:onProperty cso:hasUnitCell ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
                         owl:onProperty cso:hasBasis ;
                         owl:someValuesFrom mdo:Basis ] [ a owl:Restriction ;
                         owl:allValuesFrom mdo:Basis ;
@@ -1063,17 +1013,29 @@ cso:Lattice a owl:Class ;
                         owl:onProperty cso:hasCrystalSystem ] ) ],
         [ a owl:Class ;
             owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty cso:hasUnitCell ;
+                        owl:someValuesFrom cso:UnitCell ] [ a owl:Restriction ;
+                        owl:allValuesFrom cso:UnitCell ;
+                        owl:onProperty cso:hasUnitCell ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
                         owl:onProperty cso:hasCrystalSystem ;
                         owl:someValuesFrom cso:CrystalSystem ] [ a owl:Restriction ;
                         owl:allValuesFrom cso:CrystalSystem ;
-                        owl:onProperty cso:hasCrystalSystem ] ) ] ;
+                        owl:onProperty cso:hasCrystalSystem ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty cso:hasCrystalSystem ;
+                        owl:someValuesFrom cso:CrystalSystem ] [ a owl:Restriction ;
+                        owl:allValuesFrom cso:CrystalSystem ;
+                        owl:onProperty cso:hasCrystalSystem ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty cso:hasBasis ;
+                        owl:someValuesFrom mdo:Basis ] [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:Basis ;
+                        owl:onProperty cso:hasBasis ] ) ] ;
     skos:defintion "A lattice defines a periodic arrangement of one or more atoms."@en .
-
-qudt:QuantityKind a owl:Class ;
-    rdfs:label "Quantity Kind" ;
-    qudt:description "A <b>Quantity Kind</b> is any observable property that can be  measured and quantified numerically. Familiar examples include physical properties such as length, mass, time, force, energy, power, electric charge, etc. Less familiar examples include currency, interest rate, price to earning ratio, and information capacity."^^rdf:HTML ;
-    rdfs:isDefinedBy <http://qudt.org/2.0/schema/qudt>,
-        <http://qudt.org/schema/qudt> .
 
 cso:UnitCell a owl:Class ;
     rdfs:label "Unit Cell"@en ;
@@ -1103,6 +1065,12 @@ cso:UnitCell a owl:Class ;
                         owl:onProperty cso:hasLatticeParameterLength ] ) ],
         [ a owl:Class ;
             owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty cso:hasLatticeParameterAngle ;
+                        owl:someValuesFrom cso:LatticeParameterAngle ] [ a owl:Restriction ;
+                        owl:allValuesFrom cso:LatticeParameterAngle ;
+                        owl:onProperty cso:hasLatticeParameterAngle ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
                         owl:onProperty cso:hasLatticeParameterLength ;
                         owl:someValuesFrom cso:LatticeParameterLength ] [ a owl:Restriction ;
                         owl:allValuesFrom cso:LatticeParameterLength ;
@@ -1121,22 +1089,16 @@ cso:UnitCell a owl:Class ;
                         owl:onProperty cso:hasLatticeParameterAngle ] ) ],
         [ a owl:Class ;
             owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty cso:hasLatticeParameterAngle ;
-                        owl:someValuesFrom cso:LatticeParameterAngle ] [ a owl:Restriction ;
-                        owl:allValuesFrom cso:LatticeParameterAngle ;
-                        owl:onProperty cso:hasLatticeParameterAngle ] ) ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty cso:hasLatticeParameterAngle ;
-                        owl:someValuesFrom cso:LatticeParameterAngle ] [ a owl:Restriction ;
-                        owl:allValuesFrom cso:LatticeParameterAngle ;
-                        owl:onProperty cso:hasLatticeParameterAngle ] ) ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
                         owl:onProperty cso:hasLatticeParameterLength ;
                         owl:someValuesFrom cso:LatticeParameterLength ] [ a owl:Restriction ;
                         owl:allValuesFrom cso:LatticeParameterLength ;
-                        owl:onProperty cso:hasLatticeParameterLength ] ) ] ;
+                        owl:onProperty cso:hasLatticeParameterLength ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty cso:hasLatticeParameterAngle ;
+                        owl:someValuesFrom cso:LatticeParameterAngle ] [ a owl:Restriction ;
+                        owl:allValuesFrom cso:LatticeParameterAngle ;
+                        owl:onProperty cso:hasLatticeParameterAngle ] ) ] ;
     skos:defintion "Basic structural unit or building block of the crystal structure and defines the crystal structure by virtue of its geometry and the atom positions within."@en .
 
 cso:LatticeParameterAngle a owl:Class ;
@@ -1259,8 +1221,32 @@ cso:LatticeParameterLength a owl:Class ;
 
 cso:VectorComponentOfBasis a owl:Class ;
     rdfs:label "Vector Component of Basis"@en ;
+    rdfs:comment "Vector components/vector coordinates of particular basis. It has relation to a specific basis."@en ;
     rdfs:subClassOf [ a owl:Class ;
             owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty cso:hasBasis ;
+                        owl:someValuesFrom mdo:Basis ] [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:Basis ;
+                        owl:onProperty cso:hasBasis ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty cso:hasBasis ;
+                        owl:someValuesFrom mdo:Basis ] [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:Basis ;
+                        owl:onProperty cso:hasBasis ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onDataRange xsd:double ;
+                        owl:onProperty cso:firstAxisComponent ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] [ a owl:Restriction ;
+                        owl:onDataRange xsd:double ;
+                        owl:onProperty cso:secondAxisComponent ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] [ a owl:Restriction ;
+                        owl:onDataRange xsd:double ;
+                        owl:onProperty cso:thirdAxisComponent ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
                         owl:onDataRange xsd:double ;
                         owl:onProperty cso:firstAxisComponent ;
                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] [ a owl:Restriction ;
@@ -1289,40 +1275,6 @@ cso:VectorComponentOfBasis a owl:Class ;
                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ) ],
         [ a owl:Class ;
             owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onDataRange xsd:double ;
-                        owl:onProperty cso:firstAxisComponent ;
-                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] [ a owl:Restriction ;
-                        owl:onDataRange xsd:double ;
-                        owl:onProperty cso:secondAxisComponent ;
-                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] [ a owl:Restriction ;
-                        owl:onDataRange xsd:double ;
-                        owl:onProperty cso:thirdAxisComponent ;
-                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ) ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onDataRange xsd:double ;
-                        owl:onProperty cso:firstAxisComponent ;
-                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] [ a owl:Restriction ;
-                        owl:onDataRange xsd:double ;
-                        owl:onProperty cso:secondAxisComponent ;
-                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] [ a owl:Restriction ;
-                        owl:onDataRange xsd:double ;
-                        owl:onProperty cso:thirdAxisComponent ;
-                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ) ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty cso:hasBasis ;
-                        owl:someValuesFrom mdo:Basis ] [ a owl:Restriction ;
-                        owl:allValuesFrom mdo:Basis ;
-                        owl:onProperty cso:hasBasis ] ) ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty cso:hasBasis ;
-                        owl:someValuesFrom mdo:Basis ] [ a owl:Restriction ;
-                        owl:allValuesFrom mdo:Basis ;
-                        owl:onProperty cso:hasBasis ] ) ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
                         owl:onProperty cso:hasBasis ;
                         owl:someValuesFrom mdo:Basis ] [ a owl:Restriction ;
                         owl:allValuesFrom mdo:Basis ;
@@ -1344,8 +1296,18 @@ cso:VectorComponentOfBasis a owl:Class ;
                         owl:someValuesFrom mdo:Basis ] [ a owl:Restriction ;
                         owl:allValuesFrom mdo:Basis ;
                         owl:onProperty cso:hasBasis ] ) ],
-        qudt:Quantity ;
-    skos:defintion "Vector components/vector coordinates of particular basis. It has relation to a specific basis."@en .
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onDataRange xsd:double ;
+                        owl:onProperty cso:firstAxisComponent ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] [ a owl:Restriction ;
+                        owl:onDataRange xsd:double ;
+                        owl:onProperty cso:secondAxisComponent ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] [ a owl:Restriction ;
+                        owl:onDataRange xsd:double ;
+                        owl:onProperty cso:thirdAxisComponent ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ) ],
+        qudt:Quantity .
 
 chebi:CHEBI_33250 a owl:Class ;
     rdfs:label "Atom"@en ;
@@ -1370,12 +1332,6 @@ chebi:CHEBI_33250 a owl:Class ;
             owl:onProperty ns1:formula ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ;
     skos:defintion "A chemical entity constituting the smallest component of an element having the chemical properties of the element."@en .
-
-qudt:hasQuantityKind a owl:ObjectProperty ;
-    rdfs:label "has quantity kind" ;
-    rdfs:isDefinedBy <http://qudt.org/2.0/schema/qudt>,
-        <http://qudt.org/schema/qudt> ;
-    rdfs:range qudt:QuantityKind .
 
 cso:hasBasis a owl:ObjectProperty ;
     rdfs:label "has basis"@en ;
@@ -1407,123 +1363,6 @@ mdo:hasPointGroup a owl:ObjectProperty ;
             owl:unionOf ( cso:CrystalSystem mdo:SpaceGroup ) ] ;
     rdfs:range mdo:PointGroup .
 
-cso:CrystalSystem a owl:Class ;
-    rdfs:label "Crystal System"@en ;
-    rdfs:subClassOf [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:allValuesFrom mdo:PointGroup ;
-                        owl:onProperty mdo:hasPointGroup ] [ a owl:Restriction ;
-                        owl:onClass mdo:PointGroup ;
-                        owl:onProperty mdo:hasPointGroup ;
-                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ) ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:allValuesFrom mdo:PointGroup ;
-                        owl:onProperty mdo:hasPointGroup ] [ a owl:Restriction ;
-                        owl:onClass mdo:PointGroup ;
-                        owl:onProperty mdo:hasPointGroup ;
-                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ) ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:allValuesFrom mdo:PointGroup ;
-                        owl:onProperty mdo:hasPointGroup ] [ a owl:Restriction ;
-                        owl:onClass mdo:PointGroup ;
-                        owl:onProperty mdo:hasPointGroup ;
-                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ) ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:allValuesFrom mdo:PointGroup ;
-                        owl:onProperty mdo:hasPointGroup ] [ a owl:Restriction ;
-                        owl:onClass mdo:PointGroup ;
-                        owl:onProperty mdo:hasPointGroup ;
-                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ) ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:allValuesFrom mdo:PointGroup ;
-                        owl:onProperty mdo:hasPointGroup ] [ a owl:Restriction ;
-                        owl:onClass mdo:PointGroup ;
-                        owl:onProperty mdo:hasPointGroup ;
-                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ) ] ;
-    skos:defintion "A classification scheme for crystal structures on the basis of unit cell geometry."@en .
-
-mdo:SpaceGroup a owl:Class ;
-    rdfs:label "Space Group"@en ;
-    rdfs:comment "A space group is the symmetry group of a three-dimensional crystal pattern is called its space group."@en,
-        "Combination of Bravais lattice, point groups, two symmetry operations (screw rotation and glide reflection) results in space groups"@en,
-        """The nomenclature consists of a maximum of four symbols for each space group, e.g., Fm-3m(Cubic)
-First symbol defines the Bravais lattice centering, here is the cubic centering, C. The next three symbols defines symmetry elements with respect to viewing directions, which are different from crystal system to crystal system."""@en ;
-    rdfs:seeAlso "International Tables for Crystallography, Volume !, Fourth, revised edition, Section 8.1.5."@en ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:onDataRange xsd:string ;
-            owl:onProperty mdo:SpaceGroupSymbol ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
-        [ a owl:Restriction ;
-            owl:onDataRange xsd:string ;
-            owl:onProperty mdo:SpaceGroupSymbol ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
-        [ a owl:Restriction ;
-            owl:onDataRange xsd:integer ;
-            owl:onProperty mdo:SpaceGroupID ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
-        [ a owl:Restriction ;
-            owl:onDataRange xsd:string ;
-            owl:onProperty mdo:SpaceGroupSymbol ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
-        [ a owl:Restriction ;
-            owl:onDataRange xsd:string ;
-            owl:onProperty mdo:SpaceGroupSymbol ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
-        [ a owl:Restriction ;
-            owl:onDataRange xsd:integer ;
-            owl:onProperty mdo:SpaceGroupID ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty mdo:hasPointGroup ;
-                        owl:someValuesFrom mdo:PointGroup ] [ a owl:Restriction ;
-                        owl:allValuesFrom mdo:PointGroup ;
-                        owl:onProperty mdo:hasPointGroup ] ) ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty mdo:hasPointGroup ;
-                        owl:someValuesFrom mdo:PointGroup ] [ a owl:Restriction ;
-                        owl:allValuesFrom mdo:PointGroup ;
-                        owl:onProperty mdo:hasPointGroup ] ) ],
-        [ a owl:Restriction ;
-            owl:onDataRange xsd:integer ;
-            owl:onProperty mdo:SpaceGroupID ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
-        [ a owl:Restriction ;
-            owl:onDataRange xsd:integer ;
-            owl:onProperty mdo:SpaceGroupID ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty mdo:hasPointGroup ;
-                        owl:someValuesFrom mdo:PointGroup ] [ a owl:Restriction ;
-                        owl:allValuesFrom mdo:PointGroup ;
-                        owl:onProperty mdo:hasPointGroup ] ) ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty mdo:hasPointGroup ;
-                        owl:someValuesFrom mdo:PointGroup ] [ a owl:Restriction ;
-                        owl:allValuesFrom mdo:PointGroup ;
-                        owl:onProperty mdo:hasPointGroup ] ) ],
-        [ a owl:Restriction ;
-            owl:onDataRange xsd:string ;
-            owl:onProperty mdo:SpaceGroupSymbol ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty mdo:hasPointGroup ;
-                        owl:someValuesFrom mdo:PointGroup ] [ a owl:Restriction ;
-                        owl:allValuesFrom mdo:PointGroup ;
-                        owl:onProperty mdo:hasPointGroup ] ) ],
-        [ a owl:Restriction ;
-            owl:onDataRange xsd:integer ;
-            owl:onProperty mdo:SpaceGroupID ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] .
-
 mdo:Basis a owl:Class ;
     rdfs:label "Basis"@en ;
     rdfs:comment "A basis defines a spatial unit used to express fractional coordinates."@en ;
@@ -1533,22 +1372,6 @@ mdo:Basis a owl:Class ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
         [ a owl:Restriction ;
             owl:onClass mdo:CoordinateVector ;
-            owl:onProperty cso:hasFirstAxisVector ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
-        [ a owl:Restriction ;
-            owl:onClass mdo:CoordinateVector ;
-            owl:onProperty cso:hasThirdAxisVector ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
-        [ a owl:Restriction ;
-            owl:onClass mdo:CoordinateVector ;
-            owl:onProperty cso:hasFirstAxisVector ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
-        [ a owl:Restriction ;
-            owl:onClass mdo:CoordinateVector ;
-            owl:onProperty cso:hasThirdAxisVector ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
-        [ a owl:Restriction ;
-            owl:onClass mdo:CoordinateVector ;
             owl:onProperty cso:hasThirdAxisVector ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
         [ a owl:Restriction ;
@@ -1561,7 +1384,27 @@ mdo:Basis a owl:Class ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
         [ a owl:Restriction ;
             owl:onClass mdo:CoordinateVector ;
+            owl:onProperty cso:hasThirdAxisVector ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onClass mdo:CoordinateVector ;
+            owl:onProperty cso:hasFirstAxisVector ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onClass mdo:CoordinateVector ;
             owl:onProperty cso:hasSecondAxisVector ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onClass mdo:CoordinateVector ;
+            owl:onProperty cso:hasSecondAxisVector ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onClass mdo:CoordinateVector ;
+            owl:onProperty cso:hasThirdAxisVector ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onClass mdo:CoordinateVector ;
+            owl:onProperty cso:hasThirdAxisVector ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
         [ a owl:Restriction ;
             owl:onClass mdo:CoordinateVector ;
@@ -1573,11 +1416,7 @@ mdo:Basis a owl:Class ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
         [ a owl:Restriction ;
             owl:onClass mdo:CoordinateVector ;
-            owl:onProperty cso:hasSecondAxisVector ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
-        [ a owl:Restriction ;
-            owl:onClass mdo:CoordinateVector ;
-            owl:onProperty cso:hasThirdAxisVector ;
+            owl:onProperty cso:hasFirstAxisVector ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
         [ a owl:Restriction ;
             owl:onClass mdo:CoordinateVector ;
@@ -1594,20 +1433,6 @@ mdo:Site a owl:Class ;
     rdfs:subClassOf [ a owl:Class ;
             owl:intersectionOf ( [ a owl:Restriction ;
                         owl:allValuesFrom mdo:CoordinateVector ;
-                        owl:onProperty mdo:hasFractionalCoordinates ] [ a owl:Restriction ;
-                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                        owl:onClass mdo:CoordinateVector ;
-                        owl:onProperty mdo:hasFractionalCoordinates ] ) ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:allValuesFrom mdo:CoordinateVector ;
-                        owl:onProperty mdo:hasFractionalCoordinates ] [ a owl:Restriction ;
-                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                        owl:onClass mdo:CoordinateVector ;
-                        owl:onProperty mdo:hasFractionalCoordinates ] ) ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:allValuesFrom mdo:CoordinateVector ;
                         owl:onProperty mdo:hasCartesianCoordinates ] [ a owl:Restriction ;
                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                         owl:onClass mdo:CoordinateVector ;
@@ -1643,24 +1468,38 @@ mdo:Site a owl:Class ;
         [ a owl:Class ;
             owl:intersectionOf ( [ a owl:Restriction ;
                         owl:allValuesFrom mdo:CoordinateVector ;
-                        owl:onProperty mdo:hasFractionalCoordinates ] [ a owl:Restriction ;
-                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                        owl:onClass mdo:CoordinateVector ;
-                        owl:onProperty mdo:hasFractionalCoordinates ] ) ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:allValuesFrom mdo:CoordinateVector ;
-                        owl:onProperty mdo:hasFractionalCoordinates ] [ a owl:Restriction ;
-                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                        owl:onClass mdo:CoordinateVector ;
-                        owl:onProperty mdo:hasFractionalCoordinates ] ) ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:allValuesFrom mdo:CoordinateVector ;
                         owl:onProperty mdo:hasCartesianCoordinates ] [ a owl:Restriction ;
                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                         owl:onClass mdo:CoordinateVector ;
-                        owl:onProperty mdo:hasCartesianCoordinates ] ) ] ;
+                        owl:onProperty mdo:hasCartesianCoordinates ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:CoordinateVector ;
+                        owl:onProperty mdo:hasFractionalCoordinates ] [ a owl:Restriction ;
+                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onClass mdo:CoordinateVector ;
+                        owl:onProperty mdo:hasFractionalCoordinates ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:CoordinateVector ;
+                        owl:onProperty mdo:hasFractionalCoordinates ] [ a owl:Restriction ;
+                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onClass mdo:CoordinateVector ;
+                        owl:onProperty mdo:hasFractionalCoordinates ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:CoordinateVector ;
+                        owl:onProperty mdo:hasFractionalCoordinates ] [ a owl:Restriction ;
+                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onClass mdo:CoordinateVector ;
+                        owl:onProperty mdo:hasFractionalCoordinates ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:CoordinateVector ;
+                        owl:onProperty mdo:hasFractionalCoordinates ] [ a owl:Restriction ;
+                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onClass mdo:CoordinateVector ;
+                        owl:onProperty mdo:hasFractionalCoordinates ] ) ] ;
     skos:defintion "A site is a point in a lattice."@en .
 
 mdo:Occupancy a owl:Class ;
@@ -1673,24 +1512,6 @@ mdo:Occupancy a owl:Class ;
                         owl:onProperty mdo:hasSpecies ] ) ],
         [ a owl:Class ;
             owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty mdo:hasSpecies ;
-                        owl:someValuesFrom mdo:Species ] [ a owl:Restriction ;
-                        owl:allValuesFrom mdo:Species ;
-                        owl:onProperty mdo:hasSpecies ] ) ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty mdo:hasSite ;
-                        owl:someValuesFrom mdo:Site ] [ a owl:Restriction ;
-                        owl:allValuesFrom mdo:Site ;
-                        owl:onProperty mdo:hasSite ] ) ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty mdo:hasSite ;
-                        owl:someValuesFrom mdo:Site ] [ a owl:Restriction ;
-                        owl:allValuesFrom mdo:Site ;
-                        owl:onProperty mdo:hasSite ] ) ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
                         owl:onProperty mdo:hasSite ;
                         owl:someValuesFrom mdo:Site ] [ a owl:Restriction ;
                         owl:allValuesFrom mdo:Site ;
@@ -1703,10 +1524,28 @@ mdo:Occupancy a owl:Class ;
                         owl:onProperty mdo:hasSpecies ] ) ],
         [ a owl:Class ;
             owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty mdo:hasSite ;
+                        owl:someValuesFrom mdo:Site ] [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:Site ;
+                        owl:onProperty mdo:hasSite ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
                         owl:onProperty mdo:hasSpecies ;
                         owl:someValuesFrom mdo:Species ] [ a owl:Restriction ;
                         owl:allValuesFrom mdo:Species ;
                         owl:onProperty mdo:hasSpecies ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty mdo:hasSpecies ;
+                        owl:someValuesFrom mdo:Species ] [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:Species ;
+                        owl:onProperty mdo:hasSpecies ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty mdo:hasSite ;
+                        owl:someValuesFrom mdo:Site ] [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:Site ;
+                        owl:onProperty mdo:hasSite ] ) ],
         [ a owl:Class ;
             owl:intersectionOf ( [ a owl:Restriction ;
                         owl:onProperty mdo:hasSite ;
@@ -1761,9 +1600,31 @@ mdo:PointGroup a owl:Class ;
             owl:onProperty mdo:PointGroupHMName ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
         [ a owl:Restriction ;
+            owl:onProperty cso:isPointGroupOf ;
+            owl:someValuesFrom mdo:SpaceGroup ],
+        [ a owl:Restriction ;
             owl:onDataRange xsd:string ;
             owl:onProperty mdo:PointGroupHMName ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onProperty cso:isPointGroupOf ;
+            owl:someValuesFrom mdo:SpaceGroup ],
+        [ a owl:Restriction ;
+            owl:onProperty cso:isPointGroupOf ;
+            owl:someValuesFrom cso:CrystalSystem ],
+        [ a owl:Restriction ;
+            owl:onProperty cso:isPointGroupOf ;
+            owl:someValuesFrom cso:CrystalSystem ],
+        [ a owl:Restriction ;
+            owl:onProperty cso:isPointGroupOf ;
+            owl:someValuesFrom cso:CrystalSystem ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:string ;
+            owl:onProperty mdo:PointGroupHMName ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onProperty cso:isPointGroupOf ;
+            owl:someValuesFrom mdo:SpaceGroup ],
         [ a owl:Restriction ;
             owl:onDataRange xsd:string ;
             owl:onProperty mdo:PointGroupHMName ;
@@ -1773,19 +1634,167 @@ mdo:PointGroup a owl:Class ;
             owl:onProperty mdo:PointGroupHMName ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
         [ a owl:Restriction ;
+            owl:onProperty cso:isPointGroupOf ;
+            owl:someValuesFrom cso:CrystalSystem ],
+        [ a owl:Restriction ;
+            owl:onProperty cso:isPointGroupOf ;
+            owl:someValuesFrom mdo:SpaceGroup ],
+        [ a owl:Restriction ;
+            owl:onProperty cso:isPointGroupOf ;
+            owl:someValuesFrom mdo:SpaceGroup ],
+        [ a owl:Restriction ;
+            owl:onProperty cso:isPointGroupOf ;
+            owl:someValuesFrom cso:CrystalSystem ] .
+
+cso:CrystalSystem a owl:Class ;
+    rdfs:label "Crystal System"@en ;
+    rdfs:subClassOf [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:PointGroup ;
+                        owl:onProperty mdo:hasPointGroup ] [ a owl:Restriction ;
+                        owl:onClass mdo:PointGroup ;
+                        owl:onProperty mdo:hasPointGroup ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:PointGroup ;
+                        owl:onProperty mdo:hasPointGroup ] [ a owl:Restriction ;
+                        owl:onClass mdo:PointGroup ;
+                        owl:onProperty mdo:hasPointGroup ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:PointGroup ;
+                        owl:onProperty mdo:hasPointGroup ] [ a owl:Restriction ;
+                        owl:onClass mdo:PointGroup ;
+                        owl:onProperty mdo:hasPointGroup ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:PointGroup ;
+                        owl:onProperty mdo:hasPointGroup ] [ a owl:Restriction ;
+                        owl:onClass mdo:PointGroup ;
+                        owl:onProperty mdo:hasPointGroup ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:PointGroup ;
+                        owl:onProperty mdo:hasPointGroup ] [ a owl:Restriction ;
+                        owl:onClass mdo:PointGroup ;
+                        owl:onProperty mdo:hasPointGroup ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ) ] ;
+    skos:defintion "A classification scheme for crystal structures on the basis of unit cell geometry."@en .
+
+mdo:SpaceGroup a owl:Class ;
+    rdfs:label "Space Group"@en ;
+    rdfs:comment "A space group is the symmetry group of a three-dimensional crystal pattern is called its space group."@en,
+        "Combination of Bravais lattice, point groups, two symmetry operations (screw rotation and glide reflection) results in space groups"@en,
+        """The nomenclature consists of a maximum of four symbols for each space group, e.g., Fm-3m(Cubic)
+First symbol defines the Bravais lattice centering, here is the cubic centering, C. The next three symbols defines symmetry elements with respect to viewing directions, which are different from crystal system to crystal system."""@en ;
+    rdfs:seeAlso "International Tables for Crystallography, Volume !, Fourth, revised edition, Section 8.1.5."@en ;
+    rdfs:subClassOf [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty mdo:hasPointGroup ;
+                        owl:someValuesFrom mdo:PointGroup ] [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:PointGroup ;
+                        owl:onProperty mdo:hasPointGroup ] ) ],
+        [ a owl:Restriction ;
+            owl:onProperty cso:isSpaceGroupOf ;
+            owl:someValuesFrom cso:CrystalStructure ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty mdo:hasPointGroup ;
+                        owl:someValuesFrom mdo:PointGroup ] [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:PointGroup ;
+                        owl:onProperty mdo:hasPointGroup ] ) ],
+        [ a owl:Restriction ;
             owl:onDataRange xsd:string ;
-            owl:onProperty mdo:PointGroupHMName ;
+            owl:onProperty mdo:SpaceGroupSymbol ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:integer ;
+            owl:onProperty mdo:SpaceGroupID ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:integer ;
+            owl:onProperty mdo:SpaceGroupID ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:string ;
+            owl:onProperty mdo:SpaceGroupSymbol ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onProperty cso:isSpaceGroupOf ;
+            owl:someValuesFrom cso:CrystalStructure ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:integer ;
+            owl:onProperty mdo:SpaceGroupID ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:string ;
+            owl:onProperty mdo:SpaceGroupSymbol ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:string ;
+            owl:onProperty mdo:SpaceGroupSymbol ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty mdo:hasPointGroup ;
+                        owl:someValuesFrom mdo:PointGroup ] [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:PointGroup ;
+                        owl:onProperty mdo:hasPointGroup ] ) ],
+        [ a owl:Restriction ;
+            owl:onProperty cso:isSpaceGroupOf ;
+            owl:someValuesFrom cso:CrystalStructure ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty mdo:hasPointGroup ;
+                        owl:someValuesFrom mdo:PointGroup ] [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:PointGroup ;
+                        owl:onProperty mdo:hasPointGroup ] ) ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:integer ;
+            owl:onProperty mdo:SpaceGroupID ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onProperty cso:isSpaceGroupOf ;
+            owl:someValuesFrom cso:CrystalStructure ],
+        [ a owl:Restriction ;
+            owl:onProperty cso:isSpaceGroupOf ;
+            owl:someValuesFrom cso:CrystalStructure ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:string ;
+            owl:onProperty mdo:SpaceGroupSymbol ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty mdo:hasPointGroup ;
+                        owl:someValuesFrom mdo:PointGroup ] [ a owl:Restriction ;
+                        owl:allValuesFrom mdo:PointGroup ;
+                        owl:onProperty mdo:hasPointGroup ] ) ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:integer ;
+            owl:onProperty mdo:SpaceGroupID ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] .
 
 mdo:CoordinateVector a owl:Class ;
     rdfs:label "Coordinate Vector"@en ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onDataRange xsd:double ;
-            owl:onProperty mdo:Z_axisCoordinate ;
+            owl:onProperty mdo:X_axisCoordinate ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
         [ a owl:Restriction ;
             owl:onDataRange xsd:double ;
-            owl:onProperty mdo:X_axisCoordinate ;
+            owl:onProperty mdo:Y_axisCoordinate ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty mdo:Y_axisCoordinate ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty mdo:Y_axisCoordinate ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
         [ a owl:Restriction ;
             owl:onDataRange xsd:double ;
@@ -1801,18 +1810,6 @@ mdo:CoordinateVector a owl:Class ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
         [ a owl:Restriction ;
             owl:onDataRange xsd:double ;
-            owl:onProperty mdo:Y_axisCoordinate ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
-        [ a owl:Restriction ;
-            owl:onDataRange xsd:double ;
-            owl:onProperty mdo:Z_axisCoordinate ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
-        [ a owl:Restriction ;
-            owl:onDataRange xsd:double ;
-            owl:onProperty mdo:Z_axisCoordinate ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
-        [ a owl:Restriction ;
-            owl:onDataRange xsd:double ;
             owl:onProperty mdo:X_axisCoordinate ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
         [ a owl:Restriction ;
@@ -1825,7 +1822,7 @@ mdo:CoordinateVector a owl:Class ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
         [ a owl:Restriction ;
             owl:onDataRange xsd:double ;
-            owl:onProperty mdo:Y_axisCoordinate ;
+            owl:onProperty mdo:X_axisCoordinate ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
         [ a owl:Restriction ;
             owl:onDataRange xsd:double ;
@@ -1833,11 +1830,15 @@ mdo:CoordinateVector a owl:Class ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
         [ a owl:Restriction ;
             owl:onDataRange xsd:double ;
-            owl:onProperty mdo:Y_axisCoordinate ;
+            owl:onProperty mdo:Z_axisCoordinate ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
         [ a owl:Restriction ;
             owl:onDataRange xsd:double ;
-            owl:onProperty mdo:X_axisCoordinate ;
+            owl:onProperty mdo:Z_axisCoordinate ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:double ;
+            owl:onProperty mdo:Z_axisCoordinate ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ;
     skos:defintion "A coordinate vector according to standard basis, i.e., e_x (1, 0, 0), e_y(0, 1, 0), and e_z (0, 0, 1)."@en .
 
