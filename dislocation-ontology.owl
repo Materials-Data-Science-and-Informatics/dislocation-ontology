@@ -482,6 +482,15 @@
     
 
 
+    <!-- https://purls.helmholtz-metadaten.de/cdo#CrystallographicDefect -->
+
+    <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/cdo#CrystallographicDefect">
+        <rdfs:comment xml:lang="en">Lattice irregularity having one or more of its dimensions on the order of an atomic diameter.</rdfs:comment>
+        <rdfs:label xml:lang="en">Crystallographic Defect</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://purls.helmholtz-metadaten.de/cso#CrystalStructure -->
 
     <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/cso#CrystalStructure">
@@ -616,6 +625,13 @@
                 <owl:allValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#ShapeFunction"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#slipArea"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">The numerical representation of dislocation line as a mathematical line, e.g. an oriented curve, is being discretized into the number of segments.</rdfs:comment>
         <rdfs:label xml:lang="en">Discretized Line</rdfs:label>
     </owl:Class>
@@ -626,6 +642,7 @@
 
     <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/diso#Dislocation">
         <owl:equivalentClass rdf:resource="https://purls.helmholtz-metadaten.de/diso#LineDefect"/>
+        <rdfs:subClassOf rdf:resource="https://purls.helmholtz-metadaten.de/cdo#CrystallographicDefect"/>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
