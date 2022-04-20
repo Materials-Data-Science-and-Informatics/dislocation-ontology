@@ -224,6 +224,7 @@
 
     <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/cso#hasPositionVector">
         <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/cso#PositionVector"/>
+        <rdfs:label xml:lang="en">has position vector</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -669,20 +670,8 @@
     <owl:Class rdf:about="http://qudt.org/schema/qudt/QuantityValue">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://qudt.org/schema/qudt/hasQuantityKind"/>
-                <owl:allValuesFrom rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://qudt.org/schema/qudt/unit"/>
                 <owl:allValuesFrom rdf:resource="http://qudt.org/schema/qudt/Unit"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://qudt.org/schema/qudt/hasQuantityKind"/>
-                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <qudt:description rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">A &lt;i&gt;Quantity Value&lt;/i&gt; expresses the magnitude and kind of a quantity and is given by the product of a numerical value &lt;code&gt;n&lt;/code&gt; and a unit of measure &lt;code&gt;U&lt;/code&gt;. The number multiplying the unit is referred to as the numerical value of the quantity expressed in that unit. Refer to &lt;a href=&quot;http://physics.nist.gov/Pubs/SP811/sec07.html&quot;&gt;NIST SP 811 section 7&lt;/a&gt; for more on quantity values.</qudt:description>
@@ -696,12 +685,6 @@
     <!-- http://qudt.org/schema/qudt/Unit -->
 
     <owl:Class rdf:about="http://qudt.org/schema/qudt/Unit">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://qudt.org/schema/qudt/hasQuantityKind"/>
-                <owl:allValuesFrom rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <qudt:description rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">A unit of measure, or unit, is a particular quantity value that has been chosen as a scale for measuring other quantities the same kind (more generally of equivalent dimension). For example, the meter is a quantity of length that has been rigorously defined and standardized by the BIPM (International Board of Weights and Measures). Any measurement of the length can be expressed as a number multiplied by the unit meter. More formally, the value of a physical quantity Q with respect to a unit (U) is expressed as the scalar multiple of a real number (n) and U, as  \(Q = nU\).</qudt:description>
         <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.0/schema/qudt"/>
         <rdfs:isDefinedBy rdf:resource="http://qudt.org/schema/qudt"/>
@@ -1083,8 +1066,8 @@
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Vector components/vector coordinates of particular basis. It has relation to a specific basis.</rdfs:comment>
         <rdfs:label xml:lang="en">Vector Component of Basis</rdfs:label>
-        <skos:defintion xml:lang="en">Vector components/vector coordinates of particular basis. It has relation to a specific basis.</skos:defintion>
     </owl:Class>
     
 
@@ -1192,6 +1175,18 @@
     <owl:Class rdf:about="https://w3id.org/mdo/structure/PointGroup">
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/cso#isPointGroupOf"/>
+                <owl:someValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/cso#CrystalSystem"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/cso#isPointGroupOf"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/mdo/structure/SpaceGroup"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/mdo/structure/PointGroupHMName"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
@@ -1260,6 +1255,12 @@
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/cso#isSpaceGroupOf"/>
+                <owl:someValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/cso#CrystalStructure"/>
+            </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
