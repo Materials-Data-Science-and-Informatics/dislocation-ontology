@@ -11,8 +11,8 @@ DISO is an ontology that defines the linear defect concepts and relations in cry
     * For generating the RDF graph from the given [data](/data/), we use the [RDFLib](https://github.com/RDFLib/rdflib) python library.
     * To generate the nickel crystal structure, the script is in [here](/python-script/MaterialProject/) and `python map_data.py`
     * To generate the dislocation microstructure of nickel material, the script is in [here](/python-script/modelib/) and `python map_data.py`
-* [CSO](/crystal-structure-ontology) is a folder containing the details of crystal structure ontology.
-* [CDO](/crystallographic-defect-ontology) is  folder containing the details of crystallographic defect ontology.
+* [crystal-structure-ontology](/crystal-structure-ontology) is a folder containing the details of crystal structure ontology.
+* [crystallographic-defect-ontology](/crystallographic-defect-ontology) is  folder containing the details of crystallographic defect ontology.
 
 ### Acknowledgments
 * European Research Council through the ERC Grant Agreement No. 759419 MuDiLingo (”A Multiscale Dislocation Language for Data-Driven Materials Science”)
