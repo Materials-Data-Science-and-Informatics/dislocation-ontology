@@ -920,7 +920,13 @@
     <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/diso#Segment">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasNode"/>
+                <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasEndNode"/>
+                <owl:allValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#Node"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasStartNode"/>
                 <owl:allValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#Node"/>
             </owl:Restriction>
         </rdfs:subClassOf>
