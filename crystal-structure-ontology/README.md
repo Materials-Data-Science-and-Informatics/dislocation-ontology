@@ -4,8 +4,7 @@ Crystal Structure Ontology (CSO) is an ontology developed to represent crystallo
 The standard coordinate system is defined by `MDO:Basis` and `MDO:CoordinateVector` classes that CSO reuses. 
 The motif/base is an arrangement of chemical species in the crystal structure reuses `MDO:Occupancy`, `MDO:Site`, and `MDO:Species`. 
 Subsequently, to define the point groups and space groups of a crystal structure, `MDO:PointGroup` and `MDO:SpaceGroup` are reused. Lastly, to define the unit quantity of a property in CSO, the `QUDT:Quantity`, `QUDT:QuantityKind`, and `QUDT:QuantityValue` classes are reused.
-
-![CSO-classes](https://user-images.githubusercontent.com/71790028/164011958-bd3ecfc1-62e4-4b55-bead-8c5c163a8f41.png)
+![CSO-classes-2](https://user-images.githubusercontent.com/71790028/165483629-0f66d3a9-cde7-4a35-a7b5-17d35429df02.png)
 
 
 ### Project Structure
