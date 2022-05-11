@@ -1,0 +1,1519 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "de", "en", "undefined" ],
+    "baseIris" : [ "https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl", "http://www.w3.org/1999/02/22-rdf-syntax-ns", "https://purls.helmholtz-metadaten.de/cdo", "http://www.w3.org/2002/07/owl", "https://purls.helmholtz-metadaten.de/cso", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2001/XMLSchema", "https://purls.helmholtz-metadaten.de/diso" ],
+    "title" : {
+      "en" : "Dislocation Ontology"
+    },
+    "iri" : "https://purls.helmholtz-metadaten.de/diso",
+    "version" : "1.0",
+    "author" : [ "Ahmad Zainul Ihsan" ],
+    "labels" : {
+      "en" : "Dislocation Ontology"
+    },
+    "other" : {
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "http://creativecommons.org/licenses/by/3.0/",
+        "type" : "iri"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "Ahmad Zainul Ihsan",
+        "type" : "label"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Said Fathalla",
+        "type" : "label"
+      }, {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Stefan Sandfeld",
+        "type" : "label"
+      } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "en",
+        "value" : "21.03.2022",
+        "type" : "label"
+      } ],
+      "preferredNamespacePrefix" : [ {
+        "identifier" : "preferredNamespacePrefix",
+        "language" : "undefined",
+        "value" : "DISO",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "1.0",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "Dislocation Ontology",
+        "type" : "label"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://github.com/Materials-Data-Science-and-Informatics/dislocation-ontology",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "0",
+    "type" : "owl:Class"
+  }, {
+    "id" : "15",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "22",
+    "type" : "owl:Class"
+  }, {
+    "id" : "27",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "28",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "17",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "8",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "29",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "30",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "32",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "4",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "35",
+    "type" : "owl:Class"
+  }, {
+    "id" : "36",
+    "type" : "owl:Class"
+  }, {
+    "id" : "37",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "40",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "43",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "24",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "50",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "51",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "20",
+    "type" : "owl:Class"
+  }, {
+    "id" : "21",
+    "type" : "owl:Class"
+  }, {
+    "id" : "44",
+    "type" : "owl:Class"
+  }, {
+    "id" : "42",
+    "type" : "owl:Class"
+  }, {
+    "id" : "61",
+    "type" : "owl:Class"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "31",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:equivalentClass"
+  }, {
+    "id" : "46",
+    "type" : "owl:Class"
+  }, {
+    "id" : "79",
+    "type" : "owl:Class"
+  }, {
+    "id" : "12",
+    "type" : "owl:Class"
+  }, {
+    "id" : "52",
+    "type" : "owl:Class"
+  }, {
+    "id" : "71",
+    "type" : "owl:Class"
+  }, {
+    "id" : "3",
+    "type" : "owl:Class"
+  }, {
+    "id" : "45",
+    "type" : "owl:Class"
+  }, {
+    "id" : "88",
+    "type" : "owl:Class"
+  }, {
+    "id" : "38",
+    "type" : "owl:Class"
+  }, {
+    "id" : "82",
+    "type" : "owl:equivalentClass"
+  }, {
+    "id" : "49",
+    "type" : "owl:Class"
+  }, {
+    "id" : "25",
+    "type" : "owl:Class"
+  }, {
+    "id" : "62",
+    "type" : "owl:Class"
+  }, {
+    "id" : "33",
+    "type" : "owl:Class"
+  }, {
+    "id" : "81",
+    "type" : "owl:Class"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "59",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "https://purls.helmholtz-metadaten.de/diso#EdgeDislocation",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/diso",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "EdgeDislocation"
+    },
+    "id" : "0",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "15",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/diso#LatticePoint",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/diso",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LatticePoint",
+      "en" : "Lattice Point"
+    },
+    "comment" : {
+      "en" : "Lattice points are the points where atoms or molecules are located"
+    },
+    "id" : "22"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#double",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "27",
+    "label" : {
+      "IRI-based" : "double"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "28",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "17",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "8",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "29",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "instances" : 0,
+    "union" : [ "31", "25" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "30"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "32",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "4",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/diso#SlipPlane",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/diso",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SlipPlane",
+      "en" : "Slip Plane"
+    },
+    "comment" : {
+      "en" : "Slip plane is normally the plane with the highest density of atoms, i.e. those which are most widely spaced."
+    },
+    "id" : "35",
+    "superClasses" : [ "20" ]
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/diso#DiscretizedLine",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/diso",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DiscretizedLine",
+      "en" : "Discretized Line"
+    },
+    "comment" : {
+      "en" : "The numerical representation of dislocation line as a mathematical line, e.g. an oriented curve, is being discretized into the number of segments."
+    },
+    "id" : "36"
+  }, {
+    "instances" : 0,
+    "union" : [ "38", "35" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "37"
+  }, {
+    "instances" : 0,
+    "union" : [ "38", "35" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "40"
+  }, {
+    "instances" : 0,
+    "union" : [ "44", "45" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "43"
+  }, {
+    "instances" : 0,
+    "union" : [ "46", "20" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "24"
+  }, {
+    "instances" : 0,
+    "union" : [ "25", "46", "20" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "50"
+  }, {
+    "instances" : 0,
+    "union" : [ "46", "52" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "51"
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/diso#LatticePlane",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/diso",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LatticePlane",
+      "en" : "Lattice Plane"
+    },
+    "subClasses" : [ "35" ],
+    "comment" : {
+      "en" : "Lattice plane, forms an infinitely stretched plane (characterized through a plane normal) that cuts through lattice points such that again a regular arrangement of lattice points in the plane occurs."
+    },
+    "id" : "20",
+    "superClasses" : [ "21" ]
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/diso#FamilyOfCrystalPlane",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/diso",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FamilyOfCrystalPlane",
+      "en" : "Family of Crystal Plane"
+    },
+    "subClasses" : [ "20" ],
+    "comment" : {
+      "en" : "a set of symmetrically equivalent planes in the lattice."
+    },
+    "id" : "21"
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/diso#TransmissionElectronMicroscopy",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/diso",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TransmissionElectronMicroscopy",
+      "en" : "Transmission Electron Microscopy"
+    },
+    "comment" : {
+      "en" : "Transmission electron microscopy (TEM) is a microscopy technique in which a beam of electrons is transmitted through a specimen to form an image. The specimen is most often an ultrathin section less than 100 nm thick or a suspension on a grid."
+    },
+    "id" : "44"
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/diso#Origin",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/diso",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Origin",
+      "en" : "Origin"
+    },
+    "comment" : {
+      "en" : "Origin is fixed point which is needed by vector to identify other points in the space relatives to its origin."
+    },
+    "id" : "42",
+    "superClasses" : [ "33" ]
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/diso#SlipDirection",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/diso",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SlipDirection",
+      "en" : "Slip Direction"
+    },
+    "comment" : {
+      "en" : "The direction in the slip plane corresponding to one of the shortest lattice translation vectors."
+    },
+    "id" : "61",
+    "superClasses" : [ "25" ]
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/diso#ScrewDislocation",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/diso",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ScrewDislocation"
+    },
+    "id" : "6",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/diso#SlipPlaneNormal",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/diso",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SlipPlaneNormal",
+      "en" : "Slip Plane Normal"
+    },
+    "comment" : {
+      "en" : "Unit normal vector of slip planes"
+    },
+    "id" : "31",
+    "superClasses" : [ "62" ]
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/diso#Dislocation",
+    "equivalent" : [ "82" ],
+    "baseIri" : "https://purls.helmholtz-metadaten.de/diso",
+    "instances" : 0,
+    "label" : {
+      "de" : "Versetzung",
+      "IRI-based" : "Dislocation",
+      "en" : "Dislocation"
+    },
+    "subClasses" : [ "0", "6" ],
+    "comment" : {
+      "en" : "Linear or one-dimensional defect around which some of the atoms are misaligned."
+    },
+    "attributes" : [ "equivalent" ],
+    "id" : "1",
+    "superClasses" : [ "71" ]
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/cso#Lattice",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/cso",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Lattice",
+      "en" : "Lattice"
+    },
+    "comment" : {
+      "en" : "A mathematical repsentation to represent the periodicity of a crystal."
+    },
+    "attributes" : [ "external" ],
+    "id" : "46"
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/diso#LineSense",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/diso",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LineSense",
+      "en" : "Line Sense"
+    },
+    "comment" : {
+      "en" : "Sense that characterizes a directed line (has a start and an end)."
+    },
+    "id" : "79"
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/diso#Node",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/diso",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Node",
+      "en" : "Node"
+    },
+    "comment" : {
+      "en" : "Node of a segment"
+    },
+    "id" : "12"
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/cso#CrystalStructure",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/cso",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CrystalStructure",
+      "en" : "Crystal Structure"
+    },
+    "comment" : {
+      "en" : "A crystal structure is described by both of the lattice geometry and atomic arrangements within the unit cell."
+    },
+    "attributes" : [ "external" ],
+    "id" : "52"
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/cdo#CrystallographicDefect",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/cdo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CrystallographicDefect",
+      "en" : "Crystallographic Defect"
+    },
+    "subClasses" : [ "1" ],
+    "comment" : {
+      "en" : "Lattice irregularity having one or more of its dimensions on the order of an atomic diameter."
+    },
+    "attributes" : [ "external" ],
+    "id" : "71"
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/diso#FamilyOfCrystalDirection",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/diso",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FamilyOfCrystalDirection",
+      "en" : "Family of Crystal Direction"
+    },
+    "subClasses" : [ "25" ],
+    "comment" : {
+      "en" : "a set of symmetrically equivalent directions in the lattice."
+    },
+    "id" : "3"
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/diso#FieldIonMicroscopy",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/diso",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FieldIonMicroscopy",
+      "en" : "Field Ion Microscopy"
+    },
+    "comment" : {
+      "en" : "Field Ion Microscopy (FIM) is a type of microscopy techniques that can be used to image the arrangement of atoms at the surface of a sharp metal tip."
+    },
+    "id" : "45"
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/diso#Line",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/diso",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Line",
+      "en" : "Line"
+    },
+    "comment" : {
+      "en" : "Mathematical representation of dislocation as 'Line'. An instance of mathematical representation of dislocation line is an oriented curve paramterized by its arc length."
+    },
+    "id" : "88"
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/diso#SlipSystem",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/diso",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SlipSystem",
+      "en" : "Slip System"
+    },
+    "comment" : {
+      "en" : "Slip system is defined as the set of slip planes with the same unit normal vector and the same slip direction."
+    },
+    "id" : "38"
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/diso#LineDefect",
+    "equivalent" : [ "1" ],
+    "baseIri" : "https://purls.helmholtz-metadaten.de/diso",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LineDefect",
+      "en" : "Line Defect"
+    },
+    "comment" : {
+      "en" : "Linear or one-dimensional defect around which some of the atoms are misaligned."
+    },
+    "attributes" : [ "equivalent" ],
+    "id" : "82"
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/diso#ShapeFunction",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/diso",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ShapeFunction",
+      "en" : "Shape Function"
+    },
+    "comment" : {
+      "en" : "The shape function is the function which interpolates the solution between the discrete values obtained at the mesh nodes. In the dicretized dislocation, the shape function detemines the shape of segment, ultimately determines the whole discretized line shape. Examples of shape function that is used to discretized the dislocation are, circular, elliptic, helical, linear, cubic, and quintic."
+    },
+    "id" : "49"
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/diso#LatticeDirection",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/diso",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LatticeDirection",
+      "en" : "Lattice Direction"
+    },
+    "subClasses" : [ "61" ],
+    "comment" : {
+      "en" : "A direction inside the lattice that connecting two lattice points."
+    },
+    "id" : "25",
+    "superClasses" : [ "3", "62" ]
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/cso#Vector",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/cso",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Vector",
+      "en" : "Vector"
+    },
+    "subClasses" : [ "31", "59", "25", "33" ],
+    "comment" : {
+      "en" : "(Euclidean) vector used to represent quantities that both magnitude and direction."
+    },
+    "attributes" : [ "external" ],
+    "id" : "62"
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/cso#PositionVector",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/cso",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PositionVector",
+      "en" : "Position Vector"
+    },
+    "subClasses" : [ "42" ],
+    "comment" : {
+      "en" : "Position vector is a Euclidean vector that represents the position of a point P in space in relation to an arbitrary reference origin O."
+    },
+    "attributes" : [ "external" ],
+    "id" : "33",
+    "superClasses" : [ "62" ]
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/diso#LatticeDisplacement",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/diso",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LatticeDisplacement",
+      "en" : "Lattice Displacement"
+    },
+    "comment" : {
+      "en" : "The displacement of atoms from its perfect lattice sites due to the existence of defects, e.g., (point defect, line defect, and grain boundary)"
+    },
+    "id" : "81"
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/diso#Segment",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/diso",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Segment",
+      "en" : "Segment"
+    },
+    "comment" : {
+      "en" : "A segment is a part of a line that is bounded by two distinct end points, and contains every point on the line that is between its endpoints."
+    },
+    "id" : "11"
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/diso#BurgersVector",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/diso",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "BurgersVector",
+      "en" : "Burgers Vector"
+    },
+    "comment" : {
+      "en" : "An elementary unit (length order of lattice parameter) of lattice translation."
+    },
+    "id" : "59",
+    "superClasses" : [ "62" ]
+  } ],
+  "property" : [ {
+    "id" : "2",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "5",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "7",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "10",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "14",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "16",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "19",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "23",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "18",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "34",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "39",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "41",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "47",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "48",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "53",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "54",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "55",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "56",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "58",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "60",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "63",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "64",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "65",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "66",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "67",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "68",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "69",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "70",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "72",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "73",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "74",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "75",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "76",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "77",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "78",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "80",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "83",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "84",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "85",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "86",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "26",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "13",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "87",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "9",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "90",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "91",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "92",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "93",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "94",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "95",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "96",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "97",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "57",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "98",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "99",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "100",
+    "type" : "owl:objectProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "https://purls.helmholtz-metadaten.de/diso#familyDirectionMillerIndice",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/diso",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "familyDirectionMillerIndice",
+      "en" : "family direction miller indice"
+    },
+    "cardinality" : "1",
+    "domain" : "3",
+    "comment" : {
+      "en" : "familyDirectionMillerIndice reprersent a set of miller indices of lattice direction in string."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "2"
+  }, {
+    "range" : "1",
+    "domain" : "6",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "5"
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/diso#hasMathematicalRepresentation",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/diso",
+    "range" : "8",
+    "label" : {
+      "IRI-based" : "hasMathematicalRepresentation",
+      "en" : "has mathematical representation"
+    },
+    "superproperty" : [ "9" ],
+    "domain" : "1",
+    "comment" : {
+      "en" : "relates the entity with its mathematical representation"
+    },
+    "attributes" : [ "object" ],
+    "id" : "7"
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/diso#hasStartNode",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/diso",
+    "range" : "12",
+    "label" : {
+      "IRI-based" : "hasStartNode",
+      "en" : "has start node"
+    },
+    "superproperty" : [ "13" ],
+    "domain" : "11",
+    "comment" : {
+      "en" : "Sub-property of hasNode that relates the segment with the start node"
+    },
+    "attributes" : [ "object" ],
+    "id" : "10"
+  }, {
+    "range" : "1",
+    "domain" : "0",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "14"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#topObjectProperty",
+    "baseIri" : "http://www.w3.org/2002/07/owl",
+    "range" : "17",
+    "label" : {
+      "IRI-based" : "topObjectProperty"
+    },
+    "domain" : "17",
+    "subproperty" : [ "18" ],
+    "attributes" : [ "object", "external" ],
+    "id" : "16"
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/diso#hasFamilyCrystalPlane",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/diso",
+    "range" : "21",
+    "label" : {
+      "IRI-based" : "hasFamilyCrystalPlane",
+      "en" : "has family crystal plane"
+    },
+    "domain" : "20",
+    "comment" : {
+      "en" : "hasFamilyCrystalPlane represents the relationship between lattice Plane and family of crystal plane."
+    },
+    "attributes" : [ "object" ],
+    "id" : "19"
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/diso#hasLatticeDirection",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/diso",
+    "range" : "25",
+    "label" : {
+      "IRI-based" : "hasLatticeDirection",
+      "en" : "has lattice direction"
+    },
+    "domain" : "24",
+    "subproperty" : [ "26" ],
+    "comment" : {
+      "en" : "hasLatticeDirection represents the relationship between a lattice or a lattice plane and lattice directions."
+    },
+    "attributes" : [ "object" ],
+    "id" : "23"
+  }, {
+    "iri" : "https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl#hasPositionVector",
+    "baseIri" : "https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl",
+    "range" : "33",
+    "label" : {
+      "IRI-based" : "hasPositionVector",
+      "en" : "has position vector"
+    },
+    "superproperty" : [ "16" ],
+    "domain" : "15",
+    "attributes" : [ "object", "external" ],
+    "id" : "18"
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/diso#directionMillerIndice",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/diso",
+    "range" : "29",
+    "label" : {
+      "IRI-based" : "directionMillerIndice",
+      "en" : "direction miller indice"
+    },
+    "cardinality" : "1",
+    "domain" : "30",
+    "comment" : {
+      "en" : "directionMillerIndice represents Miller indice of lattice direction in string."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "34"
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/diso#planeMillerIndice",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/diso",
+    "range" : "28",
+    "label" : {
+      "IRI-based" : "planeMillerIndice",
+      "en" : "plane miller indice"
+    },
+    "cardinality" : "1",
+    "domain" : "20",
+    "comment" : {
+      "en" : "planeMillerIndice represents Miller indice of lattice plane in string."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "39"
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/diso#hasOrigin",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/diso",
+    "range" : "42",
+    "label" : {
+      "IRI-based" : "hasOrigin",
+      "en" : "has origin"
+    },
+    "domain" : "20",
+    "comment" : {
+      "en" : "hasOrigin represents the directed relation between lattice plane and origin"
+    },
+    "attributes" : [ "object" ],
+    "id" : "41"
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/diso#isSegmentOf",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/diso",
+    "range" : "36",
+    "label" : {
+      "IRI-based" : "isSegmentOf",
+      "en" : "is segment of"
+    },
+    "domain" : "11",
+    "comment" : {
+      "en" : "Inverse of hasSegment"
+    },
+    "attributes" : [ "allValues", "object" ],
+    "id" : "47"
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/diso#hasShapeFunction",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/diso",
+    "range" : "49",
+    "label" : {
+      "IRI-based" : "hasShapeFunction",
+      "en" : "has shape function"
+    },
+    "domain" : "36",
+    "comment" : {
+      "en" : "hasShapeFunction represents the directed relation between discretized line and shape function"
+    },
+    "attributes" : [ "object" ],
+    "id" : "48"
+  }, {
+    "iri" : "https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl#hasPositionVector",
+    "baseIri" : "https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl",
+    "range" : "33",
+    "label" : {
+      "IRI-based" : "hasPositionVector",
+      "en" : "has position vector"
+    },
+    "superproperty" : [ "16" ],
+    "domain" : "12",
+    "attributes" : [ "allValues", "object", "external" ],
+    "id" : "53"
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/diso#hasStartNode",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/diso",
+    "range" : "12",
+    "label" : {
+      "IRI-based" : "hasStartNode",
+      "en" : "has start node"
+    },
+    "superproperty" : [ "13" ],
+    "domain" : "11",
+    "comment" : {
+      "en" : "Sub-property of hasNode that relates the segment with the start node"
+    },
+    "attributes" : [ "allValues", "object" ],
+    "id" : "54"
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/diso#hasEndNode",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/diso",
+    "range" : "12",
+    "label" : {
+      "IRI-based" : "hasEndNode",
+      "en" : "has end node"
+    },
+    "superproperty" : [ "13" ],
+    "domain" : "11",
+    "comment" : {
+      "en" : "Sub-property of hasNode that relates the segment with the end node"
+    },
+    "attributes" : [ "allValues", "object" ],
+    "id" : "55"
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/diso#hasSlipPlane",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/diso",
+    "range" : "35",
+    "label" : {
+      "IRI-based" : "hasSlipPlane",
+      "en" : "has slip plane"
+    },
+    "superproperty" : [ "57" ],
+    "domain" : "52",
+    "comment" : {
+      "en" : "hasSlipPlane represents the relationship between crystal structure and slip plane it owns."
+    },
+    "attributes" : [ "object" ],
+    "id" : "56"
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/diso#hasBurgersVector",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/diso",
+    "range" : "59",
+    "label" : {
+      "IRI-based" : "hasBurgersVector",
+      "en" : "has Burgers vector"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Representas relation from dislocation to Burgers vector"
+    },
+    "attributes" : [ "object" ],
+    "id" : "58"
+  }, {
+    "range" : "33",
+    "domain" : "42",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "60"
+  }, {
+    "range" : "21",
+    "domain" : "20",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "63"
+  }, {
+    "range" : "62",
+    "domain" : "59",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "64"
+  }, {
+    "range" : "62",
+    "domain" : "31",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "65"
+  }, {
+    "range" : "62",
+    "domain" : "33",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "66"
+  }, {
+    "range" : "62",
+    "domain" : "25",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "67"
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/diso#observedBy",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/diso",
+    "range" : "43",
+    "label" : {
+      "IRI-based" : "observedBy",
+      "en" : "observed by"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Represents relation between dislocation and microscopy techniques, e.g., TEM, FIM, etc"
+    },
+    "attributes" : [ "object" ],
+    "id" : "68"
+  }, {
+    "range" : "3",
+    "domain" : "25",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "69"
+  }, {
+    "range" : "71",
+    "domain" : "1",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "70"
+  }, {
+    "range" : "20",
+    "domain" : "35",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "72"
+  }, {
+    "range" : "25",
+    "domain" : "61",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "73"
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/diso#familyPlaneMillerIndice",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/diso",
+    "range" : "32",
+    "label" : {
+      "IRI-based" : "familyPlaneMillerIndice",
+      "en" : "family plane miller indice"
+    },
+    "cardinality" : "1",
+    "domain" : "21",
+    "comment" : {
+      "en" : "familyPlaneMillerIndice represents a set of Miller indice of lattice plane in string."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "74"
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/diso#hasLatticePoint",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/diso",
+    "range" : "22",
+    "label" : {
+      "IRI-based" : "hasLatticePoint",
+      "en" : "has lattice point"
+    },
+    "domain" : "50",
+    "comment" : {
+      "en" : "hasLatticePoint represents the relationship between a lattice or lattice plane or lattice direction with lattice points."
+    },
+    "attributes" : [ "object" ],
+    "id" : "75"
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/diso#movesOn",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/diso",
+    "range" : "35",
+    "label" : {
+      "IRI-based" : "movesOn",
+      "en" : "moves on"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "movesOn represents the relationship between dislocation and slip plane it moves on."
+    },
+    "attributes" : [ "object" ],
+    "id" : "76"
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/diso#slipArea",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/diso",
+    "range" : "27",
+    "label" : {
+      "IRI-based" : "slipArea"
+    },
+    "cardinality" : "1",
+    "domain" : "36",
+    "attributes" : [ "datatype" ],
+    "id" : "77"
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/diso#hasLineSense",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/diso",
+    "range" : "79",
+    "label" : {
+      "IRI-based" : "hasLineSense",
+      "en" : "has line sense"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "hasLineSense represents the relationship between a dislocation and a line sense."
+    },
+    "attributes" : [ "object" ],
+    "id" : "78"
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/diso#resultsIn",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/diso",
+    "range" : "81",
+    "label" : {
+      "IRI-based" : "resultsIn",
+      "en" : "results in"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Represents relation between dislocation and lattice displacement."
+    },
+    "attributes" : [ "object" ],
+    "id" : "80"
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/diso#hasFamilyCrystalDirection",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/diso",
+    "range" : "3",
+    "label" : {
+      "IRI-based" : "hasFamilyCrystalDirection",
+      "en" : "has family crystal direction"
+    },
+    "domain" : "25",
+    "comment" : {
+      "en" : "hasFamilyCrystalDirection represents the relationship between lattice direction and family of crystal direction."
+    },
+    "attributes" : [ "object" ],
+    "id" : "83"
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/diso#hasSlipSystem",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/diso",
+    "range" : "38",
+    "label" : {
+      "IRI-based" : "hasSlipSystem",
+      "en" : "has slip system"
+    },
+    "domain" : "52",
+    "comment" : {
+      "en" : "hasSlipSystem represents the relationship between a crystal structure and slip system."
+    },
+    "attributes" : [ "object" ],
+    "id" : "84"
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/diso#hasEndNode",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/diso",
+    "range" : "12",
+    "label" : {
+      "IRI-based" : "hasEndNode",
+      "en" : "has end node"
+    },
+    "superproperty" : [ "13" ],
+    "domain" : "11",
+    "comment" : {
+      "en" : "Sub-property of hasNode that relates the segment with the end node"
+    },
+    "attributes" : [ "object" ],
+    "id" : "85"
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/diso#isSegmentOf",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/diso",
+    "range" : "36",
+    "label" : {
+      "IRI-based" : "isSegmentOf",
+      "en" : "is segment of"
+    },
+    "domain" : "11",
+    "comment" : {
+      "en" : "Inverse of hasSegment"
+    },
+    "attributes" : [ "object" ],
+    "id" : "86"
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/diso#hasSlipDirection",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/diso",
+    "range" : "61",
+    "label" : {
+      "IRI-based" : "hasSlipDirection",
+      "en" : "has slip direction"
+    },
+    "superproperty" : [ "23" ],
+    "domain" : "40",
+    "comment" : {
+      "en" : "hasSlipDirection represents the relationship  between Slip Plane or Slip system and Slip Direction they own."
+    },
+    "attributes" : [ "object" ],
+    "id" : "26"
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/diso#hasNode",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/diso",
+    "range" : "12",
+    "label" : {
+      "IRI-based" : "hasNode",
+      "en" : "has node"
+    },
+    "domain" : "11",
+    "subproperty" : [ "10", "85" ],
+    "comment" : {
+      "en" : "hasNode represents the directed relation between segment and node"
+    },
+    "attributes" : [ "object" ],
+    "id" : "13"
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/diso#hasSlipPlaneNormal",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/diso",
+    "range" : "31",
+    "label" : {
+      "IRI-based" : "hasSlipPlaneNormal",
+      "en" : "has slip plane normal"
+    },
+    "domain" : "37",
+    "comment" : {
+      "en" : "hasSlipPlaneNormal represents the relationship between a slip plane or slip system with slip plane normal."
+    },
+    "attributes" : [ "object" ],
+    "id" : "87"
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/diso#hasRepresentation",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/diso",
+    "range" : "17",
+    "label" : {
+      "IRI-based" : "hasRepresentation",
+      "en" : "has representation"
+    },
+    "domain" : "17",
+    "subproperty" : [ "7", "89" ],
+    "comment" : {
+      "en" : "has representation relates the entity to another representation of entity"
+    },
+    "attributes" : [ "object" ],
+    "id" : "9"
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/diso#observedBy",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/diso",
+    "range" : "45",
+    "label" : {
+      "IRI-based" : "observedBy",
+      "en" : "observed by"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Represents relation between dislocation and microscopy techniques, e.g., TEM, FIM, etc"
+    },
+    "attributes" : [ "object", "someValues" ],
+    "id" : "90"
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/diso#observedBy",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/diso",
+    "range" : "44",
+    "label" : {
+      "IRI-based" : "observedBy",
+      "en" : "observed by"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Represents relation between dislocation and microscopy techniques, e.g., TEM, FIM, etc"
+    },
+    "attributes" : [ "object", "someValues" ],
+    "id" : "91"
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/diso#hasMathematicalRepresentation",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/diso",
+    "range" : "88",
+    "label" : {
+      "IRI-based" : "hasMathematicalRepresentation",
+      "en" : "has mathematical representation"
+    },
+    "superproperty" : [ "9" ],
+    "domain" : "1",
+    "comment" : {
+      "en" : "relates the entity with its mathematical representation"
+    },
+    "attributes" : [ "object", "someValues" ],
+    "id" : "92"
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/diso#resultsIn",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/diso",
+    "range" : "81",
+    "label" : {
+      "IRI-based" : "resultsIn",
+      "en" : "results in"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Represents relation between dislocation and lattice displacement."
+    },
+    "attributes" : [ "object", "someValues" ],
+    "id" : "93"
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/diso#movesOn",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/diso",
+    "range" : "35",
+    "label" : {
+      "IRI-based" : "movesOn",
+      "en" : "moves on"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "movesOn represents the relationship between dislocation and slip plane it moves on."
+    },
+    "attributes" : [ "object", "someValues" ],
+    "id" : "94"
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/diso#hasOrigin",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/diso",
+    "range" : "42",
+    "label" : {
+      "IRI-based" : "hasOrigin",
+      "en" : "has origin"
+    },
+    "domain" : "20",
+    "comment" : {
+      "en" : "hasOrigin represents the directed relation between lattice plane and origin"
+    },
+    "attributes" : [ "allValues", "object" ],
+    "id" : "95"
+  }, {
+    "iri" : "https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl#hasPositionVector",
+    "baseIri" : "https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl",
+    "range" : "33",
+    "label" : {
+      "IRI-based" : "hasPositionVector",
+      "en" : "has position vector"
+    },
+    "superproperty" : [ "16" ],
+    "domain" : "22",
+    "attributes" : [ "allValues", "object", "external" ],
+    "id" : "96"
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/diso#hasNumericalRepresentation",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/diso",
+    "range" : "36",
+    "label" : {
+      "IRI-based" : "hasNumericalRepresentation",
+      "en" : "has numerical representation"
+    },
+    "superproperty" : [ "9" ],
+    "domain" : "88",
+    "comment" : {
+      "en" : "relates the entity with its numerical representation"
+    },
+    "attributes" : [ "object", "someValues" ],
+    "id" : "97"
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/diso#hasLatticePlane",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/diso",
+    "range" : "20",
+    "label" : {
+      "IRI-based" : "hasLatticePlane",
+      "en" : "has lattice plane"
+    },
+    "domain" : "51",
+    "subproperty" : [ "56" ],
+    "comment" : {
+      "en" : "hasLatticePlane represents the relationship between a lattice and lattice planes."
+    },
+    "attributes" : [ "object" ],
+    "id" : "57"
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/diso#hasSegment",
+    "inverse" : "86",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/diso",
+    "range" : "11",
+    "label" : {
+      "IRI-based" : "hasSegment",
+      "en" : "has segment"
+    },
+    "domain" : "36",
+    "comment" : {
+      "en" : "hasSegment represents the directed relation between discretized line and segment"
+    },
+    "attributes" : [ "allValues", "object" ],
+    "id" : "98"
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/diso#hasShapeFunction",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/diso",
+    "range" : "49",
+    "label" : {
+      "IRI-based" : "hasShapeFunction",
+      "en" : "has shape function"
+    },
+    "domain" : "36",
+    "comment" : {
+      "en" : "hasShapeFunction represents the directed relation between discretized line and shape function"
+    },
+    "attributes" : [ "allValues", "object" ],
+    "id" : "99"
+  }, {
+    "iri" : "https://purls.helmholtz-metadaten.de/diso#hasSegment",
+    "inverse" : "86",
+    "baseIri" : "https://purls.helmholtz-metadaten.de/diso",
+    "range" : "11",
+    "label" : {
+      "IRI-based" : "hasSegment",
+      "en" : "has segment"
+    },
+    "domain" : "36",
+    "comment" : {
+      "en" : "hasSegment represents the directed relation between discretized line and segment"
+    },
+    "attributes" : [ "object" ],
+    "id" : "100"
+  } ]
+}
