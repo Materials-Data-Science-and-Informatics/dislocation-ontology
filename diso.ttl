@@ -1,0 +1,763 @@
+@prefix : <https://purls.helmholtz-metadaten.de/diso> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@base <https://purls.helmholtz-metadaten.de/diso> .
+
+<https://purls.helmholtz-metadaten.de/diso> rdf:type owl:Ontology ;
+                                             terms:contributor "Said Fathalla"^^xsd:string ,
+                                                               "Stefan Sandfeld"^^xsd:string ;
+                                             terms:created "21.03.2022"@en ;
+                                             terms:creator "Ahmad Zainul Ihsan"@en ;
+                                             terms:license <http://creativecommons.org/licenses/by/3.0/> ;
+                                             terms:title "Dislocation Ontology"@en ;
+                                             vann:preferredNamespacePrefix "DISO"^^xsd:string ;
+                                             rdfs:label "Dislocation Ontology"@en ;
+                                             rdfs:seeAlso "https://github.com/Materials-Data-Science-and-Informatics/dislocation-ontology" ;
+                                             owl:versionInfo 1.0 .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/contributor
+terms:contributor rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/created
+terms:created rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+terms:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+terms:license rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+terms:title rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://purls.helmholtz-metadaten.de/diso#hasBurgersVector
+:hasBurgersVector rdf:type owl:ObjectProperty ;
+                  rdfs:domain :Dislocation ;
+                  rdfs:range :BurgersVector ;
+                  rdfs:comment "hasBurgersVector represents the relationship between dislocation to Burgers vector."@en ;
+                  rdfs:label "has Burgers vector"@en .
+
+
+###  https://purls.helmholtz-metadaten.de/diso#hasEndNode
+:hasEndNode rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :hasNode ;
+            rdfs:domain :Segment ;
+            rdfs:range :Node ;
+            rdfs:comment "Sub-property of hasNode that relates the segment with the end node."@en ;
+            rdfs:label "has end node"@en .
+
+
+###  https://purls.helmholtz-metadaten.de/diso#hasFamilyCrystalDirection
+:hasFamilyCrystalDirection rdf:type owl:ObjectProperty ;
+                           rdfs:domain :LatticeDirection ;
+                           rdfs:range :FamilyOfCrystalDirection ;
+                           rdfs:comment "hasFamilyCrystalDirection represents the relationship between lattice direction and family of crystal direction."@en ;
+                           rdfs:label "has family crystal direction"@en .
+
+
+###  https://purls.helmholtz-metadaten.de/diso#hasFamilyCrystalPlane
+:hasFamilyCrystalPlane rdf:type owl:ObjectProperty ;
+                       rdfs:domain :LatticePlane ;
+                       rdfs:range :FamilyOfCrystalPlane ;
+                       rdfs:comment "hasFamilyCrystalPlane represents the relationship between the lattice plane and the family of crystal planes."@en ;
+                       rdfs:label "has family crystal plane"@en .
+
+
+###  https://purls.helmholtz-metadaten.de/diso#hasLatticeDirection
+:hasLatticeDirection rdf:type owl:ObjectProperty ;
+                     rdfs:domain [ rdf:type owl:Class ;
+                                   owl:unionOf ( <https://purls.helmholtz-metadaten.de/cso#Lattice>
+                                                 :LatticePlane
+                                               )
+                                 ] ;
+                     rdfs:range :LatticeDirection ;
+                     rdfs:comment "hasLatticeDirection represents the relationship between a lattice or a lattice plane with lattice directions."@en ;
+                     rdfs:label "has lattice direction"@en .
+
+
+###  https://purls.helmholtz-metadaten.de/diso#hasLatticePlane
+:hasLatticePlane rdf:type owl:ObjectProperty ;
+                 rdfs:domain [ rdf:type owl:Class ;
+                               owl:unionOf ( <https://purls.helmholtz-metadaten.de/cso#CrystalStructure>
+                                             <https://purls.helmholtz-metadaten.de/cso#Lattice>
+                                           )
+                             ] ;
+                 rdfs:range :LatticePlane ;
+                 rdfs:comment "hasLatticePlane represents the relationship between a lattice and lattice planes."@en ;
+                 rdfs:label "has lattice plane"@en .
+
+
+###  https://purls.helmholtz-metadaten.de/diso#hasLatticePoint
+:hasLatticePoint rdf:type owl:ObjectProperty ;
+                 rdfs:domain [ rdf:type owl:Class ;
+                               owl:unionOf ( <https://purls.helmholtz-metadaten.de/cso#Lattice>
+                                             :LatticeDirection
+                                             :LatticePlane
+                                           )
+                             ] ;
+                 rdfs:range :LatticePoint ;
+                 rdfs:comment "hasLatticePoint represents the relationship between a lattice or lattice plane or lattice direction with lattice point."@en ;
+                 rdfs:label "has lattice point"@en .
+
+
+###  https://purls.helmholtz-metadaten.de/diso#hasLineSense
+:hasLineSense rdf:type owl:ObjectProperty ;
+              rdfs:domain :Dislocation ;
+              rdfs:range :LineSense ;
+              rdfs:comment "hasLineSense represents the relationship between dislocation and line sense."@en ;
+              rdfs:label "has line sense"@en .
+
+
+###  https://purls.helmholtz-metadaten.de/diso#hasMathematicalRepresentation
+:hasMathematicalRepresentation rdf:type owl:ObjectProperty ;
+                               rdfs:subPropertyOf :hasRepresentation ;
+                               rdfs:domain :Dislocation ;
+                               rdfs:comment "hasMathematicalRepresentation relates the entity with its mathematical representation."@en ;
+                               rdfs:label "has mathematical representation"@en .
+
+
+###  https://purls.helmholtz-metadaten.de/diso#hasNode
+:hasNode rdf:type owl:ObjectProperty ;
+         rdfs:domain :Segment ;
+         rdfs:range :Node ;
+         rdfs:comment "hasNode represents the relationship between segment and node."@en ;
+         rdfs:label "has node"@en .
+
+
+###  https://purls.helmholtz-metadaten.de/diso#hasNumericalRepresentation
+:hasNumericalRepresentation rdf:type owl:ObjectProperty ;
+                            rdfs:subPropertyOf :hasRepresentation ;
+                            rdfs:comment "hasNumericalRepresentation relates the entity with its numerical representation."@en ;
+                            rdfs:label "has numerical representation"@en .
+
+
+###  https://purls.helmholtz-metadaten.de/diso#hasOrigin
+:hasOrigin rdf:type owl:ObjectProperty ;
+           rdfs:domain :LatticePlane ;
+           rdfs:range :Origin ;
+           rdfs:comment "hasOrigin represents the relationship between lattice plane and origin."@en ;
+           rdfs:label "has origin"@en .
+
+
+###  https://purls.helmholtz-metadaten.de/diso#hasRepresentation
+:hasRepresentation rdf:type owl:ObjectProperty ;
+                   rdfs:comment "hasRepresentation relates the entity to another representation of entity."@en ;
+                   rdfs:label "has representation"@en .
+
+
+###  https://purls.helmholtz-metadaten.de/diso#hasSegment
+:hasSegment rdf:type owl:ObjectProperty ;
+            owl:inverseOf :isSegmentOf ;
+            rdfs:domain :DiscretizedLine ;
+            rdfs:range :Segment ;
+            rdfs:comment "hasSegment represents the relationship between discretized line and segment."@en ;
+            rdfs:label "has segment"@en .
+
+
+###  https://purls.helmholtz-metadaten.de/diso#hasShapeFunction
+:hasShapeFunction rdf:type owl:ObjectProperty ;
+                  rdfs:domain :DiscretizedLine ;
+                  rdfs:range :ShapeFunction ;
+                  rdfs:comment "hasShapeFunction represents the relationship between discretized line and shape function."@en ;
+                  rdfs:label "has shape function"@en .
+
+
+###  https://purls.helmholtz-metadaten.de/diso#hasSlipDirection
+:hasSlipDirection rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :hasLatticeDirection ;
+                  rdfs:domain [ rdf:type owl:Class ;
+                                owl:unionOf ( :SlipPlane
+                                              :SlipSystem
+                                            )
+                              ] ;
+                  rdfs:range :SlipDirection ;
+                  rdfs:comment "hasSlipDirection represents the relationship between the slip plane or slip system with the slip direction."@en ;
+                  rdfs:label "has slip direction"@en .
+
+
+###  https://purls.helmholtz-metadaten.de/diso#hasSlipPlane
+:hasSlipPlane rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :hasLatticePlane ;
+              rdfs:domain <https://purls.helmholtz-metadaten.de/cso#CrystalStructure> ;
+              rdfs:range :SlipPlane ;
+              rdfs:comment "hasSlipPlane represents the relationship between crystal structure and slip plane."@en ;
+              rdfs:label "has slip plane"@en .
+
+
+###  https://purls.helmholtz-metadaten.de/diso#hasSlipPlaneNormal
+:hasSlipPlaneNormal rdf:type owl:ObjectProperty ;
+                    rdfs:domain [ rdf:type owl:Class ;
+                                  owl:unionOf ( :SlipPlane
+                                                :SlipSystem
+                                              )
+                                ] ;
+                    rdfs:range :SlipPlaneNormal ;
+                    rdfs:comment "hasSlipPlaneNormal represents the relationship between a slip plane or slip system with slip plane normal."@en ;
+                    rdfs:label "has slip plane normal"@en .
+
+
+###  https://purls.helmholtz-metadaten.de/diso#hasSlipSystem
+:hasSlipSystem rdf:type owl:ObjectProperty ;
+               rdfs:domain <https://purls.helmholtz-metadaten.de/cso#CrystalStructure> ;
+               rdfs:range :SlipSystem ;
+               rdfs:comment "hasSlipSystem represents the relationship between a crystal structure and slip system."@en ;
+               rdfs:label "has slip system"@en .
+
+
+###  https://purls.helmholtz-metadaten.de/diso#hasStartNode
+:hasStartNode rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :hasNode ;
+              rdfs:domain :Segment ;
+              rdfs:range :Node ;
+              rdfs:comment "Sub-property of hasNode that relates the segment with the start node."@en ;
+              rdfs:label "has start node"@en .
+
+
+###  https://purls.helmholtz-metadaten.de/diso#isSegmentOf
+:isSegmentOf rdf:type owl:ObjectProperty ;
+             rdfs:domain :Segment ;
+             rdfs:range :DiscretizedLine ;
+             rdfs:comment "Inverse of hasSegment"@en ;
+             rdfs:label "is segment of"@en .
+
+
+###  https://purls.helmholtz-metadaten.de/diso#movesOn
+:movesOn rdf:type owl:ObjectProperty ;
+         rdfs:domain :Dislocation ;
+         rdfs:range :SlipPlane ;
+         rdfs:comment "movesOn represents the relationship between dislocation and slip plane."@en ;
+         rdfs:label "moves on"@en .
+
+
+###  https://purls.helmholtz-metadaten.de/diso#observedBy
+:observedBy rdf:type owl:ObjectProperty ;
+            rdfs:domain :Dislocation ;
+            rdfs:range [ rdf:type owl:Class ;
+                         owl:unionOf ( :FieldIonMicroscopy
+                                       :TransmissionElectronMicroscopy
+                                     )
+                       ] ;
+            rdfs:comment "observedBy represents the relationship between dislocation and microscopy techniques, e.g., TEM, FIM, etc."@en ;
+            rdfs:label "observed by"@en .
+
+
+###  https://purls.helmholtz-metadaten.de/diso#resultsIn
+:resultsIn rdf:type owl:ObjectProperty ;
+           rdfs:domain :Dislocation ;
+           rdfs:range :LatticeDisplacement ;
+           rdfs:comment "resultsIn represents the relationship between dislocation and lattice displacement."@en ;
+           rdfs:label "results in"@en .
+
+
+###  https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl#hasPositionVector
+<https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl#hasPositionVector> rdf:type owl:ObjectProperty ;
+                                                                                                                                                        rdfs:subPropertyOf owl:topObjectProperty ;
+                                                                                                                                                        rdfs:range <https://purls.helmholtz-metadaten.de/cso#PositionVector> ;
+                                                                                                                                                        rdfs:comment "hasPositionVector represents the relationship between entity and position vector."@en ;
+                                                                                                                                                        rdfs:label "has position vector"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://purls.helmholtz-metadaten.de/diso#directionMillerIndice
+:directionMillerIndice rdf:type owl:DatatypeProperty ;
+                       rdfs:domain [ rdf:type owl:Class ;
+                                     owl:unionOf ( :LatticeDirection
+                                                   :SlipPlaneNormal
+                                                 )
+                                   ] ;
+                       rdfs:range xsd:string ;
+                       rdfs:comment "directionMillerIndice represents Miller indice of lattice direction in string."@en ;
+                       rdfs:label "direction miller indice"@en .
+
+
+###  https://purls.helmholtz-metadaten.de/diso#familyDirectionMillerIndice
+:familyDirectionMillerIndice rdf:type owl:DatatypeProperty ;
+                             rdfs:domain :FamilyOfCrystalDirection ;
+                             rdfs:range xsd:string ;
+                             rdfs:comment "familyDirectionMillerIndice represents a set of miller indices of lattice direction in string."@en ;
+                             rdfs:label "family direction miller indice"@en .
+
+
+###  https://purls.helmholtz-metadaten.de/diso#familyPlaneMillerIndice
+:familyPlaneMillerIndice rdf:type owl:DatatypeProperty ;
+                         rdfs:domain :FamilyOfCrystalPlane ;
+                         rdfs:range xsd:string ;
+                         rdfs:comment "familyPlaneMillerIndice represents a set of Miller indice of lattice plane in string."@en ;
+                         rdfs:label "family plane miller indice"@en .
+
+
+###  https://purls.helmholtz-metadaten.de/diso#planeMillerIndice
+:planeMillerIndice rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :LatticePlane ;
+                   rdfs:range xsd:string ;
+                   rdfs:comment "planeMillerIndice represents Miller indice of lattice plane in string."@en ;
+                   rdfs:label "plane miller indice"@en .
+
+
+###  https://purls.helmholtz-metadaten.de/diso#slipArea
+:slipArea rdf:type owl:DatatypeProperty ;
+          rdfs:domain :DiscretizedLine ;
+          rdfs:range xsd:double ;
+          rdfs:comment "slipArea represents the slip area of discretized line in double."@en ;
+          rdfs:label "slipArea"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://purls.helmholtz-metadaten.de/cdo#CrystallographicDefect
+<https://purls.helmholtz-metadaten.de/cdo#CrystallographicDefect> rdf:type owl:Class ;
+                                                                  rdfs:comment "The crystallographic defect is a lattice irregularity that has one or more dimensions on the order of an atomic diameter."@en ;
+                                                                  rdfs:label "Crystallographic Defect"@en .
+
+
+###  https://purls.helmholtz-metadaten.de/cso#CrystalStructure
+<https://purls.helmholtz-metadaten.de/cso#CrystalStructure> rdf:type owl:Class ;
+                                                            rdfs:subClassOf [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                                     owl:onProperty :hasSlipPlane ;
+                                                                                                     owl:someValuesFrom :SlipPlane
+                                                                                                   ]
+                                                                                                   [ rdf:type owl:Restriction ;
+                                                                                                     owl:onProperty :hasSlipPlane ;
+                                                                                                     owl:allValuesFrom :SlipPlane
+                                                                                                   ]
+                                                                                                 ) ;
+                                                                              rdf:type owl:Class
+                                                                            ] ,
+                                                                            [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                                     owl:onProperty :hasSlipSystem ;
+                                                                                                     owl:someValuesFrom :SlipSystem
+                                                                                                   ]
+                                                                                                   [ rdf:type owl:Restriction ;
+                                                                                                     owl:onProperty :hasSlipSystem ;
+                                                                                                     owl:allValuesFrom :SlipSystem
+                                                                                                   ]
+                                                                                                 ) ;
+                                                                              rdf:type owl:Class
+                                                                            ] ;
+                                                            rdfs:comment "A crystal structure is described by the lattice geometry and atomic arrangements within the unit cell."@en ;
+                                                            rdfs:label "Crystal Structure"@en .
+
+
+###  https://purls.helmholtz-metadaten.de/cso#Lattice
+<https://purls.helmholtz-metadaten.de/cso#Lattice> rdf:type owl:Class ;
+                                                   rdfs:subClassOf [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                            owl:onProperty :hasLatticeDirection ;
+                                                                                            owl:someValuesFrom :LatticeDirection
+                                                                                          ]
+                                                                                          [ rdf:type owl:Restriction ;
+                                                                                            owl:onProperty :hasLatticeDirection ;
+                                                                                            owl:allValuesFrom :LatticeDirection
+                                                                                          ]
+                                                                                        ) ;
+                                                                     rdf:type owl:Class
+                                                                   ] ,
+                                                                   [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                            owl:onProperty :hasLatticePlane ;
+                                                                                            owl:someValuesFrom :LatticePlane
+                                                                                          ]
+                                                                                          [ rdf:type owl:Restriction ;
+                                                                                            owl:onProperty :hasLatticeDirection ;
+                                                                                            owl:allValuesFrom :LatticeDirection
+                                                                                          ]
+                                                                                        ) ;
+                                                                     rdf:type owl:Class
+                                                                   ] ,
+                                                                   [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                            owl:onProperty :hasLatticePoint ;
+                                                                                            owl:someValuesFrom :LatticePoint
+                                                                                          ]
+                                                                                          [ rdf:type owl:Restriction ;
+                                                                                            owl:onProperty :hasLatticePoint ;
+                                                                                            owl:allValuesFrom :LatticePoint
+                                                                                          ]
+                                                                                        ) ;
+                                                                     rdf:type owl:Class
+                                                                   ] ;
+                                                   rdfs:comment "The mathematical concept to represent the periodicity of a crystal. A lattice defines a periodic arrangement of one or more atoms."@en ;
+                                                   rdfs:label "Lattice"@en .
+
+
+###  https://purls.helmholtz-metadaten.de/cso#PositionVector
+<https://purls.helmholtz-metadaten.de/cso#PositionVector> rdf:type owl:Class ;
+                                                          rdfs:subClassOf <https://purls.helmholtz-metadaten.de/cso#Vector> ;
+                                                          rdfs:comment "Euclidean vector that represents the position of a point P in space in relation to an arbitrary reference origin O."@en ;
+                                                          rdfs:label "Position Vector"@en .
+
+
+###  https://purls.helmholtz-metadaten.de/cso#Vector
+<https://purls.helmholtz-metadaten.de/cso#Vector> rdf:type owl:Class ;
+                                                  rdfs:comment "(Euclidean) vector used to represent quantities that both magnitude and direction."@en ;
+                                                  rdfs:label "Vector"@en .
+
+
+###  https://purls.helmholtz-metadaten.de/diso#BurgersVector
+:BurgersVector rdf:type owl:Class ;
+               rdfs:subClassOf <https://purls.helmholtz-metadaten.de/cso#Vector> ;
+               rdfs:comment "An elementary unit (length order of lattice parameter) of lattice translation. The basic notion of Burgers vector comes from the closure failure of initially perfect lattice due to the existance of dislocation. The magnitude and direction of closure failure is characterized by Burgers vector."@en ;
+               rdfs:label "Burgers Vector"@en .
+
+
+###  https://purls.helmholtz-metadaten.de/diso#DiscretizedLine
+:DiscretizedLine rdf:type owl:Class ;
+                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                   owl:onProperty :hasSegment ;
+                                   owl:allValuesFrom :Segment
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :hasShapeFunction ;
+                                   owl:allValuesFrom :ShapeFunction
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :slipArea ;
+                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onDataRange xsd:double
+                                 ] ;
+                 rdfs:comment "The numerical representation of the dislocation line that is discretized into the number of segments."@en ;
+                 rdfs:label "Discretized Line"@en .
+
+
+###  https://purls.helmholtz-metadaten.de/diso#Dislocation
+:Dislocation rdf:type owl:Class ;
+             owl:equivalentClass :LineDefect ;
+             rdfs:subClassOf <https://purls.helmholtz-metadaten.de/cdo#CrystallographicDefect> ,
+                             [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :hasBurgersVector ;
+                                                      owl:someValuesFrom :BurgersVector
+                                                    ]
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :hasBurgersVector ;
+                                                      owl:allValuesFrom :BurgersVector
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ,
+                             [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :hasLineSense ;
+                                                      owl:someValuesFrom :LineSense
+                                                    ]
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :hasLineSense ;
+                                                      owl:allValuesFrom :LineSense
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasMathematicalRepresentation ;
+                               owl:someValuesFrom :Line
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :movesOn ;
+                               owl:someValuesFrom :SlipPlane
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :observedBy ;
+                               owl:someValuesFrom :FieldIonMicroscopy
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :observedBy ;
+                               owl:someValuesFrom :TransmissionElectronMicroscopy
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :resultsIn ;
+                               owl:someValuesFrom :LatticeDisplacement
+                             ] ;
+             rdfs:comment "Linear or one-dimensional defect around which some of the atoms are misaligned. In the mesoscale, a dislocation is a line object that is a boundary separating the regions on the slip plane which have undergone slip from those that have not."@en ,
+                          "Presence of dislocation introduces local disturbance of the atomic-level geometry."@en ;
+             rdfs:label "Dislocation"@en ,
+                        "Versetzung"@de .
+
+
+###  https://purls.helmholtz-metadaten.de/diso#EdgeDislocation
+:EdgeDislocation rdf:type owl:Class ;
+                 rdfs:subClassOf :Dislocation ;
+                 rdfs:comment "Dislocation that has a line sense perpendicular to its Burgers vector."@en ;
+                 rdfs:label "Edge Dislocation"@en .
+
+
+###  https://purls.helmholtz-metadaten.de/diso#FamilyOfCrystalDirection
+:FamilyOfCrystalDirection rdf:type owl:Class ;
+                          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                            owl:onProperty :familyDirectionMillerIndice ;
+                                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                            owl:onDataRange xsd:string
+                                          ] ;
+                          rdfs:comment "A set of symmetrically equivalent directions in the lattice."@en ;
+                          rdfs:label "Family of Crystal Direction"@en .
+
+
+###  https://purls.helmholtz-metadaten.de/diso#FamilyOfCrystalPlane
+:FamilyOfCrystalPlane rdf:type owl:Class ;
+                      rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                        owl:onProperty :familyPlaneMillerIndice ;
+                                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                        owl:onDataRange xsd:string
+                                      ] ;
+                      rdfs:comment "A set of symmetrically equivalent planes in the lattice."@en ;
+                      rdfs:label "Family of Crystal Plane"@en .
+
+
+###  https://purls.helmholtz-metadaten.de/diso#FieldIonMicroscopy
+:FieldIonMicroscopy rdf:type owl:Class ;
+                    rdfs:comment "Field Ion Microscopy (FIM) is a microscopy technique that can be used to image the arrangement of atoms."@en ;
+                    rdfs:label "Field Ion Microscopy"@en .
+
+
+###  https://purls.helmholtz-metadaten.de/diso#LatticeDirection
+:LatticeDirection rdf:type owl:Class ;
+                  rdfs:subClassOf <https://purls.helmholtz-metadaten.de/cso#Vector> ,
+                                  :FamilyOfCrystalDirection ,
+                                  [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                           owl:onProperty :hasLatticePoint ;
+                                                           owl:someValuesFrom :LatticePoint
+                                                         ]
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty :hasLatticePoint ;
+                                                           owl:allValuesFrom :LatticePoint
+                                                         ]
+                                                       ) ;
+                                    rdf:type owl:Class
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :directionMillerIndice ;
+                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onDataRange xsd:string
+                                  ] ;
+                  rdfs:comment "The vector direction inside the lattice connecting two lattice points."@en ;
+                  rdfs:label "Lattice Direction"@en .
+
+
+###  https://purls.helmholtz-metadaten.de/diso#LatticeDisplacement
+:LatticeDisplacement rdf:type owl:Class ;
+                     rdfs:comment "The displacement of atoms from its perfect lattice sites due to the existence of defects, e.g., point defect, line defect, and grain boundary."@en ;
+                     rdfs:label "Lattice Displacement"@en .
+
+
+###  https://purls.helmholtz-metadaten.de/diso#LatticePlane
+:LatticePlane rdf:type owl:Class ;
+              rdfs:subClassOf :FamilyOfCrystalPlane ,
+                              [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                       owl:onProperty :hasLatticeDirection ;
+                                                       owl:someValuesFrom :LatticeDirection
+                                                     ]
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty :hasLatticeDirection ;
+                                                       owl:allValuesFrom :LatticeDirection
+                                                     ]
+                                                   ) ;
+                                rdf:type owl:Class
+                              ] ,
+                              [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                       owl:onProperty :hasLatticePoint ;
+                                                       owl:someValuesFrom :LatticePoint
+                                                     ]
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty :hasLatticePoint ;
+                                                       owl:allValuesFrom :LatticePoint
+                                                     ]
+                                                   ) ;
+                                rdf:type owl:Class
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasOrigin ;
+                                owl:allValuesFrom :Origin
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :planeMillerIndice ;
+                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onDataRange xsd:string
+                              ] ;
+              rdfs:comment "The lattice plane forms an infinitely stretched plane (characterized through a plane normal) that cuts through lattice points such that, again, a regular arrangement of lattice points in the plane occurs."@en ;
+              rdfs:label "Lattice Plane"@en .
+
+
+###  https://purls.helmholtz-metadaten.de/diso#LatticePoint
+:LatticePoint rdf:type owl:Class ;
+              rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                owl:onProperty <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl#hasPositionVector> ;
+                                owl:allValuesFrom <https://purls.helmholtz-metadaten.de/cso#PositionVector>
+                              ] ;
+              rdfs:comment "Lattice point is the point where atom(s) or molecule(s) is located."@en ;
+              rdfs:label "Lattice Point"@en .
+
+
+###  https://purls.helmholtz-metadaten.de/diso#Line
+:Line rdf:type owl:Class ;
+      rdfs:subClassOf [ rdf:type owl:Restriction ;
+                        owl:onProperty :hasNumericalRepresentation ;
+                        owl:someValuesFrom :DiscretizedLine
+                      ] ;
+      rdfs:comment "Mathematical representation of dislocation as 'Line'. An instance of mathematical representation of dislocation line is an oriented curve parameterized by its arc length."@en ;
+      rdfs:label "Line"@en .
+
+
+###  https://purls.helmholtz-metadaten.de/diso#LineDefect
+:LineDefect rdf:type owl:Class ;
+            rdfs:comment "Linear or one-dimensional defect around which some of the atoms are misaligned."@en ;
+            rdfs:label "Line Defect"@en .
+
+
+###  https://purls.helmholtz-metadaten.de/diso#LineSense
+:LineSense rdf:type owl:Class ;
+           rdfs:comment "Sense that characterizes a directed line, i.e., it has a start and an end."@en ;
+           rdfs:label "Line Sense"@en .
+
+
+###  https://purls.helmholtz-metadaten.de/diso#Node
+:Node rdf:type owl:Class ;
+      rdfs:subClassOf [ rdf:type owl:Restriction ;
+                        owl:onProperty <https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl#hasPositionVector> ;
+                        owl:allValuesFrom <https://purls.helmholtz-metadaten.de/cso#PositionVector>
+                      ] ;
+      rdfs:comment "Node of a segment"@en ;
+      rdfs:label "Node"@en .
+
+
+###  https://purls.helmholtz-metadaten.de/diso#Origin
+:Origin rdf:type owl:Class ;
+        rdfs:subClassOf <https://purls.helmholtz-metadaten.de/cso#PositionVector> ;
+        rdfs:comment "A fixed point which is needed by vector to identify other points in the space relatives to its origin."@en ;
+        rdfs:label "Origin"@en .
+
+
+###  https://purls.helmholtz-metadaten.de/diso#ScrewDislocation
+:ScrewDislocation rdf:type owl:Class ;
+                  rdfs:subClassOf :Dislocation ;
+                  rdfs:comment "Dislocation that has a line sense parallel to its Burgers vector."@en ;
+                  rdfs:label "Screw Dislocation"@en .
+
+
+###  https://purls.helmholtz-metadaten.de/diso#Segment
+:Segment rdf:type owl:Class ;
+         rdfs:subClassOf [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasEndNode ;
+                           owl:allValuesFrom :Node
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasStartNode ;
+                           owl:allValuesFrom :Node
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :isSegmentOf ;
+                           owl:allValuesFrom :DiscretizedLine
+                         ] ;
+         rdfs:comment "The segment is a part of a line bounded by two distinct end points and may contain points on the line between its endpoints."@en ;
+         rdfs:label "Segment"@en .
+
+
+###  https://purls.helmholtz-metadaten.de/diso#ShapeFunction
+:ShapeFunction rdf:type owl:Class ;
+               rdfs:comment "The shape function is the function that interpolates the solution between the discrete values obtained at the mesh nodes. In discretized dislocation, the shape function determines the shape of a segment and ultimately determines the shape of the line. Examples of shape function that is used to discretize the dislocation are circular, elliptic, spiral, linear, cubic, and quintic."@en ;
+               rdfs:label "Shape Function"@en .
+
+
+###  https://purls.helmholtz-metadaten.de/diso#SlipDirection
+:SlipDirection rdf:type owl:Class ;
+               rdfs:subClassOf :LatticeDirection ;
+               rdfs:comment "The direction in the slip plane along which plastic deformation takes place. Slip direction corresponds to one of the shortest lattice translation vectors."@en ;
+               rdfs:label "Slip Direction"@en .
+
+
+###  https://purls.helmholtz-metadaten.de/diso#SlipPlane
+:SlipPlane rdf:type owl:Class ;
+           rdfs:subClassOf :LatticePlane ,
+                           [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                    owl:onProperty :hasSlipDirection ;
+                                                    owl:someValuesFrom :SlipDirection
+                                                  ]
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty :hasSlipDirection ;
+                                                    owl:allValuesFrom :SlipDirection
+                                                  ]
+                                                ) ;
+                             rdf:type owl:Class
+                           ] ,
+                           [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                    owl:onProperty :hasSlipPlaneNormal ;
+                                                    owl:someValuesFrom :SlipPlaneNormal
+                                                  ]
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty :hasSlipPlaneNormal ;
+                                                    owl:allValuesFrom :SlipPlaneNormal
+                                                  ]
+                                                ) ;
+                             rdf:type owl:Class
+                           ] ;
+           rdfs:comment "The crystallographic/lattice plane along which the dislocation line traverses/moves. Slip plane is normally the plane with the highest density of atoms, i.e. those which are most widely spaced."@en ;
+           rdfs:label "Slip Plane"@en .
+
+
+###  https://purls.helmholtz-metadaten.de/diso#SlipPlaneNormal
+:SlipPlaneNormal rdf:type owl:Class ;
+                 rdfs:subClassOf <https://purls.helmholtz-metadaten.de/cso#Vector> ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :directionMillerIndice ;
+                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onDataRange xsd:string
+                                 ] ;
+                 rdfs:comment "Unit normal vector of slip planes"@en ;
+                 rdfs:label "Slip Plane Normal"@en .
+
+
+###  https://purls.helmholtz-metadaten.de/diso#SlipSystem
+:SlipSystem rdf:type owl:Class ;
+            rdfs:subClassOf [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                     owl:onProperty :hasSlipDirection ;
+                                                     owl:someValuesFrom :SlipDirection
+                                                   ]
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty :hasSlipDirection ;
+                                                     owl:allValuesFrom :SlipDirection
+                                                   ]
+                                                 ) ;
+                              rdf:type owl:Class
+                            ] ,
+                            [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                     owl:onProperty :hasSlipPlaneNormal ;
+                                                     owl:someValuesFrom :SlipPlaneNormal
+                                                   ]
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty :hasSlipPlaneNormal ;
+                                                     owl:allValuesFrom :SlipPlaneNormal
+                                                   ]
+                                                 ) ;
+                              rdf:type owl:Class
+                            ] ;
+            rdfs:comment "A slip system is defined as the set of slip planes with the same unit normal vector and the same slip direction."@en ;
+            rdfs:label "Slip System"@en .
+
+
+###  https://purls.helmholtz-metadaten.de/diso#TransmissionElectronMicroscopy
+:TransmissionElectronMicroscopy rdf:type owl:Class ;
+                                rdfs:comment "Transmission electron microscopy (TEM) is a microscopy technique in which a beam of electrons is transmitted through a specimen to form an image. The specimen is often an ultrathin section less than 100 nm thick."@en ;
+                                rdfs:label "Transmission Electron Microscopy"@en .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
