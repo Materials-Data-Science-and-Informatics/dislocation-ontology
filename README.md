@@ -1,4 +1,5 @@
 ### Dislocation Ontology (DISO)
+**PID**: https://purls.helmholtz-metadaten.de/diso
 
 DISO is an ontology that defines the linear defect concepts and relations in crystalline materials. Moreover, Crystal Structure Ontology (CSO) and Crystallographic Defect Ontology (CDO), which ontologies define the concepts of crystal structureand crystalline defect, respectively, are also introduced in this repository. The ontology development processes are described following the well-known practices, e.g., using ontology metadata and reusing existing  ontologies,  e.g.,  MDO,  EMMO,  and  QUDT. To evaluate DISO, we have gathered competency questions (CQs) that will be answered via SPARQL query.
 ![DISO-classes](https://user-images.githubusercontent.com/71790028/165483170-acc102cd-ed74-4eea-b12f-43c449da20cb.png)
