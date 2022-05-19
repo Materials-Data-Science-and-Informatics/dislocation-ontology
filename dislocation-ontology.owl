@@ -595,7 +595,7 @@
     <!-- https://purls.helmholtz-metadaten.de/cso#Vector -->
 
     <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/cso#Vector">
-        <rdfs:comment xml:lang="en">(Euclidean) vector used to represent quantities that both magnitude and direction.</rdfs:comment>
+        <rdfs:comment xml:lang="en">(Euclidean) vector is used to represent quantities that both magnitude and direction.</rdfs:comment>
         <rdfs:label xml:lang="en">Vector</rdfs:label>
     </owl:Class>
     
@@ -605,7 +605,7 @@
 
     <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/diso#BurgersVector">
         <rdfs:subClassOf rdf:resource="https://purls.helmholtz-metadaten.de/cso#Vector"/>
-        <rdfs:comment xml:lang="en">An elementary unit (length order of lattice parameter) of lattice translation. The basic notion of Burgers vector comes from the closure failure of initially perfect lattice due to the existance of dislocation. The magnitude and direction of closure failure is characterized by Burgers vector.</rdfs:comment>
+        <rdfs:comment xml:lang="en">An elementary unit (length order of lattice parameter) of lattice translation. The basic notion of the Burgers vector comes from the closure failure of an initially perfect lattice due to the existence of dislocation. The magnitude and direction of closure failure are characterized by the Burgers vector.</rdfs:comment>
         <rdfs:label xml:lang="en">Burgers Vector</rdfs:label>
     </owl:Class>
     
@@ -703,7 +703,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Linear or one-dimensional defect around which some of the atoms are misaligned. In the mesoscale, a dislocation is a line object that is a boundary separating the regions on the slip plane which have undergone slip from those that have not.</rdfs:comment>
-        <rdfs:comment xml:lang="en">Presence of dislocation introduces local disturbance of the atomic-level geometry.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The presence of dislocation introduces local disturbance of the atomic-level geometry.</rdfs:comment>
         <rdfs:label xml:lang="en">Dislocation</rdfs:label>
         <rdfs:label xml:lang="de">Versetzung</rdfs:label>
     </owl:Class>
@@ -714,7 +714,7 @@
 
     <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/diso#EdgeDislocation">
         <rdfs:subClassOf rdf:resource="https://purls.helmholtz-metadaten.de/diso#Dislocation"/>
-        <rdfs:comment xml:lang="en">Dislocation that has a line sense perpendicular to its Burgers vector.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A dislocation that has a line sense perpendicular to its Burgers vector.</rdfs:comment>
         <rdfs:label xml:lang="en">Edge Dislocation</rdfs:label>
     </owl:Class>
     
@@ -787,7 +787,7 @@
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">The vector direction inside the lattice connecting two lattice points.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The vector direction inside the lattice that is connecting two lattice points.</rdfs:comment>
         <rdfs:label xml:lang="en">Lattice Direction</rdfs:label>
     </owl:Class>
     
@@ -796,7 +796,7 @@
     <!-- https://purls.helmholtz-metadaten.de/diso#LatticeDisplacement -->
 
     <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/diso#LatticeDisplacement">
-        <rdfs:comment xml:lang="en">The displacement of atoms from its perfect lattice sites due to the existence of defects, e.g., point defect, line defect, and grain boundary.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The displacement of atoms from their perfect lattice sites due to the existence of defects, e.g., point defect, line defect, and grain boundary.</rdfs:comment>
         <rdfs:label xml:lang="en">Lattice Displacement</rdfs:label>
     </owl:Class>
     
@@ -877,7 +877,7 @@
                 <owl:someValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#DiscretizedLine"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">Mathematical representation of dislocation as &apos;Line&apos;. An instance of mathematical representation of dislocation line is an oriented curve parameterized by its arc length.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Mathematical representation of dislocation as &apos;Line&apos;. An instance of mathematical representation of a dislocation line is an oriented curve parameterized by its arc length.</rdfs:comment>
         <rdfs:label xml:lang="en">Line</rdfs:label>
     </owl:Class>
     
@@ -895,7 +895,7 @@
     <!-- https://purls.helmholtz-metadaten.de/diso#LineSense -->
 
     <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/diso#LineSense">
-        <rdfs:comment xml:lang="en">Sense that characterizes a directed line, i.e., it has a start and an end.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A sense that characterizes a directed line, i.e., it has a start and an end.</rdfs:comment>
         <rdfs:label xml:lang="en">Line Sense</rdfs:label>
     </owl:Class>
     
@@ -910,7 +910,7 @@
                 <owl:allValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/cso#PositionVector"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">Node of a segment</rdfs:comment>
+        <rdfs:comment xml:lang="en">A node of a segment</rdfs:comment>
         <rdfs:label xml:lang="en">Node</rdfs:label>
     </owl:Class>
     
@@ -920,7 +920,7 @@
 
     <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/diso#Origin">
         <rdfs:subClassOf rdf:resource="https://purls.helmholtz-metadaten.de/cso#PositionVector"/>
-        <rdfs:comment xml:lang="en">A fixed point which is needed by vector to identify other points in the space relatives to its origin.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A fixed point that is needed by the vector to identify other points in the space relative to its origin.</rdfs:comment>
         <rdfs:label xml:lang="en">Origin</rdfs:label>
     </owl:Class>
     
@@ -930,7 +930,7 @@
 
     <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/diso#ScrewDislocation">
         <rdfs:subClassOf rdf:resource="https://purls.helmholtz-metadaten.de/diso#Dislocation"/>
-        <rdfs:comment xml:lang="en">Dislocation that has a line sense parallel to its Burgers vector.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A dislocation that has a line sense parallel to its Burgers vector.</rdfs:comment>
         <rdfs:label xml:lang="en">Screw Dislocation</rdfs:label>
     </owl:Class>
     
@@ -976,7 +976,7 @@
 
     <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/diso#SlipDirection">
         <rdfs:subClassOf rdf:resource="https://purls.helmholtz-metadaten.de/diso#LatticeDirection"/>
-        <rdfs:comment xml:lang="en">The direction in the slip plane along which plastic deformation takes place. Slip direction corresponds to one of the shortest lattice translation vectors.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The direction in the slip plane along which plastic deformation takes place. The slip direction corresponds to one of the shortest lattice translation vectors.</rdfs:comment>
         <rdfs:label xml:lang="en">Slip Direction</rdfs:label>
     </owl:Class>
     
@@ -1014,7 +1014,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">The crystallographic/lattice plane along which the dislocation line traverses/moves. Slip plane is normally the plane with the highest density of atoms, i.e. those which are most widely spaced.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The crystallographic/lattice plane along which the dislocation line traverses/moves. The slip plane is usually the plane with the highest density of atoms, i.e. most widely spaced.</rdfs:comment>
         <rdfs:label xml:lang="en">Slip Plane</rdfs:label>
     </owl:Class>
     
@@ -1031,7 +1031,7 @@
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">Unit normal vector of slip planes</rdfs:comment>
+        <rdfs:comment xml:lang="en">The unit normal vector of slip planes.</rdfs:comment>
         <rdfs:label xml:lang="en">Slip Plane Normal</rdfs:label>
     </owl:Class>
     
