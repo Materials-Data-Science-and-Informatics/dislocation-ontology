@@ -246,17 +246,6 @@
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/diso#hasOrigin -->
-
-    <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/diso#hasOrigin">
-        <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/diso#LatticePlane"/>
-        <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/diso#Origin"/>
-        <rdfs:comment xml:lang="en">hasOrigin represents the relationship between lattice plane and origin.</rdfs:comment>
-        <rdfs:label xml:lang="en">has origin</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://purls.helmholtz-metadaten.de/diso#hasRepresentation -->
 
     <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/diso#hasRepresentation">
@@ -366,6 +355,17 @@
         <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/diso#Node"/>
         <rdfs:comment xml:lang="en">Sub-property of hasNode that relates the segment with the start node.</rdfs:comment>
         <rdfs:label xml:lang="en">has start node</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/diso#hasVectorOrigin -->
+
+    <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/diso#hasVectorOrigin">
+        <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/diso#LatticePlane"/>
+        <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/diso#VectorOrigin"/>
+        <rdfs:comment xml:lang="en">hasVectorOrigin represents the relationship between lattice plane and origin.</rdfs:comment>
+        <rdfs:label xml:lang="en">has vector origin</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -598,6 +598,21 @@
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">The mathematical concept to represent the periodicity of a crystal. A lattice defines a periodic arrangement of one or more atoms.</rdfs:comment>
         <rdfs:label xml:lang="en">Lattice</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/cso#Point -->
+
+    <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/cso#Point">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/cso#hasPositionVector"/>
+                <owl:allValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/cso#PositionVector"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">In classical Euclidean geometry, a point is a primitive notion that models an exact location in the space, and has no length, width, or thickness.</rdfs:comment>
+        <rdfs:label xml:lang="en">Point</rdfs:label>
     </owl:Class>
     
 
@@ -859,8 +874,8 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasOrigin"/>
-                <owl:allValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#Origin"/>
+                <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasVectorOrigin"/>
+                <owl:allValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#VectorOrigin"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -879,12 +894,8 @@
     <!-- https://purls.helmholtz-metadaten.de/diso#LatticePoint -->
 
     <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/diso#LatticePoint">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/cso#hasPositionVector"/>
-                <owl:allValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/cso#PositionVector"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="https://purls.helmholtz-metadaten.de/cso#Point"/>
+
         <rdfs:comment xml:lang="en">Lattice point is the point where atom(s) or molecule(s) is located.</rdfs:comment>
         <rdfs:label xml:lang="en">Lattice Point</rdfs:label>
     </owl:Class>
@@ -930,30 +941,13 @@
     <!-- https://purls.helmholtz-metadaten.de/diso#Node -->
 
     <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/diso#Node">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/cso#hasPositionVector"/>
-                <owl:allValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/cso#PositionVector"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="https://purls.helmholtz-metadaten.de/cso#Point"/>
         <owl:disjointWith rdf:resource="https://purls.helmholtz-metadaten.de/diso#Segment"/>
-        <rdfs:comment xml:lang="en">A node of a segment</rdfs:comment>
+        <rdfs:comment xml:lang="en">A point of a segment.</rdfs:comment>
+
         <rdfs:label xml:lang="en">Node</rdfs:label>
     </owl:Class>
     
-
-
-    <!-- https://purls.helmholtz-metadaten.de/diso#Origin -->
-
-    <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/diso#Origin">
-        <rdfs:subClassOf rdf:resource="https://purls.helmholtz-metadaten.de/cso#Vector"/>
-        <rdfs:comment xml:lang="en">A fixed point that is needed by the vector to identify other points in the space relative to its origin.</rdfs:comment>
-        <rdfs:label xml:lang="en">Origin</rdfs:label>
-        <rdfs:label xml:lang="de">Ursprung</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://purls.helmholtz-metadaten.de/diso#ScrewDislocation -->
 
     <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/diso#ScrewDislocation">
@@ -1107,6 +1101,17 @@
     <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/diso#TransmissionElectronMicroscopy">
         <rdfs:comment xml:lang="en">Transmission electron microscopy (TEM) is a microscopy technique in which a beam of electrons is transmitted through a specimen to form an image. The specimen is often an ultrathin section less than 100 nm thick.</rdfs:comment>
         <rdfs:label xml:lang="en">Transmission Electron Microscopy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/diso#VectorOrigin -->
+
+    <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/diso#VectorOrigin">
+        <rdfs:subClassOf rdf:resource="https://purls.helmholtz-metadaten.de/cso#Point"/>
+        <rdfs:comment xml:lang="en">A fixed point that is needed by the vector to identify other points in the space relative to its origin.</rdfs:comment>
+        <rdfs:label xml:lang="de">Ursprung</rdfs:label>
+        <rdfs:label xml:lang="en">Vector Origin</rdfs:label>
     </owl:Class>
 </rdf:RDF>
 

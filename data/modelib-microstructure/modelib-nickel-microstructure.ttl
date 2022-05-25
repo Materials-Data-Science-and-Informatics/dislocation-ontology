@@ -872,6 +872,7 @@ skos:prefLabel a owl:AnnotationProperty ;
         "Stefan Sandfeld"^^xsd:string ;
     terms:created "21.03.2022"@en ;
     terms:creator "Ahmad Zainul Ihsan"@en ;
+    terms:license <http://creativecommons.org/licenses/by/3.0/> ;
     terms:title "Crystallographic Defect Ontology"@en ;
     vann:preferredNamespacePrefix "CDO"^^xsd:string ;
     rdfs:seeAlso "https://github.com/Materials-Data-Science-and-Informatics/dislocation-ontology" ;
@@ -971,7 +972,7 @@ ex:dislocation_0_Burgers_vector a diso:BurgersVector ;
     cso:hasVectorComponent ex:dislocation_0_vector_components_Burgers_vector ;
     cso:vectorMagnitude 2.489e-10 .
 
-ex:dislocation_0_slip_plane_origin a diso:Origin ;
+ex:dislocation_0_slip_plane_origin a diso:VectorOrigin ;
     cso:hasVectorComponent ex:dislocation_0_vector_components_origin .
 
 ex:dislocation_0_vector_components_Burgers_vector a cso:VectorComponentOfBasis ;
@@ -1013,7 +1014,7 @@ ex:dislocation_1_Burgers_vector a diso:BurgersVector ;
     cso:hasVectorComponent ex:dislocation_1_vector_components_Burgers_vector ;
     cso:vectorMagnitude 2.489e-10 .
 
-ex:dislocation_1_slip_plane_origin a diso:Origin ;
+ex:dislocation_1_slip_plane_origin a diso:VectorOrigin ;
     cso:hasVectorComponent ex:dislocation_1_vector_components_origin .
 
 ex:dislocation_1_vector_components_Burgers_vector a cso:VectorComponentOfBasis ;
@@ -1065,7 +1066,7 @@ ex:dislocation_2_slip_plane_normal a diso:SlipPlaneNormal ;
     cso:hasVectorComponent ex:dislocation_2_vector_components_of_slip_plane_normal ;
     diso:directionMillerIndice "[-1-11]"^^xsd:string .
 
-ex:dislocation_2_slip_plane_origin a diso:Origin ;
+ex:dislocation_2_slip_plane_origin a diso:VectorOrigin ;
     cso:hasVectorComponent ex:dislocation_2_vector_components_origin .
 
 ex:dislocation_2_vector_components_Burgers_vector a cso:VectorComponentOfBasis ;
@@ -1107,7 +1108,7 @@ ex:dislocation_3_Burgers_vector a diso:BurgersVector ;
     cso:hasVectorComponent ex:dislocation_3_vector_components_Burgers_vector ;
     cso:vectorMagnitude 2.489e-10 .
 
-ex:dislocation_3_slip_plane_origin a diso:Origin ;
+ex:dislocation_3_slip_plane_origin a diso:VectorOrigin ;
     cso:hasVectorComponent ex:dislocation_3_vector_components_origin .
 
 ex:dislocation_3_vector_components_Burgers_vector a cso:VectorComponentOfBasis ;
@@ -1149,7 +1150,7 @@ ex:dislocation_4_Burgers_vector a diso:BurgersVector ;
     cso:hasVectorComponent ex:dislocation_4_vector_components_Burgers_vector ;
     cso:vectorMagnitude 2.489e-10 .
 
-ex:dislocation_4_slip_plane_origin a diso:Origin ;
+ex:dislocation_4_slip_plane_origin a diso:VectorOrigin ;
     cso:hasVectorComponent ex:dislocation_4_vector_components_origin .
 
 ex:dislocation_4_vector_components_Burgers_vector a cso:VectorComponentOfBasis ;
@@ -1191,7 +1192,7 @@ ex:dislocation_6_Burgers_vector a diso:BurgersVector ;
     cso:hasVectorComponent ex:dislocation_6_vector_components_Burgers_vector ;
     cso:vectorMagnitude 2.489e-10 .
 
-ex:dislocation_6_slip_plane_origin a diso:Origin ;
+ex:dislocation_6_slip_plane_origin a diso:VectorOrigin ;
     cso:hasVectorComponent ex:dislocation_6_vector_components_origin .
 
 ex:dislocation_6_vector_components_Burgers_vector a cso:VectorComponentOfBasis ;
@@ -1233,7 +1234,7 @@ ex:dislocation_7_Burgers_vector a diso:BurgersVector ;
     cso:hasVectorComponent ex:dislocation_7_vector_components_Burgers_vector ;
     cso:vectorMagnitude 2.489e-10 .
 
-ex:dislocation_7_slip_plane_origin a diso:Origin ;
+ex:dislocation_7_slip_plane_origin a diso:VectorOrigin ;
     cso:hasVectorComponent ex:dislocation_7_vector_components_origin .
 
 ex:dislocation_7_vector_components_Burgers_vector a cso:VectorComponentOfBasis ;
@@ -1275,7 +1276,7 @@ ex:dislocation_8_Burgers_vector a diso:BurgersVector ;
     cso:hasVectorComponent ex:dislocation_8_vector_components_Burgers_vector ;
     cso:vectorMagnitude 2.489e-10 .
 
-ex:dislocation_8_slip_plane_origin a diso:Origin ;
+ex:dislocation_8_slip_plane_origin a diso:VectorOrigin ;
     cso:hasVectorComponent ex:dislocation_8_vector_components_origin .
 
 ex:dislocation_8_vector_components_Burgers_vector a cso:VectorComponentOfBasis ;
@@ -1317,7 +1318,7 @@ ex:dislocation_9_Burgers_vector a diso:BurgersVector ;
     cso:hasVectorComponent ex:dislocation_9_vector_components_Burgers_vector ;
     cso:vectorMagnitude 2.489e-10 .
 
-ex:dislocation_9_slip_plane_origin a diso:Origin ;
+ex:dislocation_9_slip_plane_origin a diso:VectorOrigin ;
     cso:hasVectorComponent ex:dislocation_9_vector_components_origin .
 
 ex:dislocation_9_vector_components_Burgers_vector a cso:VectorComponentOfBasis ;
@@ -3137,9 +3138,9 @@ ex:dislocation_0_slip_direction a diso:SlipDirection ;
 
 ex:dislocation_0_slip_plane a diso:SlipPlane ;
     diso:familyPlaneMillerIndice "{111}"^^xsd:string ;
-    diso:hasOrigin ex:dislocation_0_slip_plane_origin ;
     diso:hasSlipDirection ex:dislocation_0_slip_direction ;
     diso:hasSlipPlaneNormal ex:dislocation_0_slip_plane_normal ;
+    diso:hasVectorOrigin ex:dislocation_0_slip_plane_origin ;
     diso:planeMillerIndice "(111)"^^xsd:string .
 
 ex:dislocation_0_slip_plane_normal a diso:SlipPlaneNormal ;
@@ -3154,9 +3155,9 @@ ex:dislocation_1_slip_direction a diso:SlipDirection ;
 
 ex:dislocation_1_slip_plane a diso:SlipPlane ;
     diso:familyPlaneMillerIndice "{111}"^^xsd:string ;
-    diso:hasOrigin ex:dislocation_1_slip_plane_origin ;
     diso:hasSlipDirection ex:dislocation_1_slip_direction ;
     diso:hasSlipPlaneNormal ex:dislocation_1_slip_plane_normal ;
+    diso:hasVectorOrigin ex:dislocation_1_slip_plane_origin ;
     diso:planeMillerIndice "(-1-11)"^^xsd:string .
 
 ex:dislocation_1_slip_plane_normal a diso:SlipPlaneNormal ;
@@ -3165,9 +3166,9 @@ ex:dislocation_1_slip_plane_normal a diso:SlipPlaneNormal ;
 
 ex:dislocation_2_slip_plane a diso:SlipPlane ;
     diso:familyPlaneMillerIndice "{111}"^^xsd:string ;
-    diso:hasOrigin ex:dislocation_2_slip_plane_origin ;
     diso:hasSlipDirection ex:dislocation_2_slip_direction ;
     diso:hasSlipPlaneNormal ex:dislocation_2_slip_plane_normal ;
+    diso:hasVectorOrigin ex:dislocation_2_slip_plane_origin ;
     diso:planeMillerIndice "(-1-11)"^^xsd:string .
 
 ex:dislocation_3_slip_direction a diso:SlipDirection ;
@@ -3178,9 +3179,9 @@ ex:dislocation_3_slip_direction a diso:SlipDirection ;
 
 ex:dislocation_3_slip_plane a diso:SlipPlane ;
     diso:familyPlaneMillerIndice "{111}"^^xsd:string ;
-    diso:hasOrigin ex:dislocation_3_slip_plane_origin ;
     diso:hasSlipDirection ex:dislocation_3_slip_direction ;
     diso:hasSlipPlaneNormal ex:dislocation_3_slip_plane_normal ;
+    diso:hasVectorOrigin ex:dislocation_3_slip_plane_origin ;
     diso:planeMillerIndice "(-11-1)"^^xsd:string .
 
 ex:dislocation_3_slip_plane_normal a diso:SlipPlaneNormal ;
@@ -3195,9 +3196,9 @@ ex:dislocation_4_slip_direction a diso:SlipDirection ;
 
 ex:dislocation_4_slip_plane a diso:SlipPlane ;
     diso:familyPlaneMillerIndice "{111}"^^xsd:string ;
-    diso:hasOrigin ex:dislocation_4_slip_plane_origin ;
     diso:hasSlipDirection ex:dislocation_4_slip_direction ;
     diso:hasSlipPlaneNormal ex:dislocation_4_slip_plane_normal ;
+    diso:hasVectorOrigin ex:dislocation_4_slip_plane_origin ;
     diso:planeMillerIndice "(-11-1)"^^xsd:string .
 
 ex:dislocation_4_slip_plane_normal a diso:SlipPlaneNormal ;
@@ -3212,9 +3213,9 @@ ex:dislocation_6_slip_direction a diso:SlipDirection ;
 
 ex:dislocation_6_slip_plane a diso:SlipPlane ;
     diso:familyPlaneMillerIndice "{111}"^^xsd:string ;
-    diso:hasOrigin ex:dislocation_6_slip_plane_origin ;
     diso:hasSlipDirection ex:dislocation_6_slip_direction ;
     diso:hasSlipPlaneNormal ex:dislocation_6_slip_plane_normal ;
+    diso:hasVectorOrigin ex:dislocation_6_slip_plane_origin ;
     diso:planeMillerIndice "(-1-11)"^^xsd:string .
 
 ex:dislocation_6_slip_plane_normal a diso:SlipPlaneNormal ;
@@ -3229,9 +3230,9 @@ ex:dislocation_7_slip_direction a diso:SlipDirection ;
 
 ex:dislocation_7_slip_plane a diso:SlipPlane ;
     diso:familyPlaneMillerIndice "{111}"^^xsd:string ;
-    diso:hasOrigin ex:dislocation_7_slip_plane_origin ;
     diso:hasSlipDirection ex:dislocation_7_slip_direction ;
     diso:hasSlipPlaneNormal ex:dislocation_7_slip_plane_normal ;
+    diso:hasVectorOrigin ex:dislocation_7_slip_plane_origin ;
     diso:planeMillerIndice "(-11-1)"^^xsd:string .
 
 ex:dislocation_7_slip_plane_normal a diso:SlipPlaneNormal ;
@@ -3246,9 +3247,9 @@ ex:dislocation_8_slip_direction a diso:SlipDirection ;
 
 ex:dislocation_8_slip_plane a diso:SlipPlane ;
     diso:familyPlaneMillerIndice "{111}"^^xsd:string ;
-    diso:hasOrigin ex:dislocation_8_slip_plane_origin ;
     diso:hasSlipDirection ex:dislocation_8_slip_direction ;
     diso:hasSlipPlaneNormal ex:dislocation_8_slip_plane_normal ;
+    diso:hasVectorOrigin ex:dislocation_8_slip_plane_origin ;
     diso:planeMillerIndice "(-111)"^^xsd:string .
 
 ex:dislocation_8_slip_plane_normal a diso:SlipPlaneNormal ;
@@ -3263,9 +3264,9 @@ ex:dislocation_9_slip_direction a diso:SlipDirection ;
 
 ex:dislocation_9_slip_plane a diso:SlipPlane ;
     diso:familyPlaneMillerIndice "{111}"^^xsd:string ;
-    diso:hasOrigin ex:dislocation_9_slip_plane_origin ;
     diso:hasSlipDirection ex:dislocation_9_slip_direction ;
     diso:hasSlipPlaneNormal ex:dislocation_9_slip_plane_normal ;
+    diso:hasVectorOrigin ex:dislocation_9_slip_plane_origin ;
     diso:planeMillerIndice "(1-1-1)"^^xsd:string .
 
 ex:dislocation_9_slip_plane_normal a diso:SlipPlaneNormal ;

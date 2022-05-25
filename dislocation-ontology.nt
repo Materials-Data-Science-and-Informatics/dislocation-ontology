@@ -1,610 +1,610 @@
-<https://purls.helmholtz-metadaten.de/diso#hasFamilyCrystalPlane> <http://www.w3.org/2000/01/rdf-schema#comment> "hasFamilyCrystalPlane represents the relationship between the lattice plane and the family of crystal planes."@en .
-_:Ndd77f02bf24945838267a293907beeb8 <http://www.w3.org/2002/07/owl#unionOf> _:N09520136a0d84e8a9cba07a52b76eea9 .
-_:Naadc04128601466180b187b3d02e1edd <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://purls.helmholtz-metadaten.de/diso#hasLatticePoint> <http://www.w3.org/2000/01/rdf-schema#domain> _:N5fe8820f4c954bf4a8bdb1e2616c9d48 .
-<https://purls.helmholtz-metadaten.de/diso#Line> <http://www.w3.org/2002/07/owl#disjointWith> <https://purls.helmholtz-metadaten.de/diso#Node> .
-<https://purls.helmholtz-metadaten.de/diso> <http://www.w3.org/2000/01/rdf-schema#label> "Dislocation Ontology"@en .
-_:N6bf036d5401c409caafd2c06c02543dc <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:N6f9579640f3640cfb0ab087038cadb65 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:N08b396bd83824379ab1578d375792587 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:N3fc1b0a3737c42af9ee1182c0f955e0c .
-_:N80367992653f4c51ac09498f3602a3f1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:N77d5665e4b124d268f4a6a4aca934e9e <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://purls.helmholtz-metadaten.de/diso#observedBy> <http://www.w3.org/2000/01/rdf-schema#label> "observed by"@en .
-_:N5a34d26dc05b457c9d4f86bba68933d2 <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#hasLineSense> .
-<https://purls.helmholtz-metadaten.de/cso#Lattice> <http://www.w3.org/2000/01/rdf-schema#label> "Lattice"@en .
-_:N6ea6a4bb5d4d4d419c2ffa7055faefbe <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Nf42108820781496eae545bd83ce91350 .
-<https://purls.helmholtz-metadaten.de/cso#Lattice> <http://www.w3.org/2000/01/rdf-schema#comment> "The mathematical concept to represent the periodicity of a crystal. A lattice defines a periodic arrangement of one or more atoms."@en .
-_:N9fb023316296470c9ba94f7b58311e06 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-<https://purls.helmholtz-metadaten.de/cso#hasPositionVector> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
-_:N4d719b2171ce47fdbced28d14abc2a61 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://purls.helmholtz-metadaten.de/diso#Origin> .
-_:Ncb80e2679ef34b599dd4b7994dc3cb08 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://purls.helmholtz-metadaten.de/diso#hasBurgersVector> <http://www.w3.org/2000/01/rdf-schema#comment> "hasBurgersVector represents the relationship between dislocation to Burgers vector."@en .
-_:N8a470686beec493d9b4310a0c404010a <http://www.w3.org/2002/07/owl#intersectionOf> _:N2332aec0844642d4a080ec54ca8ee36d .
-_:N3fc1b0a3737c42af9ee1182c0f955e0c <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://purls.helmholtz-metadaten.de/diso#resultsIn> <http://www.w3.org/2000/01/rdf-schema#label> "results in"@en .
-_:Nd7299f9e23a149f3ae23f152dd62e5a8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:Ndd77f02bf24945838267a293907beeb8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://purls.helmholtz-metadaten.de/diso#SlipPlane> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Nc8a4f5c4fa8a47debaf624d6790292fd .
-<https://purls.helmholtz-metadaten.de/diso#LatticeDirection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purls.helmholtz-metadaten.de/cso#Vector> .
-<https://purls.helmholtz-metadaten.de/diso#hasNumericalRepresentation> <http://www.w3.org/2000/01/rdf-schema#label> "has numerical representation"@en .
-_:N0100b2f0f379424d9a87ba0ea0f38f49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://purls.helmholtz-metadaten.de/diso#SlipPlane> <http://www.w3.org/2000/01/rdf-schema#label> "Slip Plane"@en .
-_:Nc9043f19d86e43bfbcafb72ead6c332b <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:Nc0e4133a49a64cd98aac2bdffda596b4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:Nef3fe77d556144f09c3693e236a72b83 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:N59e85e6689264b50a4f81b05a927baec <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:Ncd6b7eba325f4ccf95ba5340ae64f80f .
-_:N0100b2f0f379424d9a87ba0ea0f38f49 <http://www.w3.org/2002/07/owl#unionOf> _:N6ea6a4bb5d4d4d419c2ffa7055faefbe .
-_:Nd90e784e728d4047889c4b99d2d30c4c <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:N5fe8820f4c954bf4a8bdb1e2616c9d48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:N3fc1b0a3737c42af9ee1182c0f955e0c <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#hasLineSense> .
-_:Nfbd99c98a9dd4f08b3d1feac41471f49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://purls.helmholtz-metadaten.de/diso#familyDirectionMillerIndice> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://purls.helmholtz-metadaten.de/diso#LatticeDirection> <http://www.w3.org/2000/01/rdf-schema#comment> "The vector direction inside the lattice that is connecting two lattice points."@en .
-<https://purls.helmholtz-metadaten.de/diso#hasLineSense> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purls.helmholtz-metadaten.de/diso#Dislocation> .
-<https://purls.helmholtz-metadaten.de/diso#DiscretizedLine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:N1eb052a5e38242819eeaed73558f65b9 .
-_:Nc87b8d5701ac4ee2966dd2c87694d772 <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#hasSlipPlaneNormal> .
-<https://purls.helmholtz-metadaten.de/diso#movesOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-_:N3437b956e9a14efe9374b5868f16c550 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:N323406bba4d24f37b45bfb0e5628ad45 .
-<https://purls.helmholtz-metadaten.de/diso#hasStartNode> <http://www.w3.org/2000/01/rdf-schema#label> "has start node"@en .
-_:Na86a847c39634f3992b245a1cf95b1a5 <http://www.w3.org/2002/07/owl#intersectionOf> _:N56638dc21d204c24b56089d7eebff1fa .
-_:Nbbec8a050e3b4196b5ccc9a7cca2f5f1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-<https://purls.helmholtz-metadaten.de/diso#Origin> <http://www.w3.org/2000/01/rdf-schema#label> "Ursprung"@de .
-_:N834df5310022410dad8cad7217b14aa0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:Nc671ebdd9dba40bc8218439b72733422 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://purls.helmholtz-metadaten.de/diso#LatticeDirection> .
-_:N683d757d71ac432eb01a5eae5b7148aa <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://purls.helmholtz-metadaten.de/diso#Line> <http://www.w3.org/2000/01/rdf-schema#label> "Line"@en .
-_:N9fb023316296470c9ba94f7b58311e06 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:N054a3ca3d03944a38bf1ceb6affaa955 .
-_:N8a470686beec493d9b4310a0c404010a <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:Nc637e89b2b0d4280a1d41119b201cb5f <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purls.helmholtz-metadaten.de/diso#TransmissionElectronMicroscopy> .
-<https://purls.helmholtz-metadaten.de/diso> <http://www.w3.org/2002/07/owl#versionInfo> "1.0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
-_:N2527e8e9d370422c95807f2801796fa4 <http://www.w3.org/2002/07/owl#intersectionOf> _:N1e1aec4961b14ca6b9ae27f177df1642 .
-_:N192fe8c9927b4e8bbf9b44cda8ba2a43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:N5a5b3c3341584847bf3f7a6c4ffa75b2 <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#movesOn> .
-_:N897811e75ac04516ba15a1c251057f59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purls.helmholtz-metadaten.de/diso#SlipSystem> .
-_:Ne9e7873aed704a7fbde48fb39dfa5fd6 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://purls.helmholtz-metadaten.de/diso#SlipPlane> .
-_:Nb4d6c8f5ab0d4cbbb68e375fea6fe861 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-<https://purls.helmholtz-metadaten.de/diso#hasSegment> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purls.helmholtz-metadaten.de/diso#DiscretizedLine> .
-<https://purls.helmholtz-metadaten.de/diso#Dislocation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Naadc04128601466180b187b3d02e1edd .
-_:Ne93f81e4b5ad4176a1fe479fa838b1a4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-<https://purls.helmholtz-metadaten.de/diso#hasLatticeDirection> <http://www.w3.org/2000/01/rdf-schema#comment> "hasLatticeDirection represents the relationship between a lattice or a lattice plane with lattice directions."@en .
-<https://purls.helmholtz-metadaten.de/diso#LatticePlane> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Nd9d24a91a7994aa7a7aaccb231bddfa5 .
-<https://purls.helmholtz-metadaten.de/diso#Dislocation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Nc87a820dc1564ab09730f718d09a9390 .
-<https://purls.helmholtz-metadaten.de/diso#LatticePoint> <http://www.w3.org/2000/01/rdf-schema#label> "Lattice Point"@en .
-<https://purls.helmholtz-metadaten.de/diso#hasLineSense> <http://www.w3.org/2000/01/rdf-schema#label> "has line sense"@en .
-<https://purls.helmholtz-metadaten.de/cdo#CrystallographicDefect> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:N42b8213980b24bceaf98b0bfede21180 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:N77c7b9d588524740a0839f0f8a5c433a <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Ne93f81e4b5ad4176a1fe479fa838b1a4 .
-_:Nb41909cf1999497d9a74da4b84e53add <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#hasLatticeDirection> .
-<https://purls.helmholtz-metadaten.de/diso#ScrewDislocation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purls.helmholtz-metadaten.de/diso#Dislocation> .
-<https://purls.helmholtz-metadaten.de/diso#Node> <http://www.w3.org/2000/01/rdf-schema#label> "Node"@en .
-_:Ne25ef73cd1574a4ba3780e9445fda104 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:Nf12f64852c334ad5910509dc2a50a4db .
-_:N49a86fc276fc4a7bbe1811c54454dc7b <http://www.w3.org/2002/07/owl#someValuesFrom> <https://purls.helmholtz-metadaten.de/diso#LatticePoint> .
-<https://purls.helmholtz-metadaten.de/cso#PositionVector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:Nc671ebdd9dba40bc8218439b72733422 <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#hasLatticeDirection> .
-_:N312c9741d8e64014b68be3dac04a9aa2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:Nfb3b01fd51ab435f870c9d8f2f4ed6c2 .
-_:N683d757d71ac432eb01a5eae5b7148aa <http://www.w3.org/2002/07/owl#allValuesFrom> <https://purls.helmholtz-metadaten.de/diso#Node> .
-<https://purls.helmholtz-metadaten.de/diso#hasOrigin> <http://www.w3.org/2000/01/rdf-schema#range> <https://purls.helmholtz-metadaten.de/diso#Origin> .
-<https://purls.helmholtz-metadaten.de/diso#LineDefect> <http://www.w3.org/2000/01/rdf-schema#label> "Line Defect"@en .
-<https://purls.helmholtz-metadaten.de/diso#LatticeDisplacement> <http://www.w3.org/2000/01/rdf-schema#label> "Lattice Displacement"@en .
-_:N47cf65b05cd641b98cd05214a43a3356 <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#hasSlipDirection> .
-_:N3dbed238824143f2a0679f863411b4e9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purls.helmholtz-metadaten.de/diso#LatticeDirection> .
-_:N719128a2eb0343f4b2f615a9658123ff <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:N5fe8820f4c954bf4a8bdb1e2616c9d48 <http://www.w3.org/2002/07/owl#unionOf> _:Nae03b163fb14425cab2b51a75710e898 .
-_:N08b396bd83824379ab1578d375792587 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-<https://purls.helmholtz-metadaten.de/diso#Dislocation> <http://www.w3.org/2000/01/rdf-schema#label> "Dislocation"@en .
-_:N683d757d71ac432eb01a5eae5b7148aa <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#hasStartNode> .
-_:Nd46d1893591d46f18e428723bd564c9d <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:N508cdc7cd23d44f28add3713889c2663 .
-<https://purls.helmholtz-metadaten.de/diso#familyPlaneMillerIndice> <http://www.w3.org/2000/01/rdf-schema#label> "family plane miller indice"@en .
-<https://purls.helmholtz-metadaten.de/cdo#CrystallographicDefect> <http://www.w3.org/2000/01/rdf-schema#comment> "The crystallographic defect is a lattice irregularity that has one or more dimensions on the order of an atomic diameter."@en .
-<https://purls.helmholtz-metadaten.de/diso#SlipSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:N8a470686beec493d9b4310a0c404010a .
-_:Nd9d24a91a7994aa7a7aaccb231bddfa5 <http://www.w3.org/2002/07/owl#intersectionOf> _:N79d903c83a864a6186a1f34ddb43c4b3 .
-_:N5862671d047249028dfc4d55b35c409a <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#hasLatticeDirection> .
-_:N542349c4d1214f4eb8891650fe770998 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purls.helmholtz-metadaten.de/diso#LatticePlane> .
-<https://purls.helmholtz-metadaten.de/diso#hasOrigin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-_:N56638dc21d204c24b56089d7eebff1fa <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:N47cf65b05cd641b98cd05214a43a3356 .
-_:N77d5665e4b124d268f4a6a4aca934e9e <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#hasSlipDirection> .
-_:N2427337385ee4ec8a19b7c7ed94b7651 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://purls.helmholtz-metadaten.de/diso#hasMathematicalRepresentation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purls.helmholtz-metadaten.de/diso#Dislocation> .
-_:N3dbed238824143f2a0679f863411b4e9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:N542349c4d1214f4eb8891650fe770998 .
-<https://purls.helmholtz-metadaten.de/diso#EdgeDislocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:N1eb052a5e38242819eeaed73558f65b9 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-<https://purls.helmholtz-metadaten.de/diso#hasRepresentation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://purls.helmholtz-metadaten.de/diso#hasLatticePoint> <http://www.w3.org/2000/01/rdf-schema#range> <https://purls.helmholtz-metadaten.de/diso#LatticePoint> .
-<https://purls.helmholtz-metadaten.de/diso#observedBy> <http://www.w3.org/2000/01/rdf-schema#range> _:Ndd77f02bf24945838267a293907beeb8 .
-<https://purls.helmholtz-metadaten.de/diso#TransmissionElectronMicroscopy> <http://www.w3.org/2000/01/rdf-schema#comment> "Transmission electron microscopy (TEM) is a microscopy technique in which a beam of electrons is transmitted through a specimen to form an image. The specimen is often an ultrathin section less than 100 nm thick."@en .
-<https://purls.helmholtz-metadaten.de/diso#SlipPlane> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Nd0df805605f54fd3b0cac17d627257ef .
-<https://purls.helmholtz-metadaten.de/diso#LatticePlane> <http://www.w3.org/2000/01/rdf-schema#comment> "The lattice plane forms an infinitely stretched plane (characterized through a plane normal) that cuts through lattice points such that, again, a regular arrangement of lattice points in the plane occurs."@en .
-<https://purls.helmholtz-metadaten.de/cso#CrystalStructure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Ncb80e2679ef34b599dd4b7994dc3cb08 .
-_:N5e7f92c0399f43c8818605cd772c7aa2 <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#hasShapeFunction> .
-_:Nb4c7eab46b3141d9bb1f6b43faefba5a <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://purls.helmholtz-metadaten.de/diso#SlipSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:N41bb625180dc4ee6898cb579a989899c <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:Na609121d94e74fd2acc8b1ba234d05a9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-<https://purls.helmholtz-metadaten.de/diso#Dislocation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:N95d96542f52249e5b7d3ee691ccfeb8e .
-_:N79d903c83a864a6186a1f34ddb43c4b3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:N59e85e6689264b50a4f81b05a927baec .
-<https://purls.helmholtz-metadaten.de/diso#SlipDirection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://purls.helmholtz-metadaten.de/diso#hasNode> <http://www.w3.org/2000/01/rdf-schema#range> <https://purls.helmholtz-metadaten.de/diso#Node> .
-<https://purls.helmholtz-metadaten.de/diso#LatticePoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://purls.helmholtz-metadaten.de/diso#FamilyOfCrystalPlane> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:N8d36836a273945cdb00b0f95f904dc23 .
-<https://purls.helmholtz-metadaten.de/diso#hasLatticeDirection> <http://www.w3.org/2000/01/rdf-schema#label> "has lattice direction"@en .
-_:N87049ec14088488792b2a9b1a5e999ee <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:N6f9579640f3640cfb0ab087038cadb65 <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#familyDirectionMillerIndice> .
-_:Na01445e533494ff287c4ad0bb494b3cd <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-<https://purls.helmholtz-metadaten.de/diso#LatticePoint> <http://www.w3.org/2000/01/rdf-schema#comment> "Lattice point is the point where atom(s) or molecule(s) is located."@en .
-_:Nd349c29fccbc4753a2e0ee466402d680 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purls.helmholtz-metadaten.de/diso#DiscretizedLine> .
-_:Nc87a820dc1564ab09730f718d09a9390 <http://www.w3.org/2002/07/owl#intersectionOf> _:Nbb372828a29d48408a724b6875246a79 .
-_:N3f72d0d8dc0747ccaf2cfbb8291df05b <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#hasLatticePoint> .
-_:N41bb625180dc4ee6898cb579a989899c <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
-_:N294f155114454f3ca1729d10aa625262 <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#hasSlipSystem> .
-_:Nb3fdd6313d6249a7903ee3e5fdef9d48 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://purls.helmholtz-metadaten.de/diso#LatticePlane> .
-_:N70b5438528224854a0d6d8f5dcfc5c43 <http://www.w3.org/2002/07/owl#unionOf> _:N77c7b9d588524740a0839f0f8a5c433a .
-<https://purls.helmholtz-metadaten.de/diso#hasNumericalRepresentation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purls.helmholtz-metadaten.de/diso#Line> .
-<https://purls.helmholtz-metadaten.de/diso#ScrewDislocation> <http://www.w3.org/2000/01/rdf-schema#comment> "A dislocation that has a line sense parallel to its Burgers vector."@en .
-_:Nb3fdd6313d6249a7903ee3e5fdef9d48 <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#hasLatticePlane> .
-_:Nef3fe77d556144f09c3693e236a72b83 <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#hasSlipPlane> .
-<https://purls.helmholtz-metadaten.de/diso#hasLatticePlane> <http://www.w3.org/2000/01/rdf-schema#domain> _:Nb79f9dba94d14b77aeda0284436e458e .
-<https://purls.helmholtz-metadaten.de/diso#slipArea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-_:N42b8213980b24bceaf98b0bfede21180 <http://www.w3.org/2002/07/owl#intersectionOf> _:N2a93e5da211342b487839ac6d3fa2a2c .
-_:N49a86fc276fc4a7bbe1811c54454dc7b <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:N508cdc7cd23d44f28add3713889c2663 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://purls.helmholtz-metadaten.de/diso#SlipDirection> .
-<https://purls.helmholtz-metadaten.de/diso#hasLatticePoint> <http://www.w3.org/2000/01/rdf-schema#label> "has lattice point"@en .
-<https://purls.helmholtz-metadaten.de/diso#BurgersVector> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purls.helmholtz-metadaten.de/cso#Vector> .
-_:Na1a9ceaad9e4428282d274589a7a0a92 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:N294f155114454f3ca1729d10aa625262 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://purls.helmholtz-metadaten.de/diso#hasMathematicalRepresentation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://purls.helmholtz-metadaten.de/diso#hasMathematicalRepresentation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://purls.helmholtz-metadaten.de/diso#hasRepresentation> .
-<https://purls.helmholtz-metadaten.de/diso#SlipDirection> <http://www.w3.org/2000/01/rdf-schema#label> "Slip Direction"@en .
-_:N508cdc7cd23d44f28add3713889c2663 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://purls.helmholtz-metadaten.de/diso#familyDirectionMillerIndice> <http://www.w3.org/2000/01/rdf-schema#comment> "familyDirectionMillerIndice represents a set of miller indices of lattice direction in string."@en .
-<https://purls.helmholtz-metadaten.de/diso#LineDefect> <http://www.w3.org/2000/01/rdf-schema#comment> "Linear or one-dimensional defect around which some of the atoms are misaligned."@en .
-_:N323406bba4d24f37b45bfb0e5628ad45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purls.helmholtz-metadaten.de/cso#Lattice> .
-_:N35f6fd1b0cf847a0879e35f5c694cba6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:Nc87b8d5701ac4ee2966dd2c87694d772 .
-_:Nb41909cf1999497d9a74da4b84e53add <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:N87049ec14088488792b2a9b1a5e999ee <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purls.helmholtz-metadaten.de/diso#SlipSystem> .
-<https://purls.helmholtz-metadaten.de/diso#hasSegment> <http://www.w3.org/2000/01/rdf-schema#range> <https://purls.helmholtz-metadaten.de/diso#Segment> .
-_:N47cf65b05cd641b98cd05214a43a3356 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://purls.helmholtz-metadaten.de/diso#SlipDirection> .
-_:N192fe8c9927b4e8bbf9b44cda8ba2a43 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://purls.helmholtz-metadaten.de/diso#BurgersVector> .
-<https://purls.helmholtz-metadaten.de/diso#FieldIonMicroscopy> <http://www.w3.org/2000/01/rdf-schema#label> "Field Ion Microscopy"@en .
-<https://purls.helmholtz-metadaten.de/diso#hasLatticePlane> <http://www.w3.org/2000/01/rdf-schema#range> <https://purls.helmholtz-metadaten.de/diso#LatticePlane> .
-_:Nf179a687e8684c24bdab947b211307f1 <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#resultsIn> .
-<https://purls.helmholtz-metadaten.de/diso#SlipSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Na86a847c39634f3992b245a1cf95b1a5 .
-<https://purls.helmholtz-metadaten.de/diso#FieldIonMicroscopy> <http://www.w3.org/2002/07/owl#disjointWith> <https://purls.helmholtz-metadaten.de/diso#TransmissionElectronMicroscopy> .
-<https://purls.helmholtz-metadaten.de/diso#directionMillerIndice> <http://www.w3.org/2000/01/rdf-schema#comment> "directionMillerIndice represents Miller indice of lattice direction in string."@en .
-_:Ncd6b7eba325f4ccf95ba5340ae64f80f <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#hasLatticePoint> .
-<https://purls.helmholtz-metadaten.de/cso#CrystalStructure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Nc8af6ffe64ca4d779ba5ba3d51cea3fc .
-<https://purls.helmholtz-metadaten.de/diso#hasSlipDirection> <http://www.w3.org/2000/01/rdf-schema#domain> _:N2dcc4dbe0796471b977413dd9b850c68 .
-_:N312c9741d8e64014b68be3dac04a9aa2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-<https://purls.helmholtz-metadaten.de/diso#Dislocation> <http://www.w3.org/2000/01/rdf-schema#comment> "Linear or one-dimensional defect around which some of the atoms are misaligned. In the mesoscale, a dislocation is a line object that is a boundary separating the regions on the slip plane which have undergone slip from those that have not."@en .
-<https://purls.helmholtz-metadaten.de/diso#Node> <http://www.w3.org/2000/01/rdf-schema#comment> "A node of a segment"@en .
-<https://purls.helmholtz-metadaten.de/diso#slipArea> <http://www.w3.org/2000/01/rdf-schema#comment> "slipArea represents the slip area of discretized line in double."@en .
-<https://purls.helmholtz-metadaten.de/diso#movesOn> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purls.helmholtz-metadaten.de/diso#Dislocation> .
-<https://purls.helmholtz-metadaten.de/diso> <http://purl.org/dc/terms/created> "21.03.2022"@en .
-_:N1dc82374ca8048a3b60ee37556acdc2f <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#hasLatticeDirection> .
-<https://purls.helmholtz-metadaten.de/diso#movesOn> <http://www.w3.org/2000/01/rdf-schema#comment> "movesOn represents the relationship between dislocation and slip plane."@en .
-_:Ne25ef73cd1574a4ba3780e9445fda104 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Na609121d94e74fd2acc8b1ba234d05a9 .
-_:N2427337385ee4ec8a19b7c7ed94b7651 <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#hasSlipDirection> .
-_:Nbbec8a050e3b4196b5ccc9a7cca2f5f1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:Nb41909cf1999497d9a74da4b84e53add .
-_:N6bf036d5401c409caafd2c06c02543dc <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#hasSlipPlaneNormal> .
-_:Nc8af6ffe64ca4d779ba5ba3d51cea3fc <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:N80367992653f4c51ac09498f3602a3f1 <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#hasSlipPlaneNormal> .
-<https://purls.helmholtz-metadaten.de/diso#hasStartNode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-_:N78eef41cfaf54da2977fb6b6de140d6a <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://purls.helmholtz-metadaten.de/diso#SlipDirection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purls.helmholtz-metadaten.de/diso#LatticeDirection> .
-_:Nd0df805605f54fd3b0cac17d627257ef <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://purls.helmholtz-metadaten.de/diso#DiscretizedLine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:N5e7f92c0399f43c8818605cd772c7aa2 .
-_:N5a34d26dc05b457c9d4f86bba68933d2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://purls.helmholtz-metadaten.de/cso#Lattice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Nc9043f19d86e43bfbcafb72ead6c332b .
-_:Nb79f9dba94d14b77aeda0284436e458e <http://www.w3.org/2002/07/owl#unionOf> _:N3437b956e9a14efe9374b5868f16c550 .
-_:N054a3ca3d03944a38bf1ceb6affaa955 <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#hasLatticePoint> .
-<https://purls.helmholtz-metadaten.de/diso#Segment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:N5e7f92c0399f43c8818605cd772c7aa2 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://purls.helmholtz-metadaten.de/diso#ShapeFunction> .
-<https://purls.helmholtz-metadaten.de/diso#hasOrigin> <http://www.w3.org/2000/01/rdf-schema#label> "has origin"@en .
-<https://purls.helmholtz-metadaten.de/diso#directionMillerIndice> <http://www.w3.org/2000/01/rdf-schema#label> "direction miller indice"@en .
-_:Nc57923ba3b9041608d46e7be623b508a <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:N2527e8e9d370422c95807f2801796fa4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://purls.helmholtz-metadaten.de/diso#Node> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:Nae03b163fb14425cab2b51a75710e898 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purls.helmholtz-metadaten.de/cso#Lattice> .
-_:N332a2807f96443ab986b36fbdcc5c882 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:N2427337385ee4ec8a19b7c7ed94b7651 .
-_:Naadc04128601466180b187b3d02e1edd <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#observedBy> .
-<https://purls.helmholtz-metadaten.de/diso#observedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-_:N59e85e6689264b50a4f81b05a927baec <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:N8d36836a273945cdb00b0f95f904dc23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:Nf12f64852c334ad5910509dc2a50a4db <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#hasLatticePoint> .
-_:N508cdc7cd23d44f28add3713889c2663 <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#hasSlipDirection> .
-<https://purls.helmholtz-metadaten.de/diso#LatticeDirection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://purls.helmholtz-metadaten.de/diso#hasBurgersVector> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purls.helmholtz-metadaten.de/diso#Dislocation> .
-_:Nb3fdd6313d6249a7903ee3e5fdef9d48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:N8ad13333885f4c5b82c7bd75a20e26bc <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:Nb3fdd6313d6249a7903ee3e5fdef9d48 .
-<https://purls.helmholtz-metadaten.de/diso#hasEndNode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://purls.helmholtz-metadaten.de/cso#Vector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:N2a93e5da211342b487839ac6d3fa2a2c <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:N192fe8c9927b4e8bbf9b44cda8ba2a43 .
-<https://purls.helmholtz-metadaten.de/diso#BurgersVector> <http://www.w3.org/2000/01/rdf-schema#label> "Burgers Vector"@en .
-<https://purls.helmholtz-metadaten.de/diso#SlipPlane> <http://www.w3.org/2000/01/rdf-schema#comment> "The crystallographic/lattice plane along which the dislocation line traverses/moves. The slip plane is usually the plane with the highest density of atoms, i.e. most widely spaced."@en .
-_:N33343117de3743d0add3f263286642e4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:N897811e75ac04516ba15a1c251057f59 .
-<https://purls.helmholtz-metadaten.de/diso#isSegmentOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purls.helmholtz-metadaten.de/diso#Segment> .
-<https://purls.helmholtz-metadaten.de/diso#hasLineSense> <http://www.w3.org/2000/01/rdf-schema#comment> "hasLineSense represents the relationship between dislocation and line sense."@en .
-_:N638a5f76c2474976b09abc075d7736de <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
-<https://purls.helmholtz-metadaten.de/diso#directionMillerIndice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-_:N8d36836a273945cdb00b0f95f904dc23 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
-<https://purls.helmholtz-metadaten.de/diso#EdgeDislocation> <http://www.w3.org/2000/01/rdf-schema#comment> "A dislocation that has a line sense perpendicular to its Burgers vector."@en .
-<https://purls.helmholtz-metadaten.de/diso#hasEndNode> <http://www.w3.org/2000/01/rdf-schema#label> "has end node"@en .
-<https://purls.helmholtz-metadaten.de/diso#DiscretizedLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://purls.helmholtz-metadaten.de/diso#LatticePlane> <http://www.w3.org/2000/01/rdf-schema#label> "Lattice Plane"@en .
-<https://purls.helmholtz-metadaten.de/diso#hasSlipSystem> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purls.helmholtz-metadaten.de/cso#CrystalStructure> .
-_:Na609121d94e74fd2acc8b1ba234d05a9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:Ne44ef718daac4c70b6521afe3ce1a69e .
-<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-_:Nc8af6ffe64ca4d779ba5ba3d51cea3fc <http://www.w3.org/2002/07/owl#intersectionOf> _:Nd032ed08c11f40ffa50326fe33dcfe10 .
-<https://purls.helmholtz-metadaten.de/diso#LatticePlane> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:N4d719b2171ce47fdbced28d14abc2a61 .
-_:Nd032ed08c11f40ffa50326fe33dcfe10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:N312c9741d8e64014b68be3dac04a9aa2 .
-<https://purls.helmholtz-metadaten.de/diso#directionMillerIndice> <http://www.w3.org/2000/01/rdf-schema#domain> _:N0100b2f0f379424d9a87ba0ea0f38f49 .
-_:N6c5a16b9b8f746ab849c2aae4c2865ad <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://purls.helmholtz-metadaten.de/diso#hasFamilyCrystalDirection> <http://www.w3.org/2000/01/rdf-schema#label> "has family crystal direction"@en .
-<https://purls.helmholtz-metadaten.de/diso#SlipSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "A slip system is defined as the set of slip planes with the same unit normal vector and the same slip direction."@en .
-<https://purls.helmholtz-metadaten.de/diso#Line> <http://www.w3.org/2000/01/rdf-schema#comment> "Mathematical representation of dislocation as 'Line'. An instance of mathematical representation of a dislocation line is an oriented curve parameterized by its arc length."@en .
-_:N638a5f76c2474976b09abc075d7736de <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:N04b6c65147d649f7a1c8e071a4cd7162 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://purls.helmholtz-metadaten.de/diso#Segment> .
-<https://purls.helmholtz-metadaten.de/diso#SlipDirection> <http://www.w3.org/2000/01/rdf-schema#comment> "The direction in the slip plane along which plastic deformation takes place. The slip direction corresponds to one of the shortest lattice translation vectors."@en .
-_:N2dcc4dbe0796471b977413dd9b850c68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://purls.helmholtz-metadaten.de/diso#Line> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Nb4c7eab46b3141d9bb1f6b43faefba5a .
-<https://purls.helmholtz-metadaten.de/diso#Origin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://purls.helmholtz-metadaten.de/diso#SlipPlaneNormal> <http://www.w3.org/2000/01/rdf-schema#comment> "The unit normal vector of slip planes."@en .
-<https://purls.helmholtz-metadaten.de/cso#hasPositionVector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://purls.helmholtz-metadaten.de/diso#Origin> <http://www.w3.org/2000/01/rdf-schema#comment> "A fixed point that is needed by the vector to identify other points in the space relative to its origin."@en .
-_:N95d96542f52249e5b7d3ee691ccfeb8e <http://www.w3.org/2002/07/owl#someValuesFrom> <https://purls.helmholtz-metadaten.de/diso#Line> .
-_:Ncb80e2679ef34b599dd4b7994dc3cb08 <http://www.w3.org/2002/07/owl#intersectionOf> _:Na0d5416065b54ca0bff1d0be4e8b0091 .
-<https://purls.helmholtz-metadaten.de/diso#observedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "observedBy represents the relationship between dislocation and microscopy techniques, e.g., TEM, FIM, etc."@en .
-_:Nfb3b01fd51ab435f870c9d8f2f4ed6c2 <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#hasSlipSystem> .
-_:Na9aaf25c41d747688036418ea5cc75e5 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://purls.helmholtz-metadaten.de/diso#FieldIonMicroscopy> .
-<https://purls.helmholtz-metadaten.de/diso#hasSlipDirection> <http://www.w3.org/2000/01/rdf-schema#label> "has slip direction"@en .
-<https://purls.helmholtz-metadaten.de/diso#ShapeFunction> <http://www.w3.org/2000/01/rdf-schema#label> "Shape Function"@en .
-<https://purls.helmholtz-metadaten.de/cso#hasPositionVector> <http://www.w3.org/2000/01/rdf-schema#comment> "hasPositionVector represents the relationship between entity and position vector."@en .
-<https://purls.helmholtz-metadaten.de/diso#Origin> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purls.helmholtz-metadaten.de/cso#Vector> .
-_:N719128a2eb0343f4b2f615a9658123ff <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#hasSlipPlaneNormal> .
-<https://purls.helmholtz-metadaten.de/cdo#CrystallographicDefect> <http://www.w3.org/2000/01/rdf-schema#label> "Crystallographic Defect"@en .
-_:N8ea9db1bb1a246ce913641878a6be18c <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#directionMillerIndice> .
-_:Ne44ef718daac4c70b6521afe3ce1a69e <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#hasLatticePoint> .
-_:N3f72d0d8dc0747ccaf2cfbb8291df05b <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:Naa657650b5bb48fc910d6501f46ecc59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://purls.helmholtz-metadaten.de/diso#hasSlipPlane> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purls.helmholtz-metadaten.de/cso#CrystalStructure> .
-<https://purls.helmholtz-metadaten.de/diso#hasLatticeDirection> <http://www.w3.org/2000/01/rdf-schema#domain> _:N70b5438528224854a0d6d8f5dcfc5c43 .
-_:Nb89780b80c3845db8545daeb7d19b935 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:N77d5665e4b124d268f4a6a4aca934e9e .
-<https://purls.helmholtz-metadaten.de/diso#LineDefect> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purls.helmholtz-metadaten.de/cdo#CrystallographicDefect> .
-_:Nc3d6672c7f754a42ad0b84e3c4996a82 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Nb4d6c8f5ab0d4cbbb68e375fea6fe861 .
-<https://purls.helmholtz-metadaten.de/diso#hasMathematicalRepresentation> <http://www.w3.org/2000/01/rdf-schema#label> "has mathematical representation"@en .
-_:Nbb372828a29d48408a724b6875246a79 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:N5a34d26dc05b457c9d4f86bba68933d2 .
-<https://purls.helmholtz-metadaten.de/diso#hasRepresentation> <http://www.w3.org/2000/01/rdf-schema#label> "has representation"@en .
-<https://purls.helmholtz-metadaten.de/diso#LatticeDirection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purls.helmholtz-metadaten.de/diso#FamilyOfCrystalDirection> .
-<https://purls.helmholtz-metadaten.de/diso#hasSegment> <http://www.w3.org/2002/07/owl#inverseOf> <https://purls.helmholtz-metadaten.de/diso#isSegmentOf> .
-<https://purls.helmholtz-metadaten.de/diso#hasSegment> <http://www.w3.org/2000/01/rdf-schema#label> "has segment"@en .
-_:N41bb625180dc4ee6898cb579a989899c <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#planeMillerIndice> .
-<https://purls.helmholtz-metadaten.de/diso#FamilyOfCrystalPlane> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:Na116c182154b47b8829392968e48cce2 <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#hasEndNode> .
-<https://purls.helmholtz-metadaten.de/diso#hasSlipSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "hasSlipSystem represents the relationship between a crystal structure and slip system."@en .
-_:N80367992653f4c51ac09498f3602a3f1 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://purls.helmholtz-metadaten.de/diso#SlipPlaneNormal> .
-<https://purls.helmholtz-metadaten.de/diso#DiscretizedLine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:N04b6c65147d649f7a1c8e071a4cd7162 .
-_:Nbb372828a29d48408a724b6875246a79 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:N08b396bd83824379ab1578d375792587 .
-<https://purls.helmholtz-metadaten.de/diso#DiscretizedLine> <http://www.w3.org/2000/01/rdf-schema#comment> "The numerical representation of the dislocation line that is discretized into the number of segments."@en .
-_:N5a5b3c3341584847bf3f7a6c4ffa75b2 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://purls.helmholtz-metadaten.de/diso#SlipPlane> .
-_:N77d5665e4b124d268f4a6a4aca934e9e <http://www.w3.org/2002/07/owl#allValuesFrom> <https://purls.helmholtz-metadaten.de/diso#SlipDirection> .
-<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-_:Nc8a4f5c4fa8a47debaf624d6790292fd <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://purls.helmholtz-metadaten.de/diso#FamilyOfCrystalPlane> <http://www.w3.org/2000/01/rdf-schema#comment> "A set of symmetrically equivalent planes in the lattice."@en .
-_:N96ebb03617b947beab58b5995e8e2f4a <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://purls.helmholtz-metadaten.de/diso#hasStartNode> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purls.helmholtz-metadaten.de/diso#Segment> .
-<https://purls.helmholtz-metadaten.de/diso#EdgeDislocation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purls.helmholtz-metadaten.de/diso#Dislocation> .
-_:N294f155114454f3ca1729d10aa625262 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://purls.helmholtz-metadaten.de/diso#SlipSystem> .
-_:Nf179a687e8684c24bdab947b211307f1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://purls.helmholtz-metadaten.de/diso#Line> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
-<https://purls.helmholtz-metadaten.de/diso#movesOn> <http://www.w3.org/2000/01/rdf-schema#range> <https://purls.helmholtz-metadaten.de/diso#SlipPlane> .
-<https://purls.helmholtz-metadaten.de/diso#EdgeDislocation> <http://www.w3.org/2002/07/owl#disjointWith> <https://purls.helmholtz-metadaten.de/diso#ScrewDislocation> .
-<https://purls.helmholtz-metadaten.de/diso#planeMillerIndice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-_:N1e1aec4961b14ca6b9ae27f177df1642 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:N1dc82374ca8048a3b60ee37556acdc2f .
-_:Nadc0852ea4564f29b26c0a303a67200d <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:N9fb023316296470c9ba94f7b58311e06 .
-_:N3fc1b0a3737c42af9ee1182c0f955e0c <http://www.w3.org/2002/07/owl#allValuesFrom> <https://purls.helmholtz-metadaten.de/diso#LineSense> .
-<https://purls.helmholtz-metadaten.de/diso#resultsIn> <http://www.w3.org/2000/01/rdf-schema#comment> "resultsIn represents the relationship between dislocation and lattice displacement."@en .
-_:Ne9e7873aed704a7fbde48fb39dfa5fd6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://purls.helmholtz-metadaten.de/diso#SlipPlane> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purls.helmholtz-metadaten.de/diso#LatticePlane> .
-_:N35f6fd1b0cf847a0879e35f5c694cba6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:N7f22fa08981a492693c1d7b6d0608649 .
-_:Nc8a4f5c4fa8a47debaf624d6790292fd <http://www.w3.org/2002/07/owl#intersectionOf> _:Nd46d1893591d46f18e428723bd564c9d .
-<https://purls.helmholtz-metadaten.de/cso#hasPositionVector> <http://www.w3.org/2000/01/rdf-schema#range> <https://purls.helmholtz-metadaten.de/cso#PositionVector> .
-<https://purls.helmholtz-metadaten.de/diso#DiscretizedLine> <http://www.w3.org/2002/07/owl#disjointWith> <https://purls.helmholtz-metadaten.de/diso#Line> .
-<https://purls.helmholtz-metadaten.de/diso#hasMathematicalRepresentation> <http://www.w3.org/2000/01/rdf-schema#range> <https://purls.helmholtz-metadaten.de/diso#Line> .
-_:Nd90e784e728d4047889c4b99d2d30c4c <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:Nc671ebdd9dba40bc8218439b72733422 .
-<https://purls.helmholtz-metadaten.de/diso#hasRepresentation> <http://www.w3.org/2000/01/rdf-schema#range> _:N6c5a16b9b8f746ab849c2aae4c2865ad .
-<https://purls.helmholtz-metadaten.de/diso#familyPlaneMillerIndice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-_:N2b2294e2fd074d1a8847d5ec2d62aa70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:Na1a9ceaad9e4428282d274589a7a0a92 .
-<https://purls.helmholtz-metadaten.de/diso#isSegmentOf> <http://www.w3.org/2000/01/rdf-schema#label> "is segment of"@en .
-<https://purls.helmholtz-metadaten.de/diso#hasBurgersVector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://purls.helmholtz-metadaten.de/diso#hasFamilyCrystalDirection> <http://www.w3.org/2000/01/rdf-schema#range> <https://purls.helmholtz-metadaten.de/diso#FamilyOfCrystalDirection> .
-<https://purls.helmholtz-metadaten.de/diso#familyDirectionMillerIndice> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purls.helmholtz-metadaten.de/diso#FamilyOfCrystalDirection> .
-_:N6bf036d5401c409caafd2c06c02543dc <http://www.w3.org/2002/07/owl#allValuesFrom> <https://purls.helmholtz-metadaten.de/diso#SlipPlaneNormal> .
-_:Na01445e533494ff287c4ad0bb494b3cd <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:Ne9e7873aed704a7fbde48fb39dfa5fd6 .
-_:N6f9579640f3640cfb0ab087038cadb65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:Nc87b8d5701ac4ee2966dd2c87694d772 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://purls.helmholtz-metadaten.de/diso#SlipPlaneNormal> .
-<https://purls.helmholtz-metadaten.de/diso#hasRepresentation> <http://www.w3.org/2000/01/rdf-schema#comment> "hasRepresentation relates the entity to another representation of entity."@en .
-_:N70b5438528224854a0d6d8f5dcfc5c43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:Nc637e89b2b0d4280a1d41119b201cb5f <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:N4d719b2171ce47fdbced28d14abc2a61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://purls.helmholtz-metadaten.de/diso#Segment> <http://www.w3.org/2000/01/rdf-schema#label> "Segment"@en .
-_:N78eef41cfaf54da2977fb6b6de140d6a <http://www.w3.org/2002/07/owl#allValuesFrom> <https://purls.helmholtz-metadaten.de/diso#DiscretizedLine> .
-_:Nd46d1893591d46f18e428723bd564c9d <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Nb89780b80c3845db8545daeb7d19b935 .
-_:N192fe8c9927b4e8bbf9b44cda8ba2a43 <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#hasBurgersVector> .
-<https://purls.helmholtz-metadaten.de/diso#isSegmentOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Inverse of hasSegment"@en .
-_:Na1a9ceaad9e4428282d274589a7a0a92 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://purls.helmholtz-metadaten.de/diso#LatticeDirection> .
-_:Nae03b163fb14425cab2b51a75710e898 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:N3dbed238824143f2a0679f863411b4e9 .
-<https://purls.helmholtz-metadaten.de/diso#hasNumericalRepresentation> <http://www.w3.org/2000/01/rdf-schema#range> <https://purls.helmholtz-metadaten.de/diso#DiscretizedLine> .
-_:N2dcc4dbe0796471b977413dd9b850c68 <http://www.w3.org/2002/07/owl#unionOf> _:N0ca85e4ef9254cf6a2bd88f864fbcc47 .
-_:N2a93e5da211342b487839ac6d3fa2a2c <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Ne186210d2ae84747a95bc5f2b9780839 .
-_:Nc57923ba3b9041608d46e7be623b508a <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/cso#hasPositionVector> .
-<https://purls.helmholtz-metadaten.de/diso#BurgersVector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:Ncd6b7eba325f4ccf95ba5340ae64f80f <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:N054a3ca3d03944a38bf1ceb6affaa955 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://purls.helmholtz-metadaten.de/diso#LatticePoint> .
-_:N6f9579640f3640cfb0ab087038cadb65 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
-<https://purls.helmholtz-metadaten.de/diso#hasBurgersVector> <http://www.w3.org/2000/01/rdf-schema#range> <https://purls.helmholtz-metadaten.de/diso#BurgersVector> .
-_:Nf42108820781496eae545bd83ce91350 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:Ne44ef718daac4c70b6521afe3ce1a69e <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://purls.helmholtz-metadaten.de/diso#SlipSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Slip System"@en .
-<https://purls.helmholtz-metadaten.de/diso#hasNode> <http://www.w3.org/2000/01/rdf-schema#label> "has node"@en .
-_:N79d903c83a864a6186a1f34ddb43c4b3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:N3f72d0d8dc0747ccaf2cfbb8291df05b .
-<https://purls.helmholtz-metadaten.de/diso#Line> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://purls.helmholtz-metadaten.de/diso#observedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purls.helmholtz-metadaten.de/diso#Dislocation> .
-<https://purls.helmholtz-metadaten.de/diso#hasLatticeDirection> <http://www.w3.org/2000/01/rdf-schema#range> <https://purls.helmholtz-metadaten.de/diso#LatticeDirection> .
-_:Ncd6b7eba325f4ccf95ba5340ae64f80f <http://www.w3.org/2002/07/owl#allValuesFrom> <https://purls.helmholtz-metadaten.de/diso#LatticePoint> .
-<https://purls.helmholtz-metadaten.de/cso#hasPositionVector> <http://www.w3.org/2000/01/rdf-schema#label> "has position vector"@en .
-_:Nd4efd2ae38af43d296282c0eec5e2f3c <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:N6bf036d5401c409caafd2c06c02543dc .
-<https://purls.helmholtz-metadaten.de/diso#TransmissionElectronMicroscopy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:Ne93f81e4b5ad4176a1fe479fa838b1a4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purls.helmholtz-metadaten.de/diso#LatticePlane> .
-_:N1dc82374ca8048a3b60ee37556acdc2f <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:Naadc04128601466180b187b3d02e1edd <http://www.w3.org/2002/07/owl#someValuesFrom> <https://purls.helmholtz-metadaten.de/diso#TransmissionElectronMicroscopy> .
-_:Ne44ef718daac4c70b6521afe3ce1a69e <http://www.w3.org/2002/07/owl#allValuesFrom> <https://purls.helmholtz-metadaten.de/diso#LatticePoint> .
-<https://purls.helmholtz-metadaten.de/diso#Dislocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://purls.helmholtz-metadaten.de/diso#hasFamilyCrystalDirection> <http://www.w3.org/2000/01/rdf-schema#comment> "hasFamilyCrystalDirection represents the relationship between lattice direction and family of crystal direction."@en .
-<https://purls.helmholtz-metadaten.de/diso#hasNode> <http://www.w3.org/2000/01/rdf-schema#comment> "hasNode represents the relationship between segment and node."@en .
-<https://purls.helmholtz-metadaten.de/diso#hasSlipPlane> <http://www.w3.org/2000/01/rdf-schema#comment> "hasSlipPlane represents the relationship between crystal structure and slip plane."@en .
-_:Nd0df805605f54fd3b0cac17d627257ef <http://www.w3.org/2002/07/owl#intersectionOf> _:N35f6fd1b0cf847a0879e35f5c694cba6 .
-_:N358d8a2003c1436ebcf740cbd5f79f23 <http://www.w3.org/2002/07/owl#unionOf> _:Nc3d6672c7f754a42ad0b84e3c4996a82 .
-_:N054a3ca3d03944a38bf1ceb6affaa955 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://purls.helmholtz-metadaten.de/diso#Dislocation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:N42b8213980b24bceaf98b0bfede21180 .
-_:N2427337385ee4ec8a19b7c7ed94b7651 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://purls.helmholtz-metadaten.de/diso#SlipDirection> .
-_:Nb4c7eab46b3141d9bb1f6b43faefba5a <http://www.w3.org/2002/07/owl#someValuesFrom> <https://purls.helmholtz-metadaten.de/diso#DiscretizedLine> .
-_:Nd7299f9e23a149f3ae23f152dd62e5a8 <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/cso#hasPositionVector> .
-<https://purls.helmholtz-metadaten.de/diso#FamilyOfCrystalDirection> <http://www.w3.org/2000/01/rdf-schema#comment> "A set of symmetrically equivalent directions in the lattice."@en .
-_:N09520136a0d84e8a9cba07a52b76eea9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Nc637e89b2b0d4280a1d41119b201cb5f .
-<https://purls.helmholtz-metadaten.de/diso#Node> <http://www.w3.org/2002/07/owl#disjointWith> <https://purls.helmholtz-metadaten.de/diso#Segment> .
-<https://purls.helmholtz-metadaten.de/diso#LatticeDirection> <http://www.w3.org/2000/01/rdf-schema#label> "Lattice Direction"@en .
-_:Na116c182154b47b8829392968e48cce2 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://purls.helmholtz-metadaten.de/diso#Node> .
-<https://purls.helmholtz-metadaten.de/diso#hasSlipPlaneNormal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-_:Na116c182154b47b8829392968e48cce2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://purls.helmholtz-metadaten.de/diso#SlipPlaneNormal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:N638a5f76c2474976b09abc075d7736de .
-<https://purls.helmholtz-metadaten.de/diso#LatticePlane> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://purls.helmholtz-metadaten.de/diso#hasRepresentation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
-_:N3f72d0d8dc0747ccaf2cfbb8291df05b <http://www.w3.org/2002/07/owl#someValuesFrom> <https://purls.helmholtz-metadaten.de/diso#LatticePoint> .
-_:N5a34d26dc05b457c9d4f86bba68933d2 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://purls.helmholtz-metadaten.de/diso#LineSense> .
-<https://purls.helmholtz-metadaten.de/cso#CrystalStructure> <http://www.w3.org/2000/01/rdf-schema#comment> "A crystal structure is described by the lattice geometry and atomic arrangements within the unit cell."@en .
-<https://purls.helmholtz-metadaten.de/diso#hasFamilyCrystalPlane> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-_:N834df5310022410dad8cad7217b14aa0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purls.helmholtz-metadaten.de/diso#Line> .
-<https://purls.helmholtz-metadaten.de/diso> <http://purl.org/dc/terms/creator> "Ahmad Zainul Ihsan"@en .
-_:N5e7f92c0399f43c8818605cd772c7aa2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://purls.helmholtz-metadaten.de/cso#CrystalStructure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:N6c5a16b9b8f746ab849c2aae4c2865ad <http://www.w3.org/2002/07/owl#unionOf> _:Nd349c29fccbc4753a2e0ee466402d680 .
-<https://purls.helmholtz-metadaten.de/diso#LatticePlane> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:N181e0243f46840279f3120d8700ceee2 .
-<https://purls.helmholtz-metadaten.de/diso#hasShapeFunction> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purls.helmholtz-metadaten.de/diso#DiscretizedLine> .
-<https://purls.helmholtz-metadaten.de/diso#SlipPlaneNormal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:N719128a2eb0343f4b2f615a9658123ff <http://www.w3.org/2002/07/owl#allValuesFrom> <https://purls.helmholtz-metadaten.de/diso#SlipPlaneNormal> .
-<https://purls.helmholtz-metadaten.de/diso#hasSlipPlaneNormal> <http://www.w3.org/2000/01/rdf-schema#range> <https://purls.helmholtz-metadaten.de/diso#SlipPlaneNormal> .
-_:N56638dc21d204c24b56089d7eebff1fa <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:N332a2807f96443ab986b36fbdcc5c882 .
-<https://purls.helmholtz-metadaten.de/diso#LatticePlane> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:N41bb625180dc4ee6898cb579a989899c .
-_:N0ca85e4ef9254cf6a2bd88f864fbcc47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:N87049ec14088488792b2a9b1a5e999ee .
-<https://purls.helmholtz-metadaten.de/diso#hasSlipDirection> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://purls.helmholtz-metadaten.de/diso#hasLatticeDirection> .
-<https://purls.helmholtz-metadaten.de/diso#Segment> <http://www.w3.org/2000/01/rdf-schema#comment> "The segment is a part of a line bounded by two distinct end points and may contain points on the line between its endpoints."@en .
-_:N77c7b9d588524740a0839f0f8a5c433a <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purls.helmholtz-metadaten.de/cso#Lattice> .
-<https://purls.helmholtz-metadaten.de/diso#hasShapeFunction> <http://www.w3.org/2000/01/rdf-schema#range> <https://purls.helmholtz-metadaten.de/diso#ShapeFunction> .
-<https://purls.helmholtz-metadaten.de/diso#SlipPlaneNormal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purls.helmholtz-metadaten.de/cso#Vector> .
-<https://purls.helmholtz-metadaten.de/diso#hasFamilyCrystalDirection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-_:Na9aaf25c41d747688036418ea5cc75e5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://purls.helmholtz-metadaten.de/diso#LatticeDisplacement> <http://www.w3.org/2000/01/rdf-schema#comment> "The displacement of atoms from their perfect lattice sites due to the existence of defects, e.g., point defect, line defect, and grain boundary."@en .
-_:Ne186210d2ae84747a95bc5f2b9780839 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:Nadc0852ea4564f29b26c0a303a67200d <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:N49a86fc276fc4a7bbe1811c54454dc7b .
-_:Nd032ed08c11f40ffa50326fe33dcfe10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:N294f155114454f3ca1729d10aa625262 .
-<https://purls.helmholtz-metadaten.de/diso#hasLatticePoint> <http://www.w3.org/2000/01/rdf-schema#comment> "hasLatticePoint represents the relationship between a lattice or lattice plane or lattice direction with lattice point."@en .
-<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<https://purls.helmholtz-metadaten.de/diso#hasFamilyCrystalPlane> <http://www.w3.org/2000/01/rdf-schema#label> "has family crystal plane"@en .
-_:N33343117de3743d0add3f263286642e4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purls.helmholtz-metadaten.de/diso#SlipPlane> .
-_:N5a5b3c3341584847bf3f7a6c4ffa75b2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:N8ea9db1bb1a246ce913641878a6be18c <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-<https://purls.helmholtz-metadaten.de/diso#familyDirectionMillerIndice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-_:Nfbd99c98a9dd4f08b3d1feac41471f49 <http://www.w3.org/2002/07/owl#intersectionOf> _:Nadc0852ea4564f29b26c0a303a67200d .
-_:Nd7299f9e23a149f3ae23f152dd62e5a8 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://purls.helmholtz-metadaten.de/cso#PositionVector> .
-_:Naa657650b5bb48fc910d6501f46ecc59 <http://www.w3.org/2002/07/owl#intersectionOf> _:Ne25ef73cd1574a4ba3780e9445fda104 .
-_:Nb4c7eab46b3141d9bb1f6b43faefba5a <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#hasNumericalRepresentation> .
-<https://purls.helmholtz-metadaten.de/diso#Segment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:N78eef41cfaf54da2977fb6b6de140d6a .
-_:Ne9e7873aed704a7fbde48fb39dfa5fd6 <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#hasSlipPlane> .
-_:N638a5f76c2474976b09abc075d7736de <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#directionMillerIndice> .
-<https://purls.helmholtz-metadaten.de/diso#hasFamilyCrystalPlane> <http://www.w3.org/2000/01/rdf-schema#range> <https://purls.helmholtz-metadaten.de/diso#FamilyOfCrystalPlane> .
-<https://purls.helmholtz-metadaten.de/diso#Dislocation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Nf179a687e8684c24bdab947b211307f1 .
-<https://purls.helmholtz-metadaten.de/diso#hasSlipPlaneNormal> <http://www.w3.org/2000/01/rdf-schema#label> "has slip plane normal"@en .
-<https://purls.helmholtz-metadaten.de/diso#hasLatticeDirection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://purls.helmholtz-metadaten.de/cso#Vector> <http://www.w3.org/2000/01/rdf-schema#label> "Vector"@en .
-_:N332a2807f96443ab986b36fbdcc5c882 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-<https://purls.helmholtz-metadaten.de/cso#Lattice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:N2527e8e9d370422c95807f2801796fa4 .
-_:N1eb052a5e38242819eeaed73558f65b9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://purls.helmholtz-metadaten.de/diso#hasMathematicalRepresentation> <http://www.w3.org/2000/01/rdf-schema#comment> "hasMathematicalRepresentation relates the entity with its mathematical representation."@en .
-_:N181e0243f46840279f3120d8700ceee2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://purls.helmholtz-metadaten.de/diso#hasNode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://purls.helmholtz-metadaten.de/diso#hasLatticePoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-_:Nc9043f19d86e43bfbcafb72ead6c332b <http://www.w3.org/2002/07/owl#intersectionOf> _:N8ad13333885f4c5b82c7bd75a20e26bc .
-_:N542349c4d1214f4eb8891650fe770998 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:N41bb625180dc4ee6898cb579a989899c <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-<https://purls.helmholtz-metadaten.de/diso#FamilyOfCrystalPlane> <http://www.w3.org/2000/01/rdf-schema#label> "Family of Crystal Plane"@en .
-<https://purls.helmholtz-metadaten.de/diso#hasShapeFunction> <http://www.w3.org/2000/01/rdf-schema#label> "has shape function"@en .
-<https://purls.helmholtz-metadaten.de/diso#ShapeFunction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/dc/terms/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<https://purls.helmholtz-metadaten.de/diso#hasFamilyCrystalDirection> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purls.helmholtz-metadaten.de/diso#LatticeDirection> .
-_:Nc0e4133a49a64cd98aac2bdffda596b4 <http://www.w3.org/2002/07/owl#unionOf> _:N33343117de3743d0add3f263286642e4 .
-_:N5862671d047249028dfc4d55b35c409a <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://purls.helmholtz-metadaten.de/diso#LineSense> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://purls.helmholtz-metadaten.de/cso#PositionVector> <http://www.w3.org/2000/01/rdf-schema#label> "Position Vector"@en .
-_:Nb41909cf1999497d9a74da4b84e53add <http://www.w3.org/2002/07/owl#allValuesFrom> <https://purls.helmholtz-metadaten.de/diso#LatticeDirection> .
-<https://purls.helmholtz-metadaten.de/diso#resultsIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://purls.helmholtz-metadaten.de/diso#hasOrigin> <http://www.w3.org/2000/01/rdf-schema#comment> "hasOrigin represents the relationship between lattice plane and origin."@en .
-<https://purls.helmholtz-metadaten.de/diso#Segment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:N683d757d71ac432eb01a5eae5b7148aa .
-_:N7f22fa08981a492693c1d7b6d0608649 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-<https://purls.helmholtz-metadaten.de/diso#slipArea> <http://www.w3.org/2000/01/rdf-schema#label> "slipArea"@en .
-_:Nfb3b01fd51ab435f870c9d8f2f4ed6c2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://purls.helmholtz-metadaten.de/diso#hasSlipSystem> <http://www.w3.org/2000/01/rdf-schema#range> <https://purls.helmholtz-metadaten.de/diso#SlipSystem> .
-<https://purls.helmholtz-metadaten.de/diso#FieldIonMicroscopy> <http://www.w3.org/2000/01/rdf-schema#comment> "Field Ion Microscopy (FIM) is a microscopy technique that can be used to image the arrangement of atoms."@en .
-<https://purls.helmholtz-metadaten.de/cso#Vector> <http://www.w3.org/2000/01/rdf-schema#comment> "(Euclidean) vector is used to represent quantities that both magnitude and direction."@en .
-_:Na1a9ceaad9e4428282d274589a7a0a92 <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#hasLatticeDirection> .
-_:Na0d5416065b54ca0bff1d0be4e8b0091 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:Nef3fe77d556144f09c3693e236a72b83 .
-<https://purls.helmholtz-metadaten.de/diso#familyPlaneMillerIndice> <http://www.w3.org/2000/01/rdf-schema#comment> "familyPlaneMillerIndice represents a set of Miller indice of lattice plane in string."@en .
-_:N3437b956e9a14efe9374b5868f16c550 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purls.helmholtz-metadaten.de/cso#CrystalStructure> .
-<https://purls.helmholtz-metadaten.de/diso#hasShapeFunction> <http://www.w3.org/2000/01/rdf-schema#comment> "hasShapeFunction represents the relationship between discretized line and shape function."@en .
-<https://purls.helmholtz-metadaten.de/diso#hasEndNode> <http://www.w3.org/2000/01/rdf-schema#comment> "Sub-property of hasNode that relates the segment with the end node."@en .
-_:Nc671ebdd9dba40bc8218439b72733422 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://purls.helmholtz-metadaten.de/diso#hasOrigin> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purls.helmholtz-metadaten.de/diso#LatticePlane> .
-_:N4d719b2171ce47fdbced28d14abc2a61 <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#hasOrigin> .
-_:Nb89780b80c3845db8545daeb7d19b935 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:N96ebb03617b947beab58b5995e8e2f4a <http://www.w3.org/2002/07/owl#allValuesFrom> <https://purls.helmholtz-metadaten.de/diso#BurgersVector> .
-<https://purls.helmholtz-metadaten.de/diso#hasSlipSystem> <http://www.w3.org/2000/01/rdf-schema#label> "has slip system"@en .
-<https://purls.helmholtz-metadaten.de/diso> <http://purl.org/vocab/vann/preferredNamespacePrefix> "DISO"^^<http://www.w3.org/2001/XMLSchema#string> .
-<https://purls.helmholtz-metadaten.de/diso#hasBurgersVector> <http://www.w3.org/2000/01/rdf-schema#label> "has Burgers vector"@en .
-_:Na0d5416065b54ca0bff1d0be4e8b0091 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Na01445e533494ff287c4ad0bb494b3cd .
-_:N2b2294e2fd074d1a8847d5ec2d62aa70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:N8c8f6467951c42a3ae11e7b7a4adb9d4 .
-_:Nfb3b01fd51ab435f870c9d8f2f4ed6c2 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://purls.helmholtz-metadaten.de/diso#SlipSystem> .
-<https://purls.helmholtz-metadaten.de/diso#ShapeFunction> <http://www.w3.org/2000/01/rdf-schema#comment> "The shape function is the function that interpolates the solution between the discrete values obtained at the mesh nodes. In discretized dislocation, the shape function determines the shape of a segment and ultimately determines the shape of the line. Examples of shape function that is used to discretize the dislocation are circular, elliptic, spiral, linear, cubic, and quintic."@en .
-<https://purls.helmholtz-metadaten.de/diso#LatticeDirection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:N8ea9db1bb1a246ce913641878a6be18c .
-<https://purls.helmholtz-metadaten.de/cso#Lattice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://purls.helmholtz-metadaten.de/diso#hasSlipPlaneNormal> <http://www.w3.org/2000/01/rdf-schema#comment> "hasSlipPlaneNormal represents the relationship between a slip plane or slip system with slip plane normal."@en .
-<https://purls.helmholtz-metadaten.de/diso#resultsIn> <http://www.w3.org/2000/01/rdf-schema#range> <https://purls.helmholtz-metadaten.de/diso#LatticeDisplacement> .
-<https://purls.helmholtz-metadaten.de/cso#PositionVector> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purls.helmholtz-metadaten.de/cso#Vector> .
-_:Nf12f64852c334ad5910509dc2a50a4db <http://www.w3.org/2002/07/owl#someValuesFrom> <https://purls.helmholtz-metadaten.de/diso#LatticePoint> .
-_:Nb79f9dba94d14b77aeda0284436e458e <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:N8d36836a273945cdb00b0f95f904dc23 <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#familyPlaneMillerIndice> .
-<https://purls.helmholtz-metadaten.de/diso#hasSlipDirection> <http://www.w3.org/2000/01/rdf-schema#range> <https://purls.helmholtz-metadaten.de/diso#SlipDirection> .
-<https://purls.helmholtz-metadaten.de/diso#Dislocation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Na9aaf25c41d747688036418ea5cc75e5 .
-_:N09520136a0d84e8a9cba07a52b76eea9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purls.helmholtz-metadaten.de/diso#FieldIonMicroscopy> .
-<https://purls.helmholtz-metadaten.de/diso#hasLatticePlane> <http://www.w3.org/2000/01/rdf-schema#label> "has lattice plane"@en .
-<https://purls.helmholtz-metadaten.de/diso#hasLineSense> <http://www.w3.org/2000/01/rdf-schema#range> <https://purls.helmholtz-metadaten.de/diso#LineSense> .
-_:N2332aec0844642d4a080ec54ca8ee36d <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Nd4efd2ae38af43d296282c0eec5e2f3c .
-<https://purls.helmholtz-metadaten.de/diso#hasSegment> <http://www.w3.org/2000/01/rdf-schema#comment> "hasSegment represents the relationship between discretized line and segment."@en .
-<https://purls.helmholtz-metadaten.de/diso#Dislocation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:N5a5b3c3341584847bf3f7a6c4ffa75b2 .
-<https://purls.helmholtz-metadaten.de/diso#Dislocation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purls.helmholtz-metadaten.de/diso#LineDefect> .
-_:N2332aec0844642d4a080ec54ca8ee36d <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:N80367992653f4c51ac09498f3602a3f1 .
-<https://purls.helmholtz-metadaten.de/diso#hasNumericalRepresentation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://purls.helmholtz-metadaten.de/diso#hasRepresentation> .
-<https://purls.helmholtz-metadaten.de/diso#directionMillerIndice> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-_:Ne186210d2ae84747a95bc5f2b9780839 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:N96ebb03617b947beab58b5995e8e2f4a .
-_:N95d96542f52249e5b7d3ee691ccfeb8e <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://purls.helmholtz-metadaten.de/diso> <http://purl.org/dc/terms/contributor> "Said Fathalla"^^<http://www.w3.org/2001/XMLSchema#string> .
-<https://purls.helmholtz-metadaten.de/diso> <http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by/3.0/> .
-<https://purls.helmholtz-metadaten.de/diso> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-_:N8ea9db1bb1a246ce913641878a6be18c <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://purls.helmholtz-metadaten.de/diso#hasEndNode> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purls.helmholtz-metadaten.de/diso#Segment> .
-_:Nc87b8d5701ac4ee2966dd2c87694d772 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:N95d96542f52249e5b7d3ee691ccfeb8e <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#hasMathematicalRepresentation> .
-<https://purls.helmholtz-metadaten.de/diso#hasLatticePlane> <http://www.w3.org/2000/01/rdf-schema#comment> "hasLatticePlane represents the relationship between a lattice and lattice planes."@en .
-_:N6ea6a4bb5d4d4d419c2ffa7055faefbe <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purls.helmholtz-metadaten.de/diso#LatticeDirection> .
-<https://purls.helmholtz-metadaten.de/cso#hasPositionVector> <http://www.w3.org/2000/01/rdf-schema#domain> _:N358d8a2003c1436ebcf740cbd5f79f23 .
-<https://purls.helmholtz-metadaten.de/diso#hasShapeFunction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-_:N5862671d047249028dfc4d55b35c409a <http://www.w3.org/2002/07/owl#allValuesFrom> <https://purls.helmholtz-metadaten.de/diso#LatticeDirection> .
-<https://purls.helmholtz-metadaten.de/diso#BurgersVector> <http://www.w3.org/2000/01/rdf-schema#comment> "An elementary unit (length order of lattice parameter) of lattice translation. The basic notion of the Burgers vector comes from the closure failure of an initially perfect lattice due to the existence of dislocation. The magnitude and direction of closure failure are characterized by the Burgers vector."@en .
-<https://purls.helmholtz-metadaten.de/diso#TransmissionElectronMicroscopy> <http://www.w3.org/2000/01/rdf-schema#label> "Transmission Electron Microscopy"@en .
-<https://purls.helmholtz-metadaten.de/diso#LatticeDisplacement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://purls.helmholtz-metadaten.de/cso#PositionVector> <http://www.w3.org/2000/01/rdf-schema#comment> "Euclidean vector that represents the position of a point P in space in relation to an arbitrary reference origin O."@en .
-<https://purls.helmholtz-metadaten.de/diso#planeMillerIndice> <http://www.w3.org/2000/01/rdf-schema#comment> "planeMillerIndice represents Miller indice of lattice plane in string."@en .
-<https://purls.helmholtz-metadaten.de/diso#hasLatticePlane> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://purls.helmholtz-metadaten.de/diso#planeMillerIndice> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-_:N7f22fa08981a492693c1d7b6d0608649 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:N719128a2eb0343f4b2f615a9658123ff .
-<https://purls.helmholtz-metadaten.de/diso#hasSlipDirection> <http://www.w3.org/2000/01/rdf-schema#comment> "hasSlipDirection represents the relationship between the slip plane or slip system with the slip direction."@en .
-<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<https://purls.helmholtz-metadaten.de/diso#hasStartNode> <http://www.w3.org/2000/01/rdf-schema#range> <https://purls.helmholtz-metadaten.de/diso#Node> .
-_:N0ca85e4ef9254cf6a2bd88f864fbcc47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purls.helmholtz-metadaten.de/diso#SlipPlane> .
-<https://purls.helmholtz-metadaten.de/diso#SlipPlaneNormal> <http://www.w3.org/2000/01/rdf-schema#label> "Slip Plane Normal"@en .
-<https://purls.helmholtz-metadaten.de/diso#planeMillerIndice> <http://www.w3.org/2000/01/rdf-schema#label> "plane miller indice"@en .
-<https://purls.helmholtz-metadaten.de/diso#Dislocation> <http://www.w3.org/2000/01/rdf-schema#label> "Versetzung"@de .
-<https://purls.helmholtz-metadaten.de/diso#FieldIonMicroscopy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://purls.helmholtz-metadaten.de/diso#hasNode> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purls.helmholtz-metadaten.de/diso#Segment> .
-_:Nd349c29fccbc4753a2e0ee466402d680 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:N834df5310022410dad8cad7217b14aa0 .
-_:N8d36836a273945cdb00b0f95f904dc23 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-<https://purls.helmholtz-metadaten.de/diso#hasNumericalRepresentation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://purls.helmholtz-metadaten.de/diso#resultsIn> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purls.helmholtz-metadaten.de/diso#Dislocation> .
-_:Na86a847c39634f3992b245a1cf95b1a5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:Nef3fe77d556144f09c3693e236a72b83 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://purls.helmholtz-metadaten.de/diso#SlipPlane> .
-<https://purls.helmholtz-metadaten.de/diso#hasLineSense> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://purls.helmholtz-metadaten.de/diso#Segment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Na116c182154b47b8829392968e48cce2 .
-<https://purls.helmholtz-metadaten.de/diso#hasSlipDirection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://purls.helmholtz-metadaten.de/diso#familyPlaneMillerIndice> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purls.helmholtz-metadaten.de/diso#FamilyOfCrystalPlane> .
-<https://purls.helmholtz-metadaten.de/diso#hasSlipPlaneNormal> <http://www.w3.org/2000/01/rdf-schema#domain> _:Nc0e4133a49a64cd98aac2bdffda596b4 .
-_:N1dc82374ca8048a3b60ee37556acdc2f <http://www.w3.org/2002/07/owl#someValuesFrom> <https://purls.helmholtz-metadaten.de/diso#LatticeDirection> .
-<https://purls.helmholtz-metadaten.de/diso#hasEndNode> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://purls.helmholtz-metadaten.de/diso#hasNode> .
-<https://purls.helmholtz-metadaten.de/diso> <http://purl.org/dc/terms/title> "Dislocation Ontology"@en .
-<https://purls.helmholtz-metadaten.de/diso> <http://purl.org/dc/terms/contributor> "Stefan Sandfeld"^^<http://www.w3.org/2001/XMLSchema#string> .
-<https://purls.helmholtz-metadaten.de/diso#SlipPlane> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://purls.helmholtz-metadaten.de/diso#hasSlipPlane> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-_:Nf12f64852c334ad5910509dc2a50a4db <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://purls.helmholtz-metadaten.de/diso#planeMillerIndice> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purls.helmholtz-metadaten.de/diso#LatticePlane> .
-<https://purls.helmholtz-metadaten.de/diso#DiscretizedLine> <http://www.w3.org/2000/01/rdf-schema#label> "Discretized Line"@en .
-<https://purls.helmholtz-metadaten.de/diso#Node> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Nc57923ba3b9041608d46e7be623b508a .
-<https://purls.helmholtz-metadaten.de/diso#movesOn> <http://www.w3.org/2000/01/rdf-schema#label> "moves on"@en .
-<https://purls.helmholtz-metadaten.de/diso#ScrewDislocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://purls.helmholtz-metadaten.de/diso#hasFamilyCrystalPlane> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purls.helmholtz-metadaten.de/diso#LatticePlane> .
-<https://purls.helmholtz-metadaten.de/diso#hasNumericalRepresentation> <http://www.w3.org/2000/01/rdf-schema#comment> "hasNumericalRepresentation relates the entity with its numerical representation."@en .
-_:N8ea9db1bb1a246ce913641878a6be18c <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
-<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<https://purls.helmholtz-metadaten.de/diso#hasSlipPlane> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://purls.helmholtz-metadaten.de/diso#hasLatticePlane> .
-<https://purls.helmholtz-metadaten.de/diso#LatticePlane> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purls.helmholtz-metadaten.de/diso#FamilyOfCrystalPlane> .
-<https://purls.helmholtz-metadaten.de/diso#LatticePoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Nd7299f9e23a149f3ae23f152dd62e5a8 .
-<https://purls.helmholtz-metadaten.de/diso#hasEndNode> <http://www.w3.org/2000/01/rdf-schema#range> <https://purls.helmholtz-metadaten.de/diso#Node> .
-_:N8c8f6467951c42a3ae11e7b7a4adb9d4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:N358d8a2003c1436ebcf740cbd5f79f23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://purls.helmholtz-metadaten.de/diso> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://github.com/Materials-Data-Science-and-Informatics/dislocation-ontology" .
-_:N04b6c65147d649f7a1c8e071a4cd7162 <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#hasSegment> .
-<https://purls.helmholtz-metadaten.de/diso#hasSlipSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://purls.helmholtz-metadaten.de/diso#LatticeDirection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Naa657650b5bb48fc910d6501f46ecc59 .
-_:Nd4efd2ae38af43d296282c0eec5e2f3c <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-<https://purls.helmholtz-metadaten.de/diso#hasStartNode> <http://www.w3.org/2000/01/rdf-schema#comment> "Sub-property of hasNode that relates the segment with the start node."@en .
-_:Nf42108820781496eae545bd83ce91350 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purls.helmholtz-metadaten.de/diso#SlipPlaneNormal> .
-<https://purls.helmholtz-metadaten.de/diso#LineSense> <http://www.w3.org/2000/01/rdf-schema#label> "Line Sense"@en .
-<https://purls.helmholtz-metadaten.de/cso#Lattice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Nfbd99c98a9dd4f08b3d1feac41471f49 .
-_:N96ebb03617b947beab58b5995e8e2f4a <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#hasBurgersVector> .
-<https://purls.helmholtz-metadaten.de/diso#EdgeDislocation> <http://www.w3.org/2000/01/rdf-schema#label> "Edge Dislocation"@en .
-<https://purls.helmholtz-metadaten.de/diso#slipArea> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
-<https://purls.helmholtz-metadaten.de/diso#familyPlaneMillerIndice> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-_:N181e0243f46840279f3120d8700ceee2 <http://www.w3.org/2002/07/owl#intersectionOf> _:N2b2294e2fd074d1a8847d5ec2d62aa70 .
-<https://purls.helmholtz-metadaten.de/diso#isSegmentOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://purls.helmholtz-metadaten.de/diso#DiscretizedLine> .
-_:N04b6c65147d649f7a1c8e071a4cd7162 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:Nd9d24a91a7994aa7a7aaccb231bddfa5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:N8ad13333885f4c5b82c7bd75a20e26bc <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Nbbec8a050e3b4196b5ccc9a7cca2f5f1 .
-<https://purls.helmholtz-metadaten.de/diso#slipArea> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purls.helmholtz-metadaten.de/diso#DiscretizedLine> .
-<https://purls.helmholtz-metadaten.de/diso#familyDirectionMillerIndice> <http://www.w3.org/2000/01/rdf-schema#label> "family direction miller indice"@en .
-_:Nb4d6c8f5ab0d4cbbb68e375fea6fe861 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purls.helmholtz-metadaten.de/diso#Node> .
-<https://purls.helmholtz-metadaten.de/diso#hasStartNode> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://purls.helmholtz-metadaten.de/diso#hasNode> .
-_:Nc87a820dc1564ab09730f718d09a9390 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:N1e1aec4961b14ca6b9ae27f177df1642 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Nd90e784e728d4047889c4b99d2d30c4c .
-<https://purls.helmholtz-metadaten.de/diso#hasSlipPlane> <http://www.w3.org/2000/01/rdf-schema#label> "has slip plane"@en .
-<https://purls.helmholtz-metadaten.de/diso#FamilyOfCrystalDirection> <http://www.w3.org/2002/07/owl#disjointWith> <https://purls.helmholtz-metadaten.de/diso#FamilyOfCrystalPlane> .
-<https://purls.helmholtz-metadaten.de/diso#FamilyOfCrystalDirection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:N6f9579640f3640cfb0ab087038cadb65 .
-<https://purls.helmholtz-metadaten.de/diso#hasSegment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://purls.helmholtz-metadaten.de/cso#CrystalStructure> <http://www.w3.org/2000/01/rdf-schema#label> "Crystal Structure"@en .
-<https://purls.helmholtz-metadaten.de/diso#Dislocation> <http://www.w3.org/2000/01/rdf-schema#comment> "The presence of dislocation introduces local disturbance of the atomic-level geometry."@en .
-_:N1eb052a5e38242819eeaed73558f65b9 <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#slipArea> .
-_:Nc57923ba3b9041608d46e7be623b508a <http://www.w3.org/2002/07/owl#allValuesFrom> <https://purls.helmholtz-metadaten.de/cso#PositionVector> .
-<https://purls.helmholtz-metadaten.de/diso#hasSlipPlane> <http://www.w3.org/2000/01/rdf-schema#range> <https://purls.helmholtz-metadaten.de/diso#SlipPlane> .
-_:N638a5f76c2474976b09abc075d7736de <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:N323406bba4d24f37b45bfb0e5628ad45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-<https://purls.helmholtz-metadaten.de/diso#FamilyOfCrystalDirection> <http://www.w3.org/2000/01/rdf-schema#label> "Family of Crystal Direction"@en .
-<https://purls.helmholtz-metadaten.de/diso#FamilyOfCrystalDirection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://purls.helmholtz-metadaten.de/diso#isSegmentOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://purls.helmholtz-metadaten.de/diso#LineSense> <http://www.w3.org/2000/01/rdf-schema#comment> "A sense that characterizes a directed line, i.e., it has a start and an end."@en .
-<https://purls.helmholtz-metadaten.de/diso#Origin> <http://www.w3.org/2000/01/rdf-schema#label> "Origin"@en .
-_:N1eb052a5e38242819eeaed73558f65b9 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#double> .
-_:N8c8f6467951c42a3ae11e7b7a4adb9d4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:N5862671d047249028dfc4d55b35c409a .
-_:N897811e75ac04516ba15a1c251057f59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:N78eef41cfaf54da2977fb6b6de140d6a <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#isSegmentOf> .
-<https://purls.helmholtz-metadaten.de/diso#ScrewDislocation> <http://www.w3.org/2000/01/rdf-schema#label> "Screw Dislocation"@en .
-_:N47cf65b05cd641b98cd05214a43a3356 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:N49a86fc276fc4a7bbe1811c54454dc7b <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#hasLatticePoint> .
-<https://purls.helmholtz-metadaten.de/diso#LineDefect> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:Nc3d6672c7f754a42ad0b84e3c4996a82 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purls.helmholtz-metadaten.de/cso#Lattice> .
-_:Nf179a687e8684c24bdab947b211307f1 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://purls.helmholtz-metadaten.de/diso#LatticeDisplacement> .
-_:Na9aaf25c41d747688036418ea5cc75e5 <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#observedBy> .
 
+_:Nc9d6a09ff2fb4736bc2b4503b5aef81c <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:Nd8064fa9356349fbadbcfa792511a0ca .
+<https://purls.helmholtz-metadaten.de/diso#ScrewDislocation> <http://www.w3.org/2000/01/rdf-schema#comment> "A dislocation that has a line sense parallel to its Burgers vector."@en .
+_:Ne43037a870224a7d9d135e661416db07 <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#hasShapeFunction> .
+<https://purls.helmholtz-metadaten.de/diso#hasStartNode> <http://www.w3.org/2000/01/rdf-schema#label> "has start node"@en .
+_:Ncca18259d0d04b54a8d43caf0ea53819 <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#hasMathematicalRepresentation> .
+_:N524c8b4bcf684df195f2004c8ff07140 <http://www.w3.org/2002/07/owl#unionOf> _:Nc06920839d004bfebd7bc127f53be90e .
+<https://purls.helmholtz-metadaten.de/cso#Lattice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:Nf1e1d3d748024576b3f2da800094ec4a <http://www.w3.org/2002/07/owl#unionOf> _:N8efd72d7c9de49c49943083a4532e1e8 .
+<https://purls.helmholtz-metadaten.de/diso#movesOn> <http://www.w3.org/2000/01/rdf-schema#comment> "movesOn represents the relationship between dislocation and slip plane."@en .
+_:N03633e8206144d79a7fff1b0c4c9bd7d <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:N46bca364bc7d40b5ac4576ff188b4c67 .
+_:N4c274a1f5b7e412082db002dc8be220f <http://www.w3.org/2002/07/owl#unionOf> _:N7ada1429cb9a4eacb9c4c4d5e4f181b4 .
+<https://purls.helmholtz-metadaten.de/diso#resultsIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:N3dcf0c70fa9941d599292c1d8f7ccd03 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://purls.helmholtz-metadaten.de/diso#LatticePlane> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:N96b6ddfda1a2494b9f8b43df8334d9d1 .
+_:Nc8df29381113409dbac96964ce853523 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purls.helmholtz-metadaten.de/diso#SlipPlane> .
+_:N46bca364bc7d40b5ac4576ff188b4c67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:Nfca1b8e7abb74d0e816bd9630d555865 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:N12715aea9ee84f43b63e5d555caa7568 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://purls.helmholtz-metadaten.de/diso#hasSlipSystem> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purls.helmholtz-metadaten.de/cso#CrystalStructure> .
+<https://purls.helmholtz-metadaten.de/diso#hasSlipPlane> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://purls.helmholtz-metadaten.de/diso#hasSlipPlane> <http://www.w3.org/2000/01/rdf-schema#comment> "hasSlipPlane represents the relationship between crystal structure and slip plane."@en .
+_:N57b63f23238548daad2f66692f6afb12 <http://www.w3.org/2002/07/owl#intersectionOf> _:N6dc617f8dc3b42b3a81f227b81ea43d4 .
+_:Ne7fa70a8b56940cabfaaa29312ea2f09 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://purls.helmholtz-metadaten.de/diso#LatticeDirection> .
+_:N8b9f307fad614558bd7a903b737392cf <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://purls.helmholtz-metadaten.de/diso#hasSlipPlane> <http://www.w3.org/2000/01/rdf-schema#range> <https://purls.helmholtz-metadaten.de/diso#SlipPlane> .
+_:Nc72e998b66b34d588a94da4dd9403d2d <http://www.w3.org/2002/07/owl#someValuesFrom> <https://purls.helmholtz-metadaten.de/diso#SlipPlane> .
+_:N4a909a8101c0447183fa6cd958937889 <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#hasStartNode> .
+_:Nd105c6f60231432d85b6b03475c7e625 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:N55684e3bbd9949c098d691657c419855 .
+<https://purls.helmholtz-metadaten.de/diso#hasSegment> <http://www.w3.org/2002/07/owl#inverseOf> <https://purls.helmholtz-metadaten.de/diso#isSegmentOf> .
+_:Nf1e1d3d748024576b3f2da800094ec4a <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:N2381fecd3e5b4d3b80884f5fbe3780a8 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://purls.helmholtz-metadaten.de/diso#LineSense> .
+<https://purls.helmholtz-metadaten.de/cso#CrystalStructure> <http://www.w3.org/2000/01/rdf-schema#label> "Crystal Structure"@en .
+<https://purls.helmholtz-metadaten.de/diso#LatticeDirection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purls.helmholtz-metadaten.de/diso#FamilyOfCrystalDirection> .
+_:N42763ea7bbbc484c945460022658f329 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://purls.helmholtz-metadaten.de/cso#hasPositionVector> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<https://purls.helmholtz-metadaten.de/diso#LatticePlane> <http://www.w3.org/2000/01/rdf-schema#comment> "The lattice plane forms an infinitely stretched plane (characterized through a plane normal) that cuts through lattice points such that, again, a regular arrangement of lattice points in the plane occurs."@en .
+<https://purls.helmholtz-metadaten.de/diso#observedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://purls.helmholtz-metadaten.de/diso#hasSegment> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purls.helmholtz-metadaten.de/diso#DiscretizedLine> .
+<https://purls.helmholtz-metadaten.de/diso> <http://purl.org/dc/terms/title> "Dislocation Ontology"@en .
+_:N99cf774f654242b38c808ed122ed563d <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:N8e194772fce54d5ca6f5b5854b82159a <http://www.w3.org/2002/07/owl#someValuesFrom> <https://purls.helmholtz-metadaten.de/diso#LatticeDisplacement> .
+<https://purls.helmholtz-metadaten.de/diso#hasStartNode> <http://www.w3.org/2000/01/rdf-schema#range> <https://purls.helmholtz-metadaten.de/diso#Node> .
+_:N57b63f23238548daad2f66692f6afb12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:N02242a3659c140de9f22578fe252925e <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#hasLatticePoint> .
+_:N9ca76bdff54e421494ea080ac3af20e9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:Nef3dd25d7be74a069c4963fe8d075150 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:N2ed0beac07254e1c8460d5cb29a648ea <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:N0728bc818f1843cab24ce729e42c6730 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:N99cf774f654242b38c808ed122ed563d .
+<https://purls.helmholtz-metadaten.de/diso#VectorOrigin> <http://www.w3.org/2000/01/rdf-schema#comment> "A fixed point that is needed by the vector to identify other points in the space relative to its origin."@en .
+_:N201bbb6bd7f94fb2a3dd7f3546dbe144 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:N2a07de7288004487ac73328cd995725a <http://www.w3.org/2002/07/owl#intersectionOf> _:Na4a3254374ef4e6aae4eb42ebdcb677d .
+<https://purls.helmholtz-metadaten.de/diso#BurgersVector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://purls.helmholtz-metadaten.de/diso#SlipPlane> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:N76e45f6d9df5436d820be9b1227325be .
+<https://purls.helmholtz-metadaten.de/diso#SlipPlane> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Nb3b3158fdc684c4e96ad628e62eeb1e7 .
+<https://purls.helmholtz-metadaten.de/diso#slipArea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://purls.helmholtz-metadaten.de/diso#SlipPlane> <http://www.w3.org/2000/01/rdf-schema#label> "Slip Plane"@en .
+<https://purls.helmholtz-metadaten.de/diso#hasLatticePoint> <http://www.w3.org/2000/01/rdf-schema#range> <https://purls.helmholtz-metadaten.de/diso#LatticePoint> .
+_:N6a116d8b6bf245d0b01c827087ad5a03 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:Na2ca5894df6b46a9abf173efdc0a356d .
+<https://purls.helmholtz-metadaten.de/diso#hasSlipSystem> <http://www.w3.org/2000/01/rdf-schema#range> <https://purls.helmholtz-metadaten.de/diso#SlipSystem> .
+_:N5b5653ded1c74dd392f574770d8ff891 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purls.helmholtz-metadaten.de/diso#TransmissionElectronMicroscopy> .
+_:N8aa7bdcd2c714500a4a5104e9a004055 <http://www.w3.org/2002/07/owl#intersectionOf> _:N41c5deeccdad44f781be7317654ee79a .
+_:Nb67805aeb4084427bd5b070422c16fb1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://purls.helmholtz-metadaten.de/diso#Dislocation> <http://www.w3.org/2000/01/rdf-schema#label> "Dislocation"@en .
+<https://purls.helmholtz-metadaten.de/diso#familyPlaneMillerIndice> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purls.helmholtz-metadaten.de/diso#FamilyOfCrystalPlane> .
+_:Nc8f80e36f93247d98db8e7eaeb1f6a5d <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#directionMillerIndice> .
+<https://purls.helmholtz-metadaten.de/diso#SlipPlane> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purls.helmholtz-metadaten.de/diso#LatticePlane> .
+<https://purls.helmholtz-metadaten.de/diso#hasNumericalRepresentation> <http://www.w3.org/2000/01/rdf-schema#range> <https://purls.helmholtz-metadaten.de/diso#DiscretizedLine> .
+<https://purls.helmholtz-metadaten.de/cso#hasPositionVector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://purls.helmholtz-metadaten.de/diso#familyDirectionMillerIndice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://purls.helmholtz-metadaten.de/diso#DiscretizedLine> <http://www.w3.org/2000/01/rdf-schema#label> "Discretized Line"@en .
+<https://purls.helmholtz-metadaten.de/diso#movesOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:Nfe0d2d38c6404bafa943c01a28b9c45c <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Nab91084314564cdea04e0474f0b835f3 .
+<https://purls.helmholtz-metadaten.de/diso> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://github.com/Materials-Data-Science-and-Informatics/dislocation-ontology" .
+<https://purls.helmholtz-metadaten.de/diso#movesOn> <http://www.w3.org/2000/01/rdf-schema#range> <https://purls.helmholtz-metadaten.de/diso#SlipPlane> .
+<https://purls.helmholtz-metadaten.de/diso#VectorOrigin> <http://www.w3.org/2000/01/rdf-schema#label> "Ursprung"@de .
+_:N8ed2fe364f7f40ae8b8d1e5ebeac84be <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purls.helmholtz-metadaten.de/diso#SlipSystem> .
+_:N8404f773dc01416883d2ce27a9cc42e0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://purls.helmholtz-metadaten.de/cso#PositionVector> <http://www.w3.org/2000/01/rdf-schema#comment> "Euclidean vector that represents the position of a point P in space in relation to an arbitrary reference origin O."@en .
+<http://purl.org/dc/terms/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+_:N2381fecd3e5b4d3b80884f5fbe3780a8 <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#hasLineSense> .
+<https://purls.helmholtz-metadaten.de/diso#hasRepresentation> <http://www.w3.org/2000/01/rdf-schema#range> _:N2ed0beac07254e1c8460d5cb29a648ea .
+<https://purls.helmholtz-metadaten.de/diso#observedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "observedBy represents the relationship between dislocation and microscopy techniques, e.g., TEM, FIM, etc."@en .
+<https://purls.helmholtz-metadaten.de/diso#movesOn> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purls.helmholtz-metadaten.de/diso#Dislocation> .
+<https://purls.helmholtz-metadaten.de/diso#planeMillerIndice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+_:N7a4f22e1d6294f01882151c7fb61d094 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:Ndc04806939ec4c61b75aa9a293bdd10e .
+_:Ncca18259d0d04b54a8d43caf0ea53819 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://purls.helmholtz-metadaten.de/diso#Line> .
+_:Na2ca5894df6b46a9abf173efdc0a356d <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#hasLatticeDirection> .
+_:Nd8064fa9356349fbadbcfa792511a0ca <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#hasSlipPlaneNormal> .
+<https://purls.helmholtz-metadaten.de/diso#FieldIonMicroscopy> <http://www.w3.org/2000/01/rdf-schema#comment> "Field Ion Microscopy (FIM) is a microscopy technique that can be used to image the arrangement of atoms."@en .
+_:N91736cf801ce4a5989563883bdac0baf <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#hasSlipDirection> .
+_:N27088f7fd7c447c6aedde25ffffae84f <http://www.w3.org/2002/07/owl#someValuesFrom> <https://purls.helmholtz-metadaten.de/diso#SlipSystem> .
+<https://purls.helmholtz-metadaten.de/diso#hasShapeFunction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:Ne5492c13b9ac4bd1a8a75950deeafea1 <http://www.w3.org/2002/07/owl#unionOf> _:N98274bee997a4ab3ac90bdd2396d5d04 .
+_:N3dcf0c70fa9941d599292c1d8f7ccd03 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:N218ded011eae47889c27a80ee4199777 .
+<https://purls.helmholtz-metadaten.de/diso#TransmissionElectronMicroscopy> <http://www.w3.org/2000/01/rdf-schema#comment> "Transmission electron microscopy (TEM) is a microscopy technique in which a beam of electrons is transmitted through a specimen to form an image. The specimen is often an ultrathin section less than 100 nm thick."@en .
+<https://purls.helmholtz-metadaten.de/diso#hasVectorOrigin> <http://www.w3.org/2000/01/rdf-schema#comment> "hasVectorOrigin represents the relationship between lattice plane and origin."@en .
+_:N218ded011eae47889c27a80ee4199777 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://purls.helmholtz-metadaten.de/diso#BurgersVector> .
+<https://purls.helmholtz-metadaten.de/diso#LatticePlane> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purls.helmholtz-metadaten.de/diso#FamilyOfCrystalPlane> .
+<https://purls.helmholtz-metadaten.de/diso#EdgeDislocation> <http://www.w3.org/2002/07/owl#disjointWith> <https://purls.helmholtz-metadaten.de/diso#ScrewDislocation> .
+<https://purls.helmholtz-metadaten.de/diso#LatticePlane> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:N201bbb6bd7f94fb2a3dd7f3546dbe144 .
+<https://purls.helmholtz-metadaten.de/diso#observedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purls.helmholtz-metadaten.de/diso#Dislocation> .
+<https://purls.helmholtz-metadaten.de/diso#FamilyOfCrystalPlane> <http://www.w3.org/2000/01/rdf-schema#comment> "A set of symmetrically equivalent planes in the lattice."@en .
+<https://purls.helmholtz-metadaten.de/diso#hasSlipDirection> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://purls.helmholtz-metadaten.de/diso#hasLatticeDirection> .
+<https://purls.helmholtz-metadaten.de/diso> <http://purl.org/dc/terms/contributor> "Stefan Sandfeld"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:N8e194772fce54d5ca6f5b5854b82159a <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#resultsIn> .
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+_:N69ec24a23e7942a8b070f05dce3d05e0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:N69ec24a23e7942a8b070f05dce3d05e0 <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#familyDirectionMillerIndice> .
+_:N1cc926f21249496594f587a56341146c <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:N201bbb6bd7f94fb2a3dd7f3546dbe144 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://purls.helmholtz-metadaten.de/diso#VectorOrigin> .
+_:N02242a3659c140de9f22578fe252925e <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://purls.helmholtz-metadaten.de/diso#hasLatticeDirection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://purls.helmholtz-metadaten.de/diso#hasRepresentation> <http://www.w3.org/2000/01/rdf-schema#label> "has representation"@en .
+<https://purls.helmholtz-metadaten.de/diso#hasSlipPlane> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purls.helmholtz-metadaten.de/cso#CrystalStructure> .
+<https://purls.helmholtz-metadaten.de/diso#TransmissionElectronMicroscopy> <http://www.w3.org/2000/01/rdf-schema#label> "Transmission Electron Microscopy"@en .
+<https://purls.helmholtz-metadaten.de/diso#isSegmentOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://purls.helmholtz-metadaten.de/diso#SlipPlaneNormal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purls.helmholtz-metadaten.de/cso#Vector> .
+<https://purls.helmholtz-metadaten.de/diso#SlipSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Nd4c34073b4a644e7a23f63b5080b025a .
+_:Nd105c6f60231432d85b6b03475c7e625 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purls.helmholtz-metadaten.de/cso#CrystalStructure> .
+<https://purls.helmholtz-metadaten.de/diso#EdgeDislocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:N4a909a8101c0447183fa6cd958937889 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://purls.helmholtz-metadaten.de/diso#SlipPlaneNormal> <http://www.w3.org/2000/01/rdf-schema#label> "Slip Plane Normal"@en .
+_:N1cc926f21249496594f587a56341146c <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#hasNumericalRepresentation> .
+<https://purls.helmholtz-metadaten.de/diso#EdgeDislocation> <http://www.w3.org/2000/01/rdf-schema#comment> "A dislocation that has a line sense perpendicular to its Burgers vector."@en .
+_:N4dc3b3ead2834e6f9b53dde683374a71 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://purls.helmholtz-metadaten.de/diso#LatticePlane> .
+_:Na3324af6c9c84e22841044d98565a45d <http://www.w3.org/2002/07/owl#allValuesFrom> <https://purls.helmholtz-metadaten.de/diso#LatticePoint> .
+<https://purls.helmholtz-metadaten.de/cso#CrystalStructure> <http://www.w3.org/2000/01/rdf-schema#comment> "A crystal structure is described by the lattice geometry and atomic arrangements within the unit cell."@en .
+_:Ncca18259d0d04b54a8d43caf0ea53819 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://purls.helmholtz-metadaten.de/diso#FieldIonMicroscopy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://purls.helmholtz-metadaten.de/diso#hasLatticeDirection> <http://www.w3.org/2000/01/rdf-schema#domain> _:Ne5492c13b9ac4bd1a8a75950deeafea1 .
+_:N1295164dd2ed4f64ad0bb468b1dfdab1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://purls.helmholtz-metadaten.de/diso#FamilyOfCrystalPlane> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://purls.helmholtz-metadaten.de/diso#hasSlipDirection> <http://www.w3.org/2000/01/rdf-schema#label> "has slip direction"@en .
+_:Ndc04806939ec4c61b75aa9a293bdd10e <http://www.w3.org/2002/07/owl#someValuesFrom> <https://purls.helmholtz-metadaten.de/diso#BurgersVector> .
+<https://purls.helmholtz-metadaten.de/cso#hasPositionVector> <http://www.w3.org/2000/01/rdf-schema#range> <https://purls.helmholtz-metadaten.de/cso#PositionVector> .
+_:Ne43037a870224a7d9d135e661416db07 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://purls.helmholtz-metadaten.de/diso#slipArea> <http://www.w3.org/2000/01/rdf-schema#comment> "slipArea represents the slip area of discretized line in double."@en .
+<https://purls.helmholtz-metadaten.de/diso#FamilyOfCrystalDirection> <http://www.w3.org/2000/01/rdf-schema#label> "Family of Crystal Direction"@en .
+<https://purls.helmholtz-metadaten.de/diso#SlipSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://purls.helmholtz-metadaten.de/diso#hasLatticePlane> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:N42763ea7bbbc484c945460022658f329 <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#isSegmentOf> .
+<https://purls.helmholtz-metadaten.de/diso#ShapeFunction> <http://www.w3.org/2000/01/rdf-schema#label> "Shape Function"@en .
+_:N55684e3bbd9949c098d691657c419855 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purls.helmholtz-metadaten.de/cso#Lattice> .
+<https://purls.helmholtz-metadaten.de/diso#movesOn> <http://www.w3.org/2000/01/rdf-schema#label> "moves on"@en .
+<https://purls.helmholtz-metadaten.de/diso#isSegmentOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purls.helmholtz-metadaten.de/diso#Segment> .
+<https://purls.helmholtz-metadaten.de/diso#hasShapeFunction> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purls.helmholtz-metadaten.de/diso#DiscretizedLine> .
+<https://purls.helmholtz-metadaten.de/diso#resultsIn> <http://www.w3.org/2000/01/rdf-schema#label> "results in"@en .
+<https://purls.helmholtz-metadaten.de/diso#LatticeDirection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purls.helmholtz-metadaten.de/cso#Vector> .
+_:Ndcbbf64449aa4adfb2a9985702ce1bd3 <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#hasLatticePoint> .
+<https://purls.helmholtz-metadaten.de/diso#hasSlipPlane> <http://www.w3.org/2000/01/rdf-schema#label> "has slip plane"@en .
+_:N27088f7fd7c447c6aedde25ffffae84f <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#hasSlipSystem> .
+_:Nd8064fa9356349fbadbcfa792511a0ca <http://www.w3.org/2002/07/owl#allValuesFrom> <https://purls.helmholtz-metadaten.de/diso#SlipPlaneNormal> .
+_:Nc06920839d004bfebd7bc127f53be90e <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purls.helmholtz-metadaten.de/diso#FieldIonMicroscopy> .
+_:N6cf84c3042d7489ba3933db93bb7e46b <http://www.w3.org/2002/07/owl#intersectionOf> _:N90bcd3080c1344ef8689822bf6b59b35 .
+<https://purls.helmholtz-metadaten.de/diso#hasStartNode> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purls.helmholtz-metadaten.de/diso#Segment> .
+<https://purls.helmholtz-metadaten.de/diso#familyPlaneMillerIndice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+_:N99cf774f654242b38c808ed122ed563d <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#hasSlipPlane> .
+<https://purls.helmholtz-metadaten.de/diso#Segment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:N42763ea7bbbc484c945460022658f329 .
+<https://purls.helmholtz-metadaten.de/diso#EdgeDislocation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purls.helmholtz-metadaten.de/diso#Dislocation> .
+_:N340d97d69fc841829415aab52ebaee1c <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:N4380e5ddafa44aa58f4645b3d9ac2969 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://purls.helmholtz-metadaten.de/diso#LatticePoint> .
+<https://purls.helmholtz-metadaten.de/cso#Vector> <http://www.w3.org/2000/01/rdf-schema#comment> "(Euclidean) vector is used to represent quantities that both magnitude and direction."@en .
+_:N805fd7490aed424baef305e90b12cf99 <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#hasLatticePoint> .
+_:N9187ccdc49e14f4c9d14aec7f0784c3e <http://www.w3.org/2002/07/owl#allValuesFrom> <https://purls.helmholtz-metadaten.de/diso#LatticeDirection> .
+_:N7fddbee009ab44b5bc4580fb8dafa346 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:Nc0dbaa45a97c4e7f838cc5ff4dd664c7 .
+_:Nfe0d2d38c6404bafa943c01a28b9c45c <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:N91736cf801ce4a5989563883bdac0baf .
+_:N12715aea9ee84f43b63e5d555caa7568 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://purls.helmholtz-metadaten.de/diso#SlipPlaneNormal> .
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+_:Nfca1b8e7abb74d0e816bd9630d555865 <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#hasLineSense> .
+_:N5fded1fbfb634d1f947bde6b3000c703 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:Ncac18db24e0f49b9b8357fd8ddbcfdce .
+_:Nec70dc5b954146288875c2f39416df26 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<https://purls.helmholtz-metadaten.de/diso#familyPlaneMillerIndice> <http://www.w3.org/2000/01/rdf-schema#label> "family plane miller indice"@en .
+<https://purls.helmholtz-metadaten.de/diso#LatticeDirection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:N8b9f307fad614558bd7a903b737392cf <http://www.w3.org/2002/07/owl#unionOf> _:Nc8df29381113409dbac96964ce853523 .
+<https://purls.helmholtz-metadaten.de/diso#hasMathematicalRepresentation> <http://www.w3.org/2000/01/rdf-schema#range> <https://purls.helmholtz-metadaten.de/diso#Line> .
+_:N906754fccec8483393d9ee679f318f73 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://purls.helmholtz-metadaten.de/diso#LatticePoint> .
+<https://purls.helmholtz-metadaten.de/diso> <http://www.w3.org/2002/07/owl#versionInfo> "1.0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://purls.helmholtz-metadaten.de/diso#SlipPlaneNormal> <http://www.w3.org/2000/01/rdf-schema#comment> "The unit normal vector of slip planes."@en .
+<https://purls.helmholtz-metadaten.de/diso#DiscretizedLine> <http://www.w3.org/2000/01/rdf-schema#comment> "The numerical representation of the dislocation line that is discretized into the number of segments."@en .
+<https://purls.helmholtz-metadaten.de/cso#hasPositionVector> <http://www.w3.org/2000/01/rdf-schema#label> "has position vector"@en .
+_:N98274bee997a4ab3ac90bdd2396d5d04 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Nc53d6c3778394ce5b4abbcef4adbeebb .
+_:N6dc617f8dc3b42b3a81f227b81ea43d4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:N1696768ebf3a47409565e1d38ef9f521 .
+_:Nef3dd25d7be74a069c4963fe8d075150 <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#directionMillerIndice> .
+<https://purls.helmholtz-metadaten.de/diso#BurgersVector> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purls.helmholtz-metadaten.de/cso#Vector> .
+_:N69ec24a23e7942a8b070f05dce3d05e0 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+<https://purls.helmholtz-metadaten.de/diso#hasVectorOrigin> <http://www.w3.org/2000/01/rdf-schema#range> <https://purls.helmholtz-metadaten.de/diso#VectorOrigin> .
+_:Nb3b3158fdc684c4e96ad628e62eeb1e7 <http://www.w3.org/2002/07/owl#intersectionOf> _:N03633e8206144d79a7fff1b0c4c9bd7d .
+<https://purls.helmholtz-metadaten.de/diso#Line> <http://www.w3.org/2000/01/rdf-schema#label> "Line"@en .
+<https://purls.helmholtz-metadaten.de/diso#hasFamilyCrystalPlane> <http://www.w3.org/2000/01/rdf-schema#comment> "hasFamilyCrystalPlane represents the relationship between the lattice plane and the family of crystal planes."@en .
+<https://purls.helmholtz-metadaten.de/diso#Dislocation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:N8e194772fce54d5ca6f5b5854b82159a .
+_:Naa011bdea56d4628833abb9677b4ba14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:N8ed2fe364f7f40ae8b8d1e5ebeac84be <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:N340d97d69fc841829415aab52ebaee1c <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purls.helmholtz-metadaten.de/diso#Line> .
+<https://purls.helmholtz-metadaten.de/cso#PositionVector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:N78d4e75cc5df494d86fdd0baaac7e815 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:N59ad1d027dd24306b2b460cda338e75d <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://purls.helmholtz-metadaten.de/diso#hasLatticePlane> <http://www.w3.org/2000/01/rdf-schema#domain> _:Nb754427e56d64621af086fc7dcb45fd9 .
+<https://purls.helmholtz-metadaten.de/diso#Dislocation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Nc72e998b66b34d588a94da4dd9403d2d .
+<https://purls.helmholtz-metadaten.de/diso#planeMillerIndice> <http://www.w3.org/2000/01/rdf-schema#label> "plane miller indice"@en .
+<https://purls.helmholtz-metadaten.de/diso#LatticePlane> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:N69ec24a23e7942a8b070f05dce3d05e0 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:Nec70dc5b954146288875c2f39416df26 <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#slipArea> .
+<https://purls.helmholtz-metadaten.de/diso#hasShapeFunction> <http://www.w3.org/2000/01/rdf-schema#label> "has shape function"@en .
+<https://purls.helmholtz-metadaten.de/diso#TransmissionElectronMicroscopy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://purls.helmholtz-metadaten.de/diso#slipArea> <http://www.w3.org/2000/01/rdf-schema#label> "slipArea"@en .
+_:N9315ccd25e2f4e1897f5eb396bbe05ac <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purls.helmholtz-metadaten.de/diso#LatticeDirection> .
+<https://purls.helmholtz-metadaten.de/diso#hasSlipDirection> <http://www.w3.org/2000/01/rdf-schema#range> <https://purls.helmholtz-metadaten.de/diso#SlipDirection> .
+_:Nab91084314564cdea04e0474f0b835f3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:N8efd72d7c9de49c49943083a4532e1e8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purls.helmholtz-metadaten.de/cso#Lattice> .
+_:N5b462f7b067542f08a9e420e34a4e8e6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://purls.helmholtz-metadaten.de/diso#FamilyOfCrystalDirection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://purls.helmholtz-metadaten.de/diso#SlipPlaneNormal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Nef3dd25d7be74a069c4963fe8d075150 .
+<https://purls.helmholtz-metadaten.de/cso#Vector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://purls.helmholtz-metadaten.de/diso#familyPlaneMillerIndice> <http://www.w3.org/2000/01/rdf-schema#comment> "familyPlaneMillerIndice represents a set of Miller indice of lattice plane in string."@en .
+<https://purls.helmholtz-metadaten.de/cso#hasPositionVector> <http://www.w3.org/2000/01/rdf-schema#comment> "hasPositionVector represents the relationship between entity and position vector."@en .
+_:N2ed0beac07254e1c8460d5cb29a648ea <http://www.w3.org/2002/07/owl#unionOf> _:Nb781afa06854404a900684b0cd3df9aa .
+<https://purls.helmholtz-metadaten.de/diso#DiscretizedLine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Ne43037a870224a7d9d135e661416db07 .
+<https://purls.helmholtz-metadaten.de/diso#hasLatticeDirection> <http://www.w3.org/2000/01/rdf-schema#comment> "hasLatticeDirection represents the relationship between a lattice or a lattice plane with lattice directions."@en .
+<https://purls.helmholtz-metadaten.de/diso#hasLatticePoint> <http://www.w3.org/2000/01/rdf-schema#comment> "hasLatticePoint represents the relationship between a lattice or lattice plane or lattice direction with lattice point."@en .
+_:N0728bc818f1843cab24ce729e42c6730 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Ncd177258ebbb4b4da306005c24e078c4 .
+_:N51f5f56711504e6d8689cbe4bb2520af <http://www.w3.org/2002/07/owl#intersectionOf> _:N101803bf8eda49bd92726a71a22c2c7c .
+<https://purls.helmholtz-metadaten.de/diso#LatticeDirection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Nc8f80e36f93247d98db8e7eaeb1f6a5d .
+<https://purls.helmholtz-metadaten.de/diso#LatticePlane> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:N5b462f7b067542f08a9e420e34a4e8e6 .
+_:N805fd7490aed424baef305e90b12cf99 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:N1696768ebf3a47409565e1d38ef9f521 <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#hasLatticeDirection> .
+<https://purls.helmholtz-metadaten.de/diso#LatticeDirection> <http://www.w3.org/2000/01/rdf-schema#comment> "The vector direction inside the lattice that is connecting two lattice points."@en .
+<https://purls.helmholtz-metadaten.de/diso#Line> <http://www.w3.org/2000/01/rdf-schema#comment> "Mathematical representation of dislocation as 'Line'. An instance of mathematical representation of a dislocation line is an oriented curve parameterized by its arc length."@en .
+_:N8efd72d7c9de49c49943083a4532e1e8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:N2f0ceef59c7144ecb8a2ffeec07f765f .
+<https://purls.helmholtz-metadaten.de/diso#LatticePlane> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:N51f5f56711504e6d8689cbe4bb2520af .
+<https://purls.helmholtz-metadaten.de/diso#Node> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:N12715aea9ee84f43b63e5d555caa7568 <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#hasSlipPlaneNormal> .
+_:N8f52922993dd46daa3965b026c93701e <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:N1f815725fc53450fac85926680d1cd34 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://purls.helmholtz-metadaten.de/diso#Segment> .
+<https://purls.helmholtz-metadaten.de/diso#hasSlipDirection> <http://www.w3.org/2000/01/rdf-schema#comment> "hasSlipDirection represents the relationship between the slip plane or slip system with the slip direction."@en .
+<https://purls.helmholtz-metadaten.de/diso#hasVectorOrigin> <http://www.w3.org/2000/01/rdf-schema#label> "has vector origin"@en .
+<https://purls.helmholtz-metadaten.de/diso#LatticePoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purls.helmholtz-metadaten.de/cso#Point> .
+_:N3424f50a707a42ba99fe2dc388b4dd66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:N3285ce20f02b4dd28eedbb7a5eb28eac <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+_:N6dc617f8dc3b42b3a81f227b81ea43d4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:N5fded1fbfb634d1f947bde6b3000c703 .
+_:Na74331ef093c46058ca6f45ed0eb2624 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purls.helmholtz-metadaten.de/diso#SlipPlaneNormal> .
+_:Nc72e998b66b34d588a94da4dd9403d2d <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#movesOn> .
+<https://purls.helmholtz-metadaten.de/diso> <http://purl.org/dc/terms/creator> "Ahmad Zainul Ihsan"@en .
+_:N7de1e09fb9c44ae59deac7723fdec32a <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purls.helmholtz-metadaten.de/diso#LatticePlane> .
+_:N91736cf801ce4a5989563883bdac0baf <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://purls.helmholtz-metadaten.de/cso#CrystalStructure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://purls.helmholtz-metadaten.de/diso#familyDirectionMillerIndice> <http://www.w3.org/2000/01/rdf-schema#comment> "familyDirectionMillerIndice represents a set of miller indices of lattice direction in string."@en .
+<https://purls.helmholtz-metadaten.de/diso#hasNode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:N46bca364bc7d40b5ac4576ff188b4c67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:N8404f773dc01416883d2ce27a9cc42e0 .
+_:N6767c869bb854d0b8ea852f8a4b4aad6 <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#observedBy> .
+_:Nc8df29381113409dbac96964ce853523 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:N1295164dd2ed4f64ad0bb468b1dfdab1 .
+<https://purls.helmholtz-metadaten.de/diso#Dislocation> <http://www.w3.org/2000/01/rdf-schema#comment> "The presence of dislocation introduces local disturbance of the atomic-level geometry."@en .
+<https://purls.helmholtz-metadaten.de/diso#Dislocation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:N6767c869bb854d0b8ea852f8a4b4aad6 .
+_:N8aa7bdcd2c714500a4a5104e9a004055 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:Nb754427e56d64621af086fc7dcb45fd9 <http://www.w3.org/2002/07/owl#unionOf> _:Nd105c6f60231432d85b6b03475c7e625 .
+<https://purls.helmholtz-metadaten.de/diso#SlipDirection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://purls.helmholtz-metadaten.de/cso#Lattice> <http://www.w3.org/2000/01/rdf-schema#comment> "The mathematical concept to represent the periodicity of a crystal. A lattice defines a periodic arrangement of one or more atoms."@en .
+<https://purls.helmholtz-metadaten.de/diso#hasFamilyCrystalDirection> <http://www.w3.org/2000/01/rdf-schema#comment> "hasFamilyCrystalDirection represents the relationship between lattice direction and family of crystal direction."@en .
+_:N1cc926f21249496594f587a56341146c <http://www.w3.org/2002/07/owl#someValuesFrom> <https://purls.helmholtz-metadaten.de/diso#DiscretizedLine> .
+_:Nfca1b8e7abb74d0e816bd9630d555865 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://purls.helmholtz-metadaten.de/diso#LineSense> .
+_:N0d0eeb1fc7514b4392ba2339573f8d10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:N73963138e7c84f7c82691039c84d868b <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:N6a116d8b6bf245d0b01c827087ad5a03 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:Nd664185106b34bc8bfaf5db4e0001ac9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:N76e45f6d9df5436d820be9b1227325be <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://purls.helmholtz-metadaten.de/diso#ScrewDislocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:N99cf774f654242b38c808ed122ed563d <http://www.w3.org/2002/07/owl#someValuesFrom> <https://purls.helmholtz-metadaten.de/diso#SlipPlane> .
+_:N201bbb6bd7f94fb2a3dd7f3546dbe144 <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#hasVectorOrigin> .
+<https://purls.helmholtz-metadaten.de/diso#Node> <http://www.w3.org/2000/01/rdf-schema#label> "Node"@en .
+_:N8f52922993dd46daa3965b026c93701e <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:Na3324af6c9c84e22841044d98565a45d .
+_:Nb67805aeb4084427bd5b070422c16fb1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:Nfca1b8e7abb74d0e816bd9630d555865 .
+_:N02242a3659c140de9f22578fe252925e <http://www.w3.org/2002/07/owl#someValuesFrom> <https://purls.helmholtz-metadaten.de/diso#LatticePoint> .
+_:Na27564691ad14fd7849648c49d6d5eec <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:Nc0dbaa45a97c4e7f838cc5ff4dd664c7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://purls.helmholtz-metadaten.de/diso#directionMillerIndice> <http://www.w3.org/2000/01/rdf-schema#domain> _:N0d0eeb1fc7514b4392ba2339573f8d10 .
+_:N1696768ebf3a47409565e1d38ef9f521 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://purls.helmholtz-metadaten.de/diso#LatticeDirection> .
+<https://purls.helmholtz-metadaten.de/diso#hasLatticeDirection> <http://www.w3.org/2000/01/rdf-schema#range> <https://purls.helmholtz-metadaten.de/diso#LatticeDirection> .
+<https://purls.helmholtz-metadaten.de/cso#Vector> <http://www.w3.org/2000/01/rdf-schema#label> "Vector"@en .
+_:N51f5f56711504e6d8689cbe4bb2520af <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:N7de1e09fb9c44ae59deac7723fdec32a <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:Ncd177258ebbb4b4da306005c24e078c4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:Na27564691ad14fd7849648c49d6d5eec <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/cso#hasPositionVector> .
+<https://purls.helmholtz-metadaten.de/diso#hasRepresentation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<https://purls.helmholtz-metadaten.de/diso#VectorOrigin> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purls.helmholtz-metadaten.de/cso#Point> .
+<https://purls.helmholtz-metadaten.de/diso#hasNumericalRepresentation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purls.helmholtz-metadaten.de/diso#Line> .
+<https://purls.helmholtz-metadaten.de/diso#observedBy> <http://www.w3.org/2000/01/rdf-schema#range> _:N524c8b4bcf684df195f2004c8ff07140 .
+<https://purls.helmholtz-metadaten.de/diso#hasFamilyCrystalPlane> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purls.helmholtz-metadaten.de/diso#LatticePlane> .
+<https://purls.helmholtz-metadaten.de/diso#ShapeFunction> <http://www.w3.org/2000/01/rdf-schema#comment> "The shape function is the function that interpolates the solution between the discrete values obtained at the mesh nodes. In discretized dislocation, the shape function determines the shape of a segment and ultimately determines the shape of the line. Examples of shape function that is used to discretize the dislocation are circular, elliptic, spiral, linear, cubic, and quintic."@en .
+_:N3285ce20f02b4dd28eedbb7a5eb28eac <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:Nb754427e56d64621af086fc7dcb45fd9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:Na2ca5894df6b46a9abf173efdc0a356d <http://www.w3.org/2002/07/owl#allValuesFrom> <https://purls.helmholtz-metadaten.de/diso#LatticeDirection> .
+_:Ncac18db24e0f49b9b8357fd8ddbcfdce <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#hasLatticeDirection> .
+<https://purls.helmholtz-metadaten.de/diso#Dislocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://purls.helmholtz-metadaten.de/diso#hasFamilyCrystalPlane> <http://www.w3.org/2000/01/rdf-schema#range> <https://purls.helmholtz-metadaten.de/diso#FamilyOfCrystalPlane> .
+<https://purls.helmholtz-metadaten.de/diso#hasNode> <http://www.w3.org/2000/01/rdf-schema#label> "has node"@en .
+<https://purls.helmholtz-metadaten.de/diso#hasNumericalRepresentation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://purls.helmholtz-metadaten.de/diso#hasRepresentation> .
+<https://purls.helmholtz-metadaten.de/diso#Dislocation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:N3424f50a707a42ba99fe2dc388b4dd66 .
+_:Ndafe88465d9346cbaaf33fec77c2f1b3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://purls.helmholtz-metadaten.de/cso#Lattice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:N6cf84c3042d7489ba3933db93bb7e46b .
+_:N78d4e75cc5df494d86fdd0baaac7e815 <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#hasSlipPlane> .
+<https://purls.helmholtz-metadaten.de/diso#Line> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://purls.helmholtz-metadaten.de/diso#DiscretizedLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://purls.helmholtz-metadaten.de/diso#Node> <http://www.w3.org/2000/01/rdf-schema#comment> "A point of a segment."@en .
+<https://purls.helmholtz-metadaten.de/diso#hasStartNode> <http://www.w3.org/2000/01/rdf-schema#comment> "Sub-property of hasNode that relates the segment with the start node."@en .
+<https://purls.helmholtz-metadaten.de/diso#hasSlipDirection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://purls.helmholtz-metadaten.de/diso#Line> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:N1cc926f21249496594f587a56341146c .
+<https://purls.helmholtz-metadaten.de/diso#Segment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Nd3c231e37d4849c8b8ae57aa03895c86 .
+_:N7a4f22e1d6294f01882151c7fb61d094 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:N3dcf0c70fa9941d599292c1d8f7ccd03 .
+<https://purls.helmholtz-metadaten.de/diso#hasNumericalRepresentation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+_:Nd4076c34ee684ffdb081334f2f4c17f9 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://purls.helmholtz-metadaten.de/diso#SlipDirection> .
+<https://purls.helmholtz-metadaten.de/diso#FamilyOfCrystalDirection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:N69ec24a23e7942a8b070f05dce3d05e0 .
+<https://purls.helmholtz-metadaten.de/diso#FamilyOfCrystalDirection> <http://www.w3.org/2000/01/rdf-schema#comment> "A set of symmetrically equivalent directions in the lattice."@en .
+<https://purls.helmholtz-metadaten.de/diso#hasRepresentation> <http://www.w3.org/2000/01/rdf-schema#comment> "hasRepresentation relates the entity to another representation of entity."@en .
+<https://purls.helmholtz-metadaten.de/diso#directionMillerIndice> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+_:N0d0eeb1fc7514b4392ba2339573f8d10 <http://www.w3.org/2002/07/owl#unionOf> _:N9315ccd25e2f4e1897f5eb396bbe05ac .
+<https://purls.helmholtz-metadaten.de/cso#Lattice> <http://www.w3.org/2000/01/rdf-schema#label> "Lattice"@en .
+<https://purls.helmholtz-metadaten.de/diso> <http://purl.org/dc/terms/created> "21.03.2022"@en .
+_:N122ca99e7287489f9e3dccde6f4e3b65 <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#observedBy> .
+_:Na3324af6c9c84e22841044d98565a45d <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#hasLatticePoint> .
+<https://purls.helmholtz-metadaten.de/diso#hasNode> <http://www.w3.org/2000/01/rdf-schema#range> <https://purls.helmholtz-metadaten.de/diso#Node> .
+<https://purls.helmholtz-metadaten.de/diso#FieldIonMicroscopy> <http://www.w3.org/2002/07/owl#disjointWith> <https://purls.helmholtz-metadaten.de/diso#TransmissionElectronMicroscopy> .
+<https://purls.helmholtz-metadaten.de/diso#SlipDirection> <http://www.w3.org/2000/01/rdf-schema#label> "Slip Direction"@en .
+_:N9ca76bdff54e421494ea080ac3af20e9 <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#hasSlipPlaneNormal> .
+_:N9315ccd25e2f4e1897f5eb396bbe05ac <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Na74331ef093c46058ca6f45ed0eb2624 .
+_:Ncd177258ebbb4b4da306005c24e078c4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:N78d4e75cc5df494d86fdd0baaac7e815 .
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+_:Nd4c34073b4a644e7a23f63b5080b025a <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:Na2ca5894df6b46a9abf173efdc0a356d <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://purls.helmholtz-metadaten.de/diso#hasShapeFunction> <http://www.w3.org/2000/01/rdf-schema#range> <https://purls.helmholtz-metadaten.de/diso#ShapeFunction> .
+_:N96b6ddfda1a2494b9f8b43df8334d9d1 <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#planeMillerIndice> .
+_:N98274bee997a4ab3ac90bdd2396d5d04 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purls.helmholtz-metadaten.de/cso#Lattice> .
+_:N27088f7fd7c447c6aedde25ffffae84f <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://purls.helmholtz-metadaten.de/diso#LineSense> <http://www.w3.org/2000/01/rdf-schema#label> "Line Sense"@en .
+<https://purls.helmholtz-metadaten.de/diso#hasEndNode> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://purls.helmholtz-metadaten.de/diso#hasNode> .
+<https://purls.helmholtz-metadaten.de/diso#Line> <http://www.w3.org/2002/07/owl#disjointWith> <https://purls.helmholtz-metadaten.de/diso#Node> .
+_:Nd5ada05d2b3a4ba2802d7092a1bd6df4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://purls.helmholtz-metadaten.de/diso#LatticeDisplacement> <http://www.w3.org/2000/01/rdf-schema#label> "Lattice Displacement"@en .
+<https://purls.helmholtz-metadaten.de/cso#PositionVector> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purls.helmholtz-metadaten.de/cso#Vector> .
+<https://purls.helmholtz-metadaten.de/diso#Dislocation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:N122ca99e7287489f9e3dccde6f4e3b65 .
+<https://purls.helmholtz-metadaten.de/diso#Dislocation> <http://www.w3.org/2000/01/rdf-schema#label> "Versetzung"@de .
+_:Ndafe88465d9346cbaaf33fec77c2f1b3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:N9187ccdc49e14f4c9d14aec7f0784c3e .
+_:Nef3dd25d7be74a069c4963fe8d075150 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://purls.helmholtz-metadaten.de/diso#hasEndNode> <http://www.w3.org/2000/01/rdf-schema#label> "has end node"@en .
+<https://purls.helmholtz-metadaten.de/diso#hasLatticePlane> <http://www.w3.org/2000/01/rdf-schema#comment> "hasLatticePlane represents the relationship between a lattice and lattice planes."@en .
+<https://purls.helmholtz-metadaten.de/diso#LatticeDisplacement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:Na27564691ad14fd7849648c49d6d5eec <http://www.w3.org/2002/07/owl#allValuesFrom> <https://purls.helmholtz-metadaten.de/cso#PositionVector> .
+<https://purls.helmholtz-metadaten.de/diso#EdgeDislocation> <http://www.w3.org/2000/01/rdf-schema#label> "Edge Dislocation"@en .
+<https://purls.helmholtz-metadaten.de/diso#hasLineSense> <http://www.w3.org/2000/01/rdf-schema#label> "has line sense"@en .
+_:N8404f773dc01416883d2ce27a9cc42e0 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://purls.helmholtz-metadaten.de/diso#SlipDirection> .
+_:N42763ea7bbbc484c945460022658f329 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://purls.helmholtz-metadaten.de/diso#DiscretizedLine> .
+<https://purls.helmholtz-metadaten.de/diso#LatticePoint> <http://www.w3.org/2000/01/rdf-schema#comment> "Lattice point is the point where atom(s) or molecule(s) is located."@en .
+<https://purls.helmholtz-metadaten.de/diso#planeMillerIndice> <http://www.w3.org/2000/01/rdf-schema#comment> "planeMillerIndice represents Miller indice of lattice plane in string."@en .
+<https://purls.helmholtz-metadaten.de/diso#hasEndNode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://purls.helmholtz-metadaten.de/cso#Point> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Na27564691ad14fd7849648c49d6d5eec .
+<https://purls.helmholtz-metadaten.de/diso#hasLatticePlane> <http://www.w3.org/2000/01/rdf-schema#range> <https://purls.helmholtz-metadaten.de/diso#LatticePlane> .
+_:N3285ce20f02b4dd28eedbb7a5eb28eac <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#familyPlaneMillerIndice> .
+_:N79c9bbaee88844f5a68bf4d9347ac150 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purls.helmholtz-metadaten.de/diso#Node> .
+_:N4bc173722893473aa15839e48c77fca2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Naa87afacc16c4162adec47db779c3a01 .
+<https://purls.helmholtz-metadaten.de/cso#hasPositionVector> <http://www.w3.org/2000/01/rdf-schema#domain> _:Nc29bb88d01e54907b32563d0dce08ffd .
+_:N218ded011eae47889c27a80ee4199777 <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#hasBurgersVector> .
+_:Nc72e998b66b34d588a94da4dd9403d2d <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://purls.helmholtz-metadaten.de/diso#hasMathematicalRepresentation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purls.helmholtz-metadaten.de/diso#Dislocation> .
+_:Nd4076c34ee684ffdb081334f2f4c17f9 <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#hasSlipDirection> .
+<https://purls.helmholtz-metadaten.de/diso#directionMillerIndice> <http://www.w3.org/2000/01/rdf-schema#label> "direction miller indice"@en .
+_:N2f0ceef59c7144ecb8a2ffeec07f765f <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purls.helmholtz-metadaten.de/diso#LatticeDirection> .
+<https://purls.helmholtz-metadaten.de/diso#familyDirectionMillerIndice> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://purls.helmholtz-metadaten.de/diso#resultsIn> <http://www.w3.org/2000/01/rdf-schema#range> <https://purls.helmholtz-metadaten.de/diso#LatticeDisplacement> .
+<https://purls.helmholtz-metadaten.de/diso#SlipDirection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purls.helmholtz-metadaten.de/diso#LatticeDirection> .
+<https://purls.helmholtz-metadaten.de/diso#resultsIn> <http://www.w3.org/2000/01/rdf-schema#comment> "resultsIn represents the relationship between dislocation and lattice displacement."@en .
+<https://purls.helmholtz-metadaten.de/diso#LatticeDisplacement> <http://www.w3.org/2000/01/rdf-schema#comment> "The displacement of atoms from their perfect lattice sites due to the existence of defects, e.g., point defect, line defect, and grain boundary."@en .
+_:N101803bf8eda49bd92726a71a22c2c7c <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:Ne7fa70a8b56940cabfaaa29312ea2f09 .
+_:Na3324af6c9c84e22841044d98565a45d <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:Na9f1f965fb224c02a8bcb0b73347e097 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:N83ad57b471de45598b44951815a37c1d .
+<https://purls.helmholtz-metadaten.de/diso#hasFamilyCrystalDirection> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purls.helmholtz-metadaten.de/diso#LatticeDirection> .
+_:N218ded011eae47889c27a80ee4199777 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:Ne7fa70a8b56940cabfaaa29312ea2f09 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:Naa87afacc16c4162adec47db779c3a01 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://purls.helmholtz-metadaten.de/diso#hasMathematicalRepresentation> <http://www.w3.org/2000/01/rdf-schema#comment> "hasMathematicalRepresentation relates the entity with its mathematical representation."@en .
+_:Nc8f80e36f93247d98db8e7eaeb1f6a5d <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:N55684e3bbd9949c098d691657c419855 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://purls.helmholtz-metadaten.de/diso#hasSegment> <http://www.w3.org/2000/01/rdf-schema#comment> "hasSegment represents the relationship between discretized line and segment."@en .
+<https://purls.helmholtz-metadaten.de/diso#slipArea> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
+<https://purls.helmholtz-metadaten.de/diso#SlipSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Slip System"@en .
+_:N9187ccdc49e14f4c9d14aec7f0784c3e <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://purls.helmholtz-metadaten.de/diso#Dislocation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Ncca18259d0d04b54a8d43caf0ea53819 .
+_:Nc0dbaa45a97c4e7f838cc5ff4dd664c7 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://purls.helmholtz-metadaten.de/diso#SlipPlaneNormal> .
+<https://purls.helmholtz-metadaten.de/diso#hasNumericalRepresentation> <http://www.w3.org/2000/01/rdf-schema#label> "has numerical representation"@en .
+<https://purls.helmholtz-metadaten.de/diso#hasBurgersVector> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purls.helmholtz-metadaten.de/diso#Dislocation> .
+_:N1656cfae5aa840f983da5edd980e6490 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:N79c9bbaee88844f5a68bf4d9347ac150 .
+<https://purls.helmholtz-metadaten.de/diso#hasLatticePlane> <http://www.w3.org/2000/01/rdf-schema#label> "has lattice plane"@en .
+<https://purls.helmholtz-metadaten.de/diso> <http://purl.org/dc/terms/contributor> "Said Fathalla"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:N9ca76bdff54e421494ea080ac3af20e9 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://purls.helmholtz-metadaten.de/diso#SlipPlaneNormal> .
+<https://purls.helmholtz-metadaten.de/diso#Dislocation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:N2a07de7288004487ac73328cd995725a .
+<https://purls.helmholtz-metadaten.de/diso#hasFamilyCrystalDirection> <http://www.w3.org/2000/01/rdf-schema#range> <https://purls.helmholtz-metadaten.de/diso#FamilyOfCrystalDirection> .
+_:Nb781afa06854404a900684b0cd3df9aa <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:N340d97d69fc841829415aab52ebaee1c .
+_:N2566115fa9f845fea38637ecc45c9819 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:N9ca76bdff54e421494ea080ac3af20e9 .
+<https://purls.helmholtz-metadaten.de/cso#PositionVector> <http://www.w3.org/2000/01/rdf-schema#label> "Position Vector"@en .
+_:N96b6ddfda1a2494b9f8b43df8334d9d1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:Na4a3254374ef4e6aae4eb42ebdcb677d <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:N2381fecd3e5b4d3b80884f5fbe3780a8 .
+<https://purls.helmholtz-metadaten.de/diso#directionMillerIndice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+_:N101803bf8eda49bd92726a71a22c2c7c <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Ndafe88465d9346cbaaf33fec77c2f1b3 .
+_:Nb3b3158fdc684c4e96ad628e62eeb1e7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:N428b7ee5000946dca89b709afa3ff6cd <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#hasSlipDirection> .
+_:Nc9d6a09ff2fb4736bc2b4503b5aef81c <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://purls.helmholtz-metadaten.de/diso#isSegmentOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Inverse of hasSegment"@en .
+_:N5b5653ded1c74dd392f574770d8ff891 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:N4c274a1f5b7e412082db002dc8be220f <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:N4dc3b3ead2834e6f9b53dde683374a71 <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#hasLatticePlane> .
+_:N5fded1fbfb634d1f947bde6b3000c703 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:N03633e8206144d79a7fff1b0c4c9bd7d <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:Nd4076c34ee684ffdb081334f2f4c17f9 .
+<https://purls.helmholtz-metadaten.de/diso#Node> <http://www.w3.org/2002/07/owl#disjointWith> <https://purls.helmholtz-metadaten.de/diso#Segment> .
+<https://purls.helmholtz-metadaten.de/diso#hasSegment> <http://www.w3.org/2000/01/rdf-schema#range> <https://purls.helmholtz-metadaten.de/diso#Segment> .
+<https://purls.helmholtz-metadaten.de/diso#LineSense> <http://www.w3.org/2000/01/rdf-schema#comment> "A sense that characterizes a directed line, i.e., it has a start and an end."@en .
+_:N7ada1429cb9a4eacb9c4c4d5e4f181b4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:N8ed2fe364f7f40ae8b8d1e5ebeac84be .
+_:N59ad1d027dd24306b2b460cda338e75d <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:Ndcbbf64449aa4adfb2a9985702ce1bd3 .
+<https://purls.helmholtz-metadaten.de/diso#familyPlaneMillerIndice> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+_:N3424f50a707a42ba99fe2dc388b4dd66 <http://www.w3.org/2002/07/owl#intersectionOf> _:N7a4f22e1d6294f01882151c7fb61d094 .
+<https://purls.helmholtz-metadaten.de/diso#SlipDirection> <http://www.w3.org/2000/01/rdf-schema#comment> "The direction in the slip plane along which plastic deformation takes place. The slip direction corresponds to one of the shortest lattice translation vectors."@en .
+<https://purls.helmholtz-metadaten.de/diso#hasNumericalRepresentation> <http://www.w3.org/2000/01/rdf-schema#comment> "hasNumericalRepresentation relates the entity with its numerical representation."@en .
+_:N1696768ebf3a47409565e1d38ef9f521 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:N122ca99e7287489f9e3dccde6f4e3b65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:N4bc173722893473aa15839e48c77fca2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:N02242a3659c140de9f22578fe252925e .
+_:N91736cf801ce4a5989563883bdac0baf <http://www.w3.org/2002/07/owl#someValuesFrom> <https://purls.helmholtz-metadaten.de/diso#SlipDirection> .
+<https://purls.helmholtz-metadaten.de/diso#hasNode> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purls.helmholtz-metadaten.de/diso#Segment> .
+_:N6767c869bb854d0b8ea852f8a4b4aad6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://purls.helmholtz-metadaten.de/diso#BurgersVector> <http://www.w3.org/2000/01/rdf-schema#comment> "An elementary unit (length order of lattice parameter) of lattice translation. The basic notion of the Burgers vector comes from the closure failure of an initially perfect lattice due to the existence of dislocation. The magnitude and direction of closure failure are characterized by the Burgers vector."@en .
+_:Nc29bb88d01e54907b32563d0dce08ffd <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://purls.helmholtz-metadaten.de/diso#LatticePoint> <http://www.w3.org/2000/01/rdf-schema#label> "Lattice Point"@en .
+_:N76e45f6d9df5436d820be9b1227325be <http://www.w3.org/2002/07/owl#intersectionOf> _:N7fddbee009ab44b5bc4580fb8dafa346 .
+_:N41c5deeccdad44f781be7317654ee79a <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:N6a116d8b6bf245d0b01c827087ad5a03 .
+<https://purls.helmholtz-metadaten.de/diso#SlipPlane> <http://www.w3.org/2000/01/rdf-schema#comment> "The crystallographic/lattice plane along which the dislocation line traverses/moves. The slip plane is usually the plane with the highest density of atoms, i.e. most widely spaced."@en .
+_:N1f815725fc53450fac85926680d1cd34 <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#hasSegment> .
+<https://purls.helmholtz-metadaten.de/diso#LineDefect> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://purls.helmholtz-metadaten.de/diso#ScrewDislocation> <http://www.w3.org/2000/01/rdf-schema#label> "Screw Dislocation"@en .
+<https://purls.helmholtz-metadaten.de/diso#hasEndNode> <http://www.w3.org/2000/01/rdf-schema#range> <https://purls.helmholtz-metadaten.de/diso#Node> .
+<https://purls.helmholtz-metadaten.de/diso#LineDefect> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purls.helmholtz-metadaten.de/cdo#CrystallographicDefect> .
+_:N428b7ee5000946dca89b709afa3ff6cd <http://www.w3.org/2002/07/owl#allValuesFrom> <https://purls.helmholtz-metadaten.de/diso#SlipDirection> .
+_:N6cf84c3042d7489ba3933db93bb7e46b <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://purls.helmholtz-metadaten.de/diso#LatticeDirection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Nd5ada05d2b3a4ba2802d7092a1bd6df4 .
+<https://purls.helmholtz-metadaten.de/diso#hasFamilyCrystalDirection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://purls.helmholtz-metadaten.de/diso#isSegmentOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://purls.helmholtz-metadaten.de/diso#DiscretizedLine> .
+_:N4dc3b3ead2834e6f9b53dde683374a71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://purls.helmholtz-metadaten.de/diso#FamilyOfCrystalPlane> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:N3285ce20f02b4dd28eedbb7a5eb28eac .
+_:Nc53d6c3778394ce5b4abbcef4adbeebb <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purls.helmholtz-metadaten.de/diso#LatticePlane> .
+_:Nc53d6c3778394ce5b4abbcef4adbeebb <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://purls.helmholtz-metadaten.de/cso#Lattice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:N57b63f23238548daad2f66692f6afb12 .
+<https://purls.helmholtz-metadaten.de/diso#hasLatticePoint> <http://www.w3.org/2000/01/rdf-schema#domain> _:Nf1e1d3d748024576b3f2da800094ec4a .
+_:N1656cfae5aa840f983da5edd980e6490 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purls.helmholtz-metadaten.de/cso#Lattice> .
+<https://purls.helmholtz-metadaten.de/diso#hasBurgersVector> <http://www.w3.org/2000/01/rdf-schema#range> <https://purls.helmholtz-metadaten.de/diso#BurgersVector> .
+<https://purls.helmholtz-metadaten.de/diso#hasSlipSystem> <http://www.w3.org/2000/01/rdf-schema#label> "has slip system"@en .
+<https://purls.helmholtz-metadaten.de/diso#resultsIn> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purls.helmholtz-metadaten.de/diso#Dislocation> .
+_:Nc06920839d004bfebd7bc127f53be90e <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:N5b5653ded1c74dd392f574770d8ff891 .
+<https://purls.helmholtz-metadaten.de/diso#Segment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://purls.helmholtz-metadaten.de/diso#ShapeFunction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:Nd664185106b34bc8bfaf5db4e0001ac9 <http://www.w3.org/2002/07/owl#intersectionOf> _:Na9f1f965fb224c02a8bcb0b73347e097 .
+_:Nd8064fa9356349fbadbcfa792511a0ca <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:Nb781afa06854404a900684b0cd3df9aa <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purls.helmholtz-metadaten.de/diso#DiscretizedLine> .
+_:Nec70dc5b954146288875c2f39416df26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:Nc8f80e36f93247d98db8e7eaeb1f6a5d <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+<https://purls.helmholtz-metadaten.de/diso#SlipSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Naa011bdea56d4628833abb9677b4ba14 .
+<https://purls.helmholtz-metadaten.de/cso#Point> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://purls.helmholtz-metadaten.de/diso#LineSense> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://purls.helmholtz-metadaten.de/diso#hasVectorOrigin> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purls.helmholtz-metadaten.de/diso#LatticePlane> .
+_:N73963138e7c84f7c82691039c84d868b <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#hasSlipSystem> .
+_:Na4a3254374ef4e6aae4eb42ebdcb677d <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Nb67805aeb4084427bd5b070422c16fb1 .
+<https://purls.helmholtz-metadaten.de/diso#FamilyOfCrystalDirection> <http://www.w3.org/2002/07/owl#disjointWith> <https://purls.helmholtz-metadaten.de/diso#FamilyOfCrystalPlane> .
+_:N79c9bbaee88844f5a68bf4d9347ac150 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:Nc3cf55597dac4b8bb0d81b451c65a9bf <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:N12715aea9ee84f43b63e5d555caa7568 .
+<https://purls.helmholtz-metadaten.de/diso#hasLineSense> <http://www.w3.org/2000/01/rdf-schema#comment> "hasLineSense represents the relationship between dislocation and line sense."@en .
+<https://purls.helmholtz-metadaten.de/diso#FieldIonMicroscopy> <http://www.w3.org/2000/01/rdf-schema#label> "Field Ion Microscopy"@en .
+_:N8404f773dc01416883d2ce27a9cc42e0 <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#hasSlipDirection> .
+<https://purls.helmholtz-metadaten.de/diso#hasLatticePoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://purls.helmholtz-metadaten.de/diso#ScrewDislocation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purls.helmholtz-metadaten.de/diso#Dislocation> .
+_:Ne328c04c41a1453b91d085c0bb9ec13d <http://www.w3.org/2002/07/owl#intersectionOf> _:N0728bc818f1843cab24ce729e42c6730 .
+<https://purls.helmholtz-metadaten.de/diso#hasMathematicalRepresentation> <http://www.w3.org/2000/01/rdf-schema#label> "has mathematical representation"@en .
+<https://purls.helmholtz-metadaten.de/cso#CrystalStructure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Nd664185106b34bc8bfaf5db4e0001ac9 .
+<https://purls.helmholtz-metadaten.de/diso#BurgersVector> <http://www.w3.org/2000/01/rdf-schema#label> "Burgers Vector"@en .
+<https://purls.helmholtz-metadaten.de/diso#hasSlipSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "hasSlipSystem represents the relationship between a crystal structure and slip system."@en .
+_:Nc0dbaa45a97c4e7f838cc5ff4dd664c7 <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#hasSlipPlaneNormal> .
+_:Nd3c231e37d4849c8b8ae57aa03895c86 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://purls.helmholtz-metadaten.de/diso#Node> .
+_:N90bcd3080c1344ef8689822bf6b59b35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:N8f52922993dd46daa3965b026c93701e .
+_:N524c8b4bcf684df195f2004c8ff07140 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://purls.helmholtz-metadaten.de/cso#Point> <http://www.w3.org/2000/01/rdf-schema#label> "Point"@en .
+<https://purls.helmholtz-metadaten.de/diso#hasLatticePoint> <http://www.w3.org/2000/01/rdf-schema#label> "has lattice point"@en .
+_:N41c5deeccdad44f781be7317654ee79a <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:N4dc3b3ead2834e6f9b53dde683374a71 .
+_:N27046c75155a4eab926b7574dcf05b9f <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:N59ad1d027dd24306b2b460cda338e75d .
+<https://purls.helmholtz-metadaten.de/diso#planeMillerIndice> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purls.helmholtz-metadaten.de/diso#LatticePlane> .
+_:N96b6ddfda1a2494b9f8b43df8334d9d1 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+<https://purls.helmholtz-metadaten.de/diso#isSegmentOf> <http://www.w3.org/2000/01/rdf-schema#label> "is segment of"@en .
+_:N2f0ceef59c7144ecb8a2ffeec07f765f <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:N7de1e09fb9c44ae59deac7723fdec32a .
+<https://purls.helmholtz-metadaten.de/diso#hasStartNode> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://purls.helmholtz-metadaten.de/diso#hasNode> .
+<https://purls.helmholtz-metadaten.de/diso#hasSlipPlaneNormal> <http://www.w3.org/2000/01/rdf-schema#range> <https://purls.helmholtz-metadaten.de/diso#SlipPlaneNormal> .
+_:N6767c869bb854d0b8ea852f8a4b4aad6 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://purls.helmholtz-metadaten.de/diso#FieldIonMicroscopy> .
+<https://purls.helmholtz-metadaten.de/diso> <http://purl.org/vocab/vann/preferredNamespacePrefix> "DISO"^^<http://www.w3.org/2001/XMLSchema#string> .
+<https://purls.helmholtz-metadaten.de/diso#LatticePoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://purls.helmholtz-metadaten.de/diso#DiscretizedLine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Nec70dc5b954146288875c2f39416df26 .
+<https://purls.helmholtz-metadaten.de/diso#observedBy> <http://www.w3.org/2000/01/rdf-schema#label> "observed by"@en .
+<https://purls.helmholtz-metadaten.de/diso#Dislocation> <http://www.w3.org/2000/01/rdf-schema#comment> "Linear or one-dimensional defect around which some of the atoms are misaligned. In the mesoscale, a dislocation is a line object that is a boundary separating the regions on the slip plane which have undergone slip from those that have not."@en .
+_:N4380e5ddafa44aa58f4645b3d9ac2969 <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#hasLatticePoint> .
+_:N83ad57b471de45598b44951815a37c1d <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:N73963138e7c84f7c82691039c84d868b .
+<https://purls.helmholtz-metadaten.de/diso> <http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by/3.0/> .
+<https://purls.helmholtz-metadaten.de/diso#hasSegment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:Nd3c231e37d4849c8b8ae57aa03895c86 <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#hasEndNode> .
+<https://purls.helmholtz-metadaten.de/diso#hasLatticeDirection> <http://www.w3.org/2000/01/rdf-schema#label> "has lattice direction"@en .
+<https://purls.helmholtz-metadaten.de/diso#hasNode> <http://www.w3.org/2000/01/rdf-schema#comment> "hasNode represents the relationship between segment and node."@en .
+<https://purls.helmholtz-metadaten.de/diso> <http://www.w3.org/2000/01/rdf-schema#label> "Dislocation Ontology"@en .
+_:N7ada1429cb9a4eacb9c4c4d5e4f181b4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purls.helmholtz-metadaten.de/diso#SlipPlane> .
+_:Ncac18db24e0f49b9b8357fd8ddbcfdce <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:Nc29bb88d01e54907b32563d0dce08ffd <http://www.w3.org/2002/07/owl#unionOf> _:N1656cfae5aa840f983da5edd980e6490 .
+<https://purls.helmholtz-metadaten.de/diso#hasLineSense> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://purls.helmholtz-metadaten.de/diso#hasRepresentation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://purls.helmholtz-metadaten.de/cso#Lattice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:N8aa7bdcd2c714500a4a5104e9a004055 .
+_:Ncac18db24e0f49b9b8357fd8ddbcfdce <http://www.w3.org/2002/07/owl#allValuesFrom> <https://purls.helmholtz-metadaten.de/diso#LatticeDirection> .
+<https://purls.helmholtz-metadaten.de/diso#hasFamilyCrystalPlane> <http://www.w3.org/2000/01/rdf-schema#label> "has family crystal plane"@en .
+<https://purls.helmholtz-metadaten.de/diso#hasMathematicalRepresentation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://purls.helmholtz-metadaten.de/diso#VectorOrigin> <http://www.w3.org/2000/01/rdf-schema#label> "Vector Origin"@en .
+<https://purls.helmholtz-metadaten.de/cdo#CrystallographicDefect> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:N2a07de7288004487ac73328cd995725a <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://purls.helmholtz-metadaten.de/diso#DiscretizedLine> <http://www.w3.org/2002/07/owl#disjointWith> <https://purls.helmholtz-metadaten.de/diso#Line> .
+_:Nc3cf55597dac4b8bb0d81b451c65a9bf <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:N2566115fa9f845fea38637ecc45c9819 .
+<https://purls.helmholtz-metadaten.de/diso#hasLineSense> <http://www.w3.org/2000/01/rdf-schema#range> <https://purls.helmholtz-metadaten.de/diso#LineSense> .
+<https://purls.helmholtz-metadaten.de/diso#SlipPlane> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://purls.helmholtz-metadaten.de/diso#hasVectorOrigin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://purls.helmholtz-metadaten.de/cso#CrystalStructure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Ne328c04c41a1453b91d085c0bb9ec13d .
+_:Na9f1f965fb224c02a8bcb0b73347e097 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:N27088f7fd7c447c6aedde25ffffae84f .
+_:Naa87afacc16c4162adec47db779c3a01 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:N805fd7490aed424baef305e90b12cf99 .
+_:Ndc04806939ec4c61b75aa9a293bdd10e <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#hasBurgersVector> .
+_:Nc8f80e36f93247d98db8e7eaeb1f6a5d <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:N1f815725fc53450fac85926680d1cd34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://purls.helmholtz-metadaten.de/diso#hasMathematicalRepresentation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://purls.helmholtz-metadaten.de/diso#hasRepresentation> .
+<https://purls.helmholtz-metadaten.de/diso#FamilyOfCrystalPlane> <http://www.w3.org/2000/01/rdf-schema#label> "Family of Crystal Plane"@en .
+_:N27046c75155a4eab926b7574dcf05b9f <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:N906754fccec8483393d9ee679f318f73 .
+<https://purls.helmholtz-metadaten.de/diso#hasSegment> <http://www.w3.org/2000/01/rdf-schema#label> "has segment"@en .
+<https://purls.helmholtz-metadaten.de/cdo#CrystallographicDefect> <http://www.w3.org/2000/01/rdf-schema#label> "Crystallographic Defect"@en .
+<https://purls.helmholtz-metadaten.de/diso#Segment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:N4a909a8101c0447183fa6cd958937889 .
+<https://purls.helmholtz-metadaten.de/diso#hasShapeFunction> <http://www.w3.org/2000/01/rdf-schema#comment> "hasShapeFunction represents the relationship between discretized line and shape function."@en .
+_:N2566115fa9f845fea38637ecc45c9819 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:N73963138e7c84f7c82691039c84d868b <http://www.w3.org/2002/07/owl#allValuesFrom> <https://purls.helmholtz-metadaten.de/diso#SlipSystem> .
+_:Ndcbbf64449aa4adfb2a9985702ce1bd3 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://purls.helmholtz-metadaten.de/diso#LatticePoint> .
+<https://purls.helmholtz-metadaten.de/diso#Dislocation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purls.helmholtz-metadaten.de/diso#LineDefect> .
+<https://purls.helmholtz-metadaten.de/diso#hasSlipSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:Ne7fa70a8b56940cabfaaa29312ea2f09 <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#hasLatticeDirection> .
+<https://purls.helmholtz-metadaten.de/diso#LineDefect> <http://www.w3.org/2000/01/rdf-schema#label> "Line Defect"@en .
+<https://purls.helmholtz-metadaten.de/diso#Segment> <http://www.w3.org/2000/01/rdf-schema#label> "Segment"@en .
+<https://purls.helmholtz-metadaten.de/diso#SlipSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "A slip system is defined as the set of slip planes with the same unit normal vector and the same slip direction."@en .
+<https://purls.helmholtz-metadaten.de/diso#hasFamilyCrystalPlane> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:N83ad57b471de45598b44951815a37c1d <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://purls.helmholtz-metadaten.de/diso#hasSlipPlaneNormal> <http://www.w3.org/2000/01/rdf-schema#label> "has slip plane normal"@en .
+<https://purls.helmholtz-metadaten.de/diso#hasBurgersVector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:Ndc04806939ec4c61b75aa9a293bdd10e <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:Nab91084314564cdea04e0474f0b835f3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:N428b7ee5000946dca89b709afa3ff6cd .
+_:N7fddbee009ab44b5bc4580fb8dafa346 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Nc9d6a09ff2fb4736bc2b4503b5aef81c .
+<https://purls.helmholtz-metadaten.de/diso#Segment> <http://www.w3.org/2000/01/rdf-schema#comment> "The segment is a part of a line bounded by two distinct end points and may contain points on the line between its endpoints."@en .
+_:N9187ccdc49e14f4c9d14aec7f0784c3e <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#hasLatticeDirection> .
+_:N906754fccec8483393d9ee679f318f73 <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#hasLatticePoint> .
+_:Nd5ada05d2b3a4ba2802d7092a1bd6df4 <http://www.w3.org/2002/07/owl#intersectionOf> _:N27046c75155a4eab926b7574dcf05b9f .
+<https://purls.helmholtz-metadaten.de/diso#hasEndNode> <http://www.w3.org/2000/01/rdf-schema#comment> "Sub-property of hasNode that relates the segment with the end node."@en .
+<https://purls.helmholtz-metadaten.de/diso#directionMillerIndice> <http://www.w3.org/2000/01/rdf-schema#comment> "directionMillerIndice represents Miller indice of lattice direction in string."@en .
+_:N2381fecd3e5b4d3b80884f5fbe3780a8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:Naa011bdea56d4628833abb9677b4ba14 <http://www.w3.org/2002/07/owl#intersectionOf> _:Nfe0d2d38c6404bafa943c01a28b9c45c .
+_:N96b6ddfda1a2494b9f8b43df8334d9d1 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:N805fd7490aed424baef305e90b12cf99 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://purls.helmholtz-metadaten.de/diso#LatticePoint> .
+<https://purls.helmholtz-metadaten.de/diso#hasLineSense> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purls.helmholtz-metadaten.de/diso#Dislocation> .
+<https://purls.helmholtz-metadaten.de/cdo#CrystallographicDefect> <http://www.w3.org/2000/01/rdf-schema#comment> "The crystallographic defect is a lattice irregularity that has one or more dimensions on the order of an atomic diameter."@en .
+<https://purls.helmholtz-metadaten.de/diso#hasEndNode> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purls.helmholtz-metadaten.de/diso#Segment> .
+_:Ne5492c13b9ac4bd1a8a75950deeafea1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:N5b462f7b067542f08a9e420e34a4e8e6 <http://www.w3.org/2002/07/owl#intersectionOf> _:N4bc173722893473aa15839e48c77fca2 .
+<https://purls.helmholtz-metadaten.de/diso#Node> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://purls.helmholtz-metadaten.de/cso#Point> .
+_:N4380e5ddafa44aa58f4645b3d9ac2969 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://purls.helmholtz-metadaten.de/diso#hasSlipPlaneNormal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:N3285ce20f02b4dd28eedbb7a5eb28eac <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://purls.helmholtz-metadaten.de/diso#LatticePlane> <http://www.w3.org/2000/01/rdf-schema#label> "Lattice Plane"@en .
+<https://purls.helmholtz-metadaten.de/diso#VectorOrigin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://purls.helmholtz-metadaten.de/diso#hasStartNode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:Nd4076c34ee684ffdb081334f2f4c17f9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://purls.helmholtz-metadaten.de/diso#DiscretizedLine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:N1f815725fc53450fac85926680d1cd34 .
+<https://purls.helmholtz-metadaten.de/diso#familyDirectionMillerIndice> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purls.helmholtz-metadaten.de/diso#FamilyOfCrystalDirection> .
+<https://purls.helmholtz-metadaten.de/diso#hasSlipPlaneNormal> <http://www.w3.org/2000/01/rdf-schema#comment> "hasSlipPlaneNormal represents the relationship between a slip plane or slip system with slip plane normal."@en .
+_:Ndcbbf64449aa4adfb2a9985702ce1bd3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:Nd3c231e37d4849c8b8ae57aa03895c86 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:N906754fccec8483393d9ee679f318f73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:Ne43037a870224a7d9d135e661416db07 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://purls.helmholtz-metadaten.de/diso#ShapeFunction> .
+<https://purls.helmholtz-metadaten.de/diso#LatticeDirection> <http://www.w3.org/2000/01/rdf-schema#label> "Lattice Direction"@en .
+_:N428b7ee5000946dca89b709afa3ff6cd <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:Na74331ef093c46058ca6f45ed0eb2624 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:Nd4c34073b4a644e7a23f63b5080b025a <http://www.w3.org/2002/07/owl#intersectionOf> _:Nc3cf55597dac4b8bb0d81b451c65a9bf .
+_:N90bcd3080c1344ef8689822bf6b59b35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:N4380e5ddafa44aa58f4645b3d9ac2969 .
+<https://purls.helmholtz-metadaten.de/diso#hasBurgersVector> <http://www.w3.org/2000/01/rdf-schema#label> "has Burgers vector"@en .
+<https://purls.helmholtz-metadaten.de/diso#SlipPlaneNormal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:N4a909a8101c0447183fa6cd958937889 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://purls.helmholtz-metadaten.de/diso#Node> .
+<https://purls.helmholtz-metadaten.de/diso#hasFamilyCrystalDirection> <http://www.w3.org/2000/01/rdf-schema#label> "has family crystal direction"@en .
+<https://purls.helmholtz-metadaten.de/diso#hasSlipPlaneNormal> <http://www.w3.org/2000/01/rdf-schema#domain> _:N8b9f307fad614558bd7a903b737392cf .
+_:N78d4e75cc5df494d86fdd0baaac7e815 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://purls.helmholtz-metadaten.de/diso#SlipPlane> .
+<https://purls.helmholtz-metadaten.de/diso#LineDefect> <http://www.w3.org/2000/01/rdf-schema#comment> "Linear or one-dimensional defect around which some of the atoms are misaligned."@en .
+_:Nec70dc5b954146288875c2f39416df26 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#double> .
+_:N8e194772fce54d5ca6f5b5854b82159a <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://purls.helmholtz-metadaten.de/diso#slipArea> <http://www.w3.org/2000/01/rdf-schema#domain> <https://purls.helmholtz-metadaten.de/diso#DiscretizedLine> .
+_:Ne328c04c41a1453b91d085c0bb9ec13d <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://purls.helmholtz-metadaten.de/diso#familyDirectionMillerIndice> <http://www.w3.org/2000/01/rdf-schema#label> "family direction miller indice"@en .
+_:N122ca99e7287489f9e3dccde6f4e3b65 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://purls.helmholtz-metadaten.de/diso#TransmissionElectronMicroscopy> .
+<https://purls.helmholtz-metadaten.de/diso#planeMillerIndice> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://purls.helmholtz-metadaten.de/diso#hasSlipDirection> <http://www.w3.org/2000/01/rdf-schema#domain> _:N4c274a1f5b7e412082db002dc8be220f .
+<https://purls.helmholtz-metadaten.de/diso#hasBurgersVector> <http://www.w3.org/2000/01/rdf-schema#comment> "hasBurgersVector represents the relationship between dislocation to Burgers vector."@en .
+<https://purls.helmholtz-metadaten.de/cso#Point> <http://www.w3.org/2000/01/rdf-schema#comment> "In classical Euclidean geometry, a point is a primitive notion that models an exact location in the space, and has no length, width, or thickness."@en .
+<https://purls.helmholtz-metadaten.de/diso#hasSlipPlane> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://purls.helmholtz-metadaten.de/diso#hasLatticePlane> .
+<https://purls.helmholtz-metadaten.de/diso> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+_:Nef3dd25d7be74a069c4963fe8d075150 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+_:N1295164dd2ed4f64ad0bb468b1dfdab1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purls.helmholtz-metadaten.de/diso#SlipSystem> .
