@@ -4,12 +4,12 @@
 ![GitHub contributors](https://img.shields.io/github/contributors/Materials-Data-Science-and-Informatics/dislocation-ontology) 
 
 ## Table of content
-  * [About DISO](#about-diso)
-  * [Repository Description](#repository-description)
-  * [Usage](#usage)
-  * [Contact](#contact)
-  * [Acknowledgements](#acknowledgements)
-  * [Citation](#citation)
+  1. [About DISO](#about-diso)
+  2. [Repository Description](#repository-description)
+  3. [Usage](#usage)
+  4. [Contact](#contact)
+  5. [Acknowledgements](#acknowledgements)
+  6. [Citation](#citation)
 
 ## About DISO
 DISO is an ontology that defines the linear defect concepts and relations between them in crystalline materials. Moreover, Crystal Structure Ontology (CSO) and Crystallographic Defect Ontology (CDO), which ontologies define the concepts of crystal structureand crystalline defect, respectively, are also introduced in this repository. The ontology development processes are described following the well-known practices, e.g., using ontology metadata and reusing existing  ontologies,  e.g.,  MDO,  EMMO,  and  QUDT. To evaluate DISO, we have gathered competency questions (CQs) that will be answered via SPARQL query.
