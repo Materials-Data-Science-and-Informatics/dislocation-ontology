@@ -84,16 +84,6 @@
     <!-- https://purls.helmholtz-metadaten.de/cso#hasPositionVector -->
 
     <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/cso#hasPositionVector">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/cso#Lattice"/>
-                    <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#Node"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/cso#PositionVector"/>
         <rdfs:comment xml:lang="en">hasPositionVector represents the relationship between entity and position vector.</rdfs:comment>
         <rdfs:label xml:lang="en">has position vector</rdfs:label>
     </owl:ObjectProperty>
@@ -895,7 +885,6 @@
 
     <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/diso#LatticePoint">
         <rdfs:subClassOf rdf:resource="https://purls.helmholtz-metadaten.de/cso#Point"/>
-
         <rdfs:comment xml:lang="en">Lattice point is the point where atom(s) or molecule(s) is located.</rdfs:comment>
         <rdfs:label xml:lang="en">Lattice Point</rdfs:label>
     </owl:Class>
@@ -944,10 +933,11 @@
         <rdfs:subClassOf rdf:resource="https://purls.helmholtz-metadaten.de/cso#Point"/>
         <owl:disjointWith rdf:resource="https://purls.helmholtz-metadaten.de/diso#Segment"/>
         <rdfs:comment xml:lang="en">A point of a segment.</rdfs:comment>
-
         <rdfs:label xml:lang="en">Node</rdfs:label>
     </owl:Class>
     
+
+
     <!-- https://purls.helmholtz-metadaten.de/diso#ScrewDislocation -->
 
     <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/diso#ScrewDislocation">
