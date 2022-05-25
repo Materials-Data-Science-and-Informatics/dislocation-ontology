@@ -15,6 +15,7 @@
         <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stefan Sandfeld</terms:contributor>
         <terms:created xml:lang="en">21.03.2022</terms:created>
         <terms:creator xml:lang="en">Ahmad Zainul Ihsan</terms:creator>
+        <terms:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
         <terms:title xml:lang="en">Crystal Structure Ontology</terms:title>
         <vann:preferredNamespacePrefix rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CSO</vann:preferredNamespacePrefix>
         <rdfs:seeAlso>https://github.com/Materials-Data-Science-and-Informatics/dislocation-ontology</rdfs:seeAlso>
@@ -48,6 +49,12 @@
     <!-- http://purl.org/dc/terms/creator -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
     
 
 
@@ -161,16 +168,6 @@
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/cso#hasCrystalStructure -->
-
-    <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/cso#hasCrystalStructure">
-        <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/cso#CrystalStructure"/>
-        <rdfs:comment xml:lang="en">hasCrystalStructure represents the relationship between crystalline material and crystal structure.</rdfs:comment>
-        <rdfs:label xml:lang="en">has crystal structure</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://purls.helmholtz-metadaten.de/cso#hasCrystalSystem -->
 
     <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/cso#hasCrystalSystem">
@@ -207,6 +204,8 @@
     <!-- https://purls.helmholtz-metadaten.de/cso#hasLatticeParameterAngle -->
 
     <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/cso#hasLatticeParameterAngle">
+        <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/cso#UnitCell"/>
+        <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/cso#LatticeParameterAngle"/>
         <rdfs:label xml:lang="en">has lattice parameter angle</rdfs:label>
     </owl:ObjectProperty>
     
@@ -215,6 +214,8 @@
     <!-- https://purls.helmholtz-metadaten.de/cso#hasLatticeParameterLength -->
 
     <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/cso#hasLatticeParameterLength">
+        <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/cso#UnitCell"/>
+        <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/cso#LatticeParameterLength"/>
         <rdfs:label xml:lang="en">has lattice parameter length</rdfs:label>
     </owl:ObjectProperty>
     
@@ -223,6 +224,7 @@
     <!-- https://purls.helmholtz-metadaten.de/cso#hasPositionVector -->
 
     <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/cso#hasPositionVector">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/cso#PositionVector"/>
         <rdfs:label xml:lang="en">has position vector</rdfs:label>
     </owl:ObjectProperty>
@@ -266,6 +268,7 @@
 
     <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/cso#hasVectorComponent">
         <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/cso#Vector"/>
+        <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/cso#VectorComponentOfBasis"/>
         <rdfs:comment xml:lang="en">hasVectorComponent relates the Vector with &apos;Vector Components of Basis&apos;</rdfs:comment>
         <rdfs:label xml:lang="en">has vector component</rdfs:label>
     </owl:ObjectProperty>
@@ -276,6 +279,15 @@
 
     <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/cso#isPointGroupOf">
         <owl:inverseOf rdf:resource="https://w3id.org/mdo/structure/hasPointGroup"/>
+        <rdfs:domain rdf:resource="https://w3id.org/mdo/structure/PointGroup"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/cso#CrystalSystem"/>
+                    <rdf:Description rdf:about="https://w3id.org/mdo/structure/SpaceGroup"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:comment xml:lang="en">inverse property of hasPointGroup</rdfs:comment>
         <rdfs:label xml:lang="en">is point group of</rdfs:label>
     </owl:ObjectProperty>
@@ -286,6 +298,8 @@
 
     <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/cso#isSpaceGroupOf">
         <owl:inverseOf rdf:resource="https://w3id.org/mdo/structure/hasSpaceGroup"/>
+        <rdfs:domain rdf:resource="https://w3id.org/mdo/structure/SpaceGroup"/>
+        <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/cso#CrystalStructure"/>
         <rdfs:comment xml:lang="en">inverse property of hasSpaceGroup</rdfs:comment>
         <rdfs:label xml:lang="en">is space group of</rdfs:label>
     </owl:ObjectProperty>
@@ -295,6 +309,7 @@
     <!-- https://w3id.org/mdo/structure/hasCartesianCoordinates -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/mdo/structure/hasCartesianCoordinates">
+        <rdfs:domain rdf:resource="https://w3id.org/mdo/structure/Site"/>
         <rdfs:range rdf:resource="https://w3id.org/mdo/structure/CoordinateVector"/>
         <rdfs:comment xml:lang="en">hasCartesianCoordinates represents the relationship between a site and coordinates in cartesian format it has.</rdfs:comment>
         <rdfs:label xml:lang="en">has cartesian coordinates</rdfs:label>
@@ -706,6 +721,8 @@
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Lattice types that has seven primitive lattices and seven non-primitive lattices.</rdfs:comment>
+        <rdfs:label xml:lang="en">Bravais Lattice</rdfs:label>
     </owl:Class>
     
 
@@ -871,6 +888,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://purls.helmholtz-metadaten.de/cso#LatticeParameterLength"/>
         <rdfs:label xml:lang="en">Lattice Parameter Angle</rdfs:label>
         <skos:defintion xml:lang="en">The three angles of edges in lattice parameter lengths characterizing the unit cell.</skos:defintion>
     </owl:Class>
@@ -921,6 +939,21 @@
     <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/cso#Orthorhombic">
         <rdfs:subClassOf rdf:resource="https://purls.helmholtz-metadaten.de/cso#CrystalSystem"/>
         <rdfs:label xml:lang="en">Orthorhombic</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/cso#Point -->
+
+    <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/cso#Point">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/cso#hasPositionVector"/>
+                <owl:allValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/cso#PositionVector"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">In classical Euclidean geometry, a point is a primitive notion that models an exact location in the space, and has no length, width, or thickness.</rdfs:comment>
+        <rdfs:label xml:lang="en">Point</rdfs:label>
     </owl:Class>
     
 

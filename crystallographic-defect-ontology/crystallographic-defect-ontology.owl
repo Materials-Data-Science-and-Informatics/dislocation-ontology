@@ -17,6 +17,7 @@
         <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stefan Sandfeld</terms:contributor>
         <terms:created xml:lang="en">21.03.2022</terms:created>
         <terms:creator xml:lang="en">Ahmad Zainul Ihsan</terms:creator>
+        <terms:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
         <terms:title xml:lang="en">Crystallographic Defect Ontology</terms:title>
         <vann:preferredNamespacePrefix rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CDO</vann:preferredNamespacePrefix>
         <rdfs:seeAlso>https://github.com/Materials-Data-Science-and-Informatics/dislocation-ontology</rdfs:seeAlso>
