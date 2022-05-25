@@ -81,6 +81,25 @@
     
 
 
+    <!-- https://purls.helmholtz-metadaten.de/cso#hasPositionVector -->
+
+    <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/cso#hasPositionVector">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/cso#Lattice"/>
+                    <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#Node"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/cso#PositionVector"/>
+        <rdfs:comment xml:lang="en">hasPositionVector represents the relationship between entity and position vector.</rdfs:comment>
+        <rdfs:label xml:lang="en">has position vector</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://purls.helmholtz-metadaten.de/diso#hasBurgersVector -->
 
     <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/diso#hasBurgersVector">
@@ -197,6 +216,7 @@
     <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/diso#hasMathematicalRepresentation">
         <rdfs:subPropertyOf rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasRepresentation"/>
         <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/diso#Dislocation"/>
+        <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/diso#Line"/>
         <rdfs:comment xml:lang="en">hasMathematicalRepresentation relates the entity with its mathematical representation.</rdfs:comment>
         <rdfs:label xml:lang="en">has mathematical representation</rdfs:label>
     </owl:ObjectProperty>
@@ -218,6 +238,8 @@
 
     <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/diso#hasNumericalRepresentation">
         <rdfs:subPropertyOf rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasRepresentation"/>
+        <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/diso#Line"/>
+        <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/diso#DiscretizedLine"/>
         <rdfs:comment xml:lang="en">hasNumericalRepresentation relates the entity with its numerical representation.</rdfs:comment>
         <rdfs:label xml:lang="en">has numerical representation</rdfs:label>
     </owl:ObjectProperty>
@@ -238,6 +260,15 @@
     <!-- https://purls.helmholtz-metadaten.de/diso#hasRepresentation -->
 
     <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/diso#hasRepresentation">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#DiscretizedLine"/>
+                    <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#Line"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:comment xml:lang="en">hasRepresentation relates the entity to another representation of entity.</rdfs:comment>
         <rdfs:label xml:lang="en">has representation</rdfs:label>
     </owl:ObjectProperty>
@@ -386,17 +417,6 @@
         <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/diso#LatticeDisplacement"/>
         <rdfs:comment xml:lang="en">resultsIn represents the relationship between dislocation and lattice displacement.</rdfs:comment>
         <rdfs:label xml:lang="en">results in</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl#hasPositionVector -->
-
-    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl#hasPositionVector">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/cso#PositionVector"/>
-        <rdfs:comment xml:lang="en">hasPositionVector represents the relationship between entity and position vector.</rdfs:comment>
-        <rdfs:label xml:lang="en">has position vector</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -633,6 +653,7 @@
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://purls.helmholtz-metadaten.de/diso#Line"/>
         <rdfs:comment xml:lang="en">The numerical representation of the dislocation line that is discretized into the number of segments.</rdfs:comment>
         <rdfs:label xml:lang="en">Discretized Line</rdfs:label>
     </owl:Class>
@@ -642,8 +663,7 @@
     <!-- https://purls.helmholtz-metadaten.de/diso#Dislocation -->
 
     <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/diso#Dislocation">
-        <owl:equivalentClass rdf:resource="https://purls.helmholtz-metadaten.de/diso#LineDefect"/>
-        <rdfs:subClassOf rdf:resource="https://purls.helmholtz-metadaten.de/cdo#CrystallographicDefect"/>
+        <rdfs:subClassOf rdf:resource="https://purls.helmholtz-metadaten.de/diso#LineDefect"/>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -714,6 +734,7 @@
 
     <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/diso#EdgeDislocation">
         <rdfs:subClassOf rdf:resource="https://purls.helmholtz-metadaten.de/diso#Dislocation"/>
+        <owl:disjointWith rdf:resource="https://purls.helmholtz-metadaten.de/diso#ScrewDislocation"/>
         <rdfs:comment xml:lang="en">A dislocation that has a line sense perpendicular to its Burgers vector.</rdfs:comment>
         <rdfs:label xml:lang="en">Edge Dislocation</rdfs:label>
     </owl:Class>
@@ -730,6 +751,7 @@
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://purls.helmholtz-metadaten.de/diso#FamilyOfCrystalPlane"/>
         <rdfs:comment xml:lang="en">A set of symmetrically equivalent directions in the lattice.</rdfs:comment>
         <rdfs:label xml:lang="en">Family of Crystal Direction</rdfs:label>
     </owl:Class>
@@ -755,6 +777,7 @@
     <!-- https://purls.helmholtz-metadaten.de/diso#FieldIonMicroscopy -->
 
     <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/diso#FieldIonMicroscopy">
+        <owl:disjointWith rdf:resource="https://purls.helmholtz-metadaten.de/diso#TransmissionElectronMicroscopy"/>
         <rdfs:comment xml:lang="en">Field Ion Microscopy (FIM) is a microscopy technique that can be used to image the arrangement of atoms.</rdfs:comment>
         <rdfs:label xml:lang="en">Field Ion Microscopy</rdfs:label>
     </owl:Class>
@@ -858,7 +881,7 @@
     <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/diso#LatticePoint">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl#hasPositionVector"/>
+                <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/cso#hasPositionVector"/>
                 <owl:allValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/cso#PositionVector"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -871,12 +894,14 @@
     <!-- https://purls.helmholtz-metadaten.de/diso#Line -->
 
     <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/diso#Line">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasNumericalRepresentation"/>
                 <owl:someValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#DiscretizedLine"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://purls.helmholtz-metadaten.de/diso#Node"/>
         <rdfs:comment xml:lang="en">Mathematical representation of dislocation as &apos;Line&apos;. An instance of mathematical representation of a dislocation line is an oriented curve parameterized by its arc length.</rdfs:comment>
         <rdfs:label xml:lang="en">Line</rdfs:label>
     </owl:Class>
@@ -886,6 +911,7 @@
     <!-- https://purls.helmholtz-metadaten.de/diso#LineDefect -->
 
     <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/diso#LineDefect">
+        <rdfs:subClassOf rdf:resource="https://purls.helmholtz-metadaten.de/cdo#CrystallographicDefect"/>
         <rdfs:comment xml:lang="en">Linear or one-dimensional defect around which some of the atoms are misaligned.</rdfs:comment>
         <rdfs:label xml:lang="en">Line Defect</rdfs:label>
     </owl:Class>
@@ -906,10 +932,11 @@
     <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/diso#Node">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl#hasPositionVector"/>
+                <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/cso#hasPositionVector"/>
                 <owl:allValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/cso#PositionVector"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://purls.helmholtz-metadaten.de/diso#Segment"/>
         <rdfs:comment xml:lang="en">A node of a segment</rdfs:comment>
         <rdfs:label xml:lang="en">Node</rdfs:label>
     </owl:Class>
@@ -919,9 +946,10 @@
     <!-- https://purls.helmholtz-metadaten.de/diso#Origin -->
 
     <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/diso#Origin">
-        <rdfs:subClassOf rdf:resource="https://purls.helmholtz-metadaten.de/cso#PositionVector"/>
+        <rdfs:subClassOf rdf:resource="https://purls.helmholtz-metadaten.de/cso#Vector"/>
         <rdfs:comment xml:lang="en">A fixed point that is needed by the vector to identify other points in the space relative to its origin.</rdfs:comment>
         <rdfs:label xml:lang="en">Origin</rdfs:label>
+        <rdfs:label xml:lang="de">Ursprung</rdfs:label>
     </owl:Class>
     
 
