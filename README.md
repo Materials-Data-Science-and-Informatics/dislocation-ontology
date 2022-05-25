@@ -8,8 +8,9 @@
   2. [Repository Description](#repository-description)
   3. [Usage](#usage)
   4. [Contact](#contact)
-  5. [Acknowledgements](#acknowledgements)
-  6. [Citation](#citation)
+  5. [License](#license)
+  6. [Acknowledgements](#acknowledgements)
+  7. [Citation](#citation)
 
 ## About DISO
 DISO is an ontology that defines the linear defect, in particular dislocation concepts and relations between them in crystalline materials. Moreover, Crystal Structure Ontology (CSO) and Crystallographic Defect Ontology (CDO), which ontologies define the concepts of crystal structureand crystalline defect, respectively, are also introduced in this repository. The ontology development processes are described following the well-known practices, e.g., using ontology metadata and reusing existing  ontologies,  e.g.,  MDO,  EMMO,  and  QUDT. To evaluate DISO, we have gathered competency questions (CQs) that will be answered via SPARQL query.
@@ -33,10 +34,12 @@ DISO is an ontology that defines the linear defect, in particular dislocation co
 ## Contact
 You may contact author of DISO via a.ihsan@fz-juelich.de
 
+## License
+The code is licensed under the [MIT license](./LICENSE). Copyright © 2022.
+
 ## Acknowledgements
 * European Research Council through the ERC Grant Agreement No. 759419 MuDiLingo (”A Multiscale Dislocation Language for Data-Driven Materials Science”)
 * Helmholtz Metadata Collaboration (HMC) within the Hub Information at the Forschungszentrum Jülich.
-
 
 ## Citation 
 please cite the following paper if you used any part of this work. 
