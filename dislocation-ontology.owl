@@ -364,7 +364,7 @@
     <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/diso#hasVectorOrigin">
         <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/diso#LatticePlane"/>
         <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/diso#VectorOrigin"/>
-        <rdfs:comment xml:lang="en">hasOrigin represents the relationship between lattice plane and origin.</rdfs:comment>
+        <rdfs:comment xml:lang="en">hasVectorOrigin represents the relationship between lattice plane and origin.</rdfs:comment>
         <rdfs:label xml:lang="en">has vector origin</rdfs:label>
     </owl:ObjectProperty>
     
