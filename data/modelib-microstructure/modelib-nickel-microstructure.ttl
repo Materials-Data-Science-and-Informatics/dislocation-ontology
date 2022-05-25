@@ -3741,16 +3741,16 @@ cdo:CrystallineMaterial a owl:Class ;
     rdfs:comment "Crystalline material is material characterized by a periodic arrangement of the constituent atoms. The arrangement could be described its crystal structure."@en ;
     rdfs:subClassOf [ a owl:Class ;
             owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty cdo:hasCrystallographicDefect ;
-                        owl:someValuesFrom cdo:CrystallographicDefect ] [ a owl:Restriction ;
-                        owl:allValuesFrom cdo:CrystallographicDefect ;
-                        owl:onProperty cdo:hasCrystallographicDefect ] ) ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
                         owl:onProperty cdo:hasCrystalStructure ;
                         owl:someValuesFrom cso:CrystalStructure ] [ a owl:Restriction ;
                         owl:allValuesFrom cso:CrystalStructure ;
                         owl:onProperty cdo:hasCrystalStructure ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty cdo:hasCrystallographicDefect ;
+                        owl:someValuesFrom cdo:CrystallographicDefect ] [ a owl:Restriction ;
+                        owl:allValuesFrom cdo:CrystallographicDefect ;
+                        owl:onProperty cdo:hasCrystallographicDefect ] ) ],
         <http://emmo.info/emmo/middle/physicalistic#EMMO_4207e895_8b83_4318_996a_72cfb32acd94> .
 
 ex:node_15 a diso:Node ;
