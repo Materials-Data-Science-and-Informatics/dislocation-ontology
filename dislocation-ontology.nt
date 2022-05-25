@@ -1,3 +1,4 @@
+
 _:Nc9d6a09ff2fb4736bc2b4503b5aef81c <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:Nd8064fa9356349fbadbcfa792511a0ca .
 <https://purls.helmholtz-metadaten.de/diso#ScrewDislocation> <http://www.w3.org/2000/01/rdf-schema#comment> "A dislocation that has a line sense parallel to its Burgers vector."@en .
 _:Ne43037a870224a7d9d135e661416db07 <http://www.w3.org/2002/07/owl#onProperty> <https://purls.helmholtz-metadaten.de/diso#hasShapeFunction> .
@@ -607,4 +608,3 @@ _:N122ca99e7287489f9e3dccde6f4e3b65 <http://www.w3.org/2002/07/owl#someValuesFro
 <https://purls.helmholtz-metadaten.de/diso> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
 _:Nef3dd25d7be74a069c4963fe8d075150 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
 _:N1295164dd2ed4f64ad0bb468b1dfdab1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://purls.helmholtz-metadaten.de/diso#SlipSystem> .
-

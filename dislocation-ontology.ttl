@@ -517,4 +517,3 @@ vann:preferredNamespacePrefix a owl:AnnotationProperty .
                         owl:onProperty <https://purls.helmholtz-metadaten.de/diso#hasLatticePoint> ] ) ],
         <https://purls.helmholtz-metadaten.de/cso#Vector>,
         <https://purls.helmholtz-metadaten.de/diso#FamilyOfCrystalDirection> .
-

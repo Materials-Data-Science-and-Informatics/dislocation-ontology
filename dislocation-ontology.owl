@@ -895,6 +895,7 @@
 
     <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/diso#LatticePoint">
         <rdfs:subClassOf rdf:resource="https://purls.helmholtz-metadaten.de/cso#Point"/>
+
         <rdfs:comment xml:lang="en">Lattice point is the point where atom(s) or molecule(s) is located.</rdfs:comment>
         <rdfs:label xml:lang="en">Lattice Point</rdfs:label>
     </owl:Class>
@@ -904,6 +905,7 @@
     <!-- https://purls.helmholtz-metadaten.de/diso#Line -->
 
     <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/diso#Line">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasNumericalRepresentation"/>
@@ -942,11 +944,10 @@
         <rdfs:subClassOf rdf:resource="https://purls.helmholtz-metadaten.de/cso#Point"/>
         <owl:disjointWith rdf:resource="https://purls.helmholtz-metadaten.de/diso#Segment"/>
         <rdfs:comment xml:lang="en">A point of a segment.</rdfs:comment>
+
         <rdfs:label xml:lang="en">Node</rdfs:label>
     </owl:Class>
     
-
-
     <!-- https://purls.helmholtz-metadaten.de/diso#ScrewDislocation -->
 
     <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/diso#ScrewDislocation">
