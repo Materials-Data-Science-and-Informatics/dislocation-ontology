@@ -30,7 +30,7 @@ DISO is an ontology that defines the linear defect concepts and relations betwee
 * We recommend to use [Protégé 5.5.0](https://protege.stanford.edu/products.php#desktop-protege) to be able to view and navigate classes and properties in DISO.
 * We recommend also to use HermiT as a reasoner for DISO. You can select it through the menu *Reasoner* in Protégé software.
 
-## Contact:
+## Contact
 You may contact author of DISO via a.ihsan@fz-juelich.de
 
 ## Acknowledgements
