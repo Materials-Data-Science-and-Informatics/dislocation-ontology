@@ -224,8 +224,9 @@
     <!-- https://purls.helmholtz-metadaten.de/cso#hasPositionVector -->
 
     <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/cso#hasPositionVector">
-        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/cso#Point"/>
         <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/cso#PositionVector"/>
+        <rdfs:comment xml:lang="en">hasPositionVector represents the relationship between entity and position vector.</rdfs:comment>
         <rdfs:label xml:lang="en">has position vector</rdfs:label>
     </owl:ObjectProperty>
     

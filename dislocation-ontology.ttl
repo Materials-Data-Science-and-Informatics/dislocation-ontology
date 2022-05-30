@@ -52,14 +52,11 @@ vann:preferredNamespacePrefix a owl:AnnotationProperty .
     rdfs:label "Crystallographic Defect"@en ;
     rdfs:comment "The crystallographic defect is a lattice irregularity that has one or more dimensions on the order of an atomic diameter."@en .
 
-<https://purls.helmholtz-metadaten.de/cso#PositionVector> a owl:Class ;
-    rdfs:label "Position Vector"@en ;
-    rdfs:comment "Euclidean vector that represents the position of a point P in space in relation to an arbitrary reference origin O."@en ;
-    rdfs:subClassOf <https://purls.helmholtz-metadaten.de/cso#Vector> .
-
 <https://purls.helmholtz-metadaten.de/cso#hasPositionVector> a owl:ObjectProperty ;
     rdfs:label "has position vector"@en ;
-    rdfs:comment "hasPositionVector represents the relationship between entity and position vector."@en .
+    rdfs:comment "hasPositionVector represents the relationship between entity and position vector."@en ;
+    rdfs:domain <https://purls.helmholtz-metadaten.de/cso#Point> ;
+    rdfs:range <https://purls.helmholtz-metadaten.de/cso#PositionVector> .
 
 <https://purls.helmholtz-metadaten.de/diso#LineDefect> a owl:Class ;
     rdfs:label "Line Defect"@en ;
@@ -153,6 +150,11 @@ vann:preferredNamespacePrefix a owl:AnnotationProperty .
     rdfs:comment "slipArea represents the slip area of discretized line in double."@en ;
     rdfs:domain <https://purls.helmholtz-metadaten.de/diso#DiscretizedLine> ;
     rdfs:range xsd:double .
+
+<https://purls.helmholtz-metadaten.de/cso#PositionVector> a owl:Class ;
+    rdfs:label "Position Vector"@en ;
+    rdfs:comment "Euclidean vector that represents the position of a point P in space in relation to an arbitrary reference origin O."@en ;
+    rdfs:subClassOf <https://purls.helmholtz-metadaten.de/cso#Vector> .
 
 <https://purls.helmholtz-metadaten.de/diso#FieldIonMicroscopy> a owl:Class ;
     rdfs:label "Field Ion Microscopy"@en ;
@@ -265,23 +267,16 @@ vann:preferredNamespacePrefix a owl:AnnotationProperty .
                         owl:onProperty <https://purls.helmholtz-metadaten.de/diso#hasLatticeDirection> ] ) ],
         [ a owl:Class ;
             owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty <https://purls.helmholtz-metadaten.de/diso#hasLatticePoint> ;
-                        owl:someValuesFrom <https://purls.helmholtz-metadaten.de/diso#LatticePoint> ] [ a owl:Restriction ;
-                        owl:allValuesFrom <https://purls.helmholtz-metadaten.de/diso#LatticePoint> ;
-                        owl:onProperty <https://purls.helmholtz-metadaten.de/diso#hasLatticePoint> ] ) ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
                         owl:onProperty <https://purls.helmholtz-metadaten.de/diso#hasLatticeDirection> ;
                         owl:someValuesFrom <https://purls.helmholtz-metadaten.de/diso#LatticeDirection> ] [ a owl:Restriction ;
                         owl:allValuesFrom <https://purls.helmholtz-metadaten.de/diso#LatticeDirection> ;
-                        owl:onProperty <https://purls.helmholtz-metadaten.de/diso#hasLatticeDirection> ] ) ] .
-
-<https://purls.helmholtz-metadaten.de/cso#Point> a owl:Class ;
-    rdfs:label "Point"@en ;
-    rdfs:comment "In classical Euclidean geometry, a point is a primitive notion that models an exact location in the space, and has no length, width, or thickness."@en ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom <https://purls.helmholtz-metadaten.de/cso#PositionVector> ;
-            owl:onProperty <https://purls.helmholtz-metadaten.de/cso#hasPositionVector> ] .
+                        owl:onProperty <https://purls.helmholtz-metadaten.de/diso#hasLatticeDirection> ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty <https://purls.helmholtz-metadaten.de/diso#hasLatticePoint> ;
+                        owl:someValuesFrom <https://purls.helmholtz-metadaten.de/diso#LatticePoint> ] [ a owl:Restriction ;
+                        owl:allValuesFrom <https://purls.helmholtz-metadaten.de/diso#LatticePoint> ;
+                        owl:onProperty <https://purls.helmholtz-metadaten.de/diso#hasLatticePoint> ] ) ] .
 
 <https://purls.helmholtz-metadaten.de/diso#BurgersVector> a owl:Class ;
     rdfs:label "Burgers Vector"@en ;
@@ -304,6 +299,13 @@ vann:preferredNamespacePrefix a owl:AnnotationProperty .
 <https://purls.helmholtz-metadaten.de/diso#TransmissionElectronMicroscopy> a owl:Class ;
     rdfs:label "Transmission Electron Microscopy"@en ;
     rdfs:comment "Transmission electron microscopy (TEM) is a microscopy technique in which a beam of electrons is transmitted through a specimen to form an image. The specimen is often an ultrathin section less than 100 nm thick."@en .
+
+<https://purls.helmholtz-metadaten.de/cso#Point> a owl:Class ;
+    rdfs:label "Point"@en ;
+    rdfs:comment "In classical Euclidean geometry, a point is a primitive notion that models an exact location in the space, and has no length, width, or thickness."@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom <https://purls.helmholtz-metadaten.de/cso#PositionVector> ;
+            owl:onProperty <https://purls.helmholtz-metadaten.de/cso#hasPositionVector> ] .
 
 <https://purls.helmholtz-metadaten.de/cso#Vector> a owl:Class ;
     rdfs:label "Vector"@en ;
@@ -351,16 +353,16 @@ vann:preferredNamespacePrefix a owl:AnnotationProperty .
     rdfs:comment "A slip system is defined as the set of slip planes with the same unit normal vector and the same slip direction."@en ;
     rdfs:subClassOf [ a owl:Class ;
             owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty <https://purls.helmholtz-metadaten.de/diso#hasSlipPlaneNormal> ;
-                        owl:someValuesFrom <https://purls.helmholtz-metadaten.de/diso#SlipPlaneNormal> ] [ a owl:Restriction ;
-                        owl:allValuesFrom <https://purls.helmholtz-metadaten.de/diso#SlipPlaneNormal> ;
-                        owl:onProperty <https://purls.helmholtz-metadaten.de/diso#hasSlipPlaneNormal> ] ) ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
                         owl:onProperty <https://purls.helmholtz-metadaten.de/diso#hasSlipDirection> ;
                         owl:someValuesFrom <https://purls.helmholtz-metadaten.de/diso#SlipDirection> ] [ a owl:Restriction ;
                         owl:allValuesFrom <https://purls.helmholtz-metadaten.de/diso#SlipDirection> ;
-                        owl:onProperty <https://purls.helmholtz-metadaten.de/diso#hasSlipDirection> ] ) ] .
+                        owl:onProperty <https://purls.helmholtz-metadaten.de/diso#hasSlipDirection> ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty <https://purls.helmholtz-metadaten.de/diso#hasSlipPlaneNormal> ;
+                        owl:someValuesFrom <https://purls.helmholtz-metadaten.de/diso#SlipPlaneNormal> ] [ a owl:Restriction ;
+                        owl:allValuesFrom <https://purls.helmholtz-metadaten.de/diso#SlipPlaneNormal> ;
+                        owl:onProperty <https://purls.helmholtz-metadaten.de/diso#hasSlipPlaneNormal> ] ) ] .
 
 <https://purls.helmholtz-metadaten.de/diso#Node> a owl:Class ;
     rdfs:label "Node"@en ;
@@ -400,45 +402,45 @@ vann:preferredNamespacePrefix a owl:AnnotationProperty .
     rdfs:label "Segment"@en ;
     rdfs:comment "The segment is a part of a line bounded by two distinct end points and may contain points on the line between its endpoints."@en ;
     rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom <https://purls.helmholtz-metadaten.de/diso#DiscretizedLine> ;
+            owl:onProperty <https://purls.helmholtz-metadaten.de/diso#isSegmentOf> ],
+        [ a owl:Restriction ;
             owl:allValuesFrom <https://purls.helmholtz-metadaten.de/diso#Node> ;
             owl:onProperty <https://purls.helmholtz-metadaten.de/diso#hasEndNode> ],
         [ a owl:Restriction ;
             owl:allValuesFrom <https://purls.helmholtz-metadaten.de/diso#Node> ;
-            owl:onProperty <https://purls.helmholtz-metadaten.de/diso#hasStartNode> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://purls.helmholtz-metadaten.de/diso#DiscretizedLine> ;
-            owl:onProperty <https://purls.helmholtz-metadaten.de/diso#isSegmentOf> ] .
+            owl:onProperty <https://purls.helmholtz-metadaten.de/diso#hasStartNode> ] .
 
 <https://purls.helmholtz-metadaten.de/diso#SlipPlane> a owl:Class ;
     rdfs:label "Slip Plane"@en ;
     rdfs:comment "The crystallographic/lattice plane along which the dislocation line traverses/moves. The slip plane is usually the plane with the highest density of atoms, i.e. most widely spaced."@en ;
     rdfs:subClassOf [ a owl:Class ;
             owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty <https://purls.helmholtz-metadaten.de/diso#hasSlipPlaneNormal> ;
-                        owl:someValuesFrom <https://purls.helmholtz-metadaten.de/diso#SlipPlaneNormal> ] [ a owl:Restriction ;
-                        owl:allValuesFrom <https://purls.helmholtz-metadaten.de/diso#SlipPlaneNormal> ;
-                        owl:onProperty <https://purls.helmholtz-metadaten.de/diso#hasSlipPlaneNormal> ] ) ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
                         owl:onProperty <https://purls.helmholtz-metadaten.de/diso#hasSlipDirection> ;
                         owl:someValuesFrom <https://purls.helmholtz-metadaten.de/diso#SlipDirection> ] [ a owl:Restriction ;
                         owl:allValuesFrom <https://purls.helmholtz-metadaten.de/diso#SlipDirection> ;
                         owl:onProperty <https://purls.helmholtz-metadaten.de/diso#hasSlipDirection> ] ) ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty <https://purls.helmholtz-metadaten.de/diso#hasSlipPlaneNormal> ;
+                        owl:someValuesFrom <https://purls.helmholtz-metadaten.de/diso#SlipPlaneNormal> ] [ a owl:Restriction ;
+                        owl:allValuesFrom <https://purls.helmholtz-metadaten.de/diso#SlipPlaneNormal> ;
+                        owl:onProperty <https://purls.helmholtz-metadaten.de/diso#hasSlipPlaneNormal> ] ) ],
         <https://purls.helmholtz-metadaten.de/diso#LatticePlane> .
 
 <https://purls.helmholtz-metadaten.de/diso#DiscretizedLine> a owl:Class ;
     rdfs:label "Discretized Line"@en ;
     rdfs:comment "The numerical representation of the dislocation line that is discretized into the number of segments."@en ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom <https://purls.helmholtz-metadaten.de/diso#ShapeFunction> ;
-            owl:onProperty <https://purls.helmholtz-metadaten.de/diso#hasShapeFunction> ],
+            owl:allValuesFrom <https://purls.helmholtz-metadaten.de/diso#Segment> ;
+            owl:onProperty <https://purls.helmholtz-metadaten.de/diso#hasSegment> ],
         [ a owl:Restriction ;
             owl:onDataRange xsd:double ;
             owl:onProperty <https://purls.helmholtz-metadaten.de/diso#slipArea> ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
         [ a owl:Restriction ;
-            owl:allValuesFrom <https://purls.helmholtz-metadaten.de/diso#Segment> ;
-            owl:onProperty <https://purls.helmholtz-metadaten.de/diso#hasSegment> ] ;
+            owl:allValuesFrom <https://purls.helmholtz-metadaten.de/diso#ShapeFunction> ;
+            owl:onProperty <https://purls.helmholtz-metadaten.de/diso#hasShapeFunction> ] ;
     owl:disjointWith <https://purls.helmholtz-metadaten.de/diso#Line> .
 
 <https://purls.helmholtz-metadaten.de/diso#Dislocation> a owl:Class ;
@@ -448,13 +450,10 @@ vann:preferredNamespacePrefix a owl:AnnotationProperty .
         "The presence of dislocation introduces local disturbance of the atomic-level geometry."@en ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty <https://purls.helmholtz-metadaten.de/diso#observedBy> ;
+            owl:someValuesFrom <https://purls.helmholtz-metadaten.de/diso#FieldIonMicroscopy> ],
+        [ a owl:Restriction ;
+            owl:onProperty <https://purls.helmholtz-metadaten.de/diso#observedBy> ;
             owl:someValuesFrom <https://purls.helmholtz-metadaten.de/diso#TransmissionElectronMicroscopy> ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:onProperty <https://purls.helmholtz-metadaten.de/diso#hasBurgersVector> ;
-                        owl:someValuesFrom <https://purls.helmholtz-metadaten.de/diso#BurgersVector> ] [ a owl:Restriction ;
-                        owl:allValuesFrom <https://purls.helmholtz-metadaten.de/diso#BurgersVector> ;
-                        owl:onProperty <https://purls.helmholtz-metadaten.de/diso#hasBurgersVector> ] ) ],
         [ a owl:Restriction ;
             owl:onProperty <https://purls.helmholtz-metadaten.de/diso#movesOn> ;
             owl:someValuesFrom <https://purls.helmholtz-metadaten.de/diso#SlipPlane> ],
@@ -470,19 +469,18 @@ vann:preferredNamespacePrefix a owl:AnnotationProperty .
         [ a owl:Restriction ;
             owl:onProperty <https://purls.helmholtz-metadaten.de/diso#resultsIn> ;
             owl:someValuesFrom <https://purls.helmholtz-metadaten.de/diso#LatticeDisplacement> ],
-        [ a owl:Restriction ;
-            owl:onProperty <https://purls.helmholtz-metadaten.de/diso#observedBy> ;
-            owl:someValuesFrom <https://purls.helmholtz-metadaten.de/diso#FieldIonMicroscopy> ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty <https://purls.helmholtz-metadaten.de/diso#hasBurgersVector> ;
+                        owl:someValuesFrom <https://purls.helmholtz-metadaten.de/diso#BurgersVector> ] [ a owl:Restriction ;
+                        owl:allValuesFrom <https://purls.helmholtz-metadaten.de/diso#BurgersVector> ;
+                        owl:onProperty <https://purls.helmholtz-metadaten.de/diso#hasBurgersVector> ] ) ],
         <https://purls.helmholtz-metadaten.de/diso#LineDefect> .
 
 <https://purls.helmholtz-metadaten.de/diso#LatticePlane> a owl:Class ;
     rdfs:label "Lattice Plane"@en ;
     rdfs:comment "The lattice plane forms an infinitely stretched plane (characterized through a plane normal) that cuts through lattice points such that, again, a regular arrangement of lattice points in the plane occurs."@en ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onDataRange xsd:string ;
-            owl:onProperty <https://purls.helmholtz-metadaten.de/diso#planeMillerIndice> ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
-        [ a owl:Restriction ;
             owl:allValuesFrom <https://purls.helmholtz-metadaten.de/diso#VectorOrigin> ;
             owl:onProperty <https://purls.helmholtz-metadaten.de/diso#hasVectorOrigin> ],
         [ a owl:Class ;
@@ -497,6 +495,10 @@ vann:preferredNamespacePrefix a owl:AnnotationProperty .
                         owl:someValuesFrom <https://purls.helmholtz-metadaten.de/diso#LatticePoint> ] [ a owl:Restriction ;
                         owl:allValuesFrom <https://purls.helmholtz-metadaten.de/diso#LatticePoint> ;
                         owl:onProperty <https://purls.helmholtz-metadaten.de/diso#hasLatticePoint> ] ) ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:string ;
+            owl:onProperty <https://purls.helmholtz-metadaten.de/diso#planeMillerIndice> ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
         <https://purls.helmholtz-metadaten.de/diso#FamilyOfCrystalPlane> .
 
 <https://purls.helmholtz-metadaten.de/diso#LatticeDirection> a owl:Class ;
