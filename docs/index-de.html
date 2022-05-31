@@ -1,0 +1,2339 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+ <link rel="stylesheet" href="resources/primer.css" media="screen" />    <link rel="stylesheet" href="resources/rec.css" media="screen" />    <link rel="stylesheet" href="resources/extra.css" media="screen" />    <link rel="stylesheet" href="resources/owl.css" media="screen" />    <title>Dislocation Ontology</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://purls.helmholtz-metadaten.de/diso","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://purls.helmholtz-metadaten.de/diso","name":"Dislocation Ontology", "headline":"Document describing the ontology https://purls.helmholtz-metadaten.de/diso", "datePublished":"21.03.2022", "version":"1.0", "license":"http://creativecommons.org/licenses/by/3.0/", "author":[{"@type":"Person","name":"Ahmad Zainul Ihsan"}], "contributor":[{"@type":"Person","name":"Said Fathalla"},{"@type":"Person","name":"Stefan Sandfeld"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Inhaltsverzeichnis</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-de.html"><b>de</b></a> <a href="index.html"><b>en</b></a> </div>
+<h1>Dislocation Ontology</h1>
+<h2>Release 21.03.2022</h2>
+
+
+<dl>
+<dt>Aktuellste Version:</dt>
+<dd><a href="https://purls.helmholtz-metadaten.de/diso">https://purls.helmholtz-metadaten.de/diso</a></dd>
+<dt>Revision:</dt>
+<dd>1.0</dd>
+<dt>Autoren:</dt>
+<dd>Ahmad Zainul Ihsan</dd>
+
+<dt>Beteiligte:</dt>
+<dd>Said Fathalla</dd><dd>Stefan Sandfeld</dd>
+
+<dt>Download Serialisierung:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.rdf" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>Lizenz:</dt><dd><a href="http://creativecommons.org/licenses/by/3.0/" target="_blank"><img src="https://img.shields.io/badge/License-http://creativecommons.org/licenses/by/3.0/-blue.svg" alt="http://creativecommons.org/licenses/by/3.0/" /></a>
+</dd><dt>Visualisierung:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<!-- <dt>Evaluation:</dt><dd><a href="OOPSEvaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Zitieren als:</dt>
+<dd>Ahmad Zainul Ihsan. Dislocation Ontology. Revision: 1.0.</dd>
+</dl>
+
+<hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification Draft</span>
+</div>
+</div><div id="toc"></div>  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">Dislocation Ontology: &uuml;berblick <span class="backlink"> zur&uuml;ck zum <a href="#toc">Inhaltsverzeichnis</a></span></h2>
+<span class="markdown">
+Diese Ontologie beinhaltet die folgenden Klassen und Eigenschaften.</span>
+<h4>Klassen</h4>
+<ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#BurgersVector"
+         title="https://purls.helmholtz-metadaten.de/diso#BurgersVector">Burgers Vector</a>
+   </li>
+   <li>
+      <a href="#https://purls.helmholtz-metadaten.de/cso#CrystalStructure"
+         title="https://purls.helmholtz-metadaten.de/cso#CrystalStructure">Crystal Structure</a>
+   </li>
+   <li>
+      <a href="#https://purls.helmholtz-metadaten.de/cdo#CrystallographicDefect"
+         title="https://purls.helmholtz-metadaten.de/cdo#CrystallographicDefect">Crystallographic Defect</a>
+   </li>
+   <li>
+      <a href="#DiscretizedLine"
+         title="https://purls.helmholtz-metadaten.de/diso#DiscretizedLine">Discretized Line</a>
+   </li>
+   <li>
+      <a href="#EdgeDislocation"
+         title="https://purls.helmholtz-metadaten.de/diso#EdgeDislocation">Edge Dislocation</a>
+   </li>
+   <li>
+      <a href="#FamilyOfCrystalDirection"
+         title="https://purls.helmholtz-metadaten.de/diso#FamilyOfCrystalDirection">Family of Crystal Direction</a>
+   </li>
+   <li>
+      <a href="#FamilyOfCrystalPlane"
+         title="https://purls.helmholtz-metadaten.de/diso#FamilyOfCrystalPlane">Family of Crystal Plane</a>
+   </li>
+   <li>
+      <a href="#FieldIonMicroscopy"
+         title="https://purls.helmholtz-metadaten.de/diso#FieldIonMicroscopy">Field Ion Microscopy</a>
+   </li>
+   <li>
+      <a href="#https://purls.helmholtz-metadaten.de/cso#Lattice" title="https://purls.helmholtz-metadaten.de/cso#Lattice">Lattice</a>
+   </li>
+   <li>
+      <a href="#LatticeDirection"
+         title="https://purls.helmholtz-metadaten.de/diso#LatticeDirection">Lattice Direction</a>
+   </li>
+   <li>
+      <a href="#LatticeDisplacement"
+         title="https://purls.helmholtz-metadaten.de/diso#LatticeDisplacement">Lattice Displacement</a>
+   </li>
+   <li>
+      <a href="#LatticePlane"
+         title="https://purls.helmholtz-metadaten.de/diso#LatticePlane">Lattice Plane</a>
+   </li>
+   <li>
+      <a href="#LatticePoint"
+         title="https://purls.helmholtz-metadaten.de/diso#LatticePoint">Lattice Point</a>
+   </li>
+   <li>
+      <a href="#Line" title="https://purls.helmholtz-metadaten.de/diso#Line">Line</a>
+   </li>
+   <li>
+      <a href="#LineDefect"
+         title="https://purls.helmholtz-metadaten.de/diso#LineDefect">Line Defect</a>
+   </li>
+   <li>
+      <a href="#LineSense"
+         title="https://purls.helmholtz-metadaten.de/diso#LineSense">Line Sense</a>
+   </li>
+   <li>
+      <a href="#Node" title="https://purls.helmholtz-metadaten.de/diso#Node">Node</a>
+   </li>
+   <li>
+      <a href="#https://purls.helmholtz-metadaten.de/cso#Point" title="https://purls.helmholtz-metadaten.de/cso#Point">Point</a>
+   </li>
+   <li>
+      <a href="#https://purls.helmholtz-metadaten.de/cso#PositionVector"
+         title="https://purls.helmholtz-metadaten.de/cso#PositionVector">Position Vector</a>
+   </li>
+   <li>
+      <a href="#ScrewDislocation"
+         title="https://purls.helmholtz-metadaten.de/diso#ScrewDislocation">Screw Dislocation</a>
+   </li>
+   <li>
+      <a href="#Segment"
+         title="https://purls.helmholtz-metadaten.de/diso#Segment">Segment</a>
+   </li>
+   <li>
+      <a href="#ShapeFunction"
+         title="https://purls.helmholtz-metadaten.de/diso#ShapeFunction">Shape Function</a>
+   </li>
+   <li>
+      <a href="#SlipDirection"
+         title="https://purls.helmholtz-metadaten.de/diso#SlipDirection">Slip Direction</a>
+   </li>
+   <li>
+      <a href="#SlipPlane"
+         title="https://purls.helmholtz-metadaten.de/diso#SlipPlane">Slip Plane</a>
+   </li>
+   <li>
+      <a href="#SlipPlaneNormal"
+         title="https://purls.helmholtz-metadaten.de/diso#SlipPlaneNormal">Slip Plane Normal</a>
+   </li>
+   <li>
+      <a href="#SlipSystem"
+         title="https://purls.helmholtz-metadaten.de/diso#SlipSystem">Slip System</a>
+   </li>
+   <li>
+      <a href="#TransmissionElectronMicroscopy"
+         title="https://purls.helmholtz-metadaten.de/diso#TransmissionElectronMicroscopy">Transmission Electron Microscopy</a>
+   </li>
+   <li>
+      <a href="#VectorOrigin"
+         title="https://purls.helmholtz-metadaten.de/diso#VectorOrigin">Ursprung</a>
+   </li>
+   <li>
+      <a href="#https://purls.helmholtz-metadaten.de/cso#Vector" title="https://purls.helmholtz-metadaten.de/cso#Vector">Vector</a>
+   </li>
+   <li>
+      <a href="#Dislocation"
+         title="https://purls.helmholtz-metadaten.de/diso#Dislocation">Versetzung</a>
+   </li>
+</ul><h4>Object Properties</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#hasBurgersVector"
+         title="https://purls.helmholtz-metadaten.de/diso#hasBurgersVector">has Burgers vector</a>
+   </li>
+   <li>
+      <a href="#hasEndNode"
+         title="https://purls.helmholtz-metadaten.de/diso#hasEndNode">has end node</a>
+   </li>
+   <li>
+      <a href="#hasFamilyCrystalDirection"
+         title="https://purls.helmholtz-metadaten.de/diso#hasFamilyCrystalDirection">has family crystal direction</a>
+   </li>
+   <li>
+      <a href="#hasFamilyCrystalPlane"
+         title="https://purls.helmholtz-metadaten.de/diso#hasFamilyCrystalPlane">has family crystal plane</a>
+   </li>
+   <li>
+      <a href="#hasLatticeDirection"
+         title="https://purls.helmholtz-metadaten.de/diso#hasLatticeDirection">has lattice direction</a>
+   </li>
+   <li>
+      <a href="#hasLatticePlane"
+         title="https://purls.helmholtz-metadaten.de/diso#hasLatticePlane">has lattice plane</a>
+   </li>
+   <li>
+      <a href="#hasLatticePoint"
+         title="https://purls.helmholtz-metadaten.de/diso#hasLatticePoint">has lattice point</a>
+   </li>
+   <li>
+      <a href="#hasLineSense"
+         title="https://purls.helmholtz-metadaten.de/diso#hasLineSense">has line sense</a>
+   </li>
+   <li>
+      <a href="#hasMathematicalRepresentation"
+         title="https://purls.helmholtz-metadaten.de/diso#hasMathematicalRepresentation">has mathematical representation</a>
+   </li>
+   <li>
+      <a href="#hasNode"
+         title="https://purls.helmholtz-metadaten.de/diso#hasNode">has node</a>
+   </li>
+   <li>
+      <a href="#hasNumericalRepresentation"
+         title="https://purls.helmholtz-metadaten.de/diso#hasNumericalRepresentation">has numerical representation</a>
+   </li>
+   <li>
+      <a href="#https://purls.helmholtz-metadaten.de/cso#hasPositionVector"
+         title="https://purls.helmholtz-metadaten.de/cso#hasPositionVector">has position vector</a>
+   </li>
+   <li>
+      <a href="#hasRepresentation"
+         title="https://purls.helmholtz-metadaten.de/diso#hasRepresentation">has representation</a>
+   </li>
+   <li>
+      <a href="#hasSegment"
+         title="https://purls.helmholtz-metadaten.de/diso#hasSegment">has segment</a>
+   </li>
+   <li>
+      <a href="#hasShapeFunction"
+         title="https://purls.helmholtz-metadaten.de/diso#hasShapeFunction">has shape function</a>
+   </li>
+   <li>
+      <a href="#hasSlipDirection"
+         title="https://purls.helmholtz-metadaten.de/diso#hasSlipDirection">has slip direction</a>
+   </li>
+   <li>
+      <a href="#hasSlipPlane"
+         title="https://purls.helmholtz-metadaten.de/diso#hasSlipPlane">has slip plane</a>
+   </li>
+   <li>
+      <a href="#hasSlipPlaneNormal"
+         title="https://purls.helmholtz-metadaten.de/diso#hasSlipPlaneNormal">has slip plane normal</a>
+   </li>
+   <li>
+      <a href="#hasSlipSystem"
+         title="https://purls.helmholtz-metadaten.de/diso#hasSlipSystem">has slip system</a>
+   </li>
+   <li>
+      <a href="#hasStartNode"
+         title="https://purls.helmholtz-metadaten.de/diso#hasStartNode">has start node</a>
+   </li>
+   <li>
+      <a href="#hasVectorOrigin"
+         title="https://purls.helmholtz-metadaten.de/diso#hasVectorOrigin">has vector origin</a>
+   </li>
+   <li>
+      <a href="#isSegmentOf"
+         title="https://purls.helmholtz-metadaten.de/diso#isSegmentOf">is segment of</a>
+   </li>
+   <li>
+      <a href="#movesOn"
+         title="https://purls.helmholtz-metadaten.de/diso#movesOn">moves on</a>
+   </li>
+   <li>
+      <a href="#observedBy"
+         title="https://purls.helmholtz-metadaten.de/diso#observedBy">observed by</a>
+   </li>
+   <li>
+      <a href="#resultsIn"
+         title="https://purls.helmholtz-metadaten.de/diso#resultsIn">results in</a>
+   </li>
+</ul><h4>Data Properties</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#directionMillerIndice"
+         title="https://purls.helmholtz-metadaten.de/diso#directionMillerIndice">direction miller indice</a>
+   </li>
+   <li>
+      <a href="#familyDirectionMillerIndice"
+         title="https://purls.helmholtz-metadaten.de/diso#familyDirectionMillerIndice">family direction miller indice</a>
+   </li>
+   <li>
+      <a href="#familyPlaneMillerIndice"
+         title="https://purls.helmholtz-metadaten.de/diso#familyPlaneMillerIndice">family plane miller indice</a>
+   </li>
+   <li>
+      <a href="#planeMillerIndice"
+         title="https://purls.helmholtz-metadaten.de/diso#planeMillerIndice">plane miller indice</a>
+   </li>
+   <li>
+      <a href="#slipArea"
+         title="https://purls.helmholtz-metadaten.de/diso#slipArea">slipArea</a>
+   </li>
+</ul><iframe align="center" width="100%" height ="500px" src="webvowl/index.html"></iframe> 
+</div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Querverweis f&uuml;r... Dislocation Ontology Klassen, Object Properties und Data Properties<span class="backlink"> zur&uuml;ck zum <a href="#toc">Inhaltsverzeichnis</a></span></h2>
+Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte Property, die definiert wurden durch Dislocation Ontology.
+<div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+   <h3 id="classes-headline" class="list">Klassen</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#BurgersVector"
+            title="https://purls.helmholtz-metadaten.de/diso#BurgersVector">Burgers Vector</a>
+      </li>
+      <li>
+         <a href="#https://purls.helmholtz-metadaten.de/cso#CrystalStructure"
+            title="https://purls.helmholtz-metadaten.de/cso#CrystalStructure">Crystal Structure</a>
+      </li>
+      <li>
+         <a href="#https://purls.helmholtz-metadaten.de/cdo#CrystallographicDefect"
+            title="https://purls.helmholtz-metadaten.de/cdo#CrystallographicDefect">Crystallographic Defect</a>
+      </li>
+      <li>
+         <a href="#DiscretizedLine"
+            title="https://purls.helmholtz-metadaten.de/diso#DiscretizedLine">Discretized Line</a>
+      </li>
+      <li>
+         <a href="#EdgeDislocation"
+            title="https://purls.helmholtz-metadaten.de/diso#EdgeDislocation">Edge Dislocation</a>
+      </li>
+      <li>
+         <a href="#FamilyOfCrystalDirection"
+            title="https://purls.helmholtz-metadaten.de/diso#FamilyOfCrystalDirection">Family of Crystal Direction</a>
+      </li>
+      <li>
+         <a href="#FamilyOfCrystalPlane"
+            title="https://purls.helmholtz-metadaten.de/diso#FamilyOfCrystalPlane">Family of Crystal Plane</a>
+      </li>
+      <li>
+         <a href="#FieldIonMicroscopy"
+            title="https://purls.helmholtz-metadaten.de/diso#FieldIonMicroscopy">Field Ion Microscopy</a>
+      </li>
+      <li>
+         <a href="#https://purls.helmholtz-metadaten.de/cso#Lattice" title="https://purls.helmholtz-metadaten.de/cso#Lattice">Lattice</a>
+      </li>
+      <li>
+         <a href="#LatticeDirection"
+            title="https://purls.helmholtz-metadaten.de/diso#LatticeDirection">Lattice Direction</a>
+      </li>
+      <li>
+         <a href="#LatticeDisplacement"
+            title="https://purls.helmholtz-metadaten.de/diso#LatticeDisplacement">Lattice Displacement</a>
+      </li>
+      <li>
+         <a href="#LatticePlane"
+            title="https://purls.helmholtz-metadaten.de/diso#LatticePlane">Lattice Plane</a>
+      </li>
+      <li>
+         <a href="#LatticePoint"
+            title="https://purls.helmholtz-metadaten.de/diso#LatticePoint">Lattice Point</a>
+      </li>
+      <li>
+         <a href="#Line" title="https://purls.helmholtz-metadaten.de/diso#Line">Line</a>
+      </li>
+      <li>
+         <a href="#LineDefect"
+            title="https://purls.helmholtz-metadaten.de/diso#LineDefect">Line Defect</a>
+      </li>
+      <li>
+         <a href="#LineSense"
+            title="https://purls.helmholtz-metadaten.de/diso#LineSense">Line Sense</a>
+      </li>
+      <li>
+         <a href="#Node" title="https://purls.helmholtz-metadaten.de/diso#Node">Node</a>
+      </li>
+      <li>
+         <a href="#https://purls.helmholtz-metadaten.de/cso#Point" title="https://purls.helmholtz-metadaten.de/cso#Point">Point</a>
+      </li>
+      <li>
+         <a href="#https://purls.helmholtz-metadaten.de/cso#PositionVector"
+            title="https://purls.helmholtz-metadaten.de/cso#PositionVector">Position Vector</a>
+      </li>
+      <li>
+         <a href="#ScrewDislocation"
+            title="https://purls.helmholtz-metadaten.de/diso#ScrewDislocation">Screw Dislocation</a>
+      </li>
+      <li>
+         <a href="#Segment"
+            title="https://purls.helmholtz-metadaten.de/diso#Segment">Segment</a>
+      </li>
+      <li>
+         <a href="#ShapeFunction"
+            title="https://purls.helmholtz-metadaten.de/diso#ShapeFunction">Shape Function</a>
+      </li>
+      <li>
+         <a href="#SlipDirection"
+            title="https://purls.helmholtz-metadaten.de/diso#SlipDirection">Slip Direction</a>
+      </li>
+      <li>
+         <a href="#SlipPlane"
+            title="https://purls.helmholtz-metadaten.de/diso#SlipPlane">Slip Plane</a>
+      </li>
+      <li>
+         <a href="#SlipPlaneNormal"
+            title="https://purls.helmholtz-metadaten.de/diso#SlipPlaneNormal">Slip Plane Normal</a>
+      </li>
+      <li>
+         <a href="#SlipSystem"
+            title="https://purls.helmholtz-metadaten.de/diso#SlipSystem">Slip System</a>
+      </li>
+      <li>
+         <a href="#TransmissionElectronMicroscopy"
+            title="https://purls.helmholtz-metadaten.de/diso#TransmissionElectronMicroscopy">Transmission Electron Microscopy</a>
+      </li>
+      <li>
+         <a href="#VectorOrigin"
+            title="https://purls.helmholtz-metadaten.de/diso#VectorOrigin">Ursprung</a>
+      </li>
+      <li>
+         <a href="#https://purls.helmholtz-metadaten.de/cso#Vector" title="https://purls.helmholtz-metadaten.de/cso#Vector">Vector</a>
+      </li>
+      <li>
+         <a href="#Dislocation"
+            title="https://purls.helmholtz-metadaten.de/diso#Dislocation">Versetzung</a>
+      </li>
+   </ul>
+   <div class="entity" id="BurgersVector">
+      <h3>Burgers Vector<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#BurgersVector</p>
+      <div class="comment">
+         <span class="markdown">An elementary unit (length order of lattice parameter) of lattice translation. The basic notion of the Burgers vector comes from the closure failure of an initially perfect lattice due to the existence of dislocation. The magnitude and direction of closure failure are characterized by the Burgers vector.</span>
+      </div>
+      <dl class="description">
+         <dt>hat Super-Klassen</dt>
+         <dd>
+            <a href="#https://purls.helmholtz-metadaten.de/cso#Vector" title="https://purls.helmholtz-metadaten.de/cso#Vector">Vector</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+         <dt>ist in Range von</dt>
+         <dd>
+            <a href="#hasBurgersVector"
+               title="https://purls.helmholtz-metadaten.de/diso#hasBurgersVector">has Burgers vector</a>
+            <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://purls.helmholtz-metadaten.de/cso#CrystalStructure">
+      <h3>Crystal Structure<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/cso#CrystalStructure</p>
+      <div class="comment">
+         <span class="markdown">A crystal structure is described by the lattice geometry and atomic arrangements within the unit cell.</span>
+      </div>
+      <dl class="description">
+         <dt>hat Super-Klassen</dt>
+         <dd/>
+         <dt>ist in der Domäne von</dt>
+         <dd>
+            <a href="#hasSlipPlane"
+               title="https://purls.helmholtz-metadaten.de/diso#hasSlipPlane">has slip plane</a>
+            <sup class="type-op" title="Objekt Eigenschaft">op</sup>, <a href="#hasSlipSystem"
+               title="https://purls.helmholtz-metadaten.de/diso#hasSlipSystem">has slip system</a>
+            <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://purls.helmholtz-metadaten.de/cdo#CrystallographicDefect">
+      <h3>Crystallographic Defect<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/cdo#CrystallographicDefect</p>
+      <div class="comment">
+         <span class="markdown">The crystallographic defect is a lattice irregularity that has one or more dimensions on the order of an atomic diameter.</span>
+      </div>
+      <dl class="description">
+         <dt>hat Sub-Klassen</dt>
+         <dd>
+            <a href="#LineDefect"
+               title="https://purls.helmholtz-metadaten.de/diso#LineDefect">Line Defect</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="DiscretizedLine">
+      <h3>Discretized Line<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#DiscretizedLine</p>
+      <div class="comment">
+         <span class="markdown">The numerical representation of the dislocation line that is discretized into the number of segments.</span>
+      </div>
+      <dl class="description">
+         <dt>hat Super-Klassen</dt>
+         <dd/>
+         <dt>ist in der Domäne von</dt>
+         <dd>
+            <a href="#hasSegment"
+               title="https://purls.helmholtz-metadaten.de/diso#hasSegment">has segment</a>
+            <sup class="type-op" title="Objekt Eigenschaft">op</sup>, <a href="#hasShapeFunction"
+               title="https://purls.helmholtz-metadaten.de/diso#hasShapeFunction">has shape function</a>
+            <sup class="type-op" title="Objekt Eigenschaft">op</sup>, <a href="#slipArea"
+               title="https://purls.helmholtz-metadaten.de/diso#slipArea">slipArea</a>
+            <sup class="type-dp" title="Daten Eigenschaft">dp</sup>
+         </dd>
+         <dt>ist in Range von</dt>
+         <dd>
+            <a href="#hasNumericalRepresentation"
+               title="https://purls.helmholtz-metadaten.de/diso#hasNumericalRepresentation">has numerical representation</a>
+            <sup class="type-op" title="Objekt Eigenschaft">op</sup>, <a href="#isSegmentOf"
+               title="https://purls.helmholtz-metadaten.de/diso#isSegmentOf">is segment of</a>
+            <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+         </dd>
+         <dt>ist disjunkt zu</dt>
+         <dd>
+            <a href="#Line" title="https://purls.helmholtz-metadaten.de/diso#Line">Line</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="EdgeDislocation">
+      <h3>Edge Dislocation<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#EdgeDislocation</p>
+      <div class="comment">
+         <span class="markdown">A dislocation that has a line sense perpendicular to its Burgers vector.</span>
+      </div>
+      <dl class="description">
+         <dt>hat Super-Klassen</dt>
+         <dd>
+            <a href="#Dislocation"
+               title="https://purls.helmholtz-metadaten.de/diso#Dislocation">Versetzung</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+         <dt>ist disjunkt zu</dt>
+         <dd>
+            <a href="#ScrewDislocation"
+               title="https://purls.helmholtz-metadaten.de/diso#ScrewDislocation">Screw Dislocation</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="FamilyOfCrystalDirection">
+      <h3>Family of Crystal Direction<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#FamilyOfCrystalDirection</p>
+      <div class="comment">
+         <span class="markdown">A set of symmetrically equivalent directions in the lattice.</span>
+      </div>
+      <dl class="description">
+         <dt>hat Super-Klassen</dt>
+         <dd/>
+         <dt>hat Sub-Klassen</dt>
+         <dd>
+            <a href="#LatticeDirection"
+               title="https://purls.helmholtz-metadaten.de/diso#LatticeDirection">Lattice Direction</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+         <dt>ist in der Domäne von</dt>
+         <dd>
+            <a href="#familyDirectionMillerIndice"
+               title="https://purls.helmholtz-metadaten.de/diso#familyDirectionMillerIndice">family direction miller indice</a>
+            <sup class="type-dp" title="Daten Eigenschaft">dp</sup>
+         </dd>
+         <dt>ist in Range von</dt>
+         <dd>
+            <a href="#hasFamilyCrystalDirection"
+               title="https://purls.helmholtz-metadaten.de/diso#hasFamilyCrystalDirection">has family crystal direction</a>
+            <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+         </dd>
+         <dt>ist disjunkt zu</dt>
+         <dd>
+            <a href="#FamilyOfCrystalPlane"
+               title="https://purls.helmholtz-metadaten.de/diso#FamilyOfCrystalPlane">Family of Crystal Plane</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="FamilyOfCrystalPlane">
+      <h3>Family of Crystal Plane<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#FamilyOfCrystalPlane</p>
+      <div class="comment">
+         <span class="markdown">A set of symmetrically equivalent planes in the lattice.</span>
+      </div>
+      <dl class="description">
+         <dt>hat Super-Klassen</dt>
+         <dd/>
+         <dt>hat Sub-Klassen</dt>
+         <dd>
+            <a href="#LatticePlane"
+               title="https://purls.helmholtz-metadaten.de/diso#LatticePlane">Lattice Plane</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+         <dt>ist in der Domäne von</dt>
+         <dd>
+            <a href="#familyPlaneMillerIndice"
+               title="https://purls.helmholtz-metadaten.de/diso#familyPlaneMillerIndice">family plane miller indice</a>
+            <sup class="type-dp" title="Daten Eigenschaft">dp</sup>
+         </dd>
+         <dt>ist in Range von</dt>
+         <dd>
+            <a href="#hasFamilyCrystalPlane"
+               title="https://purls.helmholtz-metadaten.de/diso#hasFamilyCrystalPlane">has family crystal plane</a>
+            <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+         </dd>
+         <dt>ist disjunkt zu</dt>
+         <dd>
+            <a href="#FamilyOfCrystalDirection"
+               title="https://purls.helmholtz-metadaten.de/diso#FamilyOfCrystalDirection">Family of Crystal Direction</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="FieldIonMicroscopy">
+      <h3>Field Ion Microscopy<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#FieldIonMicroscopy</p>
+      <div class="comment">
+         <span class="markdown">Field Ion Microscopy (FIM) is a microscopy technique that can be used to image the arrangement of atoms.</span>
+      </div>
+      <dl class="description">
+         <dt>ist disjunkt zu</dt>
+         <dd>
+            <a href="#TransmissionElectronMicroscopy"
+               title="https://purls.helmholtz-metadaten.de/diso#TransmissionElectronMicroscopy">Transmission Electron Microscopy</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://purls.helmholtz-metadaten.de/cso#Lattice">
+      <h3>Lattice<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/cso#Lattice</p>
+      <div class="comment">
+         <span class="markdown">The mathematical concept to represent the periodicity of a crystal. A lattice defines a periodic arrangement of one or more atoms.</span>
+      </div>
+      <dl class="description">
+         <dt>hat Super-Klassen</dt>
+         <dd/>
+      </dl>
+   </div>
+   <div class="entity" id="LatticeDirection">
+      <h3>Lattice Direction<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#LatticeDirection</p>
+      <div class="comment">
+         <span class="markdown">The vector direction inside the lattice that is connecting two lattice points.</span>
+      </div>
+      <dl class="description">
+         <dt>hat Super-Klassen</dt>
+         <dd>
+            <a href="#FamilyOfCrystalDirection"
+               title="https://purls.helmholtz-metadaten.de/diso#FamilyOfCrystalDirection">Family of Crystal Direction</a>
+            <sup class="type-c" title="Klasse">c</sup>, <a href="#https://purls.helmholtz-metadaten.de/cso#Vector" title="https://purls.helmholtz-metadaten.de/cso#Vector">Vector</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+         <dt>hat Sub-Klassen</dt>
+         <dd>
+            <a href="#SlipDirection"
+               title="https://purls.helmholtz-metadaten.de/diso#SlipDirection">Slip Direction</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+         <dt>ist in der Domäne von</dt>
+         <dd>
+            <a href="#hasFamilyCrystalDirection"
+               title="https://purls.helmholtz-metadaten.de/diso#hasFamilyCrystalDirection">has family crystal direction</a>
+            <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+         </dd>
+         <dt>ist in Range von</dt>
+         <dd>
+            <a href="#hasLatticeDirection"
+               title="https://purls.helmholtz-metadaten.de/diso#hasLatticeDirection">has lattice direction</a>
+            <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="LatticeDisplacement">
+      <h3>Lattice Displacement<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#LatticeDisplacement</p>
+      <div class="comment">
+         <span class="markdown">The displacement of atoms from their perfect lattice sites due to the existence of defects, e.g., point defect, line defect, and grain boundary.</span>
+      </div>
+      <dl class="description">
+         <dt>ist in Range von</dt>
+         <dd>
+            <a href="#resultsIn"
+               title="https://purls.helmholtz-metadaten.de/diso#resultsIn">results in</a>
+            <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="LatticePlane">
+      <h3>Lattice Plane<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#LatticePlane</p>
+      <div class="comment">
+         <span class="markdown">The lattice plane forms an infinitely stretched plane (characterized through a plane normal) that cuts through lattice points such that, again, a regular arrangement of lattice points in the plane occurs.</span>
+      </div>
+      <dl class="description">
+         <dt>hat Super-Klassen</dt>
+         <dd>
+            <a href="#FamilyOfCrystalPlane"
+               title="https://purls.helmholtz-metadaten.de/diso#FamilyOfCrystalPlane">Family of Crystal Plane</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+         <dt>hat Sub-Klassen</dt>
+         <dd>
+            <a href="#SlipPlane"
+               title="https://purls.helmholtz-metadaten.de/diso#SlipPlane">Slip Plane</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+         <dt>ist in der Domäne von</dt>
+         <dd>
+            <a href="#hasFamilyCrystalPlane"
+               title="https://purls.helmholtz-metadaten.de/diso#hasFamilyCrystalPlane">has family crystal plane</a>
+            <sup class="type-op" title="Objekt Eigenschaft">op</sup>, <a href="#hasVectorOrigin"
+               title="https://purls.helmholtz-metadaten.de/diso#hasVectorOrigin">has vector origin</a>
+            <sup class="type-op" title="Objekt Eigenschaft">op</sup>, <a href="#planeMillerIndice"
+               title="https://purls.helmholtz-metadaten.de/diso#planeMillerIndice">plane miller indice</a>
+            <sup class="type-dp" title="Daten Eigenschaft">dp</sup>
+         </dd>
+         <dt>ist in Range von</dt>
+         <dd>
+            <a href="#hasLatticePlane"
+               title="https://purls.helmholtz-metadaten.de/diso#hasLatticePlane">has lattice plane</a>
+            <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="LatticePoint">
+      <h3>Lattice Point<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#LatticePoint</p>
+      <div class="comment">
+         <span class="markdown">Lattice point is the point where atom(s) or molecule(s) is located.</span>
+      </div>
+      <dl class="description">
+         <dt>hat Super-Klassen</dt>
+         <dd>
+            <a href="#https://purls.helmholtz-metadaten.de/cso#Point" title="https://purls.helmholtz-metadaten.de/cso#Point">Point</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+         <dt>ist in Range von</dt>
+         <dd>
+            <a href="#hasLatticePoint"
+               title="https://purls.helmholtz-metadaten.de/diso#hasLatticePoint">has lattice point</a>
+            <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Line">
+      <h3>Line<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#Line</p>
+      <div class="comment">
+         <span class="markdown">Mathematical representation of dislocation as 'Line'. An instance of mathematical representation of a dislocation line is an oriented curve parameterized by its arc length.</span>
+      </div>
+      <dl class="description">
+         <dt>hat Super-Klassen</dt>
+         <dd>
+            <a href="http://www.w3.org/2002/07/owl#Thing"
+               target="_blank"
+               title="http://www.w3.org/2002/07/owl#Thing">thing</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+         <dt>ist in der Domäne von</dt>
+         <dd>
+            <a href="#hasNumericalRepresentation"
+               title="https://purls.helmholtz-metadaten.de/diso#hasNumericalRepresentation">has numerical representation</a>
+            <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+         </dd>
+         <dt>ist in Range von</dt>
+         <dd>
+            <a href="#hasMathematicalRepresentation"
+               title="https://purls.helmholtz-metadaten.de/diso#hasMathematicalRepresentation">has mathematical representation</a>
+            <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+         </dd>
+         <dt>ist disjunkt zu</dt>
+         <dd>
+            <a href="#DiscretizedLine"
+               title="https://purls.helmholtz-metadaten.de/diso#DiscretizedLine">Discretized Line</a>
+            <sup class="type-c" title="Klasse">c</sup>, <a href="#Node" title="https://purls.helmholtz-metadaten.de/diso#Node">Node</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="LineDefect">
+      <h3>Line Defect<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#LineDefect</p>
+      <div class="comment">
+         <span class="markdown">Linear or one-dimensional defect around which some of the atoms are misaligned.</span>
+      </div>
+      <dl class="description">
+         <dt>hat Super-Klassen</dt>
+         <dd>
+            <a href="#https://purls.helmholtz-metadaten.de/cdo#CrystallographicDefect"
+               title="https://purls.helmholtz-metadaten.de/cdo#CrystallographicDefect">Crystallographic Defect</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+         <dt>hat Sub-Klassen</dt>
+         <dd>
+            <a href="#Dislocation"
+               title="https://purls.helmholtz-metadaten.de/diso#Dislocation">Versetzung</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="LineSense">
+      <h3>Line Sense<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#LineSense</p>
+      <div class="comment">
+         <span class="markdown">A sense that characterizes a directed line, i.e., it has a start and an end.</span>
+      </div>
+      <dl class="description">
+         <dt>ist in Range von</dt>
+         <dd>
+            <a href="#hasLineSense"
+               title="https://purls.helmholtz-metadaten.de/diso#hasLineSense">has line sense</a>
+            <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Node">
+      <h3>Node<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#Node</p>
+      <div class="comment">
+         <span class="markdown">A point of a segment.</span>
+      </div>
+      <dl class="description">
+         <dt>hat Super-Klassen</dt>
+         <dd>
+            <a href="#https://purls.helmholtz-metadaten.de/cso#Point" title="https://purls.helmholtz-metadaten.de/cso#Point">Point</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+         <dt>ist in Range von</dt>
+         <dd>
+            <a href="#hasEndNode"
+               title="https://purls.helmholtz-metadaten.de/diso#hasEndNode">has end node</a>
+            <sup class="type-op" title="Objekt Eigenschaft">op</sup>, <a href="#hasNode"
+               title="https://purls.helmholtz-metadaten.de/diso#hasNode">has node</a>
+            <sup class="type-op" title="Objekt Eigenschaft">op</sup>, <a href="#hasStartNode"
+               title="https://purls.helmholtz-metadaten.de/diso#hasStartNode">has start node</a>
+            <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+         </dd>
+         <dt>ist disjunkt zu</dt>
+         <dd>
+            <a href="#Line" title="https://purls.helmholtz-metadaten.de/diso#Line">Line</a>
+            <sup class="type-c" title="Klasse">c</sup>, <a href="#Segment"
+               title="https://purls.helmholtz-metadaten.de/diso#Segment">Segment</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://purls.helmholtz-metadaten.de/cso#Point">
+      <h3>Point<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/cso#Point</p>
+      <div class="comment">
+         <span class="markdown">In classical Euclidean geometry, a point is a primitive notion that models an exact location in the space, and has no length, width, or thickness.</span>
+      </div>
+      <dl class="description">
+         <dt>hat Super-Klassen</dt>
+         <dd/>
+         <dt>hat Sub-Klassen</dt>
+         <dd>
+            <a href="#LatticePoint"
+               title="https://purls.helmholtz-metadaten.de/diso#LatticePoint">Lattice Point</a>
+            <sup class="type-c" title="Klasse">c</sup>, <a href="#Node" title="https://purls.helmholtz-metadaten.de/diso#Node">Node</a>
+            <sup class="type-c" title="Klasse">c</sup>, <a href="#VectorOrigin"
+               title="https://purls.helmholtz-metadaten.de/diso#VectorOrigin">Ursprung</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+         <dt>ist in der Domäne von</dt>
+         <dd>
+            <a href="#https://purls.helmholtz-metadaten.de/cso#hasPositionVector"
+               title="https://purls.helmholtz-metadaten.de/cso#hasPositionVector">has position vector</a>
+            <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://purls.helmholtz-metadaten.de/cso#PositionVector">
+      <h3>Position Vector<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/cso#PositionVector</p>
+      <div class="comment">
+         <span class="markdown">Euclidean vector that represents the position of a point P in space in relation to an arbitrary reference origin O.</span>
+      </div>
+      <dl class="description">
+         <dt>hat Super-Klassen</dt>
+         <dd>
+            <a href="#https://purls.helmholtz-metadaten.de/cso#Vector" title="https://purls.helmholtz-metadaten.de/cso#Vector">Vector</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+         <dt>ist in Range von</dt>
+         <dd>
+            <a href="#https://purls.helmholtz-metadaten.de/cso#hasPositionVector"
+               title="https://purls.helmholtz-metadaten.de/cso#hasPositionVector">has position vector</a>
+            <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ScrewDislocation">
+      <h3>Screw Dislocation<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#ScrewDislocation</p>
+      <div class="comment">
+         <span class="markdown">A dislocation that has a line sense parallel to its Burgers vector.</span>
+      </div>
+      <dl class="description">
+         <dt>hat Super-Klassen</dt>
+         <dd>
+            <a href="#Dislocation"
+               title="https://purls.helmholtz-metadaten.de/diso#Dislocation">Versetzung</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+         <dt>ist disjunkt zu</dt>
+         <dd>
+            <a href="#EdgeDislocation"
+               title="https://purls.helmholtz-metadaten.de/diso#EdgeDislocation">Edge Dislocation</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Segment">
+      <h3>Segment<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#Segment</p>
+      <div class="comment">
+         <span class="markdown">The segment is a part of a line bounded by two distinct end points and may contain points on the line between its endpoints.</span>
+      </div>
+      <dl class="description">
+         <dt>hat Super-Klassen</dt>
+         <dd/>
+         <dt>ist in der Domäne von</dt>
+         <dd>
+            <a href="#hasEndNode"
+               title="https://purls.helmholtz-metadaten.de/diso#hasEndNode">has end node</a>
+            <sup class="type-op" title="Objekt Eigenschaft">op</sup>, <a href="#hasNode"
+               title="https://purls.helmholtz-metadaten.de/diso#hasNode">has node</a>
+            <sup class="type-op" title="Objekt Eigenschaft">op</sup>, <a href="#hasStartNode"
+               title="https://purls.helmholtz-metadaten.de/diso#hasStartNode">has start node</a>
+            <sup class="type-op" title="Objekt Eigenschaft">op</sup>, <a href="#isSegmentOf"
+               title="https://purls.helmholtz-metadaten.de/diso#isSegmentOf">is segment of</a>
+            <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+         </dd>
+         <dt>ist in Range von</dt>
+         <dd>
+            <a href="#hasSegment"
+               title="https://purls.helmholtz-metadaten.de/diso#hasSegment">has segment</a>
+            <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+         </dd>
+         <dt>ist disjunkt zu</dt>
+         <dd>
+            <a href="#Node" title="https://purls.helmholtz-metadaten.de/diso#Node">Node</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ShapeFunction">
+      <h3>Shape Function<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#ShapeFunction</p>
+      <div class="comment">
+         <span class="markdown">The shape function is the function that interpolates the solution between the discrete values obtained at the mesh nodes. In discretized dislocation, the shape function determines the shape of a segment and ultimately determines the shape of the line. Examples of shape function that is used to discretize the dislocation are circular, elliptic, spiral, linear, cubic, and quintic.</span>
+      </div>
+      <dl class="description">
+         <dt>ist in Range von</dt>
+         <dd>
+            <a href="#hasShapeFunction"
+               title="https://purls.helmholtz-metadaten.de/diso#hasShapeFunction">has shape function</a>
+            <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SlipDirection">
+      <h3>Slip Direction<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#SlipDirection</p>
+      <div class="comment">
+         <span class="markdown">The direction in the slip plane along which plastic deformation takes place. The slip direction corresponds to one of the shortest lattice translation vectors.</span>
+      </div>
+      <dl class="description">
+         <dt>hat Super-Klassen</dt>
+         <dd>
+            <a href="#LatticeDirection"
+               title="https://purls.helmholtz-metadaten.de/diso#LatticeDirection">Lattice Direction</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+         <dt>ist in Range von</dt>
+         <dd>
+            <a href="#hasSlipDirection"
+               title="https://purls.helmholtz-metadaten.de/diso#hasSlipDirection">has slip direction</a>
+            <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SlipPlane">
+      <h3>Slip Plane<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#SlipPlane</p>
+      <div class="comment">
+         <span class="markdown">The crystallographic/lattice plane along which the dislocation line traverses/moves. The slip plane is usually the plane with the highest density of atoms, i.e. most widely spaced.</span>
+      </div>
+      <dl class="description">
+         <dt>hat Super-Klassen</dt>
+         <dd>
+            <a href="#LatticePlane"
+               title="https://purls.helmholtz-metadaten.de/diso#LatticePlane">Lattice Plane</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+         <dt>ist in Range von</dt>
+         <dd>
+            <a href="#hasSlipPlane"
+               title="https://purls.helmholtz-metadaten.de/diso#hasSlipPlane">has slip plane</a>
+            <sup class="type-op" title="Objekt Eigenschaft">op</sup>, <a href="#movesOn"
+               title="https://purls.helmholtz-metadaten.de/diso#movesOn">moves on</a>
+            <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SlipPlaneNormal">
+      <h3>Slip Plane Normal<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#SlipPlaneNormal</p>
+      <div class="comment">
+         <span class="markdown">The unit normal vector of slip planes.</span>
+      </div>
+      <dl class="description">
+         <dt>hat Super-Klassen</dt>
+         <dd>
+            <a href="#https://purls.helmholtz-metadaten.de/cso#Vector" title="https://purls.helmholtz-metadaten.de/cso#Vector">Vector</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+         <dt>ist in Range von</dt>
+         <dd>
+            <a href="#hasSlipPlaneNormal"
+               title="https://purls.helmholtz-metadaten.de/diso#hasSlipPlaneNormal">has slip plane normal</a>
+            <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SlipSystem">
+      <h3>Slip System<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#SlipSystem</p>
+      <div class="comment">
+         <span class="markdown">A slip system is defined as the set of slip planes with the same unit normal vector and the same slip direction.</span>
+      </div>
+      <dl class="description">
+         <dt>hat Super-Klassen</dt>
+         <dd/>
+         <dt>ist in Range von</dt>
+         <dd>
+            <a href="#hasSlipSystem"
+               title="https://purls.helmholtz-metadaten.de/diso#hasSlipSystem">has slip system</a>
+            <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="TransmissionElectronMicroscopy">
+      <h3>Transmission Electron Microscopy<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#TransmissionElectronMicroscopy</p>
+      <div class="comment">
+         <span class="markdown">Transmission electron microscopy (TEM) is a microscopy technique in which a beam of electrons is transmitted through a specimen to form an image. The specimen is often an ultrathin section less than 100 nm thick.</span>
+      </div>
+      <dl class="description">
+         <dt>ist disjunkt zu</dt>
+         <dd>
+            <a href="#FieldIonMicroscopy"
+               title="https://purls.helmholtz-metadaten.de/diso#FieldIonMicroscopy">Field Ion Microscopy</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="VectorOrigin">
+      <h3>Ursprung<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#VectorOrigin</p>
+      <div class="comment">
+         <span class="markdown">A fixed point that is needed by the vector to identify other points in the space relative to its origin.</span>
+      </div>
+      <dl class="description">
+         <dt>hat Super-Klassen</dt>
+         <dd>
+            <a href="#https://purls.helmholtz-metadaten.de/cso#Point" title="https://purls.helmholtz-metadaten.de/cso#Point">Point</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+         <dt>ist in Range von</dt>
+         <dd>
+            <a href="#hasVectorOrigin"
+               title="https://purls.helmholtz-metadaten.de/diso#hasVectorOrigin">has vector origin</a>
+            <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://purls.helmholtz-metadaten.de/cso#Vector">
+      <h3>Vector<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/cso#Vector</p>
+      <div class="comment">
+         <span class="markdown">(Euclidean) vector is used to represent quantities that both magnitude and direction.</span>
+      </div>
+      <dl class="description">
+         <dt>hat Sub-Klassen</dt>
+         <dd>
+            <a href="#BurgersVector"
+               title="https://purls.helmholtz-metadaten.de/diso#BurgersVector">Burgers Vector</a>
+            <sup class="type-c" title="Klasse">c</sup>, <a href="#LatticeDirection"
+               title="https://purls.helmholtz-metadaten.de/diso#LatticeDirection">Lattice Direction</a>
+            <sup class="type-c" title="Klasse">c</sup>, <a href="#https://purls.helmholtz-metadaten.de/cso#PositionVector"
+               title="https://purls.helmholtz-metadaten.de/cso#PositionVector">Position Vector</a>
+            <sup class="type-c" title="Klasse">c</sup>, <a href="#SlipPlaneNormal"
+               title="https://purls.helmholtz-metadaten.de/diso#SlipPlaneNormal">Slip Plane Normal</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Dislocation">
+      <h3>Versetzung<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#Dislocation</p>
+      <div class="comment">
+         <span class="markdown">Linear or one-dimensional defect around which some of the atoms are misaligned. In the mesoscale, a dislocation is a line object that is a boundary separating the regions on the slip plane which have undergone slip from those that have not.</span>
+      </div>
+      <dl class="description">
+         <dt>hat Super-Klassen</dt>
+         <dd>
+            <a href="#LineDefect"
+               title="https://purls.helmholtz-metadaten.de/diso#LineDefect">Line Defect</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+         <dt>hat Sub-Klassen</dt>
+         <dd>
+            <a href="#EdgeDislocation"
+               title="https://purls.helmholtz-metadaten.de/diso#EdgeDislocation">Edge Dislocation</a>
+            <sup class="type-c" title="Klasse">c</sup>, <a href="#ScrewDislocation"
+               title="https://purls.helmholtz-metadaten.de/diso#ScrewDislocation">Screw Dislocation</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+         <dt>ist in der Domäne von</dt>
+         <dd>
+            <a href="#hasBurgersVector"
+               title="https://purls.helmholtz-metadaten.de/diso#hasBurgersVector">has Burgers vector</a>
+            <sup class="type-op" title="Objekt Eigenschaft">op</sup>, <a href="#hasLineSense"
+               title="https://purls.helmholtz-metadaten.de/diso#hasLineSense">has line sense</a>
+            <sup class="type-op" title="Objekt Eigenschaft">op</sup>, <a href="#hasMathematicalRepresentation"
+               title="https://purls.helmholtz-metadaten.de/diso#hasMathematicalRepresentation">has mathematical representation</a>
+            <sup class="type-op" title="Objekt Eigenschaft">op</sup>, <a href="#movesOn"
+               title="https://purls.helmholtz-metadaten.de/diso#movesOn">moves on</a>
+            <sup class="type-op" title="Objekt Eigenschaft">op</sup>, <a href="#observedBy"
+               title="https://purls.helmholtz-metadaten.de/diso#observedBy">observed by</a>
+            <sup class="type-op" title="Objekt Eigenschaft">op</sup>, <a href="#resultsIn"
+               title="https://purls.helmholtz-metadaten.de/diso#resultsIn">results in</a>
+            <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+   <h2>Objekt Eigenschaften</h2>
+   <ul class="hlist">
+      <li>
+         <a href="#hasBurgersVector"
+            title="https://purls.helmholtz-metadaten.de/diso#hasBurgersVector">has Burgers vector</a>
+      </li>
+      <li>
+         <a href="#hasEndNode"
+            title="https://purls.helmholtz-metadaten.de/diso#hasEndNode">has end node</a>
+      </li>
+      <li>
+         <a href="#hasFamilyCrystalDirection"
+            title="https://purls.helmholtz-metadaten.de/diso#hasFamilyCrystalDirection">has family crystal direction</a>
+      </li>
+      <li>
+         <a href="#hasFamilyCrystalPlane"
+            title="https://purls.helmholtz-metadaten.de/diso#hasFamilyCrystalPlane">has family crystal plane</a>
+      </li>
+      <li>
+         <a href="#hasLatticeDirection"
+            title="https://purls.helmholtz-metadaten.de/diso#hasLatticeDirection">has lattice direction</a>
+      </li>
+      <li>
+         <a href="#hasLatticePlane"
+            title="https://purls.helmholtz-metadaten.de/diso#hasLatticePlane">has lattice plane</a>
+      </li>
+      <li>
+         <a href="#hasLatticePoint"
+            title="https://purls.helmholtz-metadaten.de/diso#hasLatticePoint">has lattice point</a>
+      </li>
+      <li>
+         <a href="#hasLineSense"
+            title="https://purls.helmholtz-metadaten.de/diso#hasLineSense">has line sense</a>
+      </li>
+      <li>
+         <a href="#hasMathematicalRepresentation"
+            title="https://purls.helmholtz-metadaten.de/diso#hasMathematicalRepresentation">has mathematical representation</a>
+      </li>
+      <li>
+         <a href="#hasNode"
+            title="https://purls.helmholtz-metadaten.de/diso#hasNode">has node</a>
+      </li>
+      <li>
+         <a href="#hasNumericalRepresentation"
+            title="https://purls.helmholtz-metadaten.de/diso#hasNumericalRepresentation">has numerical representation</a>
+      </li>
+      <li>
+         <a href="#https://purls.helmholtz-metadaten.de/cso#hasPositionVector"
+            title="https://purls.helmholtz-metadaten.de/cso#hasPositionVector">has position vector</a>
+      </li>
+      <li>
+         <a href="#hasRepresentation"
+            title="https://purls.helmholtz-metadaten.de/diso#hasRepresentation">has representation</a>
+      </li>
+      <li>
+         <a href="#hasSegment"
+            title="https://purls.helmholtz-metadaten.de/diso#hasSegment">has segment</a>
+      </li>
+      <li>
+         <a href="#hasShapeFunction"
+            title="https://purls.helmholtz-metadaten.de/diso#hasShapeFunction">has shape function</a>
+      </li>
+      <li>
+         <a href="#hasSlipDirection"
+            title="https://purls.helmholtz-metadaten.de/diso#hasSlipDirection">has slip direction</a>
+      </li>
+      <li>
+         <a href="#hasSlipPlane"
+            title="https://purls.helmholtz-metadaten.de/diso#hasSlipPlane">has slip plane</a>
+      </li>
+      <li>
+         <a href="#hasSlipPlaneNormal"
+            title="https://purls.helmholtz-metadaten.de/diso#hasSlipPlaneNormal">has slip plane normal</a>
+      </li>
+      <li>
+         <a href="#hasSlipSystem"
+            title="https://purls.helmholtz-metadaten.de/diso#hasSlipSystem">has slip system</a>
+      </li>
+      <li>
+         <a href="#hasStartNode"
+            title="https://purls.helmholtz-metadaten.de/diso#hasStartNode">has start node</a>
+      </li>
+      <li>
+         <a href="#hasVectorOrigin"
+            title="https://purls.helmholtz-metadaten.de/diso#hasVectorOrigin">has vector origin</a>
+      </li>
+      <li>
+         <a href="#isSegmentOf"
+            title="https://purls.helmholtz-metadaten.de/diso#isSegmentOf">is segment of</a>
+      </li>
+      <li>
+         <a href="#movesOn"
+            title="https://purls.helmholtz-metadaten.de/diso#movesOn">moves on</a>
+      </li>
+      <li>
+         <a href="#observedBy"
+            title="https://purls.helmholtz-metadaten.de/diso#observedBy">observed by</a>
+      </li>
+      <li>
+         <a href="#resultsIn"
+            title="https://purls.helmholtz-metadaten.de/diso#resultsIn">results in</a>
+      </li>
+   </ul>
+   <div class="entity" id="hasBurgersVector">
+      <h3>has Burgers vector<sup class="type-op" title="Objekt Eigenschaft">op</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#hasBurgersVector</p>
+      <div class="comment">
+         <span class="markdown">hasBurgersVector represents the relationship between dislocation to Burgers vector.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>hat Domäne</dt>
+            <dd>
+               <a href="#Dislocation"
+                  title="https://purls.helmholtz-metadaten.de/diso#Dislocation">Versetzung</a>
+               <sup class="type-c" title="Klasse">c</sup>
+            </dd>
+            <dt>hat Range</dt>
+            <dd>
+               <a href="#BurgersVector"
+                  title="https://purls.helmholtz-metadaten.de/diso#BurgersVector">Burgers Vector</a>
+               <sup class="type-c" title="Klasse">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasEndNode">
+      <h3>has end node<sup class="type-op" title="Objekt Eigenschaft">op</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#hasEndNode</p>
+      <div class="comment">
+         <span class="markdown">Sub-property of hasNode that relates the segment with the end node.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>hat Super-Eigenschaften</dt>
+            <dd>
+               <a href="#hasNode"
+                  title="https://purls.helmholtz-metadaten.de/diso#hasNode">has node</a>
+               <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+            </dd>
+            <dt>hat Domäne</dt>
+            <dd>
+               <a href="#Segment"
+                  title="https://purls.helmholtz-metadaten.de/diso#Segment">Segment</a>
+               <sup class="type-c" title="Klasse">c</sup>
+            </dd>
+            <dt>hat Range</dt>
+            <dd>
+               <a href="#Node" title="https://purls.helmholtz-metadaten.de/diso#Node">Node</a>
+               <sup class="type-c" title="Klasse">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasFamilyCrystalDirection">
+      <h3>has family crystal direction<sup class="type-op" title="Objekt Eigenschaft">op</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#hasFamilyCrystalDirection</p>
+      <div class="comment">
+         <span class="markdown">hasFamilyCrystalDirection represents the relationship between lattice direction and family of crystal direction.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>hat Domäne</dt>
+            <dd>
+               <a href="#LatticeDirection"
+                  title="https://purls.helmholtz-metadaten.de/diso#LatticeDirection">Lattice Direction</a>
+               <sup class="type-c" title="Klasse">c</sup>
+            </dd>
+            <dt>hat Range</dt>
+            <dd>
+               <a href="#FamilyOfCrystalDirection"
+                  title="https://purls.helmholtz-metadaten.de/diso#FamilyOfCrystalDirection">Family of Crystal Direction</a>
+               <sup class="type-c" title="Klasse">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasFamilyCrystalPlane">
+      <h3>has family crystal plane<sup class="type-op" title="Objekt Eigenschaft">op</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#hasFamilyCrystalPlane</p>
+      <div class="comment">
+         <span class="markdown">hasFamilyCrystalPlane represents the relationship between the lattice plane and the family of crystal planes.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>hat Domäne</dt>
+            <dd>
+               <a href="#LatticePlane"
+                  title="https://purls.helmholtz-metadaten.de/diso#LatticePlane">Lattice Plane</a>
+               <sup class="type-c" title="Klasse">c</sup>
+            </dd>
+            <dt>hat Range</dt>
+            <dd>
+               <a href="#FamilyOfCrystalPlane"
+                  title="https://purls.helmholtz-metadaten.de/diso#FamilyOfCrystalPlane">Family of Crystal Plane</a>
+               <sup class="type-c" title="Klasse">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasLatticeDirection">
+      <h3>has lattice direction<sup class="type-op" title="Objekt Eigenschaft">op</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#hasLatticeDirection</p>
+      <div class="comment">
+         <span class="markdown">hasLatticeDirection represents the relationship between a lattice or a lattice plane with lattice directions.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>hat Sub-Eigenschaften</dt>
+            <dd>
+               <a href="#hasSlipDirection"
+                  title="https://purls.helmholtz-metadaten.de/diso#hasSlipDirection">has slip direction</a>
+               <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+            </dd>
+            <dt>hat Domäne</dt>
+            <dd>
+               <a href="#https://purls.helmholtz-metadaten.de/cso#Lattice" title="https://purls.helmholtz-metadaten.de/cso#Lattice">Lattice</a>
+               <sup class="type-c" title="Klasse">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#LatticePlane"
+                  title="https://purls.helmholtz-metadaten.de/diso#LatticePlane">Lattice Plane</a>
+               <sup class="type-c" title="Klasse">c</sup>
+            </dd>
+            <dt>hat Range</dt>
+            <dd>
+               <a href="#LatticeDirection"
+                  title="https://purls.helmholtz-metadaten.de/diso#LatticeDirection">Lattice Direction</a>
+               <sup class="type-c" title="Klasse">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasLatticePlane">
+      <h3>has lattice plane<sup class="type-op" title="Objekt Eigenschaft">op</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#hasLatticePlane</p>
+      <div class="comment">
+         <span class="markdown">hasLatticePlane represents the relationship between a lattice and lattice planes.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>hat Sub-Eigenschaften</dt>
+            <dd>
+               <a href="#hasSlipPlane"
+                  title="https://purls.helmholtz-metadaten.de/diso#hasSlipPlane">has slip plane</a>
+               <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+            </dd>
+            <dt>hat Domäne</dt>
+            <dd>
+               <a href="#https://purls.helmholtz-metadaten.de/cso#CrystalStructure"
+                  title="https://purls.helmholtz-metadaten.de/cso#CrystalStructure">Crystal Structure</a>
+               <sup class="type-c" title="Klasse">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#https://purls.helmholtz-metadaten.de/cso#Lattice" title="https://purls.helmholtz-metadaten.de/cso#Lattice">Lattice</a>
+               <sup class="type-c" title="Klasse">c</sup>
+            </dd>
+            <dt>hat Range</dt>
+            <dd>
+               <a href="#LatticePlane"
+                  title="https://purls.helmholtz-metadaten.de/diso#LatticePlane">Lattice Plane</a>
+               <sup class="type-c" title="Klasse">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasLatticePoint">
+      <h3>has lattice point<sup class="type-op" title="Objekt Eigenschaft">op</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#hasLatticePoint</p>
+      <div class="comment">
+         <span class="markdown">hasLatticePoint represents the relationship between a lattice or lattice plane or lattice direction with lattice point.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>hat Domäne</dt>
+            <dd>
+               <a href="#https://purls.helmholtz-metadaten.de/cso#Lattice" title="https://purls.helmholtz-metadaten.de/cso#Lattice">Lattice</a>
+               <sup class="type-c" title="Klasse">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#LatticeDirection"
+                  title="https://purls.helmholtz-metadaten.de/diso#LatticeDirection">Lattice Direction</a>
+               <sup class="type-c" title="Klasse">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#LatticePlane"
+                  title="https://purls.helmholtz-metadaten.de/diso#LatticePlane">Lattice Plane</a>
+               <sup class="type-c" title="Klasse">c</sup>
+            </dd>
+            <dt>hat Range</dt>
+            <dd>
+               <a href="#LatticePoint"
+                  title="https://purls.helmholtz-metadaten.de/diso#LatticePoint">Lattice Point</a>
+               <sup class="type-c" title="Klasse">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasLineSense">
+      <h3>has line sense<sup class="type-op" title="Objekt Eigenschaft">op</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#hasLineSense</p>
+      <div class="comment">
+         <span class="markdown">hasLineSense represents the relationship between dislocation and line sense.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>hat Domäne</dt>
+            <dd>
+               <a href="#Dislocation"
+                  title="https://purls.helmholtz-metadaten.de/diso#Dislocation">Versetzung</a>
+               <sup class="type-c" title="Klasse">c</sup>
+            </dd>
+            <dt>hat Range</dt>
+            <dd>
+               <a href="#LineSense"
+                  title="https://purls.helmholtz-metadaten.de/diso#LineSense">Line Sense</a>
+               <sup class="type-c" title="Klasse">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasMathematicalRepresentation">
+      <h3>has mathematical representation<sup class="type-op" title="Objekt Eigenschaft">op</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#hasMathematicalRepresentation</p>
+      <div class="comment">
+         <span class="markdown">hasMathematicalRepresentation relates the entity with its mathematical representation.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>hat Super-Eigenschaften</dt>
+            <dd>
+               <a href="#hasRepresentation"
+                  title="https://purls.helmholtz-metadaten.de/diso#hasRepresentation">has representation</a>
+               <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+            </dd>
+            <dt>hat Domäne</dt>
+            <dd>
+               <a href="#Dislocation"
+                  title="https://purls.helmholtz-metadaten.de/diso#Dislocation">Versetzung</a>
+               <sup class="type-c" title="Klasse">c</sup>
+            </dd>
+            <dt>hat Range</dt>
+            <dd>
+               <a href="#Line" title="https://purls.helmholtz-metadaten.de/diso#Line">Line</a>
+               <sup class="type-c" title="Klasse">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasNode">
+      <h3>has node<sup class="type-op" title="Objekt Eigenschaft">op</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#hasNode</p>
+      <div class="comment">
+         <span class="markdown">hasNode represents the relationship between segment and node.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>hat Sub-Eigenschaften</dt>
+            <dd>
+               <a href="#hasEndNode"
+                  title="https://purls.helmholtz-metadaten.de/diso#hasEndNode">has end node</a>
+               <sup class="type-op" title="Objekt Eigenschaft">op</sup>, <a href="#hasStartNode"
+                  title="https://purls.helmholtz-metadaten.de/diso#hasStartNode">has start node</a>
+               <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+            </dd>
+            <dt>hat Domäne</dt>
+            <dd>
+               <a href="#Segment"
+                  title="https://purls.helmholtz-metadaten.de/diso#Segment">Segment</a>
+               <sup class="type-c" title="Klasse">c</sup>
+            </dd>
+            <dt>hat Range</dt>
+            <dd>
+               <a href="#Node" title="https://purls.helmholtz-metadaten.de/diso#Node">Node</a>
+               <sup class="type-c" title="Klasse">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasNumericalRepresentation">
+      <h3>has numerical representation<sup class="type-op" title="Objekt Eigenschaft">op</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#hasNumericalRepresentation</p>
+      <div class="comment">
+         <span class="markdown">hasNumericalRepresentation relates the entity with its numerical representation.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>hat Super-Eigenschaften</dt>
+            <dd>
+               <a href="#hasRepresentation"
+                  title="https://purls.helmholtz-metadaten.de/diso#hasRepresentation">has representation</a>
+               <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+            </dd>
+            <dt>hat Domäne</dt>
+            <dd>
+               <a href="#Line" title="https://purls.helmholtz-metadaten.de/diso#Line">Line</a>
+               <sup class="type-c" title="Klasse">c</sup>
+            </dd>
+            <dt>hat Range</dt>
+            <dd>
+               <a href="#DiscretizedLine"
+                  title="https://purls.helmholtz-metadaten.de/diso#DiscretizedLine">Discretized Line</a>
+               <sup class="type-c" title="Klasse">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://purls.helmholtz-metadaten.de/cso#hasPositionVector">
+      <h3>has position vector<sup class="type-op" title="Objekt Eigenschaft">op</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/cso#hasPositionVector</p>
+      <div class="comment">
+         <span class="markdown">hasPositionVector represents the relationship between entity and position vector.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>hat Domäne</dt>
+            <dd>
+               <a href="#https://purls.helmholtz-metadaten.de/cso#Point" title="https://purls.helmholtz-metadaten.de/cso#Point">Point</a>
+               <sup class="type-c" title="Klasse">c</sup>
+            </dd>
+            <dt>hat Range</dt>
+            <dd>
+               <a href="#https://purls.helmholtz-metadaten.de/cso#PositionVector"
+                  title="https://purls.helmholtz-metadaten.de/cso#PositionVector">Position Vector</a>
+               <sup class="type-c" title="Klasse">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasRepresentation">
+      <h3>has representation<sup class="type-op" title="Objekt Eigenschaft">op</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#hasRepresentation</p>
+      <div class="comment">
+         <span class="markdown">hasRepresentation relates the entity to another representation of entity.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>hat Sub-Eigenschaften</dt>
+            <dd>
+               <a href="#hasMathematicalRepresentation"
+                  title="https://purls.helmholtz-metadaten.de/diso#hasMathematicalRepresentation">has mathematical representation</a>
+               <sup class="type-op" title="Objekt Eigenschaft">op</sup>, <a href="#hasNumericalRepresentation"
+                  title="https://purls.helmholtz-metadaten.de/diso#hasNumericalRepresentation">has numerical representation</a>
+               <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+            </dd>
+            <dt>hat Domäne</dt>
+            <dd>
+               <a href="http://www.w3.org/2002/07/owl#Thing"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#Thing">thing</a>
+               <sup class="type-c" title="Klasse">c</sup>
+            </dd>
+            <dt>hat Range</dt>
+            <dd>
+               <a href="#DiscretizedLine"
+                  title="https://purls.helmholtz-metadaten.de/diso#DiscretizedLine">Discretized Line</a>
+               <sup class="type-c" title="Klasse">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Line" title="https://purls.helmholtz-metadaten.de/diso#Line">Line</a>
+               <sup class="type-c" title="Klasse">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasSegment">
+      <h3>has segment<sup class="type-op" title="Objekt Eigenschaft">op</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#hasSegment</p>
+      <div class="comment">
+         <span class="markdown">hasSegment represents the relationship between discretized line and segment.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>hat Domäne</dt>
+            <dd>
+               <a href="#DiscretizedLine"
+                  title="https://purls.helmholtz-metadaten.de/diso#DiscretizedLine">Discretized Line</a>
+               <sup class="type-c" title="Klasse">c</sup>
+            </dd>
+            <dt>hat Range</dt>
+            <dd>
+               <a href="#Segment"
+                  title="https://purls.helmholtz-metadaten.de/diso#Segment">Segment</a>
+               <sup class="type-c" title="Klasse">c</sup>
+            </dd>
+            <dt>ist inverse zu</dt>
+            <dd>
+               <a href="#isSegmentOf"
+                  title="https://purls.helmholtz-metadaten.de/diso#isSegmentOf">is segment of</a>
+               <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasShapeFunction">
+      <h3>has shape function<sup class="type-op" title="Objekt Eigenschaft">op</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#hasShapeFunction</p>
+      <div class="comment">
+         <span class="markdown">hasShapeFunction represents the relationship between discretized line and shape function.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>hat Domäne</dt>
+            <dd>
+               <a href="#DiscretizedLine"
+                  title="https://purls.helmholtz-metadaten.de/diso#DiscretizedLine">Discretized Line</a>
+               <sup class="type-c" title="Klasse">c</sup>
+            </dd>
+            <dt>hat Range</dt>
+            <dd>
+               <a href="#ShapeFunction"
+                  title="https://purls.helmholtz-metadaten.de/diso#ShapeFunction">Shape Function</a>
+               <sup class="type-c" title="Klasse">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasSlipDirection">
+      <h3>has slip direction<sup class="type-op" title="Objekt Eigenschaft">op</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#hasSlipDirection</p>
+      <div class="comment">
+         <span class="markdown">hasSlipDirection represents the relationship between the slip plane or slip system with the slip direction.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>hat Super-Eigenschaften</dt>
+            <dd>
+               <a href="#hasLatticeDirection"
+                  title="https://purls.helmholtz-metadaten.de/diso#hasLatticeDirection">has lattice direction</a>
+               <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+            </dd>
+            <dt>hat Domäne</dt>
+            <dd>
+               <a href="#SlipPlane"
+                  title="https://purls.helmholtz-metadaten.de/diso#SlipPlane">Slip Plane</a>
+               <sup class="type-c" title="Klasse">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#SlipSystem"
+                  title="https://purls.helmholtz-metadaten.de/diso#SlipSystem">Slip System</a>
+               <sup class="type-c" title="Klasse">c</sup>
+            </dd>
+            <dt>hat Range</dt>
+            <dd>
+               <a href="#SlipDirection"
+                  title="https://purls.helmholtz-metadaten.de/diso#SlipDirection">Slip Direction</a>
+               <sup class="type-c" title="Klasse">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasSlipPlane">
+      <h3>has slip plane<sup class="type-op" title="Objekt Eigenschaft">op</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#hasSlipPlane</p>
+      <div class="comment">
+         <span class="markdown">hasSlipPlane represents the relationship between crystal structure and slip plane.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>hat Super-Eigenschaften</dt>
+            <dd>
+               <a href="#hasLatticePlane"
+                  title="https://purls.helmholtz-metadaten.de/diso#hasLatticePlane">has lattice plane</a>
+               <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+            </dd>
+            <dt>hat Domäne</dt>
+            <dd>
+               <a href="#https://purls.helmholtz-metadaten.de/cso#CrystalStructure"
+                  title="https://purls.helmholtz-metadaten.de/cso#CrystalStructure">Crystal Structure</a>
+               <sup class="type-c" title="Klasse">c</sup>
+            </dd>
+            <dt>hat Range</dt>
+            <dd>
+               <a href="#SlipPlane"
+                  title="https://purls.helmholtz-metadaten.de/diso#SlipPlane">Slip Plane</a>
+               <sup class="type-c" title="Klasse">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasSlipPlaneNormal">
+      <h3>has slip plane normal<sup class="type-op" title="Objekt Eigenschaft">op</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#hasSlipPlaneNormal</p>
+      <div class="comment">
+         <span class="markdown">hasSlipPlaneNormal represents the relationship between a slip plane or slip system with slip plane normal.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>hat Domäne</dt>
+            <dd>
+               <a href="#SlipPlane"
+                  title="https://purls.helmholtz-metadaten.de/diso#SlipPlane">Slip Plane</a>
+               <sup class="type-c" title="Klasse">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#SlipSystem"
+                  title="https://purls.helmholtz-metadaten.de/diso#SlipSystem">Slip System</a>
+               <sup class="type-c" title="Klasse">c</sup>
+            </dd>
+            <dt>hat Range</dt>
+            <dd>
+               <a href="#SlipPlaneNormal"
+                  title="https://purls.helmholtz-metadaten.de/diso#SlipPlaneNormal">Slip Plane Normal</a>
+               <sup class="type-c" title="Klasse">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasSlipSystem">
+      <h3>has slip system<sup class="type-op" title="Objekt Eigenschaft">op</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#hasSlipSystem</p>
+      <div class="comment">
+         <span class="markdown">hasSlipSystem represents the relationship between a crystal structure and slip system.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>hat Domäne</dt>
+            <dd>
+               <a href="#https://purls.helmholtz-metadaten.de/cso#CrystalStructure"
+                  title="https://purls.helmholtz-metadaten.de/cso#CrystalStructure">Crystal Structure</a>
+               <sup class="type-c" title="Klasse">c</sup>
+            </dd>
+            <dt>hat Range</dt>
+            <dd>
+               <a href="#SlipSystem"
+                  title="https://purls.helmholtz-metadaten.de/diso#SlipSystem">Slip System</a>
+               <sup class="type-c" title="Klasse">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasStartNode">
+      <h3>has start node<sup class="type-op" title="Objekt Eigenschaft">op</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#hasStartNode</p>
+      <div class="comment">
+         <span class="markdown">Sub-property of hasNode that relates the segment with the start node.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>hat Super-Eigenschaften</dt>
+            <dd>
+               <a href="#hasNode"
+                  title="https://purls.helmholtz-metadaten.de/diso#hasNode">has node</a>
+               <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+            </dd>
+            <dt>hat Domäne</dt>
+            <dd>
+               <a href="#Segment"
+                  title="https://purls.helmholtz-metadaten.de/diso#Segment">Segment</a>
+               <sup class="type-c" title="Klasse">c</sup>
+            </dd>
+            <dt>hat Range</dt>
+            <dd>
+               <a href="#Node" title="https://purls.helmholtz-metadaten.de/diso#Node">Node</a>
+               <sup class="type-c" title="Klasse">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasVectorOrigin">
+      <h3>has vector origin<sup class="type-op" title="Objekt Eigenschaft">op</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#hasVectorOrigin</p>
+      <div class="comment">
+         <span class="markdown">hasVectorOrigin represents the relationship between lattice plane and origin.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>hat Domäne</dt>
+            <dd>
+               <a href="#LatticePlane"
+                  title="https://purls.helmholtz-metadaten.de/diso#LatticePlane">Lattice Plane</a>
+               <sup class="type-c" title="Klasse">c</sup>
+            </dd>
+            <dt>hat Range</dt>
+            <dd>
+               <a href="#VectorOrigin"
+                  title="https://purls.helmholtz-metadaten.de/diso#VectorOrigin">Ursprung</a>
+               <sup class="type-c" title="Klasse">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isSegmentOf">
+      <h3>is segment of<sup class="type-op" title="Objekt Eigenschaft">op</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#isSegmentOf</p>
+      <div class="comment">
+         <span class="markdown">Inverse of hasSegment</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>hat Domäne</dt>
+            <dd>
+               <a href="#Segment"
+                  title="https://purls.helmholtz-metadaten.de/diso#Segment">Segment</a>
+               <sup class="type-c" title="Klasse">c</sup>
+            </dd>
+            <dt>hat Range</dt>
+            <dd>
+               <a href="#DiscretizedLine"
+                  title="https://purls.helmholtz-metadaten.de/diso#DiscretizedLine">Discretized Line</a>
+               <sup class="type-c" title="Klasse">c</sup>
+            </dd>
+            <dt>ist inverse zu</dt>
+            <dd>
+               <a href="#hasSegment"
+                  title="https://purls.helmholtz-metadaten.de/diso#hasSegment">has segment</a>
+               <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="movesOn">
+      <h3>moves on<sup class="type-op" title="Objekt Eigenschaft">op</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#movesOn</p>
+      <div class="comment">
+         <span class="markdown">movesOn represents the relationship between dislocation and slip plane.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>hat Domäne</dt>
+            <dd>
+               <a href="#Dislocation"
+                  title="https://purls.helmholtz-metadaten.de/diso#Dislocation">Versetzung</a>
+               <sup class="type-c" title="Klasse">c</sup>
+            </dd>
+            <dt>hat Range</dt>
+            <dd>
+               <a href="#SlipPlane"
+                  title="https://purls.helmholtz-metadaten.de/diso#SlipPlane">Slip Plane</a>
+               <sup class="type-c" title="Klasse">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="observedBy">
+      <h3>observed by<sup class="type-op" title="Objekt Eigenschaft">op</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#observedBy</p>
+      <div class="comment">
+         <span class="markdown">observedBy represents the relationship between dislocation and microscopy techniques, e.g., TEM, FIM, etc.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>hat Domäne</dt>
+            <dd>
+               <a href="#Dislocation"
+                  title="https://purls.helmholtz-metadaten.de/diso#Dislocation">Versetzung</a>
+               <sup class="type-c" title="Klasse">c</sup>
+            </dd>
+            <dt>hat Range</dt>
+            <dd>
+               <a href="#FieldIonMicroscopy"
+                  title="https://purls.helmholtz-metadaten.de/diso#FieldIonMicroscopy">Field Ion Microscopy</a>
+               <sup class="type-c" title="Klasse">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#TransmissionElectronMicroscopy"
+                  title="https://purls.helmholtz-metadaten.de/diso#TransmissionElectronMicroscopy">Transmission Electron Microscopy</a>
+               <sup class="type-c" title="Klasse">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="resultsIn">
+      <h3>results in<sup class="type-op" title="Objekt Eigenschaft">op</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#resultsIn</p>
+      <div class="comment">
+         <span class="markdown">resultsIn represents the relationship between dislocation and lattice displacement.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>hat Domäne</dt>
+            <dd>
+               <a href="#Dislocation"
+                  title="https://purls.helmholtz-metadaten.de/diso#Dislocation">Versetzung</a>
+               <sup class="type-c" title="Klasse">c</sup>
+            </dd>
+            <dt>hat Range</dt>
+            <dd>
+               <a href="#LatticeDisplacement"
+                  title="https://purls.helmholtz-metadaten.de/diso#LatticeDisplacement">Lattice Displacement</a>
+               <sup class="type-c" title="Klasse">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+   <h2>Daten Eigenschaften</h2>
+   <ul class="hlist">
+      <li>
+         <a href="#directionMillerIndice"
+            title="https://purls.helmholtz-metadaten.de/diso#directionMillerIndice">direction miller indice</a>
+      </li>
+      <li>
+         <a href="#familyDirectionMillerIndice"
+            title="https://purls.helmholtz-metadaten.de/diso#familyDirectionMillerIndice">family direction miller indice</a>
+      </li>
+      <li>
+         <a href="#familyPlaneMillerIndice"
+            title="https://purls.helmholtz-metadaten.de/diso#familyPlaneMillerIndice">family plane miller indice</a>
+      </li>
+      <li>
+         <a href="#planeMillerIndice"
+            title="https://purls.helmholtz-metadaten.de/diso#planeMillerIndice">plane miller indice</a>
+      </li>
+      <li>
+         <a href="#slipArea"
+            title="https://purls.helmholtz-metadaten.de/diso#slipArea">slipArea</a>
+      </li>
+   </ul>
+   <div class="entity" id="directionMillerIndice">
+      <h3>direction miller indice<sup class="type-dp" title="Daten Eigenschaft">dp</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#dataproperties">Übersicht der Dateneigenschaften</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#directionMillerIndice</p>
+      <div class="comment">
+         <span class="markdown">directionMillerIndice represents Miller indice of lattice direction in string.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>hat Domäne</dt>
+            <dd>
+               <a href="#LatticeDirection"
+                  title="https://purls.helmholtz-metadaten.de/diso#LatticeDirection">Lattice Direction</a>
+               <sup class="type-c" title="Klasse">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#SlipPlaneNormal"
+                  title="https://purls.helmholtz-metadaten.de/diso#SlipPlaneNormal">Slip Plane Normal</a>
+               <sup class="type-c" title="Klasse">c</sup>
+            </dd>
+            <dt>hat Range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="familyDirectionMillerIndice">
+      <h3>family direction miller indice<sup class="type-dp" title="Daten Eigenschaft">dp</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#dataproperties">Übersicht der Dateneigenschaften</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#familyDirectionMillerIndice</p>
+      <div class="comment">
+         <span class="markdown">familyDirectionMillerIndice represents a set of miller indices of lattice direction in string.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>hat Domäne</dt>
+            <dd>
+               <a href="#FamilyOfCrystalDirection"
+                  title="https://purls.helmholtz-metadaten.de/diso#FamilyOfCrystalDirection">Family of Crystal Direction</a>
+               <sup class="type-c" title="Klasse">c</sup>
+            </dd>
+            <dt>hat Range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="familyPlaneMillerIndice">
+      <h3>family plane miller indice<sup class="type-dp" title="Daten Eigenschaft">dp</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#dataproperties">Übersicht der Dateneigenschaften</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#familyPlaneMillerIndice</p>
+      <div class="comment">
+         <span class="markdown">familyPlaneMillerIndice represents a set of Miller indice of lattice plane in string.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>hat Domäne</dt>
+            <dd>
+               <a href="#FamilyOfCrystalPlane"
+                  title="https://purls.helmholtz-metadaten.de/diso#FamilyOfCrystalPlane">Family of Crystal Plane</a>
+               <sup class="type-c" title="Klasse">c</sup>
+            </dd>
+            <dt>hat Range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="planeMillerIndice">
+      <h3>plane miller indice<sup class="type-dp" title="Daten Eigenschaft">dp</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#dataproperties">Übersicht der Dateneigenschaften</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#planeMillerIndice</p>
+      <div class="comment">
+         <span class="markdown">planeMillerIndice represents Miller indice of lattice plane in string.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>hat Domäne</dt>
+            <dd>
+               <a href="#LatticePlane"
+                  title="https://purls.helmholtz-metadaten.de/diso#LatticePlane">Lattice Plane</a>
+               <sup class="type-c" title="Klasse">c</sup>
+            </dd>
+            <dt>hat Range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="slipArea">
+      <h3>slipArea<sup class="type-dp" title="Daten Eigenschaft">dp</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#dataproperties">Übersicht der Dateneigenschaften</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#slipArea</p>
+      <div class="comment">
+         <span class="markdown">slipArea represents the slip area of discretized line in double.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>hat Domäne</dt>
+            <dd>
+               <a href="#DiscretizedLine"
+                  title="https://purls.helmholtz-metadaten.de/diso#DiscretizedLine">Discretized Line</a>
+               <sup class="type-c" title="Klasse">c</sup>
+            </dd>
+            <dt>hat Range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#double"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#double">double</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div id="legend">
+<h2>Legende <span class="backlink"> zur&uuml;ck zu <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Klassen">c</sup>: Klassen <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+</div>
+</div>
+</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Danksagung <span class="backlink"> zur&uuml;ck zum <a href="#toc">Inhaltsverzeichnis</a></span></h2>
+<p>
+Die Autoren bedanken sich bei<a href="http://www.essepuntato.it/">Silvio Peroni</a> f&uuml;r die Entwicklung von <a href="http://www.essepuntato.it/lode">LODE</a>, einer Umgebung zur Live-OWL-Dokumentation, die im Abschnitt Querverweise f&uuml;r die Darstellung verwendet wird, bei <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> f&uuml;r die Entwicklung von <a href="https://github.com/dgarijo/Widoco">Widoco</a>, welches f&uuml;r die Templates in dieser Anwendung verwendet wird.</p>
+</div>
+
+
+</div>
+</body>
+</html>
