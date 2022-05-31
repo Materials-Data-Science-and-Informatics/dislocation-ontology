@@ -1,16 +1,19 @@
 # Dislocation Ontology (DISO)
 
 [![PID](https://img.shields.io/badge/PID-https%3A%2F%2Fpurls.helmholtz--metadaten.de%2Fdiso-brightgreen)](https://purls.helmholtz-metadaten.de/diso) 
+[![doc](https://img.shields.io/badge/doc-https%3A%2F%2Fmaterials--data--science--and--informatics.github.io%2Fdislocation--ontology%2F-blue)](https://materials-data-science-and-informatics.github.io/dislocation-ontology/) 
+
 ![GitHub contributors](https://img.shields.io/github/contributors/Materials-Data-Science-and-Informatics/dislocation-ontology) 
 
 ## Table of content
   1. [About DISO](#about-diso)
   2. [Repository Description](#repository-description)
-  3. [Usage](#usage)
-  4. [Contact](#contact)
-  5. [License](#license)
-  6. [Acknowledgements](#acknowledgements)
-  7. [Citation](#citation)
+  3. [Documentation](#Documentation)
+  4. [Usage](#usage)
+  5. [Contact](#contact)
+  6. [License](#license)
+  7. [Acknowledgements](#acknowledgements)
+  8. [Citation](#citation)
 
 ## About DISO
 DISO is an ontology that defines the linear defect, in particular dislocation concepts and relations between them in crystalline materials. Moreover, Crystal Structure Ontology (CSO) and Crystallographic Defect Ontology (CDO), which ontologies define the concepts of crystal structureand crystalline defect, respectively, are also introduced in this repository. The ontology development processes are described following the well-known practices, e.g., using ontology metadata and reusing existing  ontologies,  e.g.,  MDO,  EMMO,  and  QUDT. To evaluate DISO, we have gathered competency questions (CQs) that will be answered via SPARQL query.
@@ -27,6 +30,8 @@ DISO is an ontology that defines the linear defect, in particular dislocation co
 * [crystal-structure-ontology](/crystal-structure-ontology) is a folder containing details of crystal structure ontology.
 * [crystallographic-defect-ontology](/crystallographic-defect-ontology) is a folder containing details of crystallographic defect ontology.
 
+## Documentation
+To make it easier to understand and reuse our ontology, human-readable documentation of the ontology is generated and can be found [here](https://materials-data-science-and-informatics.github.io/dislocation-ontology/).
 ## Usage
 * We recommend to use [Protégé 5.5.0](https://protege.stanford.edu/products.php#desktop-protege) to be able to view and navigate classes and properties in DISO.
 * We recommend also to use HermiT as a reasoner for DISO. You can select it through the menu *Reasoner* in Protégé software.
