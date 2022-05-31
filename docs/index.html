@@ -2,11 +2,11 @@
 <html>
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
- <link rel="stylesheet" href="resources/primer.css" media="screen" />    <link rel="stylesheet" href="resources/rec.css" media="screen" />    <link rel="stylesheet" href="resources/extra.css" media="screen" />    <link rel="stylesheet" href="resources/owl.css" media="screen" />    <title>Dislocation ontology</title>
+ <link rel="stylesheet" href="resources/primer.css" media="screen" />    <link rel="stylesheet" href="resources/rec.css" media="screen" />    <link rel="stylesheet" href="resources/extra.css" media="screen" />    <link rel="stylesheet" href="resources/owl.css" media="screen" />    <title>Dislocation Ontology</title>
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://purls.helmholtz-metadaten.de/diso","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://purls.helmholtz-metadaten.de/diso","name":"Dislocation ontology", "headline":"Document describing the ontology https://purls.helmholtz-metadaten.de/diso", "datePublished":"21.03.2022", "version":"1.0", "license":"http://creativecommons.org/licenses/by/3.0/", "author":[{"@type":"Person","name":"Ahmad Zainul Ihsan"}], "contributor":[{"@type":"Person","name":"Said Fathalla"},{"@type":"Person","name":"Stefan Sandfeld"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://purls.helmholtz-metadaten.de/diso","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://purls.helmholtz-metadaten.de/diso","name":"Dislocation Ontology", "headline":"Document describing the ontology https://purls.helmholtz-metadaten.de/diso", "datePublished":"21.03.2022", "version":"1.0", "license":"http://creativecommons.org/licenses/by/3.0/", "author":[{"@type":"Person","name":"Ahmad Zainul Ihsan"}], "contributor":[{"@type":"Person","name":"Said Fathalla"},{"@type":"Person","name":"Stefan Sandfeld"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -53,8 +53,8 @@ $(function(){
 <body>
 <div class="container">
 <div class="head">
-<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
-<h1>Dislocation ontology</h1>
+<div style="float:right">language <a href="index-de.html"><b>de</b></a> <a href="index-en.html"><b>en</b></a> </div>
+<h1>Dislocation Ontology</h1>
 <h2>Release 21.03.2022</h2>
 
 
@@ -79,12 +79,12 @@ $(function(){
 </div>
 <div class="status">
 <div>
-<span>Ready</span>
+<span>Ontology Specification Draft</span>
 </div>
 </div><div id="toc"></div>  
 
 <!--OVERVIEW SECTION-->
-    <div id="overview"><h2 id="overv" class="list">Dislocation ontology: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+    <div id="overview"><h2 id="overv" class="list">Dislocation Ontology: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <span class="markdown">
 This ontology has the following classes and properties.</span>
 <h4>Classes</h4>
@@ -111,9 +111,7 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#EdgeDislocation"
-         title="https://purls.helmholtz-metadaten.de/diso#EdgeDislocation">
-         <span>edge dislocation</span>
-      </a>
+         title="https://purls.helmholtz-metadaten.de/diso#EdgeDislocation">Edge Dislocation</a>
    </li>
    <li>
       <a href="#FamilyOfCrystalDirection"
@@ -161,8 +159,7 @@ This ontology has the following classes and properties.</span>
       <a href="#Node" title="https://purls.helmholtz-metadaten.de/diso#Node">Node</a>
    </li>
    <li>
-      <a href="#Origin"
-         title="https://purls.helmholtz-metadaten.de/diso#Origin">Origin</a>
+      <a href="#https://purls.helmholtz-metadaten.de/cso#Point" title="https://purls.helmholtz-metadaten.de/cso#Point">Point</a>
    </li>
    <li>
       <a href="#https://purls.helmholtz-metadaten.de/cso#PositionVector"
@@ -170,9 +167,7 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#ScrewDislocation"
-         title="https://purls.helmholtz-metadaten.de/diso#ScrewDislocation">
-         <span>screw dislocation</span>
-      </a>
+         title="https://purls.helmholtz-metadaten.de/diso#ScrewDislocation">Screw Dislocation</a>
    </li>
    <li>
       <a href="#Segment"
@@ -204,6 +199,10 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#https://purls.helmholtz-metadaten.de/cso#Vector" title="https://purls.helmholtz-metadaten.de/cso#Vector">Vector</a>
+   </li>
+   <li>
+      <a href="#VectorOrigin"
+         title="https://purls.helmholtz-metadaten.de/diso#VectorOrigin">Vector Origin</a>
    </li>
 </ul><h4>Object Properties</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
    <li>
@@ -251,12 +250,8 @@ This ontology has the following classes and properties.</span>
          title="https://purls.helmholtz-metadaten.de/diso#hasNumericalRepresentation">has numerical representation</a>
    </li>
    <li>
-      <a href="#hasOrigin"
-         title="https://purls.helmholtz-metadaten.de/diso#hasOrigin">has origin</a>
-   </li>
-   <li>
-      <a href="#https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl#hasPositionVector"
-         title="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl#hasPositionVector">has position vector</a>
+      <a href="#https://purls.helmholtz-metadaten.de/cso#hasPositionVector"
+         title="https://purls.helmholtz-metadaten.de/cso#hasPositionVector">has position vector</a>
    </li>
    <li>
       <a href="#hasRepresentation"
@@ -289,6 +284,10 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#hasStartNode"
          title="https://purls.helmholtz-metadaten.de/diso#hasStartNode">has start node</a>
+   </li>
+   <li>
+      <a href="#hasVectorOrigin"
+         title="https://purls.helmholtz-metadaten.de/diso#hasVectorOrigin">has vector origin</a>
    </li>
    <li>
       <a href="#isSegmentOf"
@@ -325,9 +324,7 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#slipArea"
-         title="https://purls.helmholtz-metadaten.de/diso#slipArea">
-         <span>slip area</span>
-      </a>
+         title="https://purls.helmholtz-metadaten.de/diso#slipArea">slipArea</a>
    </li>
 </ul><h4>Annotation Properties</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
    <li>
@@ -366,8 +363,8 @@ This ontology has the following classes and properties.</span>
    
 
 <!--CROSSREF SECTION-->
-   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for Dislocation ontology classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
-This section provides details for each class and property defined by Dislocation ontology.
+   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for Dislocation Ontology classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by Dislocation Ontology.
 <div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
    <h3 id="classes-headline" class="list">Classes</h3>
    <ul class="hlist">
@@ -393,9 +390,7 @@ This section provides details for each class and property defined by Dislocation
       </li>
       <li>
          <a href="#EdgeDislocation"
-            title="https://purls.helmholtz-metadaten.de/diso#EdgeDislocation">
-            <span>edge dislocation</span>
-         </a>
+            title="https://purls.helmholtz-metadaten.de/diso#EdgeDislocation">Edge Dislocation</a>
       </li>
       <li>
          <a href="#FamilyOfCrystalDirection"
@@ -443,8 +438,7 @@ This section provides details for each class and property defined by Dislocation
          <a href="#Node" title="https://purls.helmholtz-metadaten.de/diso#Node">Node</a>
       </li>
       <li>
-         <a href="#Origin"
-            title="https://purls.helmholtz-metadaten.de/diso#Origin">Origin</a>
+         <a href="#https://purls.helmholtz-metadaten.de/cso#Point" title="https://purls.helmholtz-metadaten.de/cso#Point">Point</a>
       </li>
       <li>
          <a href="#https://purls.helmholtz-metadaten.de/cso#PositionVector"
@@ -452,9 +446,7 @@ This section provides details for each class and property defined by Dislocation
       </li>
       <li>
          <a href="#ScrewDislocation"
-            title="https://purls.helmholtz-metadaten.de/diso#ScrewDislocation">
-            <span>screw dislocation</span>
-         </a>
+            title="https://purls.helmholtz-metadaten.de/diso#ScrewDislocation">Screw Dislocation</a>
       </li>
       <li>
          <a href="#Segment"
@@ -487,6 +479,10 @@ This section provides details for each class and property defined by Dislocation
       <li>
          <a href="#https://purls.helmholtz-metadaten.de/cso#Vector" title="https://purls.helmholtz-metadaten.de/cso#Vector">Vector</a>
       </li>
+      <li>
+         <a href="#VectorOrigin"
+            title="https://purls.helmholtz-metadaten.de/diso#VectorOrigin">Vector Origin</a>
+      </li>
    </ul>
    <div class="entity" id="BurgersVector">
       <h3>Burgers Vector<sup class="type-c" title="class">c</sup>
@@ -496,7 +492,7 @@ This section provides details for each class and property defined by Dislocation
       <p>
          <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#BurgersVector</p>
       <div class="comment">
-         <span class="markdown">An elementary unit (length order of lattice parameter) of lattice translation.</span>
+         <span class="markdown">An elementary unit (length order of lattice parameter) of lattice translation. The basic notion of the Burgers vector comes from the closure failure of an initially perfect lattice due to the existence of dislocation. The magnitude and direction of closure failure are characterized by the Burgers vector.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
@@ -520,7 +516,7 @@ This section provides details for each class and property defined by Dislocation
       <p>
          <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/cso#CrystalStructure</p>
       <div class="comment">
-         <span class="markdown">A crystal structure is described by both of the lattice geometry and atomic arrangements within the unit cell.</span>
+         <span class="markdown">A crystal structure is described by the lattice geometry and atomic arrangements within the unit cell.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
@@ -543,13 +539,13 @@ This section provides details for each class and property defined by Dislocation
       <p>
          <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/cdo#CrystallographicDefect</p>
       <div class="comment">
-         <span class="markdown">Lattice irregularity having one or more of its dimensions on the order of an atomic diameter.</span>
+         <span class="markdown">The crystallographic defect is a lattice irregularity that has one or more dimensions on the order of an atomic diameter.</span>
       </div>
       <dl class="description">
          <dt>has sub-classes</dt>
          <dd>
-            <a href="#Dislocation"
-               title="https://purls.helmholtz-metadaten.de/diso#Dislocation">Dislocation</a>
+            <a href="#LineDefect"
+               title="https://purls.helmholtz-metadaten.de/diso#LineDefect">Line Defect</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -562,7 +558,7 @@ This section provides details for each class and property defined by Dislocation
       <p>
          <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#DiscretizedLine</p>
       <div class="comment">
-         <span class="markdown">The numerical representation of dislocation line as a mathematical line, e.g. an oriented curve, is being discretized into the number of segments.</span>
+         <span class="markdown">The numerical representation of the dislocation line that is discretized into the number of segments.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
@@ -574,14 +570,21 @@ This section provides details for each class and property defined by Dislocation
             <sup class="type-op" title="object property">op</sup>, <a href="#hasShapeFunction"
                title="https://purls.helmholtz-metadaten.de/diso#hasShapeFunction">has shape function</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#slipArea"
-               title="https://purls.helmholtz-metadaten.de/diso#slipArea">slip area</a>
+               title="https://purls.helmholtz-metadaten.de/diso#slipArea">slipArea</a>
             <sup class="type-dp" title="data property">dp</sup>
          </dd>
          <dt>is in range of</dt>
          <dd>
-            <a href="#isSegmentOf"
+            <a href="#hasNumericalRepresentation"
+               title="https://purls.helmholtz-metadaten.de/diso#hasNumericalRepresentation">has numerical representation</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isSegmentOf"
                title="https://purls.helmholtz-metadaten.de/diso#isSegmentOf">is segment of</a>
             <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#Line" title="https://purls.helmholtz-metadaten.de/diso#Line">Line</a>
+            <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
@@ -593,27 +596,21 @@ This section provides details for each class and property defined by Dislocation
       <p>
          <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#Dislocation</p>
       <div class="comment">
-         <span class="markdown">A line object that is a boundary separating the regions on the slip plane which have undergone slip from those that have not.</span>
+         <span class="markdown">Linear or one-dimensional defect around which some of the atoms are misaligned. In the mesoscale, a dislocation is a line object that is a boundary separating the regions on the slip plane which have undergone slip from those that have not.</span>
       </div>
       <dl class="description">
-         <dt>is equivalent to</dt>
+         <dt>has super-classes</dt>
          <dd>
             <a href="#LineDefect"
                title="https://purls.helmholtz-metadaten.de/diso#LineDefect">Line Defect</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="#https://purls.helmholtz-metadaten.de/cdo#CrystallographicDefect"
-               title="https://purls.helmholtz-metadaten.de/cdo#CrystallographicDefect">Crystallographic Defect</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
          <dt>has sub-classes</dt>
          <dd>
             <a href="#EdgeDislocation"
-               title="https://purls.helmholtz-metadaten.de/diso#EdgeDislocation">edge dislocation</a>
+               title="https://purls.helmholtz-metadaten.de/diso#EdgeDislocation">Edge Dislocation</a>
             <sup class="type-c" title="class">c</sup>, <a href="#ScrewDislocation"
-               title="https://purls.helmholtz-metadaten.de/diso#ScrewDislocation">screw dislocation</a>
+               title="https://purls.helmholtz-metadaten.de/diso#ScrewDislocation">Screw Dislocation</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in domain of</dt>
@@ -635,17 +632,26 @@ This section provides details for each class and property defined by Dislocation
       </dl>
    </div>
    <div class="entity" id="EdgeDislocation">
-      <h3>edge dislocation<sup class="type-c" title="class">c</sup>
+      <h3>Edge Dislocation<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#EdgeDislocation</p>
+      <div class="comment">
+         <span class="markdown">A dislocation that has a line sense perpendicular to its Burgers vector.</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
             <a href="#Dislocation"
                title="https://purls.helmholtz-metadaten.de/diso#Dislocation">Dislocation</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#ScrewDislocation"
+               title="https://purls.helmholtz-metadaten.de/diso#ScrewDislocation">Screw Dislocation</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -658,7 +664,7 @@ This section provides details for each class and property defined by Dislocation
       <p>
          <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#FamilyOfCrystalDirection</p>
       <div class="comment">
-         <span class="markdown">a set of symmetrically equivalent directions in the lattice.</span>
+         <span class="markdown">A set of symmetrically equivalent directions in the lattice.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
@@ -681,6 +687,12 @@ This section provides details for each class and property defined by Dislocation
                title="https://purls.helmholtz-metadaten.de/diso#hasFamilyCrystalDirection">has family crystal direction</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#FamilyOfCrystalPlane"
+               title="https://purls.helmholtz-metadaten.de/diso#FamilyOfCrystalPlane">Family of Crystal Plane</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
       </dl>
    </div>
    <div class="entity" id="FamilyOfCrystalPlane">
@@ -691,7 +703,7 @@ This section provides details for each class and property defined by Dislocation
       <p>
          <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#FamilyOfCrystalPlane</p>
       <div class="comment">
-         <span class="markdown">a set of symmetrically equivalent planes in the lattice.</span>
+         <span class="markdown">A set of symmetrically equivalent planes in the lattice.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
@@ -714,6 +726,12 @@ This section provides details for each class and property defined by Dislocation
                title="https://purls.helmholtz-metadaten.de/diso#hasFamilyCrystalPlane">has family crystal plane</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#FamilyOfCrystalDirection"
+               title="https://purls.helmholtz-metadaten.de/diso#FamilyOfCrystalDirection">Family of Crystal Direction</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
       </dl>
    </div>
    <div class="entity" id="FieldIonMicroscopy">
@@ -724,8 +742,16 @@ This section provides details for each class and property defined by Dislocation
       <p>
          <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#FieldIonMicroscopy</p>
       <div class="comment">
-         <span class="markdown">Field Ion Microscopy (FIM) is a type of microscopy techniques that can be used to image the arrangement of atoms at the surface of a sharp metal tip.</span>
+         <span class="markdown">Field Ion Microscopy (FIM) is a microscopy technique that can be used to image the arrangement of atoms.</span>
       </div>
+      <dl class="description">
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#TransmissionElectronMicroscopy"
+               title="https://purls.helmholtz-metadaten.de/diso#TransmissionElectronMicroscopy">Transmission Electron Microscopy</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
    </div>
    <div class="entity" id="https://purls.helmholtz-metadaten.de/cso#Lattice">
       <h3>Lattice<sup class="type-c" title="class">c</sup>
@@ -735,7 +761,7 @@ This section provides details for each class and property defined by Dislocation
       <p>
          <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/cso#Lattice</p>
       <div class="comment">
-         <span class="markdown">A lattice defines a periodic arrangement of one or more atoms.</span>
+         <span class="markdown">The mathematical concept to represent the periodicity of a crystal. A lattice defines a periodic arrangement of one or more atoms.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
@@ -750,7 +776,7 @@ This section provides details for each class and property defined by Dislocation
       <p>
          <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#LatticeDirection</p>
       <div class="comment">
-         <span class="markdown">A direction inside the lattice that connecting two lattice points.</span>
+         <span class="markdown">The vector direction inside the lattice that is connecting two lattice points.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
@@ -788,7 +814,7 @@ This section provides details for each class and property defined by Dislocation
       <p>
          <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#LatticeDisplacement</p>
       <div class="comment">
-         <span class="markdown">The displacement of atoms from its perfect lattice sites due to the existence of defects, e.g., (point defect, line defect, and grain boundary)</span>
+         <span class="markdown">The displacement of atoms from their perfect lattice sites due to the existence of defects, e.g., point defect, line defect, and grain boundary.</span>
       </div>
       <dl class="description">
          <dt>is in range of</dt>
@@ -807,7 +833,7 @@ This section provides details for each class and property defined by Dislocation
       <p>
          <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#LatticePlane</p>
       <div class="comment">
-         <span class="markdown">Lattice plane, forms an infinitely stretched plane (characterized through a plane normal) that cuts through lattice points such that again a regular arrangement of lattice points in the plane occurs.</span>
+         <span class="markdown">The lattice plane forms an infinitely stretched plane (characterized through a plane normal) that cuts through lattice points such that, again, a regular arrangement of lattice points in the plane occurs.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
@@ -826,8 +852,8 @@ This section provides details for each class and property defined by Dislocation
          <dd>
             <a href="#hasFamilyCrystalPlane"
                title="https://purls.helmholtz-metadaten.de/diso#hasFamilyCrystalPlane">has family crystal plane</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#hasOrigin"
-               title="https://purls.helmholtz-metadaten.de/diso#hasOrigin">has origin</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasVectorOrigin"
+               title="https://purls.helmholtz-metadaten.de/diso#hasVectorOrigin">has vector origin</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#planeMillerIndice"
                title="https://purls.helmholtz-metadaten.de/diso#planeMillerIndice">plane miller indice</a>
             <sup class="type-dp" title="data property">dp</sup>
@@ -848,11 +874,14 @@ This section provides details for each class and property defined by Dislocation
       <p>
          <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#LatticePoint</p>
       <div class="comment">
-         <span class="markdown">Lattice points are the points where atoms or molecules are located</span>
+         <span class="markdown">Lattice point is the point where atom(s) or molecule(s) is located.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
-         <dd/>
+         <dd>
+            <a href="#https://purls.helmholtz-metadaten.de/cso#Point" title="https://purls.helmholtz-metadaten.de/cso#Point">Point</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
          <dt>is in range of</dt>
          <dd>
             <a href="#hasLatticePoint"
@@ -869,11 +898,35 @@ This section provides details for each class and property defined by Dislocation
       <p>
          <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#Line</p>
       <div class="comment">
-         <span class="markdown">Mathematical representation of dislocation as 'Line'. An instance of mathematical representation of dislocation line is an oriented curve paramterized by its arc length.</span>
+         <span class="markdown">Mathematical representation of dislocation as 'Line'. An instance of mathematical representation of a dislocation line is an oriented curve parameterized by its arc length.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
-         <dd/>
+         <dd>
+            <a href="http://www.w3.org/2002/07/owl#Thing"
+               target="_blank"
+               title="http://www.w3.org/2002/07/owl#Thing">thing</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hasNumericalRepresentation"
+               title="https://purls.helmholtz-metadaten.de/diso#hasNumericalRepresentation">has numerical representation</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasMathematicalRepresentation"
+               title="https://purls.helmholtz-metadaten.de/diso#hasMathematicalRepresentation">has mathematical representation</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#DiscretizedLine"
+               title="https://purls.helmholtz-metadaten.de/diso#DiscretizedLine">Discretized Line</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Node" title="https://purls.helmholtz-metadaten.de/diso#Node">Node</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
       </dl>
    </div>
    <div class="entity" id="LineDefect">
@@ -886,7 +939,20 @@ This section provides details for each class and property defined by Dislocation
       <div class="comment">
          <span class="markdown">Linear or one-dimensional defect around which some of the atoms are misaligned.</span>
       </div>
-      <dl class="description"/>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#https://purls.helmholtz-metadaten.de/cdo#CrystallographicDefect"
+               title="https://purls.helmholtz-metadaten.de/cdo#CrystallographicDefect">Crystallographic Defect</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#Dislocation"
+               title="https://purls.helmholtz-metadaten.de/diso#Dislocation">Dislocation</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
    </div>
    <div class="entity" id="LineSense">
       <h3>Line Sense<sup class="type-c" title="class">c</sup>
@@ -896,7 +962,7 @@ This section provides details for each class and property defined by Dislocation
       <p>
          <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#LineSense</p>
       <div class="comment">
-         <span class="markdown">Sense that characterizes a directed line (has a start and an end).</span>
+         <span class="markdown">A sense that characterizes a directed line, i.e., it has a start and an end.</span>
       </div>
       <dl class="description">
          <dt>is in range of</dt>
@@ -915,11 +981,14 @@ This section provides details for each class and property defined by Dislocation
       <p>
          <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#Node</p>
       <div class="comment">
-         <span class="markdown">Node of a segment</span>
+         <span class="markdown">A point of a segment.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
-         <dd/>
+         <dd>
+            <a href="#https://purls.helmholtz-metadaten.de/cso#Point" title="https://purls.helmholtz-metadaten.de/cso#Point">Point</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
          <dt>is in range of</dt>
          <dd>
             <a href="#hasEndNode"
@@ -930,29 +999,41 @@ This section provides details for each class and property defined by Dislocation
                title="https://purls.helmholtz-metadaten.de/diso#hasStartNode">has start node</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#Line" title="https://purls.helmholtz-metadaten.de/diso#Line">Line</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Segment"
+               title="https://purls.helmholtz-metadaten.de/diso#Segment">Segment</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
       </dl>
    </div>
-   <div class="entity" id="Origin">
-      <h3>Origin<sup class="type-c" title="class">c</sup>
+   <div class="entity" id="https://purls.helmholtz-metadaten.de/cso#Point">
+      <h3>Point<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#Origin</p>
+         <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/cso#Point</p>
       <div class="comment">
-         <span class="markdown">Origin is fixed point which is needed by vector to identify other points in the space relatives to its origin.</span>
+         <span class="markdown">In classical Euclidean geometry, a point is a primitive notion that models an exact location in the space, and has no length, width, or thickness.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
+         <dd/>
+         <dt>has sub-classes</dt>
          <dd>
-            <a href="#https://purls.helmholtz-metadaten.de/cso#PositionVector"
-               title="https://purls.helmholtz-metadaten.de/cso#PositionVector">Position Vector</a>
+            <a href="#LatticePoint"
+               title="https://purls.helmholtz-metadaten.de/diso#LatticePoint">Lattice Point</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Node" title="https://purls.helmholtz-metadaten.de/diso#Node">Node</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#VectorOrigin"
+               title="https://purls.helmholtz-metadaten.de/diso#VectorOrigin">Vector Origin</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
-         <dt>is in range of</dt>
+         <dt>is in domain of</dt>
          <dd>
-            <a href="#hasOrigin"
-               title="https://purls.helmholtz-metadaten.de/diso#hasOrigin">has origin</a>
+            <a href="#https://purls.helmholtz-metadaten.de/cso#hasPositionVector"
+               title="https://purls.helmholtz-metadaten.de/cso#hasPositionVector">has position vector</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -965,7 +1046,7 @@ This section provides details for each class and property defined by Dislocation
       <p>
          <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/cso#PositionVector</p>
       <div class="comment">
-         <span class="markdown">Position vector is a Euclidean vector that represents the position of a point P in space in relation to an arbitrary reference origin O.</span>
+         <span class="markdown">Euclidean vector that represents the position of a point P in space in relation to an arbitrary reference origin O.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
@@ -973,32 +1054,35 @@ This section provides details for each class and property defined by Dislocation
             <a href="#https://purls.helmholtz-metadaten.de/cso#Vector" title="https://purls.helmholtz-metadaten.de/cso#Vector">Vector</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
-         <dt>has sub-classes</dt>
-         <dd>
-            <a href="#Origin"
-               title="https://purls.helmholtz-metadaten.de/diso#Origin">Origin</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
          <dt>is in range of</dt>
          <dd>
-            <a href="#https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl#hasPositionVector"
-               title="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl#hasPositionVector">has position vector</a>
+            <a href="#https://purls.helmholtz-metadaten.de/cso#hasPositionVector"
+               title="https://purls.helmholtz-metadaten.de/cso#hasPositionVector">has position vector</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
    <div class="entity" id="ScrewDislocation">
-      <h3>screw dislocation<sup class="type-c" title="class">c</sup>
+      <h3>Screw Dislocation<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#ScrewDislocation</p>
+      <div class="comment">
+         <span class="markdown">A dislocation that has a line sense parallel to its Burgers vector.</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
             <a href="#Dislocation"
                title="https://purls.helmholtz-metadaten.de/diso#Dislocation">Dislocation</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#EdgeDislocation"
+               title="https://purls.helmholtz-metadaten.de/diso#EdgeDislocation">Edge Dislocation</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -1011,7 +1095,7 @@ This section provides details for each class and property defined by Dislocation
       <p>
          <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#Segment</p>
       <div class="comment">
-         <span class="markdown">A segment is a part of a line that is bounded by two distinct end points, and contains every point on the line that is between its endpoints.</span>
+         <span class="markdown">The segment is a part of a line bounded by two distinct end points and may contain points on the line between its endpoints.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
@@ -1034,6 +1118,11 @@ This section provides details for each class and property defined by Dislocation
                title="https://purls.helmholtz-metadaten.de/diso#hasSegment">has segment</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#Node" title="https://purls.helmholtz-metadaten.de/diso#Node">Node</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
       </dl>
    </div>
    <div class="entity" id="ShapeFunction">
@@ -1044,7 +1133,7 @@ This section provides details for each class and property defined by Dislocation
       <p>
          <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#ShapeFunction</p>
       <div class="comment">
-         <span class="markdown">The shape function is the function which interpolates the solution between the discrete values obtained at the mesh nodes. In the dicretized dislocation, the shape function detemines the shape of segment, ultimately determines the whole discretized line shape. Examples of shape function that is used to discretized the dislocation are, circular, elliptic, helical, linear, cubic, and quintic.</span>
+         <span class="markdown">The shape function is the function that interpolates the solution between the discrete values obtained at the mesh nodes. In discretized dislocation, the shape function determines the shape of a segment and ultimately determines the shape of the line. Examples of shape function that is used to discretize the dislocation are circular, elliptic, spiral, linear, cubic, and quintic.</span>
       </div>
       <dl class="description">
          <dt>is in range of</dt>
@@ -1063,7 +1152,7 @@ This section provides details for each class and property defined by Dislocation
       <p>
          <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#SlipDirection</p>
       <div class="comment">
-         <span class="markdown">The direction in the slip plane corresponding to one of the shortest lattice translation vectors.</span>
+         <span class="markdown">The direction in the slip plane along which plastic deformation takes place. The slip direction corresponds to one of the shortest lattice translation vectors.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
@@ -1088,7 +1177,7 @@ This section provides details for each class and property defined by Dislocation
       <p>
          <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#SlipPlane</p>
       <div class="comment">
-         <span class="markdown">Slip plane is normally the plane with the highest density of atoms, i.e. those which are most widely spaced.</span>
+         <span class="markdown">The crystallographic/lattice plane along which the dislocation line traverses/moves. The slip plane is usually the plane with the highest density of atoms, i.e. most widely spaced.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
@@ -1115,7 +1204,7 @@ This section provides details for each class and property defined by Dislocation
       <p>
          <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#SlipPlaneNormal</p>
       <div class="comment">
-         <span class="markdown">Unit normal vector of slip planes</span>
+         <span class="markdown">The unit normal vector of slip planes.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
@@ -1139,7 +1228,7 @@ This section provides details for each class and property defined by Dislocation
       <p>
          <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#SlipSystem</p>
       <div class="comment">
-         <span class="markdown">Slip system is defined as the set of slip planes with the same unit normal vector and the same slip direction.</span>
+         <span class="markdown">A slip system is defined as the set of slip planes with the same unit normal vector and the same slip direction.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
@@ -1160,8 +1249,16 @@ This section provides details for each class and property defined by Dislocation
       <p>
          <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#TransmissionElectronMicroscopy</p>
       <div class="comment">
-         <span class="markdown">Transmission electron microscopy (TEM) is a microscopy technique in which a beam of electrons is transmitted through a specimen to form an image. The specimen is most often an ultrathin section less than 100 nm thick or a suspension on a grid.</span>
+         <span class="markdown">Transmission electron microscopy (TEM) is a microscopy technique in which a beam of electrons is transmitted through a specimen to form an image. The specimen is often an ultrathin section less than 100 nm thick.</span>
       </div>
+      <dl class="description">
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#FieldIonMicroscopy"
+               title="https://purls.helmholtz-metadaten.de/diso#FieldIonMicroscopy">Field Ion Microscopy</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
    </div>
    <div class="entity" id="https://purls.helmholtz-metadaten.de/cso#Vector">
       <h3>Vector<sup class="type-c" title="class">c</sup>
@@ -1171,7 +1268,7 @@ This section provides details for each class and property defined by Dislocation
       <p>
          <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/cso#Vector</p>
       <div class="comment">
-         <span class="markdown">(Euclidean) vector used to represent quantities that both magnitude and direction.</span>
+         <span class="markdown">(Euclidean) vector is used to represent quantities that both magnitude and direction.</span>
       </div>
       <dl class="description">
          <dt>has sub-classes</dt>
@@ -1185,6 +1282,30 @@ This section provides details for each class and property defined by Dislocation
             <sup class="type-c" title="class">c</sup>, <a href="#SlipPlaneNormal"
                title="https://purls.helmholtz-metadaten.de/diso#SlipPlaneNormal">Slip Plane Normal</a>
             <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="VectorOrigin">
+      <h3>Vector Origin<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#VectorOrigin</p>
+      <div class="comment">
+         <span class="markdown">A fixed point that is needed by the vector to identify other points in the space relative to its origin.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#https://purls.helmholtz-metadaten.de/cso#Point" title="https://purls.helmholtz-metadaten.de/cso#Point">Point</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasVectorOrigin"
+               title="https://purls.helmholtz-metadaten.de/diso#hasVectorOrigin">has vector origin</a>
+            <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
@@ -1236,12 +1357,8 @@ This section provides details for each class and property defined by Dislocation
             title="https://purls.helmholtz-metadaten.de/diso#hasNumericalRepresentation">has numerical representation</a>
       </li>
       <li>
-         <a href="#hasOrigin"
-            title="https://purls.helmholtz-metadaten.de/diso#hasOrigin">has origin</a>
-      </li>
-      <li>
-         <a href="#https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl#hasPositionVector"
-            title="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl#hasPositionVector">has position vector</a>
+         <a href="#https://purls.helmholtz-metadaten.de/cso#hasPositionVector"
+            title="https://purls.helmholtz-metadaten.de/cso#hasPositionVector">has position vector</a>
       </li>
       <li>
          <a href="#hasRepresentation"
@@ -1276,6 +1393,10 @@ This section provides details for each class and property defined by Dislocation
             title="https://purls.helmholtz-metadaten.de/diso#hasStartNode">has start node</a>
       </li>
       <li>
+         <a href="#hasVectorOrigin"
+            title="https://purls.helmholtz-metadaten.de/diso#hasVectorOrigin">has vector origin</a>
+      </li>
+      <li>
          <a href="#isSegmentOf"
             title="https://purls.helmholtz-metadaten.de/diso#isSegmentOf">is segment of</a>
       </li>
@@ -1300,7 +1421,7 @@ This section provides details for each class and property defined by Dislocation
       <p>
          <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#hasBurgersVector</p>
       <div class="comment">
-         <span class="markdown">Representas relation from dislocation to Burgers vector</span>
+         <span class="markdown">hasBurgersVector represents the relationship between dislocation to Burgers vector.</span>
       </div>
       <div class="description">
          <dl>
@@ -1327,7 +1448,7 @@ This section provides details for each class and property defined by Dislocation
       <p>
          <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#hasEndNode</p>
       <div class="comment">
-         <span class="markdown">Sub-property of hasNode that relates the segment with the end node</span>
+         <span class="markdown">Sub-property of hasNode that relates the segment with the end node.</span>
       </div>
       <div class="description">
          <dl>
@@ -1386,7 +1507,7 @@ This section provides details for each class and property defined by Dislocation
       <p>
          <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#hasFamilyCrystalPlane</p>
       <div class="comment">
-         <span class="markdown">hasFamilyCrystalPlane represents the relationship between lattice Plane and family of crystal plane.</span>
+         <span class="markdown">hasFamilyCrystalPlane represents the relationship between the lattice plane and the family of crystal planes.</span>
       </div>
       <div class="description">
          <dl>
@@ -1413,7 +1534,7 @@ This section provides details for each class and property defined by Dislocation
       <p>
          <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#hasLatticeDirection</p>
       <div class="comment">
-         <span class="markdown">hasLatticeDirection represents the relationship between a lattice or a lattice plane and lattice directions.</span>
+         <span class="markdown">hasLatticeDirection represents the relationship between a lattice or a lattice plane with lattice directions.</span>
       </div>
       <div class="description">
          <dl>
@@ -1485,7 +1606,7 @@ This section provides details for each class and property defined by Dislocation
       <p>
          <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#hasLatticePoint</p>
       <div class="comment">
-         <span class="markdown">hasLatticePoint represents the relationship between a lattice or lattice plane or lattice direction with lattice points.</span>
+         <span class="markdown">hasLatticePoint represents the relationship between a lattice or lattice plane or lattice direction with lattice point.</span>
       </div>
       <div class="description">
          <dl>
@@ -1519,7 +1640,7 @@ This section provides details for each class and property defined by Dislocation
       <p>
          <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#hasLineSense</p>
       <div class="comment">
-         <span class="markdown">hasLineSense represents the relationship between a dislocation and a line sense.</span>
+         <span class="markdown">hasLineSense represents the relationship between dislocation and line sense.</span>
       </div>
       <div class="description">
          <dl>
@@ -1546,7 +1667,7 @@ This section provides details for each class and property defined by Dislocation
       <p>
          <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#hasMathematicalRepresentation</p>
       <div class="comment">
-         <span class="markdown">relates the entity with its mathematical representation</span>
+         <span class="markdown">hasMathematicalRepresentation relates the entity with its mathematical representation.</span>
       </div>
       <div class="description">
          <dl>
@@ -1562,6 +1683,11 @@ This section provides details for each class and property defined by Dislocation
                   title="https://purls.helmholtz-metadaten.de/diso#Dislocation">Dislocation</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Line" title="https://purls.helmholtz-metadaten.de/diso#Line">Line</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
          </dl>
       </div>
    </div>
@@ -1573,7 +1699,7 @@ This section provides details for each class and property defined by Dislocation
       <p>
          <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#hasNode</p>
       <div class="comment">
-         <span class="markdown">hasNode represents the directed relation between segment and node</span>
+         <span class="markdown">hasNode represents the relationship between segment and node.</span>
       </div>
       <div class="description">
          <dl>
@@ -1607,7 +1733,7 @@ This section provides details for each class and property defined by Dislocation
       <p>
          <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#hasNumericalRepresentation</p>
       <div class="comment">
-         <span class="markdown">relates the entity with its numerical representation</span>
+         <span class="markdown">hasNumericalRepresentation relates the entity with its numerical representation.</span>
       </div>
       <div class="description">
          <dl>
@@ -1617,50 +1743,36 @@ This section provides details for each class and property defined by Dislocation
                   title="https://purls.helmholtz-metadaten.de/diso#hasRepresentation">has representation</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="hasOrigin">
-      <h3>has origin<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#hasOrigin</p>
-      <div class="comment">
-         <span class="markdown">hasOrigin represents the directed relation between lattice plane and origin</span>
-      </div>
-      <div class="description">
-         <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#LatticePlane"
-                  title="https://purls.helmholtz-metadaten.de/diso#LatticePlane">Lattice Plane</a>
+               <a href="#Line" title="https://purls.helmholtz-metadaten.de/diso#Line">Line</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#Origin"
-                  title="https://purls.helmholtz-metadaten.de/diso#Origin">Origin</a>
+               <a href="#DiscretizedLine"
+                  title="https://purls.helmholtz-metadaten.de/diso#DiscretizedLine">Discretized Line</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
       </div>
    </div>
-   <div class="entity" id="https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl#hasPositionVector">
+   <div class="entity" id="https://purls.helmholtz-metadaten.de/cso#hasPositionVector">
       <h3>has position vector<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://raw.githubusercontent.com/Materials-Data-Science-and-Informatics/dislocation-ontology/master/crystal-structure-ontology.owl#hasPositionVector</p>
+         <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/cso#hasPositionVector</p>
+      <div class="comment">
+         <span class="markdown">hasPositionVector represents the relationship between entity and position vector.</span>
+      </div>
       <div class="description">
          <dl>
-            <dt>has super-properties</dt>
+            <dt>has domain</dt>
             <dd>
-               <a href="http://www.w3.org/2002/07/owl#topObjectProperty"
-                  target="_blank"
-                  title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</a>
+               <a href="#https://purls.helmholtz-metadaten.de/cso#Point" title="https://purls.helmholtz-metadaten.de/cso#Point">Point</a>
+               <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
@@ -1679,7 +1791,7 @@ This section provides details for each class and property defined by Dislocation
       <p>
          <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#hasRepresentation</p>
       <div class="comment">
-         <span class="markdown">has representation relates the entity to another representation of entity</span>
+         <span class="markdown">hasRepresentation relates the entity to another representation of entity.</span>
       </div>
       <div class="description">
          <dl>
@@ -1690,6 +1802,22 @@ This section provides details for each class and property defined by Dislocation
                <sup class="type-op" title="object property">op</sup>, <a href="#hasNumericalRepresentation"
                   title="https://purls.helmholtz-metadaten.de/diso#hasNumericalRepresentation">has numerical representation</a>
                <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="http://www.w3.org/2002/07/owl#Thing"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#Thing">thing</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#DiscretizedLine"
+                  title="https://purls.helmholtz-metadaten.de/diso#DiscretizedLine">Discretized Line</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Line" title="https://purls.helmholtz-metadaten.de/diso#Line">Line</a>
+               <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
       </div>
@@ -1702,7 +1830,7 @@ This section provides details for each class and property defined by Dislocation
       <p>
          <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#hasSegment</p>
       <div class="comment">
-         <span class="markdown">hasSegment represents the directed relation between discretized line and segment</span>
+         <span class="markdown">hasSegment represents the relationship between discretized line and segment.</span>
       </div>
       <div class="description">
          <dl>
@@ -1735,7 +1863,7 @@ This section provides details for each class and property defined by Dislocation
       <p>
          <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#hasShapeFunction</p>
       <div class="comment">
-         <span class="markdown">hasShapeFunction represents the directed relation between discretized line and shape function</span>
+         <span class="markdown">hasShapeFunction represents the relationship between discretized line and shape function.</span>
       </div>
       <div class="description">
          <dl>
@@ -1762,7 +1890,7 @@ This section provides details for each class and property defined by Dislocation
       <p>
          <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#hasSlipDirection</p>
       <div class="comment">
-         <span class="markdown">hasSlipDirection represents the relationship  between Slip Plane or Slip system and Slip Direction they own.</span>
+         <span class="markdown">hasSlipDirection represents the relationship between the slip plane or slip system with the slip direction.</span>
       </div>
       <div class="description">
          <dl>
@@ -1799,7 +1927,7 @@ This section provides details for each class and property defined by Dislocation
       <p>
          <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#hasSlipPlane</p>
       <div class="comment">
-         <span class="markdown">hasSlipPlane represents the relationship between crystal structure and slip plane it owns.</span>
+         <span class="markdown">hasSlipPlane represents the relationship between crystal structure and slip plane.</span>
       </div>
       <div class="description">
          <dl>
@@ -1890,7 +2018,7 @@ This section provides details for each class and property defined by Dislocation
       <p>
          <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#hasStartNode</p>
       <div class="comment">
-         <span class="markdown">Sub-property of hasNode that relates the segment with the start node</span>
+         <span class="markdown">Sub-property of hasNode that relates the segment with the start node.</span>
       </div>
       <div class="description">
          <dl>
@@ -1909,6 +2037,33 @@ This section provides details for each class and property defined by Dislocation
             <dt>has range</dt>
             <dd>
                <a href="#Node" title="https://purls.helmholtz-metadaten.de/diso#Node">Node</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasVectorOrigin">
+      <h3>has vector origin<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#hasVectorOrigin</p>
+      <div class="comment">
+         <span class="markdown">hasVectorOrigin represents the relationship between lattice plane and origin.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#LatticePlane"
+                  title="https://purls.helmholtz-metadaten.de/diso#LatticePlane">Lattice Plane</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#VectorOrigin"
+                  title="https://purls.helmholtz-metadaten.de/diso#VectorOrigin">Vector Origin</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -1955,7 +2110,7 @@ This section provides details for each class and property defined by Dislocation
       <p>
          <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#movesOn</p>
       <div class="comment">
-         <span class="markdown">movesOn represents the relationship between dislocation and slip plane it moves on.</span>
+         <span class="markdown">movesOn represents the relationship between dislocation and slip plane.</span>
       </div>
       <div class="description">
          <dl>
@@ -1982,7 +2137,7 @@ This section provides details for each class and property defined by Dislocation
       <p>
          <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#observedBy</p>
       <div class="comment">
-         <span class="markdown">Represents relation between dislocation and microscopy techniques, e.g., TEM, FIM, etc</span>
+         <span class="markdown">observedBy represents the relationship between dislocation and microscopy techniques, e.g., TEM, FIM, etc.</span>
       </div>
       <div class="description">
          <dl>
@@ -2013,7 +2168,7 @@ This section provides details for each class and property defined by Dislocation
       <p>
          <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#resultsIn</p>
       <div class="comment">
-         <span class="markdown">Represents relation between dislocation and lattice displacement.</span>
+         <span class="markdown">resultsIn represents the relationship between dislocation and lattice displacement.</span>
       </div>
       <div class="description">
          <dl>
@@ -2053,9 +2208,7 @@ This section provides details for each class and property defined by Dislocation
       </li>
       <li>
          <a href="#slipArea"
-            title="https://purls.helmholtz-metadaten.de/diso#slipArea">
-            <span>slip area</span>
-         </a>
+            title="https://purls.helmholtz-metadaten.de/diso#slipArea">slipArea</a>
       </li>
    </ul>
    <div class="entity" id="directionMillerIndice">
@@ -2097,7 +2250,7 @@ This section provides details for each class and property defined by Dislocation
       <p>
          <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#familyDirectionMillerIndice</p>
       <div class="comment">
-         <span class="markdown">familyDirectionMillerIndice reprersent a set of miller indices of lattice direction in string.</span>
+         <span class="markdown">familyDirectionMillerIndice represents a set of miller indices of lattice direction in string.</span>
       </div>
       <div class="description">
          <dl>
@@ -2171,12 +2324,15 @@ This section provides details for each class and property defined by Dislocation
       </div>
    </div>
    <div class="entity" id="slipArea">
-      <h3>slip area<sup class="type-dp" title="data property">dp</sup>
+      <h3>slipArea<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> https://purls.helmholtz-metadaten.de/diso#slipArea</p>
+      <div class="comment">
+         <span class="markdown">slipArea represents the slip area of discretized line in double.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
