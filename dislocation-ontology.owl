@@ -500,6 +500,7 @@
     <!-- https://purls.helmholtz-metadaten.de/cdo#CrystallographicDefect -->
 
     <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/cdo#CrystallographicDefect">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="en">The crystallographic defect is a lattice irregularity that has one or more dimensions on the order of an atomic diameter.</rdfs:comment>
         <rdfs:label xml:lang="en">Crystallographic Defect</rdfs:label>
     </owl:Class>
@@ -622,6 +623,7 @@
     <!-- https://purls.helmholtz-metadaten.de/cso#Vector -->
 
     <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/cso#Vector">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="en">(Euclidean) vector is used to represent quantities that both magnitude and direction.</rdfs:comment>
         <rdfs:label xml:lang="en">Vector</rdfs:label>
     </owl:Class>
