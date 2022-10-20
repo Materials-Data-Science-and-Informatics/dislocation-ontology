@@ -1,151 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rdf:RDF
    xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:qudt="http://qudt.org/schema/qudt/"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
    xmlns:terms="http://purl.org/dc/terms/"
    xmlns:vann="http://purl.org/vocab/vann/"
 >
+  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#isSegmentOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/diso#Segment"/>
+    <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/diso#DiscretizedLine"/>
+    <rdfs:comment xml:lang="en">Inverse of hasSegment</rdfs:comment>
+    <rdfs:label xml:lang="en">is segment of</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#SlipSystem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:nodeID="Nf52c7f38f3ed4756a35a98c603117c5d"/>
+    <rdfs:subClassOf rdf:nodeID="Nf7d75cdb3b6e455fbc9a998f1d02b635"/>
+    <rdfs:comment xml:lang="en">A slip system is defined as the set of slip planes with the same unit normal vector and the same slip direction.</rdfs:comment>
+    <rdfs:label xml:lang="en">Slip System</rdfs:label>
+  </rdf:Description>
   <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#FamilyOfCrystalDirection">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:nodeID="Na28dda62fafb49bb8df1f09164b29c46"/>
+    <rdfs:subClassOf rdf:nodeID="Nfe56ddc9174a47a29f8cf99890aa90d6"/>
     <owl:disjointWith rdf:resource="https://purls.helmholtz-metadaten.de/diso#FamilyOfCrystalPlane"/>
     <rdfs:comment xml:lang="en">A set of symmetrically equivalent directions in the lattice.</rdfs:comment>
     <rdfs:label xml:lang="en">Family of Crystal Direction</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#Line">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-    <rdfs:subClassOf rdf:nodeID="Na23b6123654e448dbdd54c30aff5a162"/>
-    <owl:disjointWith rdf:resource="https://purls.helmholtz-metadaten.de/diso#Node"/>
-    <rdfs:comment xml:lang="en">Mathematical representation of dislocation as 'Line'. An instance of mathematical representation of a dislocation line is an oriented curve parameterized by its arc length.</rdfs:comment>
-    <rdfs:label xml:lang="en">Line</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#hasMathematicalRepresentation">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:subPropertyOf rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasRepresentation"/>
-    <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/diso#Dislocation"/>
-    <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/diso#Line"/>
-    <rdfs:comment xml:lang="en">hasMathematicalRepresentation relates the entity with its mathematical representation.</rdfs:comment>
-    <rdfs:label xml:lang="en">has mathematical representation</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#observedBy">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/diso#Dislocation"/>
-    <rdfs:range rdf:nodeID="N1c5917268858474c95e5ff3e459e184b"/>
-    <rdfs:comment xml:lang="en">observedBy represents the relationship between dislocation and microscopy techniques, e.g., TEM, FIM, etc.</rdfs:comment>
-    <rdfs:label xml:lang="en">observed by</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#hasSlipDirection">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:subPropertyOf rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasLatticeDirection"/>
-    <rdfs:domain rdf:nodeID="Ne7fa31f2f4b84ee69a7262de691bada2"/>
-    <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/diso#SlipDirection"/>
-    <rdfs:comment xml:lang="en">hasSlipDirection represents the relationship between the slip plane or slip system with the slip direction.</rdfs:comment>
-    <rdfs:label xml:lang="en">has slip direction</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nf5e1cb99b4f3463794e78baef8c4d071">
-    <rdf:first rdf:resource="https://purls.helmholtz-metadaten.de/diso#SlipPlane"/>
-    <rdf:rest rdf:nodeID="N861f9b1415ff45d4a14fed9bb6917cf7"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#familyPlaneMillerIndice">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/diso#FamilyOfCrystalPlane"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <rdfs:comment xml:lang="en">familyPlaneMillerIndice represents a set of Miller indice of lattice plane in string.</rdfs:comment>
-    <rdfs:label xml:lang="en">family plane miller indice</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#hasVectorOrigin">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/diso#LatticePlane"/>
-    <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/diso#VectorOrigin"/>
-    <rdfs:comment xml:lang="en">hasVectorOrigin represents the relationship between lattice plane and origin.</rdfs:comment>
-    <rdfs:label xml:lang="en">has vector origin</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#hasSlipPlane">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:subPropertyOf rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasLatticePlane"/>
-    <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/cso#CrystalStructure"/>
-    <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/diso#SlipPlane"/>
-    <rdfs:comment xml:lang="en">hasSlipPlane represents the relationship between crystal structure and slip plane.</rdfs:comment>
-    <rdfs:label xml:lang="en">has slip plane</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N7fd872819b1d49e0a89108993e21ffa3">
-    <rdf:first rdf:resource="https://purls.helmholtz-metadaten.de/cso#Lattice"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#TransmissionElectronMicroscopy">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">Transmission electron microscopy (TEM) is a microscopy technique in which a beam of electrons is transmitted through a specimen to form an image. The specimen is often an ultrathin section less than 100 nm thick.</rdfs:comment>
-    <rdfs:label xml:lang="en">Transmission Electron Microscopy</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N936c6f1838a44c6d8c923accaeafe460">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasSlipSystem"/>
-    <owl:allValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#SlipSystem"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N0bbd021802504189b84ff53c86030c5c">
-    <rdf:first rdf:nodeID="N1e471bb1727d48bc9d2d14b4251d20c7"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#movesOn">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/diso#Dislocation"/>
-    <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/diso#SlipPlane"/>
-    <rdfs:comment xml:lang="en">movesOn represents the relationship between dislocation and slip plane.</rdfs:comment>
-    <rdfs:label xml:lang="en">moves on</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#LatticePoint">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:resource="https://purls.helmholtz-metadaten.de/cso#Point"/>
-    <rdfs:comment xml:lang="en">Lattice point is the point where atom(s) or molecule(s) is located.</rdfs:comment>
-    <rdfs:label xml:lang="en">Lattice Point</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#SlipPlaneNormal">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:resource="https://purls.helmholtz-metadaten.de/cso#Vector"/>
-    <rdfs:subClassOf rdf:nodeID="N94db4b916c504fedb06fca4ef63113b2"/>
-    <rdfs:comment xml:lang="en">The unit normal vector of slip planes.</rdfs:comment>
-    <rdfs:label xml:lang="en">Slip Plane Normal</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#hasLatticeDirection">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:domain rdf:nodeID="Nb5080afb52a94d399fec9193e00830e4"/>
-    <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/diso#LatticeDirection"/>
-    <rdfs:comment xml:lang="en">hasLatticeDirection represents the relationship between a lattice or a lattice plane with lattice directions.</rdfs:comment>
-    <rdfs:label xml:lang="en">has lattice direction</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/cso#Point">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:nodeID="Nc904a1d4457642f78e8cc3fd75245a15"/>
-    <rdfs:comment xml:lang="en">In classical Euclidean geometry, a point is a primitive notion that models an exact location in the space, and has no length, width, or thickness.</rdfs:comment>
-    <rdfs:label xml:lang="en">Point</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#ShapeFunction">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">The shape function is the function that interpolates the solution between the discrete values obtained at the mesh nodes. In discretized dislocation, the shape function determines the shape of a segment and ultimately determines the shape of the line. Examples of shape function that is used to discretize the dislocation are circular, elliptic, spiral, linear, cubic, and quintic.</rdfs:comment>
-    <rdfs:label xml:lang="en">Shape Function</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#Node">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:resource="https://purls.helmholtz-metadaten.de/cso#Point"/>
-    <owl:disjointWith rdf:resource="https://purls.helmholtz-metadaten.de/diso#Segment"/>
-    <rdfs:comment xml:lang="en">A point of a segment.</rdfs:comment>
-    <rdfs:label xml:lang="en">Node</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N1e471bb1727d48bc9d2d14b4251d20c7">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasLatticePoint"/>
-    <owl:allValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#LatticePoint"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nb5080afb52a94d399fec9193e00830e4">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:unionOf rdf:nodeID="N64956820caf34a7982daf6ab06a12566"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N964cb8cd902d403e8e71d7ad3d89354d">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasLatticePoint"/>
-    <owl:someValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#LatticePoint"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#VectorOrigin">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
@@ -154,32 +36,17 @@
     <rdfs:label xml:lang="de">Ursprung</rdfs:label>
     <rdfs:label xml:lang="en">Vector Origin</rdfs:label>
   </rdf:Description>
-  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#LineSense">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">A sense that characterizes a directed line, i.e., it has a start and an end.</rdfs:comment>
-    <rdfs:label xml:lang="en">Line Sense</rdfs:label>
+  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#observedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/diso#Dislocation"/>
+    <rdfs:range rdf:nodeID="Nc284d6993cd740e8bb36377602c444a7"/>
+    <rdfs:comment xml:lang="en">observedBy represents the relationship between dislocation and microscopy techniques, e.g., TEM, FIM, etc.</rdfs:comment>
+    <rdfs:label xml:lang="en">observed by</rdfs:label>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N6182c4c6ab0a4384ac799036ba8aa4eb">
-    <rdf:first rdf:nodeID="N3530f29cd37d4771bdee10cf206352f5"/>
-    <rdf:rest rdf:nodeID="N745a14fdd61d4399b9b09ede0ce1f1c3"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#directionMillerIndice">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:domain rdf:nodeID="Nd0fc772f7dbf47b1b962b03f95792a0c"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <rdfs:comment xml:lang="en">directionMillerIndice represents Miller indice of lattice direction in string.</rdfs:comment>
-    <rdfs:label xml:lang="en">direction miller indice</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N2f554aa7862f4fe091dd5f8ad735ee43">
+  <rdf:Description rdf:nodeID="N08ce935ee06942c3bd0e1290e4e8045c">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#observedBy"/>
-    <owl:someValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#FieldIonMicroscopy"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N187f66eb99074056a41082e0da03d9b8">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#familyPlaneMillerIndice"/>
-    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-    <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasLatticeDirection"/>
+    <owl:someValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#LatticeDirection"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
@@ -194,104 +61,25 @@
     <rdfs:seeAlso>https://github.com/Materials-Data-Science-and-Informatics/dislocation-ontology</rdfs:seeAlso>
     <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</owl:versionInfo>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="Neb74a5b2d05e4f928e99e900d9af7fe2">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:intersectionOf rdf:nodeID="N32f2448fc68e450db4edd12aea1e32d5"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#hasSegment">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <owl:inverseOf rdf:resource="https://purls.helmholtz-metadaten.de/diso#isSegmentOf"/>
-    <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/diso#DiscretizedLine"/>
-    <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/diso#Segment"/>
-    <rdfs:comment xml:lang="en">hasSegment represents the relationship between discretized line and segment.</rdfs:comment>
-    <rdfs:label xml:lang="en">has segment</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Na6c295be0eb442b39c733d100f53a394">
-    <rdf:first rdf:nodeID="N665efdf49bf74dcaa0d04ff18a783169"/>
-    <rdf:rest rdf:nodeID="N39da78dc6fa84dedb624a225fd2c53ce"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#familyDirectionMillerIndice">
+  <rdf:Description rdf:about="https://w3id.org/mdo/structure/X_axisCoordinate">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/diso#FamilyOfCrystalDirection"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <rdfs:comment xml:lang="en">familyDirectionMillerIndice represents a set of miller indices of lattice direction in string.</rdfs:comment>
-    <rdfs:label xml:lang="en">family direction miller indice</rdfs:label>
   </rdf:Description>
-  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#resultsIn">
+  <rdf:Description rdf:nodeID="Nd4909b871f724cd780eab59a820f5fc6">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="N854ac2c7ceb34d22b934ea5d98bfdb45"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#hasSlipPlaneNormal">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/diso#Dislocation"/>
-    <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/diso#LatticeDisplacement"/>
-    <rdfs:comment xml:lang="en">resultsIn represents the relationship between dislocation and lattice displacement.</rdfs:comment>
-    <rdfs:label xml:lang="en">results in</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Ndd6f17faf6f9467e8e094d6a6c89f78c">
-    <rdf:first rdf:resource="https://purls.helmholtz-metadaten.de/diso#LatticeDirection"/>
-    <rdf:rest rdf:nodeID="Na864975a61ce46aaafeaa9d7f3f07c1e"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#LineDefect">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:resource="https://purls.helmholtz-metadaten.de/cdo#CrystallographicDefect"/>
-    <rdfs:comment xml:lang="en">Linear or one-dimensional defect around which some of the atoms are misaligned.</rdfs:comment>
-    <rdfs:label xml:lang="en">Line Defect</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N77525768a0874bf98b2c50f9705f7d54">
-    <rdf:first rdf:nodeID="N0e15e9a075bd49fba20a64fa62d81039"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N82950b2fda0840d48b8f4d9d8b995009">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasSlipPlaneNormal"/>
-    <owl:allValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#SlipPlaneNormal"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N745a14fdd61d4399b9b09ede0ce1f1c3">
-    <rdf:first rdf:nodeID="Ncb7cb10e9714487db4b5a09bf406d5e0"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/cso#PositionVector">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:resource="https://purls.helmholtz-metadaten.de/cso#Vector"/>
-    <rdfs:comment xml:lang="en">Euclidean vector that represents the position of a point P in space in relation to an arbitrary reference origin O.</rdfs:comment>
-    <rdfs:label xml:lang="en">Position Vector</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/cso#Lattice">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:nodeID="Neb74a5b2d05e4f928e99e900d9af7fe2"/>
-    <rdfs:subClassOf rdf:nodeID="N6fdf1ec0535e489b92c57891facc999a"/>
-    <rdfs:subClassOf rdf:nodeID="Nbbab1cb0de714ac4918920029b3c2ae8"/>
-    <rdfs:comment xml:lang="en">The mathematical concept to represent the periodicity of a crystal. A lattice defines a periodic arrangement of one or more atoms.</rdfs:comment>
-    <rdfs:label xml:lang="en">Lattice</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nd0fc772f7dbf47b1b962b03f95792a0c">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:unionOf rdf:nodeID="N69989a86e5e944348eb469f396341036"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#planeMillerIndice">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/diso#LatticePlane"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <rdfs:comment xml:lang="en">planeMillerIndice represents Miller indice of lattice plane in string.</rdfs:comment>
-    <rdfs:label xml:lang="en">plane miller indice</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N713002ff88744420bf0baaf19178f616">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasSlipDirection"/>
-    <owl:allValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#SlipDirection"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nda61e4ad6a9b4fd1875edae5214e2d10">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasLatticePoint"/>
-    <owl:someValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#LatticePoint"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N128e35e0e53b4bce9d6c222b61b3836d">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasLatticePoint"/>
-    <owl:someValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#LatticePoint"/>
+    <rdfs:domain rdf:nodeID="N1a0be8d4a69b41c0b1719087075db3f7"/>
+    <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/diso#SlipPlaneNormal"/>
+    <rdfs:comment xml:lang="en">hasSlipPlaneNormal represents the relationship between a slip plane or slip system with slip plane normal.</rdfs:comment>
+    <rdfs:label xml:lang="en">has slip plane normal</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#DiscretizedLine">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:nodeID="N492ee9a9679b44138da6464f0ba05dba"/>
-    <rdfs:subClassOf rdf:nodeID="Nae50b0c01a584a98b61a5811e35b2328"/>
-    <rdfs:subClassOf rdf:nodeID="N0413dee67ea64d38b096f5c0fca16597"/>
+    <rdfs:subClassOf rdf:nodeID="N9d4b8c24ffaf45e1b7ed156b77f46a94"/>
+    <rdfs:subClassOf rdf:nodeID="N384c4b634781413c867ee282a14242ce"/>
+    <rdfs:subClassOf rdf:nodeID="Nf9161a8363914526b21009e1f22a2694"/>
     <owl:disjointWith rdf:resource="https://purls.helmholtz-metadaten.de/diso#Line"/>
     <rdfs:comment xml:lang="en">The numerical representation of the dislocation line that is discretized into the number of segments.</rdfs:comment>
     <rdfs:label xml:lang="en">Discretized Line</rdfs:label>
@@ -299,169 +87,25 @@
   <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#Dislocation">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:subClassOf rdf:resource="https://purls.helmholtz-metadaten.de/diso#LineDefect"/>
-    <rdfs:subClassOf rdf:nodeID="N5af1a781dc1443f3ae7f7a73d1df1df1"/>
-    <rdfs:subClassOf rdf:nodeID="N42f511b4d8404cf2b68a389fc277012b"/>
-    <rdfs:subClassOf rdf:nodeID="N2dbe03d823c8458c821e7cf9b67d96ff"/>
-    <rdfs:subClassOf rdf:nodeID="N85404b44498d4b3da0c3f7c78a107dda"/>
-    <rdfs:subClassOf rdf:nodeID="N2f554aa7862f4fe091dd5f8ad735ee43"/>
-    <rdfs:subClassOf rdf:nodeID="N67d0b04fadf24e189353afa249281c0f"/>
-    <rdfs:subClassOf rdf:nodeID="N8cd418c18b864550a082db73b5775522"/>
+    <rdfs:subClassOf rdf:nodeID="Nd4909b871f724cd780eab59a820f5fc6"/>
+    <rdfs:subClassOf rdf:nodeID="N5458f194b82f4d37942c76764c4e39ab"/>
+    <rdfs:subClassOf rdf:nodeID="N5993006244934f6d9a8fa554ddefd2bf"/>
+    <rdfs:subClassOf rdf:nodeID="Nb3047dc46e5f43c0a1623ad5b4bd4d80"/>
+    <rdfs:subClassOf rdf:nodeID="N3ca4b6662adf41ba8ba8227a79665fb1"/>
+    <rdfs:subClassOf rdf:nodeID="N5fa9c384be2b4437b4d5df4d43de1e3c"/>
+    <rdfs:subClassOf rdf:nodeID="N45020e71d66c4598a8d9d3c88391a739"/>
     <rdfs:comment xml:lang="en">Linear or one-dimensional defect around which some of the atoms are misaligned. In the mesoscale, a dislocation is a line object that is a boundary separating the regions on the slip plane which have undergone slip from those that have not.</rdfs:comment>
     <rdfs:comment xml:lang="en">The presence of dislocation introduces local disturbance of the atomic-level geometry.</rdfs:comment>
     <rdfs:label xml:lang="en">Dislocation</rdfs:label>
     <rdfs:label xml:lang="de">Versetzung</rdfs:label>
   </rdf:Description>
-  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#hasFamilyCrystalDirection">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/diso#LatticeDirection"/>
-    <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/diso#FamilyOfCrystalDirection"/>
-    <rdfs:comment xml:lang="en">hasFamilyCrystalDirection represents the relationship between lattice direction and family of crystal direction.</rdfs:comment>
-    <rdfs:label xml:lang="en">has family crystal direction</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#ScrewDislocation">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:resource="https://purls.helmholtz-metadaten.de/diso#Dislocation"/>
-    <rdfs:comment xml:lang="en">A dislocation that has a line sense parallel to its Burgers vector.</rdfs:comment>
-    <rdfs:label xml:lang="en">Screw Dislocation</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N0ee98e6645ac492a816ab4a4fb201098">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:intersectionOf rdf:nodeID="N81cfadeeb23346f68b32ff89a3949e6c"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/cso#hasPositionVector">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/cso#Point"/>
-    <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/cso#PositionVector"/>
-    <rdfs:comment xml:lang="en">hasPositionVector represents the relationship between entity and position vector.</rdfs:comment>
-    <rdfs:label xml:lang="en">has position vector</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#hasNumericalRepresentation">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:subPropertyOf rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasRepresentation"/>
-    <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/diso#Line"/>
-    <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/diso#DiscretizedLine"/>
-    <rdfs:comment xml:lang="en">hasNumericalRepresentation relates the entity with its numerical representation.</rdfs:comment>
-    <rdfs:label xml:lang="en">has numerical representation</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nbf97523424764f928a673a67bd349592">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasSlipDirection"/>
-    <owl:allValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#SlipDirection"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N34e14dbed3394715b16115866cf1e9a8">
-    <rdf:first rdf:nodeID="N93fe859af5a94957a66b4ee3920dcf0e"/>
+  <rdf:Description rdf:nodeID="N1f626291214d457194c0f31a074d60be">
+    <rdf:first rdf:nodeID="N1b9c515f24f64534a2213272a52521f3"/>
     <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N28f742d488294d8792fde92ea598e653">
-    <rdf:first rdf:resource="https://purls.helmholtz-metadaten.de/diso#LatticePlane"/>
+  <rdf:Description rdf:nodeID="Nc7286ab17bd7431baa70dd8e40fa306d">
+    <rdf:first rdf:nodeID="N224fb6d6e9a744368c691ce7fd661638"/>
     <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N94db4b916c504fedb06fca4ef63113b2">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#directionMillerIndice"/>
-    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-    <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N1ca044e268cb44a1b108f929587e9115">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasSlipDirection"/>
-    <owl:someValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#SlipDirection"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#hasSlipPlaneNormal">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:domain rdf:nodeID="N3e63411338404da2b23b47c7149c38e3"/>
-    <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/diso#SlipPlaneNormal"/>
-    <rdfs:comment xml:lang="en">hasSlipPlaneNormal represents the relationship between a slip plane or slip system with slip plane normal.</rdfs:comment>
-    <rdfs:label xml:lang="en">has slip plane normal</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#FamilyOfCrystalPlane">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:nodeID="N187f66eb99074056a41082e0da03d9b8"/>
-    <rdfs:comment xml:lang="en">A set of symmetrically equivalent planes in the lattice.</rdfs:comment>
-    <rdfs:label xml:lang="en">Family of Crystal Plane</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nbd81ba8c86864221bd32ea605101cffd">
-    <rdf:first rdf:resource="https://purls.helmholtz-metadaten.de/diso#Line"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N94f96da76e4142ddbf66e1ca6fe8f578">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasLatticeDirection"/>
-    <owl:someValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#LatticeDirection"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#hasStartNode">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:subPropertyOf rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasNode"/>
-    <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/diso#Segment"/>
-    <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/diso#Node"/>
-    <rdfs:comment xml:lang="en">Sub-property of hasNode that relates the segment with the start node.</rdfs:comment>
-    <rdfs:label xml:lang="en">has start node</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#LatticePlane">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:resource="https://purls.helmholtz-metadaten.de/diso#FamilyOfCrystalPlane"/>
-    <rdfs:subClassOf rdf:nodeID="N783220132cc14ca4aa00873c644aaa66"/>
-    <rdfs:subClassOf rdf:nodeID="N0ee98e6645ac492a816ab4a4fb201098"/>
-    <rdfs:subClassOf rdf:nodeID="N0450be690df84e59ac602d7e9c457c88"/>
-    <rdfs:subClassOf rdf:nodeID="Nc05dd08c582a43bca41bc9635214426d"/>
-    <rdfs:comment xml:lang="en">The lattice plane forms an infinitely stretched plane (characterized through a plane normal) that cuts through lattice points such that, again, a regular arrangement of lattice points in the plane occurs.</rdfs:comment>
-    <rdfs:label xml:lang="en">Lattice Plane</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N4e997b142be841dc929c652bdee8b0ae">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasSlipSystem"/>
-    <owl:someValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#SlipSystem"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#hasShapeFunction">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/diso#DiscretizedLine"/>
-    <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/diso#ShapeFunction"/>
-    <rdfs:comment xml:lang="en">hasShapeFunction represents the relationship between discretized line and shape function.</rdfs:comment>
-    <rdfs:label xml:lang="en">has shape function</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N20962b2a4a124326bcb892171d3ffbc8">
-    <rdf:first rdf:resource="https://purls.helmholtz-metadaten.de/diso#SlipPlane"/>
-    <rdf:rest rdf:nodeID="Nfab9ebb8b2934c5d95706099e886ce1c"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N7eeb5cafa2c44710ba051c1842a481d7">
-    <rdf:first rdf:nodeID="N713f2079765e48ef9d20fd017f9fa845"/>
-    <rdf:rest rdf:nodeID="N5edf623d9ace432a88141dae36a5ac24"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N2dbe03d823c8458c821e7cf9b67d96ff">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasMathematicalRepresentation"/>
-    <owl:someValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#Line"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#hasFamilyCrystalPlane">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/diso#LatticePlane"/>
-    <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/diso#FamilyOfCrystalPlane"/>
-    <rdfs:comment xml:lang="en">hasFamilyCrystalPlane represents the relationship between the lattice plane and the family of crystal planes.</rdfs:comment>
-    <rdfs:label xml:lang="en">has family crystal plane</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N035be3718ee24e5b849d86ec2826758a">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasEndNode"/>
-    <owl:allValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#Node"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N81c7c855d3d84123bcae3a99f5cad007">
-    <rdf:first rdf:resource="https://purls.helmholtz-metadaten.de/diso#FieldIonMicroscopy"/>
-    <rdf:rest rdf:nodeID="N2689780eb434429ba3785bafc73ec6b4"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N0e15e9a075bd49fba20a64fa62d81039">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasLatticePoint"/>
-    <owl:allValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#LatticePoint"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N63e497af3b12493795c9786d9a86ba14">
-    <rdf:first rdf:nodeID="N552e0c170dee4f30bfcff62c1cd1e631"/>
-    <rdf:rest rdf:nodeID="Nffaec56f5cd24765906893dc6f68150c"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/cdo#CrystallographicDefect">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-    <rdfs:comment xml:lang="en">The crystallographic defect is a lattice irregularity that has one or more dimensions on the order of an atomic diameter.</rdfs:comment>
-    <rdfs:label xml:lang="en">Crystallographic Defect</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#EdgeDislocation">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
@@ -470,190 +114,119 @@
     <rdfs:comment xml:lang="en">A dislocation that has a line sense perpendicular to its Burgers vector.</rdfs:comment>
     <rdfs:label xml:lang="en">Edge Dislocation</rdfs:label>
   </rdf:Description>
-  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#SlipPlane">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:resource="https://purls.helmholtz-metadaten.de/diso#LatticePlane"/>
-    <rdfs:subClassOf rdf:nodeID="N8aabb9668032451b90e80bf5a7562a1d"/>
-    <rdfs:subClassOf rdf:nodeID="N49df5fd96ae24576a885775a1cf4e738"/>
-    <rdfs:comment xml:lang="en">The crystallographic/lattice plane along which the dislocation line traverses/moves. The slip plane is usually the plane with the highest density of atoms, i.e. most widely spaced.</rdfs:comment>
-    <rdfs:label xml:lang="en">Slip Plane</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#hasRepresentation">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-    <rdfs:range rdf:nodeID="N985a29911e2941e2a764dba887016696"/>
-    <rdfs:comment xml:lang="en">hasRepresentation relates the entity to another representation of entity.</rdfs:comment>
-    <rdfs:label xml:lang="en">has representation</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#hasEndNode">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:subPropertyOf rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasNode"/>
-    <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/diso#Segment"/>
-    <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/diso#Node"/>
-    <rdfs:comment xml:lang="en">Sub-property of hasNode that relates the segment with the end node.</rdfs:comment>
-    <rdfs:label xml:lang="en">has end node</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N466497cf2dd74abf88c46cfc255ce2b2">
-    <rdf:first rdf:nodeID="N0ee5262425a74d418881f4f6c5bdfda2"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#SlipSystem">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:nodeID="N295ab896effa419087bee94382e9db26"/>
-    <rdfs:subClassOf rdf:nodeID="N42336623b97246ceb4b01a12aa16c19c"/>
-    <rdfs:comment xml:lang="en">A slip system is defined as the set of slip planes with the same unit normal vector and the same slip direction.</rdfs:comment>
-    <rdfs:label xml:lang="en">Slip System</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nffaec56f5cd24765906893dc6f68150c">
-    <rdf:first rdf:nodeID="Nd2cb0cdbf61c475cb463763d8fc53170"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nd2cb0cdbf61c475cb463763d8fc53170">
+  <rdf:Description rdf:nodeID="Nfc7d91ae3d4947489688496836f7aa06">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasSlipPlane"/>
-    <owl:allValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#SlipPlane"/>
+    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/cso#hasVectorComponent"/>
+    <owl:someValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/cso#VectorComponentOfBasis"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="Nae50b0c01a584a98b61a5811e35b2328">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasShapeFunction"/>
-    <owl:allValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#ShapeFunction"/>
+  <rdf:Description rdf:nodeID="Nab66558e77be414e856b4b75c5c3e490">
+    <rdf:first rdf:nodeID="N3555836dba284dbf9e14d75c7f55eed0"/>
+    <rdf:rest rdf:nodeID="N1f626291214d457194c0f31a074d60be"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#isSegmentOf">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/diso#Segment"/>
-    <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/diso#DiscretizedLine"/>
-    <rdfs:comment xml:lang="en">Inverse of hasSegment</rdfs:comment>
-    <rdfs:label xml:lang="en">is segment of</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/cso#Vector">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-    <rdfs:comment xml:lang="en">(Euclidean) vector is used to represent quantities that both magnitude and direction.</rdfs:comment>
-    <rdfs:label xml:lang="en">Vector</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nc05dd08c582a43bca41bc9635214426d">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#planeMillerIndice"/>
-    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-    <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N5af1a781dc1443f3ae7f7a73d1df1df1">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:intersectionOf rdf:nodeID="N3bb62efced744bbead11f07e65e773d7"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nea3771b3cda54e9b9046a5feb4aa9e23">
-    <rdf:first rdf:nodeID="N831e3dba3d79477ca5ba8127e717950b"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Ncb7cb10e9714487db4b5a09bf406d5e0">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasLineSense"/>
-    <owl:allValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#LineSense"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nbeafee96f9a14bdcbafb96cfb3b11292">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:intersectionOf rdf:nodeID="Na8b3c1a3a5ff4ec78c3f88dfed9dcd40"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N6d7953c60eb1447eb3e00541861b6349">
-    <rdf:first rdf:nodeID="N7e07d54979524c1dab70104f7673e2a4"/>
-    <rdf:rest rdf:nodeID="Nd243a760b46c461ca73964ad920208a7"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nc904a1d4457642f78e8cc3fd75245a15">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/cso#hasPositionVector"/>
-    <owl:allValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/cso#PositionVector"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#hasNode">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/diso#Segment"/>
-    <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/diso#Node"/>
-    <rdfs:comment xml:lang="en">hasNode represents the relationship between segment and node.</rdfs:comment>
-    <rdfs:label xml:lang="en">has node</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N85404b44498d4b3da0c3f7c78a107dda">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#movesOn"/>
-    <owl:someValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#SlipPlane"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N32f2448fc68e450db4edd12aea1e32d5">
-    <rdf:first rdf:nodeID="N4de3627e9142446b9584727e13e921e5"/>
-    <rdf:rest rdf:nodeID="N7b14601a8765451b9d21c0a05d67a8c2"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N3bb62efced744bbead11f07e65e773d7">
-    <rdf:first rdf:nodeID="N9688ea73ec1347c2851e5abef1ea35a4"/>
-    <rdf:rest rdf:nodeID="N0e7ebd6a99684bf4bffedea1d8279f7d"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N4de3627e9142446b9584727e13e921e5">
+  <rdf:Description rdf:nodeID="N3da22ed9836e4840b97b159580684a82">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasLatticeDirection"/>
-    <owl:someValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#LatticeDirection"/>
+    <owl:allValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#LatticeDirection"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N6fdf1ec0535e489b92c57891facc999a">
+  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#ShapeFunction">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:intersectionOf rdf:nodeID="N7eeb5cafa2c44710ba051c1842a481d7"/>
+    <rdfs:comment xml:lang="en">The shape function is the function that interpolates the solution between the discrete values obtained at the mesh nodes. In discretized dislocation, the shape function determines the shape of a segment and ultimately determines the shape of the line. Examples of shape function that is used to discretize the dislocation are circular, elliptic, spiral, linear, cubic, and quintic.</rdfs:comment>
+    <rdfs:label xml:lang="en">Shape Function</rdfs:label>
   </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/dc/terms/created">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#LatticeDirection">
+  <rdf:Description rdf:nodeID="Nda70b33f1d3548bf8e2eaca4bab9e577">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:resource="https://purls.helmholtz-metadaten.de/cso#Vector"/>
-    <rdfs:subClassOf rdf:resource="https://purls.helmholtz-metadaten.de/diso#FamilyOfCrystalDirection"/>
-    <rdfs:subClassOf rdf:nodeID="Nbeafee96f9a14bdcbafb96cfb3b11292"/>
-    <rdfs:subClassOf rdf:nodeID="Na9b3e45dc2824b1ca720fe3c972fe1dd"/>
-    <rdfs:comment xml:lang="en">The vector direction inside the lattice that is connecting two lattice points.</rdfs:comment>
-    <rdfs:label xml:lang="en">Lattice Direction</rdfs:label>
+    <owl:intersectionOf rdf:nodeID="N2fea62f9aade4f55a86703d757bd8d0e"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N39da78dc6fa84dedb624a225fd2c53ce">
-    <rdf:first rdf:nodeID="N82950b2fda0840d48b8f4d9d8b995009"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#hasLatticePoint">
+  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#hasLatticeDirection">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:domain rdf:nodeID="N842957c6b8674668b2cbee9ee66ba383"/>
-    <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/diso#LatticePoint"/>
-    <rdfs:comment xml:lang="en">hasLatticePoint represents the relationship between a lattice or lattice plane or lattice direction with lattice point.</rdfs:comment>
-    <rdfs:label xml:lang="en">has lattice point</rdfs:label>
+    <rdfs:domain rdf:nodeID="N78d5eaf714874acd9a7832a2dce5ef8a"/>
+    <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/diso#LatticeDirection"/>
+    <rdfs:comment xml:lang="en">hasLatticeDirection represents the relationship between a lattice or a lattice plane with lattice directions.</rdfs:comment>
+    <rdfs:label xml:lang="en">has lattice direction</rdfs:label>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N0e7ebd6a99684bf4bffedea1d8279f7d">
-    <rdf:first rdf:nodeID="N86e6e871ba774a66af3bb8c0a9bd50b8"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#Line">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:nodeID="N13f68e23d80f4d35a133ac8b42745fc2"/>
+    <owl:disjointWith rdf:resource="https://purls.helmholtz-metadaten.de/diso#Node"/>
+    <rdfs:comment xml:lang="en">Mathematical representation of dislocation as 'Line'. An instance of mathematical representation of a dislocation line is an oriented curve parameterized by its arc length.</rdfs:comment>
+    <rdfs:label xml:lang="en">Line</rdfs:label>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N831e3dba3d79477ca5ba8127e717950b">
+  <rdf:Description rdf:nodeID="Nfb01dafe939f401c8cea04161cf7b302">
+    <rdf:first rdf:resource="https://purls.helmholtz-metadaten.de/cso#Lattice"/>
+    <rdf:rest rdf:nodeID="N546b67c57d914ad7ac23fea0dc11e27e"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N2fea62f9aade4f55a86703d757bd8d0e">
+    <rdf:first rdf:nodeID="N7033314154f6481084d5b4fc01d50888"/>
+    <rdf:rest rdf:nodeID="Nb005b39df0db49a09ab0bae24acb8fc0"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#Node">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="https://purls.helmholtz-metadaten.de/cso#Point"/>
+    <owl:disjointWith rdf:resource="https://purls.helmholtz-metadaten.de/diso#Segment"/>
+    <rdfs:comment xml:lang="en">A point of a segment.</rdfs:comment>
+    <rdfs:label xml:lang="en">Node</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#movesOn">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/diso#Dislocation"/>
+    <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/diso#SlipPlane"/>
+    <rdfs:comment xml:lang="en">movesOn represents the relationship between dislocation and slip plane.</rdfs:comment>
+    <rdfs:label xml:lang="en">moves on</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nbf650f4b688b4633b4091356904c8f06">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasLatticePoint"/>
-    <owl:allValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#LatticePoint"/>
+    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/cso#hasBasis"/>
+    <owl:allValuesFrom rdf:resource="https://w3id.org/mdo/structure/Basis"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#Segment">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:nodeID="N035be3718ee24e5b849d86ec2826758a"/>
-    <rdfs:subClassOf rdf:nodeID="N07973e84df824bf29ce2c8ab91bd7ba3"/>
-    <rdfs:subClassOf rdf:nodeID="Ne82cf8dac695443a8efab3c8eb81aa23"/>
+    <rdfs:subClassOf rdf:nodeID="N9150ffbbb298432c93643529069173ae"/>
+    <rdfs:subClassOf rdf:nodeID="Nc5dd1bb461da435eb43428725ad60214"/>
+    <rdfs:subClassOf rdf:nodeID="N7bb8f10f402f453ba5db50b5956bfa56"/>
     <rdfs:comment xml:lang="en">The segment is a part of a line bounded by two distinct end points and may contain points on the line between its endpoints.</rdfs:comment>
     <rdfs:label xml:lang="en">Segment</rdfs:label>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N07973e84df824bf29ce2c8ab91bd7ba3">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasStartNode"/>
-    <owl:allValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#Node"/>
+  <rdf:Description rdf:nodeID="N5c3c86cb37a6436a9b9d8f580c3054c9">
+    <rdf:first rdf:nodeID="N849ab54d54e14f619073a4617a9ac168"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N3530f29cd37d4771bdee10cf206352f5">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasLineSense"/>
-    <owl:someValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#LineSense"/>
+  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/cso#Vector">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:nodeID="Na1ad8a4ca30e4cffa730b79edf6ac971"/>
+    <rdfs:subClassOf rdf:nodeID="Nf9d5563c744940b791c0c392b3f0694b"/>
+    <rdfs:comment xml:lang="en">(Euclidean) vector is used to represent quantities that both magnitude and direction.</rdfs:comment>
+    <rdfs:label xml:lang="en">Vector</rdfs:label>
+    <skos:defintion xml:lang="en">(Euclidean) vector used to represent quantities that both magnitude and direction.</skos:defintion>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N7e07d54979524c1dab70104f7673e2a4">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasSlipDirection"/>
-    <owl:someValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#SlipDirection"/>
+  <rdf:Description rdf:nodeID="N5f58c55ec4e04c92a87fac199fdb7c3b">
+    <rdf:first rdf:resource="https://purls.helmholtz-metadaten.de/diso#DiscretizedLine"/>
+    <rdf:rest rdf:nodeID="Ndcad3bf89624458aa8026fe2b3b81db9"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N0ee5262425a74d418881f4f6c5bdfda2">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasSlipPlaneNormal"/>
-    <owl:allValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#SlipPlaneNormal"/>
+  <rdf:Description rdf:about="http://qudt.org/schema/qudt/QuantityKind">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <qudt:description rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">A &lt;b&gt;Quantity Kind&lt;/b&gt; is any observable property that can be  measured and quantified numerically. Familiar examples include physical properties such as length, mass, time, force, energy, power, electric charge, etc. Less familiar examples include currency, interest rate, price to earning ratio, and information capacity.</qudt:description>
+    <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.0/schema/qudt"/>
+    <rdfs:isDefinedBy rdf:resource="http://qudt.org/schema/qudt"/>
+    <rdfs:label>Quantity Kind</rdfs:label>
   </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix">
+  <rdf:Description rdf:nodeID="N854ac2c7ceb34d22b934ea5d98bfdb45">
+    <rdf:first rdf:nodeID="N52bf9a582187460a9c1830c389b76643"/>
+    <rdf:rest rdf:nodeID="Ne4a6b1b2c21b4fae87cd68de1b304c38"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://qudt.org/schema/qudt/description">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://qudt.org/schema/qudt/Quantity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:nodeID="Nd503c7fdcdbc4dae89541fd226237d2e"/>
+    <rdfs:subClassOf rdf:nodeID="N0979f2331d6d4301b7d48308f10a038b"/>
+    <qudt:description rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">&lt;p class="lm-para"&gt;A quantity is the measurement of an observable property of a particular object, event, or physical system. A quantity is always associated with the context of measurement (i.e. the thing measured, the measured value, the accuracy of measurement, etc.) whereas the underlying quantity kind is independent of any particular measurement. Thus, length is a quantity kind while the height of a rocket is a specific quantity of length; its magnitude that may be expressed in meters, feet, inches, etc. Examples of physical quantities include physical constants, such as the speed of light in a vacuum, Planck's constant, the electric permittivity of free space, and the fine structure constant. &lt;/p&gt;
+
+&lt;p class="lm-para"&gt;In other words, quantities are quantifiable aspects of the world, such as time, distance, velocity, mass, momentum, energy, and weight, and units are used to describe their measure. Many of which are related to each other by various physical laws, and as a result the units of some of the quantities can be expressed as products (or ratios) of powers of other units (e.g., momentum is mass times velocity and velocity is measured in distance divided by time). These relationships are discussed in dimensional analysis. Those that cannot be so expressed can be regarded as "fundamental" in this sense.&lt;/p&gt;
+&lt;p class="lm-para"&gt;A quantity is distinguished from a "quantity kind" in that the former carries a value and the latter is a type specifier.&lt;/p&gt;</qudt:description>
+    <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.0/schema/qudt"/>
+    <rdfs:isDefinedBy rdf:resource="http://qudt.org/schema/qudt"/>
+    <rdfs:label>Quantity</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/dc/terms/license">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
@@ -665,239 +238,70 @@
     <rdfs:comment xml:lang="en">slipArea represents the slip area of discretized line in double.</rdfs:comment>
     <rdfs:label xml:lang="en">slipArea</rdfs:label>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N25c8382d956b4f9a9bf0fe0910d85158">
-    <rdf:first rdf:resource="https://purls.helmholtz-metadaten.de/diso#DiscretizedLine"/>
-    <rdf:rest rdf:nodeID="Nbd81ba8c86864221bd32ea605101cffd"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N9688ea73ec1347c2851e5abef1ea35a4">
+  <rdf:Description rdf:nodeID="N5ef310806c444164ad91d6e769cc9138">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasBurgersVector"/>
-    <owl:someValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#BurgersVector"/>
+    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasSlipDirection"/>
+    <owl:someValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#SlipDirection"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N81cfadeeb23346f68b32ff89a3949e6c">
-    <rdf:first rdf:nodeID="Nda61e4ad6a9b4fd1875edae5214e2d10"/>
-    <rdf:rest rdf:nodeID="Nea3771b3cda54e9b9046a5feb4aa9e23"/>
+  <rdf:Description rdf:nodeID="Nc5dd1bb461da435eb43428725ad60214">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasStartNode"/>
+    <owl:allValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#Node"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#FieldIonMicroscopy">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:disjointWith rdf:resource="https://purls.helmholtz-metadaten.de/diso#TransmissionElectronMicroscopy"/>
-    <rdfs:comment xml:lang="en">Field Ion Microscopy (FIM) is a microscopy technique that can be used to image the arrangement of atoms.</rdfs:comment>
-    <rdfs:label xml:lang="en">Field Ion Microscopy</rdfs:label>
+  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#hasRepresentation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:range rdf:nodeID="Nf8faceec14f44c5ebfdff90859cb9d2b"/>
+    <rdfs:comment xml:lang="en">hasRepresentation relates the entity to another representation of entity.</rdfs:comment>
+    <rdfs:label xml:lang="en">has representation</rdfs:label>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N7b14601a8765451b9d21c0a05d67a8c2">
-    <rdf:first rdf:nodeID="N964590391b3f4107b24ac55ec8b148d2"/>
+  <rdf:Description rdf:nodeID="N9fe721ef9c4e4d1d90ff8a4cf18fe9b3">
+    <rdf:first rdf:nodeID="N622b279e8eb44710a565f9ea7f9f7623"/>
     <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/dc/terms/title">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Ne2fff6f4717b4c22812b6227c52b5741">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:intersectionOf rdf:nodeID="N63e497af3b12493795c9786d9a86ba14"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#BurgersVector">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:resource="https://purls.helmholtz-metadaten.de/cso#Vector"/>
-    <rdfs:comment xml:lang="en">An elementary unit (length order of lattice parameter) of lattice translation. The basic notion of the Burgers vector comes from the closure failure of an initially perfect lattice due to the existence of dislocation. The magnitude and direction of closure failure are characterized by the Burgers vector.</rdfs:comment>
-    <rdfs:label xml:lang="en">Burgers Vector</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Ne82cf8dac695443a8efab3c8eb81aa23">
+  <rdf:Description rdf:nodeID="Nbf67eb8f401b484bb4aea23aca1c3f5b">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#isSegmentOf"/>
-    <owl:allValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#DiscretizedLine"/>
+    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasSlipDirection"/>
+    <owl:allValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#SlipDirection"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N86e6e871ba774a66af3bb8c0a9bd50b8">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasBurgersVector"/>
-    <owl:allValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#BurgersVector"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N492ee9a9679b44138da6464f0ba05dba">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasSegment"/>
-    <owl:allValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#Segment"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Na8b3c1a3a5ff4ec78c3f88dfed9dcd40">
-    <rdf:first rdf:nodeID="N128e35e0e53b4bce9d6c222b61b3836d"/>
-    <rdf:rest rdf:nodeID="N77525768a0874bf98b2c50f9705f7d54"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#hasBurgersVector">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/diso#Dislocation"/>
-    <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/diso#BurgersVector"/>
-    <rdfs:comment xml:lang="en">hasBurgersVector represents the relationship between dislocation to Burgers vector.</rdfs:comment>
-    <rdfs:label xml:lang="en">has Burgers vector</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N9022c49da063485280acb609a3492e08">
-    <rdf:first rdf:resource="https://purls.helmholtz-metadaten.de/cso#CrystalStructure"/>
-    <rdf:rest rdf:nodeID="N7fd872819b1d49e0a89108993e21ffa3"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N93fe859af5a94957a66b4ee3920dcf0e">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasLatticeDirection"/>
-    <owl:allValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#LatticeDirection"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#hasLineSense">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/diso#Dislocation"/>
-    <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/diso#LineSense"/>
-    <rdfs:comment xml:lang="en">hasLineSense represents the relationship between dislocation and line sense.</rdfs:comment>
-    <rdfs:label xml:lang="en">has line sense</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N665efdf49bf74dcaa0d04ff18a783169">
+  <rdf:Description rdf:nodeID="N33092e59f6a44557847ed0ed8f5613ee">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasSlipPlaneNormal"/>
     <owl:someValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#SlipPlaneNormal"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N8aabb9668032451b90e80bf5a7562a1d">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:intersectionOf rdf:nodeID="N6d7953c60eb1447eb3e00541861b6349"/>
+  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#hasVectorOrigin">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/diso#LatticePlane"/>
+    <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/diso#VectorOrigin"/>
+    <rdfs:comment xml:lang="en">hasVectorOrigin represents the relationship between lattice plane and origin.</rdfs:comment>
+    <rdfs:label xml:lang="en">has vector origin</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#hasEndNode">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasNode"/>
+    <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/diso#Segment"/>
+    <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/diso#Node"/>
+    <rdfs:comment xml:lang="en">Sub-property of hasNode that relates the segment with the end node.</rdfs:comment>
+    <rdfs:label xml:lang="en">has end node</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd448ae273f3b4138a48579c2199510b5">
+    <rdf:first rdf:nodeID="Nbf67eb8f401b484bb4aea23aca1c3f5b"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#hasSegment">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:inverseOf rdf:resource="https://purls.helmholtz-metadaten.de/diso#isSegmentOf"/>
+    <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/diso#DiscretizedLine"/>
+    <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/diso#Segment"/>
+    <rdfs:comment xml:lang="en">hasSegment represents the relationship between discretized line and segment.</rdfs:comment>
+    <rdfs:label xml:lang="en">has segment</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/cso#CrystalStructure">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:nodeID="Ne2fff6f4717b4c22812b6227c52b5741"/>
-    <rdfs:subClassOf rdf:nodeID="Nbeda2d56c23d4f6f8b6eff00d2f8ed31"/>
+    <rdfs:subClassOf rdf:nodeID="N2bb5ee8419d54554b1680431e6ad1826"/>
+    <rdfs:subClassOf rdf:nodeID="Nda70b33f1d3548bf8e2eaca4bab9e577"/>
     <rdfs:comment xml:lang="en">A crystal structure is described by the lattice geometry and atomic arrangements within the unit cell.</rdfs:comment>
     <rdfs:label xml:lang="en">Crystal Structure</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N713f2079765e48ef9d20fd017f9fa845">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasLatticePlane"/>
-    <owl:someValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#LatticePlane"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N64956820caf34a7982daf6ab06a12566">
-    <rdf:first rdf:resource="https://purls.helmholtz-metadaten.de/cso#Lattice"/>
-    <rdf:rest rdf:nodeID="N28f742d488294d8792fde92ea598e653"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N861f9b1415ff45d4a14fed9bb6917cf7">
-    <rdf:first rdf:resource="https://purls.helmholtz-metadaten.de/diso#SlipSystem"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#LatticeDisplacement">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">The displacement of atoms from their perfect lattice sites due to the existence of defects, e.g., point defect, line defect, and grain boundary.</rdfs:comment>
-    <rdfs:label xml:lang="en">Lattice Displacement</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N295ab896effa419087bee94382e9db26">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:intersectionOf rdf:nodeID="Ncd7d0f873f8b406f89c307a4c4b293ef"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Ndfa6839a175d466cab950f094615150a">
-    <rdf:first rdf:resource="https://purls.helmholtz-metadaten.de/diso#SlipPlaneNormal"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N552e0c170dee4f30bfcff62c1cd1e631">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasSlipPlane"/>
-    <owl:someValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#SlipPlane"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N1084fb8be4df4b8b8bf6298e5eb75e40">
-    <rdf:first rdf:nodeID="Nbf97523424764f928a673a67bd349592"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N9712690dc8d24b5bbdd4b7f7be1d2638">
-    <rdf:first rdf:nodeID="N2d742971a3234d9d82850c773b7a0c5f"/>
-    <rdf:rest rdf:nodeID="N466497cf2dd74abf88c46cfc255ce2b2"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N964590391b3f4107b24ac55ec8b148d2">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasLatticeDirection"/>
-    <owl:allValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#LatticeDirection"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Ne2ed32af17714e82ab66c386c50a0ebf">
-    <rdf:first rdf:nodeID="N94f96da76e4142ddbf66e1ca6fe8f578"/>
-    <rdf:rest rdf:nodeID="N34e14dbed3394715b16115866cf1e9a8"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Na864975a61ce46aaafeaa9d7f3f07c1e">
-    <rdf:first rdf:resource="https://purls.helmholtz-metadaten.de/diso#LatticePlane"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nbbab1cb0de714ac4918920029b3c2ae8">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:intersectionOf rdf:nodeID="Nd58adbc10e8f4c889c7e643f9b8af87b"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Ncd7d0f873f8b406f89c307a4c4b293ef">
-    <rdf:first rdf:nodeID="N1ca044e268cb44a1b108f929587e9115"/>
-    <rdf:rest rdf:nodeID="N1084fb8be4df4b8b8bf6298e5eb75e40"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N5edf623d9ace432a88141dae36a5ac24">
-    <rdf:first rdf:nodeID="N0e960793dbea46caa36f3dbe55f49f52"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#SlipDirection">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:resource="https://purls.helmholtz-metadaten.de/diso#LatticeDirection"/>
-    <rdfs:comment xml:lang="en">The direction in the slip plane along which plastic deformation takes place. The slip direction corresponds to one of the shortest lattice translation vectors.</rdfs:comment>
-    <rdfs:label xml:lang="en">Slip Direction</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Na9b3e45dc2824b1ca720fe3c972fe1dd">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#directionMillerIndice"/>
-    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-    <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N76469e341907472eb8a250f1887c605f">
-    <rdf:first rdf:nodeID="N4e997b142be841dc929c652bdee8b0ae"/>
-    <rdf:rest rdf:nodeID="Nb4ca7d9091404caea1fdbfb8be4dd747"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Ne7fa31f2f4b84ee69a7262de691bada2">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:unionOf rdf:nodeID="N20962b2a4a124326bcb892171d3ffbc8"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Na28dda62fafb49bb8df1f09164b29c46">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#familyDirectionMillerIndice"/>
-    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-    <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#hasLatticePlane">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:domain rdf:nodeID="Nfe45b85f988949ff990bb693ba3b2428"/>
-    <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/diso#LatticePlane"/>
-    <rdfs:comment xml:lang="en">hasLatticePlane represents the relationship between a lattice and lattice planes.</rdfs:comment>
-    <rdfs:label xml:lang="en">has lattice plane</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nf431e392817e4a4b8a9dcd3d45010f98">
-    <rdf:first rdf:resource="https://purls.helmholtz-metadaten.de/cso#Lattice"/>
-    <rdf:rest rdf:nodeID="Ndd6f17faf6f9467e8e094d6a6c89f78c"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N2d742971a3234d9d82850c773b7a0c5f">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasSlipPlaneNormal"/>
-    <owl:someValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#SlipPlaneNormal"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N8cd418c18b864550a082db73b5775522">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#resultsIn"/>
-    <owl:someValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#LatticeDisplacement"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nd243a760b46c461ca73964ad920208a7">
-    <rdf:first rdf:nodeID="N713002ff88744420bf0baaf19178f616"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N69989a86e5e944348eb469f396341036">
-    <rdf:first rdf:resource="https://purls.helmholtz-metadaten.de/diso#LatticeDirection"/>
-    <rdf:rest rdf:nodeID="Ndfa6839a175d466cab950f094615150a"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nfab9ebb8b2934c5d95706099e886ce1c">
-    <rdf:first rdf:resource="https://purls.helmholtz-metadaten.de/diso#SlipSystem"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N42f511b4d8404cf2b68a389fc277012b">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:intersectionOf rdf:nodeID="N6182c4c6ab0a4384ac799036ba8aa4eb"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nb4ca7d9091404caea1fdbfb8be4dd747">
-    <rdf:first rdf:nodeID="N936c6f1838a44c6d8c923accaeafe460"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N67d0b04fadf24e189353afa249281c0f">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#observedBy"/>
-    <owl:someValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#TransmissionElectronMicroscopy"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nbeda2d56c23d4f6f8b6eff00d2f8ed31">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:intersectionOf rdf:nodeID="N76469e341907472eb8a250f1887c605f"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#hasSlipSystem">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
@@ -906,71 +310,917 @@
     <rdfs:comment xml:lang="en">hasSlipSystem represents the relationship between a crystal structure and slip system.</rdfs:comment>
     <rdfs:label xml:lang="en">has slip system</rdfs:label>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="Nd58adbc10e8f4c889c7e643f9b8af87b">
-    <rdf:first rdf:nodeID="N964cb8cd902d403e8e71d7ad3d89354d"/>
-    <rdf:rest rdf:nodeID="N0bbd021802504189b84ff53c86030c5c"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N985a29911e2941e2a764dba887016696">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:unionOf rdf:nodeID="N25c8382d956b4f9a9bf0fe0910d85158"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N783220132cc14ca4aa00873c644aaa66">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:intersectionOf rdf:nodeID="Ne2ed32af17714e82ab66c386c50a0ebf"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Na23b6123654e448dbdd54c30aff5a162">
+  <rdf:Description rdf:nodeID="Nd8b680afd16e408da4fdb0ec2764fe9d">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasNumericalRepresentation"/>
-    <owl:someValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#DiscretizedLine"/>
+    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/cso#hasSecondAxisVector"/>
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    <owl:onClass rdf:resource="https://w3id.org/mdo/structure/CoordinateVector"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N1c5917268858474c95e5ff3e459e184b">
+  <rdf:Description rdf:nodeID="N7033314154f6481084d5b4fc01d50888">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasSlipSystem"/>
+    <owl:someValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#SlipSystem"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc3f36d850faa4c1c822114b5e8eadc91">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#directionMillerIndice"/>
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N4fbe076751c24045889faae4663d205e">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/cso#hasPositionVector"/>
+    <owl:allValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/cso#PositionVector"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#directionMillerIndice">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:nodeID="N9c58b13dc76e47e4955450e0b92216cd"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment xml:lang="en">directionMillerIndice represents Miller indice of lattice direction in string.</rdfs:comment>
+    <rdfs:label xml:lang="en">direction miller indice</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N9367af1ad1064b69b1616461ae69f2ca">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasLatticePoint"/>
+    <owl:allValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#LatticePoint"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nfe11e7f978344d7c9e6d49d6806f95de">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasSlipPlaneNormal"/>
+    <owl:someValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#SlipPlaneNormal"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd9c3882a442040c9bc89a1e9bf1d5607">
+    <rdf:first rdf:nodeID="N1cedfc9859ea41939908e73cd45ced50"/>
+    <rdf:rest rdf:nodeID="N9fe721ef9c4e4d1d90ff8a4cf18fe9b3"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nf9d5563c744940b791c0c392b3f0694b">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/cso#vectorMagnitude"/>
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nfe56ddc9174a47a29f8cf99890aa90d6">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#familyDirectionMillerIndice"/>
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#hasShapeFunction">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/diso#DiscretizedLine"/>
+    <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/diso#ShapeFunction"/>
+    <rdfs:comment xml:lang="en">hasShapeFunction represents the relationship between discretized line and shape function.</rdfs:comment>
+    <rdfs:label xml:lang="en">has shape function</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3bf9bcdc48c34d61b278cbe131b88d2b">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://qudt.org/schema/qudt/unit"/>
+    <owl:allValuesFrom rdf:resource="http://qudt.org/schema/qudt/Unit"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#hasNode">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/diso#Segment"/>
+    <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/diso#Node"/>
+    <rdfs:comment xml:lang="en">hasNode represents the relationship between segment and node.</rdfs:comment>
+    <rdfs:label xml:lang="en">has node</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3aa787a79c8541e7aa1bbd8bc5e6e4ea">
+    <rdf:first rdf:nodeID="N3da22ed9836e4840b97b159580684a82"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ndc602dd49a1a4e20acfa1901c183887d">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:unionOf rdf:nodeID="N81c7c855d3d84123bcae3a99f5cad007"/>
+    <owl:intersectionOf rdf:nodeID="Nab66558e77be414e856b4b75c5c3e490"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="Nfe45b85f988949ff990bb693ba3b2428">
+  <rdf:Description rdf:nodeID="Na055f7e2eaa843f8a9a78583f1694238">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:unionOf rdf:nodeID="N9022c49da063485280acb609a3492e08"/>
+    <owl:intersectionOf rdf:nodeID="Nfef04f08b07e4e3da19f085a12cd41b1"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N42336623b97246ceb4b01a12aa16c19c">
+  <rdf:Description rdf:about="http://purl.org/dc/terms/created">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N9d4b8c24ffaf45e1b7ed156b77f46a94">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasSegment"/>
+    <owl:allValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#Segment"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N9daecbfa15654357b1529f1db83b1323">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasLineSense"/>
+    <owl:someValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#LineSense"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N01d50a74a1f840b980854da7fec18484">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasLatticePlane"/>
+    <owl:someValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#LatticePlane"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#LatticePlane">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:intersectionOf rdf:nodeID="Na6c295be0eb442b39c733d100f53a394"/>
+    <rdfs:subClassOf rdf:resource="https://purls.helmholtz-metadaten.de/diso#FamilyOfCrystalPlane"/>
+    <rdfs:subClassOf rdf:nodeID="Na055f7e2eaa843f8a9a78583f1694238"/>
+    <rdfs:subClassOf rdf:nodeID="Nbe4c5785c8954bd4a33de452dd409afa"/>
+    <rdfs:subClassOf rdf:nodeID="N18aeb359f12447c59668f34b2ba1d865"/>
+    <rdfs:subClassOf rdf:nodeID="N6dce827bf17f4fdf8c12b2f991e26370"/>
+    <rdfs:comment xml:lang="en">The lattice plane forms an infinitely stretched plane (characterized through a plane normal) that cuts through lattice points such that, again, a regular arrangement of lattice points in the plane occurs.</rdfs:comment>
+    <rdfs:label xml:lang="en">Lattice Plane</rdfs:label>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N0e960793dbea46caa36f3dbe55f49f52">
+  <rdf:Description rdf:nodeID="N384c4b634781413c867ee282a14242ce">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasShapeFunction"/>
+    <owl:allValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#ShapeFunction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#LatticePoint">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="https://purls.helmholtz-metadaten.de/cso#Point"/>
+    <rdfs:comment xml:lang="en">Lattice point is the point where atom(s) or molecule(s) is located.</rdfs:comment>
+    <rdfs:label xml:lang="en">Lattice Point</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na8d5f5d352df45f29ddc5e7fafeb88ce">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/cso#hasVectorComponent"/>
+    <owl:allValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/cso#VectorComponentOfBasis"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/cso#Lattice">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:nodeID="N35fdae780341459192261cb979ffa6c3"/>
+    <rdfs:subClassOf rdf:nodeID="N4b48880271a342dd989a2a5c9ff4d0b5"/>
+    <rdfs:subClassOf rdf:nodeID="N4fb1e884964d4f7ca5b5a4a52d5980a9"/>
+    <rdfs:comment xml:lang="en">The mathematical concept to represent the periodicity of a crystal. A lattice defines a periodic arrangement of one or more atoms.</rdfs:comment>
+    <rdfs:label xml:lang="en">Lattice</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N1227dcfbac484798b0e2b9aab47222bf">
+    <rdf:first rdf:resource="https://purls.helmholtz-metadaten.de/diso#LatticeDirection"/>
+    <rdf:rest rdf:nodeID="N05567ca0659f4cbeb2507649f7812720"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N7a01df02b6834b3d8490d8b61248cdb0">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasSlipPlaneNormal"/>
+    <owl:allValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#SlipPlaneNormal"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N7236e1a20f3849dfbc48037c89dd1e2d">
+    <rdf:first rdf:resource="https://purls.helmholtz-metadaten.de/diso#LatticeDirection"/>
+    <rdf:rest rdf:nodeID="Nd4df7383db174882a0c1b0a65e1e524b"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N61b562f1146b4a2a99fb3cbce5c6985c">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="N66868eab1d9740c79c1e4091d1c7f6ca"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N05567ca0659f4cbeb2507649f7812720">
+    <rdf:first rdf:resource="https://purls.helmholtz-metadaten.de/diso#LatticePlane"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N9c58b13dc76e47e4955450e0b92216cd">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="N7236e1a20f3849dfbc48037c89dd1e2d"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N39f98d19596e4d7fab4de04b29417912">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="N909e20a50c7446b79a3ba23ab7489f2a"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3555836dba284dbf9e14d75c7f55eed0">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasLatticePoint"/>
+    <owl:someValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#LatticePoint"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nea97dfe796ca423da57571f0bc94f04e">
+    <rdf:first rdf:nodeID="N33092e59f6a44557847ed0ed8f5613ee"/>
+    <rdf:rest rdf:nodeID="N26b3593b1f074b1cae392c83ab1e2acf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#hasLatticePlane">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:nodeID="N8c723041cf724a25a928928b960724c3"/>
+    <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/diso#LatticePlane"/>
+    <rdfs:comment xml:lang="en">hasLatticePlane represents the relationship between a lattice and lattice planes.</rdfs:comment>
+    <rdfs:label xml:lang="en">has lattice plane</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://qudt.org/schema/qudt/QuantityValue">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:nodeID="N3bf9bcdc48c34d61b278cbe131b88d2b"/>
+    <qudt:description rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">A &lt;i&gt;Quantity Value&lt;/i&gt; expresses the magnitude and kind of a quantity and is given by the product of a numerical value &lt;code&gt;n&lt;/code&gt; and a unit of measure &lt;code&gt;U&lt;/code&gt;. The number multiplying the unit is referred to as the numerical value of the quantity expressed in that unit. Refer to &lt;a href="http://physics.nist.gov/Pubs/SP811/sec07.html"&gt;NIST SP 811 section 7&lt;/a&gt; for more on quantity values.</qudt:description>
+    <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.0/schema/qudt"/>
+    <rdfs:isDefinedBy rdf:resource="http://qudt.org/schema/qudt"/>
+    <rdfs:label>Quantity value</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N38ec4f706e1e4b85873e5bad148cd72d">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#familyPlaneMillerIndice"/>
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#FieldIonMicroscopy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:disjointWith rdf:resource="https://purls.helmholtz-metadaten.de/diso#TransmissionElectronMicroscopy"/>
+    <rdfs:comment xml:lang="en">Field Ion Microscopy (FIM) is a microscopy technique that can be used to image the arrangement of atoms.</rdfs:comment>
+    <rdfs:label xml:lang="en">Field Ion Microscopy</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#LatticeDisplacement">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">The displacement of atoms from their perfect lattice sites due to the existence of defects, e.g., point defect, line defect, and grain boundary.</rdfs:comment>
+    <rdfs:label xml:lang="en">Lattice Displacement</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#FamilyOfCrystalPlane">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:nodeID="N38ec4f706e1e4b85873e5bad148cd72d"/>
+    <rdfs:comment xml:lang="en">A set of symmetrically equivalent planes in the lattice.</rdfs:comment>
+    <rdfs:label xml:lang="en">Family of Crystal Plane</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#hasBurgersVector">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/diso#Dislocation"/>
+    <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/diso#BurgersVector"/>
+    <rdfs:comment xml:lang="en">hasBurgersVector represents the relationship between dislocation to Burgers vector.</rdfs:comment>
+    <rdfs:label xml:lang="en">has Burgers vector</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/cso#PositionVector">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="https://purls.helmholtz-metadaten.de/cso#Vector"/>
+    <rdfs:comment xml:lang="en">Euclidean vector that represents the position of a point P in space in relation to an arbitrary reference origin O.</rdfs:comment>
+    <rdfs:label xml:lang="en">Position Vector</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#familyPlaneMillerIndice">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/diso#FamilyOfCrystalPlane"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment xml:lang="en">familyPlaneMillerIndice represents a set of Miller indice of lattice plane in string.</rdfs:comment>
+    <rdfs:label xml:lang="en">family plane miller indice</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N8a444693b976484a953c9931f647e536">
+    <rdf:first rdf:nodeID="Na1f4e9c5ae054533b5850cef88eacf9b"/>
+    <rdf:rest rdf:nodeID="N9ce280f5ad2544ffb7896e1e1e0c0fc5"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N2398a7abf5f84cbb9173b0fe849af4a1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/cso#hasBasis"/>
+    <owl:someValuesFrom rdf:resource="https://w3id.org/mdo/structure/Basis"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#SlipPlaneNormal">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="https://purls.helmholtz-metadaten.de/cso#Vector"/>
+    <rdfs:subClassOf rdf:nodeID="Nbaa9f058b4454baaa23a332d4e47d1a2"/>
+    <rdfs:comment xml:lang="en">The unit normal vector of slip planes.</rdfs:comment>
+    <rdfs:label xml:lang="en">Slip Plane Normal</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#SlipPlane">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="https://purls.helmholtz-metadaten.de/diso#LatticePlane"/>
+    <rdfs:subClassOf rdf:nodeID="N6566eeccbf8c48bbb837c27c22688616"/>
+    <rdfs:subClassOf rdf:nodeID="N56866027950e4b8a8006a1be4b87aabc"/>
+    <rdfs:comment xml:lang="en">The crystallographic/lattice plane along which the dislocation line traverses/moves. The slip plane is usually the plane with the highest density of atoms, i.e. most widely spaced.</rdfs:comment>
+    <rdfs:label xml:lang="en">Slip Plane</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#planeMillerIndice">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/diso#LatticePlane"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment xml:lang="en">planeMillerIndice represents Miller indice of lattice plane in string.</rdfs:comment>
+    <rdfs:label xml:lang="en">plane miller indice</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N9aad64d166604a96a5128059b6fde55f">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasLatticeDirection"/>
     <owl:allValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#LatticeDirection"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N842957c6b8674668b2cbee9ee66ba383">
+  <rdf:Description rdf:nodeID="Nd503c7fdcdbc4dae89541fd226237d2e">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://qudt.org/schema/qudt/hasQuantityKind"/>
+    <owl:allValuesFrom rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3ca4b6662adf41ba8ba8227a79665fb1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#observedBy"/>
+    <owl:someValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#FieldIonMicroscopy"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N52bf9a582187460a9c1830c389b76643">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasBurgersVector"/>
+    <owl:someValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#BurgersVector"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#hasLatticePoint">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:nodeID="N7109f486824a4de5878cf0941bc62dd5"/>
+    <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/diso#LatticePoint"/>
+    <rdfs:comment xml:lang="en">hasLatticePoint represents the relationship between a lattice or lattice plane or lattice direction with lattice point.</rdfs:comment>
+    <rdfs:label xml:lang="en">has lattice point</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/cso#secondAxisComponent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#TransmissionElectronMicroscopy">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:unionOf rdf:nodeID="Nf431e392817e4a4b8a9dcd3d45010f98"/>
+    <rdfs:comment xml:lang="en">Transmission electron microscopy (TEM) is a microscopy technique in which a beam of electrons is transmitted through a specimen to form an image. The specimen is often an ultrathin section less than 100 nm thick.</rdfs:comment>
+    <rdfs:label xml:lang="en">Transmission Electron Microscopy</rdfs:label>
   </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/dc/terms/contributor">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#LineSense">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">A sense that characterizes a directed line, i.e., it has a start and an end.</rdfs:comment>
+    <rdfs:label xml:lang="en">Line Sense</rdfs:label>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N0413dee67ea64d38b096f5c0fca16597">
+  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#hasFamilyCrystalDirection">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/diso#LatticeDirection"/>
+    <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/diso#FamilyOfCrystalDirection"/>
+    <rdfs:comment xml:lang="en">hasFamilyCrystalDirection represents the relationship between lattice direction and family of crystal direction.</rdfs:comment>
+    <rdfs:label xml:lang="en">has family crystal direction</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N4a3fd74b24fa4934952ad29e1bbdccc8">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/cso#secondAxisComponent"/>
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb420534a397e4444970e6848fc146287">
+    <rdf:first rdf:nodeID="N5ef310806c444164ad91d6e769cc9138"/>
+    <rdf:rest rdf:nodeID="Nd448ae273f3b4138a48579c2199510b5"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#LineDefect">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="https://purls.helmholtz-metadaten.de/cdo#CrystallographicDefect"/>
+    <rdfs:comment xml:lang="en">Linear or one-dimensional defect around which some of the atoms are misaligned.</rdfs:comment>
+    <rdfs:label xml:lang="en">Line Defect</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/mdo/structure/CoordinateVector">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:nodeID="N4f55ec0883ab417197eb78152404b637"/>
+    <rdfs:subClassOf rdf:nodeID="Ne48b531c92d7439f8534f2c79d23d724"/>
+    <rdfs:subClassOf rdf:nodeID="N0605008f50914069bef9d5dd49547829"/>
+    <rdfs:label xml:lang="en">Coordinate Vector</rdfs:label>
+    <skos:defintion xml:lang="en">A coordinate vector according to standard basis, i.e., e_x (1, 0, 0), e_y(0, 1, 0), and e_z (0, 0, 1).</skos:defintion>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#hasStartNode">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasNode"/>
+    <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/diso#Segment"/>
+    <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/diso#Node"/>
+    <rdfs:comment xml:lang="en">Sub-property of hasNode that relates the segment with the start node.</rdfs:comment>
+    <rdfs:label xml:lang="en">has start node</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc284d6993cd740e8bb36377602c444a7">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="N06e0a104b7fc4b4cbf22a9b89f8f546d"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N5e28c876dd834ae39458da61c5f5d874">
+    <rdf:first rdf:nodeID="N9daecbfa15654357b1529f1db83b1323"/>
+    <rdf:rest rdf:nodeID="N138cd8e88f0a4b40aa4281c96fe34396"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nf52c7f38f3ed4756a35a98c603117c5d">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="N46f7176ddc9d4b6d8acc5a1374525ff7"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#hasNumericalRepresentation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasRepresentation"/>
+    <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/diso#Line"/>
+    <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/diso#DiscretizedLine"/>
+    <rdfs:comment xml:lang="en">hasNumericalRepresentation relates the entity with its numerical representation.</rdfs:comment>
+    <rdfs:label xml:lang="en">has numerical representation</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N50d8985ddebf48d09dc395cfae7c53d8">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/cso#firstAxisComponent"/>
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N0979f2331d6d4301b7d48308f10a038b">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://qudt.org/schema/qudt/quantityValue"/>
+    <owl:allValuesFrom rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/cso#hasSecondAxisVector">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#resultsIn">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/diso#Dislocation"/>
+    <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/diso#LatticeDisplacement"/>
+    <rdfs:comment xml:lang="en">resultsIn represents the relationship between dislocation and lattice displacement.</rdfs:comment>
+    <rdfs:label xml:lang="en">results in</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N28cc57d858c74f5daf21fb2ad7414065">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasSlipDirection"/>
+    <owl:someValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#SlipDirection"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#LatticeDirection">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="https://purls.helmholtz-metadaten.de/cso#Vector"/>
+    <rdfs:subClassOf rdf:resource="https://purls.helmholtz-metadaten.de/diso#FamilyOfCrystalDirection"/>
+    <rdfs:subClassOf rdf:nodeID="Ndc602dd49a1a4e20acfa1901c183887d"/>
+    <rdfs:subClassOf rdf:nodeID="Nc3f36d850faa4c1c822114b5e8eadc91"/>
+    <rdfs:comment xml:lang="en">The vector direction inside the lattice that is connecting two lattice points.</rdfs:comment>
+    <rdfs:label xml:lang="en">Lattice Direction</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N78d5eaf714874acd9a7832a2dce5ef8a">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="Nfb01dafe939f401c8cea04161cf7b302"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N909e20a50c7446b79a3ba23ab7489f2a">
+    <rdf:first rdf:resource="https://purls.helmholtz-metadaten.de/diso#SlipPlane"/>
+    <rdf:rest rdf:nodeID="N85fad773855e4d148377247904d82214"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N66868eab1d9740c79c1e4091d1c7f6ca">
+    <rdf:first rdf:nodeID="N50d8985ddebf48d09dc395cfae7c53d8"/>
+    <rdf:rest rdf:nodeID="N1d6d2c01da49494d801d2d7cb33a7bd1"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N591424cb148e47e9b7d491e126d996f6">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasLineSense"/>
+    <owl:allValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#LineSense"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N0605008f50914069bef9d5dd49547829">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://w3id.org/mdo/structure/Z_axisCoordinate"/>
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N2bb5ee8419d54554b1680431e6ad1826">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="Nc354c9d150124354ab8635ba0fa8504d"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#hasSlipDirection">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasLatticeDirection"/>
+    <rdfs:domain rdf:nodeID="N39f98d19596e4d7fab4de04b29417912"/>
+    <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/diso#SlipDirection"/>
+    <rdfs:comment xml:lang="en">hasSlipDirection represents the relationship between the slip plane or slip system with the slip direction.</rdfs:comment>
+    <rdfs:label xml:lang="en">has slip direction</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/cso#Point">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:nodeID="N4fbe076751c24045889faae4663d205e"/>
+    <rdfs:comment xml:lang="en">In classical Euclidean geometry, a point is a primitive notion that models an exact location in the space, and has no length, width, or thickness.</rdfs:comment>
+    <rdfs:label xml:lang="en">Point</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://qudt.org/schema/qudt/Unit">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <qudt:description rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">A unit of measure, or unit, is a particular quantity value that has been chosen as a scale for measuring other quantities the same kind (more generally of equivalent dimension). For example, the meter is a quantity of length that has been rigorously defined and standardized by the BIPM (International Board of Weights and Measures). Any measurement of the length can be expressed as a number multiplied by the unit meter. More formally, the value of a physical quantity Q with respect to a unit (U) is expressed as the scalar multiple of a real number (n) and U, as  \(Q = nU\).</qudt:description>
+    <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.0/schema/qudt"/>
+    <rdfs:isDefinedBy rdf:resource="http://qudt.org/schema/qudt"/>
+    <rdfs:label>Unit</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N7933f30ffaa7420ea190755428257ea6">
+    <rdf:first rdf:resource="https://purls.helmholtz-metadaten.de/cso#CrystalStructure"/>
+    <rdf:rest rdf:nodeID="N78ae066b563c4fb999cc13c0b5dbe2eb"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N1b9c515f24f64534a2213272a52521f3">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasLatticePoint"/>
+    <owl:allValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#LatticePoint"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd58bc10b527f41afa40dca32168a7927">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/cso#hasThirdAxisVector"/>
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    <owl:onClass rdf:resource="https://w3id.org/mdo/structure/CoordinateVector"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#hasFamilyCrystalPlane">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/diso#LatticePlane"/>
+    <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/diso#FamilyOfCrystalPlane"/>
+    <rdfs:comment xml:lang="en">hasFamilyCrystalPlane represents the relationship between the lattice plane and the family of crystal planes.</rdfs:comment>
+    <rdfs:label xml:lang="en">has family crystal plane</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N4fb1e884964d4f7ca5b5a4a52d5980a9">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="Nbfc74a2fe3b44fe09d59ec049ac4c87f"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/cso#hasPositionVector">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/cso#Point"/>
+    <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/cso#PositionVector"/>
+    <rdfs:comment xml:lang="en">hasPositionVector represents the relationship between entity and position vector.</rdfs:comment>
+    <rdfs:label xml:lang="en">has position vector</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#BurgersVector">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="https://purls.helmholtz-metadaten.de/cso#Vector"/>
+    <rdfs:comment xml:lang="en">An elementary unit (length order of lattice parameter) of lattice translation. The basic notion of the Burgers vector comes from the closure failure of an initially perfect lattice due to the existence of dislocation. The magnitude and direction of closure failure are characterized by the Burgers vector.</rdfs:comment>
+    <rdfs:label xml:lang="en">Burgers Vector</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N1a0be8d4a69b41c0b1719087075db3f7">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="N9a13cc14c6c443ce869da7f13f7eec08"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N26b3593b1f074b1cae392c83ab1e2acf">
+    <rdf:first rdf:nodeID="N6442fa1e59924a6e98f4d42d95dd8123"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nbfc74a2fe3b44fe09d59ec049ac4c87f">
+    <rdf:first rdf:nodeID="Nb5c941cc405540e0aeaaedd4dd43d0f6"/>
+    <rdf:rest rdf:nodeID="N81a2c6c444ac443f9c93822a8bfc80b9"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/mdo/structure/Basis">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:nodeID="Ndb1041e8d53640bdb60c74aec919ebf1"/>
+    <rdfs:subClassOf rdf:nodeID="Nd8b680afd16e408da4fdb0ec2764fe9d"/>
+    <rdfs:subClassOf rdf:nodeID="Nd58bc10b527f41afa40dca32168a7927"/>
+    <rdfs:comment xml:lang="en">A basis defines a spatial unit used to express fractional coordinates.</rdfs:comment>
+    <rdfs:label xml:lang="en">Basis</rdfs:label>
+    <skos:defintion xml:lang="en">Set of vector(in 2-D two vectors and in 3-D three vectors) that linearly independent.</skos:defintion>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N18aeb359f12447c59668f34b2ba1d865">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasVectorOrigin"/>
+    <owl:allValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#VectorOrigin"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/cso#VectorComponentOfBasis">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://qudt.org/schema/qudt/Quantity"/>
+    <rdfs:subClassOf rdf:nodeID="Nee479619fce5465ba1217d881c25814e"/>
+    <rdfs:subClassOf rdf:nodeID="N61b562f1146b4a2a99fb3cbce5c6985c"/>
+    <rdfs:comment xml:lang="en">Vector components/vector coordinates of particular basis. It has relation to a specific basis.</rdfs:comment>
+    <rdfs:label xml:lang="en">Vector Component of Basis</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nbaa9f058b4454baaa23a332d4e47d1a2">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#directionMillerIndice"/>
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#hasMathematicalRepresentation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasRepresentation"/>
+    <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/diso#Dislocation"/>
+    <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/diso#Line"/>
+    <rdfs:comment xml:lang="en">hasMathematicalRepresentation relates the entity with its mathematical representation.</rdfs:comment>
+    <rdfs:label xml:lang="en">has mathematical representation</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#hasSlipPlane">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasLatticePlane"/>
+    <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/cso#CrystalStructure"/>
+    <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/diso#SlipPlane"/>
+    <rdfs:comment xml:lang="en">hasSlipPlane represents the relationship between crystal structure and slip plane.</rdfs:comment>
+    <rdfs:label xml:lang="en">has slip plane</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#SlipDirection">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="https://purls.helmholtz-metadaten.de/diso#LatticeDirection"/>
+    <rdfs:comment xml:lang="en">The direction in the slip plane along which plastic deformation takes place. The slip direction corresponds to one of the shortest lattice translation vectors.</rdfs:comment>
+    <rdfs:label xml:lang="en">Slip Direction</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N9a13cc14c6c443ce869da7f13f7eec08">
+    <rdf:first rdf:resource="https://purls.helmholtz-metadaten.de/diso#SlipPlane"/>
+    <rdf:rest rdf:nodeID="Na61d70c565d44d64b930e86764c74e80"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N8e6208833aeb404ea4ea716425d719a7">
+    <rdf:first rdf:nodeID="Nfc7d91ae3d4947489688496836f7aa06"/>
+    <rdf:rest rdf:nodeID="N037ea734fe9a41d086187cb01e7b08b8"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N35fdae780341459192261cb979ffa6c3">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="Nd9c3882a442040c9bc89a1e9bf1d5607"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N13f68e23d80f4d35a133ac8b42745fc2">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasNumericalRepresentation"/>
+    <owl:someValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#DiscretizedLine"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nf7d75cdb3b6e455fbc9a998f1d02b635">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="Nea97dfe796ca423da57571f0bc94f04e"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N546b67c57d914ad7ac23fea0dc11e27e">
+    <rdf:first rdf:resource="https://purls.helmholtz-metadaten.de/diso#LatticePlane"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nf9161a8363914526b21009e1f22a2694">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#slipArea"/>
     <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
     <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N2689780eb434429ba3785bafc73ec6b4">
-    <rdf:first rdf:resource="https://purls.helmholtz-metadaten.de/diso#TransmissionElectronMicroscopy"/>
+  <rdf:Description rdf:nodeID="N9150ffbbb298432c93643529069173ae">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasEndNode"/>
+    <owl:allValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#Node"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nee479619fce5465ba1217d881c25814e">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="N878083a6d2524c89a7ac43686844005e"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N4b48880271a342dd989a2a5c9ff4d0b5">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="Na2cbf46d17b04e2db02aa51486f19268"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6442fa1e59924a6e98f4d42d95dd8123">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasSlipPlaneNormal"/>
+    <owl:allValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#SlipPlaneNormal"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N1cedfc9859ea41939908e73cd45ced50">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasLatticeDirection"/>
+    <owl:someValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#LatticeDirection"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N622b279e8eb44710a565f9ea7f9f7623">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasLatticeDirection"/>
+    <owl:allValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#LatticeDirection"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na2cbf46d17b04e2db02aa51486f19268">
+    <rdf:first rdf:nodeID="N01d50a74a1f840b980854da7fec18484"/>
+    <rdf:rest rdf:nodeID="N40bd43fae6ba459ca73faf30013f9558"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N11622b5bb92546d9aea75532f5b83c6b">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasSlipSystem"/>
+    <owl:allValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#SlipSystem"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N849ab54d54e14f619073a4617a9ac168">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/cso#thirdAxisComponent"/>
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nda47bfc3ea334cd9b8f77704f8f8b60e">
+    <rdf:first rdf:nodeID="Nbf650f4b688b4633b4091356904c8f06"/>
     <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N7bb8f10f402f453ba5db50b5956bfa56">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#isSegmentOf"/>
+    <owl:allValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#DiscretizedLine"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb005b39df0db49a09ab0bae24acb8fc0">
+    <rdf:first rdf:nodeID="N11622b5bb92546d9aea75532f5b83c6b"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc354c9d150124354ab8635ba0fa8504d">
+    <rdf:first rdf:nodeID="Ne89e62f97bf7410b89184b433cdcc43b"/>
+    <rdf:rest rdf:nodeID="N78963fe92d7d4dd4b46fe57deef0af0c"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na61d70c565d44d64b930e86764c74e80">
+    <rdf:first rdf:resource="https://purls.helmholtz-metadaten.de/diso#SlipSystem"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N81a2c6c444ac443f9c93822a8bfc80b9">
+    <rdf:first rdf:nodeID="N9367af1ad1064b69b1616461ae69f2ca"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne85d79cd47a14afdbcc653221873c98c">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasBurgersVector"/>
+    <owl:allValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#BurgersVector"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#hasLineSense">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/diso#Dislocation"/>
+    <rdfs:range rdf:resource="https://purls.helmholtz-metadaten.de/diso#LineSense"/>
+    <rdfs:comment xml:lang="en">hasLineSense represents the relationship between dislocation and line sense.</rdfs:comment>
+    <rdfs:label xml:lang="en">has line sense</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/cdo#CrystallographicDefect">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">The crystallographic defect is a lattice irregularity that has one or more dimensions on the order of an atomic diameter.</rdfs:comment>
+    <rdfs:label xml:lang="en">Crystallographic Defect</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb3047dc46e5f43c0a1623ad5b4bd4d80">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#movesOn"/>
+    <owl:someValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#SlipPlane"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N8c723041cf724a25a928928b960724c3">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="N7933f30ffaa7420ea190755428257ea6"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb5c941cc405540e0aeaaedd4dd43d0f6">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasLatticePoint"/>
+    <owl:someValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#LatticePoint"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N46f7176ddc9d4b6d8acc5a1374525ff7">
+    <rdf:first rdf:nodeID="N28cc57d858c74f5daf21fb2ad7414065"/>
+    <rdf:rest rdf:nodeID="Nc7286ab17bd7431baa70dd8e40fa306d"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ndb1041e8d53640bdb60c74aec919ebf1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/cso#hasFirstAxisVector"/>
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    <owl:onClass rdf:resource="https://w3id.org/mdo/structure/CoordinateVector"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/cso#thirdAxisComponent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N037ea734fe9a41d086187cb01e7b08b8">
+    <rdf:first rdf:nodeID="Na8d5f5d352df45f29ddc5e7fafeb88ce"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N878083a6d2524c89a7ac43686844005e">
+    <rdf:first rdf:nodeID="N2398a7abf5f84cbb9173b0fe849af4a1"/>
+    <rdf:rest rdf:nodeID="Nda47bfc3ea334cd9b8f77704f8f8b60e"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N7187a5d56c1f47f7a612d8bad355ac20">
+    <rdf:first rdf:nodeID="N7a01df02b6834b3d8490d8b61248cdb0"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N85fad773855e4d148377247904d82214">
+    <rdf:first rdf:resource="https://purls.helmholtz-metadaten.de/diso#SlipSystem"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne48b531c92d7439f8534f2c79d23d724">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://w3id.org/mdo/structure/Y_axisCoordinate"/>
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ndcad3bf89624458aa8026fe2b3b81db9">
+    <rdf:first rdf:resource="https://purls.helmholtz-metadaten.de/diso#Line"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/mdo/structure/Y_axisCoordinate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na1ad8a4ca30e4cffa730b79edf6ac971">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="N8e6208833aeb404ea4ea716425d719a7"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne4a6b1b2c21b4fae87cd68de1b304c38">
+    <rdf:first rdf:nodeID="Ne85d79cd47a14afdbcc653221873c98c"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://qudt.org/schema/qudt/quantityValue">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N5993006244934f6d9a8fa554ddefd2bf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasMathematicalRepresentation"/>
+    <owl:someValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#Line"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N138cd8e88f0a4b40aa4281c96fe34396">
+    <rdf:first rdf:nodeID="N591424cb148e47e9b7d491e126d996f6"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N45020e71d66c4598a8d9d3c88391a739">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#resultsIn"/>
+    <owl:someValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#LatticeDisplacement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/cso#vectorMagnitude">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N06e0a104b7fc4b4cbf22a9b89f8f546d">
+    <rdf:first rdf:resource="https://purls.helmholtz-metadaten.de/diso#FieldIonMicroscopy"/>
+    <rdf:rest rdf:nodeID="Nf4af1684f6ac4dfb813da19ef03e479d"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N5fa9c384be2b4437b4d5df4d43de1e3c">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#observedBy"/>
+    <owl:someValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#TransmissionElectronMicroscopy"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N5458f194b82f4d37942c76764c4e39ab">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="N5e28c876dd834ae39458da61c5f5d874"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/dc/terms/creator">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N0450be690df84e59ac602d7e9c457c88">
+  <rdf:Description rdf:nodeID="N4f55ec0883ab417197eb78152404b637">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasVectorOrigin"/>
-    <owl:allValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#VectorOrigin"/>
+    <owl:onProperty rdf:resource="https://w3id.org/mdo/structure/X_axisCoordinate"/>
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N3e63411338404da2b23b47c7149c38e3">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:unionOf rdf:nodeID="Nf5e1cb99b4f3463794e78baef8c4d071"/>
+  <rdf:Description rdf:nodeID="N9f7e7e3e3f7f48a1871f4c61c18603e5">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasLatticePoint"/>
+    <owl:allValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#LatticePoint"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N49df5fd96ae24576a885775a1cf4e738">
+  <rdf:Description rdf:nodeID="N466eb04dbd6a41cea7d508fc7c2863ac">
+    <rdf:first rdf:nodeID="Nfe11e7f978344d7c9e6d49d6806f95de"/>
+    <rdf:rest rdf:nodeID="N7187a5d56c1f47f7a612d8bad355ac20"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#familyDirectionMillerIndice">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="https://purls.helmholtz-metadaten.de/diso#FamilyOfCrystalDirection"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment xml:lang="en">familyDirectionMillerIndice represents a set of miller indices of lattice direction in string.</rdfs:comment>
+    <rdfs:label xml:lang="en">family direction miller indice</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#defintion">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N9ce280f5ad2544ffb7896e1e1e0c0fc5">
+    <rdf:first rdf:nodeID="N9f7e7e3e3f7f48a1871f4c61c18603e5"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/title">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N7109f486824a4de5878cf0941bc62dd5">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:intersectionOf rdf:nodeID="N9712690dc8d24b5bbdd4b7f7be1d2638"/>
+    <owl:unionOf rdf:nodeID="N7f5924c70e3943c095fc80955ba95d52"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N78ae066b563c4fb999cc13c0b5dbe2eb">
+    <rdf:first rdf:resource="https://purls.helmholtz-metadaten.de/cso#Lattice"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N884621f2c0f34bd9a5c4df92132f9425">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasSlipPlane"/>
+    <owl:allValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#SlipPlane"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/cso#hasFirstAxisVector">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd4df7383db174882a0c1b0a65e1e524b">
+    <rdf:first rdf:resource="https://purls.helmholtz-metadaten.de/diso#SlipPlaneNormal"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6566eeccbf8c48bbb837c27c22688616">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="Nb420534a397e4444970e6848fc146287"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N40bd43fae6ba459ca73faf30013f9558">
+    <rdf:first rdf:nodeID="N9aad64d166604a96a5128059b6fde55f"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N1d6d2c01da49494d801d2d7cb33a7bd1">
+    <rdf:first rdf:nodeID="N4a3fd74b24fa4934952ad29e1bbdccc8"/>
+    <rdf:rest rdf:nodeID="N5c3c86cb37a6436a9b9d8f580c3054c9"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6dce827bf17f4fdf8c12b2f991e26370">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#planeMillerIndice"/>
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne89e62f97bf7410b89184b433cdcc43b">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasSlipPlane"/>
+    <owl:someValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#SlipPlane"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/diso#ScrewDislocation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="https://purls.helmholtz-metadaten.de/diso#Dislocation"/>
+    <rdfs:comment xml:lang="en">A dislocation that has a line sense parallel to its Burgers vector.</rdfs:comment>
+    <rdfs:label xml:lang="en">Screw Dislocation</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/cso#firstAxisComponent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nfef04f08b07e4e3da19f085a12cd41b1">
+    <rdf:first rdf:nodeID="N08ce935ee06942c3bd0e1290e4e8045c"/>
+    <rdf:rest rdf:nodeID="N3aa787a79c8541e7aa1bbd8bc5e6e4ea"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/cso#hasVectorComponent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N56866027950e4b8a8006a1be4b87aabc">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="N466eb04dbd6a41cea7d508fc7c2863ac"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nf8faceec14f44c5ebfdff90859cb9d2b">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="N5f58c55ec4e04c92a87fac199fdb7c3b"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na1f4e9c5ae054533b5850cef88eacf9b">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasLatticePoint"/>
+    <owl:someValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#LatticePoint"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nbe4c5785c8954bd4a33de452dd409afa">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="N8a444693b976484a953c9931f647e536"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/cso#hasBasis">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N7f5924c70e3943c095fc80955ba95d52">
+    <rdf:first rdf:resource="https://purls.helmholtz-metadaten.de/cso#Lattice"/>
+    <rdf:rest rdf:nodeID="N1227dcfbac484798b0e2b9aab47222bf"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N78963fe92d7d4dd4b46fe57deef0af0c">
+    <rdf:first rdf:nodeID="N884621f2c0f34bd9a5c4df92132f9425"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://qudt.org/schema/qudt/unit">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nf4af1684f6ac4dfb813da19ef03e479d">
+    <rdf:first rdf:resource="https://purls.helmholtz-metadaten.de/diso#TransmissionElectronMicroscopy"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://qudt.org/schema/qudt/hasQuantityKind">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://purls.helmholtz-metadaten.de/cso#hasThirdAxisVector">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/contributor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N224fb6d6e9a744368c691ce7fd661638">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasSlipDirection"/>
+    <owl:allValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/diso#SlipDirection"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/mdo/structure/Z_axisCoordinate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
 </rdf:RDF>

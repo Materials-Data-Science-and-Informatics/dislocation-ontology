@@ -5,7 +5,9 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:qudt="http://qudt.org/schema/qudt/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://purls.helmholtz-metadaten.de/diso">
@@ -70,6 +72,35 @@
     
 
 
+    <!-- http://qudt.org/schema/qudt/description -->
+
+    <owl:AnnotationProperty rdf:about="http://qudt.org/schema/qudt/description"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#defintion -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#defintion"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -81,6 +112,36 @@
     
 
 
+    <!-- http://qudt.org/schema/qudt/hasQuantityKind -->
+
+    <owl:ObjectProperty rdf:about="http://qudt.org/schema/qudt/hasQuantityKind"/>
+    
+
+
+    <!-- http://qudt.org/schema/qudt/quantityValue -->
+
+    <owl:ObjectProperty rdf:about="http://qudt.org/schema/qudt/quantityValue"/>
+    
+
+
+    <!-- http://qudt.org/schema/qudt/unit -->
+
+    <owl:ObjectProperty rdf:about="http://qudt.org/schema/qudt/unit"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/cso#hasBasis -->
+
+    <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/cso#hasBasis"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/cso#hasFirstAxisVector -->
+
+    <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/cso#hasFirstAxisVector"/>
+    
+
+
     <!-- https://purls.helmholtz-metadaten.de/cso#hasPositionVector -->
 
     <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/cso#hasPositionVector">
@@ -89,6 +150,24 @@
         <rdfs:comment xml:lang="en">hasPositionVector represents the relationship between entity and position vector.</rdfs:comment>
         <rdfs:label xml:lang="en">has position vector</rdfs:label>
     </owl:ObjectProperty>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/cso#hasSecondAxisVector -->
+
+    <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/cso#hasSecondAxisVector"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/cso#hasThirdAxisVector -->
+
+    <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/cso#hasThirdAxisVector"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/cso#hasVectorComponent -->
+
+    <owl:ObjectProperty rdf:about="https://purls.helmholtz-metadaten.de/cso#hasVectorComponent"/>
     
 
 
@@ -424,6 +503,30 @@
     
 
 
+    <!-- https://purls.helmholtz-metadaten.de/cso#firstAxisComponent -->
+
+    <owl:DatatypeProperty rdf:about="https://purls.helmholtz-metadaten.de/cso#firstAxisComponent"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/cso#secondAxisComponent -->
+
+    <owl:DatatypeProperty rdf:about="https://purls.helmholtz-metadaten.de/cso#secondAxisComponent"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/cso#thirdAxisComponent -->
+
+    <owl:DatatypeProperty rdf:about="https://purls.helmholtz-metadaten.de/cso#thirdAxisComponent"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/cso#vectorMagnitude -->
+
+    <owl:DatatypeProperty rdf:about="https://purls.helmholtz-metadaten.de/cso#vectorMagnitude"/>
+    
+
+
     <!-- https://purls.helmholtz-metadaten.de/diso#directionMillerIndice -->
 
     <owl:DatatypeProperty rdf:about="https://purls.helmholtz-metadaten.de/diso#directionMillerIndice">
@@ -486,6 +589,24 @@
     
 
 
+    <!-- https://w3id.org/mdo/structure/X_axisCoordinate -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mdo/structure/X_axisCoordinate"/>
+    
+
+
+    <!-- https://w3id.org/mdo/structure/Y_axisCoordinate -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mdo/structure/Y_axisCoordinate"/>
+    
+
+
+    <!-- https://w3id.org/mdo/structure/Z_axisCoordinate -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mdo/structure/Z_axisCoordinate"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -497,10 +618,74 @@
     
 
 
+    <!-- http://qudt.org/schema/qudt/Quantity -->
+
+    <owl:Class rdf:about="http://qudt.org/schema/qudt/Quantity">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://qudt.org/schema/qudt/hasQuantityKind"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://qudt.org/schema/qudt/quantityValue"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <qudt:description rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">&lt;p class=&quot;lm-para&quot;&gt;A quantity is the measurement of an observable property of a particular object, event, or physical system. A quantity is always associated with the context of measurement (i.e. the thing measured, the measured value, the accuracy of measurement, etc.) whereas the underlying quantity kind is independent of any particular measurement. Thus, length is a quantity kind while the height of a rocket is a specific quantity of length; its magnitude that may be expressed in meters, feet, inches, etc. Examples of physical quantities include physical constants, such as the speed of light in a vacuum, Planck&apos;s constant, the electric permittivity of free space, and the fine structure constant. &lt;/p&gt;
+
+&lt;p class=&quot;lm-para&quot;&gt;In other words, quantities are quantifiable aspects of the world, such as time, distance, velocity, mass, momentum, energy, and weight, and units are used to describe their measure. Many of which are related to each other by various physical laws, and as a result the units of some of the quantities can be expressed as products (or ratios) of powers of other units (e.g., momentum is mass times velocity and velocity is measured in distance divided by time). These relationships are discussed in dimensional analysis. Those that cannot be so expressed can be regarded as &quot;fundamental&quot; in this sense.&lt;/p&gt;
+&lt;p class=&quot;lm-para&quot;&gt;A quantity is distinguished from a &quot;quantity kind&quot; in that the former carries a value and the latter is a type specifier.&lt;/p&gt;</qudt:description>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.0/schema/qudt"/>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/schema/qudt"/>
+        <rdfs:label>Quantity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://qudt.org/schema/qudt/QuantityKind -->
+
+    <owl:Class rdf:about="http://qudt.org/schema/qudt/QuantityKind">
+        <qudt:description rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">A &lt;b&gt;Quantity Kind&lt;/b&gt; is any observable property that can be  measured and quantified numerically. Familiar examples include physical properties such as length, mass, time, force, energy, power, electric charge, etc. Less familiar examples include currency, interest rate, price to earning ratio, and information capacity.</qudt:description>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.0/schema/qudt"/>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/schema/qudt"/>
+        <rdfs:label>Quantity Kind</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://qudt.org/schema/qudt/QuantityValue -->
+
+    <owl:Class rdf:about="http://qudt.org/schema/qudt/QuantityValue">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://qudt.org/schema/qudt/unit"/>
+                <owl:allValuesFrom rdf:resource="http://qudt.org/schema/qudt/Unit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <qudt:description rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">A &lt;i&gt;Quantity Value&lt;/i&gt; expresses the magnitude and kind of a quantity and is given by the product of a numerical value &lt;code&gt;n&lt;/code&gt; and a unit of measure &lt;code&gt;U&lt;/code&gt;. The number multiplying the unit is referred to as the numerical value of the quantity expressed in that unit. Refer to &lt;a href=&quot;http://physics.nist.gov/Pubs/SP811/sec07.html&quot;&gt;NIST SP 811 section 7&lt;/a&gt; for more on quantity values.</qudt:description>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.0/schema/qudt"/>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/schema/qudt"/>
+        <rdfs:label>Quantity value</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://qudt.org/schema/qudt/Unit -->
+
+    <owl:Class rdf:about="http://qudt.org/schema/qudt/Unit">
+        <qudt:description rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">A unit of measure, or unit, is a particular quantity value that has been chosen as a scale for measuring other quantities the same kind (more generally of equivalent dimension). For example, the meter is a quantity of length that has been rigorously defined and standardized by the BIPM (International Board of Weights and Measures). Any measurement of the length can be expressed as a number multiplied by the unit meter. More formally, the value of a physical quantity Q with respect to a unit (U) is expressed as the scalar multiple of a real number (n) and U, as  \(Q = nU\).</qudt:description>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/2.0/schema/qudt"/>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/schema/qudt"/>
+        <rdfs:label>Unit</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://purls.helmholtz-metadaten.de/cdo#CrystallographicDefect -->
 
     <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/cdo#CrystallographicDefect">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="en">The crystallographic defect is a lattice irregularity that has one or more dimensions on the order of an atomic diameter.</rdfs:comment>
         <rdfs:label xml:lang="en">Crystallographic Defect</rdfs:label>
     </owl:Class>
@@ -623,9 +808,75 @@
     <!-- https://purls.helmholtz-metadaten.de/cso#Vector -->
 
     <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/cso#Vector">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/cso#hasVectorComponent"/>
+                        <owl:someValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/cso#VectorComponentOfBasis"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/cso#hasVectorComponent"/>
+                        <owl:allValuesFrom rdf:resource="https://purls.helmholtz-metadaten.de/cso#VectorComponentOfBasis"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/cso#vectorMagnitude"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">(Euclidean) vector is used to represent quantities that both magnitude and direction.</rdfs:comment>
         <rdfs:label xml:lang="en">Vector</rdfs:label>
+        <skos:defintion xml:lang="en">(Euclidean) vector used to represent quantities that both magnitude and direction.</skos:defintion>
+    </owl:Class>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/cso#VectorComponentOfBasis -->
+
+    <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/cso#VectorComponentOfBasis">
+        <rdfs:subClassOf rdf:resource="http://qudt.org/schema/qudt/Quantity"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/cso#hasBasis"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/mdo/structure/Basis"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/cso#hasBasis"/>
+                        <owl:allValuesFrom rdf:resource="https://w3id.org/mdo/structure/Basis"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/cso#firstAxisComponent"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/cso#secondAxisComponent"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/cso#thirdAxisComponent"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Vector components/vector coordinates of particular basis. It has relation to a specific basis.</rdfs:comment>
+        <rdfs:label xml:lang="en">Vector Component of Basis</rdfs:label>
     </owl:Class>
     
 
@@ -898,7 +1149,6 @@
     <!-- https://purls.helmholtz-metadaten.de/diso#Line -->
 
     <owl:Class rdf:about="https://purls.helmholtz-metadaten.de/diso#Line">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/diso#hasNumericalRepresentation"/>
@@ -1106,6 +1356,67 @@
         <rdfs:comment xml:lang="en">A fixed point that is needed by the vector to identify other points in the space relative to its origin.</rdfs:comment>
         <rdfs:label xml:lang="de">Ursprung</rdfs:label>
         <rdfs:label xml:lang="en">Vector Origin</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mdo/structure/Basis -->
+
+    <owl:Class rdf:about="https://w3id.org/mdo/structure/Basis">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/cso#hasFirstAxisVector"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/mdo/structure/CoordinateVector"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/cso#hasSecondAxisVector"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/mdo/structure/CoordinateVector"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purls.helmholtz-metadaten.de/cso#hasThirdAxisVector"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/mdo/structure/CoordinateVector"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A basis defines a spatial unit used to express fractional coordinates.</rdfs:comment>
+        <rdfs:label xml:lang="en">Basis</rdfs:label>
+        <skos:defintion xml:lang="en">Set of vector(in 2-D two vectors and in 3-D three vectors) that linearly independent.</skos:defintion>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mdo/structure/CoordinateVector -->
+
+    <owl:Class rdf:about="https://w3id.org/mdo/structure/CoordinateVector">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/mdo/structure/X_axisCoordinate"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/mdo/structure/Y_axisCoordinate"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/mdo/structure/Z_axisCoordinate"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Coordinate Vector</rdfs:label>
+        <skos:defintion xml:lang="en">A coordinate vector according to standard basis, i.e., e_x (1, 0, 0), e_y(0, 1, 0), and e_z (0, 0, 1).</skos:defintion>
     </owl:Class>
 </rdf:RDF>
 
