@@ -1,28 +1,30 @@
 ## Competence Questions(CQs)
-1. Which crystal structure share the same crystal system(e.g. Cubic, hexagonal, etc)?
-2. What are the lattice parameters of length given a crystal structure?
-3. What are the lattice parameters of angle given a crystal structure?
-4. What are the slip systems of a given crystal structure?
-5. What are the slip planes of a given crystal structure?
-6. What is the family of slip plane given a slip plane in the crystal?
-7. What is the  family of slip direction given a slip direction in the crystal?
-8. Given the space group of a crystal structure, what is the bravais lattice centering?
-9. Given the crystal structure, what are the corresponding space group and point group?
-10. Given the point group of a crystal structure, what is the corresponding crystal system?
-11. In which slip planes is a dislocation moves on?
-12. What is the Burgers vector of the dislocation?
-13. What is the Burgers vector magnitude of the dislocation?
-14. Given a slip plane of the crystal structure, what is the slip direction?
-15. Given a 3-D vector instance (Burgers vector, vector position, etc), what are the vector components?
-16. Given a 3-D vector instance ( Burgers vector, vector position, etc), what is the vector magnitude?
-17. Given a Basis of a vector in 3-D space, what are the first, second, and third axis vector?
-18. Given a 3-D vector instance (Burgers vector, vector position, etc), what is the unit?
+1. Which crystal structure share the same cubic crystal system?
+2. Which crystal structure share the same hexagonal crystal system?
+3. What are the lattice parameters of length given a crystal structure?
+4. What are the lattice parameters of angle given a crystal structure?
+5. What are the slip systems of a given crystal structure?
+6. What are the slip planes of a given crystal structure?
+7. What is the family of slip plane given a slip plane in the crystal?
+8. What is the  family of slip direction given a slip direction in the crystal?
+9. Given the space group of a crystal structure, what is the bravais lattice centering?
+10. Given the crystal structure, what are the corresponding space group and point group?
+11. Given the point group of a crystal structure, what is the corresponding crystal system?
+12. In which slip planes is a dislocation moves on?
+13. What is the Burgers vector of the dislocation?
+14. What is the Burgers vector magnitude of the dislocation?
+15. Given a slip plane of the crystal structure, what is the slip direction?
+16. Given a 3-D vector instance (Burgers vector, vector position, etc), what are the vector components?
+17. Given a 3-D vector instance ( Burgers vector, vector position, etc), what is the vector magnitude?
+18. Given a Basis of a vector in 3-D space, what are the first axis basis vector?
+19. Given a Basis of a vector in 3-D space, what are the second axis basis vector?
+20. Given a 3-D vector instance Burgers vector, what is the unit?
 
 
 
 ## Answer to CQs via SPARQL
 
-CQ1.1: Which crystal structure share the same cubic crystal system?
+CQ1: Which crystal structure share the same cubic crystal system?
 ```
 PREFIX diso: <https://purls.helmholtz-metadaten.de/diso#>
 PREFIX cso: <https://purls.helmholtz-metadaten.de/cso#> 
@@ -36,7 +38,7 @@ SELECT ?crystalstructure ?crystal_system WHERE{
 }
 ```
 
-CQ1.2: Which crystal structure share the same hexagonal crystal system?
+CQ2: Which crystal structure share the same hexagonal crystal system?
 ```
 PREFIX diso: <https://purls.helmholtz-metadaten.de/diso#>
 PREFIX cso: <https://purls.helmholtz-metadaten.de/cso#> 
@@ -48,7 +50,7 @@ SELECT ?crystalstructure ?crystal_system WHERE{
 	?crystal_system a cso:Hexagonal .
 }
 ```
-CQs. 2: What are the lattice parameters of length given a crystal structure? 
+CQ3: What are the lattice parameters of length given a crystal structure? 
 ```
 PREFIX diso: <https://purls.helmholtz-metadaten.de/diso#>
 PREFIX cso: <https://purls.helmholtz-metadaten.de/cso#> 
@@ -64,7 +66,7 @@ SELECT ?crystalstructure ?length_a ?length_b ?length_c WHERE{
 }
 ```
 
-CQs. 3: What are the lattice parameters of angle given a crystal structure?
+CQs4: What are the lattice parameters of angle given a crystal structure?
 ```
 PREFIX diso: <https://purls.helmholtz-metadaten.de/diso#>
 PREFIX cso: <https://purls.helmholtz-metadaten.de/cso#> 
@@ -81,7 +83,7 @@ SELECT ?crystalstructure ?angle_alpha ?angle_beta ?angle_gamma WHERE{
 }
 ```
 
-CQs. 4: What are the slip systems of a given crystal structure?
+CQ5: What are the slip systems of a given crystal structure?
 ```
 PREFIX diso: <https://purls.helmholtz-metadaten.de/diso#>
 PREFIX cso: <https://purls.helmholtz-metadaten.de/cso#> 
@@ -97,7 +99,7 @@ SELECT ?crystalstructure ?slip_system ?slip_plane_normal_val ?slip_direction_val
 }
 ```
 
-CQs. 5: What are the slip planes of a given crystal structure?
+CQ6: What are the slip planes of a given crystal structure?
 ```
 PREFIX diso: <https://purls.helmholtz-metadaten.de/diso#>
 PREFIX cso: <https://purls.helmholtz-metadaten.de/cso#> 
@@ -111,7 +113,7 @@ WHERE{
 }
 ```
 
-CQs. 6: What is the family of slip plane given a slip plane in the crystal?
+CQ7: What is the family of slip plane given a slip plane in the crystal?
 ```
 PREFIX diso: <https://purls.helmholtz-metadaten.de/diso#>
 PREFIX cso: <https://purls.helmholtz-metadaten.de/cso#> 
@@ -126,7 +128,7 @@ WHERE{
 }
 ```
 
-CQs. 7: What is the  family of slip direction given a slip direction in the crystal?
+CQ8: What is the  family of slip direction given a slip direction in the crystal?
 ```
 PREFIX diso: <https://purls.helmholtz-metadaten.de/diso#>
 PREFIX cso: <https://purls.helmholtz-metadaten.de/cso#> 
@@ -140,7 +142,7 @@ WHERE{
 	
 }
 ```
-CQs 8: Given the space group of a crystal structure, what is the bravais lattice centering?
+CQ9: Given the space group of a crystal structure, what is the bravais lattice centering?
 ```
 PREFIX diso: <https://purls.helmholtz-metadaten.de/diso#>
 PREFIX cso: <https://purls.helmholtz-metadaten.de/cso#> 
@@ -153,7 +155,7 @@ SELECT  ?crystal_structure ?centering WHERE{
 }
 ```
 
-CQs 9: Given the crystal structure, what are the corresponding space group and point group?
+CQ10: Given the crystal structure, what are the corresponding space group and point group?
 ```
 PREFIX diso: <https://purls.helmholtz-metadaten.de/diso#>
 PREFIX cso: <https://purls.helmholtz-metadaten.de/cso#> 
@@ -169,7 +171,7 @@ SELECT  ?crystal_structure ?space_group ?point_group WHERE{
 }
 ```
 
-CQs 10: Given the point group of a crystal structure, what is the corresponding crystal system?
+CQ11: Given the point group of a crystal structure, what is the corresponding crystal system?
 ```
 PREFIX diso: <https://purls.helmholtz-metadaten.de/diso#>
 PREFIX cso: <https://purls.helmholtz-metadaten.de/cso#> 
@@ -184,7 +186,7 @@ SELECT  ?point_group ?crystal_system WHERE{
 }
 ```
 
-CQs. 11: In which slip planes is a dislocation moves on?
+CQ12: In which slip planes is a dislocation moves on?
 ```
 PREFIX diso: <https://purls.helmholtz-metadaten.de/diso#>
 PREFIX cso: <https://purls.helmholtz-metadaten.de/cso#> 
@@ -197,7 +199,7 @@ WHERE{
 	?slip_plane diso:planeMillerIndice ?slip_plane_miller_indice . 
 }
 ```
-CQs. 12: What is the Burgers vector of the dislocation?
+CQ13: What is the Burgers vector of the dislocation?
 ```
 PREFIX diso: <https://purls.helmholtz-metadaten.de/diso#>
 PREFIX cso: <https://purls.helmholtz-metadaten.de/cso#> 
@@ -213,7 +215,7 @@ SELECT ?dislocation ?firstAxisComponent ?secondAxisComponent ?thirdAxisComponent
 		cso:thirdAxisComponent ?thirdAxisComponent .
 }
 ```
-CQs. 13: What is the Burgers vector magnitude of the dislocation?
+CQ14: What is the Burgers vector magnitude of the dislocation?
 ```
 PREFIX diso: <https://purls.helmholtz-metadaten.de/diso#>
 PREFIX cso: <https://purls.helmholtz-metadaten.de/cso#> 
@@ -225,7 +227,7 @@ SELECT ?dislocation ?Burgers_vector_magnitude  WHERE{
 	?Burgers_vector cso:vectorMagnitude ?Burgers_vector_magnitude .
 }
 ```
-CQs 14: Given a slip plane of the crystal structure, what is the slip direction?
+CQ15: Given a slip plane of the crystal structure, what is the slip direction?
 ```
 PREFIX diso: <https://purls.helmholtz-metadaten.de/diso#>
 PREFIX cso: <https://purls.helmholtz-metadaten.de/cso#> 
@@ -239,7 +241,7 @@ SELECT  ?slip_plane ?slip_direction_val WHERE{
 	?slip_direction diso:directionMillerIndice ?slip_direction_val.
 }
 ```
-CQs 15: Given a 3-D vector instance (Burgers vector, vector position, etc), what are the vector components?
+CQ16: Given a 3-D vector instance (Burgers vector, vector position, etc), what are the vector components?
 
 ```
 PREFIX diso: <https://purls.helmholtz-metadaten.de/diso#>
@@ -255,7 +257,7 @@ SELECT ?Burgers_vector ?firstAxisComponent ?secondAxisComponent ?thirdAxisCompon
 }
 ```
 
-CQs 16: Given a 3-D vector instance ( Burgers vector, vector position, etc), what is the vector magnitude?
+CQ17: Given a 3-D vector instance ( Burgers vector, vector position, etc), what is the vector magnitude?
 
 ```
 PREFIX diso: <https://purls.helmholtz-metadaten.de/diso#>
@@ -268,7 +270,7 @@ SELECT ?Burgers_vector ?vectorMagnitude WHERE{
 }
 ```
 
-CQs 17a: first axis basis
+CQ18: Given a Basis of a vector in 3-D space, what are the first axis basis vector?
 ```
 PREFIX diso: <https://purls.helmholtz-metadaten.de/diso#>
 PREFIX cso: <https://purls.helmholtz-metadaten.de/cso#> 
@@ -287,7 +289,7 @@ SELECT ?Burgers_vector ?first_axis_basis_e_x ?first_axis_basis_e_y ?first_axis_b
 }
 ```
 
-CQs 17b: second axis basis
+CQs 19:  Given a Basis of a vector in 3-D space, what are the second axis basis vector?
 ```
 PREFIX diso: <https://purls.helmholtz-metadaten.de/diso#>
 PREFIX cso: <https://purls.helmholtz-metadaten.de/cso#> 
@@ -305,25 +307,7 @@ SELECT ?Burgers_vector ?second_axis_basis_e_x ?second_axis_basis_e_y ?second_axi
 }
 ```
 
-CQs 17c: third axis basis
-```
-PREFIX diso: <https://purls.helmholtz-metadaten.de/diso#>
-PREFIX cso: <https://purls.helmholtz-metadaten.de/cso#> 
-PREFIX cdo: <https://purls.helmholtz-metadaten.de/cdo#>
-PREFIX mdo: <https://w3id.org/mdo/structure/>    
-
-SELECT ?Burgers_vector ?third_axis_basis_e_x ?third_axis_basis_e_y ?third_axis_basis_e_z WHERE{
-	?Burgers_vector a diso:BurgersVector;
-		cso:hasVectorComponent ?VectorComponents . 
-	?VectorComponents cso:hasBasis ?Basis .
-	?Basis cso:hasThirdAxisVector ?CoordinateVector .
-	?CoordinateVector mdo:X_axisCoordinate ?third_axis_basis_e_x;
-		mdo:Y_axisCoordinate ?third_axis_basis_e_y;
-		mdo:Z_axisCoordinate ?third_axis_basis_e_z . 
-}
-```
-
-CQs 18: Given a 3-D vector instance (Burgers vector, vector position, etc), what is the unit?
+CQs 20: Given a 3-D vector instance Burgers vector, what is the unit?
 ```
 PREFIX diso: <https://purls.helmholtz-metadaten.de/diso#>
 PREFIX cso: <https://purls.helmholtz-metadaten.de/cso#> 
