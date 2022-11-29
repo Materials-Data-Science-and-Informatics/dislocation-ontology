@@ -37,8 +37,8 @@ To make it easier to understand and reuse our ontology, human-readable documenta
 * We recommend also to use HermiT as a reasoner for DISO. You can select it through the menu *Reasoner* in Protégé software.
 
 ## Contact
-You may contact author of DISO via a.ihsan@fz-juelich.de
-
+<!-- You may contact author of DISO via a.ihsan@fz-juelich.de
+-->
 ## License
 The code is licensed under the [MIT license](./LICENSE). Copyright © 2022.
 
@@ -48,10 +48,11 @@ The code is licensed under the [MIT license](./LICENSE). Copyright © 2022.
 
 ## Citation 
 please cite the following paper if you used any part of this work. 
-
+<!--
 `@inproceedings{ihsan2021steps,
 title={Steps towards a Dislocation Ontology for Crystalline Materials},
 author={Ahmad Zainul Ihsan and Danilo Dessì and Mehwish Alam and Harald Sack and Stefan Sandfeld},
 booktitle={Second International Workshop on Semantic Digital Twins },
 year={2021},
 url={http://ceur-ws.org/Vol-2887/paper4.pdf}}`
+-->
